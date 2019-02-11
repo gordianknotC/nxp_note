@@ -1,22 +1,9 @@
-<!DOCTYPE html>
-<html>
+---
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>addActivityResultListener</title>
-  <link rel="stylesheet" href="https://stackedit.io/style.css" />
-  <style type="text/css">
-	blockquote {
-	    color: #02151d8a;
-	    padding-left: 1.5em;
-	    border-left: 5px solid #0000001a;
-	}
-  </style>
-</head>
 
-<body class="stackedit">
-  <div class="stackedit__html"><h2 id="sample-code">Sample Code</h2>
+---
+
+<h2 id="sample-code">Sample Code</h2>
 <p><a href="https://github.com/marekchen/flutter_qq/blob/master/android/src/main/java/com/github/marekchen/flutterqq/FlutterQqPlugin.java">fetched from github</a></p>
 <pre class=" language-java"><code class="prism  language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>github<span class="token punctuation">.</span>marekchen<span class="token punctuation">.</span>flutterqq<span class="token punctuation">;</span>
 
@@ -141,7 +128,4 @@
 <span class="token punctuation">}</span>
 
 </code></pre>
-</div>
-</body>
 
-</html>
