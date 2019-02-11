@@ -1,22 +1,9 @@
-<!DOCTYPE html>
-<html>
+---
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>authenticateAndProtect</title>
-  <link rel="stylesheet" href="https://stackedit.io/style.css" />
-  <style type="text/css">
-	blockquote {
-	    color: #02151d8a;
-	    padding-left: 1.5em;
-	    border-left: 5px solid #0000001a;
-	}
-  </style>
-</head>
 
-<body class="stackedit">
-  <div class="stackedit__html"><h1 id="authenticate-and-protect">Authenticate And Protect</h1>
+---
+
+<h1 id="authenticate-and-protect">Authenticate And Protect</h1>
 <h2 id="authenticate">Authenticate</h2>
 <h3 id="ntag_i2c_command">Ntag_I2C_Command</h3>
 <h4 id="authenticateplus">authenticatePlus</h4>
@@ -217,7 +204,4 @@
 <p>behaviors almost the same as method of protect referred above.</p>
 <h3 id="ntag_i2c_command-2">Ntag_I2C_Command</h3>
 <h3 id="minimalntag_i2c_command-2">MinimalNtag_I2C_Command</h3>
-</div>
-</body>
 
-</html>
