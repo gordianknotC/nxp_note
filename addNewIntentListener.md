@@ -1,9 +1,22 @@
----
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>addNewIntentListener</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+  <style type="text/css">
+	blockquote {
+	    color: #02151d8a;
+	    padding-left: 1.5em;
+	    border-left: 5px solid #0000001a;
+	}
+  </style>
+</head>
 
----
-
-<h2 id="sample-code">Sample Code</h2>
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="sample-code">Sample Code</h2>
 <p><a href="https://github.com/flutter/plugins/blob/master/packages/firebase_messaging/android/src/main/java/io/flutter/plugins/firebasemessaging/FirebaseMessagingPlugin.java">fetched from github</a></p>
 <pre class=" language-java"><code class="prism  language-java"><span class="token keyword">import</span>  android<span class="token punctuation">.</span>content<span class="token punctuation">.</span>BroadcastReceiver<span class="token punctuation">;</span>
 <span class="token keyword">import</span> io<span class="token punctuation">.</span>flutter<span class="token punctuation">.</span>plugin<span class="token punctuation">.</span>common<span class="token punctuation">.</span>MethodCall<span class="token punctuation">;</span>
@@ -242,4 +255,7 @@
 </ul>
 </li>
 </ul>
+</div>
+</body>
 
+</html>
