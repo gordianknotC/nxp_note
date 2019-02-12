@@ -5,11 +5,11 @@
 ### Structure
 - FlutterPrj >
 	- 📰 pubspec.yaml 
-	- 📁 lib [^1] 
+	- 📁 lib [^dl]
 	-  📁android
-		- 📁 app[^2 - existing android project]
-			- 📰 build.gradle [^d]
-			- 📰 local.properties 
+		- 📁 app[^ap]
+			- 📰 build.gradle [^ab]
+			- 📰 local.properties [^]
 	-  ios >
 -------------------------------------
 [1]:  libraries written in dart.
@@ -17,6 +17,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU4OTE5NzQzLDgwMTI0MzI0NiwtMzY0Nj
-gwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbLTE2NzI3MDczODIsODAxMjQzMjQ2LC0zNj
+Q2ODAzMjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
 -->
