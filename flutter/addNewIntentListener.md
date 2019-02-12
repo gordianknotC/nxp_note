@@ -216,7 +216,11 @@ public void onPause() {
 	LocalBroadcastManager manager = LocalBroadcastManager.getInstance(context); 
 	manager.registerReceiver(receiver, intentFilter);
 ```
+
+### addNewIntentListener
+Registrar.addNewIntentListener(NewIntentListener)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM1MTM4MDAsLTcxOTk3NDk3Nyw4NDE4Mz
-MzODBdfQ==
+eyJoaXN0b3J5IjpbLTIxMDk1NjIwMDUsLTcxOTk3NDk3Nyw4ND
+E4MzMzODBdfQ==
 -->
