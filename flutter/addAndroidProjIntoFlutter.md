@@ -247,7 +247,10 @@ graph LR
 	set(setting.gradle)
 	b1(android wrapper - build.gradle)
 	b2(android project - build.gradle)
-	style b1 stroke-width:2px
+	style b1 stroke-width:4px, stroke:#49a
+	style b2 stroke-width:4px, stroke:#49a
+	style set stroke-width:4px, stroke:#49a
+	style set stroke-width:4px, stroke:#492
 
 	dfr(flutterRoot)
 	dfp(flutterProject)
@@ -310,7 +313,7 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNTUzNjg2MSwxODE4NDY0NjYwLDE5ND
+eyJoaXN0b3J5IjpbLTEwNDg1NTU0NiwxODE4NDY0NjYwLDE5ND
 A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
 NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
 kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
