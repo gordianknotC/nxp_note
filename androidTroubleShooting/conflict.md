@@ -31,7 +31,7 @@ ndroid {
 	- 可在defaultConfig中填上applicationId
 	```groovy
 	defaultConfig {  
-		// this one will replace package name specified in AndroidManifest.xml  
+		// applicationId will replace package name specified in AndroidManifest.xml  
 		applicationId "com.gknot"  
 	}
 	```
@@ -47,5 +47,5 @@ ndroid {
 		res.srcDirs = ['src']  
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg0NTM5MzA0LC0xNjQ4NzcwMTQ0XX0=
+eyJoaXN0b3J5IjpbMTIzOTQzMjI3NywtMTY0ODc3MDE0NF19
 -->
