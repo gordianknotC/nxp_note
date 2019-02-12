@@ -248,7 +248,6 @@ graph LR
 	style b2 stroke-width:4px, stroke:#7bc
 	style set stroke-width:4px, stroke:#7bc
 
-	dfr(flutterRoot)
 	dfp(flutterProjectRoot-resolve project path)
 	
 	
@@ -264,14 +263,12 @@ subgraph one
 	subgraph path resolving
 		fdk -.-> loc
 		adk -.-> loc
-		loc -.-> dfr
 	end
 
-	loc -.read path in.-> b2
+	loc -.read path information .-> b2
 	subgraph android project resolving
 		b2 -.- abuild
 	end
-	b2 -.- dfr
 	dfp -.- b2
 	subgraph projectPath&plugin resolving
 		set-.->dfp
@@ -291,8 +288,8 @@ end
  
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUyMjg5NiwxODE4NDY0NjYwLDE5NDA5NT
-M2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgwNTQs
-MTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNj
-Q3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbLTE4NzIzNzMzNzAsMTgxODQ2NDY2MCwxOT
+QwOTUzNjAyLDE3MjQxOTc2NDEsMTAxODM5MTQ2MiwxNDYwMzA4
+MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLT
+E5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
 -->
