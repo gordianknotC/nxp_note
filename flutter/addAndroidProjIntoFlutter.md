@@ -94,8 +94,26 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'  
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 ```
+
+> #### sourcesSet
+> 
+
+```groovy
+android {  
+	sourceSets {  
+		main {  
+			//manifest.srcFile "src/main/AndroidManifest.xml"  
+			java.srcDirs += ['src/main/kotlin', 'src/main/java']  
+			//note: seems redundant  
+			//resources.srcDirs = ['src'] //aidl.srcDirs = ['src'] //renderscript.srcDirs = ['src'] //note: nxp android project resource, flutter android project resource  res.srcDirs += ['res', flutterProject + '/res']  
+			assets.srcDirs += ['assets', flutterProject + '/assets']  
+			}  
+			debug.setRoot('build-types/debug')  
+			release.setRoot('build-types/release')  
+			}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTAwNzM3NDUsMTQ2MDMwODA1NCwxNT
-YxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5
-MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbLTY0NTA4Mjg0NCwxNDYwMzA4MDU0LDE1Nj
+EwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0Nzky
+NTUsLTE3NzQ2OTY4ODJdfQ==
 -->
