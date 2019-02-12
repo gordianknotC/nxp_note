@@ -153,8 +153,8 @@ android project folder, this would be your existing android project renamed to "
 #### 現有專案的 res & assets
 於上述build.gradle中設定
 
-**[3] build.gradle** for flutter android wrapper
-
+**[3] build.gradle** for flutter
+#### flutter android buil專案設定檔
 若要將現有專案與flutter連結,需在該設定檔中寫入以下資訊
 - 載入local.properties
 - flutterRoot 
@@ -164,7 +164,7 @@ android project folder, this would be your existing android project renamed to "
 - applicationId
 - dependencies
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjgzMzMzMDA4LDE0NjAzMDgwNTQsMTU2MT
-AyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1
-NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbLTEzMzM0MDg5ODIsMTQ2MDMwODA1NCwxNT
+YxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5
+MjU1LC0xNzc0Njk2ODgyXX0=
 -->
