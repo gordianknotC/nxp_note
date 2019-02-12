@@ -228,28 +228,32 @@ graph LR
 ```mermaid
 
 graph TB
-	subgraph folder of flutter android wrapper
-		subgraph files
-			WS(settings.gradle) --> WB(build.gradle)
-			WL(local.properties)
+	subgraph flutter project
+		F((flutter))
+		subgraph folder of flutter android wrapper
+			subgraph files
+				WS(settings.gradle) --> WB(build.gradle)
+				WL(local.properties)
+			end
+			
+			subgraph folders
+				WR(res)
+				WP(android project)
+				WT(asset)
+			end
 		end
 		
-		subgraph folders
-			WR(res)
-			WP(android project)
-			WT(asset)
-		end
+		subgraph folder of android project
+			AB(build.gradle)
+			 subgraph folders
+				 AR(res) 
+				 AT(assets)
+				 AL(libs)
+				 AC(src)
+			 end
+		end	 
 	end
-	
-	subgraph folder of android project
-		AB(build.gradle)
-		 subgraph folders
-			 AR(res) 
-			 AT(assets)
-			 AL(libs)
-			 AC(src)
-		 end
-	end	 
+
 	
 	WP -.- WS
 	WR -.- AB
@@ -264,13 +268,13 @@ graph TB
 		FDK(flutter sdk)-.->WL
 	end
 	
-	F((flottuer))
+	
 
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5OTUxODE3OSwxMDE4MzkxNDYyLDE0Nj
-AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
-MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbLTE3Njg3OTk3NzYsMTAxODM5MTQ2MiwxND
+YwMzA4MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAz
+MjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
 -->
