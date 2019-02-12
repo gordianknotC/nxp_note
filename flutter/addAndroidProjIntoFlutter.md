@@ -33,15 +33,16 @@ file structure of a flutter project would be look like this
 
 ### 說明Android Project wrapper for flutter
 #### file structure
-- 📁 app[^1]
-	- 📁 libs
-	- 📁 src
-	- 📰 build.gradle [^2]
-- 📁 res[^*]
-- 📁 assets[^*]
-- 📰 build.gradle[^3]
-- 📰 settings.gradle[^4]
-- 📰 local.properties [^5]
+- **FlutterProject > android**
+	- 📁 app[^1]
+		- 📁 libs
+		- 📁 src
+		- 📰 build.gradle [^2]
+	- 📁 res[^*]
+	- 📁 assets[^*]
+	- 📰 build.gradle[^3]
+	- 📰 settings.gradle[^4]
+	- 📰 local.properties [^5]
 
 **[1] app** your existing android project 
  #### 現有的android project
@@ -271,7 +272,7 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0ODQ1MjU0MiwxMDE4MzkxNDYyLDE0Nj
+eyJoaXN0b3J5IjpbMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0Nj
 AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
 MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
