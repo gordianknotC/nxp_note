@@ -3,7 +3,7 @@
 實際目錄結構如下圖
 ![structure](https://gordianknot1981.github.io/nxp_note/flutter/flutter_android_structure.png )
 
-### Flutter/Android 專案目錄結構說明
+## Flutter/Android 專案目錄結構說明
 
 file structure of a flutter project would be look like this
 - 📁 FlutterProject
@@ -70,19 +70,19 @@ android project folder, this would be your existing android project renamed to "
 > #### flutterRoot
 > read flutter sdk from local.properties into flutterRoot
 ```groovy
-def flutterRoot = localProperties.getProperty('flutter.sdk')  
-if (flutterRoot == null) {  
-    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")  
-}
+	def flutterRoot = localProperties.getProperty('flutter.sdk')  
+	if (flutterRoot == null) {  
+	    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")  
+	}
 ```
 
 > #### flutterProject
 > specify where flutterProject locates, default value are "../.."
 ```groovy
-def flutterProject = '../..'
-flutter {  
-    source flutterProject  
-}
+	def flutterProject = '../..'
+	flutter {  
+	    source flutterProject  
+	}
 ```
 
 > #### apply plugin | apply from
@@ -90,9 +90,9 @@ flutter {
 >  - apply plugins like kotlin which indicates a valid pluginId implmented the plugin interface by project requirements.
 >  - apply a build script from flutter
 ```groovy
-apply plugin: 'com.android.application'  
-apply plugin: 'kotlin-android'  
-apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+	apply plugin: 'com.android.application'  
+	apply plugin: 'kotlin-android'  
+	apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 ```
 
 > #### sourcesSet
@@ -101,36 +101,46 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 > - res source
 > - assets source
 ```groovy
-android {  
-	sourceSets {  
-		main {  
-			//manifest.srcFile "src/main/AndroidManifest.xml"  
-			java.srcDirs += ['src/main/kotlin', 'src/main/java']  
-			res.srcDirs += ['res', flutterProject + '/res']  
-			assets.srcDirs += ['assets', flutterProject + '/assets']  
-		}  
+	android {  
+		sourceSets {  
+			main {  
+				//manifest.srcFile "src/main/AndroidManifest.xml"  
+				java.srcDirs += ['src/main/kotlin', 'src/main/java']  
+				res.srcDirs += ['res', flutterProject + '/res']  
+				assets.srcDirs += ['assets', flutterProject + '/assets']  
+			}  
 ```
 
 > #### applicationId
 > 
 ```groovy
-android {
-	defaultConfig {  
-		// applicationId will replace package name specified in AndroidManifest.xml  
-		applicationId "com.gknot"  
-		minSdkVersion 19  
-		targetSdkVersion 28  
-		versionName flutterVersionName  
-		testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"  
-	}
+	android {
+		defaultConfig {  
+			// applicationId will replace package name specified in AndroidManifest.xml  
+			applicationId "com.gknot"  
+			minSdkVersion 19  
+			targetSdkVersion 28  
+			versionName flutterVersionName  
+			testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"  
+		}
 ```
 
 > #### dependencies
 ```groovy
-
+	dependencies {  
+		implementation fileTree(include: '*.jar', dir: 'libs')  
+		implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"  
+		//following dependencies depends on flutter  
+		testImplementation 'junit:junit:4.12'  
+		androidTestImplementation 'com.android.support.test:runner:1.0.2'  
+		androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'  
+	}
 ```
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDEzNzc2NTAsMTQ2MDMwODA1NCwxNT
+eyJoaXN0b3J5IjpbLTE5ODAyOTI5OTgsMTQ2MDMwODA1NCwxNT
 YxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5
 MjU1LC0xNzc0Njk2ODgyXX0=
 -->
