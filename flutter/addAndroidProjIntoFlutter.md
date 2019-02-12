@@ -213,8 +213,13 @@ android project folder, this would be your existing android project renamed to "
 	flutter.versionCode=1  
 	flutter.buildMode=debug
 ```
+
+
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTc1NjM3MTIsMTQ2MDMwODA1NCwxNT
-YxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5
-MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbMTAxODM5MTQ2MiwxNDYwMzA4MDU0LDE1Nj
+EwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0Nzky
+NTUsLTE3NzQ2OTY4ODJdfQ==
 -->
