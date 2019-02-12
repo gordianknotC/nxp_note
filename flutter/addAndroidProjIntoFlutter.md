@@ -271,6 +271,13 @@ graph LR
 	style dflutter stroke-width:4px, stroke-dasharray: 5
 	style dsub stroke-width:4px, stroke-dasharray: 5
 	
+	subgraph two
+		dandroid -.- b2
+		dflutter -.- b1
+		dsub -.- b1
+		dflutter -.- dsub
+		dsub-.- dandroid
+	end
 	subgraph one
 		b2 -.- fbuild
 		fdk -.-> loc
@@ -279,19 +286,13 @@ graph LR
 		loc -.- dfr
 		b2 -.- dfr
 		dfp -.- b2
-		dfp -.- set
+		set-.->dfp
 		set -.- fpgn
 		
 		b1 -.- dfb
 	end
 	
-	subgraph two
-		dandroid -.- b2
-		dflutter -.- b1
-		dsub -.- b1
-		dflutter -.- dsub
-		dsub-.- dandroid
-	end
+	
 ```
 
 
@@ -343,7 +344,7 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNzQyMDczMiwxODE4NDY0NjYwLDE5ND
+eyJoaXN0b3J5IjpbLTgwNjY3MDMxNCwxODE4NDY0NjYwLDE5ND
 A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
 NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
 kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
