@@ -48,14 +48,14 @@ file structure of a flutter project would be look like this
 **[1] app** your existing android project 
  #### [1]現有的android project
 
- 需將其folder改名為app，app似乎為flutter默認的android專案名稱，以告知flutter專案設定的位置(build.gradle, settings.gradle)，如果不用默認的名稱似乎也可以，但需要設定project.name及include name，後文會寫到。
-
-android project folder, this would be your existing android project renamed to "app".  "app" seems like a default naming convention for flutter to indicate project entry folder where configurations(build.gradle and local.properties) locates. For not using convention name, you need to setup project name and include name in build.gradle, which will refer later on.
+ >需將其folder改名為app，app似乎為flutter默認的android專案名稱，以告知flutter專案設定的位置(build.gradle, settings.gradle)，如果不用默認的名稱似乎也可以，但需要設定project.name及include name，後文會寫到。
+>
+>android project folder, this would be your existing android project renamed to "app".  "app" seems like a default naming convention for flutter to indicate project entry folder where configurations(build.gradle and local.properties) locates. For not using convention name, you need to setup project name and include name in build.gradle, which will refer later on.
  
  
 **[2] build.gradle** : build script for existing android project
 #### 現有專案設定檔 
-若要將現有專案與flutter連結,需在該設定檔中寫入以下資訊
+>若要將現有專案與flutter連結,需在該設定檔中寫入以下資訊
 - 載入local.properties
 - flutterRoot 
 - flutterProject
@@ -163,8 +163,9 @@ android project folder, this would be your existing android project renamed to "
 
 
 **[*]res and assets** for existing android project
-#### 現有專案的 res & assets
-於上述build.gradle中設定
+#### 設置現有專案 res & assets
+> 於上述build.gradle中設定
+
 
 **[3] build.gradle [4] setting.gradle** for flutter building android
 #### flutter android build 專案設定檔
@@ -290,9 +291,8 @@ end
  
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDcxNDIwODcsLTE4NzIzNzMzNzAsMT
-gxODQ2NDY2MCwxOTQwOTUzNjAyLDE3MjQxOTc2NDEsMTAxODM5
-MTQ2MiwxNDYwMzA4MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC
-0zNjQ2ODAzMjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
-
+eyJoaXN0b3J5IjpbMTc2MzM1NzAxNCwtMTg3MjM3MzM3MCwxOD
+E4NDY0NjYwLDE5NDA5NTM2MDIsMTcyNDE5NzY0MSwxMDE4Mzkx
+NDYyLDE0NjAzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLT
+M2NDY4MDMyMSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
