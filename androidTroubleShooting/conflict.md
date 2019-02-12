@@ -9,6 +9,8 @@ it's a dependencies conflict 相依衝突，多半為不同的相依間存在不
 
 #### failed linking file resources
 可能是AndroidManifest等XML 文件中所引用的參考不存在，如引用了@mipmap/ic_launch，但是res folder下卻沒有mipmap這個folder
+
+###
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNzA4OTU1MF19
+eyJoaXN0b3J5IjpbMTQyNzIzMDE1XX0=
 -->
