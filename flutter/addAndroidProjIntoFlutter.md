@@ -64,9 +64,13 @@ android project folder, this would be your existing android project renamed to "
 	    }  
 	}
 ```
-> rootProject 指向 android
+> rootProject 指向 android , 
+> localPropertiesFile  指向 android/local.properties
+
+> #### flutterRoot
+> indicates fl
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzQzNjc3MzksMTU2MTAyMjMyOSw4MD
-EyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1NSwtMTc3NDY5
-Njg4Ml19
+eyJoaXN0b3J5IjpbLTM0MzcxNzIzMSwxNTYxMDIyMzI5LDgwMT
+I0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2
+ODgyXX0=
 -->
