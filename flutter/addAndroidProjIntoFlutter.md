@@ -47,7 +47,7 @@ android project folder, this would be your existing android project renamed to "
 - 載入local.properties
 - flutterRoot 
 - flutterProject
-- applied plugins
+- apply pluginId **&** apply from
 - sourceSets
 - applicationId
 - dependencies
@@ -84,8 +84,10 @@ flutter {
     source flutterProject  
 }
 ```
+
+> #### apply plugin | apply from
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MDMwODA1NCwxNTYxMDIyMzI5LDgwMT
-I0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2
-ODgyXX0=
+eyJoaXN0b3J5IjpbMzE0MzY1NjI4LDE0NjAzMDgwNTQsMTU2MT
+AyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1
+NSwtMTc3NDY5Njg4Ml19
 -->
