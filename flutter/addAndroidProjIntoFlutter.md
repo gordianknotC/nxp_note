@@ -153,13 +153,19 @@ android project folder, this would be your existing android project renamed to "
 #### 現有專案的 res & assets
 於上述build.gradle中設定
 
-**[3] build.gradle ** for flutter building android
+**[3] build.gradle [4] setting.gradle** for flutter building android
 #### flutter android build 專案設定檔
-- kotlin & gradle dependencies
-- add buildDir
-- add existing android project into subproject
-- add clean build
+- **build.gradle**
+	- kotlin & gradle dependencies
+	- add buildDir
+	- add existing android project into subproject
+	- add clean build
+- **settings.gradle**
+	- include subproject
+	- add flutter plugin
+ 
 ```groovy
+// 
 buildscript {  
 	ext.kotlin_version = '1.3.21'  
 	dependencies {  
@@ -183,7 +189,7 @@ task clean(type: Delete) {
 > would look for the subproject  `producer`  of the subproject  `api`.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzY3ODI3NzMsMTQ2MDMwODA1NCwxNT
-YxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5
-MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbMTIzNDcwODQzNiwxNDYwMzA4MDU0LDE1Nj
+EwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0Nzky
+NTUsLTE3NzQ2OTY4ODJdfQ==
 -->
