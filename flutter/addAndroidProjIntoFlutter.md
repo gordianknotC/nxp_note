@@ -141,12 +141,14 @@ android project folder, this would be your existing android project renamed to "
 	}
 ```
 
-**[*]res and assets** for existing 
-#### 現有專案的 res and assets
+**[*]res and assets** for existing android project
+#### 現有專案的 res & assets
+於上述build.gradle中設定
 
+**[3] build.gradle** for flutter
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0NzEwNjg4LDE0NjAzMDgwNTQsMTU2MT
-AyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1
-NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbLTUxMDgzMDg3NSwxNDYwMzA4MDU0LDE1Nj
+EwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0Nzky
+NTUsLTE3NzQ2OTY4ODJdfQ==
 -->
