@@ -234,7 +234,7 @@ graph LR
 	dfb{buildDir}
 	abuild((android build))
 	fpgn((flutter plugin))
-	style fbuild stroke-width:6px   
+	style abuild stroke-width:6px   
 	style fpgn stroke-width:6px 
 	style dfb stroke-width:6px 
 	
@@ -268,7 +268,9 @@ subgraph one
 	end
 
 	loc -.-> b2
-	b2 -.- fbuild
+	subgraph android project resolving
+		b2 -.- abuild
+	end
 	b2 -.- dfr
 	dfp -.- b2
 	subgraph projectPath&plugin resolving
@@ -343,8 +345,8 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0OTA3MjczNywxODE4NDY0NjYwLDE5ND
-A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
-NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
-kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbMzc4NjQ5NjQxLDE4MTg0NjQ2NjAsMTk0MD
+k1MzYwMiwxNzI0MTk3NjQxLDEwMTgzOTE0NjIsMTQ2MDMwODA1
+NCwxNTYxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOT
+M2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
 -->
