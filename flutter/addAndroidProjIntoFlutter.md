@@ -267,7 +267,7 @@ subgraph one
 		loc -.-> dfr
 	end
 
-	loc -.-> b2
+	loc -.read path in.-> b2
 	subgraph android project resolving
 		b2 -.- abuild
 	end
@@ -291,8 +291,8 @@ end
  
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwOTk0NzM3MiwxODE4NDY0NjYwLDE5ND
-A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
-NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
-kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbNTUyMjg5NiwxODE4NDY0NjYwLDE5NDA5NT
+M2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgwNTQs
+MTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNj
+Q3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
