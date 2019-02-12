@@ -113,9 +113,24 @@ android {
 
 > #### applicationId
 > 
+```groovy
+android {
+	defaultConfig {  
+		// applicationId will replace package name specified in AndroidManifest.xml  
+		applicationId "com.gknot"  
+		minSdkVersion 19  
+		targetSdkVersion 28  
+		versionName flutterVersionName  
+		testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"  
+	}
+```
 
+> #### dependencies
+```groovy
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDU1NzEyODUsMTQ2MDMwODA1NCwxNT
+eyJoaXN0b3J5IjpbLTE1NDEzNzc2NTAsMTQ2MDMwODA1NCwxNT
 YxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5
 MjU1LC0xNzc0Njk2ODgyXX0=
 -->
