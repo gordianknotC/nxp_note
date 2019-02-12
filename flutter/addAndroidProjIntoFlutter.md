@@ -215,15 +215,20 @@ android project folder, this would be your existing android project renamed to "
 ``` 
 
 ```mermaid
-graph LR
+graph TD
 	subgraph flutter
 		subgraph files
 			FP(pubspec.yaml)
 		end
 		subgraph folders
 			FL(libs)
-			FW(android wrapper) -
+			FW(android wrapper)
 			subgraph flutter android wrapper
+				subgraph files
+					WT(settings.gradle)
+					WL(local.properties)
+					WB(build.gradle)
+				end
 				subgraph folders
 					WA(assets)
 					WR(res)
@@ -287,7 +292,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3MzkwMTgzNSwxMDE4MzkxNDYyLDE0Nj
+eyJoaXN0b3J5IjpbMTI0NjQ4Njk0NSwxMDE4MzkxNDYyLDE0Nj
 AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
 MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
