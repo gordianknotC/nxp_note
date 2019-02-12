@@ -75,7 +75,6 @@ android project folder, this would be your existing android project renamed to "
 	if (flutterVersionCode == null) {  
 	    flutterVersionCode = '1'  
 	}  
-	  
 	def flutterVersionName = localProperties.getProperty('flutter.versionName')  
 	if (flutterVersionName == null) {  
 	    flutterVersionName = '1.0'  
@@ -156,8 +155,16 @@ android project folder, this would be your existing android project renamed to "
 
 **[3] build.gradle** for flutter android wrapper
 
+若要將現有專案與flutter連結,需在該設定檔中寫入以下資訊
+- 載入local.properties
+- flutterRoot 
+- flutterProject
+- apply pluginId **&** apply from
+- sourceSets
+- applicationId
+- dependencies
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5Nzc5NzM5LDE0NjAzMDgwNTQsMTU2MT
+eyJoaXN0b3J5IjpbNjgzMzMzMDA4LDE0NjAzMDgwNTQsMTU2MT
 AyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1
 NSwtMTc3NDY5Njg4Ml19
 -->
