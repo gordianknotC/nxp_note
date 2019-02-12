@@ -246,7 +246,7 @@ graph TB
 	end
 	
 	subgraph folder of android project
-		
+		AB(build.gradle)
 		 subgraph folders
 			 AR(res) 
 			 AT(assets)
@@ -254,11 +254,12 @@ graph TB
 			 AC(src)
 		 end
 	end	 
+
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxODIzMjE1MCwxMDE4MzkxNDYyLDE0Nj
-AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
-MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbLTIwNTM3MDMyNDEsMTAxODM5MTQ2MiwxND
+YwMzA4MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAz
+MjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
 -->
