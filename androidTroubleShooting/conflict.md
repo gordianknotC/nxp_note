@@ -10,7 +10,13 @@ It's a dependencies conflict 相依衝突，多半為不同的相依間存在不
 
 ---------------------------------------------------------
 #### Failed linking file resources | failed processing manifest error
-可能是AndroidManifest等XML 文件中所引用的參考不存在，如引用了@mipmap/ic_launch，但是res folder下卻沒有mipmap這個folder，或者有子project的狀態下，母子project各自指向的res位置出錯或者被子project。
+可能是AndroidManifest等XML 文件中所引用的參考不存在，如引用了@mipmap/ic_launch，但是res folder下卻沒有mipmap這個folder，或者當專案有母子project的狀態下，母子project各自指向的res位置出錯或者被子project給覆寫。如下(為子project)
+```groovy
+ndroid {  
+	sourceSets {  
+		main {  
+			res.srcDirs = ['src']  
+```
 
 ---------------------------------------------------------
 #### Cannot read packageName from path/to/AndroidManifest.xml
@@ -41,5 +47,5 @@ ndroid {
 		res.srcDirs = ['src']  
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA2MzA0MzQ4LC0xNjQ4NzcwMTQ0XX0=
+eyJoaXN0b3J5IjpbNTg0NTM5MzA0LC0xNjQ4NzcwMTQ0XX0=
 -->
