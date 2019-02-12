@@ -202,14 +202,13 @@ public void onPause() {
 	- @return **LocalBroadcastManager**
 
 - **LocalBroadcastManager**
-	- methods
-		- registerReceiver  | unregisterReceiver
-			- params
-				- **BroadcastReceiver** receiver
-				- **IntentFilter** filter
-		- sendBroadCast  
-			-  params
-				- **Intent** intent
+	- registerReceiver  | unregisterReceiver
+		- params
+			- **BroadcastReceiver** receiver
+			- **IntentFilter** filter
+	- sendBroadCast  
+		-  params
+			- **Intent** intent
 
 ```java
 	IntentFilter intentFilter =  new  IntentFilter();
@@ -218,5 +217,6 @@ public void onPause() {
 	manager.registerReceiver(receiver, intentFilter);
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxOTk3NDk3Nyw4NDE4MzMzODBdfQ==
+eyJoaXN0b3J5IjpbNzM1MTM4MDAsLTcxOTk3NDk3Nyw4NDE4Mz
+MzODBdfQ==
 -->
