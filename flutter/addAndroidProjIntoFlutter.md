@@ -228,14 +228,14 @@ graph TB
 		FP(pubspec.yaml)
 		subgraph folder
 			FL(libs)
-			FA(android project)
+			FA(flutter android wrapper)
 		end
 	end
-	subgraph folder of android project
+	subgraph folder of flutter android wrapper
 		AB(build.gradle) -.- AS(settings.gradle)
 		subgraph folders
 			PR(res)
-			PA(app)
+			PA(android project)
 			PS(asset)
 		end
 	end
@@ -251,7 +251,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDkzMTg5MDUsMTAxODM5MTQ2MiwxND
-YwMzA4MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAz
-MjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
+eyJoaXN0b3J5IjpbMTk5NjAwNTM5MCwxMDE4MzkxNDYyLDE0Nj
+AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
+MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
