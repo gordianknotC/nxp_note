@@ -47,8 +47,7 @@ android project folder, this would be your existing android project renamed to "
 - 載入local.properties
 - flutterRoot 
 - flutterProject
-- apply plugin "kotlin"...
-- apply from flutterRoot
+- apply plugins
 - sourceSets
 - applicationId
 - dependencies
@@ -77,9 +76,16 @@ if (flutterRoot == null) {
 }
 ```
 
-
+> #### flutterProject
+> specify where flutterProject locates, default value are "../.."
+```groovy
+def flutterProject = '../..'
+flutter {  
+    source flutterProject  
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NjIxNzIyMCwxNTYxMDIyMzI5LDgwMT
-I0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2
-ODgyXX0=
+eyJoaXN0b3J5IjpbNzc2Mzc1MDksMTU2MTAyMjMyOSw4MDEyND
+MyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4
+Ml19
 -->
