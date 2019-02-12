@@ -214,14 +214,36 @@ android project folder, this would be your existing android project renamed to "
 	flutter.buildMode=debug
 ```
 
-
+```mermaid
+```
 graph TB
-	
+    sq[Square shape] --> ci((Circle shape))
 
+    subgraph A subgraph
+        od>Odd shape]-- Two line<br/>edge comment --> ro
+        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
+        di==>ro2(Rounded square shape)
+    end
+
+    %% Notice that no text in shape are added here instead that is appended further down
+    e --> od3>Really long text with linebreak<br>in an Odd shape]
+
+    %% Comments after double percent signs
+    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز)
+
+    cyr[Cyrillic]-->cyr2((Circle shape Начало));
+
+     classDef green fill:#9f6,stroke:#333,stroke-width:2px;
+     classDef orange fill:#f96,stroke:#333,stroke-width:4px;
+     class sq,e green
+     class di orange
+```
+		
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1MDAwNjgwNiwxMDE4MzkxNDYyLDE0Nj
-AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
-MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbMTU5ODE3MDE0LDEwMTgzOTE0NjIsMTQ2MD
+MwODA1NCwxNTYxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIx
+LC0xOTM2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
 -->
