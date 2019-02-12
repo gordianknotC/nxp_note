@@ -86,8 +86,10 @@ flutter {
 ```
 
 > #### apply plugin | apply from
+> apply plugin: pluginId
+> apply from: local or remote build script
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE0MzY1NjI4LDE0NjAzMDgwNTQsMTU2MT
-AyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1
-NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbLTE3NDc3Mzg0NiwxNDYwMzA4MDU0LDE1Nj
+EwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0Nzky
+NTUsLTE3NzQ2OTY4ODJdfQ==
 -->
