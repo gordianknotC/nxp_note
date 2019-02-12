@@ -41,7 +41,8 @@ file structure of a flutter project would be look like this
 
 android project folder, this would be your existing android project renamed to "app".  "app" seems like a default naming convention for flutter to indicate project entry folder where configurations(build.gradle and local.properties) locates. For not using convention name, you need to setup project name and include name in build.gradle, which will refer later on.
  
-**[2] build.gradle** 現有專案設定檔
+ 
+**[2] build.gradle** 現有專案設定檔, build setup for existing android project
 若要將現有專案與flutter連結,需在該設定檔中寫入以下資訊
 - 載入local.properties
 - flutterRoot 
@@ -51,8 +52,12 @@ android project folder, this would be your existing android project renamed to "
 - sourceSets
 - applicationId
 - dependencies
+
+local.properties
+	: 記錄了flutter.sdk及android.sdk的位置
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NjI0Mjc0NCwxNTYxMDIyMzI5LDgwMT
-I0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2
-ODgyXX0=
+eyJoaXN0b3J5IjpbNDgxMjA0MjU3LDE1NjEwMjIzMjksODAxMj
+QzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4
+ODJdfQ==
 -->
