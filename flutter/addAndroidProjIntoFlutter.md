@@ -53,11 +53,11 @@ android project folder, this would be your existing android project renamed to "
 - applicationId
 - dependencies
 
-local.properties
-	: 記錄了flutter.sdk及android.sdk的位置
+> local.properties
+主要記錄了flutter.sdk及android.sdk的位置, 介由讀取 local.properties 注入flutter
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgxMjA0MjU3LDE1NjEwMjIzMjksODAxMj
-QzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4
-ODJdfQ==
+eyJoaXN0b3J5IjpbMTg1NDkwODkyOCwxNTYxMDIyMzI5LDgwMT
+I0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2
+ODgyXX0=
 -->
