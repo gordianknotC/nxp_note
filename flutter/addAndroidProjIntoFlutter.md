@@ -178,10 +178,12 @@ task clean(type: Delete) {
 	delete rootProject.buildDir  
 }
 ```
-> The colon in above code within e is not an operator (you can see it's being used inside a string). It's the separator that Gradle uses to describe paths to subprojects. For example,
+> **[NOTE]** the **colon** in Gradle uses to describe paths to subprojects. For example,
+> evaluationDependsOn(':api:producer')
+> would look for the subproject  `producer`  of the subproject  `api`.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODc1NTQ2NDYsMTQ2MDMwODA1NCwxNT
-YxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5
-MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbMjA0ODg4NzgxMSwxNDYwMzA4MDU0LDE1Nj
+EwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0Nzky
+NTUsLTE3NzQ2OTY4ODJdfQ==
 -->
