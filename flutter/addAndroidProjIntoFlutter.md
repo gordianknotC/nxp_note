@@ -167,7 +167,6 @@ buildscript {
 		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"  
 	}  
 }  
-
 rootProject.buildDir = '../build'  
 subprojects {  
 	project.buildDir = "${rootProject.buildDir}/${project.name}"  
@@ -179,9 +178,10 @@ task clean(type: Delete) {
 	delete rootProject.buildDir  
 }
 ```
+> The colon in above code within e is not an operator (you can see it's being used inside a string). It's the separator that Gradle uses to describe paths to subprojects. For example,
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDczNzMwOCwxNDYwMzA4MDU0LDE1Nj
-EwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0Nzky
-NTUsLTE3NzQ2OTY4ODJdfQ==
+eyJoaXN0b3J5IjpbLTEzODc1NTQ2NDYsMTQ2MDMwODA1NCwxNT
+YxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5
+MjU1LC0xNzc0Njk2ODgyXX0=
 -->
