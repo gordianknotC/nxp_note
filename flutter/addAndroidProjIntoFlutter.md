@@ -54,7 +54,7 @@ android project folder, this would be your existing android project renamed to "
 - dependencies
 
 > #### local.properties
-> ```groovy
+```groovy
 	def localProperties = new Properties()  
 	def localPropertiesFile = rootProject.file('local.properties')  
 	if (localPropertiesFile.exists()) {  
@@ -76,7 +76,7 @@ if (flutterRoot == null) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2ODkwNTMzOCwxNTYxMDIyMzI5LDgwMT
+eyJoaXN0b3J5IjpbLTU3MTA2Mzc3MiwxNTYxMDIyMzI5LDgwMT
 I0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2
 ODgyXX0=
 -->
