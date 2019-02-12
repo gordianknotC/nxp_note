@@ -218,9 +218,15 @@ public void onPause() {
 ```
 
 ### addNewIntentListener
-Registrar.addNewIntentListener(NewIntentListener)
+```java
+Registrar.addNewIntentListener(NewIntentListener listener)
+interface NewIntentListener {
+	
+}
+```
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDk1NjIwMDUsLTcxOTk3NDk3Nyw4ND
-E4MzMzODBdfQ==
+eyJoaXN0b3J5IjpbLTM3NDk5ODc4MCwtNzE5OTc0OTc3LDg0MT
+gzMzM4MF19
 -->
