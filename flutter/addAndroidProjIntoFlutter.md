@@ -165,31 +165,47 @@ android project folder, this would be your existing android project renamed to "
 	- add flutter plugin
  
 ```groovy
-// 
-buildscript {  
-	ext.kotlin_version = '1.3.21'  
-	dependencies {  
-		classpath 'com.android.tools.build:gradle:3.3.1'  
-		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"  
+	// -------------------
+	// flutterProject/android/build.gradle....
+	buildscript {  
+		ext.kotlin_version = '1.3.21'  
+		dependencies {  
+			classpath 'com.android.tools.build:gradle:3.3.1'  
+			classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"  
+		}  
 	}  
-}  
-rootProject.buildDir = '../build'  
-subprojects {  
-	project.buildDir = "${rootProject.buildDir}/${project.name}"  
-}  
-subprojects {  
-	project.evaluationDependsOn(':app')  
-}  
-task clean(type: Delete) {  
-	delete rootProject.buildDir  
-}
+	rootProject.buildDir = '../build'  
+	subprojects {  
+		project.buildDir = "${rootProject.buildDir}/${project.name}"  
+	}  
+	subprojects {  
+		project.evaluationDependsOn(':app')  
+	}  
+	task clean(type: Delete) {  
+		delete rootProject.buildDir  
+	}
+
+	// -------------------
+	// flutterProject/android/settings.gradle....
+	include ':app'  
+	def flutterProjectRoot = rootProject.projectDir.parentFile.toPath()  
+	def plugins = new Properties()  
+	def pluginsFile = new File(flutterProjectRoot.toFile(), '.flutter-plugins')  
+	if (pluginsFile.exists()) {  
+	    pluginsFile.withReader('UTF-8') { reader -> plugins.load(reader) }  
+	}  
+	plugins.each { name, path ->  
+	    def pluginDirectory = flutterProjectRoot.resolve(path).resolve('android').toFile()  
+	    include ":$name"  
+	  project(":$name").projectDir = pluginDirectory  
+	}
 ```
 > **[NOTE]** the **colon** in Gradle uses to describe paths to subprojects. For example,
 > evaluationDependsOn(':api:producer')
 > would look for the subproject  `producer`  of the subproject  `api`.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNDcwODQzNiwxNDYwMzA4MDU0LDE1Nj
-EwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0Nzky
-NTUsLTE3NzQ2OTY4ODJdfQ==
+eyJoaXN0b3J5IjpbODkzOTY3NjI5LDE0NjAzMDgwNTQsMTU2MT
+AyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1
+NSwtMTc3NDY5Njg4Ml19
 -->
