@@ -53,11 +53,20 @@ android project folder, this would be your existing android project renamed to "
 - applicationId
 - dependencies
 
-> local.properties
-主要記錄了flutter.sdk及android.sdk的位置, 介由讀取 local.properties 注入flutter
+> #### local.properties
+> 主要記錄了flutter.sdk及android.sdk的位置, 介由讀取 local.properties 注入flutter
+```groovy
+def localProperties = new Properties()  
+def localPropertiesFile = rootProject.file('local.properties')  
+if (localPropertiesFile.exists()) {  
+    localPropertiesFile.withReader('UTF-8') { reader ->  
+        localProperties.load(reader)  
+    }  
+}
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NDkwODkyOCwxNTYxMDIyMzI5LDgwMT
-I0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2
-ODgyXX0=
+eyJoaXN0b3J5IjpbNDU1NzkwNTkzLDE1NjEwMjIzMjksODAxMj
+QzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4
+ODJdfQ==
 -->
