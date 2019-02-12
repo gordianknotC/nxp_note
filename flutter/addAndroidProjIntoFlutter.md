@@ -275,18 +275,22 @@ subgraph one
 		set-.->dfp
 		set -.- fpgn
 	end
+	dandroid -.- b2
+	subgraph resolving flutter build
+		b1 -.- dfb
+		
+		dflutter -.- b1
+		dsub -.- b1
+		dflutter -.- dsub
+		dsub-.- dandroid
+	end
 	
 	
 	
-	b1 -.- dfb
 end
 
 
-	dandroid -.- b2
-	dflutter -.- b1
-	dsub -.- b1
-	dflutter -.- dsub
-	dsub-.- dandroid
+	
 
 ```
 
@@ -339,8 +343,8 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODg5OTg5OTcsMTgxODQ2NDY2MCwxOT
-QwOTUzNjAyLDE3MjQxOTc2NDEsMTAxODM5MTQ2MiwxNDYwMzA4
-MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLT
-E5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
+eyJoaXN0b3J5IjpbMTg3NDgyNjI4NywxODE4NDY0NjYwLDE5ND
+A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
+NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
+kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
