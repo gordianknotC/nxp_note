@@ -7,7 +7,7 @@
 ### Ntag_I2C_Command
 #### authenticatePlus
 Authenticate using PWD_AUTH command against NTAG I2C Plus product.
-- #### describe writing process in brief
+**describe writing process in brief
 	- params
 		- **byte[]** pwd
 			- 4Byte password to authenticate with
@@ -142,5 +142,5 @@ behaviors almost the same as method of protect referred above.
 ### Ntag_I2C_Command
 ### MinimalNtag_I2C_Command
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk5NDkxMDg5XX0=
+eyJoaXN0b3J5IjpbLTE2Mzg1NzU0MTBdfQ==
 -->
