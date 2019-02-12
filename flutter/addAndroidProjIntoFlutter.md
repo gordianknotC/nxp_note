@@ -286,67 +286,13 @@ subgraph one
 		dflutter -.- dsub
 		dsub-.- dandroid
 	end
-	
-	
-	
 end
-
-
-	
-
 ```
-
-
-**Mermaid UML**
-```mermaid
-
-graph TB
-	subgraph external
-		ADK(android sdk)-.->WL
-		FDK(flutter sdk)-.->WL
-	end
-	subgraph flutter project
-		F((flutter))
-		subgraph folder of flutter android wrapper
-			W((wrapper))
-			subgraph files
-				WS(settings.gradle) --> WB(build.gradle)
-				WL(local.properties)
-			end
-			
-			subgraph folders
-				WR(res)
-				WP(android project)
-				WT(asset)
-			end
-		end
-	
-		subgraph folder of android project
-			A((android project))
-			AB(build.gradle)
-			 subgraph folders
-				 AR(res) 
-				 AT(assets)
-				 AL(libs)
-				 AC(src)
-			 end
-		end	 
-	end
-
-	WS-.- AB
-	WP -.- WS
-	WR -.- AB
-	AT -.- AB
-	AR -.- AB
-	AL -.- AB
-	AC -.- AB
-	WL -.-> AB
-```
-
+ 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc4NjQ5NjQxLDE4MTg0NjQ2NjAsMTk0MD
-k1MzYwMiwxNzI0MTk3NjQxLDEwMTgzOTE0NjIsMTQ2MDMwODA1
-NCwxNTYxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOT
-M2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbMTkwOTk0NzM3MiwxODE4NDY0NjYwLDE5ND
+A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
+NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
+kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
