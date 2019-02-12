@@ -1,7 +1,5 @@
 
 ## Add Android Project Into Flutter
-實際目錄結構如下圖
-![structure](https://gordianknot1981.github.io/nxp_note/flutter/flutter_android_structure.png )
 
 ## Flutter/Android 專案目錄結構說明
 
@@ -10,6 +8,15 @@ file structure of a flutter project would be look like this
 	- 📰 pubspec.yaml 
 	- 📁 lib [1]
 	- 📁 android [2]
+		- 📁 app[
+			- 📁 libs
+			- 📁 src
+			- 📰 build.gradle [^2]
+		- 📁 res[^*]
+		- 📁 assets[^*]
+		- 📰 build.gradle[^3]
+		- 📰 settings.gradle[^4]
+		- 📰 local.properties [^5]
 	- 📁 res [3]
 >[1]  libraries written in dart.
 [2]  an android project wrapper for flutter, which contains following structure
@@ -261,9 +268,9 @@ graph TB
 	WL -.-> AB
 ```
 
-
+**Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3NjYyMzMxNSwxMDE4MzkxNDYyLDE0Nj
+eyJoaXN0b3J5IjpbLTI3NjUxMDY4NywxMDE4MzkxNDYyLDE0Nj
 AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
 MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
