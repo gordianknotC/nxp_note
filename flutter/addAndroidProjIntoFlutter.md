@@ -212,33 +212,7 @@ android project folder, this would be your existing android project renamed to "
 	flutter.versionName=1.0.0  
 	flutter.versionCode=1  
 	flutter.buildMode=debug
-``` 
-
-```mermaid
-graph TD
-	subgraph flutter
-		subgraph files
-			FP(pubspec.yaml)
-		end
-		subgraph folders
-			FL(libs)
-			FW(android wrapper)
-			subgraph flutter android wrapper
-				subgraph files
-					WT(settings.gradle)
-					WL(local.properties)
-					WB(build.gradle)
-				end
-				subgraph folders
-					WA(assets)
-					WR(res)
-					WP(app)
-				end
-				
-			end
-		end
-	end
-```
+```  
 
 ```mermaid
 
@@ -275,7 +249,7 @@ graph TB
 		end	 
 	end
 
-	
+	WT -.- AB
 	WP -.- WS
 	WR -.- AB
 	AT -.- AB
@@ -292,7 +266,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NjQ4Njk0NSwxMDE4MzkxNDYyLDE0Nj
+eyJoaXN0b3J5IjpbMTUwNTY3MTU3NSwxMDE4MzkxNDYyLDE0Nj
 AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
 MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
