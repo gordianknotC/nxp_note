@@ -2,12 +2,12 @@
 ## Add Android Project Into Flutter
 ![structure](https://gordianknot1981.github.io/nxp_note/flutter/flutter_android_structure.png )
 
-### Structure
-- FlutterPrj >
+### Flutter/Android 十十
+- 📁 FlutterProject
 	- 📰 pubspec.yaml 
 	- 📁 lib[^f1]
-	-  📁 android[^f2]
-	-  📁 res[^f3]
+	- 📁 android[^f2]
+	- 📁 res[^f3]
 -------------------------------------
 [f1]:  libraries written in dart.
 [f2]:  an android project wrapper for flutter, which contains following structure
@@ -22,6 +22,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NzEwMTU0OSw4MDEyNDMyNDYsLTM2ND
-Y4MDMyMSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbNTEzMDYyNjM5LDgwMTI0MzI0NiwtMzY0Nj
+gwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
 -->
