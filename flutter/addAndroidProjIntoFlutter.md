@@ -54,6 +54,7 @@ android project folder, this would be your existing android project renamed to "
 - dependencies
 
 > #### local.properties
+> indicates where flutter.sdk and android.sdk locate.
 ```groovy
 	def localProperties = new Properties()  
 	def localPropertiesFile = rootProject.file('local.properties')  
@@ -63,20 +64,22 @@ android project folder, this would be your existing android project renamed to "
 	    }  
 	}
 ```
-> 主要記錄了flutter.sdk及android.sdk的位置, 介由讀取 local.properties 注入flutter
-> rootProject 指向 android , 
-> localPropertiesFile  指向 android/local.properties
+> 主要記錄了flutter.sdk及android.sdk的位置, 介由讀取 local.properties 以注入flutter
+> - rootProject 指向 android , 
+> - localPropertiesFile  指向 android/local.properties
 
 > #### flutterRoot
-> indicates flutter sdk
+> read flutter sdk from local.properties into flutterRoot
 ```groovy
 def flutterRoot = localProperties.getProperty('flutter.sdk')  
 if (flutterRoot == null) {  
     throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")  
 }
 ```
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3MTA2Mzc3MiwxNTYxMDIyMzI5LDgwMT
+eyJoaXN0b3J5IjpbMTg5NjIxNzIyMCwxNTYxMDIyMzI5LDgwMT
 I0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2
 ODgyXX0=
 -->
