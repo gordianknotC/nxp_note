@@ -218,16 +218,18 @@ public void onPause() {
 ```
 
 ### addNewIntentListener
+**definition**
 ```java
 Registrar.addNewIntentListener(NewIntentListener listener)
 interface NewIntentListener {
 	boolean onNewIntent(Intent intent)
-	
 }
 ```
+**example**
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY3NDA2NDQ2LC03MTk5NzQ5NzcsODQxOD
-MzMzgwXX0=
+eyJoaXN0b3J5IjpbLTE0ODU1OTg0MTcsMjY3NDA2NDQ2LC03MT
+k5NzQ5NzcsODQxODMzMzgwXX0=
 -->
