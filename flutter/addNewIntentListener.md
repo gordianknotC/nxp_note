@@ -210,6 +210,13 @@ public void onPause() {
 		- sendBroadCast  
 			-  params
 				- **Intent** intent
+
+```java
+	IntentFilter intentFilter =  new  IntentFilter();
+	intentFilter.addAction("path.to.action.name"); 
+	LocalBroadcastManager manager = LocalBroadcastManager.getInstance(context); 
+	manager.registerReceiver(receiver, intentFilter);
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQxODMzMzgwXX0=
+eyJoaXN0b3J5IjpbLTcxOTk3NDk3Nyw4NDE4MzMzODBdfQ==
 -->
