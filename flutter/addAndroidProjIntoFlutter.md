@@ -225,7 +225,10 @@ graph LR
 ```mermaid
 graph TB
 	subgraph flutter
-		
+		FP(pubspec.yaml) -.- FL(libs)
+		FP -.- FA(android project)
+	end
+	subgraph android project
 	end
 	c1-->a2
     subgraph one
@@ -235,13 +238,13 @@ graph TB
     b1-->b2
     end
     subgraph three
-    c1-->c2-->c3
+    c1-->c2
     end
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5Mzk1ODc0LDEwMTgzOTE0NjIsMTQ2MD
-MwODA1NCwxNTYxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIx
-LC0xOTM2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbLTE2MzQzMTY5MzAsMTAxODM5MTQ2MiwxND
+YwMzA4MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAz
+MjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
 -->
