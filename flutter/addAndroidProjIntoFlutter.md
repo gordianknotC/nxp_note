@@ -71,6 +71,15 @@ android project folder, this would be your existing android project renamed to "
 > #### flutterRoot
 > read flutter sdk from local.properties into flutterRoot
 ```groovy
+	def flutterVersionCode = localProperties.getProperty('flutter.versionCode')  
+	if (flutterVersionCode == null) {  
+	    flutterVersionCode = '1'  
+	}  
+	  
+	def flutterVersionName = localProperties.getProperty('flutter.versionName')  
+	if (flutterVersionName == null) {  
+	    flutterVersionName = '1.0'  
+	}
 	def flutterRoot = localProperties.getProperty('flutter.sdk')  
 	if (flutterRoot == null) {  
 	    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")  
@@ -145,10 +154,10 @@ android project folder, this would be your existing android project renamed to "
 #### 現有專案的 res & assets
 於上述build.gradle中設定
 
-**[3] build.gradle** for flutter
+**[3] build.gradle** for flutter android wrapper
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMDgzMDg3NSwxNDYwMzA4MDU0LDE1Nj
-EwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0Nzky
-NTUsLTE3NzQ2OTY4ODJdfQ==
+eyJoaXN0b3J5IjpbMTc5Nzc5NzM5LDE0NjAzMDgwNTQsMTU2MT
+AyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1
+NSwtMTc3NDY5Njg4Ml19
 -->
