@@ -5,14 +5,14 @@
 
 ### Flutter/Android 專案目錄結構說明
 
-
 file structure of a flutter project would be look like this
 - 📁 FlutterProject
 	- 📰 pubspec.yaml 
 	- 📁 lib[^f1]
 	- 📁 android[^f2]
 	- 📁 res[^f3]
--------------------------------------
+
+
 [f1]:  libraries written in dart.
 [f2]:  an android project wrapper for flutter, which contains following structure
 
@@ -38,6 +38,6 @@ file structure of a flutter project would be look like this
 	- 📰 settings.gradle[^7]
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjAwMTMwNDUsODAxMjQzMjQ2LC0zNj
-Q2ODAzMjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
+eyJoaXN0b3J5IjpbMTAyNDU5MjM2NCw4MDEyNDMyNDYsLTM2ND
+Y4MDMyMSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
