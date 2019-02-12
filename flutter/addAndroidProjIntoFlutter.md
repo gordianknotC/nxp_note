@@ -245,10 +245,11 @@ graph LR
 	
 	fbuild((flutter build))
 	fpgn((flutter plugin))
-	loc(local.properties)
-	style loc stroke-width:4px   
 	style fbuild stroke-width:6px   
 	style fpgn stroke-width:6px 
+	
+	loc(local.properties)
+	style loc stroke-width:4px   
 	
 	set(setting.gradle)
 	b1(android wrapper - build.gradle)
@@ -260,8 +261,11 @@ graph LR
 	dfr(flutterRoot)
 	dfp(flutterProjectRoot)
 	dfb(buildDir)
+	
 	dandroid(dependencies-androidProject)
 	dflutter(dependencies-buildFlutter)
+	dsub(subproject-relationship)
+	
 	
 	fdk -.-> loc
 	adk -.-> loc
@@ -323,7 +327,7 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1OTQxODAwNywxODE4NDY0NjYwLDE5ND
+eyJoaXN0b3J5IjpbLTIwNTk0MjY1NCwxODE4NDY0NjYwLDE5ND
 A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
 NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
 kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
