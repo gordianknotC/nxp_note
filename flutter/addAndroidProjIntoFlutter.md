@@ -227,15 +227,12 @@ graph LR
 
 ```mermaid
 graph TB
-	F(flutterApp)
+	
 	subgraph folder of flutter android wrapper
 		subgraph files
 			WS(settings.gradle) --> WB(build.gradle)
 			WL(local.properties)
-			WL1(android sdk)-.->WL
-			WL2(flutter sdk)-.->WL
 		end
-		
 		
 		subgraph folders
 			WR(res)
@@ -255,7 +252,6 @@ graph TB
 	end	 
 	
 	WP -.- WS
-
 	WR -.- AB
 	AT -.- AB
 	AR -.- AB
@@ -263,12 +259,16 @@ graph TB
 	AC -.- AB
 	WL -.-> AB
 	
+	F(flutterApp)
+	WL1(android sdk)-.->WL
+	WL2(flutter sdk)-.->WL
+	
 
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDkzNjAzMzIsMTAxODM5MTQ2MiwxND
-YwMzA4MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAz
-MjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
+eyJoaXN0b3J5IjpbMTMwMjExOTMzNCwxMDE4MzkxNDYyLDE0Nj
+AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
+MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
