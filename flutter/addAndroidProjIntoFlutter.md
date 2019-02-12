@@ -216,22 +216,34 @@ android project folder, this would be your existing android project renamed to "
 
 ```mermaid
 graph LR
-	A[Square Rect] -- Link text --> B((Circle))
+	FL[lib folder] -- Link text --> B((Circle))
 	A --> C(Round Rect)
 	B --> D{Rhombus}
 	C --> D
 
 graph TB
 	subgraph flutter
-		FL(libs) --- FP(
+		FL(libs) --- FP(pubspec.yaml)
 	end
+```
+```
+c1-->a2
+subgraph one
+a1-->a2
+end
+subgraph two
+b1-->b2
+end
+subgraph three
+c1-->c2
+end
 ```
 		
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ5NTE4MTk5LDEwMTgzOTE0NjIsMTQ2MD
-MwODA1NCwxNTYxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIx
-LC0xOTM2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbLTkzODM5Mzg0NSwxMDE4MzkxNDYyLDE0Nj
+AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
+MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
