@@ -232,7 +232,6 @@ graph TB
 		WL(local.properties)
 		WL1(android sdk)-->WL
 		WL2(flutter sdk)-->WL
-		WL -
 		
 		subgraph folders
 			WR(res)
@@ -258,13 +257,14 @@ graph TB
 	AR -.-> AB
 	AL -.-> AB
 	AC -.-> AB
+	WL -.-> AB
 	
 
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2NzI4MzA1MiwxMDE4MzkxNDYyLDE0Nj
+eyJoaXN0b3J5IjpbLTkzNzgwNDAzNCwxMDE4MzkxNDYyLDE0Nj
 AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
 MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
