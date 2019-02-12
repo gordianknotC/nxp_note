@@ -270,6 +270,7 @@ graph LR
 	style dsub stroke-width:4px, stroke-dasharray: 5
 	
 	subgraph one
+	b2 -.- fbuild
 	fdk -.-> loc
 	adk -.-> loc
 	loc -.-> b2
@@ -278,8 +279,8 @@ graph LR
 	dfp -.- b2
 	dfp -.- set
 	set -.- fpgn
-	b2 -.- fbuild
 	
+	b1 -.- dfb
 	end
 
 ```
@@ -333,8 +334,8 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MTM4NzI5MSwxODE4NDY0NjYwLDE5ND
-A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
-NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
-kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbMjYyNzYzMzIsMTgxODQ2NDY2MCwxOTQwOT
+UzNjAyLDE3MjQxOTc2NDEsMTAxODM5MTQ2MiwxNDYwMzA4MDU0
+LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5Mz
+Y0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
 -->
