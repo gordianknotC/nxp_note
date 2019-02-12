@@ -43,9 +43,11 @@ android project folder, this would be your existing android project renamed to "
  
 **[2] build.gradle** 現有專案設定檔
 若要將現有專案與flutter連結,需在該設定檔中寫入以下資訊
+- 載入local.properties
+	- local.properties 主要記錄了 flutter.sdk及android.sdk 的位置 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NDYyNTMxMCwxNTYxMDIyMzI5LDgwMT
-I0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2
-ODgyXX0=
+eyJoaXN0b3J5IjpbLTEzNzU4MDUyMDgsMTU2MTAyMjMyOSw4MD
+EyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1NSwtMTc3NDY5
+Njg4Ml19
 -->
