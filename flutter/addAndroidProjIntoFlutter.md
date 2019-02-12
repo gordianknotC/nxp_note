@@ -229,6 +229,7 @@ graph TB
 		FP -.- FA(android project)
 	end
 	subgraph android project
+		AB(build.gradle) -.- AS(settings.gradle)
 	end
 	c1-->a2
     subgraph one
@@ -244,7 +245,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzQzMTY5MzAsMTAxODM5MTQ2MiwxND
+eyJoaXN0b3J5IjpbLTE3NDQyNzI2ODQsMTAxODM5MTQ2MiwxND
 YwMzA4MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAz
 MjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
 -->
