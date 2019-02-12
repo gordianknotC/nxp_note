@@ -46,7 +46,7 @@ file structure of a flutter project would be look like this
 
 
 **[1] app** your existing android project 
- #### [1] app 現有的android project
+ #### [1] app folder - 現有android專案
 
  >需將其folder改名為app，app似乎為flutter默認的android專案名稱，以告知flutter專案設定的位置(build.gradle, settings.gradle)，如果不用默認的名稱似乎也可以，但需要設定project.name及include name，後文會寫到。
 >
@@ -55,7 +55,7 @@ file structure of a flutter project would be look like this
 ------------------------------------------------
  
 **[2] build.gradle** : build script for existing android project
-#### 現有專案設定檔 
+#### android專案設定檔 
 >若要將現有專案與flutter連結,需在該設定檔中寫入以下資訊
 - 載入local.properties
 - flutterRoot 
@@ -162,11 +162,13 @@ file structure of a flutter project would be look like this
 ```
 [file](build.gradle.andoirdpj)
 
+------------------------------------------------
 
 **[*]res and assets** for existing android project
-#### 設置現有專案 res & assets
+#### 設置android專案 res & assets
 > 於上述build.gradle中設定
 
+------------------------------------------------
 
 **[3] build.gradle [4] setting.gradle** for flutter building android
 #### flutter android build 專案設定檔
@@ -219,8 +221,10 @@ file structure of a flutter project would be look like this
 > evaluationDependsOn(':api:producer')
 > would look for the subproject  `producer`  of the subproject  `api`.
 
+------------------------------------------------
 
 **[5] local.properties**
+#### 連結android sdk, flutter sdk
 ```groovy
 	sdk.dir=D:/Users/gordianknot/AppData/Local/Android/android-sdk  
 	flutter.sdk=E:\\flutter  
@@ -292,7 +296,7 @@ end
  
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTEwMDIzNDUsLTE4NzIzNzMzNzAsMT
+eyJoaXN0b3J5IjpbLTE3MTA2NTE1MjMsLTE4NzIzNzMzNzAsMT
 gxODQ2NDY2MCwxOTQwOTUzNjAyLDE3MjQxOTc2NDEsMTAxODM5
 MTQ2MiwxNDYwMzA4MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC
 0zNjQ2ODAzMjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
