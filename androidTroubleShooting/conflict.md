@@ -18,9 +18,8 @@ It's a dependencies conflict 相依衝突，多半為不同的相依間存在不
 	```groovy
 	android {  
 	sourceSets {  
-	main {  
-		manifest.srcFile "src/main/AndroidManifest.xml"  
-	}
+		main {  
+			manifest.srcFile "src/main/AndroidManifest.xml"  
 	```
 3. 在AndroidManifest.xml 中沒有設定package
 	- 可在defaultConfig中填上applicationId
@@ -30,6 +29,10 @@ It's a dependencies conflict 相依衝突，多半為不同的相依間存在不
 		applicationId "com.gknot"  
 	}
 	```
+
+---------------------------------------------------------
+#### AndroidManifest.xml: Error: 'A' is not a valid file-based resource name character
+當我們誤把 AndroidManifest.xml 放到 res 所指定的地方時，程式會把
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MjY4NDU3M119
+eyJoaXN0b3J5IjpbLTMxNDU2MzMzM119
 -->
