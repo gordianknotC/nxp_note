@@ -87,12 +87,15 @@ flutter {
 
 > #### apply plugin | apply from
 > contains following two section
->  - apply plugins like kotlin which indicates a valid pluginId implmented the plugin interface if neccessary.
+>  - apply plugins like kotlin which indicates a valid pluginId implmented the plugin interface by project requirements.
 >  - apply a build script from flutter
 ```groovy
+apply plugin: 'com.android.application'  
+apply plugin: 'kotlin-android'  
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyOTM4MzA1MCwxNDYwMzA4MDU0LDE1Nj
-EwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0Nzky
-NTUsLTE3NzQ2OTY4ODJdfQ==
+eyJoaXN0b3J5IjpbLTE1NTAwNzM3NDUsMTQ2MDMwODA1NCwxNT
+YxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5
+MjU1LC0xNzc0Njk2ODgyXX0=
 -->
