@@ -226,8 +226,8 @@ graph LR
 ```
 
 ```mermaid
+
 graph TB
-	
 	subgraph folder of flutter android wrapper
 		subgraph files
 			WS(settings.gradle) --> WB(build.gradle)
@@ -264,12 +264,13 @@ graph TB
 		FDK(flutter sdk)-.->WL
 	end
 	
+	F((flottuer))
 
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxOTI1ODIwNCwxMDE4MzkxNDYyLDE0Nj
+eyJoaXN0b3J5IjpbLTQ5OTUxODE3OSwxMDE4MzkxNDYyLDE0Nj
 AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
 MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
