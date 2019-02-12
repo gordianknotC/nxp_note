@@ -244,9 +244,11 @@ graph LR
 	adk((android sdk))
 	loc(local.properties)
 	
-	set{setting.gradle}
-	b1{android wrapper - build.gradle}
-	b2{android project - build.gradle}
+	set(setting.gradle)
+	b1(android wrapper - build.gradle)
+	b2(android project - build.gradle)
+	style b1 stroke-width:2px
+
 	dfr(flutterRoot)
 	dfp(flutterProject)
 	dfb(buildDir)
@@ -308,8 +310,8 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTczMTEwNDEsMTgxODQ2NDY2MCwxOT
-QwOTUzNjAyLDE3MjQxOTc2NDEsMTAxODM5MTQ2MiwxNDYwMzA4
-MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLT
-E5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
+eyJoaXN0b3J5IjpbMTIxNTUzNjg2MSwxODE4NDY0NjYwLDE5ND
+A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
+NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
+kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
