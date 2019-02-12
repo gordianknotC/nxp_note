@@ -239,8 +239,10 @@ graph TB
 	end
 ```
 ```mermaid
-gra
-	set((setting.gradle))
+graph TB
+	set(setting.gradle)
+	b1(android wrapper - build.gradle)
+	b2(android project - build.gradle)
 ```
 
 
@@ -292,8 +294,8 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgyNjk2Njc1LDE4MTg0NjQ2NjAsMTk0MD
-k1MzYwMiwxNzI0MTk3NjQxLDEwMTgzOTE0NjIsMTQ2MDMwODA1
-NCwxNTYxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOT
-M2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbLTIyMTE0NTU4NywxODE4NDY0NjYwLDE5ND
+A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
+NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
+kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
