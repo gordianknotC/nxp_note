@@ -232,7 +232,7 @@ graph LR
 	adk((android sdk))
 	
 	dfb{buildDir}
-	fbuild((flutter build))
+	abuild((android build))
 	fpgn((flutter plugin))
 	style fbuild stroke-width:6px   
 	style fpgn stroke-width:6px 
@@ -343,7 +343,7 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3NDgyNjI4NywxODE4NDY0NjYwLDE5ND
+eyJoaXN0b3J5IjpbMTE0OTA3MjczNywxODE4NDY0NjYwLDE5ND
 A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
 NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
 kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
