@@ -96,7 +96,11 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 ```
 
 > #### sourcesSet
-> 
+> set entry point for finding sources
+> - java source
+	> j
+> - res source
+> - assets source
 
 ```groovy
 android {  
@@ -109,7 +113,7 @@ android {
 		}  
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzYwNjYwODUsMTQ2MDMwODA1NCwxNT
-YxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5
-MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbMjIzNzg2NzI2LDE0NjAzMDgwNTQsMTU2MT
+AyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1
+NSwtMTc3NDY5Njg4Ml19
 -->
