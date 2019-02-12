@@ -168,28 +168,20 @@ buildscript {
 	}  
 }  
 
-allprojects {  
-repositories {  
-google()  
-jcenter()  
-}  
-}  
-
 rootProject.buildDir = '../build'  
 subprojects {  
-project.buildDir = "${rootProject.buildDir}/${project.name}"  
+	project.buildDir = "${rootProject.buildDir}/${project.name}"  
 }  
 subprojects {  
-project.evaluationDependsOn(':app')  
+	project.evaluationDependsOn(':app')  
 }  
-
 task clean(type: Delete) {  
-delete rootProject.buildDir  
+	delete rootProject.buildDir  
 }
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzE3MDQ1MzUsMTQ2MDMwODA1NCwxNT
-YxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5
-MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbLTIwMDczNzMwOCwxNDYwMzA4MDU0LDE1Nj
+EwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0Nzky
+NTUsLTE3NzQ2OTY4ODJdfQ==
 -->
