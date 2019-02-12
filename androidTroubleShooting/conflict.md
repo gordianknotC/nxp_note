@@ -32,7 +32,8 @@ It's a dependencies conflict 相依衝突，多半為不同的相依間存在不
 
 ---------------------------------------------------------
 #### AndroidManifest.xml: Error: 'A' is not a valid file-based resource name character
-當我們誤把 AndroidManifest.xml 放到 res 所指定的地方時，程式會把
+當我們誤把 AndroidManifest.xml 放到 res 所指定的地方時，程式會把AndroidManifest.xml 視為 resource並套用resource的命名規則
+```groovy
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNDU2MzMzM119
+eyJoaXN0b3J5IjpbLTEzNzA1OTYwNzNdfQ==
 -->
