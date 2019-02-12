@@ -27,14 +27,17 @@ file structure of a flutter project would be look like this
 ### 說明Android Project wrapper for flutter
 #### android project wrapper for flutter
 	- 📁 app[^1]
+		- 📁 libs
+		- 📁 src
 		- 📰 build.gradle [^2]
 		- 📰 local.properties [^3]
 	- 📁 res[^4]
 	- 📁 assets[^5]
-	- 📁 src
+	- 📰 build.gradle[^6]
+	- 📰 settings.gradle[^7]
 ------------------------------------
 [ap]: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU3ODc1NzY2LDgwMTI0MzI0NiwtMzY0Nj
-gwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbLTE4MzUyNDA3MzUsODAxMjQzMjQ2LC0zNj
+Q2ODAzMjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
 -->
