@@ -204,8 +204,17 @@ android project folder, this would be your existing android project renamed to "
 > evaluationDependsOn(':api:producer')
 > would look for the subproject  `producer`  of the subproject  `api`.
 
+
+**[5] local.properties**
+```groovy
+	sdk.dir=D:/Users/gordianknot/AppData/Local/Android/android-sdk  
+	flutter.sdk=E:\\flutter  
+	flutter.versionName=1.0.0  
+	flutter.versionCode=1  
+	flutter.buildMode=debug
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODkzOTY3NjI5LDE0NjAzMDgwNTQsMTU2MT
-AyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1
-NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbLTE0NTc1NjM3MTIsMTQ2MDMwODA1NCwxNT
+YxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5
+MjU1LC0xNzc0Njk2ODgyXX0=
 -->
