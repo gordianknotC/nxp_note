@@ -225,6 +225,18 @@ android project folder, this would be your existing android project renamed to "
 	flutter.buildMode=debug
 ```  
 
+```mermaid
+graph TB
+	subgraph flutter
+		F((flutter))
+	end
+	subgraph android wrapper
+		W((flutter android wrapper))
+	end
+	subgraph android project
+	
+```
+
 
 **Mermaid UML**
 ```mermaid
@@ -274,8 +286,8 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxODQ2NDY2MCwxOTQwOTUzNjAyLDE3Mj
-QxOTc2NDEsMTAxODM5MTQ2MiwxNDYwMzA4MDU0LDE1NjEwMjIz
-MjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0NzkyNTUsLT
-E3NzQ2OTY4ODJdfQ==
+eyJoaXN0b3J5IjpbLTcyMjk5Nzg4NiwxODE4NDY0NjYwLDE5ND
+A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
+NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
+kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
