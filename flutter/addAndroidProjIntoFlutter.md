@@ -16,7 +16,8 @@
 		- 📰 build.gradle [^ab]
 		- 📰 local.properties [^al]
 - 📁res[^ar]
-- 📁assets[^aa]
+- 📁 assets[^aa]
+- 📁 src
 
 [2]: "app" is a default convention name in flutter. If you have an existing android project wanna port to flutter, it must rename to "app" or modify it in build.gradle
 following is structure of "app"
@@ -24,6 +25,6 @@ following is structure of "app"
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTg4OTM5OSw4MDEyNDMyNDYsLTM2ND
-Y4MDMyMSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbNTIxMTAwMDYyLDgwMTI0MzI0NiwtMzY0Nj
+gwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
 -->
