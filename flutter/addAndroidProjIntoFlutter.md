@@ -157,7 +157,7 @@ android project folder, this would be your existing android project renamed to "
 		androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'  
 	}
 ```
-()[demo file]
+demo file
 
 
 **[*]res and assets** for existing android project
@@ -274,7 +274,7 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MzkzMjg5OSwxNzI0MTk3NjQxLDEwMT
+eyJoaXN0b3J5IjpbMTk0MDk1MzYwMiwxNzI0MTk3NjQxLDEwMT
 gzOTE0NjIsMTQ2MDMwODA1NCwxNTYxMDIyMzI5LDgwMTI0MzI0
 NiwtMzY0NjgwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2ODgyXX
 0=
