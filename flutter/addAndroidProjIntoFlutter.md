@@ -271,28 +271,28 @@ graph LR
 	style dflutter stroke-width:4px, stroke-dasharray: 5
 	style dsub stroke-width:4px, stroke-dasharray: 5
 	
-	subgraph two
-		dandroid -.- b2
-		dflutter -.- b1
-		dsub -.- b1
-		dflutter -.- dsub
-		dsub-.- dandroid
-	end
-	subgraph one
-		b2 -.- fbuild
-		fdk -.-> loc
-		adk -.-> loc
-		loc -.-> b2
-		loc -.- dfr
-		b2 -.- dfr
-		dfp -.- b2
-		set-.->dfp
-		set -.- fpgn
-		
-		b1 -.- dfb
-	end
 	
+subgraph one
+	b2 -.- fbuild
+	fdk -.-> loc
+	adk -.-> loc
+	loc -.-> b2
+	loc -.-> dfr
+	b2 -.- dfr
+	dfp -.- b2
+	set-.->dfp
+	set -.- fpgn
 	
+	b1 -.- dfb
+end
+
+subgraph two
+	dandroid -.- b2
+	dflutter -.- b1
+	dsub -.- b1
+	dflutter -.- dsub
+	dsub-.- dandroid
+end
 ```
 
 
@@ -344,8 +344,8 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNjY3MDMxNCwxODE4NDY0NjYwLDE5ND
-A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
-NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
-kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbMzkyODMxOTAsMTgxODQ2NDY2MCwxOTQwOT
+UzNjAyLDE3MjQxOTc2NDEsMTAxODM5MTQ2MiwxNDYwMzA4MDU0
+LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5Mz
+Y0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
 -->
