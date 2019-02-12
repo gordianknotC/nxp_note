@@ -265,8 +265,11 @@ graph LR
 	dandroid(dependencies-androidProject)
 	dflutter(dependencies-buildFlutter)
 	dsub(subproject-relationship)
+	style dandroid stroke-width:4px, stroke-dasharray: 5
+	style dflutter stroke-width:4px, stroke-dasharray: 5
+	style dsub stroke-width:4px, stroke-dasharray: 5
 	
-	
+	dandroid -.- b2
 	fdk -.-> loc
 	adk -.-> loc
 	loc -.-> b2
@@ -327,7 +330,7 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTk0MjY1NCwxODE4NDY0NjYwLDE5ND
+eyJoaXN0b3J5IjpbMTgzNjE0ODkxNSwxODE4NDY0NjYwLDE5ND
 A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
 NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
 kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
