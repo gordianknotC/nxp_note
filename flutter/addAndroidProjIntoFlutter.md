@@ -228,6 +228,10 @@ graph LR
 ```mermaid
 
 graph TB
+	subgraph external
+		ADK(android sdk)-.->WL
+		FDK(flutter sdk)-.->WL
+	end
 	subgraph flutter project
 		F((flutter))
 		subgraph folder of flutter android wrapper
@@ -265,10 +269,7 @@ graph TB
 	AC -.- AB
 	WL -.-> AB
 	
-	subgraph external
-		ADK(android sdk)-.->WL
-		FDK(flutter sdk)-.->WL
-	end
+	
 	
 	
 
@@ -276,7 +277,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NjE4MTUwNSwxMDE4MzkxNDYyLDE0Nj
-AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
-MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbMTAxMDIyMzE5LDEwMTgzOTE0NjIsMTQ2MD
+MwODA1NCwxNTYxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIx
+LC0xOTM2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
 -->
