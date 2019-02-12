@@ -230,6 +230,11 @@ graph TB
 	end
 	subgraph android project
 		AB(build.gradle) -.- AS(settings.gradle)
+		
+		subgraph folders
+			PA(app)
+		end
+		
 	end
 	c1-->a2
     subgraph one
@@ -245,7 +250,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI0MDI4Mzk0LDEwMTgzOTE0NjIsMTQ2MD
-MwODA1NCwxNTYxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIx
-LC0xOTM2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbMTA1NTUyMTkxMSwxMDE4MzkxNDYyLDE0Nj
+AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
+MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
