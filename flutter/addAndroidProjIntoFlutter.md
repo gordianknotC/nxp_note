@@ -155,16 +155,41 @@ android project folder, this would be your existing android project renamed to "
 
 **[3] build.gradle** for flutter building android
 #### flutter android build 專案設定檔
-若要將現有專案與flutter連結,需在該設定檔中寫入以下資訊
 - kotlin & gradle dependencies
-- buildDir
-- add subproject
-- apply pluginId **&** apply from
-- sourceSets
-- applicationId
-- dependencies
+- add buildDir
+- add existing android project into subproject
+- add clean build
+```groovy
+buildscript {  
+	ext.kotlin_version = '1.3.21'  
+	dependencies {  
+		classpath 'com.android.tools.build:gradle:3.3.1'  
+		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"  
+	}  
+}  
+
+allprojects {  
+repositories {  
+google()  
+jcenter()  
+}  
+}  
+
+rootProject.buildDir = '../build'  
+subprojects {  
+project.buildDir = "${rootProject.buildDir}/${project.name}"  
+}  
+subprojects {  
+project.evaluationDependsOn(':app')  
+}  
+
+task clean(type: Delete) {  
+delete rootProject.buildDir  
+}
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ2NzI0NzY4LDE0NjAzMDgwNTQsMTU2MT
-AyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1
-NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbLTE3MzE3MDQ1MzUsMTQ2MDMwODA1NCwxNT
+YxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5
+MjU1LC0xNzc0Njk2ODgyXX0=
 -->
