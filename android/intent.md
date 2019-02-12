@@ -14,6 +14,13 @@ public void showAuthDialog() {
 	intent.putExtras(MainActivity.getNfcIntent());  
 	startActivityForResult(intent, MainActivity.AUTH_REQUEST);  
 }
+public void showAboutDialog() {  
+	Intent intent = null;  
+	intent = new Intent(this, VersionInfoActivity.class);  
+	if(MainActivity.mIntent != null)  
+		intent.putExtras(MainActivity.mIntent);  
+	startActivity(intent);  
+}
 ```
 -------------------------
 
@@ -39,5 +46,5 @@ public void sendFeedback() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNjcyMjM0N119
+eyJoaXN0b3J5IjpbNzYzNjU2NjgyXX0=
 -->
