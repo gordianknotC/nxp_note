@@ -33,6 +33,7 @@ file structure of a flutter project would be look like this
 - 📁 assets[^5]
 - 📰 build.gradle[^6]
 - 📰 settings.gradle[^7]
+- 📰 local.properties [^8]
 
 **[1] app** your existing android project 
 > #### 現有的android project
@@ -41,8 +42,10 @@ file structure of a flutter project would be look like this
  > android project folder, this would be your existing android project renamed to "app".  "app" seems like a default naming convention for flutter to indicate project entry folder where configurations(build.gradle and local.properties) locates. For not using convention name, you need to setup project name and include name in build.gradle, which will refer later on.
 > 
 **[2] build.gradle**
+which depend on
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MTMwOTkyOCwxNTYxMDIyMzI5LDgwMT
-I0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2
-ODgyXX0=
+eyJoaXN0b3J5IjpbLTE0NTE2Mzk5MjUsMTU2MTAyMjMyOSw4MD
+EyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1NSwtMTc3NDY5
+Njg4Ml19
 -->
