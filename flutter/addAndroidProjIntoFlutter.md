@@ -46,8 +46,13 @@ android project folder, this would be your existing android project renamed to "
 - 載入local.properties
 - flutterRoot 
 - flutterProject
+- apply plugin "kotlin"...
+- apply from flutterRoot
+- sourceSets
+- applicationId
+- dependencies
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTUzNTE1NDksMTU2MTAyMjMyOSw4MD
-EyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1NSwtMTc3NDY5
-Njg4Ml19
+eyJoaXN0b3J5IjpbMTU3NjI0Mjc0NCwxNTYxMDIyMzI5LDgwMT
+I0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2
+ODgyXX0=
 -->
