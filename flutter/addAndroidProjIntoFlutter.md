@@ -259,16 +259,17 @@ graph TB
 	AC -.- AB
 	WL -.-> AB
 	
-	F(flutterApp)
-	WL1(android sdk)-.->WL
-	WL2(flutter sdk)-.->WL
+	subgraph external
+		ADK(android sdk)-.->WL
+		FDK(flutter sdk)-.->WL
+	end
 	
 
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMjExOTMzNCwxMDE4MzkxNDYyLDE0Nj
+eyJoaXN0b3J5IjpbLTkxOTI1ODIwNCwxMDE4MzkxNDYyLDE0Nj
 AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
 MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
