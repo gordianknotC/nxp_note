@@ -100,9 +100,8 @@ android project folder, this would be your existing android project renamed to "
 > - java source
 > - res source
 	> res 分為二個部份，一個是原有專案的res, 另一個則為flutter專案所需要的 res，由flutter自動產生
->   - res source indicates existing android project
+>   - res resource of existing android project
 >   - res source of current flutter project	
-	
 > - assets source
 ```groovy
 	android {  
@@ -144,7 +143,7 @@ android project folder, this would be your existing android project renamed to "
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyMDk3MzM0NSwxNDYwMzA4MDU0LDE1Nj
-EwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0Nzky
-NTUsLTE3NzQ2OTY4ODJdfQ==
+eyJoaXN0b3J5IjpbMzM0NjYxMTc5LDE0NjAzMDgwNTQsMTU2MT
+AyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1
+NSwtMTc3NDY5Njg4Ml19
 -->
