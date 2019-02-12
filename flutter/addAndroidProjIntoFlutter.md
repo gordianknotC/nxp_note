@@ -232,9 +232,15 @@ graph TB
 	end
 	subgraph android wrapper
 		W((flutter android wrapper))
+		
 	end
 	subgraph android project
-	
+		P((android project))
+	end
+```
+```mermaid
+gra
+	set((setting.gradle))
 ```
 
 
@@ -286,8 +292,8 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMjk5Nzg4NiwxODE4NDY0NjYwLDE5ND
-A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
-NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
-kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbOTgyNjk2Njc1LDE4MTg0NjQ2NjAsMTk0MD
+k1MzYwMiwxNzI0MTk3NjQxLDEwMTgzOTE0NjIsMTQ2MDMwODA1
+NCwxNTYxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOT
+M2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
 -->
