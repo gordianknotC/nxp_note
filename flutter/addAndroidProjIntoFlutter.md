@@ -225,19 +225,7 @@ android project folder, this would be your existing android project renamed to "
 	flutter.buildMode=debug
 ```  
 
-```mermaid
-graph TB
-	subgraph flutter
-		F((flutter))
-	end
-	subgraph android wrapper
-		W((flutter android wrapper))
-		
-	end
-	subgraph android project
-		P((android project))
-	end
-```
+ 
 ```mermaid
 graph LR
 	fdk((flutter sdk))
@@ -261,7 +249,7 @@ graph LR
 	style set stroke-width:4px, stroke:#7bc
 
 	dfr(flutterRoot)
-	dfp(flutterProjectRoot)
+	dfp(flutterProjectRoot-resolve project path)
 	
 	
 	dandroid(dependencies-androidProject)
@@ -344,8 +332,8 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3ODM2ODE5MSwxODE4NDY0NjYwLDE5ND
-A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
-NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
-kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbLTE2MzY4MDg1NDksMTgxODQ2NDY2MCwxOT
+QwOTUzNjAyLDE3MjQxOTc2NDEsMTAxODM5MTQ2MiwxNDYwMzA4
+MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLT
+E5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
 -->
