@@ -220,30 +220,28 @@ graph LR
 	A --> C(Round Rect)
 	B --> D{Rhombus}
 	C --> D
+```
 
+```mermaid
 graph TB
 	subgraph flutter
-		FL(libs) --- FP(pubspec.yaml)
+		FL(libs) -.- FP(pubspec.yaml) -.- 
 	end
-```
-```
-c1-->a2
-subgraph one
-a1-->a2
-end
-subgraph two
-b1-->b2
-end
-subgraph three
-c1-->c2
-end
-```
-		
+	c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    c1-->c2
+    end
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzODM5Mzg0NSwxMDE4MzkxNDYyLDE0Nj
+eyJoaXN0b3J5IjpbMTk5NDkxMzk0OSwxMDE4MzkxNDYyLDE0Nj
 AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
 MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
