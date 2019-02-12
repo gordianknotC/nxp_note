@@ -250,10 +250,10 @@ graph LR
 	style b1 stroke-width:4px, stroke:#49a
 	style b2 stroke-width:4px, stroke:#49a
 	style set stroke-width:4px, stroke:#49a
-	style set stroke-width:4px, stroke:#492
+	style loc stroke-width:4px, stroke:#abc
 
 	dfr(flutterRoot)
-	dfp(flutterProject)
+	dfp(flutterProjectRoot)
 	dfb(buildDir)
 	
 	fdk -.-> loc
@@ -313,8 +313,8 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDg1NTU0NiwxODE4NDY0NjYwLDE5ND
-A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
-NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
-kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbLTIwNzEyOTgwNjMsMTgxODQ2NDY2MCwxOT
+QwOTUzNjAyLDE3MjQxOTc2NDEsMTAxODM5MTQ2MiwxNDYwMzA4
+MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLT
+E5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
 -->
