@@ -4,18 +4,17 @@
 
 ### Structure
 - FlutterPrj >
-	-  🗋 pubspec.yaml
+	-  📋 pubspec.yaml
 	- 📁 lib [^1] 
-	-  android >
-		- app >
-			: "app" seems like a convention name in flutter. If you have an existing android project wanna port to flutter, it must rename to "app"
+	-  📁android
+		- 📁 app[^2]
 	-  ios >
 -------------------------------------
 [1]:  libraries written in dart.
-
+[2]: "app" is a default convention name in flutter. If you have an existing android project wanna port to flutter, it must rename to "app" or modify it in buil
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5Mz
-Y0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
+eyJoaXN0b3J5IjpbMjAwMDE5NDUyMCw4MDEyNDMyNDYsLTM2ND
+Y4MDMyMSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
