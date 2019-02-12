@@ -232,26 +232,17 @@ graph TB
 		AB(build.gradle) -.- AS(settings.gradle)
 		
 		subgraph folders
-			PA(app) -.- PR(res)
-			P
+			PR(res) -.- PA(app)
+			PS(asset) -.- PA
 		end
 		
 	end
-	c1-->a2
-    subgraph one
-    a1-->a2
-    end
-    subgraph two
-    b1-->b2
-    end
-    subgraph three
-    c1-->c2
-    end
+	 
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk0NjM1MDQ4LDEwMTgzOTE0NjIsMTQ2MD
-MwODA1NCwxNTYxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIx
-LC0xOTM2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbMTg5ODMzNTY3MCwxMDE4MzkxNDYyLDE0Nj
+AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
+MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
