@@ -7,8 +7,8 @@
 	- 📰 pubspec.yaml 
 	- 📁 lib [^1] 
 	-  📁android
-		- 📁 app[^2 existing]
-			- 📰 build.gradle
+		- 📁 app[^2 - existing android project]
+			- 📰 build.gradle [^d]
 			- 📰 local.properties 
 	-  ios >
 -------------------------------------
@@ -17,6 +17,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODI1MDk4OTAsODAxMjQzMjQ2LC0zNj
-Q2ODAzMjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
+eyJoaXN0b3J5IjpbMjU4OTE5NzQzLDgwMTI0MzI0NiwtMzY0Nj
+gwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
 -->
