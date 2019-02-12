@@ -231,8 +231,8 @@ graph TB
 	subgraph folder of flutter android wrapper
 		WS(settings.gradle) --> WB(build.gradle)
 		WL(local.properties)
-		WL1(android sdk)-->WL
-		WL2(flutter sdk)-->WL
+		WL1(android sdk)-.->WL
+		WL2(flutter sdk)-.->WL
 		
 		subgraph folders
 			WR(res)
@@ -252,8 +252,8 @@ graph TB
 	end	 
 	
 	WP --> WS
-	WP -.-> AB
-	WR -.-> AB
+	WP === AB
+	WR -.- AB
 	AT -.-> AB
 	AR -.-> AB
 	AL -.-> AB
@@ -265,7 +265,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI2MjU4NTA0LDEwMTgzOTE0NjIsMTQ2MD
+eyJoaXN0b3J5IjpbODYwODE3ODU1LDEwMTgzOTE0NjIsMTQ2MD
 MwODA1NCwxNTYxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIx
 LC0xOTM2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
 -->
