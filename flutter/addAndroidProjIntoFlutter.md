@@ -269,7 +269,7 @@ graph LR
 	style dflutter stroke-width:4px, stroke-dasharray: 5
 	style dsub stroke-width:4px, stroke-dasharray: 5
 	
-	
+	subgraph one
 	fdk -.-> loc
 	adk -.-> loc
 	loc -.-> b2
@@ -279,9 +279,9 @@ graph LR
 	dfp -.- set
 	set -.- fpgn
 	b2 -.- fbuild
-dandroid -.- b2
-dflutter -.- b1
-dfb -.- b1
+	
+	end
+
 ```
 
 
@@ -333,7 +333,7 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NTA3NTk1MywxODE4NDY0NjYwLDE5ND
+eyJoaXN0b3J5IjpbMjA2MTM4NzI5MSwxODE4NDY0NjYwLDE5ND
 A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
 NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
 kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
