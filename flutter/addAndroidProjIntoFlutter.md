@@ -240,8 +240,8 @@ graph TB
 ```
 ```mermaid
 graph LR
-	fdk(flutter sdk)
-	adk(android sdk)
+	fdk((flutter sdk))
+	adk((android sdk))
 	loc(local.properties)
 	
 	set(setting.gradle)
@@ -255,7 +255,7 @@ graph LR
 	adk -.-> loc
 	loc -.-> b2
 	loc -.- dfr
-	b2 -.-> dfr
+	b2 -.- dfr
 	dfp -.- b2
 ```
 
@@ -308,8 +308,8 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIwNTk5MDk4LDE4MTg0NjQ2NjAsMTk0MD
-k1MzYwMiwxNzI0MTk3NjQxLDEwMTgzOTE0NjIsMTQ2MDMwODA1
-NCwxNTYxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOT
-M2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbLTIwNjA5Nzk1ODIsMTgxODQ2NDY2MCwxOT
+QwOTUzNjAyLDE3MjQxOTc2NDEsMTAxODM5MTQ2MiwxNDYwMzA4
+MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLT
+E5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
 -->
