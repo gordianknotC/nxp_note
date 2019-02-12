@@ -253,7 +253,9 @@ graph LR
 	
 	fdk -.-> loc
 	adk -.-> loc
-	set 
+	loc -.-> b2
+	
+	dfp -.-> b2
 ```
 
 
@@ -305,8 +307,8 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNDc0MDAxMCwxODE4NDY0NjYwLDE5ND
-A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
-NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
-kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbLTE2NTkxOTI5NDYsMTgxODQ2NDY2MCwxOT
+QwOTUzNjAyLDE3MjQxOTc2NDEsMTAxODM5MTQ2MiwxNDYwMzA4
+MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLT
+E5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
 -->
