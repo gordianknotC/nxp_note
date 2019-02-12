@@ -242,6 +242,8 @@ graph TB
 graph LR
 	fdk((flutter sdk))
 	adk((android sdk))
+	fbuild((flutter build))
+	fpgn((flutter plugin))
 	loc(local.properties)
 	
 	set(setting.gradle)
@@ -262,6 +264,7 @@ graph LR
 	loc -.- dfr
 	b2 -.- dfr
 	dfp -.- b2
+	dfp -.- set
 ```
 
 
@@ -313,8 +316,8 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzEyOTgwNjMsMTgxODQ2NDY2MCwxOT
-QwOTUzNjAyLDE3MjQxOTc2NDEsMTAxODM5MTQ2MiwxNDYwMzA4
-MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLT
-E5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
+eyJoaXN0b3J5IjpbLTkzODMyODMwNSwxODE4NDY0NjYwLDE5ND
+A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
+NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
+kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
