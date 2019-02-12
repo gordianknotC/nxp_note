@@ -29,11 +29,11 @@ file structure of a flutter project would be look like this
 	- 📁 libs
 	- 📁 src
 	- 📰 build.gradle [^2]
-- 📁 res[^4]
-- 📁 assets[^5]
-- 📰 build.gradle[^6]
-- 📰 settings.gradle[^7]
-- 📰 local.properties [^8]
+- 📁 res[^*]
+- 📁 assets[^*]
+- 📰 build.gradle[^3]
+- 📰 settings.gradle[^4]
+- 📰 local.properties [^5]
 
 **[1] app** your existing android project 
  #### 現有的android project
@@ -141,10 +141,12 @@ android project folder, this would be your existing android project renamed to "
 	}
 ```
 
+**[*]res and assets** for existing 
+#### 現有專案的 res and assets
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDk1OTM0MzcsMTQ2MDMwODA1NCwxNT
-YxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5
-MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbMTk0NzEwNjg4LDE0NjAzMDgwNTQsMTU2MT
+AyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1
+NSwtMTc3NDY5Njg4Ml19
 -->
