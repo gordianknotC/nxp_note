@@ -227,25 +227,31 @@ graph TB
 	subgraph flutter
 		FP(pubspec.yaml)
 		subgraph folder
-			FL(libs) -.- FA(android project)
-			FA --> subgraph folder of android project
+			FL(libs)
+			FA(android project)
 		end
 	end
 	subgraph folder of android project
 		AB(build.gradle) -.- AS(settings.gradle)
-		
 		subgraph folders
-			PR(res) -.- PA(app)
-			PS(asset) -.- PA
+			PR(res)
+			PA(app)
+			PS(asset)
 		end
-			
 	end
-	 
+	subgraph folder of android project
+		AB(build.gradle) -.- AS(settings.gradle)
+		subgraph folders
+			PR(res)
+			PA(app)
+			PS(asset)
+		end
+	end	 
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTkxMjU4NjAsMTAxODM5MTQ2MiwxND
+eyJoaXN0b3J5IjpbLTEyMDkzMTg5MDUsMTAxODM5MTQ2MiwxND
 YwMzA4MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAz
 MjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
 -->
