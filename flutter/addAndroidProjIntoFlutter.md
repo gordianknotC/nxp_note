@@ -87,14 +87,12 @@ flutter {
 
 > #### apply plugin | apply from
 > contains following two section
->  - apply plugins like kotlin which indicates a valid pluginId implmented the plugin interface
-> apply a build script from flutter
-> - apply plugin: pluginId
-> - apply from: local or remote build script
+>  - apply plugins like kotlin which indicates a valid pluginId implmented the plugin interface if neccessary.
+>  - apply a build script from flutter
 ```groovy
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1MzcyMzgxNiwxNDYwMzA4MDU0LDE1Nj
+eyJoaXN0b3J5IjpbMTUyOTM4MzA1MCwxNDYwMzA4MDU0LDE1Nj
 EwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAzMjEsLTE5MzY0Nzky
 NTUsLTE3NzQ2OTY4ODJdfQ==
 -->
