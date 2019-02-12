@@ -219,14 +219,14 @@ graph LR
 	FL[lib folder] -- Link text --> B((Circle))
 	A --> C(Round Rect)
 	B --> D{Rhombus}
-	C --> D
+	C <= D
 ```
 
 ```mermaid
 graph TB
 	subgraph flutter
-		FP(pubspec.yaml) -.- FL(libs)
-		FP -.- FA(android project)
+		FP(pubspec.yaml) --- FL(libs)
+		FP --- FA(android project)
 	end
 	subgraph android project
 		AB(build.gradle) -.- AS(settings.gradle)
@@ -245,7 +245,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDQyNzI2ODQsMTAxODM5MTQ2MiwxND
+eyJoaXN0b3J5IjpbLTE2ODkxNjA3ODEsMTAxODM5MTQ2MiwxND
 YwMzA4MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAz
 MjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
 -->
