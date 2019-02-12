@@ -225,28 +225,27 @@ graph LR
 ```mermaid
 graph TB
 	subgraph flutter
-		 FP(pubspec.yaml)
-		
+		FP(pubspec.yaml)
 		subgraph folder
-			FL(libs) -.-> FA(android project) -.-> FP
-		end
-		subgraph android project
-			AB(build.gradle) -.- AS(settings.gradle)
-			
-			subgraph folders
-				PR(res) -.- PA(app)
-				PS(asset) -.- PA
-			end
-				
+			FL(libs) -.- FA(android project)
+			FA --> subgraph folder of android project
 		end
 	end
-	
+	subgraph folder of android project
+		AB(build.gradle) -.- AS(settings.gradle)
+		
+		subgraph folders
+			PR(res) -.- PA(app)
+			PS(asset) -.- PA
+		end
+			
+	end
 	 
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwNTg2NDQxMSwxMDE4MzkxNDYyLDE0Nj
-AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
-MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbLTE1OTkxMjU4NjAsMTAxODM5MTQ2MiwxND
+YwMzA4MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC0zNjQ2ODAz
+MjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
 -->
