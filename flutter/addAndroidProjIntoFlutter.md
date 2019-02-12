@@ -6,14 +6,17 @@
 - FlutterPrj >
 	-  pubspec.yaml
 	- lib >
-		- libraries written in dar 
+		- *.dart
+			: libraries written in dart lang 
 	-  android >
+		- app >
+			: "app" seems like a convention name in flutt 
 	-  ios >
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDA2MTExMzIsLTE5MzY0NzkyNTUsLT
-E3NzQ2OTY4ODJdfQ==
+eyJoaXN0b3J5IjpbLTI0OTUzOTI5MSwtMTkzNjQ3OTI1NSwtMT
+c3NDY5Njg4Ml19
 -->
