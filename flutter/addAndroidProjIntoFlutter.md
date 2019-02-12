@@ -261,12 +261,14 @@ graph LR
 	
 	
 subgraph one
-	fdk -.-> loc
-	adk -.-> loc
+	subgraph path resolving
+		fdk -.-> loc
+		adk -.-> loc
+		loc -.-> dfr
+	end
+	subgraph projectPath
 	loc -.-> b2
-	loc -.-> dfr
 	b2 -.- fbuild
-	
 	b2 -.- dfr
 	dfp -.- b2
 	set-.->dfp
@@ -333,8 +335,8 @@ graph TB
 
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MTQzNzkxLDE4MTg0NjQ2NjAsMTk0MD
-k1MzYwMiwxNzI0MTk3NjQxLDEwMTgzOTE0NjIsMTQ2MDMwODA1
-NCwxNTYxMDIyMzI5LDgwMTI0MzI0NiwtMzY0NjgwMzIxLC0xOT
-M2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbMTgzODU2MjcyOCwxODE4NDY0NjYwLDE5ND
+A5NTM2MDIsMTcyNDE5NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgw
+NTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMT
+kzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
