@@ -29,16 +29,15 @@ file structure of a flutter project would be look like this
 	- 📁 libs
 	- 📁 src
 	- 📰 build.gradle [^2]
-	- 📰 local.properties [^3]
 - 📁 res[^4]
 - 📁 assets[^5]
 - 📰 build.gradle[^6]
 - 📰 settings.gradle[^7]
 
-[1] 現有的android project需要將其改名為app並放在這裡，app似乎為flutter默認的android專案名稱，以告知flutter專案設定的位置(build.gradle, settings.gradle) android project folder, this would be your existing android project renamed to "app".  "app" seems like a default naming convention for flutter to indicate project entry folder where configurations(build.gradle and local.properties) locates. 
+[1] 現有的android project需要將其改名為app並放在這裡，app似乎為flutter默認的android專案名稱，以告知flutter專案設定的位置(build.gradle, settings.gradle)，如果不用默任的名稱似乎也可以，但要在 android project folder, this would be your existing android project renamed to "app".  "app" seems like a default naming convention for flutter to indicate project entry folder where configurations(build.gradle and local.properties) locates. 
 > 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0NDQ1MjY2NCwxNTYxMDIyMzI5LDgwMT
+eyJoaXN0b3J5IjpbMTAwNDc3NDkzOSwxNTYxMDIyMzI5LDgwMT
 I0MzI0NiwtMzY0NjgwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2
 ODgyXX0=
 -->
