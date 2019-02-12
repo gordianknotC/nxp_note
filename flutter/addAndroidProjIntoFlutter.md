@@ -227,22 +227,23 @@ graph TB
 	subgraph flutter
 		FL(libs) -.-> FP(pubspec.yaml)
 		FA(android project) -.-> FP
-	end
-	subgraph android project
-		AB(build.gradle) -.- AS(settings.gradle)
-		
-		subgraph folders
-			PR(res) -.- PA(app)
-			PS(asset) -.- PA
+		subgraph android project
+			AB(build.gradle) -.- AS(settings.gradle)
+			
+			subgraph folders
+				PR(res) -.- PA(app)
+				PS(asset) -.- PA
+			end
+				
 		end
-		
 	end
+	
 	 
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5ODMzNTY3MCwxMDE4MzkxNDYyLDE0Nj
+eyJoaXN0b3J5IjpbMTUwMDkyMTQyMiwxMDE4MzkxNDYyLDE0Nj
 AzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLTM2NDY4MDMy
 MSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
