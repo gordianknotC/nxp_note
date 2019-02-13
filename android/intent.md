@@ -96,6 +96,10 @@ There are three pieces of information in the Intent that are used for resolution
 
 ### Standard Activity Actions
 
+| action name | activity action |
+|--|--|
+| ACTION_MAIN |  Start as a main entry point, does not expect to receive data.|
+
 
 
 
@@ -218,7 +222,7 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNzI4MTg1OSwtMTY2MDkwNzE3NywyNT
-Y5ODc1NjAsOTY4Mjk3NTg2LDEyNjczNzgyMTksMTY0MTQwMTMx
-NiwxMzExMDgwNjksNzYzNjU2NjgyXX0=
+eyJoaXN0b3J5IjpbLTYyMjQxMzk0LC0xNjYwOTA3MTc3LDI1Nj
+k4NzU2MCw5NjgyOTc1ODYsMTI2NzM3ODIxOSwxNjQxNDAxMzE2
+LDEzMTEwODA2OSw3NjM2NTY2ODJdfQ==
 -->
