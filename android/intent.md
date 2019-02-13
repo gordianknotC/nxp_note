@@ -107,7 +107,7 @@ class Albums : Parcelable {
     override fun describeContents(): Int {   return 0   }  
   
 	override fun writeToParcel(parcel: Parcel, i: Int) {  
-		//writing order here does matters
+		//writing order here does matters, must be the same with constructor
 		parcel.writeInt(userId)  
 		parcel.writeInt(id)  
 		parcel.writeString(title)  
@@ -126,6 +126,8 @@ class Albums : Parcelable {
     }  
 }
 ```
+主要是實作 Serialize 方法 writeToParcel + readParcel
+
 
 
 
@@ -133,6 +135,6 @@ class Albums : Parcelable {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDA2MjEyOTksMTY0MTQwMTMxNiwxMz
-ExMDgwNjksNzYzNjU2NjgyXX0=
+eyJoaXN0b3J5IjpbNTAyMzM4NDkwLDE2NDE0MDEzMTYsMTMxMT
+A4MDY5LDc2MzY1NjY4Ml19
 -->
