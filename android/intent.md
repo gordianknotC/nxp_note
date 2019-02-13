@@ -86,35 +86,32 @@ public  class  Albums {
 Parcelable
 ```kotlin
 class Albums : Parcelable {  
-    var userId: Int = 0  
-  private set  
- var id: Int = 0  
-  private set  
- var title: String? = null  
- private set  
- constructor(userId: Int, id: Int, title: String) {  
-        this.userId = userId  
-  this.id = id  
-  this.title = title  
-  }  
-    /* 以上都跟原來一樣 */  
+	var userId: Int = 0  
+		private set  
+	var id: Int = 0  
+		private set  
+	var title: String? = null  
+		 private set  
+		 
+	constructor(userId: Int, id: Int, title: String) {  
+		this.userId = userId  
+		this.id = id  
+		this.title = title  
+	}  
+	protected constructor(`in`: Parcel) {  
+		userId = `in`.readInt()  
+		id = `in`.readInt()  
+		title = `in`.readString()  
+	}  
+ 
+    override fun describeContents(): Int {   return 0   }  
   
- /* 以下為新增的Parcelable部分 */ // 讀取參數，參數順序要和建構子一樣  protected constructor(`in`: Parcel) {  
-        userId = `in`.readInt()  
-        id = `in`.readInt()  
-        title = `in`.readString()  
-    }  
-  
-    override fun describeContents(): Int {  
-        return 0  
-  }  
-  
-    // 寫入參數，參數順序要和建構子一樣  
-  override fun writeToParcel(parcel: Parcel, i: Int) {  
-        parcel.writeInt(userId)  
-        parcel.writeInt(id)  
-        parcel.writeString(title)  
-    }  
+	override fun writeToParcel(parcel: Parcel, i: Int) {  
+		//writing order here does matters
+		parcel.writeInt(userId)  
+		parcel.writeInt(id)  
+		parcel.writeString(title)  
+	}  
   
     companion object {  
         @JvmField val CREATOR: Parcelable.Creator<Albums> = object : Parcelable.Creator<Albums> {  
@@ -136,6 +133,6 @@ class Albums : Parcelable {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNTAzNzIxMiwxNjQxNDAxMzE2LDEzMT
-EwODA2OSw3NjM2NTY2ODJdfQ==
+eyJoaXN0b3J5IjpbLTE5NDA2MjEyOTksMTY0MTQwMTMxNiwxMz
+ExMDgwNjksNzYzNjU2NjgyXX0=
 -->
