@@ -23,9 +23,9 @@ In addition to these primary attributes, there are a number of secondary attribu
     
 -   **type**  -- Specifies an explicit type (a **MIME** type) of the intent data. Normally the type is `inferred from the data` itself. By setting this attribute, you disable that evaluation and force an explicit type.
     
--   **component**  -- Specifies an **`explicit name of a component class`** to use for the intent. Normally this is determined by looking at the other information in the intent (the action, data/type, and categories) and matching that with a component that can handle it. If this attribute is set then none of the evaluation is performed, and this component is used exactly as is. By specifying this attribute, all of the other Intent attributes become optional.
+-   **component**  -- Specifies an **`explicit name of a component class`** to use for the intent. Normally this is determined by looking at the other information in the intent (the action, data/type, and categories) and matching that with a component that can handle it. `If this attribute is set then none of the evaluation is performed`, and this component is used `exactly as is`. By specifying this attribute, all of the other Intent attributes become optional.
     
--   **extras**  -- This is a  `[Bundle](https://developer.android.com/reference/android/os/Bundle.html)`  of any additional information. This can be used to provide extended information to the component. For example, if we have a action to send an e-mail message, we could also include extra pieces of data here to supply a subject, body, etc.
+-   **extras**  -- This is a  [Bundle](https://developer.android.com/reference/android/os/Bundle.html)  of any additional information. This can be used to provide extended information to the component. For example, if we have a action to send an e-mail message, we could also include extra pieces of data here to supply a subject, body, etc.
 
 Intent(**Context** context, **Activity** activity)
 putExtras(**Intent** src)
@@ -186,7 +186,7 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODEzMDAzNjQsOTY4Mjk3NTg2LDEyNj
-czNzgyMTksMTY0MTQwMTMxNiwxMzExMDgwNjksNzYzNjU2Njgy
-XX0=
+eyJoaXN0b3J5IjpbLTQ0NDIwMDc0Niw5NjgyOTc1ODYsMTI2Nz
+M3ODIxOSwxNjQxNDAxMzE2LDEzMTEwODA2OSw3NjM2NTY2ODJd
+fQ==
 -->
