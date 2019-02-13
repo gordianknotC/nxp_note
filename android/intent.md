@@ -132,9 +132,14 @@ class Albums : Parcelable {
 }
 ```
 
-send extra
+send parcelable via intent
 ```java
 intent.putExtra("albums", albums);
+```
+receive parcelable via intent
+```java
+Intent  intent = getIntent(); 
+Albums albums = intent.getParcelableExtra("albums");
 ```
 
 
@@ -144,8 +149,7 @@ intent.putExtra("albums", albums);
 
 
 
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjEzNzk5NTYsMTY0MTQwMTMxNiwxMz
-ExMDgwNjksNzYzNjU2NjgyXX0=
+eyJoaXN0b3J5IjpbMTQ0MDE0ODYwLDE2NDE0MDEzMTYsMTMxMT
+A4MDY5LDc2MzY1NjY4Ml19
 -->
