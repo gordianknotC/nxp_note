@@ -77,6 +77,8 @@ if (savedInstanceState == null) {
 ----------------------------------
 
 
+.
+## Intent Sample Code
 ### Pass Items from One Activity to Another
 **Item class :**
 ```java
@@ -191,7 +193,7 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4Mzc0MjU2OSw5NjgyOTc1ODYsMTI2Nz
-M3ODIxOSwxNjQxNDAxMzE2LDEzMTEwODA2OSw3NjM2NTY2ODJd
-fQ==
+eyJoaXN0b3J5IjpbMjU2OTg3NTYwLDk2ODI5NzU4NiwxMjY3Mz
+c4MjE5LDE2NDE0MDEzMTYsMTMxMTA4MDY5LDc2MzY1NjY4Ml19
+
 -->
