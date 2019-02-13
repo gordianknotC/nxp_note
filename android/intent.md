@@ -1,4 +1,11 @@
 
+# Intent
+An intent is an abstract description of an operation to be performed. It can be used with  [startActivity](https://developer.android.com/reference/android/content/Context.html#startActivity(android.content.Intent))`  to launch an  `[Activity](https://developer.android.com/reference/android/app/Activity.html)`,  `[broadcastIntent](https://developer.android.com/reference/android/content/Context.html#sendBroadcast(android.content.Intent))`  to send it to any interested  `[BroadcastReceiver](https://developer.android.com/reference/android/content/BroadcastReceiver.html)`  components, and  `[Context.startService(Intent)](https://developer.android.com/reference/android/content/Context.html#startService(android.content.Intent))`  or`[Context.bindService(Intent, ServiceConnection, int)](https://developer.android.com/reference/android/content/Context.html#bindService(android.content.Intent,%20android.content.ServiceConnection,%20int))`  to communicate with a background  `[Service](https://developer.android.com/reference/android/app/Service.html)`.
+
+An Intent provides a facility for performing late runtime binding between the code in different applications. Its most significant use is in the launching of activities, where it can be thought of as the glue between activities. It is basically a passive data structure holding an abstract description of an action to be performed.
+
+
+
 Intent(**Context** context, **Activity** activity)
 putExtras(**Intent** src)
 
@@ -158,6 +165,7 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY4Mjk3NTg2LDEyNjczNzgyMTksMTY0MT
-QwMTMxNiwxMzExMDgwNjksNzYzNjU2NjgyXX0=
+eyJoaXN0b3J5IjpbLTE5NzYyODk0NzgsOTY4Mjk3NTg2LDEyNj
+czNzgyMTksMTY0MTQwMTMxNiwxMzExMDgwNjksNzYzNjU2Njgy
+XX0=
 -->
