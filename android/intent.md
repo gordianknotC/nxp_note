@@ -87,12 +87,12 @@ The intent resolution mechanism basically revolves around matching an Intent aga
 
 There are three pieces of information in the Intent that are used for resolution: the **action, type**, and **category**.
 
--   The  **action**, if given, must be listed by the component **as one it handles**.
+-   The  **action**, if given, **must be listed** by the component as **one** it handles.
     
--   The  **type**  is retrieved from the Intent's data, if not already supplied in the Intent. Like the action, if a type is included in the intent (either explicitly or implicitly in its data), then this must be listed by the component **as one it handles**.
+-   The  **type**  is retrieved from the Intent's data, if not already supplied in the Intent. Like the action, if a type is included in the intent (either explicitly or implicitly in its data), then this **must be listed** by the component as **one** it handles.
     
--   For data that is not a  `content:`  URI and where no explicit type is included in the Intent, instead the  **scheme**  of the intent data (such as  `http:`  or  `mailto:`) is considered. Again like the action, if we are matching a scheme it must be listed by the component as one it can handle.
--   The  **categories**, if supplied, must  _all_  be listed by the activity as categories it handles. That is, if you include the categories  `[CATEGORY_LAUNCHER](https://developer.android.com/reference/android/content/Intent.html#CATEGORY_LAUNCHER)`  and`[CATEGORY_ALTERNATIVE](https://developer.android.com/reference/android/content/Intent.html#CATEGORY_ALTERNATIVE)`, then you will only resolve to components with an intent that lists  _both_  of those categories. Activities will very often need to support the`[CATEGORY_DEFAULT](https://developer.android.com/reference/android/content/Intent.html#CATEGORY_DEFAULT)`  so that they can be found by  `[Context.startActivity()](https://developer.android.com/reference/android/content/Context.html#startActivity(android.content.Intent))`.
+-   For **data** that is not a  `content:`  URI and where no explicit type is included in the Intent, instead the  **scheme**  of the intent data (such as  `http:`  or  `mailto:`) is considered. Again like the action, if we are matching a scheme it **must be listed** by the component as **one** it can handle.
+-   The  **categories**, if supplied, must  _all_  be listed by the activity as categories it handles. That is, if you include the categories  [CATEGORY_LAUNCHER](https://developer.android.com/reference/android/content/Intent.html#CATEGORY_LAUNCHER)`  and[CATEGORY_ALTERNATIVE](https://developer.android.com/reference/android/content/Intent.html#CATEGORY_ALTERNATIVE)`, then you will only resolve to components with an intent that lists  _both_  of those categories. Activities will very often need to support the`[CATEGORY_DEFAULT](https://developer.android.com/reference/android/content/Intent.html#CATEGORY_DEFAULT)`  so that they can be found by  `[Context.startActivity()](https://developer.android.com/reference/android/content/Context.html#startActivity(android.content.Intent))`.
 
 
 
@@ -215,7 +215,7 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NjU3NTIzNSwyNTY5ODc1NjAsOTY4Mj
+eyJoaXN0b3J5IjpbLTMzMDM2MDg2MSwyNTY5ODc1NjAsOTY4Mj
 k3NTg2LDEyNjczNzgyMTksMTY0MTQwMTMxNiwxMzExMDgwNjks
 NzYzNjU2NjgyXX0=
 -->
