@@ -143,6 +143,8 @@ Intent  intent = getIntent();
 Albums albums = intent.getParcelableExtra("albums");
 ```
 
+// 建立物件 Albums albums = new Albums(1, 1, "Castle on the Hill"); // 建立ArrayList放物件 ArrayList<Albums> list = new ArrayList<>(); list.add(albums); // 使用putParcelableArrayListExtra傳遞 Intent intent = new Intent(MainActivity.this, SecondActivity.class); intent.putParcelableArrayListExtra("albums list", list);
+
 
 
 
@@ -151,6 +153,6 @@ Albums albums = intent.getParcelableExtra("albums");
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NzM3ODIxOSwxNjQxNDAxMzE2LDEzMT
-EwODA2OSw3NjM2NTY2ODJdfQ==
+eyJoaXN0b3J5IjpbLTYwMDg3NTYzNiwxMjY3Mzc4MjE5LDE2ND
+E0MDEzMTYsMTMxMTA4MDY5LDc2MzY1NjY4Ml19
 -->
