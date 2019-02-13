@@ -1,5 +1,5 @@
 
-## putExtras
+putExtras(
 
 
 ```java
@@ -24,6 +24,8 @@ public void showAboutDialog() {
 ```
 -------------------------
 
+putExtra (**String** name, **Any** value)
+getExtra(**String** name, **Any** default)
 ```java
 public void sendFeedback() {  
 	Intent intent = new Intent(Intent.ACTION_SENDTO);  
@@ -46,5 +48,5 @@ public void sendFeedback() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYzNjU2NjgyXX0=
+eyJoaXN0b3J5IjpbLTc5MTQxMzQxNyw3NjM2NTY2ODJdfQ==
 -->
