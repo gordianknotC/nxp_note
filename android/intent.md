@@ -44,26 +44,24 @@ if (savedInstanceState == null) {
 ``` 
 
 
-
 ### Pass Items from One Activity to Another
 **Item class :**
 ```java
 public class Item implements Serializable
 ```
 **In first Activity :**
-
 ```java
 Intent intent = new Intent(this, Activity2.class);
 intent.putExtra("items", items);
 startActivity(intent);
 ```
 **In Second Activity (Activity2):**
-
 ```java
-ArrayList<Item> items = (ArrayList<Item>) getIntent().getExtras()
-                .getSerializable("items");
+ArrayList<Item> items = 
+	(ArrayList<Item>) getIntent().getExtras()
+    .getSerializable("items");
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNjIzOTA0LDEzMTEwODA2OSw3NjM2NT
-Y2ODJdfQ==
+eyJoaXN0b3J5IjpbMTY0MTQwMTMxNiwxMzExMDgwNjksNzYzNj
+U2NjgyXX0=
 -->
