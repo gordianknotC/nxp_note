@@ -101,7 +101,8 @@ There are three pieces of information in the Intent that are used for resolution
 | ACTION_MAIN |  Start as a main entry point, does not expect to receive data.|
 | ACTION_GET_CONTENT | Activity Action: Allow the user to select a particular kind of data and return it. This is different than [ACTION_PICK](https://developer.android.com/reference/android/content/Intent.html#ACTION_PICK) in that here we just say what kind of data is desired, not a URI of existing data from which the user can pick. An ACTION_GET_CONTENT could allow the user to create the data as it runs (for example taking a picture or recording a sound), let them browse over the web and download the desired data, etc.|
 |ACTION_SEARCH_LONG_PRESS|Start action associated with long pressing on the search key.|
-
+| CATEGORY_LAUNCHER| Should be displayed in the top-level launcher.|
+| CATEGORY_HOME||
 
 ----------------------------------
 
@@ -222,8 +223,8 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI0ODE1MDU2LDEzMTYxNjkyODIsLTYyMj
-QxMzk0LC0xNjYwOTA3MTc3LDI1Njk4NzU2MCw5NjgyOTc1ODYs
-MTI2NzM3ODIxOSwxNjQxNDAxMzE2LDEzMTEwODA2OSw3NjM2NT
-Y2ODJdfQ==
+eyJoaXN0b3J5IjpbMTc1NjI1NDE5MiwxMzE2MTY5MjgyLC02Mj
+I0MTM5NCwtMTY2MDkwNzE3NywyNTY5ODc1NjAsOTY4Mjk3NTg2
+LDEyNjczNzgyMTksMTY0MTQwMTMxNiwxMzExMDgwNjksNzYzNj
+U2NjgyXX0=
 -->
