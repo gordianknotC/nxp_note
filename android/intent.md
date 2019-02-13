@@ -41,6 +41,7 @@ if (savedInstanceState == null) {
 }
 ``` 
 
+----------------------------------
 
 ### Pass Items from One Activity to Another
 **Item class :**
@@ -59,7 +60,17 @@ ArrayList<Item> items =
 	(ArrayList<Item>) getIntent().getExtras()
     .getSerializable("items");
 ```
+
+----------------------------------
+
+
+
+
+
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDM1NTUwOTgsMTY0MTQwMTMxNiwxMz
-ExMDgwNjksNzYzNjU2NjgyXX0=
+eyJoaXN0b3J5IjpbLTUyMzY0NTI0NCwxNjQxNDAxMzE2LDEzMT
+EwODA2OSw3NjM2NTY2ODJdfQ==
 -->
