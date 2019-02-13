@@ -216,8 +216,12 @@ public void onPause() {
 	LocalBroadcastManager manager = LocalBroadcastManager.getInstance(context); 
 	manager.registerReceiver(receiver, intentFilter);
 ```
+
 #### LocalBroadcastManager cannot be used with pendingIntent
-The point behind a  `PendingIntent`  is to allow  _some other process_to perform an action you request, such as sending a broadcast. The point behind  `LocalBroadcastManager`  is to keep broadcast  _within your process_.Hence, a  `PendingIntent`  can issue a regular broadcast, but not one via  `LocalBroadcastManager`.
+The point behind a  `PendingIntent`  is to allow  _some other process_to perform an action you request, such as sending a broadcast. The point behind  `LocalBroadcastManager`  is to keep broadcast  _within your process_. Hence, a  `PendingIntent`  can issue a regular broadcast, but not one via  `LocalBroadcastManager`.
+
+`PendingIntent` cannot work with `LocalBroadcastManager`. A `PendingIntent` is designed to work across process boundaries; `LocalBroadcastManager` is designed to _not_ work across process boundaries.
+
 
 ### addNewIntentListener
 **definition**
@@ -232,6 +236,6 @@ interface NewIntentListener {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NzA0ODU1NSwtMTQ4NTU5ODQxNywyNj
+eyJoaXN0b3J5IjpbMTYzMjczOTI5MCwtMTQ4NTU5ODQxNywyNj
 c0MDY0NDYsLTcxOTk3NDk3Nyw4NDE4MzMzODBdfQ==
 -->
