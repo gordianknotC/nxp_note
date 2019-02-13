@@ -1,6 +1,5 @@
 
-putExtras(
-
+putExtras(**Intent** src)
 
 ```java
 intent.putExtras(MainActivity.getmIntent());
@@ -26,6 +25,7 @@ public void showAboutDialog() {
 
 putExtra (**String** name, **Any** value)
 getExtra(**String** name, **Any** default)
+
 ```java
 public void sendFeedback() {  
 	Intent intent = new Intent(Intent.ACTION_SENDTO);  
@@ -47,6 +47,14 @@ public void sendFeedback() {
 	this.startActivity(intent);  
 }
 ```
+```java
+```
+Intent i = new Intent(FirstScreen.this, SecondScreen.class);   
+String strName = null;
+i.putExtra("STRING_I_NEED", strName);
+
+```
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MTQxMzQxNyw3NjM2NTY2ODJdfQ==
+eyJoaXN0b3J5IjpbLTY0OTgwMTgyMCw3NjM2NTY2ODJdfQ==
 -->
