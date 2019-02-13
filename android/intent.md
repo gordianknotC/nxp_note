@@ -4,8 +4,6 @@ putExtras(**Intent** src)
 ```java
 intent.putExtras(MainActivity.getmIntent());
 ```
--------------------------
-
 ```java
 public void showAuthDialog() {  
 	Intent intent = null;  
@@ -21,7 +19,7 @@ public void showAboutDialog() {
 	startActivity(intent);  
 }
 ```
--------------------------
+----------------------------------
 
 putExtra (**String** name, **Any** value)
 getExtra(**String** name, **Any** default)
@@ -62,6 +60,6 @@ ArrayList<Item> items =
     .getSerializable("items");
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0MTQwMTMxNiwxMzExMDgwNjksNzYzNj
-U2NjgyXX0=
+eyJoaXN0b3J5IjpbLTEzNDM1NTUwOTgsMTY0MTQwMTMxNiwxMz
+ExMDgwNjksNzYzNjU2NjgyXX0=
 -->
