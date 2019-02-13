@@ -94,6 +94,9 @@ There are three pieces of information in the Intent that are used for resolution
 -   For **data** that is not a  `content:`  URI and where no explicit type is included in the Intent, instead the  **scheme**  of the intent data (such as  `http:`  or  `mailto:`) is considered. Again like the action, if we are matching a scheme it **must be listed** by the component as **one** it can handle.
 -   The  **categories**, if supplied, must  **_all_  be listed** by the activity as categories it handles. That is, if you include the categories  [CATEGORY_LAUNCHER](https://developer.android.com/reference/android/content/Intent.html#CATEGORY_LAUNCHER)  and[CATEGORY_ALTERNATIVE](https://developer.android.com/reference/android/content/Intent.html#CATEGORY_ALTERNATIVE), then you will only resolve to components with an intent that lists  _both_  of those categories. Activities will very often need to support the[CATEGORY_DEFAULT](https://developer.android.com/reference/android/content/Intent.html#CATEGORY_DEFAULT)  so that they can be found by  [Context.startActivity()](https://developer.android.com/reference/android/content/Context.html#startActivity(android.content.Intent))`.
 
+### Standard Activity Actions
+
+
 
 
 ----------------------------------
@@ -215,7 +218,7 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjA5MDcxNzcsMjU2OTg3NTYwLDk2OD
-I5NzU4NiwxMjY3Mzc4MjE5LDE2NDE0MDEzMTYsMTMxMTA4MDY5
-LDc2MzY1NjY4Ml19
+eyJoaXN0b3J5IjpbMjAzNzI4MTg1OSwtMTY2MDkwNzE3NywyNT
+Y5ODc1NjAsOTY4Mjk3NTg2LDEyNjczNzgyMTksMTY0MTQwMTMx
+NiwxMzExMDgwNjksNzYzNjU2NjgyXX0=
 -->
