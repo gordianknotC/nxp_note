@@ -27,11 +27,11 @@ In addition to these primary attributes, there are a number of secondary attribu
     
 -   **extras**  -- This is a  [Bundle](https://developer.android.com/reference/android/os/Bundle.html)  of **any additional** information. This can be used to provide extended information to the component. For example, if we have a action to send an e-mail message, we could also include extra pieces of data here to supply a subject, body, etc.
 
-|| |
-|--|--|
-| **Intent**() | empty intent |
-| **Intent**([String](https://developer.android.com/reference/java/lang/String.html) action, [Uri](https://developer.android.com/reference/android/net/Uri.html) uri) | create intent with given action and uri |
-|**Intent**()||
+	|| |
+	|--|--|
+	| **Intent**() | empty intent |
+	| **Intent**([String](https://developer.android.com/reference/java/lang/String.html) action, [Uri](https://developer.android.com/reference/android/net/Uri.html) uri) | create intent with given action and uri |
+	|**Intent**([Context](https://developer.android.com/reference/android/content/Context.html) packageContext, [Class](https://developer.android.com/reference/java/lang/Class.html)<?> cls)|create intent for specific component (explicit using intent)|
 
 
 > - Intent(**Context** context, **Activity** activity)
@@ -194,7 +194,7 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjA1NTM5MjksOTY4Mjk3NTg2LDEyNj
+eyJoaXN0b3J5IjpbLTEwNDY2NzU5NjIsOTY4Mjk3NTg2LDEyNj
 czNzgyMTksMTY0MTQwMTMxNiwxMzExMDgwNjksNzYzNjU2Njgy
 XX0=
 -->
