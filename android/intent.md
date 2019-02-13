@@ -39,7 +39,7 @@ In addition to these primary attributes, there are a number of secondary attribu
 > - startActivityForResult(**Intent** intent, **int** requestCode)
 > - putExtras(**Intent** src)
 > - putExtras(**Bundle** extras)
-> - putExtra(**String name**, **Object** value)
+
 
 ```java
 intent.putExtras(MainActivity.getmIntent());
@@ -52,10 +52,10 @@ public void showAuthDialog() {
 	startActivityForResult(intent, MainActivity.AUTH_REQUEST);  
 }
 ```
-----------------------------------
 
-putExtra (**String** name, **Any** value)
-getExtra(**String** name, **Any** default)
+
+> - putExtra(**String name**, **Object** value)
+> - getExtra(**String name**, **Object** value)
 
 ```java
 Intent i = new Intent(FirstScreen.this, SecondScreen.class);   
@@ -75,6 +75,7 @@ if (savedInstanceState == null) {
 ``` 
 
 ----------------------------------
+
 
 ### Pass Items from One Activity to Another
 **Item class :**
@@ -190,7 +191,7 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTkyMjYxNjAsOTY4Mjk3NTg2LDEyNj
-czNzgyMTksMTY0MTQwMTMxNiwxMzExMDgwNjksNzYzNjU2Njgy
-XX0=
+eyJoaXN0b3J5IjpbLTM4Mzc0MjU2OSw5NjgyOTc1ODYsMTI2Nz
+M3ODIxOSwxNjQxNDAxMzE2LDEzMTEwODA2OSw3NjM2NTY2ODJd
+fQ==
 -->
