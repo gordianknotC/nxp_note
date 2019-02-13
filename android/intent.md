@@ -27,9 +27,9 @@ In addition to these primary attributes, there are a number of secondary attribu
     
 -   **extras**  -- This is a  [Bundle](https://developer.android.com/reference/android/os/Bundle.html)  of **any additional** information. This can be used to provide extended information to the component. For example, if we have a action to send an e-mail message, we could also include extra pieces of data here to supply a subject, body, etc.
 
-|params of putExtras and Intent|
-|--|--|
-| ine |  |
+||params ||
+|--|--| -- |
+| Intent | Context context | Activity activity |
 
 
 > - Intent(**Context** context, **Activity** activity)
@@ -192,7 +192,7 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2NDcxODg2Myw5NjgyOTc1ODYsMTI2Nz
+eyJoaXN0b3J5IjpbMTAyMjMzMDMwNyw5NjgyOTc1ODYsMTI2Nz
 M3ODIxOSwxNjQxNDAxMzE2LDEzMTEwODA2OSw3NjM2NTY2ODJd
 fQ==
 -->
