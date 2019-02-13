@@ -250,7 +250,7 @@ Set the current board version.
 
 ### resetTagMemory
 Resets the tag to its delivery values (including config registers).
-#### describe process in brief
+#### describe functioning process in brief
 * params
 	* @return **int** indicating number of bytes written
 	##### referenced in
@@ -287,5 +287,6 @@ Builds a String array for the Registers.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTgxNjk0NTMsLTE5MTgxOTQ0MTJdfQ==
+eyJoaXN0b3J5IjpbLTEyMTg3MjkxNDksNTgxNjk0NTMsLTE5MT
+gxOTQ0MTJdfQ==
 -->
