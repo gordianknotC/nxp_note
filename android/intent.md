@@ -30,7 +30,7 @@ In addition to these primary attributes, there are a number of secondary attribu
 || |
 |--|--|
 | **Intent**() | empty intent |
-| **Intent**([String](https://developer.android.com/reference/java/lang/String.html) action) | create intent with given action |
+| **Intent**([String](https://developer.android.com/reference/java/lang/String.html) action, [Uri](https://developer.android.com/reference/android/net/Uri.html) uri) | create intent with given action and uri |
 |**Intent**()||
 
 
@@ -194,7 +194,7 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1NTc3MDgzNCw5NjgyOTc1ODYsMTI2Nz
-M3ODIxOSwxNjQxNDAxMzE2LDEzMTEwODA2OSw3NjM2NTY2ODJd
-fQ==
+eyJoaXN0b3J5IjpbLTE5MjA1NTM5MjksOTY4Mjk3NTg2LDEyNj
+czNzgyMTksMTY0MTQwMTMxNiwxMzExMDgwNjksNzYzNjU2Njgy
+XX0=
 -->
