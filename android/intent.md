@@ -12,8 +12,10 @@ The primary pieces of information in an intent are:
     
 -   **data**  -- The data to operate on, such as a person record in the contacts database, expressed as a  [Uri](https://developer.android.com/reference/android/net/Uri.html)`.
 
+Some examples of action/data pairs are:
 
-
+-   **[ACTION_VIEW](https://developer.android.com/reference/android/content/Intent.html#ACTION_VIEW)`  _content://contacts/people/1_**  -- Display information about the person whose identifier is "1".
+-  [ACTION_DIAL](https://developer.android.com/reference/android/content/Intent.html#ACTION_DIAL)`  _content://contacts/people/1_** -- Display the phone dialer with the person filled in.
 
 
 
@@ -176,7 +178,7 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTA4ODM2NDksOTY4Mjk3NTg2LDEyNj
-czNzgyMTksMTY0MTQwMTMxNiwxMzExMDgwNjksNzYzNjU2Njgy
-XX0=
+eyJoaXN0b3J5IjpbMTkzOTgyMjQ0Myw5NjgyOTc1ODYsMTI2Nz
+M3ODIxOSwxNjQxNDAxMzE2LDEzMTEwODA2OSw3NjM2NTY2ODJd
+fQ==
 -->
