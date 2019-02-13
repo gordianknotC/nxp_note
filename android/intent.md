@@ -36,8 +36,10 @@ In addition to these primary attributes, there are a number of secondary attribu
 
 
 > - Intent(**Context** context, **Activity** activity)
+> - startActivityForResult(**Intent** intent, **int** requestCode)
 > - putExtras(**Intent** src)
 > - putExtras(**Bundle** extras)
+> - putExtra(**String name**, **Object** value)
 
 ```java
 intent.putExtras(MainActivity.getmIntent());
@@ -48,13 +50,6 @@ public void showAuthDialog() {
 	intent = new Intent(this, AuthActivity.class);  
 	intent.putExtras(MainActivity.getNfcIntent());  
 	startActivityForResult(intent, MainActivity.AUTH_REQUEST);  
-}
-public void showAboutDialog() {  
-	Intent intent = null;  
-	intent = new Intent(this, VersionInfoActivity.class);  
-	if(MainActivity.mIntent != null)  
-		intent.putExtras(MainActivity.mIntent);  
-	startActivity(intent);  
 }
 ```
 ----------------------------------
@@ -195,7 +190,7 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2Mjg4Mzg1Miw5NjgyOTc1ODYsMTI2Nz
-M3ODIxOSwxNjQxNDAxMzE2LDEzMTEwODA2OSw3NjM2NTY2ODJd
-fQ==
+eyJoaXN0b3J5IjpbLTEwOTkyMjYxNjAsOTY4Mjk3NTg2LDEyNj
+czNzgyMTksMTY0MTQwMTMxNiwxMzExMDgwNjksNzYzNjU2Njgy
+XX0=
 -->
