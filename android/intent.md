@@ -110,17 +110,13 @@ class Albums : Parcelable {
 		userId = `in`.readInt()  
 		id = `in`.readInt()  
 		title = `in`.readString()  
-	}  
- 
-    
-  
+	}
 	override fun writeToParcel(parcel: Parcel, i: Int) {  
 		//writing order here does matters, must be the same with constructor
 		parcel.writeInt(userId)  
 		parcel.writeInt(id)  
 		parcel.writeString(title)  
 	}  
-  
     companion object {  
         @JvmField val CREATOR: Parcelable.Creator<Albums> = object : Parcelable.Creator<Albums> {  
             override fun createFromParcel(`in`: Parcel): Albums {  
@@ -131,8 +127,14 @@ class Albums : Parcelable {
                 return arrayOfNulls(size)  
             }  
         }  
-    }  
+    }
+    override fun describeContents(): Int {   return 0   }    
 }
+```
+
+send extra
+```java
+intent.putExtra("albums", albums);
 ```
 
 
@@ -144,6 +146,6 @@ class Albums : Parcelable {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc5NzM3MDA5LDE2NDE0MDEzMTYsMTMxMT
-A4MDY5LDc2MzY1NjY4Ml19
+eyJoaXN0b3J5IjpbLTE4NjEzNzk5NTYsMTY0MTQwMTMxNiwxMz
+ExMDgwNjksNzYzNjU2NjgyXX0=
 -->
