@@ -1,4 +1,5 @@
 
+Intent(**Context** context, **Activity** activity)
 putExtras(**Intent** src)
 
 ```java
@@ -150,6 +151,6 @@ Albums albums = intent.getParcelableExtra("albums");
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MDE0ODYwLDE2NDE0MDEzMTYsMTMxMT
-A4MDY5LDc2MzY1NjY4Ml19
+eyJoaXN0b3J5IjpbMTI2NzM3ODIxOSwxNjQxNDAxMzE2LDEzMT
+EwODA2OSw3NjM2NTY2ODJdfQ==
 -->
