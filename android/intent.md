@@ -63,6 +63,25 @@ ArrayList<Item> items =
 
 ----------------------------------
 
+### Parcelable
+
+將物件序列化的方式有兩種，一是Java原生的Serializable，二是Android特有的Parcelable，而Parcelable的處理速度較快，且處理時不會產生大量暫時變數讓系統一直GC，在傳遞大量資料時會有較好的效能表現。
+
+```java
+public  class  Albums { 
+	private  int userId; 
+	private  int id;
+	private String title; 
+	public Albums(int userId, int id, String title) { 
+	this.userId = userId; 
+	this.id = id; 
+	this.title = title; } 
+	public int getUserId() { return userId; } 
+	public int getId() { return id; } 
+	public String getTitle() { return title; } 
+}
+```
+
 
 
 
@@ -71,6 +90,6 @@ ArrayList<Item> items =
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMzY0NTI0NCwxNjQxNDAxMzE2LDEzMT
+eyJoaXN0b3J5IjpbLTYxNzQ1NTEwMywxNjQxNDAxMzE2LDEzMT
 EwODA2OSw3NjM2NTY2ODJdfQ==
 -->
