@@ -29,7 +29,7 @@ In addition to these primary attributes, there are a number of secondary attribu
 
 ||params ||
 |--|--| -- |
-| Intent | Context context | Activity activity |
+| **Intent** | Context context | Activity activity |
 
 
 > - Intent(**Context** context, **Activity** activity)
@@ -192,7 +192,7 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMjMzMDMwNyw5NjgyOTc1ODYsMTI2Nz
+eyJoaXN0b3J5IjpbMTY0NjQ2MjI3NSw5NjgyOTc1ODYsMTI2Nz
 M3ODIxOSwxNjQxNDAxMzE2LDEzMTEwODA2OSw3NjM2NTY2ODJd
 fQ==
 -->
