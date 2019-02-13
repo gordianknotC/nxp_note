@@ -67,18 +67,66 @@ ArrayList<Item> items =
 
 將物件序列化的方式有兩種，一是Java原生的Serializable，二是Android特有的Parcelable，而Parcelable的處理速度較快，且處理時不會產生大量暫時變數讓系統一直GC，在傳遞大量資料時會有較好的效能表現。
 
+原物件
 ```java
 public  class  Albums { 
 	private  int userId; 
 	private  int id;
 	private String title; 
 	public Albums(int userId, int id, String title) { 
-	this.userId = userId; 
-	this.id = id; 
-	this.title = title; } 
+		this.userId = userId; 
+		this.id = id; 
+		this.title = title; 
+	} 
 	public int getUserId() { return userId; } 
 	public int getId() { return id; } 
 	public String getTitle() { return title; } 
+}
+```
+Parcelable
+```kotlin
+class Albums : Parcelable {  
+    var userId: Int = 0  
+  private set  
+ var id: Int = 0  
+  private set  
+ var title: String? = null  
+ private set  
+ constructor(userId: Int, id: Int, title: String) {  
+        this.userId = userId  
+  this.id = id  
+  this.title = title  
+  }  
+    /* 以上都跟原來一樣 */  
+  
+ /* 以下為新增的Parcelable部分 */ // 讀取參數，參數順序要和建構子一樣  protected constructor(`in`: Parcel) {  
+        userId = `in`.readInt()  
+        id = `in`.readInt()  
+        title = `in`.readString()  
+    }  
+  
+    override fun describeContents(): Int {  
+        return 0  
+  }  
+  
+    // 寫入參數，參數順序要和建構子一樣  
+  override fun writeToParcel(parcel: Parcel, i: Int) {  
+        parcel.writeInt(userId)  
+        parcel.writeInt(id)  
+        parcel.writeString(title)  
+    }  
+  
+    companion object {  
+        @JvmField val CREATOR: Parcelable.Creator<Albums> = object : Parcelable.Creator<Albums> {  
+            override fun createFromParcel(`in`: Parcel): Albums {  
+                return Albums(`in`)  
+            }  
+  
+            override fun newArray(size: Int): Array<Albums?> {  
+                return arrayOfNulls(size)  
+            }  
+        }  
+    }  
 }
 ```
 
@@ -87,9 +135,7 @@ public  class  Albums {
 
 
 
-
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNzQ1NTEwMywxNjQxNDAxMzE2LDEzMT
+eyJoaXN0b3J5IjpbMTQwNTAzNzIxMiwxNjQxNDAxMzE2LDEzMT
 EwODA2OSw3NjM2NTY2ODJdfQ==
 -->
