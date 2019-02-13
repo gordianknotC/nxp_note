@@ -83,7 +83,12 @@ public  class  Albums {
 	public String getTitle() { return title; } 
 }
 ```
-Parcelable
+若要改成Parcelable 主要是實作 Serialize 方法 writeToParcel + readParcel
+```java
+	writeToParcel(Parcel parcel, Int i){
+		parcel.writeInt(userId); parcel.writeInt(
+	}
+```
 ```kotlin
 class Albums : Parcelable {  
 	var userId: Int = 0  
@@ -126,7 +131,8 @@ class Albums : Parcelable {
     }  
 }
 ```
-主要是實作 Serialize 方法 writeToParcel + readParcel
+
+
 
 
 
@@ -135,6 +141,6 @@ class Albums : Parcelable {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAyMzM4NDkwLDE2NDE0MDEzMTYsMTMxMT
-A4MDY5LDc2MzY1NjY4Ml19
+eyJoaXN0b3J5IjpbLTE0NDA4MjQ4NTksMTY0MTQwMTMxNiwxMz
+ExMDgwNjksNzYzNjU2NjgyXX0=
 -->
