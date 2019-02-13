@@ -135,15 +135,20 @@ class Albums : Parcelable {
 
 send parcelable via intent
 ```java
+// put Parcelable
 intent.putExtra("albums", albums);
+// put Array<Parcelable>
+ArrayList<Albums> list = new ArrayList<>(); 
+list.add(albums);
+intent.putParcelableArrayListExtra("albums list", list);
 ```
 receive parcelable via intent
 ```java
 Intent  intent = getIntent(); 
 Albums albums = intent.getParcelableExtra("albums");
+intent.putParcelableArrayListExtra("albums list", list);
 ```
 
-// 建立物件 Albums albums = new Albums(1, 1, "Castle on the Hill"); // 建立ArrayList放物件 ArrayList<Albums> list = new ArrayList<>(); list.add(albums); // 使用putParcelableArrayListExtra傳遞 Intent intent = new Intent(MainActivity.this, SecondActivity.class); intent.putParcelableArrayListExtra("albums list", list);
 
 
 
@@ -153,6 +158,6 @@ Albums albums = intent.getParcelableExtra("albums");
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMDg3NTYzNiwxMjY3Mzc4MjE5LDE2ND
-E0MDEzMTYsMTMxMTA4MDY5LDc2MzY1NjY4Ml19
+eyJoaXN0b3J5IjpbOTY4Mjk3NTg2LDEyNjczNzgyMTksMTY0MT
+QwMTMxNiwxMzExMDgwNjksNzYzNjU2NjgyXX0=
 -->
