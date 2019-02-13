@@ -83,6 +83,10 @@ There are two primary forms of intents you will use.
 
 When using implicit intents, given such an arbitrary intent we need to know what to do with it. This is handled by the process of _Intent resolution_, which maps an Intent to an [Activity](https://developer.android.com/reference/android/app/Activity.html), [BroadcastReceiver](https://developer.android.com/reference/android/content/BroadcastReceiver.html), or [Service](https://developer.android.com/reference/android/app/Service.html) (or sometimes two or more activities/receivers) that can handle it.
 
+The intent resolution mechanism basically revolves around matching an Intent against all of the **<intent-filter>** descriptions in the installed application packages. (Plus, in the case of broadcasts, any [BroadcastReceiver](https://developer.android.com/reference/android/content/BroadcastReceiver.html) objects explicitly registered with [Context.registerReceiver(BroadcastReceiver, IntentFilter)](https://developer.android.com/reference/android/content/Context.html#registerReceiver(android.content.BroadcastReceiver,%20android.content.IntentFilter)).)
+
+
+
 ----------------------------------
 
 
@@ -202,7 +206,7 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzNjEwNDQ0MywyNTY5ODc1NjAsOTY4Mj
-k3NTg2LDEyNjczNzgyMTksMTY0MTQwMTMxNiwxMzExMDgwNjks
-NzYzNjU2NjgyXX0=
+eyJoaXN0b3J5IjpbLTE3NTMyMDA0MDgsMjU2OTg3NTYwLDk2OD
+I5NzU4NiwxMjY3Mzc4MjE5LDE2NDE0MDEzMTYsMTMxMTA4MDY5
+LDc2MzY1NjY4Ml19
 -->
