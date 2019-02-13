@@ -27,27 +27,6 @@ putExtra (**String** name, **Any** value)
 getExtra(**String** name, **Any** default)
 
 ```java
-public void sendFeedback() {  
-	Intent intent = new Intent(Intent.ACTION_SENDTO);  
-	intent.setType("text/plain");  
-	intent.putExtra(
-		Intent.EXTRA_SUBJECT,  
-		this.getString(R.string.email_titel_feedback));  
-		
-	intent.putExtra(Intent.EXTRA_TEXT, 
-		"Android Version: "  
-		+ android.os.Build.VERSION.RELEASE + "\nManufacurer: "  
-		+ android.os.Build.MANUFACTURER + "\nModel: "  
-		+ android.os.Build.MODEL + "\nBrand: " + android.os.Build.BRAND  
-		+ "\nDisplay: " + android.os.Build.DISPLAY + "\nProduct: "  
-		+ android.os.Build.PRODUCT + "\nIncremental: "  
-		+ android.os.Build.VERSION.INCREMENTAL);  
-	intent.setData(Uri.parse(this.getString(R.string.support_email)));  
-	intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);  
-	this.startActivity(intent);  
-}
-```
-```java
 Intent i = new Intent(FirstScreen.this, SecondScreen.class);   
 String value = null;
 i.putExtra("STRING_I_NEED", value);
@@ -63,6 +42,28 @@ if (savedInstanceState == null) {
 	newString= (String) savedInstanceState.getSerializable("STRING_I_NEED");
 }
 ``` 
+
+
+
+### Pass Items from One Activity to Another
+**Item class :**
+```java
+public class Item implements Serializable
+```
+**In first Activity :**
+
+```java
+Intent intent = new Intent(this, Activity2.class);
+intent.putExtra("items", items);
+startActivity(intent);
+```
+**In Second Activity (Activity2):**
+
+```java
+ArrayList<Item> items = (ArrayList<Item>) getIntent().getExtras()
+                .getSerializable("items");
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMTA4MDY5LDc2MzY1NjY4Ml19
+eyJoaXN0b3J5IjpbMTQzNjIzOTA0LDEzMTEwODA2OSw3NjM2NT
+Y2ODJdfQ==
 -->
