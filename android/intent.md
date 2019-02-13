@@ -4,6 +4,17 @@ An intent is an abstract description of an operation to be performed. It can be 
 
 An Intent provides a facility for performing late runtime binding between the code in different applications. Its most significant use is in the launching of activities, where it can be thought of as the glue between activities. It is basically a passive data structure holding an abstract description of an action to be performed.
 
+### Intent Structure
+
+The primary pieces of information in an intent are:
+
+-   **action**  -- The general action to be performed, such as  [ACTION_VIEW](https://developer.android.com/reference/android/content/Intent.html#ACTION_VIEW)`,  `[ACTION_EDIT](https://developer.android.com/reference/android/content/Intent.html#ACTION_EDIT)`,  `[ACTION_MAIN](https://developer.android.com/reference/android/content/Intent.html#ACTION_MAIN)`, etc.
+    
+-   **data**  -- The data to operate on, such as a person record in the contacts database, expressed as a  [Uri](https://developer.android.com/reference/android/net/Uri.html)`.
+
+
+
+
 
 
 Intent(**Context** context, **Activity** activity)
@@ -165,7 +176,7 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzYyODk0NzgsOTY4Mjk3NTg2LDEyNj
+eyJoaXN0b3J5IjpbLTIwOTA4ODM2NDksOTY4Mjk3NTg2LDEyNj
 czNzgyMTksMTY0MTQwMTMxNiwxMzExMDgwNjksNzYzNjU2Njgy
 XX0=
 -->
