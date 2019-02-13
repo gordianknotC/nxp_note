@@ -48,13 +48,21 @@ public void sendFeedback() {
 }
 ```
 ```java
-```
 Intent i = new Intent(FirstScreen.this, SecondScreen.class);   
-String strName = null;
-i.putExtra("STRING_I_NEED", strName);
-
-```
-```
+String value = null;
+i.putExtra("STRING_I_NEED", value);
+String newString;
+if (savedInstanceState == null) {
+	Bundle extras = getIntent().getExtras();
+	if(extras == null) {
+		newString= null;
+	} else {
+		newString= extras.getString("STRING_I_NEED");
+	}
+} else {
+	newString= (String) savedInstanceState.getSerializable("STRING_I_NEED");
+}
+``` 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0OTgwMTgyMCw3NjM2NTY2ODJdfQ==
+eyJoaXN0b3J5IjpbMTMxMTA4MDY5LDc2MzY1NjY4Ml19
 -->
