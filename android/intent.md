@@ -86,7 +86,10 @@ public  class  Albums {
 若要改成Parcelable 主要是實作 Serialize 方法 writeToParcel + readParcel
 ```java
 	writeToParcel(Parcel parcel, Int i){
-		parcel.writeInt(userId); parcel.writeInt(
+		parcel.writeInt(userId); parcel.writeInt(id); parcel.writeString(title)
+	}
+	Albums(Parcel p){
+		userId=p.readInt();id=p.readInt();title=p.readString();
 	}
 ```
 ```kotlin
@@ -109,7 +112,7 @@ class Albums : Parcelable {
 		title = `in`.readString()  
 	}  
  
-    override fun describeContents(): Int {   return 0   }  
+    
   
 	override fun writeToParcel(parcel: Parcel, i: Int) {  
 		//writing order here does matters, must be the same with constructor
@@ -141,6 +144,6 @@ class Albums : Parcelable {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDA4MjQ4NTksMTY0MTQwMTMxNiwxMz
-ExMDgwNjksNzYzNjU2NjgyXX0=
+eyJoaXN0b3J5IjpbOTc5NzM3MDA5LDE2NDE0MDEzMTYsMTMxMT
+A4MDY5LDc2MzY1NjY4Ml19
 -->
