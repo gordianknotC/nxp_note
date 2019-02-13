@@ -229,12 +229,12 @@ class MyFlutterActivity : FlutterActivity() {
 
 -----------------------------------------------------------
 
-### setCurrentBoardVersion
+### setBoardVersion
 Set the current board version.
 #### describe process in brief
-- UI - onBoardVersionSetted
+- UI - onSetBoardVersion
 	```java
-	 public void onBoardVersionSetted(String ver, String fwver){  
+	 public void onSetBoardVersion(String ver, String fwver){  
 	  //todo: link to ui  
 	  VersionInfoActivity.setBoardVersion(ver);  
 	  VersionInfoActivity.setBoardFWVersion(fwver);  
@@ -287,5 +287,5 @@ Builds a String array for the Registers.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTgxOTQ0MTJdfQ==
+eyJoaXN0b3J5IjpbNTgxNjk0NTMsLTE5MTgxOTQ0MTJdfQ==
 -->
