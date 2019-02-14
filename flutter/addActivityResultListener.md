@@ -22,9 +22,13 @@ graph TB
 		end
 	end
 	subgraph Mediators - FlutterPlugin
+		MStart
+		MStartResult
 		subgraph M1
-			MStart
-			MStartResult
+			M1intent			
+		end
+		subgraph M2
+			M2intent
 		end
 	end
 	
@@ -55,6 +59,6 @@ graph TB
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NDEwMzMzNiwtMjg0MzgyOTEzLC0xMD
+eyJoaXN0b3J5IjpbMTY1ODEwNzIyNywtMjg0MzgyOTEzLC0xMD
 U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
