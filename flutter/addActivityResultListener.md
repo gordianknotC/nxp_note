@@ -9,21 +9,24 @@
 
 
 ```mermaid
-graph TD
+graph TB
 	S(hello)
-	
+	subgraph Mediator
+		
+	end
 	subgraph FActivity
-		onCreate(onCreate)
-		onPause(onPause)
-		onResume(onResume)
-		onResult(onResult)
-		onIntent(onIntent)
-		on
+		FonCreate(onCreate)
+		FonPause(onPause)
+		FonResume(onResume)
+		FonResult(onResult)
+		FonIntent(onIntent)
+		FonReceive(onReceive)
+		FonCreate --> Fon
 	end
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ0NDU4ODY0LC0yODQzODI5MTMsLTEwNT
-g0ODY2NjMsLTQzNDkzMTcwOF19
+eyJoaXN0b3J5IjpbLTQyNzI4NTU4NCwtMjg0MzgyOTEzLC0xMD
+U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
