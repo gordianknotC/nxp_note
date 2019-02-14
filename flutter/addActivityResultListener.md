@@ -97,13 +97,13 @@ Mediator-->>Fake: C8 onCreate
 Note over Mediator, Core: Scenario4: Ready - startActivity triggered by Fake layer
 
 Fake->>Mediator: D0 startActivity by user or...
-Mediator-->>Mediator: D1 startActivity->onNewIntent ...
-Mediator-->>Fake: D2 onCreate
- 
+
+Note over Mediator: Jump to Scenario 2
+Note over Mediator: Jump to Scenario 3
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNDg1MTUwOSw4NjAzMjYzNDUsMTU0Nz
+eyJoaXN0b3J5IjpbMTY1NDM0NzEyNSw4NjAzMjYzNDUsMTU0Nz
 kxNjc5MSwtMjg0MzgyOTEzLC0xMDU4NDg2NjYzLC00MzQ5MzE3
 MDhdfQ==
 -->
