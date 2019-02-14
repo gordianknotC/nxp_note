@@ -70,7 +70,8 @@ Native -->> Mediator: hands over lifecycle control flow
 
 Mediator-->> Mediator: B0 discover tag, onNewIntent, findout receiver
 Mediator-->>Fake: B1 startActivity
-Fake-->>Fake: B2 onCreate
+Fake-->>Fake: B2 onCreate, do work
+Fake-->>Mediator: startActivity
 Mediator-->>Fake: B1 get receiver by intent
 Fake-->>Fake:B2 do work
 Fake-->>Mediator:B3 response to fake ui
@@ -82,6 +83,7 @@ Fake-->>Mediator:B3 response to fake ui
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYwMzI2MzQ1LDE1NDc5MTY3OTEsLTI4ND
-M4MjkxMywtMTA1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
+eyJoaXN0b3J5IjpbMzYwNTg5NDgwLDg2MDMyNjM0NSwxNTQ3OT
+E2NzkxLC0yODQzODI5MTMsLTEwNTg0ODY2NjMsLTQzNDkzMTcw
+OF19
 -->
