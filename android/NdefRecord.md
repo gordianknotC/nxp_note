@@ -9,11 +9,16 @@ public static createApplicationRecord (String packageName)
 ```
 Create a new Android Application Record (AAR).
 
-This record indicates to other Android devices the package that should be used to handle the entire NDEF message. You can embed this record anywhere into your message to ensure that the intended package receives the message.
+The Android Application Record (AAR) is a special type of [NDEF record](https://gototags.com/nfc/ndef/) that is used by Google’s Android operating system to signify to an NFC phone that an explicitly defined Android Application should be used to handle an NFC tag; this is called the [Tag Dispatch System](http://developer.android.com/guide/topics/connectivity/nfc/nfc.html). Often times an Android App record will be added as the 2nd NDEF record in the NDEF message. This is useful to developers when they want to ensure their application is the application that will handle the NFC tag.
 
-When an Android device dispatches an  [NdefMessage](https://developer.android.com/reference/android/nfc/NdefMessage.html)  containing one or more Android application records, the applications contained in those records will be the preferred target for the  [ACTION_NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)  intent, in the order in which they appear in the message. This dispatch behavior was first added to Android in Ice Cream Sandwich.
-
-If none of the applications have a are installed on the device, a Market link will be opened to the first application.
+```kotlin
+val sp_record = NdefRecord(  
+        NdefRecord.TNF_WELL_KNOWN,  
+  NdefRecord.RTD_SMART_POSTER, ByteArray(0),  
+  spMessage.toByteArray())  
+val aap_record = NdefRecord.createApplicationRecord(packageName)  
+val records = arrayOf(sp_record, aap_record)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUwNjUxOTg3XX0=
+eyJoaXN0b3J5IjpbLTE4NjQ2OTU0LDM1MDY1MTk4N119
 -->
