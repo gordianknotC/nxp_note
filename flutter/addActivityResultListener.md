@@ -69,10 +69,11 @@ Native -->> Mediator: A6-onPause, onResume...
 
 Native -->> Native: B0-discover tag or initated by user
 Native ->> Mediator: B1-StartActivity
-Native -->> Mediator: StartActivity
+Mediator -->> Mediator: B2 
+Native ->> Mediator: C1-StartActivityForResult
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTIyNTQxNzcsLTI4NDM4MjkxMywtMT
-A1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
+eyJoaXN0b3J5IjpbNjAzMDY5MjY3LC0yODQzODI5MTMsLTEwNT
+g0ODY2NjMsLTQzNDkzMTcwOF19
 -->
