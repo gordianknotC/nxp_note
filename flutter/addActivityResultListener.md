@@ -57,6 +57,7 @@ sequenceDiagram
 participant Native
 participant Mediator
 participant Fake
+participant Core
 
 Native -->> Mediator: A1 initialize plugin
 Mediator -->> Fake: A2 initialize fake activity
@@ -76,6 +77,7 @@ Fake->>Mediator: startActivity
 
 Mediator-->>Fake: B1 get receiver by intent
 Fake-->>Fake:B2 do work
+Fake<<-->>Core:B3 call core
 Fake-->>Mediator:B3 response to fake ui
 
  
@@ -85,7 +87,7 @@ Fake-->>Mediator:B3 response to fake ui
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MDExOTA5LDg2MDMyNjM0NSwxNTQ3OT
-E2NzkxLC0yODQzODI5MTMsLTEwNTg0ODY2NjMsLTQzNDkzMTcw
-OF19
+eyJoaXN0b3J5IjpbMTA0MTAyODQyMyw4NjAzMjYzNDUsMTU0Nz
+kxNjc5MSwtMjg0MzgyOTEzLC0xMDU4NDg2NjYzLC00MzQ5MzE3
+MDhdfQ==
 -->
