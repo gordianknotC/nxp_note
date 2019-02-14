@@ -146,8 +146,24 @@ If you want to handle an intent at the Activity level,  [use intent filters](htt
 
 .
 
--------------------
+--------------------------------------------
+
+
+## Use the foreground dispatch system
+
+The foreground dispatch system allows an activity to intercept an intent and claim priority over other activities that handle the same intent. Using this system involves constructing a few data structures for the Android system to be able to send the appropriate intents to your application. To enable the foreground dispatch system:
+
+Add the following code in the `onCreate()` method of your activity:
+
+1.  Create a  [PendingIntent](https://developer.android.com/reference/android/app/PendingIntent.html)` object so the Android system can populate it with the details of the tag when it is scanned.
+- Create a [PendingIntent](https://developer.android.com/reference/android/app/PendingIntent.html) object so the Android system can populate it with the details of the tag when it is scanned.
+	```kotlin
+	val intent = Intent(this, javaClass).apply {
+	    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+	}
+	var pendingIntent: PendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
+	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDgxNTYxODIsNjQxODM4OTcsMTExNT
-U4NzIwNCwxMjAyNDc4NTI4LDM1MDY1MTk4N119
+eyJoaXN0b3J5IjpbMzg3ODA3NjkzLDY0MTgzODk3LDExMTU1OD
+cyMDQsMTIwMjQ3ODUyOCwzNTA2NTE5ODddfQ==
 -->
