@@ -40,7 +40,7 @@ The caller can either specify the language code for the provided text, or otherw
 --------------------------------------------
 
 ## Create common types of NDEF records
-### TNF_MIME_MEDIA
+### createMime
 ```kotlin
 val mimeRecord = NdefRecord.createMime(
   "application/vnd.com.example.android.beam",
@@ -55,5 +55,6 @@ val mimeRecord = NdefRecord.createMime(
 </intent-filter>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMjQ3ODUyOCwzNTA2NTE5ODddfQ==
+eyJoaXN0b3J5IjpbMTExNTU4NzIwNCwxMjAyNDc4NTI4LDM1MD
+Y1MTk4N119
 -->
