@@ -75,13 +75,13 @@ Whenever possible, work with NDEF messages and the  [ACTION_NDEF_DISCOVERED](htt
 Before you can access a device's NFC hardware and properly handle NFC intents, declare these items in your  `AndroidManifest.xml`  file:
 
 -   The NFC  **`<uses-permission>`**  element to access the NFC hardware:
-``` xml
-    <uses-permission  android:name="android.permission.NFC"  />
-```    
--   The minimum SDK version that your application can support. API level 9 only supports limited tag dispatch via  [ACTION_TAG_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TAG_DISCOVERED), and only gives access to NDEF messages via the  `[EXTRA_NDEF_MESSAGES](https://developer.android.com/reference/android/nfc/NfcAdapter.html#EXTRA_NDEF_MESSAGES)`  extra. No other tag properties or I/O operations are accessible. API level 10 includes comprehensive reader/writer support as well as foreground NDEF pushing, and API level 14 provides an easier way to push NDEF messages to other devices with Android Beam and extra convenience methods to create NDEF records.
-    
+	``` xml
+	<uses-permission  android:name="android.permission.NFC"  />
+	```    
+-   The minimum SDK version that your application can support.  API level 14 
+    ```xml
     <uses-sdk android:minSdkVersion="10"/>
-    
+    ```
 -   The  `uses-feature`  element so that your application shows up in Google Play only for devices that have NFC hardware:
     
     <uses-feature  android:name="android.hardware.nfc"  android:required="true"  />
@@ -158,6 +158,6 @@ To obtain these extras, check to see if your activity was launched with one of t
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY4MDc2NDU5LC0yMjU4OTYyNjUsOTMxND
-YyMzM0LC05MzYyMTc3MDJdfQ==
+eyJoaXN0b3J5IjpbLTE0ODg1ODI4NTcsLTIyNTg5NjI2NSw5Mz
+E0NjIzMzQsLTkzNjIxNzcwMl19
 -->
