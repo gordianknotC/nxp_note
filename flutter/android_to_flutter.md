@@ -70,9 +70,6 @@ Mediator-->>Mediator: UI
 
 ```mermaid
 graph TB
-	
-	
-	
 	subgraph FakeActivity
 		FonCreate
 		FonPause 
@@ -88,9 +85,9 @@ graph TB
 		end
 		
 		subgraph listeners
-			Fcontainer --> FonIntent
-			Fcontainer --> FonResult
-			Fcontainer --> FonReceive
+			Fcontainer --- FonIntent
+			Fcontainer --- FonResult
+			Fcontainer --- FonReceive
 		end
 	end
 
@@ -112,10 +109,11 @@ graph TB
 		MStartResult -.- M1intent
 	end
 	Fcontainer --> MStartActivity
+	Fcontainer --> MStartResult
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0OTQ3OTQ4NywtMTEyNDM4NzA2NiwtND
-U3NjYzMTE3LDg1ODU0NjAyMl19
+eyJoaXN0b3J5IjpbLTE0NzYyNjIzODMsLTExMjQzODcwNjYsLT
+Q1NzY2MzExNyw4NTg1NDYwMjJdfQ==
 -->
