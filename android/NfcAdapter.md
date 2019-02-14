@@ -199,15 +199,15 @@ To filter for  [ACTION_TAG_DISCOVERED](https://developer.android.com/reference/a
 
 If an activity starts because of an NFC intent, you can obtain information about the scanned NFC tag from the intent. Intents can contain the following extras depending on the tag that was scanned:
 
--   `[EXTRA_TAG](https://developer.android.com/reference/android/nfc/NfcAdapter.html#EXTRA_TAG)`  (required): A  `[Tag](https://developer.android.com/reference/android/nfc/Tag.html)`  object representing the scanned tag.
--   `[EXTRA_NDEF_MESSAGES](https://developer.android.com/reference/android/nfc/NfcAdapter.html#EXTRA_NDEF_MESSAGES)`  (optional): An array of NDEF messages parsed from the tag. This extra is mandatory on  `[ACTION_NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)`  intents.
--   `[EXTRA_ID](https://developer.android.com/reference/android/nfc/NfcAdapter.html#EXTRA_ID)`  (optional): The low-level ID of the tag.
+-   [EXTRA_TAG](https://developer.android.com/reference/android/nfc/NfcAdapter.html#EXTRA_TAG)  (required): A  [Tag](https://developer.android.com/reference/android/nfc/Tag.html)  object representing the scanned tag.
+-    [EXTRA_NDEF_MESSAGES](https://developer.android.com/reference/android/nfc/NfcAdapter.html#EXTRA_NDEF_MESSAGES)   (optional): An array of NDEF messages parsed from the tag. This extra is mandatory on   [ACTION_NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)   intents.
+-    [EXTRA_ID](https://developer.android.com/reference/android/nfc/NfcAdapter.html#EXTRA_ID)   (optional): The low-level ID of the tag.
 
-To obtain these extras, check to see if your activity was launched with one of the NFC intents to ensure that a tag was scanned, and then obtain the extras out of the intent. The following example checks for the  `[ACTION_NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)`  intent and gets the NDEF messages from an intent extra.
+To obtain these extras, check to see if your activity was launched with one of the NFC intents to ensure that a tag was scanned, and then obtain the extras out of the intent. The following example checks for the   [ACTION_NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)   intent and gets the NDEF messages from an intent extra.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyMzk3NjY5MywtMTEzNzg4NzU1MSwtNz
-gwOTI3NTIxLC0yMjU4OTYyNjUsOTMxNDYyMzM0LC05MzYyMTc3
-MDJdfQ==
+eyJoaXN0b3J5IjpbMTgzOTkwMzM5NSwxMTIzOTc2NjkzLC0xMT
+M3ODg3NTUxLC03ODA5Mjc1MjEsLTIyNTg5NjI2NSw5MzE0NjIz
+MzQsLTkzNjIxNzcwMl19
 -->
