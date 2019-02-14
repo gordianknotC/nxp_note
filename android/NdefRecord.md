@@ -90,14 +90,15 @@ public static NdefRecord createExternal (
         String type,
         byte[] data)
 ```
-
+Create a new NDEF Record containing external (application-specific) data
 ```kotlin
 var payload: ByteArray //assign to your data
 val domain = "com.example" //usually your app's package name
 val type = "externalType"
 val extRecord = NdefRecord.createExternal(domain, type, payload)
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxNDM1MjQyOSwxMTE1NTg3MjA0LDEyMD
+eyJoaXN0b3J5IjpbMTc5OTU3MTI3MSwxMTE1NTg3MjA0LDEyMD
 I0Nzg1MjgsMzUwNjUxOTg3XX0=
 -->
