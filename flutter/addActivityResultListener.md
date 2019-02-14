@@ -10,11 +10,12 @@
 
 ```mermaid
 graph TB
-	S(hello)
-	subgraph Mediator
+	
+	subgraph Mediator FlutterPlugin
 		MStart
 		MStartResult
 	end
+	
 	subgraph FActivity
 		FonCreate
 		FonPause 
@@ -42,6 +43,6 @@ graph TB
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAxNDY2MjEsLTI4NDM4MjkxMywtMTA1OD
-Q4NjY2MywtNDM0OTMxNzA4XX0=
+eyJoaXN0b3J5IjpbMTQ5MjU0MTUxNiwtMjg0MzgyOTEzLC0xMD
+U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
