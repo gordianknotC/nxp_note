@@ -85,25 +85,26 @@ val rtdUriRecord2  =  Uri.parse("http://example.com").let { uri ->
 ----------------------------------
 ### createExternal
 Create a new NDEF Record containing external (application-specific) data
-**parameters:**
+
 ```java
 public static NdefRecord createExternal (
-		String domain,
-        String type,
-        byte[] data)
+	String domain, // domain-name of issuing organization
+	String type,   // domain-specific type of data
+	byte[] data	   // payload as bytes
+)
 ```
 
 
 > ⚡ NFC Forum requires that the domain and type used in an external record are treated as **`case insensitive`**, however Android intent filtering is always **`case sensitive`**. So this method will **`force the domain and type to` lower-case**  before creating the NDEF Record.
 > 
 ```kotlin
-var payload: ByteArray //assign to your data
-val domain = "com.example" //usually your app's package name
+var payload: ByteArray      //assign to your data
+val domain = "com.example"  //usually your app's package name
 val type = "externalType"
 val extRecord = NdefRecord.createExternal(domain, type, payload)
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMzU5Mzg2MiwxMTE1NTg3MjA0LDEyMD
+eyJoaXN0b3J5IjpbLTYyODExODMwNywxMTE1NTg3MjA0LDEyMD
 I0Nzg1MjgsMzUwNjUxOTg3XX0=
 -->
