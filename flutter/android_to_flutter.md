@@ -25,15 +25,15 @@ Activity -->> Mediator: Finish handing over lifecycle control flow to Mediator
 Note over Mediator, Jar: Scenario2: Ready - call Jar while discovering tag 
 
 Mediator-->> Mediator: B0 discover tag, onNewIntent, findout receiver
-Mediator-->>Mediator: B1 startActivity
-Mediator-->>Jar: B2 do work directly without another activity
-Jar-->>Mediator: B3 response
-Mediator-->>Mediator: B4 Flutter UI
+Mediator-->>Jar: B1 do work directly without starting another activity
+Jar-->>Mediator: B2 response
+Mediator-->>Mediator: B3 Flutter UI
 
 
 Note over Mediator, Jar: Scenario3: Ready - startActivity while discovering tag
 
 Mediator-->> Mediator: C0 discover tag, onNewIntent, findout receiver
+Mediator-->>Mediator: C0 startActivity
 Mediator-->>Fake: C1 onCreate
 Fake-->>Fake: C2 do work
 Fake-->>Jar:C3 call Jar
@@ -118,5 +118,6 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbNzAyMTUwNDEwLC00NTc2NjMxMTcsODU4NT
+Q2MDIyXX0=
 -->
