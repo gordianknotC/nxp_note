@@ -95,13 +95,19 @@ To start your application when an NFC tag that you want to handle is scanned, yo
 
 Because **NFC tag deployments vary** and are many times **not under your control,** this is not always possible, **`which is why you can fallback to the other two intents when necessary.`** When you have control over the types of tags and data written, it is recommended that you use NDEF to format your tags. The following sections describe how to filter for each type of intent.
 
+
+.
+
+## Filter Each Type of Intent
 ### ACTION_NDEF_DISCOVERED
 
-To filter for  `[ACTION_NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)`  intents, declare the intent filter along with the type of data that you want to filter for. The following example filters for  `[ACTION_NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)`  intents with a MIME type of  `text/plain`:
-
-<intent-filter>  <action  android:name="android.nfc.action.NDEF_DISCOVERED"/>  <category  android:name="android.intent.category.DEFAULT"/>  <data  android:mimeType="text/plain"  />  
+To filter for  [ACTION_NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)  intents, declare the intent filter along with the type of data that you want to filter for. The following example filters for  [ACTION_NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)  intents with a MIME type of  `text/plain`:
+```xml
+<intent-filter>  
+	<action  android:name="android.nfc.action.NDEF_DISCOVERED"/>  <category  android:name="android.intent.category.DEFAULT"/>  
+	<data  android:mimeType="text/plain"  />  
 </intent-filter>
-
+```
 The following example filters for a URI in the form of`http://developer.android.com/index.html`.
 
 <intent-filter>  <action  android:name="android.nfc.action.NDEF_DISCOVERED"/>  <category  android:name="android.intent.category.DEFAULT"/>  <data  android:scheme="http"  android:host="developer.android.com"  android:pathPrefix="/index.html"  />  
@@ -158,6 +164,6 @@ To obtain these extras, check to see if your activity was launched with one of t
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyODUzNzE1NywtMjI1ODk2MjY1LDkzMT
-Q2MjMzNCwtOTM2MjE3NzAyXX0=
+eyJoaXN0b3J5IjpbLTExNzg0MjQxODgsLTIyNTg5NjI2NSw5Mz
+E0NjIzMzQsLTkzNjIxNzcwMl19
 -->
