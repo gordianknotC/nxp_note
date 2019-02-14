@@ -1,6 +1,6 @@
 
 # Intent
-An intent is an abstract description of an operation to be performed. It can be used with  [startActivity](https://developer.android.com/reference/android/content/Context.html#startActivity(android.content.Intent))`  to launch an  `[Activity](https://developer.android.com/reference/android/app/Activity.html)`,  `[broadcastIntent](https://developer.android.com/reference/android/content/Context.html#sendBroadcast(android.content.Intent))`  to send it to any interested  `[BroadcastReceiver](https://developer.android.com/reference/android/content/BroadcastReceiver.html)`  components, and  `[Context.startService(Intent)](https://developer.android.com/reference/android/content/Context.html#startService(android.content.Intent))`  or`[Context.bindService(Intent, ServiceConnection, int)](https://developer.android.com/reference/android/content/Context.html#bindService(android.content.Intent,%20android.content.ServiceConnection,%20int))`  to communicate with a background  `[Service](https://developer.android.com/reference/android/app/Service.html)`.
+An intent is an abstract description of an operation to be performed. It can be used with  [startActivity](https://developer.android.com/reference/android/content/Context.html#startActivity (android.content.Intent))  to launch an  [Activity](https://developer.android.com/reference/android/app/Activity.html),  [broadcastIntent](https://developer.android.com/reference/android/content/Context.html#sendBroadcast(android.content.Intent))  to send it to any interested  [BroadcastReceiver](https://developer.android.com/reference/android/content/BroadcastReceiver.html)`  components, and  `[Context.startService(Intent)](https://developer.android.com/reference/android/content/Context.html#startService(android.content.Intent)) or [Context.bindService(Intent, ServiceConnection, int)](https://developer.android.com/reference/android/content/Context.html#bindService(android.content.Intent,%20android.content.ServiceConnection,%20int))`  to communicate with a background  [Service](https://developer.android.com/reference/android/app/Service.html).
 
 An Intent provides a facility for performing late runtime binding between the code in different applications. Its most significant use is in the launching of activities, where it can be thought of as the glue between activities. It is basically a passive data structure holding an abstract description of an action to be performed.
 
@@ -252,9 +252,9 @@ receive parcelable via intent
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ3NzQxNjk5LDEyMjY4NjE3MzIsLTE1MT
-QwNTYyNzEsMTc1NjI1NDE5MiwxMzE2MTY5MjgyLC02MjI0MTM5
-NCwtMTY2MDkwNzE3NywyNTY5ODc1NjAsOTY4Mjk3NTg2LDEyNj
-czNzgyMTksMTY0MTQwMTMxNiwxMzExMDgwNjksNzYzNjU2Njgy
-XX0=
+eyJoaXN0b3J5IjpbMTQ3NTM3MDEwMSwxMjI2ODYxNzMyLC0xNT
+E0MDU2MjcxLDE3NTYyNTQxOTIsMTMxNjE2OTI4MiwtNjIyNDEz
+OTQsLTE2NjA5MDcxNzcsMjU2OTg3NTYwLDk2ODI5NzU4NiwxMj
+Y3Mzc4MjE5LDE2NDE0MDEzMTYsMTMxMTA4MDY5LDc2MzY1NjY4
+Ml19
 -->
