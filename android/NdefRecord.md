@@ -176,7 +176,13 @@ Add the following code in the `onCreate()` method of your activity:
 		}
 		intentFiltersArray = arrayOf(ndef)	
 	```
+	- Set up an array of tag technologies that your application wants to handle. Call the `Object.class.getName()` method to obtain the class of the technology that you want to support.
+	```kotlin
+		techListsArray = arrayOf(arrayOf<String>(NfcF::class.java.name))
+	```
+	
+2.  Override the following activity lifecycle callbacks and add logic to enable and disable the foreground dispatch when the activity loses ([onPause()](https://developer.android.com/reference/android/app/Activity.html#onPause())) and regains ([onResume()](https://developer.android.com/reference/android/app/Activity.html#onResume())`) focus.  [enableForegroundDispatch()](https://developer.android.com/reference/android/nfc/NfcAdapter.html#enableForegroundDispatch(android.app.Activity,%20android.app.PendingIntent,%20android.content.IntentFilter[],%20java.lang.String[][]))`  must be called from the main thread and only when the activity is in the foreground (calling in  [onResume()](https://developer.android.com/reference/android/app/Activity.html#onResume())guarantees this). You also need to implement the  [onNewIntent](https://developer.android.com/reference/android/app/Activity.html#onNewIntent(android.content.Intent))  callback to process the data from the scanned NFC tag.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyOTcyMTE5NSw2NDE4Mzg5NywxMTE1NT
+eyJoaXN0b3J5IjpbLTI3OTQyMzMwMiw2NDE4Mzg5NywxMTE1NT
 g3MjA0LDEyMDI0Nzg1MjgsMzUwNjUxOTg3XX0=
 -->
