@@ -211,12 +211,16 @@ override  fun onNewIntent(intent:  Intent)  {
 	...  
 	if  (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action)  { 
 		intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES)
-		?.also { rawMessages ->  val messages:  List<NdefMessage>  = 
-			rawMessages.map { it as  NdefMessage  }  // Process the messages array.  ...  }  }  
+		?.also { 
+		rawMessages ->  
+			val messages:  List<NdefMessage>  = 
+				rawMessages.map { it as  NdefMessage  }  
+				// Process the messages array.  ...  
+		}  }  
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MjA1NDM1NCwxMTIzOTc2NjkzLC0xMT
+eyJoaXN0b3J5IjpbLTU3Njk3NzY1MCwxMTIzOTc2NjkzLC0xMT
 M3ODg3NTUxLC03ODA5Mjc1MjEsLTIyNTg5NjI2NSw5MzE0NjIz
 MzQsLTkzNjIxNzcwMl19
 -->
