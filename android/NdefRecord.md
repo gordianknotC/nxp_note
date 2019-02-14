@@ -82,7 +82,9 @@ val extRecord = NdefRecord.createExternal(domain, type, payload)
 ```
 > ⚡ pathprefix is in **lower-case**
 
+.
 
+-------------------------------------------------------
 ### createApplicationRecord
 
 added in  [API level 14](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
@@ -100,14 +102,17 @@ val records = arrayOf(sp_record, aap_record)
 ```
 .
 
------------------------------------
 
+-----------------------------------
 
 ### createTextRecord
 
 added in  [API level 21](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
 ```java
-public static NdefRecord createTextRecord (String languageCode, String text)
+public static NdefRecord createTextRecord (
+	String languageCode, // Locale.TAIWAN.language.toString()
+	String text
+)
 ```
 Create a new NDEF record containing UTF-8 text data.
 
@@ -125,6 +130,6 @@ The caller can either specify the language code for the provided text, or otherw
 ### Android Application Reccords (AAR)
 Create a new NDEF Record containing external (application-specific) data
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY0MzgxMTEwLDExMTU1ODcyMDQsMTIwMj
+eyJoaXN0b3J5IjpbMzM1ODgyNDg2LDExMTU1ODcyMDQsMTIwMj
 Q3ODUyOCwzNTA2NTE5ODddfQ==
 -->
