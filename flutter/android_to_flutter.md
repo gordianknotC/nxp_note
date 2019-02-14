@@ -70,29 +70,8 @@ Mediator-->>Mediator: UI
 
 ```mermaid
 graph TB
-	subgraph Activity FlutterActivity
-		pluginRegister
-		pluginRegister -.- onCreate
-		subgraph lifeCycles
-			onCreate -.- onIntent
-			onIntent -.- onResult
-			onResult -.- onPause
-			onResume -.- onPause
-			onCreate -.- onStop
-		end
-	end
-	subgraph Mediators-Flutter-UI-Plugin
-		subgraph M1
-			M1intent --- M1target
-			M1intent --- M1data
-			M1data --- M1filter
-			M1filter --- M1target
-		end
-		MStartActivity
-		MStartResult
-		MStartActivity -.- MStartResult
-		MStartResult -.- M1intent
-	end
+	
+	
 	
 	subgraph FakeActivity
 		FonCreate
@@ -113,15 +92,26 @@ graph TB
 			Fcontainer --> FonResult
 			Fcontainer --> FonReceive
 		end
-		
-		
+	end
+
+	subgraph Mediators-Flutter-UI-Plugin
 		MStartActivity --> FonCreate
 		MStartResult --> FonResult
+		subgraph M1
+			M1intent --- M1target
+			M1intent --- M1data
+			M1data --- M1filter
+			M1filter --- M1target
+		end
+		MStartActivity
+		MStartResult
+		MStartActivity -.- MStartResult
+		MStartResult -.- M1intent
 	end
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NT
-g1NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbLTEyMTQwMTc0MzUsLTExMjQzODcwNjYsLT
+Q1NzY2MzExNyw4NTg1NDYwMjJdfQ==
 -->
