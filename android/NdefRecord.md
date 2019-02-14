@@ -130,8 +130,8 @@ The caller can either specify the language code for the provided text, or otherw
 ### Android Application Reccords (AAR)
 
 added in  [API level 14](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
-Android Application Record (AAR) provides a stronger certainty that your application is started when an **`NFC tag is scanned`**. An AAR has the **`package name`** of an application **`embedded inside`** an NDEF record. You can add an **AAR** to **any** NDEF record of your NDEF message, because Android searches the entire NDEF message for AARs. If it finds an AAR, it starts the application based on the package name inside the AAR. If the application is not present on the device, Google Play is launched to download the application.
+Android Application Record (AAR) provides a stronger certainty that your application is started when an **`NFC tag is scanned`**. An AAR has the **`package name`** of an application **`embedded inside`** an NDEF record. You can add an **AAR** to **any** NDEF record of your NDEF message, because Android searches the **`entire NDEF message`** for **AARs**. If it finds an AAR, it starts the application based on the package name inside the AAR. If the application is not present on the device, Google Play is **`launched to download`** the application.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwODQyODM0OSwxMTE1NTg3MjA0LDEyMD
-I0Nzg1MjgsMzUwNjUxOTg3XX0=
+eyJoaXN0b3J5IjpbNjQxODM4OTcsMTExNTU4NzIwNCwxMjAyND
+c4NTI4LDM1MDY1MTk4N119
 -->
