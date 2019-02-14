@@ -195,7 +195,7 @@ To filter for  [ACTION_TAG_DISCOVERED](https://developer.android.com/reference/a
 -----------------
 .
 
-### Obtain information from intents
+### ⚠Obtain information from intents
 
 If an activity starts because of an NFC intent, you can obtain information about the scanned NFC tag from the intent. Intents can contain the following extras depending on the tag that was scanned:
 
@@ -207,7 +207,7 @@ To obtain these extras, check to see if your activity was launched with one of t
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2Njk3NTA4NSwtMTEzNzg4NzU1MSwtNz
+eyJoaXN0b3J5IjpbMTEyMzk3NjY5MywtMTEzNzg4NzU1MSwtNz
 gwOTI3NTIxLC0yMjU4OTYyNjUsOTMxNDYyMzM0LC05MzYyMTc3
 MDJdfQ==
 -->
