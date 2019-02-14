@@ -94,6 +94,7 @@ There are three pieces of information in the Intent that are used for resolution
 -   For **data** that is not a  `content:`  URI and where no explicit type is included in the Intent, instead the  **scheme**  of the intent data (such as  `http:`  or  `mailto:`) is considered. Again like the action, if we are matching a scheme it **must be listed** by the component as **one** it can handle.
 -   The  **categories**, if supplied, must  **_all_  be listed** by the activity as categories it handles. That is, if you include the categories  [CATEGORY_LAUNCHER](https://developer.android.com/reference/android/content/Intent.html#CATEGORY_LAUNCHER)  and[CATEGORY_ALTERNATIVE](https://developer.android.com/reference/android/content/Intent.html#CATEGORY_ALTERNATIVE), then you will only resolve to components with an intent that lists  _both_  of those categories. Activities will very often need to support the[CATEGORY_DEFAULT](https://developer.android.com/reference/android/content/Intent.html#CATEGORY_DEFAULT)  so that they can be found by  [Context.startActivity()](https://developer.android.com/reference/android/content/Context.html#startActivity(android.content.Intent))`.
 
+---------
 ### Standard Activity Actions
 
 | action name | activity action |
@@ -102,9 +103,12 @@ There are three pieces of information in the Intent that are used for resolution
 | ACTION_GET_CONTENT | Activity Action: Allow the user to select a particular kind of data and return it. This is different than [ACTION_PICK](https://developer.android.com/reference/android/content/Intent.html#ACTION_PICK) in that here we just say what kind of data is desired, not a URI of existing data from which the user can pick. An ACTION_GET_CONTENT could allow the user to create the data as it runs (for example taking a picture or recording a sound), let them browse over the web and download the desired data, etc.|
 |ACTION_SEARCH_LONG_PRESS|Start action associated with long pressing on the search key.|
 
+------------------------------------------------
+
 ### Standard Broadcast Actions
+These are the current standard actions that Intent defines for receiving broadcasts (usually through [Context.registerReceiver(BroadcastReceiver, IntentFilter)](https://developer.android.com/reference/android/content/Context.html#registerReceiver(android.content.BroadcastReceiver,%20android.content.IntentFilter)) or a <receiver> tag in a manifest).
 
-
+------------------------------------------------
 
 ### Standard Categories
 |    |    |
@@ -237,8 +241,8 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDcxODM4OTIsMTc1NjI1NDE5MiwxMz
-E2MTY5MjgyLC02MjI0MTM5NCwtMTY2MDkwNzE3NywyNTY5ODc1
-NjAsOTY4Mjk3NTg2LDEyNjczNzgyMTksMTY0MTQwMTMxNiwxMz
-ExMDgwNjksNzYzNjU2NjgyXX0=
+eyJoaXN0b3J5IjpbLTc5MzUyNDM0MSwxNzU2MjU0MTkyLDEzMT
+YxNjkyODIsLTYyMjQxMzk0LC0xNjYwOTA3MTc3LDI1Njk4NzU2
+MCw5NjgyOTc1ODYsMTI2NzM3ODIxOSwxNjQxNDAxMzE2LDEzMT
+EwODA2OSw3NjM2NTY2ODJdfQ==
 -->
