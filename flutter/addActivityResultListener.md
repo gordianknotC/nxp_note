@@ -1,13 +1,5 @@
 ## addActivityResultListener
 
-```java
-
-
-```
-
-
-
-
 ```mermaid
 graph TB
 	subgraph Native FlutterActivity
@@ -56,12 +48,12 @@ graph TB
 		
 		
 		MStartActivity --> FonCreate
-		MStart
+		MStartResult --> FonResult
 	end
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDI4MTk3MjAsLTI4NDM4MjkxMywtMT
+eyJoaXN0b3J5IjpbLTIwNDQ1MzgwMjMsLTI4NDM4MjkxMywtMT
 A1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
 -->
