@@ -17,7 +17,7 @@ Fake -->> Fake: prepare intent logic
 Fake -->> Mediator: A3 setup handlers to mediator
 Mediator -->> Mediator: prepare dart channel
 Mediator -->> Native: A4 Ready, set initial states
-Native -->> Native: A5 delegate lif
+Native -->> Native: A5 delegate lifecycle
 Native -->> Mediator: Finish handing over lifecycle control flow to Mediator
 
 
@@ -111,5 +111,5 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3OTM1NTcxN119
+eyJoaXN0b3J5IjpbODU4NTQ2MDIyXX0=
 -->
