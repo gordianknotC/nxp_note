@@ -23,16 +23,20 @@ graph TB
 		FonIntent 
 		FonReceive 
 		FonCreate --> Fcontainer
-		FonPause -->FonResume
-
+		
+		subgraph listeners
 		Fcontainer --> FonIntent
 		Fcontainer --> FonResult
 		Fcontainer --> FonReceive
+		end
+		
+
+		FonPause -.- FonResume
 	end
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2Nzc5NjU3LC0yODQzODI5MTMsLTEwNT
-g0ODY2NjMsLTQzNDkzMTcwOF19
+eyJoaXN0b3J5IjpbLTExMjc5NjYxMTcsLTI4NDM4MjkxMywtMT
+A1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
 -->
