@@ -54,7 +54,24 @@ val mimeRecord = NdefRecord.createMime(
     <data android:mimeType="application/vnd.com.example.android.beam"/>
 </intent-filter>
 ```
+
+### createUri
+```kotlin
+val rtdUriRecord1  =  NdefRecord.createUri("http://example.com")
+val rtdUriRecord2  =  Uri.parse("http://example.com").let { uri ->  		
+	NdefRecord.createUri(uri)  
+}
+```
+```xml
+<intent-filter>
+    <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <data android:scheme="http"
+        android:host="example.com"
+        android:pathPrefix="" />
+</intent-filter>
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNTU4NzIwNCwxMjAyNDc4NTI4LDM1MD
-Y1MTk4N119
+eyJoaXN0b3J5IjpbMzg3OTEzNTgzLDExMTU1ODcyMDQsMTIwMj
+Q3ODUyOCwzNTA2NTE5ODddfQ==
 -->
