@@ -127,7 +127,18 @@ For example, if the tag that is scanned supports MifareClassic, NdefFormatable, 
 
 The following sample defines all of the technologies. You can remove the ones that you do not need. Save this file (you can name it anything you wish) in the  `<project-root>/res/xml`  folder.
 ```xml
-<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  <tech-list>  <tech>android.nfc.tech.IsoDep</tech>  <tech>android.nfc.tech.NfcA</tech>  <tech>android.nfc.tech.NfcB</tech>  <tech>android.nfc.tech.NfcF</tech>  <tech>android.nfc.tech.NfcV</tech>  <tech>android.nfc.tech.Ndef</tech>  <tech>android.nfc.tech.NdefFormatable</tech>  <tech>android.nfc.tech.MifareClassic</tech>  <tech>android.nfc.tech.MifareUltralight</tech>  </tech-list>  
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+<tech-list>  
+	<tech>android.nfc.tech.IsoDep</tech>  
+	<tech>android.nfc.tech.NfcA</tech>  
+	<tech>android.nfc.tech.NfcB</tech>  
+	<tech>android.nfc.tech.NfcF</tech>  
+	<tech>android.nfc.tech.NfcV</tech>  
+	<tech>android.nfc.tech.Ndef</tech>  
+	<tech>android.nfc.tech.NdefFormatable</tech>  
+	<tech>android.nfc.tech.MifareClassic</tech>  
+	<tech>android.nfc.tech.MifareUltralight</tech>  
+</tech-list>  
 </resources>
 ```
 You can also specify multiple  `tech-list`  sets. Each of the  `tech-list`  sets is considered independently, and your activity is considered a match if any single  `tech-list`  set is a subset of the technologies that are returned by  [getTechList()](https://developer.android.com/reference/android/nfc/Tag.html#getTechList()). This provides  `AND`  and  `OR`  semantics for matching technologies. The following example matches tags that can support the NfcA and Ndef technologies or can support the NfcB and Ndef technologies:
@@ -171,6 +182,6 @@ To obtain these extras, check to see if your activity was launched with one of t
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3Mzc5MTc3MiwtMjI1ODk2MjY1LDkzMT
-Q2MjMzNCwtOTM2MjE3NzAyXX0=
+eyJoaXN0b3J5IjpbLTE5NjgwNzcyMTQsLTIyNTg5NjI2NSw5Mz
+E0NjIzMzQsLTkzNjIxNzcwMl19
 -->
