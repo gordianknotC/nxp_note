@@ -25,11 +25,14 @@ graph TB
 		MStart
 		MStartResult
 		subgraph M1
-			M1intent			
+			M1intent --- M1target
+			M1intent --- M1data
 		end
 		subgraph M2
-			M2intent
+			M2intent --- M2target
+			M2intent --- M2data
 		end
+		
 	end
 	
 	subgraph FActivity
@@ -59,6 +62,6 @@ graph TB
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1ODEwNzIyNywtMjg0MzgyOTEzLC0xMD
+eyJoaXN0b3J5IjpbMTE2MzgzMzQ4NiwtMjg0MzgyOTEzLC0xMD
 U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
