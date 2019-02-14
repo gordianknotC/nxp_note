@@ -59,7 +59,8 @@ participant Mediator
 participant Fake
 participant Core
 
-Note over Native, Fake: Scenario1: Before Ready<br>
+Note over Native, Fake: Scenario1: Before Ready
+
 Native -->> Mediator: A1 initialize plugin
 Mediator -->> Fake: A2 initialize fake activity
 Fake -->> Fake: prepare intent logic
@@ -71,7 +72,8 @@ Native -->> Mediator: A6 onPause, onResume...
 Native -->> Mediator: hands over lifecycle control flow
 
 
-Note over Mediaotr, Fake: Scenario1: Ready - 
+Note over Mediaotr, Fake: Scenario2: Ready - discovered Tag 
+
 Mediator-->> Mediator: B0 discover tag, onNewIntent, findout receiver
 Mediator-->>Mediator: B1 startActivity
 Mediator-->>Core: B2 do work directly without another activity
@@ -97,7 +99,7 @@ Fake-->>Mediator:B3 response to fake ui
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE1NzkyMDY4LDg2MDMyNjM0NSwxNTQ3OT
-E2NzkxLC0yODQzODI5MTMsLTEwNTg0ODY2NjMsLTQzNDkzMTcw
-OF19
+eyJoaXN0b3J5IjpbLTEwMjA2MTk5MDUsODYwMzI2MzQ1LDE1ND
+c5MTY3OTEsLTI4NDM4MjkxMywtMTA1ODQ4NjY2MywtNDM0OTMx
+NzA4XX0=
 -->
