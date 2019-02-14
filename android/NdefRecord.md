@@ -167,8 +167,9 @@ Add the following code in the `onCreate()` method of your activity:
 	```
 
 	- Declare intent filters to handle the intents that you want to intercept. The foreground dispatch system checks the specified intent filters with the intent that is received **when the device scans a tag**. 
-	- If it matches, then your application handles the intent. 
-	- If it does not match, the foreground dispatch system falls back to the intent dispatch system. Specifying a `null` array of intent filters and technology filters, specifies that you want to filter for all tags that fallback to the `TAG_DISCOVERED` intent. The code snippet below handles all MIME types for `NDEF_DISCOVERED`. You should only handle the ones that you need.
+		> If it matches, then your application handles the intent. 
+		> If it does not match, the foreground dispatch system falls back to the intent dispatch system. 
+	- Specifying a `null` array of intent filters and technology filters, specifies that you want to filter for all tags that fallback to the `TAG_DISCOVERED` intent. The code snippet below handles all MIME types for `NDEF_DISCOVERED`. You should only handle the ones that you need.
 	```kotlin
 		val ndef = IntentFilter(NfcAdapter.ACTION_NDEF_DISCOVERED).apply {
 		    try {
@@ -204,6 +205,6 @@ Add the following code in the `onCreate()` method of your activity:
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MDI2NDc1Miw2NDE4Mzg5NywxMTE1NT
+eyJoaXN0b3J5IjpbMTg5Mjg5NjQ2MSw2NDE4Mzg5NywxMTE1NT
 g3MjA0LDEyMDI0Nzg1MjgsMzUwNjUxOTg3XX0=
 -->
