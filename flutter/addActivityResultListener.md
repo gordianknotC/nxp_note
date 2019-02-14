@@ -64,13 +64,14 @@ Fake -->> Fake: prepare intent logic
 Fake -->> Mediator: A3-setup handlers to mediator
 Mediator -->> Mediator: prepare dart channel
 Mediator -->> Native: A4 - Ready, set initial states
-Native -->> Native: A5-
+Native -->> Native: A5 -setup events can't be delegate
+Native -->> Mediator: A6-onPause, onResume...
 
 Native ->> Mediator: B1-StartActivity
 Mediator ->> Mediator: 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NDUwMjExNCwtMjg0MzgyOTEzLC0xMD
-U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
+eyJoaXN0b3J5IjpbLTE4MjE4ODUzODYsLTI4NDM4MjkxMywtMT
+A1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
 -->
