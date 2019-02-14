@@ -8,21 +8,23 @@
 #### authenticatePlus
 Authenticate using PWD_AUTH command against NTAG I2C Plus product.
 
-**describe writing process in brief**
-- params
-	- **byte[]** pwd :: 4Byte password to authenticate with
-- check if its an **Ntag_I2C_Plus** product since only **Plus** support auth operation.
-- read auth data by using reader.**pwdAuth**
+**- #### describe writing process in brief**
+	- params
+		- **byte[]** pwd ::
+			- 4Byte password to authenticate with
+	- check if its an **Ntag_I2C_Plus** product since only **Plus** support auth operation.
+	- read auth data by using reader.**pwdAuth**
 
-**referenced in**
-- Ntag_I2C_Demo
-	- constructor
-	- Auth
-	- SRAMSpeedtestTask / doInBackground
-	- EEPROMSpeedtestTask / doInBackground
-- Ntag_I2C_Command  
-	- writeSRAMBlock
-	- readSRAMBlock
+**		##### referenced in**
+
+		- Ntag_I2C_Demo
+			- constructor
+			- Auth
+			- SRAMSpeedtestTask / doInBackground
+			- EEPROMSpeedtestTask / doInBackground
+		- Ntag_I2C_Command  
+			- writeSRAMBlock
+			- readSRAMBlock
 ```java
 @Override  
 public byte[] authenticatePlus(byte[] pwd) throws IOException, NotPlusTagException {  
@@ -143,5 +145,5 @@ behaviors almost the same as method of protect referred above.
 ### Ntag_I2C_Command
 ### MinimalNtag_I2C_Command
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNDkzMTcwOF19
+eyJoaXN0b3J5IjpbLTEwNTg0ODY2NjMsLTQzNDkzMTcwOF19
 -->
