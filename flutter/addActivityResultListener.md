@@ -75,14 +75,13 @@ Mediator-->>Fake: B1 get receiver by intent
 Fake-->>Fake:B2 do work
 Fake-->>Mediator:B3 response to fake ui
 
-
-Native -->> Native: C0 initaited by user
-Native ->> Mediator: B1 StartActivity
-Mediator -->> Mediator: B2 
-Native ->> Mediator: C1 StartActivityForResult
+ 
+ Mediator-->>Mediator: C0 user trigger action
+ 
+ Mediator-->>Mediator: D0 user trigger action for result
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NzkxNjc5MSwtMjg0MzgyOTEzLC0xMD
-U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
+eyJoaXN0b3J5IjpbODYwMzI2MzQ1LDE1NDc5MTY3OTEsLTI4ND
+M4MjkxMywtMTA1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
 -->
