@@ -116,8 +116,10 @@ val extRecord = NdefRecord.createExternal(domain, type, payload)
         android:pathPrefix="/com.example:externaltype"/> 
 </intent-filter>
 ```
-> 
+> ⚡ pathprefix is in **lower-case**
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NDc5MDk5OSwxMTE1NTg3MjA0LDEyMD
-I0Nzg1MjgsMzUwNjUxOTg3XX0=
+eyJoaXN0b3J5IjpbLTEzNTQxNDc0MjgsMTExNTU4NzIwNCwxMj
+AyNDc4NTI4LDM1MDY1MTk4N119
 -->
