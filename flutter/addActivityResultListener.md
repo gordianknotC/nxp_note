@@ -56,21 +56,21 @@ graph TB
 sequenceDiagram
 Native -->> Mediator: A1-initialize plugin
 Mediator -->> Fake: A2-initialize fake activity
-loop A2
-	Fake -->> Fake: prepare intent logic
-end
+ 
+Fake -->> Fake: prepare intent logic
+ 
 Fake -->> Mediator: A3-setup handlers to mediator
-loop A3
-	Mediator -->> Mediator: prepare dart channel
-end
-Mediator -->> Native: A4-I'm ready,\n set initial states
-Mediator -->> Native: A5-set initial states
+ 
+Mediator -->> Mediator: prepare dart channel
+ 
+Mediator -->> Native: A4 - Ready, set initial states
+Native -->> Native: A5-set initial states
 Native ->> Mediator: B1-StartActivity
 loop B1
 	Mediator ->> Mediator: 
 end
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NDQxMTM1NCwtMjg0MzgyOTEzLC0xMD
+eyJoaXN0b3J5IjpbMTkyOTQyNjk2OCwtMjg0MzgyOTEzLC0xMD
 U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
