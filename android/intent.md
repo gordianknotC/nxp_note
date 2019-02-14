@@ -111,6 +111,8 @@ These are the current standard actions that Intent defines for receiving broadca
 ------------------------------------------------
 
 ### Standard Categories
+These are the current standard categories that can be used to further clarify an Intent via [addCategory(String)](https://developer.android.com/reference/android/content/Intent.html#addCategory(java.lang.String)).
+
 |    |    |
 | -- | -- |
 | CATEGORY_LAUNCHER| Should be displayed in the top-level launcher.|
@@ -241,8 +243,8 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MzUyNDM0MSwxNzU2MjU0MTkyLDEzMT
-YxNjkyODIsLTYyMjQxMzk0LC0xNjYwOTA3MTc3LDI1Njk4NzU2
-MCw5NjgyOTc1ODYsMTI2NzM3ODIxOSwxNjQxNDAxMzE2LDEzMT
-EwODA2OSw3NjM2NTY2ODJdfQ==
+eyJoaXN0b3J5IjpbLTE1MTQwNTYyNzEsMTc1NjI1NDE5MiwxMz
+E2MTY5MjgyLC02MjI0MTM5NCwtMTY2MDkwNzE3NywyNTY5ODc1
+NjAsOTY4Mjk3NTg2LDEyNjczNzgyMTksMTY0MTQwMTMxNiwxMz
+ExMDgwNjksNzYzNjU2NjgyXX0=
 -->
