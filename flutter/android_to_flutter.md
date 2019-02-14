@@ -37,11 +37,11 @@ Mediator-->>Mediator: C0 startActivity
 Mediator->>Fake: C1 onCreate
 Fake-->>Fake: C2 do work
 Fake->>Jar:C3 call Jar
-Jar-->>Fake:C4 response
+Jar->>Fake:C4 response
 Fake-->>Fake:C5 prepare intent
 Fake->>Mediator: C6 startActivity from Fake
 Mediator-->>Mediator: C7 startActivity->onNewIntent ...
-Mediator-->>Fake: C8 onCreate
+Mediator->>Fake: C8 onCreate
 
 
 Note over Mediator, Jar: Scenario4: Ready - startActivity triggered by Fake layer
@@ -60,6 +60,8 @@ Mediator-->>Fake: E2 onCreate
 Fake-->>Fake: E3 do work
 Fake-->>Jar:E4 call Jar
 Jar-->>Fake:E5
+Fake->>Mediator: onActivityResult
+Mediator-->>Mediator: UI 
 ```
 
 ------------------
@@ -120,6 +122,6 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDM2NjkyMDIsLTQ1NzY2MzExNyw4NT
+eyJoaXN0b3J5IjpbLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NT
 g1NDYwMjJdfQ==
 -->
