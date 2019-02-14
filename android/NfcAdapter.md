@@ -195,7 +195,7 @@ To filter for  [ACTION_TAG_DISCOVERED](https://developer.android.com/reference/a
 -----------------
 .
 
-### ⚠Obtain information from intents
+### ⚡Obtain information from intents
 
 If an activity starts because of an NFC intent, you can obtain information about the scanned NFC tag from the intent. Intents can contain the following extras depending on the tag that was scanned:
 
@@ -230,8 +230,12 @@ val tag: Tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG)
 
 
 
+
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4MzE0OTY4LC00MjUzMDU3OTAsMTEyMz
-k3NjY5MywtMTEzNzg4NzU1MSwtNzgwOTI3NTIxLC0yMjU4OTYy
-NjUsOTMxNDYyMzM0LC05MzYyMTc3MDJdfQ==
+eyJoaXN0b3J5IjpbMjAwMzMyMzQ4OSwtMjgzMTQ5NjgsLTQyNT
+MwNTc5MCwxMTIzOTc2NjkzLC0xMTM3ODg3NTUxLC03ODA5Mjc1
+MjEsLTIyNTg5NjI2NSw5MzE0NjIzMzQsLTkzNjIxNzcwMl19
 -->
