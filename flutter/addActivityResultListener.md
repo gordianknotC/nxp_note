@@ -67,13 +67,15 @@ Mediator -->> Native: A4 - Ready, set initial states
 Native -->> Native: A5 -setup events can't be delegate
 Native -->> Mediator: A6-onPause, onResume...
 
-Native -->> Native: B0-discover tag or initated by user
+Native -->> Native: B0-discover tag
+
+Native -->> Native: C0 initaited by user
 Native ->> Mediator: B1-StartActivity
 Mediator -->> Mediator: B2 
 Native ->> Mediator: C1-StartActivityForResult
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAzMDY5MjY3LC0yODQzODI5MTMsLTEwNT
-g0ODY2NjMsLTQzNDkzMTcwOF19
+eyJoaXN0b3J5IjpbLTkzMDM3OTk0OCwtMjg0MzgyOTEzLC0xMD
+U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
