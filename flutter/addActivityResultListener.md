@@ -72,7 +72,8 @@ Native -->> Mediator: hands over lifecycle control flow
 Mediator-->> Mediator: B0 discover tag, onNewIntent, findout receiver
 Mediator-->>Mediator: B1 startActivity
 Mediator-->>Fake: B1 onCreate
-Mediaotr-->>Core: B11
+Mediator-->>Core: B11 do work directly without another activity
+Core-->>Mediator: B12 do work directly without another activity
 Fake-->>Fake: B2 onCreate, do work
 Fake-->>Core:B3 call core
 Core-->>Fake:B4 response
@@ -90,7 +91,7 @@ Fake-->>Mediator:B3 response to fake ui
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODExMjkwNjIwLDg2MDMyNjM0NSwxNTQ3OT
-E2NzkxLC0yODQzODI5MTMsLTEwNTg0ODY2NjMsLTQzNDkzMTcw
-OF19
+eyJoaXN0b3J5IjpbMjA1MDUwNDU4MSw4NjAzMjYzNDUsMTU0Nz
+kxNjc5MSwtMjg0MzgyOTEzLC0xMDU4NDg2NjYzLC00MzQ5MzE3
+MDhdfQ==
 -->
