@@ -52,6 +52,12 @@ Fake->>Mediator: D0 startActivity by user or...
 Note over Mediator: Jump to Scenario 2
 Note over Mediator: Jump to Scenario 3
 
+
+Note over Mediator, Jar: Scenario4: Ready - startActivityForResult while discovering tag
+Mediator-->> Mediator: C0 discover tag, onNewIntent, findout receiver
+Mediator-->>Fake: C1 onCreate
+Fake-->>Fake: C2 do work
+Fake-->>Jar:C3 call Jar
 ```
 
 ------------------
@@ -112,5 +118,5 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1Mzc0MzQ2OCw4NTg1NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
 -->
