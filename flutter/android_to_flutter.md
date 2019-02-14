@@ -7,13 +7,15 @@ participant MOn
 participant MAct
 participant FOn
 participant FDo
-participant CDo
+participant JDo
 
 MOn-->>MOn: onNewIntent, tag discovered
 MOn-->>MAct: startActivity
 MAct-->>MAct: make intent explicit, prepare target
 MAct->>FOn: onCreate
 FOn-->>FDo: process
+FDo->>JDo: call core function
+JDo->>FDo: response
 ```
 
 ```mermaid
@@ -128,6 +130,6 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MzU2MzU2OCwtMTQ3NjI2MjM4MywtMT
+eyJoaXN0b3J5IjpbLTU2MTU4ODE2MSwtMTQ3NjI2MjM4MywtMT
 EyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl19
 -->
