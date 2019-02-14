@@ -103,7 +103,7 @@ There are three pieces of information in the Intent that are used for resolution
 |ACTION_SEARCH_LONG_PRESS|Start action associated with long pressing on the search key.|
 | CATEGORY_LAUNCHER| Should be displayed in the top-level launcher.|
 | CATEGORY_HOME||
-|
+| CATEGORY_DEFAULT| Setting Category to Default doesn't mean that this Activity will be used by default when your app launches. The Activity just says to system that " **Oh I could be started, even if the starter Intent's category is set to  _Nothing_  at all !** "|
 
 ----------------------------------
 
@@ -224,8 +224,8 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MzUxODgsMTc1NjI1NDE5MiwxMzE2MT
-Y5MjgyLC02MjI0MTM5NCwtMTY2MDkwNzE3NywyNTY5ODc1NjAs
-OTY4Mjk3NTg2LDEyNjczNzgyMTksMTY0MTQwMTMxNiwxMzExMD
-gwNjksNzYzNjU2NjgyXX0=
+eyJoaXN0b3J5IjpbLTE4NDQzMjI4NzAsMTc1NjI1NDE5MiwxMz
+E2MTY5MjgyLC02MjI0MTM5NCwtMTY2MDkwNzE3NywyNTY5ODc1
+NjAsOTY4Mjk3NTg2LDEyNjczNzgyMTksMTY0MTQwMTMxNiwxMz
+ExMDgwNjksNzYzNjU2NjgyXX0=
 -->
