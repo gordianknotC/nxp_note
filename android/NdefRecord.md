@@ -162,7 +162,8 @@ Add the following code in the `onCreate()` method of your activity:
 		val intent = Intent(this, javaClass).apply {
 		    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
 		}
-		var pendingIntent: PendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
+		var pendingIntent: PendingIntent = 
+			PendingIntent.getActivity(this, 0, intent, 0)
 	```
 
 	- Declare intent filters to handle the intents that you want to intercept. The foreground dispatch system checks the specified intent filters with the intent that is received when the device scans a tag. If it matches, then your application handles the intent. If it does not match, the foreground dispatch system falls back to the intent dispatch system. Specifying a `null` array of intent filters and technology filters, specifies that you want to filter for all tags that fallback to the `TAG_DISCOVERED` intent. The code snippet below handles all MIME types for `NDEF_DISCOVERED`. You should only handle the ones that you need.
@@ -201,6 +202,6 @@ Add the following code in the `onCreate()` method of your activity:
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc1ODk1OTI2LDY0MTgzODk3LDExMTU1OD
-cyMDQsMTIwMjQ3ODUyOCwzNTA2NTE5ODddfQ==
+eyJoaXN0b3J5IjpbMTgzNTA5MDAwMCw2NDE4Mzg5NywxMTE1NT
+g3MjA0LDEyMDI0Nzg1MjgsMzUwNjUxOTg3XX0=
 -->
