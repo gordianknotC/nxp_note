@@ -21,9 +21,11 @@ graph TB
 			onCreate -.- onStop
 		end
 	end
-	subgraph Mediator FlutterPlugin
-		MStart
-		MStartResult
+	subgraph Mediators - FlutterPlugin
+		subgraph M1
+			MStart
+			MStartResult
+		end
 	end
 	
 	subgraph FActivity
@@ -53,6 +55,6 @@ graph TB
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1Njk3NTg5MSwtMjg0MzgyOTEzLC0xMD
+eyJoaXN0b3J5IjpbMjE0NDEwMzMzNiwtMjg0MzgyOTEzLC0xMD
 U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
