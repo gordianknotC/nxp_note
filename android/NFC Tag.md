@@ -20,8 +20,6 @@ A **new tag** object is created every time a **tag is discovered** (comes into r
 
 A four stage dispatch is used to select the most appropriate activity to handle the tag. The Android OS executes each stage in order, and completes dispatch as soon as a single matching activity is found. If there are multiple matching activities found at any one stage then the Android activity chooser dialog is shown to allow the user to select the activity to receive the tag.
 
-The Tag dispatch mechanism was designed to give a high probability of dispatching a tag to the correct activity without showing the user an activity chooser dialog. This is important for NFC interactions because they are very transient -- if a user has to move the Android device to choose an application then the connection will likely be broken.
-
 #### 1. Foreground activity dispatch
 
 A foreground activity that has called [NfcAdapter.enableForegroundDispatch()](https://developer.android.com/reference/android/nfc/NfcAdapter.html?hl=CA#enableForegroundDispatch(android.app.Activity,%20android.app.PendingIntent,%20android.content.IntentFilter[],%20java.lang.String[][])) is given priority. See the documentation on [NfcAdapter.enableForegroundDispatch()](https://developer.android.com/reference/android/nfc/NfcAdapter.html?hl=CA#enableForegroundDispatch(android.app.Activity,%20android.app.PendingIntent,%20android.content.IntentFilter[],%20java.lang.String[][]))for its usage.
@@ -45,10 +43,29 @@ An NFC tag is a passive NFC device, powered by the NFC field of this Android dev
 Tags can have a wide range of capabilities. Simple tags just offer read/write semantics, and contain some one time programmable areas to make read-only. More complex tags offer math operations and per-sector access control and authentication. The most sophisticated tags contain operating environments allowing complex interactions with the code executing on the tag. Use  [TagTechnology](https://developer.android.com/reference/android/nfc/tech/TagTechnology.html?hl=CA)  classes to access a broad range of capabilities available in NFC tags.
 
 
+.
+
+------------------------------------
+### getId
+
+added in  [API level 10](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html?hl=CA#ApiLevels)
+
+public byte[] getId ()
+
+Get the Tag Identifier (if it has one).
+
+The tag identifier is a low level serial number, used for anti-collision and identification.
+
+Most tags have a stable unique identifier (UID), but some tags will generate a random ID every time they are discovered (RID), and there are some tags with no ID at all (the byte array will be zero-sized).
+
+The size and format of an ID is specific to the RF technology used by the tag.
+
+This function retrieves the ID as determined at discovery time, and does not perform any further RF communication or block.
 
 
+.
 
-
+------------------------------
 
 
 ### writeToParcel
@@ -60,9 +77,9 @@ public void writeToParcel ([Parcel](https://developer.android.com/reference/andr
 
 Flatten this object in to a Parcel.
 
+.
 
-
-
+-------------------------------------------
 
 ### getTechList
 
@@ -78,5 +95,5 @@ Android defines a mandatory set of technologies that must be correctly enumerate
 
 The ordering of the returned array is undefined and should not be relied upon.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDQxNDgwOTldfQ==
+eyJoaXN0b3J5IjpbLTEyOTU5OTY1NV19
 -->
