@@ -82,10 +82,10 @@ Before you can access a device's NFC hardware and properly handle NFC intents, d
     ```xml
     <uses-sdk android:minSdkVersion="10"/>
     ```
--   The  `uses-feature`  element so that your application shows up in Google Play only for devices that have NFC hardware:
-    
-    <uses-feature  android:name="android.hardware.nfc"  android:required="true"  />
-    
+-   The  **`uses-feature`**  element so that your application shows up in Google Play **only for devices that have NFC hardware:**
+	```xml
+	<uses-feature  android:name="android.hardware.nfc"  android:required="true"  />
+	```
     If your application uses NFC functionality, but that functionality is not crucial to your application, you can omit the  `uses-feature`  element and check for NFC avalailbility at runtime by checking to see if  `[getDefaultAdapter()](https://developer.android.com/reference/android/nfc/NfcAdapter.html#getDefaultAdapter(android.content.Context))`  is  `null`.
     
 
@@ -158,6 +158,6 @@ To obtain these extras, check to see if your activity was launched with one of t
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODg1ODI4NTcsLTIyNTg5NjI2NSw5Mz
-E0NjIzMzQsLTkzNjIxNzcwMl19
+eyJoaXN0b3J5IjpbMTI0MDYzMTcyMCwtMjI1ODk2MjY1LDkzMT
+Q2MjMzNCwtOTM2MjE3NzAyXX0=
 -->
