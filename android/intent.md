@@ -103,7 +103,11 @@ There are three pieces of information in the Intent that are used for resolution
 |ACTION_SEARCH_LONG_PRESS|Start action associated with long pressing on the search key.|
 | CATEGORY_LAUNCHER| Should be displayed in the top-level launcher.|
 | CATEGORY_HOME||
-| CATEGORY_DEFAULT| Setting Category to Default doesn't mean that this Activity will be used by default when your app launches. The Activity just says to system that " **Oh I could be started, even if the starter Intent's category is set to  _Nothing_  at all !** "|
+| CATEGORY_DEFAULT| This category is mainly used for implicit intents. If your activity wishes to be started by an implicit intent it should include this catetory in its filter. 
+
+_Android automatically applies the the CATEGORY_DEFAULT category to all implicit intents passed to startActivity() and startActivityForResult(). So if you want your activity to receive implicit intents, it must include a category for "android.intent.category.DEFAULT" in its intent filters._|
+
+I think the term "default" should be understood as "default  **_candidate_**".|
 
 ----------------------------------
 
@@ -224,8 +228,8 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDQzMjI4NzAsMTc1NjI1NDE5MiwxMz
-E2MTY5MjgyLC02MjI0MTM5NCwtMTY2MDkwNzE3NywyNTY5ODc1
-NjAsOTY4Mjk3NTg2LDEyNjczNzgyMTksMTY0MTQwMTMxNiwxMz
-ExMDgwNjksNzYzNjU2NjgyXX0=
+eyJoaXN0b3J5IjpbMTE2NzAyMjI3NiwxNzU2MjU0MTkyLDEzMT
+YxNjkyODIsLTYyMjQxMzk0LC0xNjYwOTA3MTc3LDI1Njk4NzU2
+MCw5NjgyOTc1ODYsMTI2NzM3ODIxOSwxNjQxNDAxMzE2LDEzMT
+EwODA2OSw3NjM2NTY2ODJdfQ==
 -->
