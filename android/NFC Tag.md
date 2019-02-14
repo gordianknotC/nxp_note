@@ -36,11 +36,6 @@ If the tag contains NDEF data the system inspects the first [NdefRecord](https:/
 
 If no activity has been matched then [Context.startActivity(Intent)](https://developer.android.com/reference/android/content/Context.html?hl=CA#startActivity(android.content.Intent)) is called with[NfcAdapter.ACTION_TAG_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html?hl=CA#ACTION_TAG_DISCOVERED). This is intended as a fall-back mechanism. See [NfcAdapter.ACTION_TAG_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html?hl=CA#ACTION_TAG_DISCOVERED).
 
-### NFC Tag Background
-
-An NFC tag is a passive NFC device, powered by the NFC field of this Android device while it is in range. Tag's can come in many forms, such as stickers, cards, key fobs, or even embedded in a more sophisticated device.
-
-Tags can have a wide range of capabilities. Simple tags just offer read/write semantics, and contain some one time programmable areas to make read-only. More complex tags offer math operations and per-sector access control and authentication. The most sophisticated tags contain operating environments allowing complex interactions with the code executing on the tag. Use  [TagTechnology](https://developer.android.com/reference/android/nfc/tech/TagTechnology.html?hl=CA)  classes to access a broad range of capabilities available in NFC tags.
 
 
 .
@@ -95,5 +90,5 @@ Android defines a mandatory set of technologies that must be correctly enumerate
 
 The ordering of the returned array is undefined and should not be relied upon.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTU5OTY1NV19
+eyJoaXN0b3J5IjpbNTYwMzE2MDZdfQ==
 -->
