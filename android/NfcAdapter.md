@@ -161,16 +161,18 @@ The following example matches tags that can support the **NfcA and Ndef** techno
 </resources>
 ```
 In your  `AndroidManifest.xml`  file, specify the resource file that you just created in the  `<meta-data>`  element inside the  `<activity>`  element like in the following example:
-
+```xml
 <activity>  
-...  
-<intent-filter>  <action  android:name="android.nfc.action.TECH_DISCOVERED"/>  
-</intent-filter>  
-  
-<meta-data  android:name="android.nfc.action.TECH_DISCOVERED"  android:resource="@xml/nfc_tech_filter"  />  
-...  
+	...  
+	<intent-filter>  
+		<action  android:name="android.nfc.action.TECH_DISCOVERED"/>  
+	</intent-filter>  
+	  
+	<meta-data  android:name="android.nfc.action.TECH_DISCOVERED"  
+		android:resource="@xml/nfc_tech_filter"  />  
+	...  
 </activity>
-
+```
 For more information about working with tag technologies and the  `[ACTION_TECH_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TECH_DISCOVERED)`  intent, see  [Working with Supported Tag Technologies](https://developer.android.com/guide/topics/connectivity/nfc/advanced-nfc.html#tag-tech)  in the Advanced NFC document.
 
 ### ACTION_TAG_DISCOVERED
@@ -192,6 +194,6 @@ To obtain these extras, check to see if your activity was launched with one of t
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4Nzg2NDAwNCwtMjI1ODk2MjY1LDkzMT
+eyJoaXN0b3J5IjpbLTU0MTQ5ODEzNywtMjI1ODk2MjY1LDkzMT
 Q2MjMzNCwtOTM2MjE3NzAyXX0=
 -->
