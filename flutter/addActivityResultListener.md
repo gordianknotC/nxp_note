@@ -25,15 +25,16 @@ graph TB
 		subgraph M1
 			M1intent --- M1target
 			M1intent --- M1data
-			M1
+			M1data --- M1filter
+			M1filter --- M1target
 		end
-		MStart
+		MStartActivity
 		MStartResult
 		MStart -.- MStartResult
 		MStartResult -.- M1intent
 	end
 	
-	subgraph FActivity
+	subgraph FakeActivity
 		FonCreate
 		FonPause 
 		FonResume 
@@ -60,6 +61,6 @@ graph TB
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3Mjc0NjEyMiwtMjg0MzgyOTEzLC0xMD
-U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
+eyJoaXN0b3J5IjpbNDk1MzY5NDExLC0yODQzODI5MTMsLTEwNT
+g0ODY2NjMsLTQzNDkzMTcwOF19
 -->
