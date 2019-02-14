@@ -98,6 +98,8 @@ graph TB
 		MStartActivity --> FonCreate
 		MStartResult --> FonResult
 		MonNIntent -.- MStartResult
+		MonReceive -.- MonNIntent
+		MonNIntent -.- MStartActivity
 		subgraph M1
 			M1intent --- M1target
 			M1intent --- M1data
@@ -109,10 +111,11 @@ graph TB
 		MStartActivity -.- MStartResult
 		MStartResult -.- M1intent
 	end
+	Fcontainer --> MStartActivity
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NDE0NjgzMywtMTEyNDM4NzA2NiwtND
+eyJoaXN0b3J5IjpbMTc0OTQ3OTQ4NywtMTEyNDM4NzA2NiwtND
 U3NjYzMTE3LDg1ODU0NjAyMl19
 -->
