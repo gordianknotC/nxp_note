@@ -59,9 +59,12 @@ Mediator -->> Fake: A2-initialize fake activity
 loop A2
 	Fake -->> Fake: prepare intent logic
 end
-Fake -->> Mediator: A3-setup handlers
+Fake -->> Mediator: A3-setup handlers to mediator
+loop A3
+	Mediator -->> Mediator: prepare dart channel
+end
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTEyODI1NTgsLTI4NDM4MjkxMywtMT
+eyJoaXN0b3J5IjpbLTE3NDc4Mjc2OTAsLTI4NDM4MjkxMywtMT
 A1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
 -->
