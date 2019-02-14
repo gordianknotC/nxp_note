@@ -16,7 +16,7 @@ A **new tag** object is created every time a **tag is discovered** (comes into r
 
 ### Tag Dispatch
 
->When a tag is **discovered**, a [Tag](https://developer.android.com/reference/android/nfc/Tag.html?hl=CA) object is **created** and passed to a single activity via the [NfcAdapter.EXTRA_TAG](https://developer.android.com/reference/android/nfc/NfcAdapter.html?hl=CA#EXTRA_TAG) extra in an [Intent](https://developer.android.com/reference/android/content/Intent.html?hl=CA) via [Context.startActivity(Intent)](https://developer.android.com/reference/android/content/Context.html?hl=CA#startActivity(android.content.Intent)). 
+>When a tag is **discovered**, a [Tag](https://developer.android.com/reference/android/nfc/Tag.html?hl=CA) object is created and passed to a single activity via the [NfcAdapter.EXTRA_TAG](https://developer.android.com/reference/android/nfc/NfcAdapter.html?hl=CA#EXTRA_TAG) extra in an [Intent](https://developer.android.com/reference/android/content/Intent.html?hl=CA) via [Context.startActivity(Intent)](https://developer.android.com/reference/android/content/Context.html?hl=CA#startActivity(android.content.Intent)). 
 
 A four stage dispatch is used to select the most appropriate activity to handle the tag. The Android OS executes each stage in order, and completes dispatch as soon as a single matching activity is found. If there are multiple matching activities found at any one stage then the Android activity chooser dialog is shown to allow the user to select the activity to receive the tag.
 
@@ -78,5 +78,5 @@ Android defines a mandatory set of technologies that must be correctly enumerate
 
 The ordering of the returned array is undefined and should not be relied upon.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDYwOTkwNzVdfQ==
+eyJoaXN0b3J5IjpbLTEzNDQxNDgwOTldfQ==
 -->
