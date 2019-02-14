@@ -41,6 +41,9 @@ The caller can either specify the language code for the provided text, or otherw
 
 ## Create common types of NDEF records
 ### createMime
+```java
+public static NdefRecord createMime (String mimeType, byte[] mimeData)
+```
 ```kotlin
 val mimeRecord = NdefRecord.createMime(
   "application/vnd.com.example.android.beam",
@@ -56,6 +59,10 @@ val mimeRecord = NdefRecord.createMime(
 ```
 
 ### createUri
+```java
+public static NdefRecord createUri (String uriString)
+public static NdefRecord createUri (Uri uri)
+```
 ```kotlin
 val rtdUriRecord1  =  NdefRecord.createUri("http://example.com")
 val rtdUriRecord2  =  Uri.parse("http://example.com").let { uri ->  		
@@ -72,6 +79,6 @@ val rtdUriRecord2  =  Uri.parse("http://example.com").let { uri ->
 </intent-filter>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg3OTEzNTgzLDExMTU1ODcyMDQsMTIwMj
+eyJoaXN0b3J5IjpbLTU1MjAwNzU4LDExMTU1ODcyMDQsMTIwMj
 Q3ODUyOCwzNTA2NTE5ODddfQ==
 -->
