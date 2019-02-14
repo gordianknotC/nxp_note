@@ -20,9 +20,11 @@ There are two major use cases when working with NDEF data and Android:
 
 Reading NDEF data from an NFC tag is handled with the [tag dispatch system](https://developer.android.com/guide/topics/connectivity/nfc/nfc#tag-dispatch), which analyzes discovered NFC tags, appropriately categorizes the data, and starts an application that is interested in the categorized data. An application that wants to handle the scanned NFC tag can [declare an intent filter](https://developer.android.com/guide/topics/connectivity/nfc/nfc#filtering-intents) and request to handle the data.
 
+The Android Beam™ feature allows a device to push an NDEF message onto another device by physically tapping the devices together. This interaction provides an easier way to send data than other wireless technologies like Bluetooth, because with NFC, no manual device discovery or pairing is required.The connection is automatically started when two devices come into range.
 
+## The tag dispatch system
 
-
+Android-powered devices are usually looking for NFC tags when the screen is unlocked, unless NFC is disabled in the device's Settings menu. When an Android-powered device discovers an NFC tag, the desired behavior is to have the most appropriate activity handle the intent without asking the user what application to use. Because devices scan NFC tags at a very short range, it is likely that making users manually select an activity would force them to move the device away from the tag and break the connection. You should develop your activity to only handle the NFC tags that your activity cares about to prevent the Activity Chooser from appearing.
 
 
 
@@ -32,5 +34,6 @@ Reading NDEF data from an NFC tag is handled with the [tag dispatch system](http
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTMxNDYyMzM0LC05MzYyMTc3MDJdfQ==
+eyJoaXN0b3J5IjpbLTc2Mjk1NDk0Miw5MzE0NjIzMzQsLTkzNj
+IxNzcwMl19
 -->
