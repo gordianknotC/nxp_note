@@ -64,9 +64,12 @@ loop A3
 	Mediator -->> Mediator: prepare dart channel
 end
 Mediator -->> Native: A4-I'm ready
-Native ->> Mediator: <b>B</b>-StartActivity
+Native ->> Mediator: B1-StartActivity
+loop B1
+	Mediator ->> Mediator: 
+end
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNzA5NDg3MiwtMjg0MzgyOTEzLC0xMD
-U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
+eyJoaXN0b3J5IjpbLTE1Mzg1MjQ3MjMsLTI4NDM4MjkxMywtMT
+A1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
 -->
