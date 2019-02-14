@@ -91,6 +91,9 @@ public static NdefRecord createExternal (
         byte[] data)
 ```
 Create a new NDEF Record containing external (application-specific) data
+
+> NFC Forum requires that the domain and type used in an external record are treated as **`case insensitive`**, however Android intent filtering is always **`case sensitive`**. So this method will **force the domain and type to lower-case** before creating the NDEF Record.
+> 
 ```kotlin
 var payload: ByteArray //assign to your data
 val domain = "com.example" //usually your app's package name
@@ -99,6 +102,6 @@ val extRecord = NdefRecord.createExternal(domain, type, payload)
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5OTU3MTI3MSwxMTE1NTg3MjA0LDEyMD
+eyJoaXN0b3J5IjpbLTc2NDkyOTUzMywxMTE1NTg3MjA0LDEyMD
 I0Nzg1MjgsMzUwNjUxOTg3XX0=
 -->
