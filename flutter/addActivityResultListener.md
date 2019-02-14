@@ -68,7 +68,9 @@ Native -->> Native: A5 setup events can't be delegate
 Native -->> Mediator: A6 onPause, onResume...
 Native -->> Mediator: hands over lifecycle control flow
 
-Mediator-->> Mediator: B0 discover tag
+Mediator-->> Mediator: B0 discover tag, onNewIntent
+Mediator-->>Fake: find out receiver
+Mediator-->>Fake: get receiver by intent
 
 
 Native -->> Native: C0 initaited by user
@@ -78,6 +80,6 @@ Native ->> Mediator: C1 StartActivityForResult
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0OTc4NTk0MiwtMjg0MzgyOTEzLC0xMD
+eyJoaXN0b3J5IjpbMjEyMjQwOTUxMSwtMjg0MzgyOTEzLC0xMD
 U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
