@@ -144,6 +144,7 @@ If you want to handle an intent at the Activity level,  [use intent filters](htt
 >📘  **Note:** You can override AARs and the intent dispatch system with the [foreground dispatch system](https://developer.android.com/guide/topics/connectivity/nfc/advanced-nfc.html#foreground-dispatch), which allows a foreground activity to have priority when an NFC tag is discovered. With this method, the activity must be in the foreground to override AARs and the intent dispatch system.
 
 
+
 .
 
 --------------------------------------------
@@ -181,8 +182,25 @@ Add the following code in the `onCreate()` method of your activity:
 		techListsArray = arrayOf(arrayOf<String>(NfcF::class.java.name))
 	```
 	
-2.  Override the following activity lifecycle callbacks and add logic to enable and disable the foreground dispatch when the activity loses ([onPause()](https://developer.android.com/reference/android/app/Activity.html#onPause())) and regains ([onResume()](https://developer.android.com/reference/android/app/Activity.html#onResume())`) focus.  [enableForegroundDispatch()](https://developer.android.com/reference/android/nfc/NfcAdapter.html#enableForegroundDispatch(android.app.Activity,%20android.app.PendingIntent,%20android.content.IntentFilter[],%20java.lang.String[][]))`  must be called from the main thread and only when the activity is in the foreground (calling in  [onResume()](https://developer.android.com/reference/android/app/Activity.html#onResume())guarantees this). You also need to implement the  [onNewIntent](https://developer.android.com/reference/android/app/Activity.html#onNewIntent(android.content.Intent))  callback to process the data from the scanned NFC tag.
+2.  Override the following activity lifecycle callbacks and add logic to enable and disable the foreground dispatch when the activity loses ([onPause()](https://developer.android.com/reference/android/app/Activity.html#onPause())) and regains ([onResume()](https://developer.android.com/reference/android/app/Activity.html#onResume())) focus.  [enableForegroundDispatch()](https://developer.android.com/reference/android/nfc/NfcAdapter.html#enableForegroundDispatch(android.app.Activity,%20android.app.PendingIntent,%20android.content.IntentFilter[],%20java.lang.String[][]))  must be called from the main thread and only when the activity is in the foreground (calling in  [onResume()](https://developer.android.com/reference/android/app/Activity.html#onResume()) guarantees this). You also need to implement the  [onNewIntent](https://developer.android.com/reference/android/app/Activity.html#onNewIntent(android.content.Intent))  callback to process the data from the scanned NFC tag.
+
+	```kotlin
+	public override fun onPause() {
+	    super.onPause()
+	    adapter.disableForegroundDispatch(this)
+	}
+
+	public override fun onResume() {
+	    super.onResume()
+	    adapter.enableForegroundDispatch(this, pendingIntent, intentFiltersArray, techListsArray)
+	}
+
+	public override fun onNewIntent(intent: Intent) {
+	    val tagFromIntent: Tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG)
+	    //do something with tagFromIntent
+	}
+	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3OTQyMzMwMiw2NDE4Mzg5NywxMTE1NT
-g3MjA0LDEyMDI0Nzg1MjgsMzUwNjUxOTg3XX0=
+eyJoaXN0b3J5IjpbLTE4NDU5NTIzMDMsNjQxODM4OTcsMTExNT
+U4NzIwNCwxMjAyNDc4NTI4LDM1MDY1MTk4N119
 -->
