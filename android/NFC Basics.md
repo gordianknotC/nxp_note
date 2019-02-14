@@ -378,8 +378,67 @@ If you want to handle an intent at the Activity level,  [use intent filters](htt
 
 
 
+.
+
+--------------------------------------------
+
+
+## ⚡Use the foreground dispatch system
+
+The foreground dispatch system **`allows an activity to intercept an intent and claim priority`** over other activities that handle the same intent. Using this system involves constructing a few data structures for the Android system to be able to send the appropriate intents to your application. To enable the foreground dispatch system:
+
+Add the following code in the `onCreate()` method of your activity:
+
+1.  Create a  [PendingIntent](https://developer.android.com/reference/android/app/PendingIntent.html)` object so the Android system can populate it with the details of the tag when it is scanned.
+	- Create a [PendingIntent](https://developer.android.com/reference/android/app/PendingIntent.html) object so the Android system can populate it with the details of the tag when it is scanned.
+	```kotlin
+		val intent = Intent(this, javaClass).apply {
+		    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+		}
+		var pendingIntent: PendingIntent = 
+			PendingIntent.getActivity(this, 0, intent, 0)
+	```
+
+	- Declare intent filters to handle the intents that you want to intercept. The foreground dispatch system checks the specified intent filters with the intent that is received **when the device scans a tag**. 
+		> If it matches, then your application handles the intent. 
+		> If it does not match, the foreground dispatch system falls back to the intent dispatch system. 
+	- Specifying a `null` array of intent filters and technology filters, specifies that you want to filter for all tags that fallback to the `TAG_DISCOVERED` intent. The code snippet below handles all MIME types for `NDEF_DISCOVERED`. You should only handle the ones that you need.
+	```kotlin
+		val ndef = IntentFilter(NfcAdapter.ACTION_NDEF_DISCOVERED).apply {
+		    try {
+		        addDataType("*/*")    /* Handles all MIME based dispatches.
+		                                 You should specify only the ones that you need. */
+		    } catch (e: IntentFilter.MalformedMimeTypeException) {
+		        throw RuntimeException("fail", e)
+		    }
+		}
+		intentFiltersArray = arrayOf(ndef)	
+	```
+	- Set up an array of tag technologies that your application wants to handle. Call the `Object.class.getName()` method to obtain the class of the technology that you want to support.
+	```kotlin
+		techListsArray = arrayOf(arrayOf<String>(NfcF::class.java.name))
+	```
+	
+2.  Override the following activity lifecycle callbacks and add logic to enable and disable the foreground dispatch when the activity loses ([onPause()](https://developer.android.com/reference/android/app/Activity.html#onPause())) and regains ([onResume()](https://developer.android.com/reference/android/app/Activity.html#onResume())) focus.  [enableForegroundDispatch()](https://developer.android.com/reference/android/nfc/NfcAdapter.html#enableForegroundDispatch(android.app.Activity,%20android.app.PendingIntent,%20android.content.IntentFilter[],%20java.lang.String[][]))  must be called from the main thread and only when the activity is in the foreground (calling in  [onResume()](https://developer.android.com/reference/android/app/Activity.html#onResume()) guarantees this). You also need to implement the  [onNewIntent](https://developer.android.com/reference/android/app/Activity.html#onNewIntent(android.content.Intent))  callback to process the data from the scanned NFC tag.
+
+	```kotlin
+	public override fun onPause() {
+	    super.onPause()
+	    adapter.disableForegroundDispatch(this)
+	}
+
+	public override fun onResume() {
+	    super.onResume()
+	    adapter.enableForegroundDispatch(this, pendingIntent, intentFiltersArray, techListsArray)
+	}
+
+	public override fun onNewIntent(intent: Intent) {
+	    val tagFromIntent: Tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG)
+	    //do something with tagFromIntent
+	}
+	```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzgzODk2NThdfQ==
+eyJoaXN0b3J5IjpbLTEwMjQyNDIwNjZdfQ==
 -->
