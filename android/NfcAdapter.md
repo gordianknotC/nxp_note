@@ -30,7 +30,8 @@ Android-powered devices are usually looking for NFC tags when the screen is unlo
 
  _You should develop your activity to only handle the NFC tags that your activity cares about to prevent the Activity Chooser from appearing._
 
-To help you with this goal, Android provides a special tag dispatch system that analyzes scanned NFC tags, parses them, and tries to locate applications that are interested in the scanned data. It does this by:
+
+**Process of the tag dispatch system**
 
 1.  Parsing the NFC tag and figuring out the MIME type or a URI that identifies the data payload in the tag.
 2.  Encapsulating the MIME type or URI and the payload into an intent. These first two steps are described in  [How NFC tags are mapped to MIME types and URIs](https://developer.android.com/guide/topics/connectivity/nfc/nfc#ndef).
@@ -41,7 +42,11 @@ To help you with this goal, Android provides a special tag dispatch system that 
 
 
 
+
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc4OTcyNDU2LDkzMTQ2MjMzNCwtOTM2Mj
-E3NzAyXX0=
+eyJoaXN0b3J5IjpbNTgwNzY1OTUsOTMxNDYyMzM0LC05MzYyMT
+c3MDJdfQ==
 -->
