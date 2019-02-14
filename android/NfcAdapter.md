@@ -18,7 +18,7 @@ There are two major use cases when working with NDEF data and Android:
 -   Reading NDEF data from an NFC tag
 -   Beaming NDEF messages from one device to another with  [Android Beam™](https://developer.android.com/guide/topics/connectivity/nfc/nfc#p2p)
 
-
+Reading NDEF data from an NFC tag is handled with the [tag dispatch system](https://developer.android.com/guide/topics/connectivity/nfc/nfc#tag-dispatch), which analyzes discovered NFC tags, appropriately categorizes the data, and starts an application that is interested in the categorized data. An application that wants to handle the scanned NFC tag can [declare an intent filter](https://developer.android.com/guide/topics/connectivity/nfc/nfc#filtering-intents) and request to handle the data.
 
 
 
@@ -32,5 +32,5 @@ There are two major use cases when working with NDEF data and Android:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMzYwOTgyNCwtOTM2MjE3NzAyXX0=
+eyJoaXN0b3J5IjpbOTMxNDYyMzM0LC05MzYyMTc3MDJdfQ==
 -->
