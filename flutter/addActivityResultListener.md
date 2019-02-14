@@ -91,11 +91,12 @@ Fake-->>Core:C3 call core
 Core-->>Fake:C4 response
 Fake-->>Fake:C5 prepare intent
 Fake->>Mediator: C6 startActivity from Fake
-
+Mediator-->>Mediator: onNewIntent or
 
 Note over Mediator, Core: Scenario4: Ready - startActivity triggered by Fake layer
 
 Fake->>Mediator: D0 startActivity by user or...
+Fake-->>Fake: 
 
 
 Mediator-->>Fake: B1 get receiver by intent
@@ -110,7 +111,7 @@ Fake-->>Mediator:B3 response to fake ui
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1Nzg2MDUxMyw4NjAzMjYzNDUsMTU0Nz
-kxNjc5MSwtMjg0MzgyOTEzLC0xMDU4NDg2NjYzLC00MzQ5MzE3
-MDhdfQ==
+eyJoaXN0b3J5IjpbLTE0NDM5MzYzMDUsODYwMzI2MzQ1LDE1ND
+c5MTY3OTEsLTI4NDM4MjkxMywtMTA1ODQ4NjY2MywtNDM0OTMx
+NzA4XX0=
 -->
