@@ -41,8 +41,12 @@ The caller can either specify the language code for the provided text, or otherw
 
 ## Create common types of NDEF records
 ### createMime
+Create a new NDEF Record containing MIME data.
 ```java
-public static NdefRecord createMime (String mimeType, byte[] mimeData)
+public static NdefRecord createMime (
+	String mimeType, 
+	byte[] mimeData
+)
 ```
 ```kotlin
 val mimeRecord = NdefRecord.createMime(
@@ -80,7 +84,7 @@ val rtdUriRecord2  =  Uri.parse("http://example.com").let { uri ->
         android:pathPrefix="" />
 </intent-filter>
 ```
-
+.
 
 ----------------------------------
 ### createExternal
@@ -100,11 +104,11 @@ public static NdefRecord createExternal (
 ```kotlin
 var payload: ByteArray      //assign to your data
 val domain = "com.example"  //usually your app's package name
-val type = "externalType"
+val type = "externalType"   //will cast into lowercase (externaltype)
 val extRecord = NdefRecord.createExternal(domain, type, payload)
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyODExODMwNywxMTE1NTg3MjA0LDEyMD
-I0Nzg1MjgsMzUwNjUxOTg3XX0=
+eyJoaXN0b3J5IjpbLTE0MDgwNTA0NTQsMTExNTU4NzIwNCwxMj
+AyNDc4NTI4LDM1MDY1MTk4N119
 -->
