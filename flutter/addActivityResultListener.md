@@ -21,11 +21,11 @@ graph TB
 			onCreate -.- onStop
 		end
 	end
-	subgraph Mediators - FlutterPlugin
-		
+	subgraph Mediators-Flutter-UI-Plugin
 		subgraph M1
 			M1intent --- M1target
 			M1intent --- M1data
+			M1
 		end
 		MStart
 		MStartResult
@@ -60,6 +60,6 @@ graph TB
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTA1MDU2MjQsLTI4NDM4MjkxMywtMT
-A1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
+eyJoaXN0b3J5IjpbLTg3Mjc0NjEyMiwtMjg0MzgyOTEzLC0xMD
+U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
