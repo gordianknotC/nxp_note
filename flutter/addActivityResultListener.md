@@ -59,7 +59,7 @@ participant Mediator
 participant Fake
 participant Core
 
-Note: left of Nat
+
 Native -->> Mediator: A1 initialize plugin
 Mediator -->> Fake: A2 initialize fake activity
 Fake -->> Fake: prepare intent logic
@@ -69,6 +69,8 @@ Mediator -->> Native: A4 Ready, set initial states
 Native -->> Native: A5 setup events can't be delegate
 Native -->> Mediator: A6 onPause, onResume...
 Native -->> Mediator: hands over lifecycle control flow
+Note: right of Fake: oiwjfe
+
 
 Mediator-->> Mediator: B0 discover tag, onNewIntent, findout receiver
 Mediator-->>Mediator: B1 startActivity
@@ -95,7 +97,7 @@ Fake-->>Mediator:B3 response to fake ui
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyODAxNjUzLDg2MDMyNjM0NSwxNTQ3OT
+eyJoaXN0b3J5IjpbNTM1NzUyNjA4LDg2MDMyNjM0NSwxNTQ3OT
 E2NzkxLC0yODQzODI5MTMsLTEwNTg0ODY2NjMsLTQzNDkzMTcw
 OF19
 -->
