@@ -57,7 +57,9 @@ val mimeRecord = NdefRecord.createMime(
     <data android:mimeType="application/vnd.com.example.android.beam"/>
 </intent-filter>
 ```
+.
 
+----------------------------------
 ### createUri
 ```java
 public static NdefRecord createUri (String uriString)
@@ -78,7 +80,24 @@ val rtdUriRecord2  =  Uri.parse("http://example.com").let { uri ->
         android:pathPrefix="" />
 </intent-filter>
 ```
+
+
+----------------------------------
+### createExternal
+```java
+public static NdefRecord createExternal (
+		String domain,
+        String type,
+        byte[] data)
+```
+
+```kotlin
+var payload: ByteArray //assign to your data
+val domain = "com.example" //usually your app's package name
+val type = "externalType"
+val extRecord = NdefRecord.createExternal(domain, type, payload)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MjAwNzU4LDExMTU1ODcyMDQsMTIwMj
-Q3ODUyOCwzNTA2NTE5ODddfQ==
+eyJoaXN0b3J5IjpbMTMxNDM1MjQyOSwxMTE1NTg3MjA0LDEyMD
+I0Nzg1MjgsMzUwNjUxOTg3XX0=
 -->
