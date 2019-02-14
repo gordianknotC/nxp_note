@@ -22,10 +22,13 @@ graph TB
 		FonResult 
 		FonIntent 
 		FonReceive 
-		FonCreate --> Fcontainer
-		subgraph h
+		
+		subgraph fake activity
 			FonPause -.- FonResume
+			FonResume -.- FonCreate
+			FonCreate --> Fcontainer
 		end
+		
 		subgraph listeners
 			Fcontainer --> FonIntent
 			Fcontainer --> FonResult
@@ -39,6 +42,6 @@ graph TB
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg4NDc3ODU0LC0yODQzODI5MTMsLTEwNT
-g0ODY2NjMsLTQzNDkzMTcwOF19
+eyJoaXN0b3J5IjpbOTAxNDY2MjEsLTI4NDM4MjkxMywtMTA1OD
+Q4NjY2MywtNDM0OTMxNzA4XX0=
 -->
