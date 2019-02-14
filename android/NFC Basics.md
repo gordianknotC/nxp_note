@@ -450,6 +450,12 @@ Add the following code in the `onCreate()` method of your activity:
 added in  [API level 10](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
 
 ```java
+public void enableForegroundDispatch (
+	Activity activity,
+	PendingIntent intent,
+	IntentFilter[] filters,
+	String[][] techLists)
+```
 
 Enable foreground dispatch to the given Activity.
 
@@ -463,5 +469,6 @@ This method must be called from the main thread, and only when the activity is i
 
 Requires the  [Manifest.permission.NFC](https://developer.android.com/reference/android/Manifest.permission.html#NFC)  permission.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NDU3MTA1MCwtMTAyNDI0MjA2Nl19
+eyJoaXN0b3J5IjpbLTE4NDg3MDM2MzgsLTEwMjQyNDIwNjZdfQ
+==
 -->
