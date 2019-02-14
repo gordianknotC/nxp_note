@@ -215,12 +215,13 @@ override  fun onNewIntent(intent:  Intent)  {
 		rawMessages ->  
 			val messages:  List<NdefMessage>  = 
 				rawMessages.map { it as  NdefMessage  }  
-				// Process the messages array.  ...  
-		}  }  
+			// Process the messages array.  ...  
+		}  
+	}  
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3Njk3NzY1MCwxMTIzOTc2NjkzLC0xMT
-M3ODg3NTUxLC03ODA5Mjc1MjEsLTIyNTg5NjI2NSw5MzE0NjIz
-MzQsLTkzNjIxNzcwMl19
+eyJoaXN0b3J5IjpbLTEzNTI4MDcwMDgsMTEyMzk3NjY5MywtMT
+EzNzg4NzU1MSwtNzgwOTI3NTIxLC0yMjU4OTYyNjUsOTMxNDYy
+MzM0LC05MzYyMTc3MDJdfQ==
 -->
