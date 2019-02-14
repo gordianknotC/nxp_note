@@ -30,7 +30,7 @@ graph TB
 		end
 		MStartActivity
 		MStartResult
-		MStart -.- MStartResult
+		MStartActivity -.- MStartResult
 		MStartResult -.- M1intent
 	end
 	
@@ -55,12 +55,13 @@ graph TB
 		end
 		
 		
-		
+		MStartActivity --> FonCreate
+		MStart
 	end
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk1MzY5NDExLC0yODQzODI5MTMsLTEwNT
-g0ODY2NjMsLTQzNDkzMTcwOF19
+eyJoaXN0b3J5IjpbLTE4NDI4MTk3MjAsLTI4NDM4MjkxMywtMT
+A1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
 -->
