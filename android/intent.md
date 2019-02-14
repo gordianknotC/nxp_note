@@ -125,7 +125,7 @@ These are the current standard categories that can be used to further clarify an
 
 public [Intent](https://developer.android.com/reference/android/content/Intent.html) setFlags (int flags)
 
-Set special flags controlling how this intent is handled. Most values here depend on the type of component being executed by the Intent, specifically the _FLAG_ACTIVITY_ flags are all for use with  [Context.startActivity()](https://developer.android.com/reference/android/content/Context.html#startActivity(android.content.Intent))  and the _FLAG_RECEIVER_ flags are all for use with  [Context.sendBroadcast()](https://developer.android.com/reference/android/content/Context.html#sendBroadcast(android.content.Intent)).
+Set special flags controlling how this intent is handled. Most values here depend on the type of component being executed by the Intent, specifically the **_FLAG_ACTIVITY_** flags are all for use with  [Context.startActivity()](https://developer.android.com/reference/android/content/Context.html#startActivity(android.content.Intent))  and the **_FLAG_RECEIVER_** flags are all for use with  [Context.sendBroadcast()](https://developer.android.com/reference/android/content/Context.html#sendBroadcast(android.content.Intent)).
 
 
 
@@ -249,8 +249,8 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MjU5MTk0OSwtMTUxNDA1NjI3MSwxNz
-U2MjU0MTkyLDEzMTYxNjkyODIsLTYyMjQxMzk0LC0xNjYwOTA3
-MTc3LDI1Njk4NzU2MCw5NjgyOTc1ODYsMTI2NzM3ODIxOSwxNj
-QxNDAxMzE2LDEzMTEwODA2OSw3NjM2NTY2ODJdfQ==
+eyJoaXN0b3J5IjpbNTkwNjA2NjY5LC0xNTE0MDU2MjcxLDE3NT
+YyNTQxOTIsMTMxNjE2OTI4MiwtNjIyNDEzOTQsLTE2NjA5MDcx
+NzcsMjU2OTg3NTYwLDk2ODI5NzU4NiwxMjY3Mzc4MjE5LDE2ND
+E0MDEzMTYsMTMxMTA4MDY5LDc2MzY1NjY4Ml19
 -->
