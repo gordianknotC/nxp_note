@@ -11,7 +11,10 @@ participant CDo
 
 MOn-->>MOn: onNewIntent, tag discovered
 MOn-->>MAct: startActivity
-MAct-->>MAct: make intent explicit```
+MAct-->>MAct: make intent explicit, prepare target
+MAct->>FOn: onCreate
+FOn-->>FDo: process
+```
 
 ```mermaid
 sequenceDiagram
@@ -125,6 +128,6 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNDc4MzA1LC0xNDc2MjYyMzgzLC0xMT
-I0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
+eyJoaXN0b3J5IjpbMTg5MzU2MzU2OCwtMTQ3NjI2MjM4MywtMT
+EyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl19
 -->
