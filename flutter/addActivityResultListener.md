@@ -12,10 +12,11 @@
 graph TB
 	subgraph Native FlutterActivity
 		pluginRegister
-		lifeCycles
 		pluginRegister -.- onCreate
 		subgraph lifeCycles
-			onCreate
+			onCreate -.- onIntent
+			onIntent -.- onResult
+			onReceive -.- onResult
 			
 		end
 	end
@@ -51,6 +52,6 @@ graph TB
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1ODQzNzgwMCwtMjg0MzgyOTEzLC0xMD
-U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
+eyJoaXN0b3J5IjpbLTE1NzkxMDA2NzMsLTI4NDM4MjkxMywtMT
+A1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
 -->
