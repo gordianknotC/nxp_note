@@ -41,8 +41,19 @@ The caller can either specify the language code for the provided text, or otherw
 
 ## Create common types of NDEF records
 ### TNF_MIME_MEDIA
-```ko
-
+```kotlin
+val mimeRecord = NdefRecord.createMime(
+  "application/vnd.com.example.android.beam",
+  "Beam me up, Android".toByteArray(Charset.forName("US-ASCII"))
+)
+```
+```xml
+<intent-filter>
+    <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <data android:mimeType="application/vnd.com.example.android.beam"/>
+</intent-filter>
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTkxNjQwNjMsMzUwNjUxOTg3XX0=
+eyJoaXN0b3J5IjpbMTIwMjQ3ODUyOCwzNTA2NTE5ODddfQ==
 -->
