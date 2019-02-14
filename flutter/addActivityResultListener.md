@@ -12,7 +12,8 @@
 graph TB
 	S(hello)
 	subgraph Mediator
-		Msta
+		MStart
+		MStartResult
 	end
 	subgraph FActivity
 		FonCreate
@@ -22,12 +23,14 @@ graph TB
 		FonIntent 
 		FonReceive 
 		FonCreate --> Fcontainer
+		FonPause <-.-> FonResume
+		FonResume -.-> FonPause
 		Fcontainer
 	end
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNzIzNTkxMSwtMjg0MzgyOTEzLC0xMD
+eyJoaXN0b3J5IjpbMTYxNjQ3MTYyNSwtMjg0MzgyOTEzLC0xMD
 U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
