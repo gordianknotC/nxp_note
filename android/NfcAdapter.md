@@ -93,7 +93,7 @@ Before you can access a device's NFC hardware and properly handle NFC intents, d
 
 To start your application when an NFC tag that you want to handle is scanned, your application can filter for one, two, or all three of the NFC intents in the Android manifest. However, you usually want to filter for the  [NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)  intent for the most control of when your application starts. The  [TECH_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TECH_DISCOVERED)  intent is a fallback for  [NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)  when no applications filter for [NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)  or for when the payload is not NDEF. Filtering for  [TAG_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TAG_DISCOVERED)  is usually too general of a category to filter on. Many applications will filter for  [NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)  or  [TECH_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TECH_DISCOVERED) before  [TAG_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TAG_DISCOVERED), so your application has a low probability of starting.  [TAG_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TAG_DISCOVERED) is only available as a last resort for applications to filter for in the cases where no other applications are installed to handle the [NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)  or  [TECH_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TECH_DISCOVERED)  intent.
 
-Because NFC tag deployments vary and are many times not under your control, this is not always possible, which is why you can fallback to the other two intents when necessary. When you have control over the types of tags and data written, it is recommended that you use NDEF to format your tags. The following sections describe how to filter for each type of intent.
+Because **NFC tag deployments vary** and are many times **not under your control,** this is not always possible, **`which is why you can fallback to the other two intents when necessary.`** When you have control over the types of tags and data written, it is recommended that you use NDEF to format your tags. The following sections describe how to filter for each type of intent.
 
 ### ACTION_NDEF_DISCOVERED
 
@@ -158,6 +158,6 @@ To obtain these extras, check to see if your activity was launched with one of t
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzI4MzUyNTcsLTIyNTg5NjI2NSw5Mz
-E0NjIzMzQsLTkzNjIxNzcwMl19
+eyJoaXN0b3J5IjpbLTcyODUzNzE1NywtMjI1ODk2MjY1LDkzMT
+Q2MjMzNCwtOTM2MjE3NzAyXX0=
 -->
