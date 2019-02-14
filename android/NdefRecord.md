@@ -142,7 +142,12 @@ If you want to handle an intent at the Activity level,  [use intent filters](htt
 	3.  If no application can start with the AAR, go to Google Play to download the application based on the AAR.
 
 >📘  **Note:** You can override AARs and the intent dispatch system with the [foreground dispatch system](https://developer.android.com/guide/topics/connectivity/nfc/advanced-nfc.html#foreground-dispatch), which allows a foreground activity to have priority when an NFC tag is discovered. With this method, the activity must be in the foreground to override AARs and the intent dispatch system.
+
+
+.
+
+-------------------
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0MTc4NTI3NSw2NDE4Mzg5NywxMTE1NT
-g3MjA0LDEyMDI0Nzg1MjgsMzUwNjUxOTg3XX0=
+eyJoaXN0b3J5IjpbLTEyMDgxNTYxODIsNjQxODM4OTcsMTExNT
+U4NzIwNCwxMjAyNDc4NTI4LDM1MDY1MTk4N119
 -->
