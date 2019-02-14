@@ -40,8 +40,9 @@ The caller can either specify the language code for the provided text, or otherw
 --------------------------------------------
 
 ## Create common types of NDEF records
+### TNF_MIME_MEDIA
+```ko
 
-This section describes how to create common types of NDE
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyMzE5NTExMiwzNTA2NTE5ODddfQ==
+eyJoaXN0b3J5IjpbLTEyNTkxNjQwNjMsMzUwNjUxOTg3XX0=
 -->
