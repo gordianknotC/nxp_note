@@ -24,7 +24,11 @@ The Android Beam™ feature allows a device to push an NDEF message onto another
 
 ## The tag dispatch system
 
-Android-powered devices are usually looking for NFC tags when the screen is unlocked, unless NFC is disabled in the device's Settings menu. When an Android-powered device discovers an NFC tag, the desired behavior is to have the most appropriate activity handle the intent **without asking the user** what application to use. Because devices scan NFC tags at a very short range, it is likely that making users manually select an activity would force them to move the device away from the tag and break the connection. _You should develop your activity to only handle the NFC tags that your activity cares about to prevent the Activity Chooser from appearing._
+Android-powered devices are usually looking for NFC tags when the screen is unlocked, unless NFC is disabled in the device's Settings menu. 
+
+>When an Android-powered device discovers an NFC tag, the desired behavior is to have the most appropriate activity handle the intent **without asking the user** what application to use. Because devices scan NFC tags at a very short range, it is likely that making users manually select an activity would force them to move the device away from the tag and break the connection.
+
+ _You should develop your activity to only handle the NFC tags that your activity cares about to prevent the Activity Chooser from appearing._
 
 
 
@@ -34,6 +38,6 @@ Android-powered devices are usually looking for NFC tags when the screen is unlo
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1Nzg5MjAyOCw5MzE0NjIzMzQsLTkzNj
-IxNzcwMl19
+eyJoaXN0b3J5IjpbNzg1MzA1MzI0LDkzMTQ2MjMzNCwtOTM2Mj
+E3NzAyXX0=
 -->
