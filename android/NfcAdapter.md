@@ -180,6 +180,25 @@ In your  `AndroidManifest.xml`  file, specify the resource file that you just cr
 ```
 For more information about working with tag technologies and the  [ACTION_TECH_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TECH_DISCOVERED)  intent, see  [Working with Supported Tag Technologies](https://developer.android.com/guide/topics/connectivity/nfc/advanced-nfc.html#tag-tech)  in the Advanced NFC document.
 
+|  Class  |  Description  |
+| -- | -- |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+
+
+
+
+
+
 
 .
 
@@ -204,6 +223,6 @@ To obtain these extras, check to see if your activity was launched with one of t
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4MDkyNzUyMSwtMjI1ODk2MjY1LDkzMT
-Q2MjMzNCwtOTM2MjE3NzAyXX0=
+eyJoaXN0b3J5IjpbNDIwNDc1MDQxLC03ODA5Mjc1MjEsLTIyNT
+g5NjI2NSw5MzE0NjIzMzQsLTkzNjIxNzcwMl19
 -->
