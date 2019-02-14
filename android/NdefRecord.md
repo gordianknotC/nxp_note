@@ -139,12 +139,12 @@ Android Application Record (AAR) provides a stronger certainty that your applica
 
 If you want to handle an intent at the Activity level,  [use intent filters](https://developer.android.com/guide/topics/connectivity/nfc/nfc#filtering-intents).
 
-If a tag contains an AAR, the tag dispatch system dispatches in the following manner:
+- If a tag contains an AAR, the tag dispatch system dispatches in the following manner:
 
-1.  Try to start an Activity using an intent filter as normal. If the Activity that matches the intent also matches the AAR, start the Activity.
-2.  If the Activity that filters for the intent does not match the AAR, if multiple Activities can handle the intent, or if no Activity handles the intent, start the application specified by the AAR.
-3.  If no application can start with the AAR, go to Google Play to download the application based on the AAR.
+	1.  Try to start an Activity using an intent filter as normal. If the Activity that matches the intent also matches the AAR, start the Activity.
+	2.  If the Activity that filters for the intent does not match the AAR, if multiple Activities can handle the intent, or if no Activity handles the intent, start the application specified by the AAR.
+	3.  If no application can start with the AAR, go to Google Play to download the application based on the AAR.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjU3MTA4NjQsNjQxODM4OTcsMTExNT
-U4NzIwNCwxMjAyNDc4NTI4LDM1MDY1MTk4N119
+eyJoaXN0b3J5IjpbNDEyNjQ0OTA3LDY0MTgzODk3LDExMTU1OD
+cyMDQsMTIwMjQ3ODUyOCwzNTA2NTE5ODddfQ==
 -->
