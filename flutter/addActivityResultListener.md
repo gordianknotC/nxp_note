@@ -58,9 +58,10 @@ Fake -->> Mediator: Hello Bob, how are you?
 Native ->> Mediator: (A) start a activity
 Native -->> Mediator: A1-initialize plugin
 Mediator -->> Fake: A2-initialize fake activity
-Fake -->> Mediator: A3-setup handlers for events
+
+Fake -->> Mediator: A3-setup handlers
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2MjgxNDY5MSwtMjg0MzgyOTEzLC0xMD
+eyJoaXN0b3J5IjpbMTYxODQzNDQ1NywtMjg0MzgyOTEzLC0xMD
 U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
