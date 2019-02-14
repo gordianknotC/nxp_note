@@ -55,10 +55,10 @@ graph TB
 ```mermaid
 sequenceDiagram
 Fake -->> Mediator: Hello Bob, how are you?
-Native -
-
+Native ->> Mediator: (A) start a activity
+Native --> Mediator: (A) initialize plugin
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NjQxMjkyNSwtMjg0MzgyOTEzLC0xMD
+eyJoaXN0b3J5IjpbMTg1NzUyNTYzNSwtMjg0MzgyOTEzLC0xMD
 U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
