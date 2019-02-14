@@ -104,15 +104,21 @@ Because **NFC tag deployments vary** and are many times **not under your control
 To filter for  [ACTION_NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)  intents, declare the intent filter along with the type of data that you want to filter for. The following example filters for  [ACTION_NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)  intents with a MIME type of  `text/plain`:
 ```xml
 <intent-filter>  
-	<action  android:name="android.nfc.action.NDEF_DISCOVERED"/>  <category  android:name="android.intent.category.DEFAULT"/>  
+	<action  android:name="android.nfc.action.NDEF_DISCOVERED"/>  	
+	<category  android:name="android.intent.category.DEFAULT"/>  
 	<data  android:mimeType="text/plain"  />  
 </intent-filter>
 ```
 The following example filters for a URI in the form of`http://developer.android.com/index.html`.
-
-<intent-filter>  <action  android:name="android.nfc.action.NDEF_DISCOVERED"/>  <category  android:name="android.intent.category.DEFAULT"/>  <data  android:scheme="http"  android:host="developer.android.com"  android:pathPrefix="/index.html"  />  
+```xml
+<intent-filter>  
+	<action  android:name="android.nfc.action.NDEF_DISCOVERED"/>  
+	<category  android:name="android.intent.category.DEFAULT"/>  
+	<data  android:scheme="http"  
+		android:host="developer.android.com"  
+		android:pathPrefix="/index.html"  />  
 </intent-filter>
-
+```
 ### ACTION_TECH_DISCOVERED
 
 If your activity filters for the  `[ACTION_TECH_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TECH_DISCOVERED)`  intent, you must create an XML resource file that specifies the technologies that your activity supports within a  `tech-list`  set. Your activity is considered a match if a  `tech-list`  set is a subset of the technologies that are supported by the tag, which you can obtain by calling  `[getTechList()](https://developer.android.com/reference/android/nfc/Tag.html#getTechList())`.
@@ -164,6 +170,6 @@ To obtain these extras, check to see if your activity was launched with one of t
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzg0MjQxODgsLTIyNTg5NjI2NSw5Mz
-E0NjIzMzQsLTkzNjIxNzcwMl19
+eyJoaXN0b3J5IjpbMTk2OTg3OTkzOSwtMjI1ODk2MjY1LDkzMT
+Q2MjMzNCwtOTM2MjE3NzAyXX0=
 -->
