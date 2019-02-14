@@ -54,23 +54,23 @@ graph TB
 
 ```mermaid
 sequenceDiagram
+participant Native
+participant Mediator
+participant Fake
+
 Native -->> Mediator: A1-initialize plugin
 Mediator -->> Fake: A2-initialize fake activity
- 
 Fake -->> Fake: prepare intent logic
- 
 Fake -->> Mediator: A3-setup handlers to mediator
- 
 Mediator -->> Mediator: prepare dart channel
- 
 Mediator -->> Native: A4 - Ready, set initial states
-Native -->> Native: A5-set initial states
+Native -->> Native: A5-
+
 Native ->> Mediator: B1-StartActivity
-loop B1
-	Mediator ->> Mediator: 
-end
+Mediator ->> Mediator: 
+
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyOTQyNjk2OCwtMjg0MzgyOTEzLC0xMD
+eyJoaXN0b3J5IjpbLTg4NDUwMjExNCwtMjg0MzgyOTEzLC0xMD
 U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
