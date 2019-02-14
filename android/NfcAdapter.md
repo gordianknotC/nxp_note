@@ -220,8 +220,13 @@ override  fun onNewIntent(intent:  Intent)  {
 	}  
 }
 ```
+
+Alternatively, you can obtain a [Tag](https://developer.android.com/reference/android/nfc/Tag.html) object from the intent, which will contain the payload and allow you to enumerate the tag's technologies:
+```kotlin
+val tag: Tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTI4MDcwMDgsMTEyMzk3NjY5MywtMT
-EzNzg4NzU1MSwtNzgwOTI3NTIxLC0yMjU4OTYyNjUsOTMxNDYy
-MzM0LC05MzYyMTc3MDJdfQ==
+eyJoaXN0b3J5IjpbLTQyNTMwNTc5MCwxMTIzOTc2NjkzLC0xMT
+M3ODg3NTUxLC03ODA5Mjc1MjEsLTIyNTg5NjI2NSw5MzE0NjIz
+MzQsLTkzNjIxNzcwMl19
 -->
