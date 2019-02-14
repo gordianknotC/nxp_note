@@ -54,10 +54,11 @@ graph TB
 
 ```mermaid
 sequenceDiagram
-Fake ->> Mediator
+Fake -->> Mediator: Hello Bob, how are you?
+Native -
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxNDYwMDY4NywtMjg0MzgyOTEzLC0xMD
+eyJoaXN0b3J5IjpbMjA1NjQxMjkyNSwtMjg0MzgyOTEzLC0xMD
 U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
