@@ -23,14 +23,14 @@ graph TB
 		FonIntent 
 		FonReceive 
 		FonCreate --> Fcontainer
-		FonPause -.-> FonResume
-		FonResume --- FonPause
+		FonPause -->FonResume
+
 		Fcontainer
 	end
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg2ODg1NzkyLC0yODQzODI5MTMsLTEwNT
-g0ODY2NjMsLTQzNDkzMTcwOF19
+eyJoaXN0b3J5IjpbLTE5ODA4NDIyMjIsLTI4NDM4MjkxMywtMT
+A1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
 -->
