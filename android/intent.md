@@ -101,6 +101,14 @@ There are three pieces of information in the Intent that are used for resolution
 | ACTION_MAIN |  Start as a main entry point, does not expect to receive data.|
 | ACTION_GET_CONTENT | Activity Action: Allow the user to select a particular kind of data and return it. This is different than [ACTION_PICK](https://developer.android.com/reference/android/content/Intent.html#ACTION_PICK) in that here we just say what kind of data is desired, not a URI of existing data from which the user can pick. An ACTION_GET_CONTENT could allow the user to create the data as it runs (for example taking a picture or recording a sound), let them browse over the web and download the desired data, etc.|
 |ACTION_SEARCH_LONG_PRESS|Start action associated with long pressing on the search key.|
+
+### Standard Broadcast Actions
+
+
+
+### Standard Categories
+|    |    |
+| -- | -- |
 | CATEGORY_LAUNCHER| Should be displayed in the top-level launcher.|
 | CATEGORY_HOME||
 | CATEGORY_DEFAULT| This category is mainly used for implicit intents. If your activity wishes to be started by an implicit intent it should include this catetory in its filter.  I think the term "default" should be understood as "default  **_candidate_**".|
@@ -229,8 +237,8 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxOTU1MTY4MCwxNzU2MjU0MTkyLDEzMT
-YxNjkyODIsLTYyMjQxMzk0LC0xNjYwOTA3MTc3LDI1Njk4NzU2
-MCw5NjgyOTc1ODYsMTI2NzM3ODIxOSwxNjQxNDAxMzE2LDEzMT
-EwODA2OSw3NjM2NTY2ODJdfQ==
+eyJoaXN0b3J5IjpbLTIwMDcxODM4OTIsMTc1NjI1NDE5MiwxMz
+E2MTY5MjgyLC02MjI0MTM5NCwtMTY2MDkwNzE3NywyNTY5ODc1
+NjAsOTY4Mjk3NTg2LDEyNjczNzgyMTksMTY0MTQwMTMxNiwxMz
+ExMDgwNjksNzYzNjU2NjgyXX0=
 -->
