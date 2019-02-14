@@ -120,7 +120,7 @@ The following example filters for a URI in the form of`http://developer.android.
 </intent-filter>
 ```
 
-.
+
 
 ------------------------------------
 
@@ -180,24 +180,20 @@ In your  `AndroidManifest.xml`  file, specify the resource file that you just cr
 ```
 For more information about working with tag technologies and the  [ACTION_TECH_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TECH_DISCOVERED)  intent, see  [Working with Supported Tag Technologies](https://developer.android.com/guide/topics/connectivity/nfc/advanced-nfc.html#tag-tech)  in the Advanced NFC document.
 
- 
 
-
-
-
-
-
-
-.
 
 ------------------------------------
 
 ### ACTION_TAG_DISCOVERED
 
-To filter for  `[ACTION_TAG_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TAG_DISCOVERED)`  use the following intent filter:
-
-<intent-filter>  <action  android:name="android.nfc.action.TAG_DISCOVERED"/>  
+To filter for  [ACTION_TAG_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TAG_DISCOVERED)  use the following intent filter:
+```xml
+<intent-filter>  
+	<action  android:name="android.nfc.action.TAG_DISCOVERED"/>  
 </intent-filter>
+```
+-----------------
+.
 
 ### Obtain information from intents
 
@@ -211,6 +207,7 @@ To obtain these extras, check to see if your activity was launched with one of t
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzc4ODc1NTEsLTc4MDkyNzUyMSwtMj
-I1ODk2MjY1LDkzMTQ2MjMzNCwtOTM2MjE3NzAyXX0=
+eyJoaXN0b3J5IjpbMTA2Njk3NTA4NSwtMTEzNzg4NzU1MSwtNz
+gwOTI3NTIxLC0yMjU4OTYyNjUsOTMxNDYyMzM0LC05MzYyMTc3
+MDJdfQ==
 -->
