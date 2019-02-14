@@ -16,6 +16,17 @@ val sp_record = ...
 val aap_record = NdefRecord.createApplicationRecord(packageName)  
 val records = arrayOf(sp_record, aap_record)
 ```
+
+
+### createTextRecord
+
+added in  [API level 21](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
+```java
+public static NdefRecord createTextRecord (String languageCode,String text)
+```
+Create a new NDEF record containing UTF-8 text data.
+
+The caller can either specify the language code for the provided text, or otherwise the language code corresponding to the current default locale will be used. Reference specification: NFCForum-TS-RTD_Text_1.0
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NDUyNzIyMSwzNTA2NTE5ODddfQ==
+eyJoaXN0b3J5IjpbLTExMzUwMjMzMDcsMzUwNjUxOTg3XX0=
 -->
