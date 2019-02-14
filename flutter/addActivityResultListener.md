@@ -10,7 +10,15 @@
 
 ```mermaid
 graph TB
-	
+	subgraph Native FlutterActivity
+		pluginRegister
+		lifeCycles
+		pluginRegister -.- onCreate
+		subgraph lifeCycles
+			onCreate
+			
+		end
+	end
 	subgraph Mediator FlutterPlugin
 		MStart
 		MStartResult
@@ -43,6 +51,6 @@ graph TB
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5MjU0MTUxNiwtMjg0MzgyOTEzLC0xMD
+eyJoaXN0b3J5IjpbLTU1ODQzNzgwMCwtMjg0MzgyOTEzLC0xMD
 U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
