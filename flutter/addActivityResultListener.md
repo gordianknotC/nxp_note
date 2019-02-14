@@ -53,11 +53,11 @@ graph TB
 ```
 
 ```mermaid
-graph T
+sequenceDiagram
 	fake
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI0Mjc2Nzk1LC0yODQzODI5MTMsLTEwNT
-g0ODY2NjMsLTQzNDkzMTcwOF19
+eyJoaXN0b3J5IjpbLTE0OTA3MDc0NDUsLTI4NDM4MjkxMywtMT
+A1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
 -->
