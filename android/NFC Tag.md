@@ -9,9 +9,10 @@ public final class Tag  extends  [Object](https://developer.android.com/referenc
 
 Represents an NFC tag that has been discovered.
 
-[Tag](https://developer.android.com/reference/android/nfc/Tag.html?hl=CA)  is an immutable object that represents the **state of a NFC tag** at the time of **discovery**. It can be used as a handle to  [TagTechnology](https://developer.android.com/reference/android/nfc/tech/TagTechnology.html?hl=CA)  classes to perform advanced operations, or directly queried for its ID via  [getId()](https://developer.android.com/reference/android/nfc/Tag.html?hl=CA#getId())  and the set of technologies it contains via  [getTechList()](https://developer.android.com/reference/android/nfc/Tag.html?hl=CA#getTechList()). Arrays passed to and returned by this class are  _not_  cloned, so be careful not to modify them.
+[Tag](https://developer.android.com/reference/android/nfc/Tag.html?hl=CA)  is an immutable object that represents the **state of a NFC tag** at the time of **discovery**. It can be used as a handle to  [TagTechnology](https://developer.android.com/reference/android/nfc/tech/TagTechnology.html?hl=CA)  classes to perform advanced operations, or directly queried for its ID via  [getId()](https://developer.android.com/reference/android/nfc/Tag.html?hl=CA#getId())  and the set of technologies it contains via  [getTechList()](https://developer.android.com/reference/android/nfc/Tag.html?hl=CA#getTechList()). 
+> Arrays passed to and returned by this class are  **_not_  cloned**, so be careful not to modify them.
 
-A new tag object is created every time a tag is discovered (comes into range), even if it is the same physical tag. If a tag is removed and then returned into range, then only the most recent tag object can be successfully used to create a  [TagTechnology](https://developer.android.com/reference/android/nfc/tech/TagTechnology.html?hl=CA).
+A **new tag** object is created every time a **tag is discovered** (comes into range), even if it is the same physical tag. If a tag is removed and then returned into range, then only the most recent tag object can be successfully used to create a  [TagTechnology](https://developer.android.com/reference/android/nfc/tech/TagTechnology.html?hl=CA).
 
 ### Tag Dispatch
 
@@ -75,5 +76,5 @@ Android defines a mandatory set of technologies that must be correctly enumerate
 
 The ordering of the returned array is undefined and should not be relied upon.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MDQyMjA3OV19
+eyJoaXN0b3J5IjpbNjg2MTM1MTU3XX0=
 -->
