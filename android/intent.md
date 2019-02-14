@@ -120,6 +120,12 @@ These are the current standard categories that can be used to further clarify an
 | CATEGORY_DEFAULT| This category is mainly used for implicit intents. If your activity wishes to be started by an implicit intent it should include this catetory in its filter.  I think the term "default" should be understood as "default  **_candidate_**".|
 | | _Android automatically applies the the CATEGORY_DEFAULT category to all implicit intents passed to startActivity() and startActivityForResult(). So if you want your activity to receive implicit intents, it must include a category for "android.intent.category.DEFAULT" in its intent filters._|
 
+------------------
+### setFlags
+
+public [Intent](https://developer.android.com/reference/android/content/Intent.html) setFlags (int flags)
+
+Set special flags controlling how this intent is handled. Most values here depend on the type of component being executed by the Intent, specifically the _FLAG_ACTIVITY_ flags are all for use with  [Context.startActivity()](https://developer.android.com/reference/android/content/Context.html#startActivity(android.content.Intent))  and the _FLAG_RECEIVER_ flags are all for use with  [Context.sendBroadcast()](https://developer.android.com/reference/android/content/Context.html#sendBroadcast(android.content.Intent)).
 
 
 
@@ -243,8 +249,8 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTQwNTYyNzEsMTc1NjI1NDE5MiwxMz
-E2MTY5MjgyLC02MjI0MTM5NCwtMTY2MDkwNzE3NywyNTY5ODc1
-NjAsOTY4Mjk3NTg2LDEyNjczNzgyMTksMTY0MTQwMTMxNiwxMz
-ExMDgwNjksNzYzNjU2NjgyXX0=
+eyJoaXN0b3J5IjpbMjA2MjU5MTk0OSwtMTUxNDA1NjI3MSwxNz
+U2MjU0MTkyLDEzMTYxNjkyODIsLTYyMjQxMzk0LC0xNjYwOTA3
+MTc3LDI1Njk4NzU2MCw5NjgyOTc1ODYsMTI2NzM3ODIxOSwxNj
+QxNDAxMzE2LDEzMTEwODA2OSw3NjM2NTY2ODJdfQ==
 -->
