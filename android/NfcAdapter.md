@@ -119,6 +119,11 @@ The following example filters for a URI in the form of`http://developer.android.
 		android:pathPrefix="/index.html"  />  
 </intent-filter>
 ```
+
+.
+
+------------------------------------
+
 ### ACTION_TECH_DISCOVERED
 
 If your activity filters for the  [ACTION_TECH_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TECH_DISCOVERED)  intent, you must create an XML resource file that specifies the technologies that your activity supports within a  `tech-list`  set. Your activity is considered a match if a  `tech-list`  set is a subset of the technologies that are supported by the tag, which you can obtain by calling  [getTechList()](https://developer.android.com/reference/android/nfc/Tag.html#getTechList()).
@@ -173,7 +178,12 @@ In your  `AndroidManifest.xml`  file, specify the resource file that you just cr
 	...  
 </activity>
 ```
-For more information about working with tag technologies and the  `[ACTION_TECH_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TECH_DISCOVERED)`  intent, see  [Working with Supported Tag Technologies](https://developer.android.com/guide/topics/connectivity/nfc/advanced-nfc.html#tag-tech)  in the Advanced NFC document.
+For more information about working with tag technologies and the  [ACTION_TECH_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TECH_DISCOVERED)  intent, see  [Working with Supported Tag Technologies](https://developer.android.com/guide/topics/connectivity/nfc/advanced-nfc.html#tag-tech)  in the Advanced NFC document.
+
+
+.
+
+------------------------------------
 
 ### ACTION_TAG_DISCOVERED
 
@@ -194,6 +204,6 @@ To obtain these extras, check to see if your activity was launched with one of t
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MTQ5ODEzNywtMjI1ODk2MjY1LDkzMT
+eyJoaXN0b3J5IjpbLTc4MDkyNzUyMSwtMjI1ODk2MjY1LDkzMT
 Q2MjMzNCwtOTM2MjE3NzAyXX0=
 -->
