@@ -63,8 +63,10 @@ Fake -->> Mediator: A3-setup handlers to mediator
 loop A3
 	Mediator -->> Mediator: prepare dart channel
 end
+Mediator -->> Native: A4-I'm ready
+Native ->> Mediator: <b>B</b>-StartActivity
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDc4Mjc2OTAsLTI4NDM4MjkxMywtMT
-A1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
+eyJoaXN0b3J5IjpbLTQzNzA5NDg3MiwtMjg0MzgyOTEzLC0xMD
+U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
