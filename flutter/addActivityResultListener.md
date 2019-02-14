@@ -66,6 +66,7 @@ Mediator -->> Mediator: prepare dart channel
 Mediator -->> Native: A4 - Ready, set initial states
 Native -->> Native: A5 -setup events can't be delegate
 Native -->> Mediator: A6-onPause, onResume...
+Native -->> Mediator: hands on lifecycle control
 
 Native -->> Native: B0-discover tag
 
@@ -76,6 +77,6 @@ Native ->> Mediator: C1-StartActivityForResult
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMDM3OTk0OCwtMjg0MzgyOTEzLC0xMD
+eyJoaXN0b3J5IjpbMTQ5MDUyMTgwOCwtMjg0MzgyOTEzLC0xMD
 U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
