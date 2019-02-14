@@ -56,9 +56,10 @@ graph TB
 sequenceDiagram
 Fake -->> Mediator: Hello Bob, how are you?
 Native ->> Mediator: (A) start a activity
-Native --> Mediator: (A) initialize plugin
+Native -->> Mediator: (A1) initialize plugin
+Mediator -->>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NzUyNTYzNSwtMjg0MzgyOTEzLC0xMD
-U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
+eyJoaXN0b3J5IjpbMjUxNDM0NDU5LC0yODQzODI5MTMsLTEwNT
+g0ODY2NjMsLTQzNDkzMTcwOF19
 -->
