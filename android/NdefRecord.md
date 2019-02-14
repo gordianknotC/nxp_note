@@ -152,7 +152,7 @@ If you want to handle an intent at the Activity level,  [use intent filters](htt
 
 ## Use the foreground dispatch system
 
-The foreground dispatch system allows an activity to intercept an intent and claim priority over other activities that handle the same intent. Using this system involves constructing a few data structures for the Android system to be able to send the appropriate intents to your application. To enable the foreground dispatch system:
+The foreground dispatch system **`allows an activity to intercept an intent and claim priority`** over other activities that handle the same intent. Using this system involves constructing a few data structures for the Android system to be able to send the appropriate intents to your application. To enable the foreground dispatch system:
 
 Add the following code in the `onCreate()` method of your activity:
 
@@ -201,6 +201,6 @@ Add the following code in the `onCreate()` method of your activity:
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDU5NTIzMDMsNjQxODM4OTcsMTExNT
-U4NzIwNCwxMjAyNDc4NTI4LDM1MDY1MTk4N119
+eyJoaXN0b3J5IjpbMTI2MTIwNTk3MSw2NDE4Mzg5NywxMTE1NT
+g3MjA0LDEyMDI0Nzg1MjgsMzUwNjUxOTg3XX0=
 -->
