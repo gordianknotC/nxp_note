@@ -16,7 +16,8 @@ graph TB
 		subgraph lifeCycles
 			onCreate -.- onIntent
 			onIntent -.- onResult
-			onReceive -.- onResult
+			onResult -.- onPause
+			on
 			
 		end
 	end
@@ -52,6 +53,6 @@ graph TB
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzkxMDA2NzMsLTI4NDM4MjkxMywtMT
-A1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
+eyJoaXN0b3J5IjpbMjAzMzIzMjA0MywtMjg0MzgyOTEzLC0xMD
+U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
