@@ -9,7 +9,8 @@ participant FOn
 participant FDo
 participant CDo
 
-Mon-->>Mo
+MOn-->>MOn: onNewIntent, tag discovered
+MOn-->>MAct: startActivity
 ```
 
 ```mermaid
@@ -124,6 +125,6 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDQzMjc3NjQsLTE0NzYyNjIzODMsLT
-ExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbLTc0MjM3OTkxNSwtMTQ3NjI2MjM4MywtMT
+EyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl19
 -->
