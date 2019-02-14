@@ -59,6 +59,7 @@ participant Mediator
 participant Fake
 participant Core
 
+Note: left of Nat
 Native -->> Mediator: A1 initialize plugin
 Mediator -->> Fake: A2 initialize fake activity
 Fake -->> Fake: prepare intent logic
@@ -79,7 +80,8 @@ Mediator-->>Fake: C1 onCreate
 Fake-->>Fake: C2 do work
 Fake-->>Core:C3 call core
 Core-->>Fake:C4 response
-Fake->>Mediator: startActivity
+Fake-->>Fake:C5 prepare intent
+Fake->>Mediator: C6 startActivity
 
 Mediator-->>Fake: B1 get receiver by intent
 Fake-->>Fake:B2 do work
@@ -93,7 +95,7 @@ Fake-->>Mediator:B3 response to fake ui
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMTMwNTYwMiw4NjAzMjYzNDUsMTU0Nz
-kxNjc5MSwtMjg0MzgyOTEzLC0xMDU4NDg2NjYzLC00MzQ5MzE3
-MDhdfQ==
+eyJoaXN0b3J5IjpbLTMyODAxNjUzLDg2MDMyNjM0NSwxNTQ3OT
+E2NzkxLC0yODQzODI5MTMsLTEwNTg0ODY2NjMsLTQzNDkzMTcw
+OF19
 -->
