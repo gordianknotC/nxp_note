@@ -36,6 +36,12 @@ The caller can either specify the language code for the provided text, or otherw
 > Locale.TAIWAN.language.toString()
 > ```
 
+
+--------------------------------------------
+
+## Create common types of NDEF records
+
+This section describes how to create common types of NDE
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODg1ODIxMiwzNTA2NTE5ODddfQ==
+eyJoaXN0b3J5IjpbMTYyMzE5NTExMiwzNTA2NTE5ODddfQ==
 -->
