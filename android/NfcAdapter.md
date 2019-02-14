@@ -225,8 +225,13 @@ Alternatively, you can obtain a [Tag](https://developer.android.com/reference/an
 ```kotlin
 val tag: Tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG)
 ```
+
+
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNTMwNTc5MCwxMTIzOTc2NjkzLC0xMT
-M3ODg3NTUxLC03ODA5Mjc1MjEsLTIyNTg5NjI2NSw5MzE0NjIz
-MzQsLTkzNjIxNzcwMl19
+eyJoaXN0b3J5IjpbLTI4MzE0OTY4LC00MjUzMDU3OTAsMTEyMz
+k3NjY5MywtMTEzNzg4NzU1MSwtNzgwOTI3NTIxLC0yMjU4OTYy
+NjUsOTMxNDYyMzM0LC05MzYyMTc3MDJdfQ==
 -->
