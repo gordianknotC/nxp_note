@@ -50,10 +50,14 @@ graph TB
 		MStartActivity --> FonCreate
 		MStartResult --> FonResult
 	end
+```
 
+```mermaid
+graph T
+	fake
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDQ1MzgwMjMsLTI4NDM4MjkxMywtMT
-A1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
+eyJoaXN0b3J5IjpbNTI0Mjc2Nzk1LC0yODQzODI5MTMsLTEwNT
+g0ODY2NjMsLTQzNDkzMTcwOF19
 -->
