@@ -130,7 +130,7 @@ val records = arrayOf(sp_record, aap_record)
 
 Android Application Record (AAR) provides a stronger certainty that your application is started when an **`NFC tag is scanned`**. An AAR has the **`package name`** of an application **`embedded inside`** an NDEF record. You can add an **AAR** to **any** NDEF record of your NDEF message, because Android searches the **`entire NDEF message`** for **AARs**. If it finds an AAR, it starts the application based on the package name inside the AAR. If the application is not present on the device, Google Play is **`launched to download`** the application.
 
->AARs are useful if you want to **prevent other applications** from filtering for the same intent and potentially handling specific tags that you have deployed. AARs are only supported at the **application** level, because of the package name constraint, and not at the Activity level as with intent filtering. 
+>AARs are useful if you want to **prevent other applications** from filtering for the same intent and potentially handling specific tags that you have deployed. AARs are _only supported at the **application** level_, because of the package name constraint, and not at the Activity level as with intent filtering. 
 
 > 📘 **note** on _AAR only supported at application level_
 > ```java
@@ -145,6 +145,6 @@ If a tag contains an AAR, the tag dispatch system dispatches in the following ma
 2.  If the Activity that filters for the intent does not match the AAR, if multiple Activities can handle the intent, or if no Activity handles the intent, start the application specified by the AAR.
 3.  If no application can start with the AAR, go to Google Play to download the application based on the AAR.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIzOTM4MDM0LDY0MTgzODk3LDExMTU1OD
-cyMDQsMTIwMjQ3ODUyOCwzNTA2NTE5ODddfQ==
+eyJoaXN0b3J5IjpbLTE5MjU3MTA4NjQsNjQxODM4OTcsMTExNT
+U4NzIwNCwxMjAyNDc4NTI4LDM1MDY1MTk4N119
 -->
