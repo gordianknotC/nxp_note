@@ -439,6 +439,29 @@ Add the following code in the `onCreate()` method of your activity:
 	```
 
 
+
+.
+
+----------------------------------------------------
+
+
+### enableForegroundDispatch
+
+added in  [API level 10](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
+
+```java
+
+Enable foreground dispatch to the given Activity.
+
+This will give give priority to the foreground activity when dispatching a discovered  [Tag](https://developer.android.com/reference/android/nfc/Tag.html)  to an application.
+
+If any IntentFilters are provided to this method they are used to match dispatch Intents for both the  [ACTION_NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_NDEF_DISCOVERED)  and  [ACTION_TAG_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TAG_DISCOVERED). Since  [ACTION_TECH_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TECH_DISCOVERED)  relies on meta data outside of the IntentFilter matching for that dispatch Intent is handled by passing in the tech lists separately. Each first level entry in the tech list represents an array of technologies that must all be present to match. If any of the first level sets match then the dispatch is routed through the given PendingIntent. In other words, the second level is ANDed together and the first level entries are ORed together.
+
+If you pass  `null`  for both the  `filters`  and  `techLists`  parameters that acts a wild card and will cause the foreground activity to receive all tags via the  [ACTION_TAG_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html#ACTION_TAG_DISCOVERED)  intent.
+
+This method must be called from the main thread, and only when the activity is in the foreground (resumed). Also, activities must call  [disableForegroundDispatch(Activity)](https://developer.android.com/reference/android/nfc/NfcAdapter.html#disableForegroundDispatch(android.app.Activity))  before the completion of their  [Activity.onPause()](https://developer.android.com/reference/android/app/Activity.html#onPause())  callback to disable foreground dispatch after it has been enabled.
+
+Requires the  [Manifest.permission.NFC](https://developer.android.com/reference/android/Manifest.permission.html#NFC)  permission.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjQyNDIwNjZdfQ==
+eyJoaXN0b3J5IjpbMTE5NDU3MTA1MCwtMTAyNDI0MjA2Nl19
 -->
