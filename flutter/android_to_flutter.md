@@ -97,6 +97,7 @@ graph TB
 	subgraph Mediators-Flutter-UI-Plugin
 		MStartActivity --> FonCreate
 		MStartResult --> FonResult
+		MonNIntent -.- MStartResult
 		subgraph M1
 			M1intent --- M1target
 			M1intent --- M1data
@@ -112,6 +113,6 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTQwMTc0MzUsLTExMjQzODcwNjYsLT
-Q1NzY2MzExNyw4NTg1NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbMTY4NDE0NjgzMywtMTEyNDM4NzA2NiwtND
+U3NjYzMTE3LDg1ODU0NjAyMl19
 -->
