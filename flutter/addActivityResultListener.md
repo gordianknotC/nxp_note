@@ -54,10 +54,10 @@ graph TB
 
 ```mermaid
 sequenceDiagram
-	fake
+Fake ->> Mediator
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTA3MDc0NDUsLTI4NDM4MjkxMywtMT
-A1ODQ4NjY2MywtNDM0OTMxNzA4XX0=
+eyJoaXN0b3J5IjpbMTgxNDYwMDY4NywtMjg0MzgyOTEzLC0xMD
+U4NDg2NjYzLC00MzQ5MzE3MDhdfQ==
 -->
