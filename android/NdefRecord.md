@@ -156,14 +156,16 @@ The foreground dispatch system allows an activity to intercept an intent and cla
 Add the following code in the `onCreate()` method of your activity:
 
 1.  Create a  [PendingIntent](https://developer.android.com/reference/android/app/PendingIntent.html)` object so the Android system can populate it with the details of the tag when it is scanned.
-- Create a [PendingIntent](https://developer.android.com/reference/android/app/PendingIntent.html) object so the Android system can populate it with the details of the tag when it is scanned.
+	- Create a [PendingIntent](https://developer.android.com/reference/android/app/PendingIntent.html) object so the Android system can populate it with the details of the tag when it is scanned.
 	```kotlin
-	val intent = Intent(this, javaClass).apply {
-	    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
-	}
-	var pendingIntent: PendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
+		val intent = Intent(this, javaClass).apply {
+		    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+		}
+		var pendingIntent: PendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
 	```
+
+	- Declare intent filters to handle the intents that you want to intercept. The foreground dispatch system checks the specified intent filters with the intent that is received when the device scans a tag. If it matches, then your application handles the intent. If it does not match, the foreground dispatch system falls back to the intent dispatch system. Specifying a `null` array of intent filters and technology filters, specifies that you want to filter for all tags that fallback to the `TAG_DISCOVERED` intent. The code snippet below handles all MIME types for `NDEF_DISCOVERED`. You should only handle the ones that you need.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg3ODA3NjkzLDY0MTgzODk3LDExMTU1OD
-cyMDQsMTIwMjQ3ODUyOCwzNTA2NTE5ODddfQ==
+eyJoaXN0b3J5IjpbLTEyNTc0MzM0MDAsNjQxODM4OTcsMTExNT
+U4NzIwNCwxMjAyNDc4NTI4LDM1MDY1MTk4N119
 -->
