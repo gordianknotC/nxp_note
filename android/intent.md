@@ -181,7 +181,7 @@ public  class  Albums {
 	public String getTitle() { return title; } 
 }
 ```
-若要改成Parcelable 主要是實作 Serialize 方法 writeToParcel + readParcel
+若要改成Parcelable 主要是實作 Serialize 方法 writeToParcel + readParcel，實作該二項方法時要 _注意_ _寫入及讀取的順序要一致_
 ```java
 	writeToParcel(Parcel parcel, Int i){
 		parcel.writeInt(userId); parcel.writeInt(id); parcel.writeString(title)
@@ -255,7 +255,7 @@ intent.putParcelableArrayListExtra("albums list", list);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NDQ5ODAwNiwtMTUxNDA1NjI3MSwxNz
+eyJoaXN0b3J5IjpbLTY5MDI4MTM2OSwtMTUxNDA1NjI3MSwxNz
 U2MjU0MTkyLDEzMTYxNjkyODIsLTYyMjQxMzk0LC0xNjYwOTA3
 MTc3LDI1Njk4NzU2MCw5NjgyOTc1ODYsMTI2NzM3ODIxOSwxNj
 QxNDAxMzE2LDEzMTEwODA2OSw3NjM2NTY2ODJdfQ==
