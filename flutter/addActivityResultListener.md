@@ -1,149 +1,444 @@
+## addActivityResultListener
 
-
-
-# Authenticate And Protect
-
-## Authenticate
-### Ntag_I2C_Command
-#### authenticatePlus
-Authenticate using PWD_AUTH command against NTAG I2C Plus product.
-
-**- #### describe writing process in brief**
-	- params
-		- **byte[]** pwd ::
-			- 4Byte password to authenticate with
-	- check if its an **Ntag_I2C_Plus** product since only **Plus** support auth operation.
-	- read auth data by using reader.**pwdAuth**
-
-**		##### referenced in**
-
-		- Ntag_I2C_Demo
-			- constructor
-			- Auth
-			- SRAMSpeedtestTask / doInBackground
-			- EEPROMSpeedtestTask / doInBackground
-		- Ntag_I2C_Command  
-			- writeSRAMBlock
-			- readSRAMBlock
 ```java
-@Override  
-public byte[] authenticatePlus(byte[] pwd) throws IOException, NotPlusTagException {  
-  if(getProduct() != Prod.NTAG_I2C_1k_Plus && getProduct() != Prod.NTAG_I2C_2k_Plus) {  
-    throw new NotPlusTagException("Auth Operations are not supported by non NTAG I2C PLUS products");  
-  }  
-  return reader.pwdAuth(pwd);  
+public class ImagePickerDelegate
+    implements PluginRegistry.ActivityResultListener,
+        PluginRegistry.RequestPermissionsResultListener {
+  @VisibleForTesting static final int REQUEST_CODE_CHOOSE_IMAGE_FROM_GALLERY = 2342;
+  @VisibleForTesting static final int REQUEST_CODE_TAKE_IMAGE_WITH_CAMERA = 2343;
+  @VisibleForTesting static final int REQUEST_EXTERNAL_IMAGE_STORAGE_PERMISSION = 2344;
+  @VisibleForTesting static final int REQUEST_CAMERA_IMAGE_PERMISSION = 2345;
+  @VisibleForTesting static final int REQUEST_CODE_CHOOSE_VIDEO_FROM_GALLERY = 2352;
+  @VisibleForTesting static final int REQUEST_CODE_TAKE_VIDEO_WITH_CAMERA = 2353;
+  @VisibleForTesting static final int REQUEST_EXTERNAL_VIDEO_STORAGE_PERMISSION = 2354;
+  @VisibleForTesting static final int REQUEST_CAMERA_VIDEO_PERMISSION = 2355;
+
+  @VisibleForTesting final String fileProviderName;
+
+  private final Activity activity;
+  private final File externalFilesDirectory;
+  private final ImageResizer imageResizer;
+  private final PermissionManager permissionManager;
+  private final IntentResolver intentResolver;
+  private final FileUriResolver fileUriResolver;
+  private final FileUtils fileUtils;
+
+  interface PermissionManager {
+    boolean isPermissionGranted(String permissionName);
+
+    void askForPermission(String permissionName, int requestCode);
+  }
+
+  interface IntentResolver {
+    boolean resolveActivity(Intent intent);
+  }
+
+  interface FileUriResolver {
+    Uri resolveFileProviderUriForFile(String fileProviderName, File imageFile);
+
+    void getFullImagePath(Uri imageUri, OnPathReadyListener listener);
+  }
+
+  interface OnPathReadyListener {
+    void onPathReady(String path);
+  }
+
+  private Uri pendingCameraMediaUri;
+  private MethodChannel.Result pendingResult;
+  private MethodCall methodCall;
+
+  public ImagePickerDelegate(
+      final Activity activity, File externalFilesDirectory, ImageResizer imageResizer) {
+    this(
+        activity,
+        externalFilesDirectory,
+        imageResizer,
+        null,
+        null,
+        new PermissionManager() {
+          @Override
+          public boolean isPermissionGranted(String permissionName) {
+            return ActivityCompat.checkSelfPermission(activity, permissionName)
+                == PackageManager.PERMISSION_GRANTED;
+          }
+
+          @Override
+          public void askForPermission(String permissionName, int requestCode) {
+            ActivityCompat.requestPermissions(activity, new String[] {permissionName}, requestCode);
+          }
+        },
+        new IntentResolver() {
+          @Override
+          public boolean resolveActivity(Intent intent) {
+            return intent.resolveActivity(activity.getPackageManager()) != null;
+          }
+        },
+        new FileUriResolver() {
+          @Override
+          public Uri resolveFileProviderUriForFile(String fileProviderName, File file) {
+            return FileProvider.getUriForFile(activity, fileProviderName, file);
+          }
+
+          @Override
+          public void getFullImagePath(final Uri imageUri, final OnPathReadyListener listener) {
+            MediaScannerConnection.scanFile(
+                activity,
+                new String[] {imageUri.getPath()},
+                null,
+                new MediaScannerConnection.OnScanCompletedListener() {
+                  @Override
+                  public void onScanCompleted(String path, Uri uri) {
+                    listener.onPathReady(path);
+                  }
+                });
+          }
+        },
+        new FileUtils());
+  }
+
+  /**
+   * This constructor is used exclusively for testing; it can be used to provide mocks to final
+   * fields of this class. Otherwise those fields would have to be mutable and visible.
+   */
+  @VisibleForTesting
+  ImagePickerDelegate(
+      Activity activity,
+      File externalFilesDirectory,
+      ImageResizer imageResizer,
+      MethodChannel.Result result,
+      MethodCall methodCall,
+      PermissionManager permissionManager,
+      IntentResolver intentResolver,
+      FileUriResolver fileUriResolver,
+      FileUtils fileUtils) {
+    this.activity = activity;
+    this.externalFilesDirectory = externalFilesDirectory;
+    this.imageResizer = imageResizer;
+    this.fileProviderName = activity.getPackageName() + ".flutter.image_provider";
+    this.pendingResult = result;
+    this.methodCall = methodCall;
+    this.permissionManager = permissionManager;
+    this.intentResolver = intentResolver;
+    this.fileUriResolver = fileUriResolver;
+    this.fileUtils = fileUtils;
+  }
+
+  public void chooseVideoFromGallery(MethodCall methodCall, MethodChannel.Result result) {
+    if (!setPendingMethodCallAndResult(methodCall, result)) {
+      finishWithAlreadyActiveError();
+      return;
+    }
+
+    if (!permissionManager.isPermissionGranted(Manifest.permission.READ_EXTERNAL_STORAGE)) {
+      permissionManager.askForPermission(
+          Manifest.permission.READ_EXTERNAL_STORAGE, REQUEST_EXTERNAL_VIDEO_STORAGE_PERMISSION);
+      return;
+    }
+
+    launchPickVideoFromGalleryIntent();
+  }
+
+  private void launchPickVideoFromGalleryIntent() {
+    Intent pickVideoIntent = new Intent(Intent.ACTION_GET_CONTENT);
+    pickVideoIntent.setType("video/*");
+
+    activity.startActivityForResult(pickVideoIntent, REQUEST_CODE_CHOOSE_VIDEO_FROM_GALLERY);
+  }
+
+  public void takeVideoWithCamera(MethodCall methodCall, MethodChannel.Result result) {
+    if (!setPendingMethodCallAndResult(methodCall, result)) {
+      finishWithAlreadyActiveError();
+      return;
+    }
+
+    if (!permissionManager.isPermissionGranted(Manifest.permission.CAMERA)) {
+      permissionManager.askForPermission(
+          Manifest.permission.CAMERA, REQUEST_CAMERA_VIDEO_PERMISSION);
+      return;
+    }
+
+    launchTakeVideoWithCameraIntent();
+  }
+
+  private void launchTakeVideoWithCameraIntent() {
+    Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+    boolean canTakePhotos = intentResolver.resolveActivity(intent);
+
+    if (!canTakePhotos) {
+      finishWithError("no_available_camera", "No cameras available for taking pictures.");
+      return;
+    }
+
+    File videoFile = createTemporaryWritableVideoFile();
+    pendingCameraMediaUri = Uri.parse("file:" + videoFile.getAbsolutePath());
+
+    Uri videoUri = fileUriResolver.resolveFileProviderUriForFile(fileProviderName, videoFile);
+    intent.putExtra(MediaStore.EXTRA_OUTPUT, videoUri);
+    grantUriPermissions(intent, videoUri);
+
+    activity.startActivityForResult(intent, REQUEST_CODE_TAKE_VIDEO_WITH_CAMERA);
+  }
+
+  public void chooseImageFromGallery(MethodCall methodCall, MethodChannel.Result result) {
+    if (!setPendingMethodCallAndResult(methodCall, result)) {
+      finishWithAlreadyActiveError();
+      return;
+    }
+
+    if (!permissionManager.isPermissionGranted(Manifest.permission.READ_EXTERNAL_STORAGE)) {
+      permissionManager.askForPermission(
+          Manifest.permission.READ_EXTERNAL_STORAGE, REQUEST_EXTERNAL_IMAGE_STORAGE_PERMISSION);
+      return;
+    }
+
+    launchPickImageFromGalleryIntent();
+  }
+
+  private void launchPickImageFromGalleryIntent() {
+    Intent pickImageIntent = new Intent(Intent.ACTION_GET_CONTENT);
+    pickImageIntent.setType("image/*");
+
+    activity.startActivityForResult(pickImageIntent, REQUEST_CODE_CHOOSE_IMAGE_FROM_GALLERY);
+  }
+
+  public void takeImageWithCamera(MethodCall methodCall, MethodChannel.Result result) {
+    if (!setPendingMethodCallAndResult(methodCall, result)) {
+      finishWithAlreadyActiveError();
+      return;
+    }
+
+    if (!permissionManager.isPermissionGranted(Manifest.permission.CAMERA)) {
+      permissionManager.askForPermission(
+          Manifest.permission.CAMERA, REQUEST_CAMERA_IMAGE_PERMISSION);
+      return;
+    }
+
+    launchTakeImageWithCameraIntent();
+  }
+
+  private void launchTakeImageWithCameraIntent() {
+    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+    boolean canTakePhotos = intentResolver.resolveActivity(intent);
+
+    if (!canTakePhotos) {
+      finishWithError("no_available_camera", "No cameras available for taking pictures.");
+      return;
+    }
+
+    File imageFile = createTemporaryWritableImageFile();
+    pendingCameraMediaUri = Uri.parse("file:" + imageFile.getAbsolutePath());
+
+    Uri imageUri = fileUriResolver.resolveFileProviderUriForFile(fileProviderName, imageFile);
+    intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+    grantUriPermissions(intent, imageUri);
+
+    activity.startActivityForResult(intent, REQUEST_CODE_TAKE_IMAGE_WITH_CAMERA);
+  }
+
+  private File createTemporaryWritableImageFile() {
+    return createTemporaryWritableFile(".jpg");
+  }
+
+  private File createTemporaryWritableVideoFile() {
+    return createTemporaryWritableFile(".mp4");
+  }
+
+  private File createTemporaryWritableFile(String suffix) {
+    String filename = UUID.randomUUID().toString();
+    File image;
+
+    try {
+      image = File.createTempFile(filename, suffix, externalFilesDirectory);
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+
+    return image;
+  }
+
+  private void grantUriPermissions(Intent intent, Uri imageUri) {
+    PackageManager packageManager = activity.getPackageManager();
+    List<ResolveInfo> compatibleActivities =
+        packageManager.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+
+    for (ResolveInfo info : compatibleActivities) {
+      activity.grantUriPermission(
+          info.activityInfo.packageName,
+          imageUri,
+          Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+    }
+  }
+
+  @Override
+  public boolean onRequestPermissionsResult(
+      int requestCode, String[] permissions, int[] grantResults) {
+    boolean permissionGranted =
+        grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED;
+
+    switch (requestCode) {
+      case REQUEST_EXTERNAL_IMAGE_STORAGE_PERMISSION:
+        if (permissionGranted) {
+          launchPickImageFromGalleryIntent();
+        }
+        break;
+      case REQUEST_EXTERNAL_VIDEO_STORAGE_PERMISSION:
+        if (permissionGranted) {
+          launchPickVideoFromGalleryIntent();
+        }
+        break;
+      case REQUEST_CAMERA_IMAGE_PERMISSION:
+        if (permissionGranted) {
+          launchTakeImageWithCameraIntent();
+        }
+        break;
+      case REQUEST_CAMERA_VIDEO_PERMISSION:
+        if (permissionGranted) {
+          launchTakeVideoWithCameraIntent();
+        }
+        break;
+      default:
+        return false;
+    }
+
+    if (!permissionGranted) {
+      finishWithSuccess(null);
+    }
+
+    return true;
+  }
+
+  @Override
+  public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
+    switch (requestCode) {
+      case REQUEST_CODE_CHOOSE_IMAGE_FROM_GALLERY:
+        handleChooseImageResult(resultCode, data);
+        break;
+      case REQUEST_CODE_TAKE_IMAGE_WITH_CAMERA:
+        handleCaptureImageResult(resultCode);
+        break;
+      case REQUEST_CODE_CHOOSE_VIDEO_FROM_GALLERY:
+        handleChooseVideoResult(resultCode, data);
+        break;
+      case REQUEST_CODE_TAKE_VIDEO_WITH_CAMERA:
+        handleCaptureVideoResult(resultCode);
+        break;
+      default:
+        return false;
+    }
+
+    return true;
+  }
+
+  private void handleChooseImageResult(int resultCode, Intent data) {
+    if (resultCode == Activity.RESULT_OK && data != null) {
+      String path = fileUtils.getPathFromUri(activity, data.getData());
+      handleImageResult(path);
+      return;
+    }
+
+    // User cancelled choosing a picture.
+    finishWithSuccess(null);
+  }
+
+  private void handleChooseVideoResult(int resultCode, Intent data) {
+    if (resultCode == Activity.RESULT_OK && data != null) {
+      String path = fileUtils.getPathFromUri(activity, data.getData());
+      handleVideoResult(path);
+      return;
+    }
+
+    // User cancelled choosing a picture.
+    finishWithSuccess(null);
+  }
+
+  private void handleCaptureImageResult(int resultCode) {
+    if (resultCode == Activity.RESULT_OK) {
+      fileUriResolver.getFullImagePath(
+          pendingCameraMediaUri,
+          new OnPathReadyListener() {
+            @Override
+            public void onPathReady(String path) {
+              handleImageResult(path);
+            }
+          });
+      return;
+    }
+
+    // User cancelled taking a picture.
+    finishWithSuccess(null);
+  }
+
+  private void handleCaptureVideoResult(int resultCode) {
+    if (resultCode == Activity.RESULT_OK) {
+      fileUriResolver.getFullImagePath(
+          pendingCameraMediaUri,
+          new OnPathReadyListener() {
+            @Override
+            public void onPathReady(String path) {
+              handleVideoResult(path);
+            }
+          });
+      return;
+    }
+
+    // User cancelled taking a picture.
+    finishWithSuccess(null);
+  }
+
+  private void handleImageResult(String path) {
+    if (pendingResult != null) {
+      Double maxWidth = methodCall.argument("maxWidth");
+      Double maxHeight = methodCall.argument("maxHeight");
+
+      String finalImagePath = imageResizer.resizeImageIfNeeded(path, maxWidth, maxHeight);
+      finishWithSuccess(finalImagePath);
+    } else {
+      throw new IllegalStateException("Received image from picker that was not requested");
+    }
+  }
+
+  private void handleVideoResult(String path) {
+    if (pendingResult != null) {
+      finishWithSuccess(path);
+    } else {
+      throw new IllegalStateException("Received video from picker that was not requested");
+    }
+  }
+
+  private boolean setPendingMethodCallAndResult(
+      MethodCall methodCall, MethodChannel.Result result) {
+    if (pendingResult != null) {
+      return false;
+    }
+
+    this.methodCall = methodCall;
+    pendingResult = result;
+    return true;
+  }
+
+  private void finishWithSuccess(String imagePath) {
+    pendingResult.success(imagePath);
+    clearMethodCallAndResult();
+  }
+
+  private void finishWithAlreadyActiveError() {
+    finishWithError("already_active", "Image picker is already active");
+  }
+
+  private void finishWithError(String errorCode, String errorMessage) {
+    pendingResult.error(errorCode, errorMessage, null);
+    clearMethodCallAndResult();
+  }
+
+  private void clearMethodCallAndResult() {
+    methodCall = null;
+    pendingResult = null;
+  }
 }
+
+
 ```
-### MinimalNtag_I2C_Command
-#### authenticatePlus
-Authenticate using PWD_AUTH command against NTAG I2C Plus product.
-- #### describe writing process in brief
-	- params
-		- **byte[]** pwd
-			- 4Byte password to authenticate with
-	- check if its an **Ntag_I2C_Plus** product since only **Plus** support auth operation.
-	- perform auth operation by using **mfu.transceive**
-		##### referenced in
-		- Ntag_I2C_Demo
-			- constructor
-			- Auth
-			- SRAMSpeedtestTask / doInBackground
-			- EEPROMSpeedtestTask / doInBackground
-		
-```java
-@Override  
-public byte[] authenticatePlus(byte[] pwd) throws IOException, NotPlusTagException {  
-	if(getProduct() != Prod.NTAG_I2C_1k_Plus && getProduct() != Prod.NTAG_I2C_2k_Plus) {  
-		throw new NotPlusTagException("Auth Operations are not supported by non NTAG I2C PLUS products");  
-	}  
-	byte[] command = new byte[5];  
-	command[0] = (byte) 0x1B;  
-	command[1] = pwd[0];  
-	command[2] = pwd[1];  
-	command[3] = pwd[2];  
-	command[4] = pwd[3];  
-	return mfu.transceive(command);  
-}
-```
-
-## Protect
-### Ntag_I2C_Command
-#### protectPlus
-Protect NTAG I2C Plus product memory map.
-- #### describe writing process in brief
-	- params
-		- **byte[]** pwd
-			- 4Byte password to authenticate with
-		- **byte** staretAddr
-			- Page to lock the memory from
-	- check if it's an **Ntag_I2C_Plus** product, since auth operation not supported by non Ntag_I2C_Plus 
-	- reader.**SectorSelect** 0
-	- set password indicated by user - using reader.**write**(pwd, Register.PWD)
-	- write access configuration
-	- write pt (pass thru) configuration
-	- write auth0 configuration
-	
-		##### referenced in
-		- Ntag_I2C_Demo
-			- Auth
-```java
-	@Override  
-	public void protectPlus(byte[] pwd, byte startAddr) throws IOException, FormatException, NotPlusTagException {  
-		byte[] data = new byte[4];  
-
-		if(getProduct() != Prod.NTAG_I2C_1k_Plus 
-		&& getProduct() != Prod.NTAG_I2C_2k_Plus) {  
-			throw new NotPlusTagException("Auth Operations are not supported by non NTAG I2C PLUS products");  
-		}  
-		reader.SectorSelect((byte) 0);  
-
-		// Set the password indicated by the user  
-		reader.write(pwd, Register.PWD.getValue());  
-
-		byte access = (byte) 0x00;  
-		byte authLimit = 0x00; // Don't limit the number of auth attempts  
-
-		access ^= 1 << Access_Offset.NFC_PROT.getValue(); // NFC_Prot  
-		access ^= 0 << Access_Offset.NFC_DIS_SEC1.getValue(); // NFC_DIS_SEC1  
-		access |= authLimit << Access_Offset.AUTH_LIM.getValue(); // AUTHLIM  
-
-		// Write the ACCESS configuration  data[0] = access;  
-		data[1] = 0x00;  
-		data[2] = 0x00;  
-		data[3] = 0x00;  
-		reader.write(data, Register.ACCESS.getValue());  
-
-		byte ptI2C = 0x00;  
-		byte i2CProt = 0x00;  
-
-		ptI2C ^= 0 << PT_I2C_Offset.K2_PROT.getValue(); // 2K Prot  
-		ptI2C ^= 1 << PT_I2C_Offset.SRAM_PROT.getValue(); // SRAM Prot  
-		ptI2C |= i2CProt << PT_I2C_Offset.I2C_PROT.getValue(); // I2C Prot  
-
-		// Write the PT_I2C configuration  data[0] = ptI2C;  
-		data[1] = 0x00;  
-		data[2] = 0x00;  
-		data[3] = 0x00;  
-		reader.write(data, Register.PT_I2C.getValue());  
-
-		// Write the AUTH0 lock starting page  
-		data[0] = 0x00;  
-		data[1] = 0x00;  
-		data[2] = 0x00;  
-		data[3] = startAddr;  
-		reader.write(data, Register.AUTH0.getValue());  
-	}
-```
-
-### MinimalNtag_I2C_Command
-almost the same as Ntag_I2C, except using mfu.writePage
-
-
-## Unprotect
-behaviors almost the same as method of protect referred above.
-
-### Ntag_I2C_Command
-### MinimalNtag_I2C_Command
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTg0ODY2NjMsLTQzNDkzMTcwOF19
+eyJoaXN0b3J5IjpbLTEyMTU3NzQ1MDYsLTEwNTg0ODY2NjMsLT
+QzNDkzMTcwOF19
 -->
