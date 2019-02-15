@@ -62,7 +62,11 @@ Note over MProc, MAct: B1) each fakeActivity has several intentFilters<br>B2) ea
 
 MProc-->>MEvent: Ready!
 
-Note over MEvent: Scenario1: startActivity while s
+Note over MEvent, MAct: Scenario1: startActivity while discovering Tag
+MEvent-->>MEvent: onNewIntent
+MEvent-->>MProc: find out target
+MProc-->>MProc: getTargetByIntent
+MProc-->>MProc: 
 ```
 **brainstorming in A2:**
 - what we already have
@@ -229,7 +233,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY2MTg0Nzg3LC0xNDUzODgwMDA4LC0xND
+eyJoaXN0b3J5IjpbMjU2ODMyODkxLC0xNDUzODgwMDA4LC0xND
 c2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2
 MDIyXX0=
 -->
