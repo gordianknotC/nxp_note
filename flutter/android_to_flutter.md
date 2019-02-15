@@ -66,7 +66,8 @@ Note over MProc, MAct: B1) each fakeActivity has several intentFilters<br>B2) ea
 
 MProc-->>MEvent: Ready!
 
-Note over MEvent, MAct: Scenario1: startActivity while discovering Tag
+
+Note over MUi, .: Scenario1: startActivity while discovering Tag<br>.<br>.
 MEvent-->>MEvent: onNewIntent
 
 MEvent-->>MProc: getTargetByIntent [V]
@@ -83,6 +84,9 @@ MProc -->> MProc: getTargetByIntent
 MProc -->> MProc: startExplicitActivity
 MProc -->> MProc: createFakeActivity
 MProc ->> . : onCreate
+
+
+Note over MUi, .: Scenario1: startActivityForRwhile discovering Tag<br>.<br>.
 ```
 
 **brainstorming in A2:**
@@ -264,7 +268,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkzMTAzMDgyLC0xMjE0NDkwNzM1LC0zMD
+eyJoaXN0b3J5IjpbNzI0NDQ4MDU5LC0xMjE0NDkwNzM1LC0zMD
 gyMzA0ODQsNjAzODAzNjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYy
 MzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX
 0=
