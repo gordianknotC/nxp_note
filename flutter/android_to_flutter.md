@@ -78,7 +78,10 @@ MProc -->> MEvent: onNewEvent
 MEvent -->> MProc: getTargetByIntent [X]
 
 Note over MEvent, MProc: since flutter only has one activity which<br> means it always stay on top, hence it's<br> reduntant to find realTarget while <br>receving a new intent
+
+MProc -->> MProc: triggerFakeActivity
 MProc ->> . : onCreate
+
 
 ```
 **brainstorming in A2:**
@@ -246,7 +249,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NzkwNzAxNiw2MDM4MDM2NDgsLTE0NT
+eyJoaXN0b3J5IjpbMTcxNzEyOTQ4OCw2MDM4MDM2NDgsLTE0NT
 M4ODAwMDgsLTE0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2
 MzExNyw4NTg1NDYwMjJdfQ==
 -->
