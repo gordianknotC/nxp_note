@@ -19,6 +19,25 @@ Sys ->> A2: onCreate
 
 ```mermaid
 sequenceDiagram
+participant A1
+participant A2
+participant Mediator
+
+Note over A1, A2: Scenario1: Implicit intent
+A1 -->> A1: prepare intent
+A1 -->> A1: startActivity with explicit target
+A1 ->>  A2: onCreate
+
+Note over A1, Mediator: Scenario2: Explicit intent
+A1 -->> A1: prepare intent
+A1 -->> Mediator: startActivity Implicitly
+Mediator-->> Mediator: filterIntent
+Mediator-->> Mediator: startActivity with explicit target
+Mediator->> A2: onCreate
+```
+
+```mermaid
+sequenceDiagram
 participant MUi
 participant MEvent
 participant MProc
@@ -182,7 +201,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTU0NzU2NzIsLTE0NTM4ODAwMDgsLT
+eyJoaXN0b3J5IjpbLTEyOTg1MjI2NTksLTE0NTM4ODAwMDgsLT
 E0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1
 NDYwMjJdfQ==
 -->
