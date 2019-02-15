@@ -171,7 +171,11 @@ participant FEvent
 participant FAct
 participant Core
 
-. -->> . :onCreate
+. -->> FEvent :onCreate
+
+. -->> FEvent: onNewIntent
+
+. -->> FEvent: onActivityResult
 
 ```
 
@@ -287,9 +291,9 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDk0Mzk0NzIsMTg1MDE1ODkzNiwtMT
-E0MjYxMzk5MywtMzg4MzM2OTU3LDEzNzgyMTk3MDgsLTEyMTQ0
-OTA3MzUsLTMwODIzMDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMD
-gsLTE0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4
-NTg1NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbMTEyMzQyNDIxOCwxODUwMTU4OTM2LC0xMT
+QyNjEzOTkzLC0zODgzMzY5NTcsMTM3ODIxOTcwOCwtMTIxNDQ5
+MDczNSwtMzA4MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOC
+wtMTQ3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1
+ODU0NjAyMl19
 -->
