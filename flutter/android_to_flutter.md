@@ -56,7 +56,7 @@ participant MAct
 
 MProc-->>MProc: initialize plugins
 MProc-->>MProc: prepare intenFilter mappings
-Note over MProc: 1) each fakeActivity has several intentFilters<br>2) each fakeActivity map to a unique string action<br>__represents an explicit activity request.<br>_<br> find out who is requesting and from where to 
+Note over MProc: 1) each fakeActivity has several intentFilters<br>2) each fakeActivity map to a unique string action<br>__represents an explicit activity request.<br>_<br> find out who is requesting from and to.
 ```
 
 --------------------------------------------------------
@@ -216,7 +216,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU3MTA4Mzg1LC0xNDUzODgwMDA4LC0xND
-c2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2
-MDIyXX0=
+eyJoaXN0b3J5IjpbMTM5MjE5OTU5NiwtMTQ1Mzg4MDAwOCwtMT
+Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
+NjAyMl19
 -->
