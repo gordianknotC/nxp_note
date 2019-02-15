@@ -72,7 +72,7 @@ Note over MProc,MAct: A1) instantiate all FakeActivity<br>A2) setup intentFilter
 MProc-->>MProc: prepare intenFilter mappings ❓
 
 Note over MProc, MAct: B1) each fakeActivity has several intentFilters<br>B2) each fakeActivity map to a unique string action<br>__represents an explicit activity request.<br>_<br> find out who is requesting from and to.
-
+MProc-->> .: onCreate for initialization and intial detection
 MProc-->>MEvent: Ready!
 
 
@@ -311,9 +311,9 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODU1NjAyOTUsMTU0NTU3NTc0LDcyNz
-UxOTc4LDE4NTAxNTg5MzYsLTExNDI2MTM5OTMsLTM4ODMzNjk1
-NywxMzc4MjE5NzA4LC0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNj
-AzODAzNjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0
-Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
+eyJoaXN0b3J5IjpbNzQ3ODUyNzEsMTU0NTU3NTc0LDcyNzUxOT
+c4LDE4NTAxNTg5MzYsLTExNDI2MTM5OTMsLTM4ODMzNjk1Nywx
+Mzc4MjE5NzA4LC0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNjAzOD
+AzNjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3
+MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
 -->
