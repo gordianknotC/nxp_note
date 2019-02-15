@@ -5,7 +5,13 @@ participant A2
 participant Sys
 
 A1 -->> A1: prepare intent
-A1 -->> A2: startActivity Expli
+A1 -->> A2: startActivity Explicityly
+
+A1 -->> A1: prepare intent
+A1 -->> Sys: startActivity Implicitly
+Sys-->> Sys: filterIntent
+Sys-->> Sys: startActivity with exp
+Sys ->> A2: onCreate
 ```
 
 ```mermaid
@@ -173,7 +179,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwODcwMTI1NCwtMTQ1Mzg4MDAwOCwtMT
+eyJoaXN0b3J5IjpbMTE5NzY1NDQ2MSwtMTQ1Mzg4MDAwOCwtMT
 Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
 NjAyMl19
 -->
