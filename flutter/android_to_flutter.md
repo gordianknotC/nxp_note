@@ -58,8 +58,11 @@ MProc-->>MProc: initialize plugins
 Note over MProc,MAct: A1) instantiate all FakeActivity<br>A2) setup intentFilters for each FakeActivity<br>
 
 MProc-->>MProc: prepare intenFilter mappings
-Note over MProc, MAct: 1) each fakeActivity has several intentFilters<br>2) each fakeActivity map to a unique string action<br>__represents an explicit activity request.<br>_<br> find out who is requesting from and to.
+Note over MProc, MAct: B1) each fakeActivity has several intentFilters<br>B2) each fakeActivity map to a unique string action<br>__represents an explicit activity request.<br>_<br> find out who is requesting from and to.
 
+MProc-->>MEvent: Ready!
+
+Note over MEvent: Scenario1: startActivity while s
 ```
 **brainstorming in A2:**
 - what we already have
@@ -226,7 +229,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MjMzNzM5NiwtMTQ1Mzg4MDAwOCwtMT
-Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
-NjAyMl19
+eyJoaXN0b3J5IjpbNDY2MTg0Nzg3LC0xNDUzODgwMDA4LC0xND
+c2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2
+MDIyXX0=
 -->
