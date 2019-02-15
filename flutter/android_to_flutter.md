@@ -33,10 +33,11 @@ loop scenario1
 	MOn-->JDo: 
 end
 ```
-|  |  |||
+| abbv|    description  | abbv |    description  |
 |-----|-----------------|------|-----------------|
 | MOn | Mediator Events | MAct | MediatorActions |
-| FOn | Fake
+| FOn | FakeActEvent    | FDo  | FakeLogic       |
+| JDo | CoreLogic    
 
 
 
@@ -152,6 +153,6 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTI4OTAwNjIsLTE0NzYyNjIzODMsLT
-ExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbLTIzODkzNjczOCwtMTQ3NjI2MjM4MywtMT
+EyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl19
 -->
