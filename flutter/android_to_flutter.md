@@ -101,7 +101,9 @@ Note left of .: e.g. show auth dialog
 . ->> MUi: UI response, listen for result [O] [X]
 MUi -->> MUi: user interact or none
 MUi -->> MEvent: listen for result  [O] [X]
-MEvent -->> MEvent: onActivity
+MEvent -->> MEvent: onActivityResult
+MEvent ->> . : onActivityResult
+. -->> . : onActivityResult
 . ->> MAct: startFakeActivity
 MAct -->> MAct: startFakeActivity
 MAct -->> MProc: getTargetByIntent
@@ -292,8 +294,8 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg5NTE0MjYzLC0xMjE0NDkwNzM1LC0zMD
-gyMzA0ODQsNjAzODAzNjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYy
-MzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX
-0=
+eyJoaXN0b3J5IjpbMTM3ODIxOTcwOCwtMTIxNDQ5MDczNSwtMz
+A4MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2
+MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl
+19
 -->
