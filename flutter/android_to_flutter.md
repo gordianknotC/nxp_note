@@ -86,13 +86,13 @@ MProc -->> MProc: createFakeActivity
 MProc ->> . : onCreate
 
 
-Note over MUi, .: 👷 Scenario2: startActivityForResult while discovering Tag<br>.<br>.
+Note over MUi, .: 👷 Scenario2: startActivityForResult while trigger auth request<br>.<br>.
 MEvent-->>MEvent: onNewIntent
 MEvent-->>MProc: getTargetByIntent [V]
 MProc-->>MProc: getTargetByIntent
 MProc-->>MProc: startFakeActivityForResultExplicit
 MProc-->>MProc: createFakeActivityForResult
-MProc->> . : onCreate
+MProc->> . : onCreate - open auth
 . -->> . : process ❓
 
 
@@ -278,7 +278,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNjU2ODQ0OSwtMTIxNDQ5MDczNSwtMz
+eyJoaXN0b3J5IjpbMTYwNDY4MjExNiwtMTIxNDQ5MDczNSwtMz
 A4MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2
 MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl
 19
