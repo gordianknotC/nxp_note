@@ -53,7 +53,7 @@ participant MUi
 participant MEvent
 participant MProc
 participant MAct
-participan
+participant .
 
 MProc-->>MProc: initialize plugins
 Note over MProc,MAct: A1) instantiate all FakeActivity<br>A2) setup intentFilters for each FakeActivity<br>
@@ -68,6 +68,9 @@ MEvent-->>MEvent: onNewIntent
 MEvent-->>MProc: find out target
 MProc-->>MProc: getTargetByIntent
 MProc-->>MProc: startExplicitActivity
+MProc->> . : onCreate
+. -->> . : process
+. ->> onEvent : 
 
 ```
 **brainstorming in A2:**
@@ -235,7 +238,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk0NjQ1NTgzLC0xNDUzODgwMDA4LC0xND
+eyJoaXN0b3J5IjpbNDc1MTc2MTg3LC0xNDUzODgwMDA4LC0xND
 c2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2
 MDIyXX0=
 -->
