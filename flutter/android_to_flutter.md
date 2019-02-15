@@ -76,6 +76,7 @@ MEvent-->>. : onNewIntent [O]
 . -->> . : onNewIntent[O] process ❓
 
 Note over MEvent, .: 👷 Scenario1-B: onNewIntent [X]<br>.
+MEvent-->>MEvent: onNewIntent [X]
 MEvent-->>MProc: getTargetByIntent [V]
 MProc-->>MProc: getTargetByIntent
 MProc-->>MProc: startFakeActivityExplicit
@@ -95,7 +96,15 @@ MProc -->> MProc: createFakeActivity
 MProc ->> . : onCreate
 
 
+
+
 Note over MUi, .: 👷 Scenario2: startActivityForResult while trigger auth request<br>.<br>.
+
+Note over MEvent, .: 👷 Scenario2-A: onNewIntent [O]<br>. . . .call onNewIntent or not by comparing currentIntent with the new one<br>. . . .if it's the same then call onNewIntent, if it's not then call onCreate
+MEvent-->>MEvent: onNewIntent [O]
+MEvent-->>. : onNewIntent [O]
+. -->> . : onNewIntent[O] process ❓
+
 MEvent-->>MEvent: onNewIntent
 MEvent-->>MProc: getTargetByIntent [V]
 MProc-->>MProc: getTargetByIntent
@@ -300,8 +309,8 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjIwNzcwMzcsLTM4ODMzNjk1NywxMz
-c4MjE5NzA4LC0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNjAzODAz
-NjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3MD
-Y2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
+eyJoaXN0b3J5IjpbMTE5MDgwMjMwOCwtMzg4MzM2OTU3LDEzNz
+gyMTk3MDgsLTEyMTQ0OTA3MzUsLTMwODIzMDQ4NCw2MDM4MDM2
+NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzODMsLTExMjQzODcwNj
+YsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
 -->
