@@ -140,7 +140,7 @@ MProc ->> . : onCreate
 			- demo library
 			- 
 
-**narrow down**:
+**narrow downA**:
 	- instantiate each fakeActivity
 
 
@@ -280,8 +280,9 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY5Mzc0NTkzLC0xMTQyNjEzOTkzLC0zOD
-gzMzY5NTcsMTM3ODIxOTcwOCwtMTIxNDQ5MDczNSwtMzA4MjMw
-NDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2MjM4My
-wtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl19
+eyJoaXN0b3J5IjpbMTg1MDE1ODkzNiwtMTE0MjYxMzk5MywtMz
+g4MzM2OTU3LDEzNzgyMTk3MDgsLTEyMTQ0OTA3MzUsLTMwODIz
+MDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzOD
+MsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
+
 -->
