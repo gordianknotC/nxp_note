@@ -106,9 +106,9 @@ MProc ->> . : onCreate
 ```
 **brainstorming in A1 -  how onNewIntent in behavior - IDEATION**
 - fakeActivity has no ui resources
-	- once instantiated never mind disposing for release just like normal library
-		- only create once - onCreate only called once
-			- ❓ allways call onNewIntent while new receiving intent requests???
+	- once instantiated, never mind disposing for release resources just like normal library
+		- fakeActivity only create once - onCreate only called once
+			- ❓ allways call onNewIntent while receiving intent requests???
 	- in real Activity: each Activity might hold its own resources, but fakeActivity should not operate like that
 		- some resources can be shared
 			- current intent & nfcintent
@@ -290,11 +290,11 @@ Mediator->> A2: onCreate
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NTE5NDg1NywyMDM2MDc5MjgyLC0xMz
-Y4NjQ0MTY2LC0xNDYwMTYzODA2LC0xNzIxOTQxOTIzLDE1NDU1
-NzU3NCw3Mjc1MTk3OCwxODUwMTU4OTM2LC0xMTQyNjEzOTkzLC
-0zODgzMzY5NTcsMTM3ODIxOTcwOCwtMTIxNDQ5MDczNSwtMzA4
-MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2Mj
-M4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl19
-
+eyJoaXN0b3J5IjpbLTk5NjMxMjQ0MCwxOTk1MTk0ODU3LDIwMz
+YwNzkyODIsLTEzNjg2NDQxNjYsLTE0NjAxNjM4MDYsLTE3MjE5
+NDE5MjMsMTU0NTU3NTc0LDcyNzUxOTc4LDE4NTAxNTg5MzYsLT
+ExNDI2MTM5OTMsLTM4ODMzNjk1NywxMzc4MjE5NzA4LC0xMjE0
+NDkwNzM1LC0zMDgyMzA0ODQsNjAzODAzNjQ4LC0xNDUzODgwMD
+A4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcs
+ODU4NTQ2MDIyXX0=
 -->
