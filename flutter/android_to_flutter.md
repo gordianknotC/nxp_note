@@ -1,7 +1,5 @@
 
-						| MOn | Mediator Events | MAct | MediatorActions |
-						| FOn | FakeActEvent    | FDo  | FakeLogic       |
-						| JDo | CoreLogic       |      |				 |
+MOn:
 ```mermaid
 sequenceDiagram
 
@@ -154,6 +152,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTM4ODAwMDgsLTE0NzYyNjIzODMsLT
-ExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbMTk1NDg0MzUwMSwtMTQ1Mzg4MDAwOCwtMT
+Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
+NjAyMl19
 -->
