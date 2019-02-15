@@ -75,6 +75,7 @@ MProc->> . : onCreate
 MAct -->> MProc: getTargetByIntent
 MProc -->> MProc: startExplicitActivity
 MProc -->> MEvent: onNewEvent
+MEvent
 MProc ->> . : onCreate
 
 ```
@@ -243,7 +244,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNjg4ODI0MCwtMTQ1Mzg4MDAwOCwtMT
+eyJoaXN0b3J5IjpbMTg5ODYyOTIzMSwtMTQ1Mzg4MDAwOCwtMT
 Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
 NjAyMl19
 -->
