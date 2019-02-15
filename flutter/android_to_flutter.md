@@ -172,9 +172,11 @@ participant FAct
 participant Core
 
 Note over ., Core: Scenario1: Initialize All FakeActivities
+. -->> FEvent :onCreate
+FEvent -->> FEvent: onCreate, initial
 
 Note over ., Core: Scenario2: First 
-. -->> FEvent :onCreate
+
 
 
 
@@ -296,9 +298,9 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI3NTE5NzgsMTg1MDE1ODkzNiwtMTE0Mj
-YxMzk5MywtMzg4MzM2OTU3LDEzNzgyMTk3MDgsLTEyMTQ0OTA3
-MzUsLTMwODIzMDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMDgsLT
-E0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1
-NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbMTk5ODM1MDQzNyw3Mjc1MTk3OCwxODUwMT
+U4OTM2LC0xMTQyNjEzOTkzLC0zODgzMzY5NTcsMTM3ODIxOTcw
+OCwtMTIxNDQ5MDczNSwtMzA4MjMwNDg0LDYwMzgwMzY0OCwtMT
+Q1Mzg4MDAwOCwtMTQ3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3
+NjYzMTE3LDg1ODU0NjAyMl19
 -->
