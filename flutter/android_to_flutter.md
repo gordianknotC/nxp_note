@@ -53,6 +53,7 @@ MProc->> . : onCreate
 . -->> . : process ❓
 Note left of .: e.g. vitration, initiate Ntag, startDemo,<br>show auth dialog
 
+
 Note over MProc, .: 👷 Scenario1-B1: delegate ui to user<br>.
 . ->> MUi: UI response, listen for result [O] [X]
 MUi -->> MEvent: listen for result  [O] [X]
@@ -291,11 +292,11 @@ Mediator->> A2: onCreate
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc1NDgxNzgwLC05OTYzMTI0NDAsMTk5NT
-E5NDg1NywyMDM2MDc5MjgyLC0xMzY4NjQ0MTY2LC0xNDYwMTYz
-ODA2LC0xNzIxOTQxOTIzLDE1NDU1NzU3NCw3Mjc1MTk3OCwxOD
-UwMTU4OTM2LC0xMTQyNjEzOTkzLC0zODgzMzY5NTcsMTM3ODIx
-OTcwOCwtMTIxNDQ5MDczNSwtMzA4MjMwNDg0LDYwMzgwMzY0OC
-wtMTQ1Mzg4MDAwOCwtMTQ3NjI2MjM4MywtMTEyNDM4NzA2Niwt
-NDU3NjYzMTE3XX0=
+eyJoaXN0b3J5IjpbLTIxMTEwNTkyMzAsNDc1NDgxNzgwLC05OT
+YzMTI0NDAsMTk5NTE5NDg1NywyMDM2MDc5MjgyLC0xMzY4NjQ0
+MTY2LC0xNDYwMTYzODA2LC0xNzIxOTQxOTIzLDE1NDU1NzU3NC
+w3Mjc1MTk3OCwxODUwMTU4OTM2LC0xMTQyNjEzOTkzLC0zODgz
+MzY5NTcsMTM3ODIxOTcwOCwtMTIxNDQ5MDczNSwtMzA4MjMwND
+g0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2MjM4Mywt
+MTEyNDM4NzA2Nl19
 -->
