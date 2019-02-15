@@ -141,7 +141,9 @@ MProc ->> . : onCreate
 			- 
 
 **narrow downA**:
-	- instantiate each fakeActivity
+	- instantiate each fakeActivity without constructor
+	- dependencies thru injection
+	- 
 
 
 
@@ -280,9 +282,9 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1MDE1ODkzNiwtMTE0MjYxMzk5MywtMz
-g4MzM2OTU3LDEzNzgyMTk3MDgsLTEyMTQ0OTA3MzUsLTMwODIz
-MDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzOD
-MsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
-
+eyJoaXN0b3J5IjpbMTE1NTQ0MjE1NSwxODUwMTU4OTM2LC0xMT
+QyNjEzOTkzLC0zODgzMzY5NTcsMTM3ODIxOTcwOCwtMTIxNDQ5
+MDczNSwtMzA4MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOC
+wtMTQ3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1
+ODU0NjAyMl19
 -->
