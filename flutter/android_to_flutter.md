@@ -78,7 +78,8 @@ MProc->> . : onCreate
 . -->> . : process ❓
 Note left of .: e.g. vitration, initiate Ntag, startDemo,<br>show auth dialog
 . ->> MUi: UI response
-MUi -->> MEvent: listen for result? [O] [X]
+
+MUi -->> MEvent: listen for result  [O] [X]
 . ->> MAct: startFakeActivity
 MAct -->> MAct: startFakeActivity
 MAct -->> MProc: getTargetByIntent
@@ -281,8 +282,8 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTg0NjE0NDEsLTEyMTQ0OTA3MzUsLT
-MwODIzMDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYy
-NjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMj
-JdfQ==
+eyJoaXN0b3J5IjpbMTQ2MDM5MjcxOCwtMTIxNDQ5MDczNSwtMz
+A4MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2
+MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl
+19
 -->
