@@ -65,6 +65,7 @@ MProc-->>MEvent: Ready!
 
 Note over MEvent, MAct: Scenario1: startActivity while discovering Tag
 MEvent-->>MEvent: onNewIntent
+
 MEvent-->>MProc: getTargetByIntent [V]
 MProc-->>MProc: getTargetByIntent
 MProc-->>MProc: startExplicitActivity
@@ -255,7 +256,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzA2NDU0MjMsLTMwODIzMDQ4NCw2MD
-M4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzODMsLTExMjQz
-ODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbMTU3NzYzMTM5NSwtMzA4MjMwNDg0LDYwMz
+gwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2MjM4MywtMTEyNDM4
+NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl19
 -->
