@@ -59,7 +59,7 @@ MUi -->> MEvent: listen for result  [O] [X]
 MUi -->> MUi: user interact or none
 MUi -->> MEvent: onResult
 MEvent -->> MEvent: onResult
-MEvent -->> MProc: getTargetByIntentContext()
+MProc -->> MEvent: getTargetByIntent(context, intent)
 MEvent -->> . : onActivityResult
 
 
@@ -291,11 +291,11 @@ Mediator->> A2: onCreate
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMTI1ODkyOCwtOTk2MzEyNDQwLDE5OT
-UxOTQ4NTcsMjAzNjA3OTI4MiwtMTM2ODY0NDE2NiwtMTQ2MDE2
-MzgwNiwtMTcyMTk0MTkyMywxNTQ1NTc1NzQsNzI3NTE5NzgsMT
-g1MDE1ODkzNiwtMTE0MjYxMzk5MywtMzg4MzM2OTU3LDEzNzgy
-MTk3MDgsLTEyMTQ0OTA3MzUsLTMwODIzMDQ4NCw2MDM4MDM2ND
-gsLTE0NTM4ODAwMDgsLTE0NzYyNjIzODMsLTExMjQzODcwNjYs
-LTQ1NzY2MzExN119
+eyJoaXN0b3J5IjpbNDc1NDgxNzgwLC05OTYzMTI0NDAsMTk5NT
+E5NDg1NywyMDM2MDc5MjgyLC0xMzY4NjQ0MTY2LC0xNDYwMTYz
+ODA2LC0xNzIxOTQxOTIzLDE1NDU1NzU3NCw3Mjc1MTk3OCwxOD
+UwMTU4OTM2LC0xMTQyNjEzOTkzLC0zODgzMzY5NTcsMTM3ODIx
+OTcwOCwtMTIxNDQ5MDczNSwtMzA4MjMwNDg0LDYwMzgwMzY0OC
+wtMTQ1Mzg4MDAwOCwtMTQ3NjI2MjM4MywtMTEyNDM4NzA2Niwt
+NDU3NjYzMTE3XX0=
 -->
