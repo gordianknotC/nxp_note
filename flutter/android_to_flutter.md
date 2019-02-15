@@ -80,14 +80,24 @@ MProc -->> MProc: getTargetByIntent
 MProc -->> MProc: startExplicitActivity
 MProc -->> MProc: createFakeActivity
 MProc ->> . : onCreate
-
-
 ```
+
 **brainstorming in A2:**
 - what we already have
 	- intent matching logic; but it may not work while exposing to customized mediator
 	- matching logic only works under some circumstances ---- applied after intentFilter written in manifest.xml
 - prepare intentFilter for each FakeActivity while initializing each FakeActivity
+
+-------------------------------------------------------
+**FakeActivity in Detail**
+
+```mermaid
+sequenceDiagram
+participant .
+participant FEvent
+participant FAct
+participant Core
+```
 
 
 
@@ -248,7 +258,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU3NzM1MjAyLC0xMjE0NDkwNzM1LC0zMD
+eyJoaXN0b3J5IjpbNTYwMTU0MDcxLC0xMjE0NDkwNzM1LC0zMD
 gyMzA0ODQsNjAzODAzNjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYy
 MzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX
 0=
