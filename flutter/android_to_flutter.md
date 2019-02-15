@@ -68,6 +68,7 @@ MEvent-->>MEvent: onNewIntent
 MEvent-->>MProc: find out target
 MProc-->>MProc: getTargetByIntent
 MProc-->>MProc: startExplicitActivity
+MProc-->>MEvent: onNewIntent
 MProc-->>MProc: createFakeActivity
 MProc->> . : onCreate
 . -->> . : process
@@ -250,7 +251,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwODIzMDQ4NCw2MDM4MDM2NDgsLTE0NT
-M4ODAwMDgsLTE0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2
-MzExNyw4NTg1NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbNDA2NzI3MjUxLC0zMDgyMzA0ODQsNjAzOD
+AzNjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3
+MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
 -->
