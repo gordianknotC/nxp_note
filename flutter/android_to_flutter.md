@@ -44,6 +44,15 @@ Mediator-->> Mediator: prepare target
 Mediator->> A2: onCreate
 ```
 
+
+
+
+
+
+
+
+
+
 --------------------------------------------------------
 
 **Mediator In Detail**
@@ -185,10 +194,8 @@ FAct -->> FAct: process
 FAct -->> Core: ntag
 Core -->> FAct: response
 FAct -->> FAct: parse
-FAct ->> . : UI response
- 
+FAct ->> . : UI response or start Activity
 
-. -->> FEvent: onActivityResult
 
 ```
 
@@ -304,9 +311,9 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTA1OTc4MCwxNTQ1NTc1NzQsNzI3NT
-E5NzgsMTg1MDE1ODkzNiwtMTE0MjYxMzk5MywtMzg4MzM2OTU3
-LDEzNzgyMTk3MDgsLTEyMTQ0OTA3MzUsLTMwODIzMDQ4NCw2MD
-M4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzODMsLTExMjQz
-ODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbLTEwODU1NjAyOTUsMTU0NTU3NTc0LDcyNz
+UxOTc4LDE4NTAxNTg5MzYsLTExNDI2MTM5OTMsLTM4ODMzNjk1
+NywxMzc4MjE5NzA4LC0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNj
+AzODAzNjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0
+Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
 -->
