@@ -77,8 +77,8 @@ MProc-->>MProc: createFakeActivity
 MProc->> . : onCreate
 . -->> . : process ❓
 Note left of .: e.g. vitration, initiate Ntag, startDemo,<br>show auth dialog
-. ->> MUi: UI response
-
+. ->> MUi: UI response, listen for result [O] [X]
+MUi -->> MUi: user interact or none
 MUi -->> MEvent: listen for result  [O] [X]
 . ->> MAct: startFakeActivity
 MAct -->> MAct: startFakeActivity
@@ -282,7 +282,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MDM5MjcxOCwtMTIxNDQ5MDczNSwtMz
+eyJoaXN0b3J5IjpbLTMyMjI2NzA3OCwtMTIxNDQ5MDczNSwtMz
 A4MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2
 MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl
 19
