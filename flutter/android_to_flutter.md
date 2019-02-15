@@ -76,7 +76,8 @@ MAct -->> MProc: getTargetByIntent
 MProc -->> MProc: startExplicitActivity
 MProc -->> MEvent: onNewEvent
 MEvent -->> MProc: getTargetByIntent [X]
-Note right of MEvent: since flutter only has one activity which means it always stay on the top, hence it's reduntant to fa
+
+Note over MEvent, MProc: since flutter only has one activity which means it always<br> stay on top, hence it's reduntant to find realTarget while <br>receving an new intent
 MProc ->> . : onCreate
 
 ```
@@ -245,7 +246,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTIwNDc3NDMsNjAzODAzNjQ4LC0xND
+eyJoaXN0b3J5IjpbLTE5MjM0MzY0MTIsNjAzODAzNjQ4LC0xND
 UzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2
 NjMxMTcsODU4NTQ2MDIyXX0=
 -->
