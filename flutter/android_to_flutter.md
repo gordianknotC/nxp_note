@@ -68,6 +68,7 @@ MEvent-->>MEvent: onNewIntent
 
 MEvent-->>MProc: getTargetByIntent [V]
 MProc-->>MProc: getTargetByIntent
+MProc-->> . : onNewIntent logic
 MProc-->>MProc: startExplicitActivity
 MProc-->>MEvent: onNewIntent
 MEvent-->>MEvent: onNewIntent
@@ -256,7 +257,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NzYzMTM5NSwtMzA4MjMwNDg0LDYwMz
+eyJoaXN0b3J5IjpbMTEzMDIxODUwMSwtMzA4MjMwNDg0LDYwMz
 gwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2MjM4MywtMTEyNDM4
 NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl19
 -->
