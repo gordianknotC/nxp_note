@@ -4,13 +4,16 @@ participant A1
 participant A2
 participant Sys
 
+Note over A1, A2: Scenario1: Implicit intent
 A1 -->> A1: prepare intent
-A1 -->> A2: startActivity Explicityly
+A1 -->> A1: startActivity with explicit target
+A1 ->>  A2: onCreate
 
+Note over A1, Sys: Scenario2: Explicit intent
 A1 -->> A1: prepare intent
 A1 -->> Sys: startActivity Implicitly
 Sys-->> Sys: filterIntent
-Sys-->> Sys: startActivity with exp
+Sys-->> Sys: startActivity with explicit target
 Sys ->> A2: onCreate
 ```
 
@@ -179,7 +182,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NzY1NDQ2MSwtMTQ1Mzg4MDAwOCwtMT
-Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
-NjAyMl19
+eyJoaXN0b3J5IjpbLTE3MTU0NzU2NzIsLTE0NTM4ODAwMDgsLT
+E0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1
+NDYwMjJdfQ==
 -->
