@@ -135,12 +135,13 @@ MProc ->> . : onCreate
 			- ❓ allways call onNewIntent while new receiving intent requests???
 	- in real Activity: each Activity might hold its own resources, but fakeActivity should not operate like that
 		- some resources can be shared
-			- current intent
+			- current intent & nfcintent
+				- difference between the two ❓
 			- demo library
 			- 
 
 **narrow down**:
-
+	- instantiate each fakeActivity
 
 
 
@@ -279,9 +280,8 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0NzExODkwMiwtMTE0MjYxMzk5MywtMz
-g4MzM2OTU3LDEzNzgyMTk3MDgsLTEyMTQ0OTA3MzUsLTMwODIz
-MDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzOD
-MsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
-
+eyJoaXN0b3J5IjpbNDY5Mzc0NTkzLC0xMTQyNjEzOTkzLC0zOD
+gzMzY5NTcsMTM3ODIxOTcwOCwtMTIxNDQ5MDczNSwtMzA4MjMw
+NDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2MjM4My
+wtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl19
 -->
