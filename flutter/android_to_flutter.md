@@ -58,7 +58,7 @@ participant MAct
 participant .
 
 MProc-->>MProc: initialize plugins ❓
-Note over MProc,MAct: A1) instantiate all FakeActivity<br>A2) setup intentFilters for each FakeActivity<br>
+Note over MProc,MAct: A1) instantiate all FakeActivity<br>A2) setup intentFilters for each FakeActivity<br>📙 Note: brainstorming-A2
 
 MProc-->>MProc: prepare intenFilter mappings ❓
 
@@ -130,7 +130,7 @@ MProc ->> . : onCreate
 
 ```
 
-**brainstorming in A2:**
+**brainstorming in A2 - setup intentFilter for each FakeActivity:**
 - what we already have
 	- intent matching logic; but it may not work while exposing to customized mediator
 	- matching logic only works under some circumstances ---- applied after intentFilter written in manifest.xml
@@ -262,9 +262,9 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMzk4MTcyNCwtMTE0MjYxMzk5MywtMz
-g4MzM2OTU3LDEzNzgyMTk3MDgsLTEyMTQ0OTA3MzUsLTMwODIz
-MDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzOD
-MsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbLTIxMTY5OTIwMzMsLTExNDI2MTM5OTMsLT
+M4ODMzNjk1NywxMzc4MjE5NzA4LC0xMjE0NDkwNzM1LC0zMDgy
+MzA0ODQsNjAzODAzNjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYyMz
+gzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
 
 -->
