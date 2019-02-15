@@ -157,6 +157,9 @@ MProc ->> . : onCreate
 	- matching logic only works under some circumstances ---- applied after intentFilter written in manifest.xml
 - prepare intentFilter for each FakeActivity while initializing each FakeActivity
 
+**narrow down**
+- implement intentFilter manually instread of manafiest one
+
 
 
 
@@ -286,9 +289,9 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMjE4MDUxNSwxODUwMTU4OTM2LC0xMT
-QyNjEzOTkzLC0zODgzMzY5NTcsMTM3ODIxOTcwOCwtMTIxNDQ5
-MDczNSwtMzA4MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOC
-wtMTQ3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1
-ODU0NjAyMl19
+eyJoaXN0b3J5IjpbMjg5Nzk4MzgwLDE4NTAxNTg5MzYsLTExND
+I2MTM5OTMsLTM4ODMzNjk1NywxMzc4MjE5NzA4LC0xMjE0NDkw
+NzM1LC0zMDgyMzA0ODQsNjAzODAzNjQ4LC0xNDUzODgwMDA4LC
+0xNDc2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4
+NTQ2MDIyXX0=
 -->
