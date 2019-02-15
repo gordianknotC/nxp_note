@@ -70,7 +70,7 @@ MProc-->>MEvent: Ready!
 
 Note over MUi, .: 👷 Scenario1: startActivity while discovering Tag<br>.<br>.
 
-Note over MEvent, .: 👷 Scenario1-A: onNewIntent [O]<br>. . . .call onNewIntent or not by comparing current fakeActivity with intent new one<br>. . . .if it's the same then call onNewIntent, if it's not then call onCreate
+Note over MEvent, .: 👷 Scenario1-A: onNewIntent [O]<br>. . . .call onNewIntent or not by comparing current fakeActivity with intent new one<br>. . . .if it's the same then call onNewIntent, if it's not then call onCreate<br>📙 Note: brainstorming-A
 MEvent-->>MEvent: onNewIntent [O]
 MEvent-->>. : onNewIntent [O]
 . -->> . : onNewIntent[O] process ❓
@@ -309,8 +309,9 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDI2MTM5OTMsLTM4ODMzNjk1NywxMz
-c4MjE5NzA4LC0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNjAzODAz
-NjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3MD
-Y2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
+eyJoaXN0b3J5IjpbLTI4NjI5Mjk0NCwtMTE0MjYxMzk5MywtMz
+g4MzM2OTU3LDEzNzgyMTk3MDgsLTEyMTQ0OTA3MzUsLTMwODIz
+MDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzOD
+MsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
+
 -->
