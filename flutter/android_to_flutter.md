@@ -2,9 +2,10 @@
 sequenceDiagram
 participant A1
 participant A2
-participant A3
+participant Sys
 
-A1 -->> 
+A1 -->> A1: prepare intent
+A1 -->> A2: startActivity Expli
 ```
 
 ```mermaid
@@ -172,7 +173,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDc2MDg1MzgsLTE0NTM4ODAwMDgsLT
-E0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1
-NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbMjEwODcwMTI1NCwtMTQ1Mzg4MDAwOCwtMT
+Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
+NjAyMl19
 -->
