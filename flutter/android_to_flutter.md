@@ -76,6 +76,7 @@ MProc-->>MProc: startFakeActivityExplicit
 MProc-->>MProc: createFakeActivity
 MProc->> . : onCreate
 . -->> . : process ❓
+Note left of .: e.g. vitration, start NtagDemo
 . ->> MUi: UI response
 . ->> MAct: startFakeActivity
 MAct -->> MAct: startFakeActivity
@@ -279,8 +280,8 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDUwNjM4NjMsLTEyMTQ0OTA3MzUsLT
-MwODIzMDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYy
-NjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMj
-JdfQ==
+eyJoaXN0b3J5IjpbLTQ3NDkzNDkzOCwtMTIxNDQ5MDczNSwtMz
+A4MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2
+MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl
+19
 -->
