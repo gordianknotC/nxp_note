@@ -42,6 +42,11 @@ Mediator-->> Mediator: prepare target
 Mediator->> A2: onCreate
 ```
 
+--------------------------------------------------------
+
+**Mediator In Detail**
+>**MOn**: Mediator Events  |  **MAct**: Mediator Actions  |  **FOn**: Events of FakeActivity 
+>**FDo**: Logic of Fake Activity  |  **JDo**: Logic of Core Lib
 ```mermaid
 sequenceDiagram
 participant MUi
@@ -210,7 +215,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwMjIyMTIzMSwtMTQ1Mzg4MDAwOCwtMT
-Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
-NjAyMl19
+eyJoaXN0b3J5IjpbLTEyMjM1OTAxNDQsLTE0NTM4ODAwMDgsLT
+E0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1
+NDYwMjJdfQ==
 -->
