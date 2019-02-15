@@ -140,15 +140,13 @@ MProc ->> . : onCreate
 			- demo library
 			- 
 
-**narrow downA**:
+**narrow down**:
 - instantiate each fakeActivity without constructor
 - dependencies thru injection
 - DI thru mediator
 	- ntag demo, intent, nfcadapter 
 - remember nfcintent - tag detected
 - call onNewIntent while already instantiated
-
-
 
 
 **brainstorming in A2 - setup intentFilter for each FakeActivity - IDEATION**
@@ -158,7 +156,7 @@ MProc ->> . : onCreate
 - prepare intentFilter for each FakeActivity while initializing each FakeActivity
 
 **narrow down**
-- implement intentFilter manually instread of manafiest one
+- implement intentFilter manually instread of using the one in manifest.xml
 
 
 
@@ -173,7 +171,7 @@ participant FEvent
 participant FAct
 participant Core
 
-
+. -->> . :onCreate
 
 ```
 
@@ -289,9 +287,9 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg5Nzk4MzgwLDE4NTAxNTg5MzYsLTExND
-I2MTM5OTMsLTM4ODMzNjk1NywxMzc4MjE5NzA4LC0xMjE0NDkw
-NzM1LC0zMDgyMzA0ODQsNjAzODAzNjQ4LC0xNDUzODgwMDA4LC
-0xNDc2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4
-NTQ2MDIyXX0=
+eyJoaXN0b3J5IjpbLTE4NDk0Mzk0NzIsMTg1MDE1ODkzNiwtMT
+E0MjYxMzk5MywtMzg4MzM2OTU3LDEzNzgyMTk3MDgsLTEyMTQ0
+OTA3MzUsLTMwODIzMDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMD
+gsLTE0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4
+NTg1NDYwMjJdfQ==
 -->
