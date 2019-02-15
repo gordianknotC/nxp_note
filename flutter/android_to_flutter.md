@@ -70,7 +70,7 @@ MProc -->> MProc: getTargetByIntent
 MProc -->> MProc: startExplicitActivity
 MProc -->> MProc: createFakeActivity
 MProc ->> . : onCreate
-
+. -->> MUi : Ui response
 
 
 
@@ -290,7 +290,7 @@ Mediator->> A2: onCreate
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzMTE3MTUwNSwyMDM2MDc5MjgyLC0xMz
+eyJoaXN0b3J5IjpbMTk5NTE5NDg1NywyMDM2MDc5MjgyLC0xMz
 Y4NjQ0MTY2LC0xNDYwMTYzODA2LC0xNzIxOTQxOTIzLDE1NDU1
 NzU3NCw3Mjc1MTk3OCwxODUwMTU4OTM2LC0xMTQyNjEzOTkzLC
 0zODgzMzY5NTcsMTM3ODIxOTcwOCwtMTIxNDQ5MDczNSwtMzA4
