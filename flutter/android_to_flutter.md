@@ -70,7 +70,7 @@ MProc-->>MEvent: Ready!
 
 Note over MUi, .: 👷 Scenario1: startActivity while discovering Tag<br>.<br>.
 
-Note over MEvent, .: 👷 Scenario1-A: onNewIntent [O]<br>. . . .call onNewIntent or not by comparing current fakeActivity with intent new one<br>. . . .if it's the same then call onNewIntent, if it's not then call onCreate<br>📙 Note: brainstorming-A
+Note over MEvent, .: 👷 Scenario1-A: onNewIntent [O]<br>. . . .call onNewIntent or not by comparing current fakeActivity with intent new one<br>. . . .if it's the same then call onNewIntent, if it's not then call onCreate<br>📙 Note: brainstorming-A1
 MEvent-->>MEvent: onNewIntent [O]
 MEvent-->>. : onNewIntent [O]
 . -->> . : onNewIntent[O] process ❓
@@ -260,56 +260,9 @@ Mediator-->>Mediator: UI
 ```
 
 ------------------
-
-
-
-```mermaid
-graph TB
-	subgraph FakeActivity
-		FonCreate
-		FonPause 
-		FonResume 
-		FonResult 
-		FonIntent 
-		FonReceive 
-		
-		subgraph fake activity
-			FonPause -.- FonResume
-			FonResume -.- FonCreate
-			FonCreate --> Fcontainer
-		end
-		
-		subgraph listeners
-			Fcontainer --- FonIntent
-			Fcontainer --- FonResult
-			Fcontainer --- FonReceive
-		end
-	end
-
-	subgraph Mediators-Flutter-UI-Plugin
-		MStartActivity --> FonCreate
-		MStartResult --> FonResult
-		MonNIntent -.- MStartResult
-		MonReceive -.- MonNIntent
-		MonNIntent -.- MStartActivity
-		subgraph M1
-			M1intent --- M1target
-			M1intent --- M1data
-			M1data --- M1filter
-			M1filter --- M1target
-		end
-		MStartActivity
-		MStartResult
-		MStartActivity -.- MStartResult
-		MStartResult -.- M1intent
-	end
-	Fcontainer --> MStartActivity
-	Fcontainer --> MStartResult
-```
-
-
+ 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4NjI5Mjk0NCwtMTE0MjYxMzk5MywtMz
+eyJoaXN0b3J5IjpbMTIzMzk4MTcyNCwtMTE0MjYxMzk5MywtMz
 g4MzM2OTU3LDEzNzgyMTk3MDgsLTEyMTQ0OTA3MzUsLTMwODIz
 MDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzOD
 MsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
