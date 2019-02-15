@@ -1,5 +1,10 @@
 
 
+						| abbv|    description  | abbv |    description  |
+						|-----|-----------------|------|-----------------|
+						| MOn | Mediator Events | MAct | MediatorActions |
+						| FOn | FakeActEvent    | FDo  | FakeLogic       |
+						| JDo | CoreLogic       |      |				 |
 ```mermaid
 sequenceDiagram
 
@@ -33,11 +38,7 @@ loop scenario1
 	MOn-->JDo: 
 end
 ```
-| abbv|    description  | abbv |    description  |
-|-----|-----------------|------|-----------------|
-| MOn | Mediator Events | MAct | MediatorActions |
-| FOn | FakeActEvent    | FDo  | FakeLogic       |
-| JDo | CoreLogic    
+
 
 
 
@@ -153,6 +154,6 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzODkzNjczOCwtMTQ3NjI2MjM4MywtMT
-EyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl19
+eyJoaXN0b3J5IjpbLTc3NzcwNDk2LC0xNDc2MjYyMzgzLC0xMT
+I0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
 -->
