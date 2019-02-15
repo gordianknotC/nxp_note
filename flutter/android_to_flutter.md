@@ -88,7 +88,12 @@ MProc ->> . : onCreate
 
 Note over MUi, .: 👷 Scenario2: startActivityForResult while discovering Tag<br>.<br>.
 MEvent-->>MEvent: onNewIntent
-
+MEvent-->>MProc: getTargetByIntent [V]
+MProc-->>MProc: getTargetByIntent
+MProc-->>MProc: startFakeActivityExplicit
+MProc-->>MProc: createFakeActivityForResult
+MProc->> . : onCreate
+. -->> . : process ❓
 
 
 
@@ -273,7 +278,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NTQyODE2NCwtMTIxNDQ5MDczNSwtMz
+eyJoaXN0b3J5IjpbMTA5OTExMjMzOSwtMTIxNDQ5MDczNSwtMz
 A4MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2
 MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl
 19
