@@ -197,7 +197,7 @@ FAct -->> FAct: process
 FAct -->> Core: ntag
 Core -->> FAct: response
 FAct -->> FAct: parse
-FAct ->> . : UI response or start Activity
+FAct ->> . : UI response or start Activity, listen for Result [O] [X]
 
 
 ```
@@ -314,10 +314,10 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjAxNjM4MDYsLTE3MjE5NDE5MjMsMT
-U0NTU3NTc0LDcyNzUxOTc4LDE4NTAxNTg5MzYsLTExNDI2MTM5
-OTMsLTM4ODMzNjk1NywxMzc4MjE5NzA4LC0xMjE0NDkwNzM1LC
-0zMDgyMzA0ODQsNjAzODAzNjQ4LC0xNDUzODgwMDA4LC0xNDc2
-MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MD
-IyXX0=
+eyJoaXN0b3J5IjpbMjAxMDg4Mzk1OCwtMTQ2MDE2MzgwNiwtMT
+cyMTk0MTkyMywxNTQ1NTc1NzQsNzI3NTE5NzgsMTg1MDE1ODkz
+NiwtMTE0MjYxMzk5MywtMzg4MzM2OTU3LDEzNzgyMTk3MDgsLT
+EyMTQ0OTA3MzUsLTMwODIzMDQ4NCw2MDM4MDM2NDgsLTE0NTM4
+ODAwMDgsLTE0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2Mz
+ExNyw4NTg1NDYwMjJdfQ==
 -->
