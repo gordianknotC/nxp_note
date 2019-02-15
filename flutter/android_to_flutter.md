@@ -55,12 +55,14 @@ participant MProc
 participant MAct
 
 MProc-->>MProc: initialize plugins
-Note over MProc,MAct: 1) instantiate all FakeActivity<br>2) setup intentFilters for each FakeActivity<br>.<br>in 2)<br>- setup inten 
+Note over MProc,MAct: A1) instantiate all FakeActivity<br>A2) setup intentFilters for each FakeActivity<br>.<br>
 
 MProc-->>MProc: prepare intenFilter mappings
 Note over MProc, MAct: 1) each fakeActivity has several intentFilters<br>2) each fakeActivity map to a unique string action<br>__represents an explicit activity request.<br>_<br> find out who is requesting from and to.
 
 ```
+```
+brainstorm in (A2)<br>- setup intentMat ```
 
 --------------------------------------------------------
 
@@ -219,7 +221,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTkwNzc3ODksLTE0NTM4ODAwMDgsLT
-E0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1
-NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbLTk5NzI0MDc0MSwtMTQ1Mzg4MDAwOCwtMT
+Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
+NjAyMl19
 -->
