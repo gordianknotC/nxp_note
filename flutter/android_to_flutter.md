@@ -21,8 +21,8 @@ Sys ->> A2: onCreate
 
 --------------------------------------------------------
 
-Customize with Mediator
-: **A1**: Action1, **A2**: Action2, **Mediator**: customized mediator for mimic behaviors of internal system
+Replace Sys with Mediator
+: **A1**: Action1, **A2**: Action2, **Mediator**: customized mediator for mimic-behaviors of internal system
 ```mermaid
 sequenceDiagram
 participant A1
@@ -78,7 +78,6 @@ MAct -->> MAct: startFakeActivity
 MAct -->> MProc: getTargetByIntent
 MProc -->> MProc: getTargetByIntent
 MProc -->> MProc: startExplicitActivity
-
 MProc -->> MProc: createFakeActivity
 MProc ->> . : onCreate
 
@@ -249,8 +248,8 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODQ1MTgyMzEsLTEyMTQ0OTA3MzUsLT
-MwODIzMDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYy
-NjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMj
-JdfQ==
+eyJoaXN0b3J5IjpbOTU3NzM1MjAyLC0xMjE0NDkwNzM1LC0zMD
+gyMzA0ODQsNjAzODAzNjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYy
+MzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX
+0=
 -->
