@@ -177,12 +177,12 @@ FEvent -->> FEvent: onCreate, initial detection
 FEvent -->> Core: Initialize NtagDemo
 Core -->> .: share dependency
 
-Note over ., Core: Scenario2: First 
-
-
-
-
+Note over ., Core: Scenario2: startActivity
 . -->> FEvent: onNewIntent
+FEvent -->> FEvent: onNewIntent
+FEvent -->> FAct: doProcess
+FAct -->> F
+FAct -->> Core: ntag
 
 . -->> FEvent: onActivityResult
 
@@ -300,9 +300,9 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MDI5MDQ1OSw3Mjc1MTk3OCwxODUwMT
-U4OTM2LC0xMTQyNjEzOTkzLC0zODgzMzY5NTcsMTM3ODIxOTcw
-OCwtMTIxNDQ5MDczNSwtMzA4MjMwNDg0LDYwMzgwMzY0OCwtMT
-Q1Mzg4MDAwOCwtMTQ3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3
-NjYzMTE3LDg1ODU0NjAyMl19
+eyJoaXN0b3J5IjpbLTE4NTQ5NTcyOTIsNzI3NTE5NzgsMTg1MD
+E1ODkzNiwtMTE0MjYxMzk5MywtMzg4MzM2OTU3LDEzNzgyMTk3
+MDgsLTEyMTQ0OTA3MzUsLTMwODIzMDQ4NCw2MDM4MDM2NDgsLT
+E0NTM4ODAwMDgsLTE0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1
+NzY2MzExNyw4NTg1NDYwMjJdfQ==
 -->
