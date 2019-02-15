@@ -68,6 +68,7 @@ MProc-->>MEvent: Ready!
 
 
 Note over MUi, .: 👷 Scenario1: startActivity while discovering Tag<br>.<br>.
+Note over MUi, .: 👷 Scenario1-A: startActivity while discovering Tag<br>.<br>.
 MEvent-->>MEvent: onNewIntent - is new intent target the same [O] [X]
 MEvent-->>. : onNewIntent [O] [X], call or not by evaluating between current intent and the new one
 . -->> . : onNewIntent[O][X]
@@ -295,8 +296,8 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY0MjM0NjY4LC0zODgzMzY5NTcsMTM3OD
-IxOTcwOCwtMTIxNDQ5MDczNSwtMzA4MjMwNDg0LDYwMzgwMzY0
-OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2MjM4MywtMTEyNDM4NzA2Ni
-wtNDU3NjYzMTE3LDg1ODU0NjAyMl19
+eyJoaXN0b3J5IjpbMTA5MDExNzMsLTM4ODMzNjk1NywxMzc4Mj
+E5NzA4LC0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNjAzODAzNjQ4
+LC0xNDUzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3MDY2LC
+00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
 -->
