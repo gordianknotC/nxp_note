@@ -94,7 +94,8 @@ MProc-->>MProc: startFakeActivityForResultExplicit
 MProc-->>MProc: createFakeActivityForResult
 MProc->> . : onCreate - open auth
 . -->> . : process ❓
-
+. ->> MUi: UI response
+. ->> MAct: startFakeActivity
 
 
 ```
@@ -278,8 +279,8 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNDY4MjExNiwtMTIxNDQ5MDczNSwtMz
-A4MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2
-MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl
-19
+eyJoaXN0b3J5IjpbLTExNDUwNjM4NjMsLTEyMTQ0OTA3MzUsLT
+MwODIzMDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYy
+NjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMj
+JdfQ==
 -->
