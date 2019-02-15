@@ -29,10 +29,11 @@ end
 Note over MOn, JDo: Scenario 2: startNewIntent while user triggering action
 MAct-->>MAct: Flutter Channel
 MAct-->>MOn: onNewIntent
-MOn-->>MOn: onNewIntent
 loop scenario1
 	MOn-->JDo: 
 end
+
+
 ```
 
 ```mermaid
@@ -147,6 +148,6 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk2MDY2MDkxLC0xNDc2MjYyMzgzLC0xMT
-I0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
+eyJoaXN0b3J5IjpbLTE3ODEwNjA3NiwtMTQ3NjI2MjM4MywtMT
+EyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl19
 -->
