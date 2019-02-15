@@ -1,6 +1,13 @@
+```mermaid
+sequenceDiagram
+participant MUi
+participant MEvent
+participant MInt
+```
 
-**MOn**: Mediator Events  |  **MAct**: Mediator Actions  |  **FOn**: Events of FakeActivity 
- **FDo**: Logic of Fake Activity  |  **JDo**: Logic of Core Lib
+
+>**MOn**: Mediator Events  |  **MAct**: Mediator Actions  |  **FOn**: Events of FakeActivity 
+>**FDo**: Logic of Fake Activity  |  **JDo**: Logic of Core Lib
 ```mermaid
 sequenceDiagram
 
@@ -34,9 +41,8 @@ loop scenario1
 	MOn-->JDo: 
 end
 ```
-							| MOn | Mediator Events | MAct | MediatorActions |
-							| FOn | FakeActEvent    | FDo  | FakeLogic       |
-							| JDo | CoreLogic       |      |				 |
+>**MOn**: Mediator Events  |  **MAct**: Mediator Actions  |  **FOn**: Events of FakeActivity 
+>**FDo**: Logic of Fake Activity  |  **JDo**: Logic of Core Lib
 
 
 ----------------
@@ -153,7 +159,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk2OTM0MjE1LC0xNDUzODgwMDA4LC0xND
-c2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2
-MDIyXX0=
+eyJoaXN0b3J5IjpbMTU5NTAzNjkyNiwtMTQ1Mzg4MDAwOCwtMT
+Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
+NjAyMl19
 -->
