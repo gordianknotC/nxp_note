@@ -32,9 +32,13 @@ MAct-->>MOn: onNewIntent
 loop scenario1
 	MOn-->JDo: 
 end
-
-
 ```
+|  |  |||
+|-----|-----------------|------|-----------------|
+| MOn | Mediator Events | MAct | MediatorActions |
+| FOn | Fake
+
+
 
 ```mermaid
 sequenceDiagram
@@ -148,6 +152,6 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjcwMjQzMDgsLTE0NzYyNjIzODMsLT
+eyJoaXN0b3J5IjpbLTEwOTI4OTAwNjIsLTE0NzYyNjIzODMsLT
 ExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
 -->
