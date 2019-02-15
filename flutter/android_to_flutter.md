@@ -100,7 +100,7 @@ MProc ->> . : onCreate
 
 Note over MUi, .: 👷 Scenario2: startActivityForResult while trigger auth request<br>.<br>.
 
-Note over MEvent, .: 👷 Scenario2-A: onNewIntent [O]<br>. . . .call onNewIntent or not by comparing currentIntent with the new one<br>. . . .if it's the same then call onNewIntent, if it's not then call onCreate
+Note over MEvent, .: 👷 Scenario2-A: onNewIntent [O]<br>. . . . 
 MEvent-->>MEvent: onNewIntent [O]
 MEvent-->>. : onNewIntent [O]
 . -->> . : onNewIntent[O] process ❓
@@ -309,8 +309,8 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA2MDk2MDMsLTM4ODMzNjk1NywxMzc4Mj
-E5NzA4LC0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNjAzODAzNjQ4
-LC0xNDUzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3MDY2LC
-00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
+eyJoaXN0b3J5IjpbLTExNDI2MTM5OTMsLTM4ODMzNjk1NywxMz
+c4MjE5NzA4LC0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNjAzODAz
+NjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3MD
+Y2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
 -->
