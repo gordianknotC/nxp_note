@@ -1,3 +1,4 @@
+Original 
 ```mermaid
 sequenceDiagram
 participant A1
@@ -15,8 +16,10 @@ A1 -->> Sys: startActivity Implicitly
 Sys-->> Sys: filterIntent
 Sys-->> Sys: startActivity with explicit target
 Sys ->> A2: onCreate
-```
+``` 
 
+----------------------------------------------------------------
+replace sys with customized mediator
 ```mermaid
 sequenceDiagram
 participant A1
@@ -33,7 +36,6 @@ Note over A1, Mediator: Scenario2: Explicit intent
 A1 -->> A1: prepare intent
 A1 -->> Mediator: startActivity Implicitly
 Mediator-->> Mediator: prepare target
-Mediator-->> Mediator: startActivity with explicit target
 Mediator->> A2: onCreate
 ```
 
@@ -202,7 +204,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMTg2NTA3MSwtMTQ1Mzg4MDAwOCwtMT
-Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
-NjAyMl19
+eyJoaXN0b3J5IjpbMzY1MTU2ODg3LC0xNDUzODgwMDA4LC0xND
+c2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2
+MDIyXX0=
 -->
