@@ -63,7 +63,7 @@ Note over MProc, MAct: 1) each fakeActivity has several intentFilters<br>2) each
 ```
 brainstorming in A2:
 - what we already have
-	- some intent matching logic but it's not valid while exposing to customized mediator
+	- intent matching logic; but it may not work while exposing to customized mediator
 	- matching logic only works under some circumstances ---- applied after intentFilter in manifest
 - prepare intentFilter for each FakeActivity	
 
@@ -225,7 +225,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTkxNTA3NjAsLTE0NTM4ODAwMDgsLT
-E0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1
-NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbLTk5ODI2MTQzNSwtMTQ1Mzg4MDAwOCwtMT
+Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
+NjAyMl19
 -->
