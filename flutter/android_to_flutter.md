@@ -65,7 +65,8 @@ brainstorming in A2:
 - what we already have
 	- intent matching logic; but it may not work while exposing to customized mediator
 	- matching logic only works under some circumstances ---- applied after intentFilter in manifest
-- prepare intentFilter for each FakeActivity	
+- prepare intentFilter for each FakeActivity while initializing each FakeActivity
+
 
 
 --------------------------------------------------------
@@ -225,7 +226,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5ODI2MTQzNSwtMTQ1Mzg4MDAwOCwtMT
+eyJoaXN0b3J5IjpbLTUzNzY2NjQwMCwtMTQ1Mzg4MDAwOCwtMT
 Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
 NjAyMl19
 -->
