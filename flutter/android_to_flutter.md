@@ -1,49 +1,5 @@
  
 
-Original System
-: **A1**: Action1, **A2**: Action2, **Sys**: internal system
-```mermaid
-sequenceDiagram
-participant A1
-participant A2
-participant Sys
-
-Note over A1, A2: Scenario1: Implicit intent
-A1 -->> A1: prepare intent
-A1 -->> A1: startActivity with explicit target
-A1 ->>  A2: onCreate
-
-Note over A1, Sys: Scenario2: Explicit intent
-A1 -->> A1: prepare intent
-A1 -->> Sys: startActivity Implicitly
-Sys-->> Sys: filterIntent
-Sys-->> Sys: startActivity with explicit target
-Sys ->> A2: onCreate
-``` 
-
---------------------------------------------------------
-
-Replace Sys with Mediator
-: **A1**: Action1, **A2**: Action2, **Mediator**: customized mediator for mimic-behaviors of internal system
-```mermaid
-sequenceDiagram
-participant A1
-participant A2
-participant Mediator
-
-Note over A1, A2: Scenario1: Implicit intent
-A1 -->> A1: prepare intent
-A1 -->> Mediator: startActivity with explicit target
-Mediator -->> Mediator: prepare target
-Mediator->>  A2: onCreate
-
-Note over A1, Mediator: Scenario2: Explicit intent
-A1 -->> A1: prepare intent
-A1 -->> Mediator: startActivity Implicitly
-Mediator-->> Mediator: prepare target
-Mediator->> A2: onCreate
-```
-
 
 
 
@@ -208,47 +164,6 @@ FAct ->> . : UI response or start Activity, listen for Result [O] [X]
 
 
 
->**MOn**: Mediator Events  |  **MAct**: Mediator Actions  |  **FOn**: Events of FakeActivity 
->**FDo**: Logic of Fake Activity  |  **JDo**: Logic of Core Lib
-```mermaid
-sequenceDiagram
-
-participant MOn
-participant MAct
-participant FOn
-participant FDo
-participant JDo
-
-Note over MOn, JDo: 👷 Scenario 1: startActivity while discovering Tag
-MOn-->>MOn: onNewIntent, tag discovered
-MOn-->>MAct: startActivity
-MAct-->>MAct: make intent explicit, prepare target
-MAct->>FOn: onCreate
-FOn-->>FDo: process
-FDo->>JDo: call core function
-JDo->>FDo: response
-FDo->>MOn: send response data to ui via flutter plugin
-
-Note over MOn, JDo: 👷 Scenario 2: startActivity while user triggering action
-MAct-->>MAct: Flutter Channel
-MAct->>FOn: onCreate
-loop scenario1
-	MOn-->JDo: 
-end
-
-Note over MOn, JDo: 👷 Scenario 3: startNewIntent while user triggering action
-MAct-->>MAct: Flutter Channel
-MAct-->>MOn: onNewIntent
-loop scenario1
-	MOn-->JDo: 
-end
-```
->**MOn**: Mediator Events  |  **MAct**: Mediator Actions  |  **FOn**: Events of FakeActivity 
->**FDo**: Logic of Fake Activity  |  **JDo**: Logic of Core Lib
-
-
-----------------
-
 ```mermaid
 sequenceDiagram
 participant Activity
@@ -313,11 +228,64 @@ Mediator-->>Mediator: UI
 
 ------------------
  
+
+
+
+
+
+
+
+
+
+Original System
+: **A1**: Action1, **A2**: Action2, **Sys**: internal system
+```mermaid
+sequenceDiagram
+participant A1
+participant A2
+participant Sys
+
+Note over A1, A2: Scenario1: Implicit intent
+A1 -->> A1: prepare intent
+A1 -->> A1: startActivity with explicit target
+A1 ->>  A2: onCreate
+
+Note over A1, Sys: Scenario2: Explicit intent
+A1 -->> A1: prepare intent
+A1 -->> Sys: startActivity Implicitly
+Sys-->> Sys: filterIntent
+Sys-->> Sys: startActivity with explicit target
+Sys ->> A2: onCreate
+``` 
+
+--------------------------------------------------------
+
+Replace Sys with Mediator
+: **A1**: Action1, **A2**: Action2, **Mediator**: customized mediator for mimic-behaviors of internal system
+```mermaid
+sequenceDiagram
+participant A1
+participant A2
+participant Mediator
+
+Note over A1, A2: Scenario1: Implicit intent
+A1 -->> A1: prepare intent
+A1 -->> Mediator: startActivity with explicit target
+Mediator -->> Mediator: prepare target
+Mediator->>  A2: onCreate
+
+Note over A1, Mediator: Scenario2: Explicit intent
+A1 -->> A1: prepare intent
+A1 -->> Mediator: startActivity Implicitly
+Mediator-->> Mediator: prepare target
+Mediator->> A2: onCreate
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxMDg4Mzk1OCwtMTQ2MDE2MzgwNiwtMT
-cyMTk0MTkyMywxNTQ1NTc1NzQsNzI3NTE5NzgsMTg1MDE1ODkz
-NiwtMTE0MjYxMzk5MywtMzg4MzM2OTU3LDEzNzgyMTk3MDgsLT
-EyMTQ0OTA3MzUsLTMwODIzMDQ4NCw2MDM4MDM2NDgsLTE0NTM4
-ODAwMDgsLTE0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2Mz
-ExNyw4NTg1NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbLTEzNjg2NDQxNjYsLTE0NjAxNjM4MDYsLT
+E3MjE5NDE5MjMsMTU0NTU3NTc0LDcyNzUxOTc4LDE4NTAxNTg5
+MzYsLTExNDI2MTM5OTMsLTM4ODMzNjk1NywxMzc4MjE5NzA4LC
+0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNjAzODAzNjQ4LC0xNDUz
+ODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2Nj
+MxMTcsODU4NTQ2MDIyXX0=
 -->
