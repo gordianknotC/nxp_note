@@ -186,6 +186,7 @@ FAct -->> Core: ntag
 Core -->> FAct: response
 FAct -->> FAct: parse
 FAct ->> . : UI response
+ 
 
 . -->> FEvent: onActivityResult
 
@@ -303,9 +304,9 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NTU3NTc0LDcyNzUxOTc4LDE4NTAxNT
-g5MzYsLTExNDI2MTM5OTMsLTM4ODMzNjk1NywxMzc4MjE5NzA4
-LC0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNjAzODAzNjQ4LC0xND
-UzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2
-NjMxMTcsODU4NTQ2MDIyXX0=
+eyJoaXN0b3J5IjpbLTEzMTA1OTc4MCwxNTQ1NTc1NzQsNzI3NT
+E5NzgsMTg1MDE1ODkzNiwtMTE0MjYxMzk5MywtMzg4MzM2OTU3
+LDEzNzgyMTk3MDgsLTEyMTQ0OTA3MzUsLTMwODIzMDQ4NCw2MD
+M4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzODMsLTExMjQz
+ODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
 -->
