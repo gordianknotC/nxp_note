@@ -61,7 +61,10 @@ MProc-->>MProc: prepare intenFilter mappings
 Note over MProc, MAct: 1) each fakeActivity has several intentFilters<br>2) each fakeActivity map to a unique string action<br>__represents an explicit activity request.<br>_<br> find out who is requesting from and to.
 
 ```
-brain
+brainstorming in A2:
+- what we already have
+	- some intent matching logic but it's not valid while exposing to customized mediator
+	- only under some circumstan 
 
 
 
@@ -222,7 +225,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NTkyOTczMSwtMTQ1Mzg4MDAwOCwtMT
-Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
-NjAyMl19
+eyJoaXN0b3J5IjpbMTczMzE0OTEzLC0xNDUzODgwMDA4LC0xND
+c2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2
+MDIyXX0=
 -->
