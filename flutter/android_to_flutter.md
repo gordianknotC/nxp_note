@@ -128,20 +128,23 @@ MProc -->> MProc: createFakeActivity
 MProc ->> . : onCreate  
 
 ```
-**brainstorming in A1 -  how onNewIntent in behavior**
+**brainstorming in A1 -  how onNewIntent in behavior - IDEATION**
 - fakeActivity has no ui resources
 	- once instantiated never mind disposing for release just like normal library
 		- only create once - onCreate only called once
-			- allways call onNewIntent? while new receiving re
+			- ❓ allways call onNewIntent while new receiving intent requests???
 	- in real Activity: each Activity might hold its own resources, but fakeActivity should not operate like that
 		- some resources can be shared
 			- current intent, 
 
-**brainstorming in A2 - setup intentFilter for each FakeActivity:**
+**brainstorming in A2 - setup intentFilter for each FakeActivity - IDEATION**
 - what we already have
 	- intent matching logic; but it may not work while exposing to customized mediator
 	- matching logic only works under some circumstances ---- applied after intentFilter written in manifest.xml
 - prepare intentFilter for each FakeActivity while initializing each FakeActivity
+
+
+
 
 -------------------------------------------------------
 **FakeActivity in Detail**
@@ -269,7 +272,7 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMzM3MjY2NywtMTE0MjYxMzk5MywtMz
+eyJoaXN0b3J5IjpbMTMwMzkxNTc3MSwtMTE0MjYxMzk5MywtMz
 g4MzM2OTU3LDEzNzgyMTk3MDgsLTEyMTQ0OTA3MzUsLTMwODIz
 MDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzOD
 MsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
