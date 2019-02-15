@@ -102,15 +102,15 @@ Note left of .: e.g. show auth dialog
 MUi -->> MUi: user interact or none
 MUi -->> MEvent: listen for result  [O] [X]
 MEvent -->> MEvent: onActivityResult
-MEvent ->> . : onActivityResult
-. -->> . : onActivityResult
+MEvent ->> . : call onActivityResult
+. -->> . : onActivityResult [pass] [failed]
 . ->> MAct: startFakeActivity
 MAct -->> MAct: startFakeActivity
 MAct -->> MProc: getTargetByIntent
 MProc -->> MProc: getTargetByIntent
 MProc -->> MProc: startExplicitActivity
 MProc -->> MProc: createFakeActivity
-MProc ->> . : onCreate
+MProc ->> . : onCreate [pass] [failed]
 
 
 ```
@@ -294,8 +294,8 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3ODIxOTcwOCwtMTIxNDQ5MDczNSwtMz
-A4MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2
-MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl
-19
+eyJoaXN0b3J5IjpbLTg4MzEzMjc5NCwxMzc4MjE5NzA4LC0xMj
+E0NDkwNzM1LC0zMDgyMzA0ODQsNjAzODAzNjQ4LC0xNDUzODgw
+MDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMT
+csODU4NTQ2MDIyXX0=
 -->
