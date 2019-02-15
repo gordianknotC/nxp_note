@@ -56,7 +56,7 @@ participant MAct
 
 MProc-->>MProc: initialize plugins
 MProc-->>MProc: prepare intenFilter mappings
-Note right of MProc: either mapping from String action<br>
+Note over MProc: 1) from String action to explicity activity<br>2) from
 ```
 
 --------------------------------------------------------
@@ -216,7 +216,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk3NDQ1NTcyLC0xNDUzODgwMDA4LC0xND
-c2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2
-MDIyXX0=
+eyJoaXN0b3J5IjpbLTMzMTMyMDU2MiwtMTQ1Mzg4MDAwOCwtMT
+Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
+NjAyMl19
 -->
