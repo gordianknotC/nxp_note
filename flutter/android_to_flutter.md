@@ -55,16 +55,16 @@ participant MProc
 participant MAct
 
 MProc-->>MProc: initialize plugins
-Note over MProc,MAct: A1) instantiate all FakeActivity<br>A2) setup intentFilters for each FakeActivity<br>.<br>
+Note over MProc,MAct: A1) instantiate all FakeActivity<br>A2) setup intentFilters for each FakeActivity<br>
 
 MProc-->>MProc: prepare intenFilter mappings
 Note over MProc, MAct: 1) each fakeActivity has several intentFilters<br>2) each fakeActivity map to a unique string action<br>__represents an explicit activity request.<br>_<br> find out who is requesting from and to.
 
 ```
-brainstorming in A2:
+**brainstorming in A2:**
 - what we already have
 	- intent matching logic; but it may not work while exposing to customized mediator
-	- matching logic only works under some circumstances ---- applied after intentFilter in manifest
+	- matching logic only works under some circumstances ---- applied after intentFilter written in manifest.xml
 - prepare intentFilter for each FakeActivity while initializing each FakeActivity
 
 
@@ -226,7 +226,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNzY2NjQwMCwtMTQ1Mzg4MDAwOCwtMT
+eyJoaXN0b3J5IjpbMjA2MjMzNzM5NiwtMTQ1Mzg4MDAwOCwtMT
 Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
 NjAyMl19
 -->
