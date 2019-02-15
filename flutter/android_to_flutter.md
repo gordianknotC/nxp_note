@@ -172,17 +172,20 @@ participant FAct
 participant Core
 
 Note over ., Core: Scenario1: Initialize All FakeActivities
-. -->> FEvent :onCreate
+. ->> FEvent :onCreate
 FEvent -->> FEvent: onCreate, initial detection
 FEvent -->> Core: Initialize NtagDemo
 Core -->> .: share dependency
 
 Note over ., Core: Scenario2: startActivity
-. -->> FEvent: onNewIntent
+. ->> FEvent: onNewIntent
 FEvent -->> FEvent: onNewIntent
 FEvent -->> FAct: doProcess
-FAct -->> F
+FAct -->> FAct: process
 FAct -->> Core: ntag
+Core -->> FAct: response
+FAct -->> FAct: parse
+FAct ->> . : UI response
 
 . -->> FEvent: onActivityResult
 
@@ -300,9 +303,9 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTQ5NTcyOTIsNzI3NTE5NzgsMTg1MD
-E1ODkzNiwtMTE0MjYxMzk5MywtMzg4MzM2OTU3LDEzNzgyMTk3
-MDgsLTEyMTQ0OTA3MzUsLTMwODIzMDQ4NCw2MDM4MDM2NDgsLT
-E0NTM4ODAwMDgsLTE0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1
-NzY2MzExNyw4NTg1NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbMTU0NTU3NTc0LDcyNzUxOTc4LDE4NTAxNT
+g5MzYsLTExNDI2MTM5OTMsLTM4ODMzNjk1NywxMzc4MjE5NzA4
+LC0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNjAzODAzNjQ4LC0xND
+UzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2
+NjMxMTcsODU4NTQ2MDIyXX0=
 -->
