@@ -81,14 +81,17 @@ Note over MUi, .: 👷 Scenario1: startActivity while discovering Tag<br>.<br>.
 
 Note over MEvent, .: 👷 Scenario1-A: onNewIntent [O]<br>. . . .call onNewIntent or not by comparing current fakeActivity with intent new one<br>. . . .if it's the same then call onNewIntent, if it's not then call onCreate<br>📙 Note: brainstorming-A1
 MEvent-->>MEvent: onNewIntent [O]
-MEvent-->>. : onNewIntent [O]
+MEvent-->>MProc: getTargetByIntent [V]
+MProc-->>MProc: getTargetByIntent
+MProc-->>MProc: startFakeActivityExplicit - already created
+MProc-->>. : onNewIntent [O]
 . -->> . : onNewIntent[O] process ❓
 
 Note over MEvent, .: 👷 Scenario1-B: onNewIntent [X]<br>.
 MEvent-->>MEvent: onNewIntent [X]
 MEvent-->>MProc: getTargetByIntent [V]
 MProc-->>MProc: getTargetByIntent
-MProc-->>MProc: startFakeActivityExplicit
+MProc-->>MProc: startFakeActivityExplicit - not created
 MProc-->>MProc: createFakeActivity
 MProc->> . : onCreate
 . -->> . : process ❓
@@ -311,9 +314,10 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjE5NDE5MjMsMTU0NTU3NTc0LDcyNz
-UxOTc4LDE4NTAxNTg5MzYsLTExNDI2MTM5OTMsLTM4ODMzNjk1
-NywxMzc4MjE5NzA4LC0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNj
-AzODAzNjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0
-Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
+eyJoaXN0b3J5IjpbLTE0NjAxNjM4MDYsLTE3MjE5NDE5MjMsMT
+U0NTU3NTc0LDcyNzUxOTc4LDE4NTAxNTg5MzYsLTExNDI2MTM5
+OTMsLTM4ODMzNjk1NywxMzc4MjE5NzA4LC0xMjE0NDkwNzM1LC
+0zMDgyMzA0ODQsNjAzODAzNjQ4LC0xNDUzODgwMDA4LC0xNDc2
+MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MD
+IyXX0=
 -->
