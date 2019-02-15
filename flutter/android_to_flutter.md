@@ -173,7 +173,9 @@ participant Core
 
 Note over ., Core: Scenario1: Initialize All FakeActivities
 . -->> FEvent :onCreate
-FEvent -->> FEvent: onCreate, initial
+FEvent -->> FEvent: onCreate, initial detection
+FEvent -->> Core: Initialize NtagDemo
+Core -->> .: share dependency
 
 Note over ., Core: Scenario2: First 
 
@@ -298,7 +300,7 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5ODM1MDQzNyw3Mjc1MTk3OCwxODUwMT
+eyJoaXN0b3J5IjpbLTc0MDI5MDQ1OSw3Mjc1MTk3OCwxODUwMT
 U4OTM2LC0xMTQyNjEzOTkzLC0zODgzMzY5NTcsMTM3ODIxOTcw
 OCwtMTIxNDQ5MDczNSwtMzA4MjMwNDg0LDYwMzgwMzY0OCwtMT
 Q1Mzg4MDAwOCwtMTQ3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3
