@@ -127,8 +127,9 @@ MProc -->> MProc: startExplicitActivity
 MProc -->> MProc: createFakeActivity
 MProc ->> . : onCreate  
 
-
 ```
+**brainstorming in A1 -  how onNewIntent in behavior**
+
 
 **brainstorming in A2 - setup intentFilter for each FakeActivity:**
 - what we already have
@@ -262,9 +263,9 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTY5OTIwMzMsLTExNDI2MTM5OTMsLT
-M4ODMzNjk1NywxMzc4MjE5NzA4LC0xMjE0NDkwNzM1LC0zMDgy
-MzA0ODQsNjAzODAzNjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYyMz
-gzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
+eyJoaXN0b3J5IjpbLTY3MTY3NDE1NCwtMTE0MjYxMzk5MywtMz
+g4MzM2OTU3LDEzNzgyMTk3MDgsLTEyMTQ0OTA3MzUsLTMwODIz
+MDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzOD
+MsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
 
 -->
