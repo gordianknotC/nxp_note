@@ -56,7 +56,7 @@ participant MAct
 
 MProc-->>MProc: initialize plugins
 MProc-->>MProc: prepare intenFilter mappings
-Note over MProc: 1) from String action to explicity activity<br>2) from
+Note over MProc: 1) each fakeActivity has several intentFilter<br>
 ```
 
 --------------------------------------------------------
@@ -216,7 +216,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzMTMyMDU2MiwtMTQ1Mzg4MDAwOCwtMT
+eyJoaXN0b3J5IjpbMTk0MjM4NzAzMCwtMTQ1Mzg4MDAwOCwtMT
 Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
 NjAyMl19
 -->
