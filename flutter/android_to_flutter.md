@@ -53,8 +53,10 @@ MProc->> . : onCreate
 . -->> . : process ❓
 Note left of .: e.g. vitration, initiate Ntag, startDemo,<br>show auth dialog
 . ->> MUi: UI response, listen for result [O] [X]
-MUi -->> MUi: user interact or none
 MUi -->> MEvent: listen for result  [O] [X]
+MUi -->> MUi: user interact or none
+
+
 . ->> MAct: startFakeActivity
 MAct -->> MAct: startFakeActivity
 MAct -->> MProc: getTargetByIntent
@@ -282,10 +284,10 @@ Mediator->> A2: onCreate
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjg2NDQxNjYsLTE0NjAxNjM4MDYsLT
-E3MjE5NDE5MjMsMTU0NTU3NTc0LDcyNzUxOTc4LDE4NTAxNTg5
-MzYsLTExNDI2MTM5OTMsLTM4ODMzNjk1NywxMzc4MjE5NzA4LC
-0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNjAzODAzNjQ4LC0xNDUz
-ODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2Nj
-MxMTcsODU4NTQ2MDIyXX0=
+eyJoaXN0b3J5IjpbMjAzNjA3OTI4MiwtMTM2ODY0NDE2NiwtMT
+Q2MDE2MzgwNiwtMTcyMTk0MTkyMywxNTQ1NTc1NzQsNzI3NTE5
+NzgsMTg1MDE1ODkzNiwtMTE0MjYxMzk5MywtMzg4MzM2OTU3LD
+EzNzgyMTk3MDgsLTEyMTQ0OTA3MzUsLTMwODIzMDQ4NCw2MDM4
+MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzODMsLTExMjQzOD
+cwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
 -->
