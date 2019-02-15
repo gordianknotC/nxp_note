@@ -1,11 +1,21 @@
 ```mermaid
 sequenceDiagram
+participant A1
+participant A2
+participant A3
+
+A1 -->> 
+```
+
+```mermaid
+sequenceDiagram
 participant MUi
 participant MEvent
 participant MProc
 participant MAct
 
 MProc-->>MProc: initialize plugins
+MProc-->>MProc: 
 ```
 
 
@@ -162,7 +172,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk5OTY5MTI3LC0xNDUzODgwMDA4LC0xND
-c2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2
-MDIyXX0=
+eyJoaXN0b3J5IjpbLTEwNDc2MDg1MzgsLTE0NTM4ODAwMDgsLT
+E0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1
+NDYwMjJdfQ==
 -->
