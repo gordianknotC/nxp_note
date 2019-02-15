@@ -68,7 +68,8 @@ MProc-->>MEvent: Ready!
 
 
 Note over MUi, .: 👷 Scenario1: startActivity while discovering Tag<br>.<br>.
-MEvent-->>MEvent: onNewIntent - isWi
+MEvent-->>MEvent: onNewIntent - is new intent target the same [O] [X]
+MEvent-->>. : onNewIntent [O] [X]
 
 MEvent-->>MProc: getTargetByIntent [V]
 MProc-->>MProc: getTargetByIntent
@@ -294,8 +295,8 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDQzNDU2OTIsLTM4ODMzNjk1NywxMz
-c4MjE5NzA4LC0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNjAzODAz
-NjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3MD
-Y2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
+eyJoaXN0b3J5IjpbLTI1NzEyMjQ3MiwtMzg4MzM2OTU3LDEzNz
+gyMTk3MDgsLTEyMTQ0OTA3MzUsLTMwODIzMDQ4NCw2MDM4MDM2
+NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzODMsLTExMjQzODcwNj
+YsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
 -->
