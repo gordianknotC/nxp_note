@@ -101,8 +101,8 @@ Note left of .: e.g. show auth dialog
 . ->> MUi: UI response, listen for result [O] [X]
 MUi -->> MUi: user interact or none
 MUi -->> MEvent: listen for result  [O] [X]
-MEvent -->> MEvent: onActivityResult
-MEvent ->> . : call onActivityResult
+MEvent -->> MEvent: onActivityResult, result passed from dart to platform
+MEvent ->> . : call onActivityResult with result
 . -->> . : onActivityResult [pass] [failed]
 . ->> MAct: startFakeActivity
 MAct -->> MAct: startFakeActivity
@@ -110,7 +110,7 @@ MAct -->> MProc: getTargetByIntent
 MProc -->> MProc: getTargetByIntent
 MProc -->> MProc: startExplicitActivity
 MProc -->> MProc: createFakeActivity
-MProc ->> . : onCreate [pass] [failed]
+MProc ->> . : onCreate  
 
 
 ```
@@ -294,7 +294,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MzEzMjc5NCwxMzc4MjE5NzA4LC0xMj
+eyJoaXN0b3J5IjpbLTM4ODMzNjk1NywxMzc4MjE5NzA4LC0xMj
 E0NDkwNzM1LC0zMDgyMzA0ODQsNjAzODAzNjQ4LC0xNDUzODgw
 MDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMT
 csODU4NTQ2MDIyXX0=
