@@ -1,4 +1,5 @@
-Original 
+Original System
+: **A1**: Action1, **A2**: Action2, **Sys**: internal system
 ```mermaid
 sequenceDiagram
 participant A1
@@ -18,8 +19,8 @@ Sys-->> Sys: startActivity with explicit target
 Sys ->> A2: onCreate
 ``` 
 
-----------------------------------------------------------------
-replace sys with customized mediator
+Customize with Mediator
+: **A1**: Action1, **A2**: Action2, **Mediator**: cus
 ```mermaid
 sequenceDiagram
 participant A1
@@ -204,7 +205,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY1MTU2ODg3LC0xNDUzODgwMDA4LC0xND
-c2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2
-MDIyXX0=
+eyJoaXN0b3J5IjpbMTczMTM4MTIsLTE0NTM4ODAwMDgsLTE0Nz
+YyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYw
+MjJdfQ==
 -->
