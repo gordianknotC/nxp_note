@@ -67,7 +67,7 @@ participant MAct
 participant .
 
 MProc-->>MProc: initialize plugins ❓
-Note over MProc,MAct: A1) instantiate all FakeActivity<br>A2) setup intentFilters for each FakeActivity<br>📙 Note: brainstorming-A2
+Note over MProc,MAct: A1) instantiate all FakeActivity and strip useless code in onCreate<br>A2) setup intentFilters for each FakeActivity<br>📙 Note: brainstorming-A2
 
 MProc-->>MProc: prepare intenFilter mappings ❓
 
@@ -311,9 +311,9 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ3ODUyNzEsMTU0NTU3NTc0LDcyNzUxOT
-c4LDE4NTAxNTg5MzYsLTExNDI2MTM5OTMsLTM4ODMzNjk1Nywx
-Mzc4MjE5NzA4LC0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNjAzOD
-AzNjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3
-MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
+eyJoaXN0b3J5IjpbLTE3MjE5NDE5MjMsMTU0NTU3NTc0LDcyNz
+UxOTc4LDE4NTAxNTg5MzYsLTExNDI2MTM5OTMsLTM4ODMzNjk1
+NywxMzc4MjE5NzA4LC0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNj
+AzODAzNjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0
+Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
 -->
