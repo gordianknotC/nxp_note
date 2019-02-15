@@ -22,10 +22,13 @@ FDo->>MOn: send response data to ui via flutter plugin
 Note over MOn, JDo: Scenario 2: startActivity while user triggering action
 MAct-->>MAct: Flutter Channel
 MAct->>FOn: onCreate
-Note over FOn, JDo: Apply rest of process on Scenario1
+loop scenario1
+end
 
 Note over MOn, JDo: Scenario 2: startNewIntent while user triggering action
 MAct-->>MAct: Flutter Channel
+MAct-->>MOn: onNewIntent
+MOn-->>MOn: onNewIntent
 
 ```
 
@@ -141,6 +144,6 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIyOTE5NTkyLC0xNDc2MjYyMzgzLC0xMT
-I0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
+eyJoaXN0b3J5IjpbMjAzNzk4NzM0OSwtMTQ3NjI2MjM4MywtMT
+EyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl19
 -->
