@@ -70,7 +70,11 @@ MProc-->>MProc: getTargetByIntent
 MProc-->>MProc: startExplicitActivity
 MProc->> . : onCreate
 . -->> . : process
-. ->> onEvent : 
+. ->> MEvent: UI response
+. ->> MAct: startActivity
+MAct -->> MProc: getTargetByIntent
+MProc -->> MProc: startExplicitActivity
+P
 
 ```
 **brainstorming in A2:**
@@ -238,7 +242,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc1MTc2MTg3LC0xNDUzODgwMDA4LC0xND
-c2MjYyMzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2
-MDIyXX0=
+eyJoaXN0b3J5IjpbNzc4NDkwMjIsLTE0NTM4ODAwMDgsLTE0Nz
+YyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYw
+MjJdfQ==
 -->
