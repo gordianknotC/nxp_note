@@ -55,7 +55,8 @@ participant MProc
 participant MAct
 
 MProc-->>MProc: initialize plugins
-MProc-->>MProc: 
+MProc-->>MProc: prepare intenFilter mappings
+Note right of MProc: either mapping fro
 ```
 
 --------------------------------------------------------
@@ -215,7 +216,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjM1OTAxNDQsLTE0NTM4ODAwMDgsLT
-E0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1
-NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbLTE2NjUxNjQwNCwtMTQ1Mzg4MDAwOCwtMT
+Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
+NjAyMl19
 -->
