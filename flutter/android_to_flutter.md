@@ -9,7 +9,7 @@ participant FOn
 participant FDo
 participant JDo
 
-Note over MOn, JDo: Scenario 1: startActivity while discovering Tag
+Note over MOn, JDo: 👷 Scenario 1: startActivity while discovering Tag
 MOn-->>MOn: onNewIntent, tag discovered
 MOn-->>MAct: startActivity
 MAct-->>MAct: make intent explicit, prepare target
@@ -19,14 +19,14 @@ FDo->>JDo: call core function
 JDo->>FDo: response
 FDo->>MOn: send response data to ui via flutter plugin
 
-Note over MOn, JDo: Scenario 2: startActivity while user triggering action
+Note over MOn, JDo: 👷 Scenario 2: startActivity while user triggering action
 MAct-->>MAct: Flutter Channel
 MAct->>FOn: onCreate
 loop scenario1
 	MOn-->JDo: 
 end
 
-Note over MOn, JDo: Scenario 2: startNewIntent while user triggering action
+Note over MOn, JDo: 👷 Scenario 3: startNewIntent while user triggering action
 MAct-->>MAct: Flutter Channel
 MAct-->>MOn: onNewIntent
 loop scenario1
@@ -44,7 +44,7 @@ participant Fake
 participant Jar
 
 
-Note over Activity, Fake: Scenario1: Before Ready
+Note over Activity, Fake: 👷 Scenario1: Before Ready
 
 Activity -->> Mediator: A1 initialize plugin
 Mediator -->> Fake: A2 initialize fake activity
@@ -56,7 +56,7 @@ Activity -->> Activity: A5 delegate lifecycle
 Activity -->> Mediator: Finish handing over lifecycle control flow to Mediator
 
 
-Note over Mediator, Jar: Scenario2: Ready - call Jar while discovering tag 
+Note over Mediator, Jar: 👷 Scenario2: Ready - call Jar while discovering tag 
 
 Mediator-->> Mediator: B0 discover tag, onNewIntent, findout receiver
 Mediator->>Jar: B1 do work directly without starting another activity
@@ -64,7 +64,7 @@ Jar->>Mediator: B2 response
 Mediator-->>Mediator: B3 Flutter UI
 
 
-Note over Mediator, Jar: Scenario3: Ready - startActivity while discovering tag
+Note over Mediator, Jar: 👷 Scenario3: Ready - startActivity while discovering tag
 
 Mediator-->> Mediator: C0 discover tag, onNewIntent, findout receiver
 Mediator-->>Mediator: C0 startActivity
@@ -78,7 +78,7 @@ Mediator-->>Mediator: C7 startActivity->onNewIntent ...
 Mediator->>Fake: C8 onCreate
 
 
-Note over Mediator, Jar: Scenario4: Ready - startActivity triggered by Fake layer
+Note over Mediator, Jar: 👷 Scenario4: Ready - startActivity triggered by Fake layer
 
 Fake->>Mediator: D0 startActivity by user or...
 
@@ -87,7 +87,7 @@ Note over Mediator: Jump to Scenario 2
 Note over Mediator: Jump to Scenario 3
 
 
-Note over Mediator, Jar: Scenario4: Ready - startActivityForResult while discovering tag
+Note over Mediator, Jar: 👷 Scenario5: Ready - startActivityForResult while discovering tag
 Mediator-->> Mediator: E0 discover tag, onNewIntent, findout receiver
 Mediator-->>Mediator:E1 startActivityForResult
 Mediator-->>Fake: E2 onCreate
@@ -148,6 +148,6 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODEwNjA3NiwtMTQ3NjI2MjM4MywtMT
-EyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl19
+eyJoaXN0b3J5IjpbLTE4MjcwMjQzMDgsLTE0NzYyNjIzODMsLT
+ExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
 -->
