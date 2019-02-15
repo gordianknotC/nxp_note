@@ -65,7 +65,7 @@ MProc-->>MEvent: Ready!
 
 Note over MEvent, MAct: Scenario1: startActivity while discovering Tag
 MEvent-->>MEvent: onNewIntent
-MEvent-->>MProc: find out target
+MEvent-->>MProc: getTargetByIntent [V]
 MProc-->>MProc: getTargetByIntent
 MProc-->>MProc: startExplicitActivity
 MProc-->>MEvent: onNewIntent
@@ -79,7 +79,8 @@ MProc->> . : onCreate
 . ->> MAct: startActivity
 MAct -->> MProc: getTargetByIntent
 MProc -->> MProc: startExplicitActivity
-MProc -->> MEvent: onNewEvent
+MProc -->> MEvent: onNewIntent
+MEvent -->> MEvent: onNewIntent
 MEvent -->> MProc: getTargetByIntent [X]
 
 Note over MEvent, MProc: since flutter only has one activity which<br> means it always stay on top, hence it's<br> reduntant to find realTarget while <br>receving a new intent
@@ -254,7 +255,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzk3NDU4MDQsLTMwODIzMDQ4NCw2MD
+eyJoaXN0b3J5IjpbLTE1NzA2NDU0MjMsLTMwODIzMDQ4NCw2MD
 M4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzODMsLTExMjQz
 ODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
 -->
