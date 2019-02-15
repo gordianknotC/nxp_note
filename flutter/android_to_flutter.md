@@ -67,12 +67,15 @@ Note over MProc, MAct: B1) each fakeActivity has several intentFilters<br>B2) ea
 MProc-->>MEvent: Ready!
 
 
-Note over MUi, .: 👷 Scenario1: startActivity while discovering Tag<br>.<br>.
-Note over MEvent, .: 👷 Scenario1-A: onNewIntent [O]<br>. . . .call onNewIntent or not by comparing currentIntent with the new one<br>. . . .if it's the same then call onNewIntent, if it's not then call onCreate
 
+Note over MUi, .: 👷 Scenario1: startActivity while discovering Tag<br>.<br>.
+
+Note over MEvent, .: 👷 Scenario1-A: onNewIntent [O]<br>. . . .call onNewIntent or not by comparing currentIntent with the new one<br>. . . .if it's the same then call onNewIntent, if it's not then call onCreate
 MEvent-->>MEvent: onNewIntent [O]
 MEvent-->>. : onNewIntent [O]
-. -->> . : onNewIntent[O]
+. -->> . : onNewIntent[O] process ❓
+
+Note over MEvent, .: 👷 Scenario1-B: onNewIntent [X]<br>.
 MEvent-->>MProc: getTargetByIntent [V]
 MProc-->>MProc: getTargetByIntent
 MProc-->>MProc: startFakeActivityExplicit
@@ -297,7 +300,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTY1MDU3MDksLTM4ODMzNjk1NywxMz
+eyJoaXN0b3J5IjpbLTExNjIwNzcwMzcsLTM4ODMzNjk1NywxMz
 c4MjE5NzA4LC0xMjE0NDkwNzM1LC0zMDgyMzA0ODQsNjAzODAz
 NjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYyMzgzLC0xMTI0Mzg3MD
 Y2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
