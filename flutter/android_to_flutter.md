@@ -57,7 +57,9 @@ Note over MProc, .: 👷 Scenario1-B1: delegate ui to user<br>.
 . ->> MUi: UI response, listen for result [O] [X]
 MUi -->> MEvent: listen for result  [O] [X]
 MUi -->> MUi: user interact or none
-Mui -->> MEvent: on
+MUi -->> MEvent: onResult
+MEvent -->> MEvent: onResult
+MEvent -->> . : onActivityResult
 
 
 Note over MProc, .: 👷 Scenario1-B2: direct ui to user<br>.
@@ -288,11 +290,11 @@ Mediator->> A2: onCreate
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDE0MjA5MzIsMjAzNjA3OTI4MiwtMT
-M2ODY0NDE2NiwtMTQ2MDE2MzgwNiwtMTcyMTk0MTkyMywxNTQ1
-NTc1NzQsNzI3NTE5NzgsMTg1MDE1ODkzNiwtMTE0MjYxMzk5My
-wtMzg4MzM2OTU3LDEzNzgyMTk3MDgsLTEyMTQ0OTA3MzUsLTMw
-ODIzMDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYyNj
-IzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJd
-fQ==
+eyJoaXN0b3J5IjpbLTMzMTE3MTUwNSwyMDM2MDc5MjgyLC0xMz
+Y4NjQ0MTY2LC0xNDYwMTYzODA2LC0xNzIxOTQxOTIzLDE1NDU1
+NzU3NCw3Mjc1MTk3OCwxODUwMTU4OTM2LC0xMTQyNjEzOTkzLC
+0zODgzMzY5NTcsMTM3ODIxOTcwOCwtMTIxNDQ5MDczNSwtMzA4
+MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2Mj
+M4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl19
+
 -->
