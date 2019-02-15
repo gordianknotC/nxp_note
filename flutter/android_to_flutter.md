@@ -68,17 +68,12 @@ MEvent-->>MEvent: onNewIntent
 
 MEvent-->>MProc: getTargetByIntent [V]
 MProc-->>MProc: getTargetByIntent
-
-MProc-->>MProc: startExplicitActivity
-MProc-->>MEvent: onNewIntent
-MEvent-->>MEvent: onNewIntent
-MEvent-->>MProc: getTargetByIntent [X]
-
+MProc-->>MProc: startFakeActivityExplicit
 MProc-->>MProc: createFakeActivity
 MProc->> . : onCreate
 . -->> . : process
 . ->> MUi: UI response
-. ->> MAct: startActivity
+. ->> MAct: startFakeActivity
 MAct -->> MProc: getTargetByIntent
 MProc -->> MProc: startExplicitActivity
 MProc -->> MEvent: onNewIntent
@@ -257,7 +252,8 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTQ0OTA3MzUsLTMwODIzMDQ4NCw2MD
-M4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzODMsLTExMjQz
-ODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
+eyJoaXN0b3J5IjpbMTc2MDIzMTMzNywtMTIxNDQ5MDczNSwtMz
+A4MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2
+MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl
+19
 -->
