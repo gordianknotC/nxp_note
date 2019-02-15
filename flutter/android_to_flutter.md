@@ -1,5 +1,6 @@
 
-MOn:
+MOn: Mediator Events 	    |    MAct: Mediator Actions   |   FOn: Events of FakeActivity
+FDo: Logic of Fake Activity  |  JDo: Logic of Core Lib
 ```mermaid
 sequenceDiagram
 
@@ -152,7 +153,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NDg0MzUwMSwtMTQ1Mzg4MDAwOCwtMT
-Q3NjI2MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0
-NjAyMl19
+eyJoaXN0b3J5IjpbLTE4OTA2MTgyNTMsLTE0NTM4ODAwMDgsLT
+E0NzYyNjIzODMsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1
+NDYwMjJdfQ==
 -->
