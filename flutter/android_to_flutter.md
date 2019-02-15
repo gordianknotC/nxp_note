@@ -9,6 +9,7 @@ participant FOn
 participant FDo
 participant JDo
 
+Note over MOn, JDo: Scenario 1: startActivity while discovering 
 MOn-->>MOn: onNewIntent, tag discovered
 MOn-->>MAct: startActivity
 MAct-->>MAct: make intent explicit, prepare target
@@ -16,7 +17,7 @@ MAct->>FOn: onCreate
 FOn-->>FDo: process
 FDo->>JDo: call core function
 JDo->>FDo: response
-FDo->>MOn: send response data to ui indirectly via call
+FDo->>MOn: send response data to ui via flutter plugin
 ```
 
 ```mermaid
@@ -131,6 +132,6 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIzMTQ4Mzc2LC0xNDc2MjYyMzgzLC0xMT
-I0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX0=
+eyJoaXN0b3J5IjpbLTQyOTA0MzE1NSwtMTQ3NjI2MjM4MywtMT
+EyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl19
 -->
