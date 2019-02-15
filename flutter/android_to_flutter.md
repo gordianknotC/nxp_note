@@ -1,3 +1,5 @@
+ 
+
 Original System
 : **A1**: Action1, **A2**: Action2, **Sys**: internal system
 ```mermaid
@@ -55,10 +57,11 @@ participant MProc
 participant MAct
 participant .
 
-MProc-->>MProc: initialize plugins
+MProc-->>MProc: initialize plugins ❓
 Note over MProc,MAct: A1) instantiate all FakeActivity<br>A2) setup intentFilters for each FakeActivity<br>
 
-MProc-->>MProc: prepare intenFilter mappings
+MProc-->>MProc: prepare intenFilter mappings ❓
+
 Note over MProc, MAct: B1) each fakeActivity has several intentFilters<br>B2) each fakeActivity map to a unique string action<br>__represents an explicit activity request.<br>_<br> find out who is requesting from and to.
 
 MProc-->>MEvent: Ready!
@@ -71,7 +74,7 @@ MProc-->>MProc: getTargetByIntent
 MProc-->>MProc: startFakeActivityExplicit
 MProc-->>MProc: createFakeActivity
 MProc->> . : onCreate
-. -->> . : process ( ? )
+. -->> . : process ❓
 . ->> MUi: UI response
 . ->> MAct: startFakeActivity
 MAct -->> MAct: startFakeActivity
@@ -261,8 +264,8 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NzU4NDE0NSwtMTIxNDQ5MDczNSwtMz
-A4MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2
-MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl
-19
+eyJoaXN0b3J5IjpbNTkzMTAzMDgyLC0xMjE0NDkwNzM1LC0zMD
+gyMzA0ODQsNjAzODAzNjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYy
+MzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX
+0=
 -->
