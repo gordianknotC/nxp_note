@@ -137,6 +137,8 @@ MProc ->> . : onCreate
 		- some resources can be shared
 			- current intent, 
 
+
+
 **brainstorming in A2 - setup intentFilter for each FakeActivity - IDEATION**
 - what we already have
 	- intent matching logic; but it may not work while exposing to customized mediator
@@ -272,7 +274,7 @@ Mediator-->>Mediator: UI
 ------------------
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMzkxNTc3MSwtMTE0MjYxMzk5MywtMz
+eyJoaXN0b3J5IjpbLTk4MTQ2NTM4NSwtMTE0MjYxMzk5MywtMz
 g4MzM2OTU3LDEzNzgyMTk3MDgsLTEyMTQ0OTA3MzUsLTMwODIz
 MDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMDgsLTE0NzYyNjIzOD
 MsLTExMjQzODcwNjYsLTQ1NzY2MzExNyw4NTg1NDYwMjJdfQ==
