@@ -71,7 +71,7 @@ MProc-->>MProc: getTargetByIntent
 MProc-->>MProc: startFakeActivityExplicit
 MProc-->>MProc: createFakeActivity
 MProc->> . : onCreate
-. -->> . : process
+. -->> . : process ( ? )
 . ->> MUi: UI response
 . ->> MAct: startFakeActivity
 MAct -->> MAct: startFakeActivity
@@ -97,6 +97,9 @@ participant .
 participant FEvent
 participant FAct
 participant Core
+
+
+
 ```
 
 
@@ -258,8 +261,8 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTYwMTU0MDcxLC0xMjE0NDkwNzM1LC0zMD
-gyMzA0ODQsNjAzODAzNjQ4LC0xNDUzODgwMDA4LC0xNDc2MjYy
-MzgzLC0xMTI0Mzg3MDY2LC00NTc2NjMxMTcsODU4NTQ2MDIyXX
-0=
+eyJoaXN0b3J5IjpbMTY4NzU4NDE0NSwtMTIxNDQ5MDczNSwtMz
+A4MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwtMTQ3NjI2
+MjM4MywtMTEyNDM4NzA2NiwtNDU3NjYzMTE3LDg1ODU0NjAyMl
+19
 -->
