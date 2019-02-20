@@ -241,7 +241,8 @@ file structure of a flutter project would be look like this
 			main {  
 				//manifest.srcFile "src/main/AndroidManifest.xml"  
 				java.srcDirs += ['src/main/kotlin', 'src/main/java']  
-				res.srcDirs += ['res', flutterProject + '/res']  
+				//res.srcDirs += ['res', flutterProject + '/res']  
+				res.srcDirs += ['res']  
 				assets.srcDirs += ['assets', flutterProject + '/assets']  
 			}  
 ```
@@ -311,8 +312,9 @@ end
  
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwMzgyMTU1MiwtMTg3MjM3MzM3MCwxOD
-E4NDY0NjYwLDE5NDA5NTM2MDIsMTcyNDE5NzY0MSwxMDE4Mzkx
-NDYyLDE0NjAzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLT
-M2NDY4MDMyMSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
+eyJoaXN0b3J5IjpbLTE4MjMwOTQwMTQsLTE4NzIzNzMzNzAsMT
+gxODQ2NDY2MCwxOTQwOTUzNjAyLDE3MjQxOTc2NDEsMTAxODM5
+MTQ2MiwxNDYwMzA4MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC
+0zNjQ2ODAzMjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
+
 -->
