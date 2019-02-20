@@ -29,9 +29,16 @@ onActivityResult
 ```mermaid
 graph LR
   demo.Ready --> launchDemo
-  
+  AuthRequest --> launchDemo
   
 ```
+
+onNewIntent
+```mermaid
+graph LR
+	
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NDM1MTMwNCw0OTM4NDA4XX0=
+eyJoaXN0b3J5IjpbLTE1OTQ0MjAyMzUsNDkzODQwOF19
 -->
