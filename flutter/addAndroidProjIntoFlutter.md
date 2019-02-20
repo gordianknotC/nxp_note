@@ -246,6 +246,7 @@ file structure of a flutter project would be look like this
 				assets.srcDirs += ['assets', flutterProject + '/assets']  
 			}  
 ```
+或者只好停用 android studio Flutter i18n 的 plugin
 
 
 
@@ -312,9 +313,9 @@ end
  
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjMwOTQwMTQsLTE4NzIzNzMzNzAsMT
-gxODQ2NDY2MCwxOTQwOTUzNjAyLDE3MjQxOTc2NDEsMTAxODM5
-MTQ2MiwxNDYwMzA4MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC
-0zNjQ2ODAzMjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
-
+eyJoaXN0b3J5IjpbMTkxNjgwODAyNCwtMTgyMzA5NDAxNCwtMT
+g3MjM3MzM3MCwxODE4NDY0NjYwLDE5NDA5NTM2MDIsMTcyNDE5
+NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgwNTQsMTU2MTAyMjMyOS
+w4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1NSwtMTc3
+NDY5Njg4Ml19
 -->
