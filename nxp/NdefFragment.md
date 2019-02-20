@@ -72,7 +72,8 @@ demo.isReady --> demo.finishAllTasks
 demo.isReady --> $password
 demo.isReady --> !password
 $password --> lauchNdefDemo
-launch
+lauchNdefDemo-.- authStatus
+lauchNdefDemo-.- password
 ```
 ```kotlin
    fun writeNdefClick(){
@@ -94,5 +95,5 @@ launch
         ....
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5Nzc1Mzk1OCw4MjUyNDIwODJdfQ==
+eyJoaXN0b3J5IjpbMTcwOTE2MTU3OCw4MjUyNDIwODJdfQ==
 -->
