@@ -5,10 +5,18 @@
 
 ```mermaid
 graph LR
-	A -.-> B
+	onCreate
+	setNfcForeGround
+	checkNFC
+
+
+	onCreate --> setNfcForeGround
+	setNfcForeGround --> checkNFC
+	setNfcForeGround --> pendingIntent
+	
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkzODQwOF19
+eyJoaXN0b3J5IjpbLTI5MzY4Njg2Niw0OTM4NDA4XX0=
 -->
