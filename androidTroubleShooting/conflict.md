@@ -46,7 +46,11 @@ ndroid {
 		manifest.srcFile "src/main/AndroidManifest.xml"  
 		res.srcDirs = ['src']  
 ```
+
+--------------------------------------
+### strings_en.arb: Error: The file name must end with .xml
+strings_en.arb - 為 Flutter i18n 插件所產生的
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Nzg1NDE5OTQsMTIzOTQzMjI3NywtMT
-Y3ODU0MTk5NCwtMTY0ODc3MDE0NF19
+eyJoaXN0b3J5IjpbLTE5MDE0OTY5NjAsLTE2Nzg1NDE5OTQsMT
+IzOTQzMjI3NywtMTY3ODU0MTk5NCwtMTY0ODc3MDE0NF19
 -->
