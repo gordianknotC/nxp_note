@@ -95,7 +95,13 @@ $unProt--> demo.NDEF
 
 CONFIG
 ```
+
+ShowXDialog
+- FlashDialog
+- AboutDialog
+- HelpDialog
+- D
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDU5MTg0NTQsNjc0OTU5MTc0LDEzNT
-M3NjY1NDMsNDkzODQwOF19
+eyJoaXN0b3J5IjpbMTA2MTM0OTQyOSw2NzQ5NTkxNzQsMTM1Mz
+c2NjU0Myw0OTM4NDA4XX0=
 -->
