@@ -1,5 +1,5 @@
 
-onCreate
+### onCreate
 ```mermaid
 graph LR
 	onCreate
@@ -17,7 +17,7 @@ graph LR
 	!Adapter --> closeNoNfc
 ```
 
-
+### onPause
 ```mermaid
 graph LR
 	onPause --> $Adapter
@@ -25,7 +25,7 @@ graph LR
 	$Adapter --> disableForeGround
 	$Adapter --> Demo.finisTask
 ```
-onActivityResult
+### onActivityResult
 ```mermaid
 graph LR
   demo.Ready --> launchDemo
@@ -33,7 +33,7 @@ graph LR
   
 ```
 
-onNewIntent
+### onNewIntent
 ```mermaid
 graph LR
 	set --> $authStatus
@@ -52,7 +52,7 @@ graph LR
 	isReady --> lauchDemo
 ```
 
-launchDemo
+### launchDemo
 ```mermaid
 graph LR
 authenticate --> demo.Auth
@@ -100,8 +100,12 @@ ShowXDialog
 - FlashDialog
 - AboutDialog
 - HelpDialog
-- D
+- DebugDialog
+```mermaid
+graph LR
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MTM0OTQyOSw2NzQ5NTkxNzQsMTM1Mz
+eyJoaXN0b3J5IjpbLTk4MzAzNTgzMSw2NzQ5NTkxNzQsMTM1Mz
 c2NjU0Myw0OTM4NDA4XX0=
 -->
