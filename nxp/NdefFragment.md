@@ -4,6 +4,12 @@ graph LR
 !Write
 WriteText
 ```
+### enableNdefReadLoop
+```mermaid
+graph LR
+demo.isReady --> demo.finishAllTask
+
+```
 
 ### readNdefClick
 ```mermaid
@@ -14,5 +20,5 @@ WriteText
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODY5NjY3MDRdfQ==
+eyJoaXN0b3J5IjpbNTk5NjY0MjAyXX0=
 -->
