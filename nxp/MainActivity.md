@@ -117,12 +117,12 @@ authenticated --> demo.Auth
 authenticated --> tag_detected
 authenticated --> demo.NDEF
 launchNdefDemo --> !demo.connected
-!demo.connected --> show_message
+!demo.connected --> msg.tap_tag_to_read
 
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MDY4MjQyNiwtMTU2Mjc3Njc2MSwtMT
-QxMjkyOTQyNywtOTgzMDM1ODMxLDY3NDk1OTE3NCwxMzUzNzY2
-NTQzLDQ5Mzg0MDhdfQ==
+eyJoaXN0b3J5IjpbMTk5NTg5NTgzLC0xNTYyNzc2NzYxLC0xND
+EyOTI5NDI3LC05ODMwMzU4MzEsNjc0OTU5MTc0LDEzNTM3NjY1
+NDMsNDkzODQwOF19
 -->
