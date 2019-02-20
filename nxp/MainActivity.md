@@ -86,6 +86,9 @@ demo.LED -.- err-taglost
 
 
 NDEF --> NdefFragment
+
+
+
 NdefFragment --> $unProt
 
 
@@ -93,6 +96,6 @@ NdefFragment --> $unProt
 CONFIG
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc0OTU5MTc0LDEzNTM3NjY1NDMsNDkzOD
-QwOF19
+eyJoaXN0b3J5IjpbLTQ3OTMyODQ1Miw2NzQ5NTkxNzQsMTM1Mz
+c2NjU0Myw0OTM4NDA4XX0=
 -->
