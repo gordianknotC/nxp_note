@@ -56,11 +56,15 @@ launchDemo
 ```mermaid
 graph LR
 authenticate --> demo.Auth
-demo.Auth --- $password
-demo.Auth --- 
-
-
+demo.Auth -.- $password
+demo.Auth -.- ProtectedRW
+NTAGRF -.- SpeedTest
+SpeedTest --> $SRAM
+SpeedTest --> !SR
+LED
+NDEF
+CONFIG
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTY3ODUzMjMsNDkzODQwOF19
+eyJoaXN0b3J5IjpbLTczMjc4MzU3Miw0OTM4NDA4XX0=
 -->
