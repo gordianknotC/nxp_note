@@ -112,12 +112,14 @@ graph LR
 graph LR
 NdefFragment --> launchNdefDemo 
 launchNdefDemo --> demo.connected
-demo.connected --> unProtected
+demo.connected --> authenticated
+authenticated --> demo.Auth
+au
 
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjI3NzY3NjEsLTE0MTI5Mjk0MjcsLT
-k4MzAzNTgzMSw2NzQ5NTkxNzQsMTM1Mzc2NjU0Myw0OTM4NDA4
-XX0=
+eyJoaXN0b3J5IjpbMTgxOTIwOTQ1MSwtMTU2Mjc3Njc2MSwtMT
+QxMjkyOTQyNywtOTgzMDM1ODMxLDY3NDk1OTE3NCwxMzUzNzY2
+NTQzLDQ5Mzg0MDhdfQ==
 -->
