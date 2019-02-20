@@ -78,16 +78,21 @@ LED --> LedFragment
 LedFragment --> Demo.isReady
 Demo.isReady --> finishAllTask
 finishAllTask --> assertConnected
-LedFragment --> $unProtect
-LedFragment --> !unProtect
-$unProtect --> demo.LED
+LedFragment --> $unProte
+LedFragment --> !unProte
+$unProte --> demo.LED
 demo.LED -.- err-taglost
+!unProte --> Alert
 
 
-NDEF
+NDEF --> NdefFragment
+NdefFragment --> $unProt
+
+
+
 CONFIG
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzODg3NzAwOSwxMzUzNzY2NTQzLDQ5Mz
-g0MDhdfQ==
+eyJoaXN0b3J5IjpbNjc0OTU5MTc0LDEzNTM3NjY1NDMsNDkzOD
+QwOF19
 -->
