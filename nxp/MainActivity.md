@@ -39,8 +39,9 @@ graph LR
 	set --> $authStatus
 	set --> $password
 	set --> vibrator
-	doProcess
+	$nfcIntent --> doProcess
+	doProcess --> $tag
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTk0NzMyMjcsNDkzODQwOF19
+eyJoaXN0b3J5IjpbLTY5MTUwNTMwMiw0OTM4NDA4XX0=
 -->
