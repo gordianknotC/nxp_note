@@ -109,11 +109,14 @@ graph LR
 
 ### launchNdefDemo
 ```mermaid
-
+graph LR
+NdefFragment --> launchNdefDemo 
+launchNdefDemo --> demo.connected
+demo.connected --> unProtected
 
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE2NzI4ODc3LC05ODMwMzU4MzEsNjc0OT
-U5MTc0LDEzNTM3NjY1NDMsNDkzODQwOF19
+eyJoaXN0b3J5IjpbLTE0MTI5Mjk0MjcsLTk4MzAzNTgzMSw2Nz
+Q5NTkxNzQsMTM1Mzc2NjU0Myw0OTM4NDA4XX0=
 -->
