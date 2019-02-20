@@ -13,6 +13,22 @@ launchNdefDemo -.- password
 launchNdefDemo -.- authStatus
 
 ```
+```kotlin
+fun enableNdefReadLoop(isChecked: Boolean){  
+   if (isChecked == true && PseudoMainActivity.demo!!.isReady) {  
+      if (PseudoMainActivity.demo == null)  
+         throw ExceptionInInitializerError("demo should not be null")  
+      val demo: Ntag_I2C_Demo = PseudoMainActivity.demo as Ntag_I2C_Demo;  
+  
+  demo.finishAllTasks()  
+      if (PseudoMainActivity.password == null)  
+         throw ExceptionInInitializerError("password should not be null")  
+      PseudoMainActivity.launchNdefDemo(  
+              PseudoMainActivity.authStatus,  
+  PseudoMainActivity.password as ByteArray)  
+   }  
+}
+```
 
 ### readNdefClick
 ```mermaid
@@ -51,6 +67,26 @@ fun readNdefClick(){
 ```mermaid
 
 ```
+```kotlin
+fun writeNdefClick(){  
+      ...
+      if (PseudoMainActivity.demo == null)  
+         throw ExceptionInInitializerError("demo should not be null")  
+      val demo: Ntag_I2C_Demo = PseudoMainActivity.demo as Ntag_I2C_Demo;  
+  // Close the ReadNdef Taks  
+  demo.NDEFReadFinish()  
+  
+      if (isWriteChosen == true) {  
+         if (demo.isReady) {  
+            demo.finishAllTasks()  
+            if (PseudoMainActivity.password == null)  
+               throw ExceptionInInitializerError("password should not be null")  
+            PseudoMainActivity.launchNdefDemo(  
+                    PseudoMainActivity.authStatus,  
+  PseudoMainActivity.password as ByteArray)  
+         }  
+      } ...
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU0MzU5NzUsODI1MjQyMDgyXX0=
+eyJoaXN0b3J5IjpbLTkxMDkzMzIwNiw4MjUyNDIwODJdfQ==
 -->
