@@ -117,12 +117,12 @@ authenticated --> demo.Auth
 authenticated --> tag_detected
 authenticated --> demo.NDEF
 launchNdefDemo --> !demo.connected
-!demo.connected --> 
+!demo.connected --> show_message
 
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MDgxODEyMywtMTU2Mjc3Njc2MSwtMT
+eyJoaXN0b3J5IjpbMTE2MDY4MjQyNiwtMTU2Mjc3Njc2MSwtMT
 QxMjkyOTQyNywtOTgzMDM1ODMxLDY3NDk1OTE3NCwxMzUzNzY2
 NTQzLDQ5Mzg0MDhdfQ==
 -->
