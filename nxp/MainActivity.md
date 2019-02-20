@@ -100,6 +100,19 @@ Ready --> obtainAuthStatus
 Ready --> launchDemo
 obtainAuthStatus -.- authStatus
 ```
+```kotlin
+fun doProcess(nfc_intent: Intent) {
+   nfcIntent = nfc_intent
+   val tag = nfc_intent.getParcelableExtra<Tag>(NfcAdapter.EXTRA_TAG)
+   demo = Ntag_I2C_Demo(tag, registrar.activity(), password, authStatus)
+   if (demo!!.isReady) {
+      // Retrieve Auth Status before doing any operation
+      authStatus = obtainAuthStatus()
+      val currTab = tabname
+      launchDemo(currTab)
+   }
+}
+```
 
 ### launchDemo
 ```mermaid
@@ -123,6 +136,42 @@ $unProtect--> demo.SRAMSpeedtest
 !SRAM --> !unProtec
 $unProtec --> demo.EEPROMSpeedTest
 !unProtec --> Alert
+```
+```kotlin
+if (currTab.data == "ntag_rf") {
+   try {
+      // SRAM Test
+      if ((SpeedTestFragment.isSRamEnabled == true)) {
+         // This demo is available even if the product is protected
+         // as long as the SRAM is unprotected
+         if ((authStatus == AuthStatus.Disabled.value
+                         || authStatus == AuthStatus.Unprotected.value
+                         || authStatus == AuthStatus.Authenticated.value
+                         || authStatus == AuthStatus.Protected_W.value
+                         || authStatus == AuthStatus.Protected_RW.value)) {
+            demo!!.SRAMSpeedtest()
+         } else {
+            message?.onToastMakeText("NTAG I2C Plus memory is protected",Toast.LENGTH_LONG, this)
+            showAuthDialog()
+         }
+      }
+      // EEPROM Test
+      if ((SpeedTestFragment.isSRamEnabled == false)) {
+         // This demo is only available when the tag is not protected
+         if ((authStatus == AuthStatus.Disabled.value
+                         || authStatus == AuthStatus.Unprotected.value
+                         || authStatus == AuthStatus.Authenticated.value)) {
+            demo!!.EEPROMSpeedtest()
+         } else {
+            message?.onToastMakeText("NTAG I2C Plus memory is protected",Toast.LENGTH_LONG, this)
+            showAuthDialog()
+         }
+      } // end if eeprom test
+   } catch (e: Exception) {
+      SpeedTestFragment.setAnswer(activity.getString(R.string.Tag_lost))
+      e.printStackTrace()
+   }
+}
 ```
 
 > #### launchDemo - LED test
@@ -168,8 +217,7 @@ launchNdefDemo --> !demo.connected
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNzEyNDM2MywtMjA1MDQ3MzQ3OCwtMT
-k3MzI2NTIzNCwtMTU2Mjc3Njc2MSwtMTQxMjkyOTQyNywtOTgz
-MDM1ODMxLDY3NDk1OTE3NCwxMzUzNzY2NTQzLDQ5Mzg0MDhdfQ
-==
+eyJoaXN0b3J5IjpbLTU5NDAzODY4LC0yMDUwNDczNDc4LC0xOT
+czMjY1MjM0LC0xNTYyNzc2NzYxLC0xNDEyOTI5NDI3LC05ODMw
+MzU4MzEsNjc0OTU5MTc0LDEzNTM3NjY1NDMsNDkzODQwOF19
 -->
