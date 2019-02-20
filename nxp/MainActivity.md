@@ -55,7 +55,7 @@ graph LR
 ### launchDemo
 ```mermaid
 graph LR
-authenticate --> demo.Auth
+authenticated --> demo.Auth
 demo.Auth -.- $password
 demo.Auth -.- ProtectedRW
 
@@ -117,6 +117,7 @@ demo.connected --> unProtected
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTI5Mjk0MjcsLTk4MzAzNTgzMSw2Nz
-Q5NTkxNzQsMTM1Mzc2NjU0Myw0OTM4NDA4XX0=
+eyJoaXN0b3J5IjpbLTE1NjI3NzY3NjEsLTE0MTI5Mjk0MjcsLT
+k4MzAzNTgzMSw2NzQ5NTkxNzQsMTM1Mzc2NjU0Myw0OTM4NDA4
+XX0=
 -->
