@@ -234,7 +234,17 @@ file structure of a flutter project would be look like this
 ```  
 
 ### 未完成
-上述方法用了flutter i18n plugin 後由會在 res/value 底下加入 string_xx.arb ,導致編譯時出現 file name
+上述方法用了flutter i18n plugin 後由會在 res/value 底下加入 string_xx.arb ,導致編譯時出現 "file name must end with .xml", 目前找不到合適的解決方法，只好手動把flutter 的 resource copy 到 原 android 專案中，並把
+```groovy
+	android {  
+		sourceSets {  
+			main {  
+				//manifest.srcFile "src/main/AndroidManifest.xml"  
+				java.srcDirs += ['src/main/kotlin', 'src/main/java']  
+				res.srcDirs += ['res', flutterProject + '/res']  
+				assets.srcDirs += ['assets', flutterProject + '/assets']  
+			}  
+```
 
 
 
@@ -301,9 +311,8 @@ end
  
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTE4NzIwODMsLTE4NzIzNzMzNzAsMT
-gxODQ2NDY2MCwxOTQwOTUzNjAyLDE3MjQxOTc2NDEsMTAxODM5
-MTQ2MiwxNDYwMzA4MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC
-0zNjQ2ODAzMjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
-
+eyJoaXN0b3J5IjpbMTgwMzgyMTU1MiwtMTg3MjM3MzM3MCwxOD
+E4NDY0NjYwLDE5NDA5NTM2MDIsMTcyNDE5NzY0MSwxMDE4Mzkx
+NDYyLDE0NjAzMDgwNTQsMTU2MTAyMjMyOSw4MDEyNDMyNDYsLT
+M2NDY4MDMyMSwtMTkzNjQ3OTI1NSwtMTc3NDY5Njg4Ml19
 -->
