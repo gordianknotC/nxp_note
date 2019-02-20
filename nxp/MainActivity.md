@@ -36,9 +36,11 @@ graph LR
 onNewIntent
 ```mermaid
 graph LR
-	
-
+	set --> $authStatus
+	set --> $password
+	set --> vibrator
+	doProcess
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTQ0MjAyMzUsNDkzODQwOF19
+eyJoaXN0b3J5IjpbLTIwOTk0NzMyMjcsNDkzODQwOF19
 -->
