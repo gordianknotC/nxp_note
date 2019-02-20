@@ -62,7 +62,7 @@ demo -.- authStatus
 demo --> Ready
 Ready --> obtainAuthStatus
 Ready --> launchDemo
-
+obtainAuthStatus -.- authStatus
 ```
 
 ### launchDemo
@@ -71,9 +71,11 @@ graph LR
 authenticated --> demo.Auth
 demo.Auth -.- $password
 demo.Auth -.- ProtectedRW
+```
 
-
-
+#### launchDemo - SpeedTest
+``` mermaid
+graph LR
 NTAGRF -.- SpeedTestFragment
 SpeedTestFragment--> $SRAM
 SpeedTestFragment--> !SRAM
@@ -135,7 +137,7 @@ launchNdefDemo --> !demo.connected
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI2MjQ2NDU4LC0xNTYyNzc2NzYxLC0xND
+eyJoaXN0b3J5IjpbNDc2MDYyMjY4LC0xNTYyNzc2NzYxLC0xND
 EyOTI5NDI3LC05ODMwMzU4MzEsNjc0OTU5MTc0LDEzNTM3NjY1
 NDMsNDkzODQwOF19
 -->
