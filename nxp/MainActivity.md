@@ -64,27 +64,29 @@ demo.Auth -.- ProtectedRW
 NTAGRF -.- SpeedTestFragment
 SpeedTest --> $SRAM
 SpeedTest --> !SRAM
-$SRAM --> $notProtect
-$SRAM --> !notProtect
-$notProtect--> demo.SRAMSpeedtest
-!notProtect--> Alert
+$SRAM --> $unProtect
+$SRAM --> !unProtect
+$unProtect--> demo.SRAMSpeedtest
+!unProtect--> Alert
 !SRAM --> $notProtec
 !SRAM --> !notProtec
-$notProtec --> demo.EEPROMSpeedTest
-!notProtec --> Alert
+$unProtec --> demo.EEPROMSpeedTest
+!unProtec --> Alert
 
 
 LED --> LedFragment
 LedFragment --> Demo.isReady
 Demo.isReady --> finishAllTask
 finishAllTask --> assertConnected
-LedFragment --> $unProte
+LedFragment --> $unProtect
+LedFragment --> !unProtect
+$unProtect --> demo.LED
 
 
 NDEF
 CONFIG
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MDc3MjMxMiwxMzUzNzY2NTQzLDQ5Mz
+eyJoaXN0b3J5IjpbMTk1MjEyODEyMywxMzUzNzY2NTQzLDQ5Mz
 g0MDhdfQ==
 -->
