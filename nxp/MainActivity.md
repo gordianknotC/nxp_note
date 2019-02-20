@@ -65,13 +65,16 @@ $SRAM --> $notProtect
 $SRAM --> !notProtect
 $notProtect--> demo.SRAMSpeedtest
 !notProtect--> Alert
-!SRAM 
+!SRAM --> $notProtec
+!SRAM --> !notProtec
+$notProtec --> demo.EEPROMSpeedTest
+!notProtec --> Alert
 
 LED
 NDEF
 CONFIG
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE2MjUwNTY3LDEzNTM3NjY1NDMsNDkzOD
-QwOF19
+eyJoaXN0b3J5IjpbMTAxNzU3MjAwMSwxMzUzNzY2NTQzLDQ5Mz
+g0MDhdfQ==
 -->
