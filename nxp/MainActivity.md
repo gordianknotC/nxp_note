@@ -55,10 +55,12 @@ graph LR
 launchDemo
 ```mermaid
 graph LR
-
+authenticate --> demo.Auth
+demo.Auth --- $password
+demo.Auth --- 
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NjYyMDg0LDQ5Mzg0MDhdfQ==
+eyJoaXN0b3J5IjpbLTE1MTY3ODUzMjMsNDkzODQwOF19
 -->
