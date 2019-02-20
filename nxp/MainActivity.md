@@ -17,6 +17,24 @@ graph LR
 	!Adapter --> closeNoNfc
 ```
 
+```kotlin
+private fun checkNFC() {  
+   if (mAdapter != null) {  
+      if (!mAdapter!!.isEnabled) {  
+         Dart.showSettingNoNfcAlert(this)  
+      }  
+   } else {  
+      Dart.closeAppNoNfcAlert(this)  
+   }  
+}
+fun setNfcForeground() {
+  mPendingIntent = PendingIntent.getActivity(
+  registrar.activity(), 0,
+  Intent(registrar.context(), javaClass)
+       .addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0)
+   }
+```
+
 ### onPause
 ```mermaid
 graph LR
@@ -132,7 +150,8 @@ launchNdefDemo --> !demo.connected
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTA0NzM0NzgsLTE5NzMyNjUyMzQsLT
-E1NjI3NzY3NjEsLTE0MTI5Mjk0MjcsLTk4MzAzNTgzMSw2NzQ5
-NTkxNzQsMTM1Mzc2NjU0Myw0OTM4NDA4XX0=
+eyJoaXN0b3J5IjpbLTY5MjQxNjc4MiwtMjA1MDQ3MzQ3OCwtMT
+k3MzI2NTIzNCwtMTU2Mjc3Njc2MSwtMTQxMjkyOTQyNywtOTgz
+MDM1ODMxLDY3NDk1OTE3NCwxMzUzNzY2NTQzLDQ5Mzg0MDhdfQ
+==
 -->
