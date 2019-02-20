@@ -16,10 +16,11 @@ graph LR
 	checkNFC --> $Adapter
 	$Adapter --> $enable
 	$Adapter --> $disable
-	$disable --> DartAlert
-
+	$disable --> NoNfcAlert
+	$Adapter --> $null
+	$nu
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkzNjEwMzk4LDQ5Mzg0MDhdfQ==
+eyJoaXN0b3J5IjpbLTkyNjExNzI4MCw0OTM4NDA4XX0=
 -->
