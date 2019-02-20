@@ -68,8 +68,8 @@ $SRAM --> $unProtect
 $SRAM --> !unProtect
 $unProtect--> demo.SRAMSpeedtest
 !unProtect--> Alert
-!SRAM --> $notProtec
-!SRAM --> !notProtec
+!SRAM --> $unProtec
+!SRAM --> !unProtec
 $unProtec --> demo.EEPROMSpeedTest
 !unProtec --> Alert
 
@@ -81,12 +81,13 @@ finishAllTask --> assertConnected
 LedFragment --> $unProtect
 LedFragment --> !unProtect
 $unProtect --> demo.LED
+demo.LED -.- err-taglost
 
 
 NDEF
 CONFIG
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MjEyODEyMywxMzUzNzY2NTQzLDQ5Mz
+eyJoaXN0b3J5IjpbMjAzODg3NzAwOSwxMzUzNzY2NTQzLDQ5Mz
 g0MDhdfQ==
 -->
