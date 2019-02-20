@@ -41,7 +41,12 @@ graph LR
 	set --> vibrator
 	$nfcIntent --> doProcess
 	doProcess --> $tag
+	doProcess --> demo
+	demo -.- $passwor
+	demo -.- $authStatu
+	demo -.- $tag
+	demo -.- ac
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MTUwNTMwMiw0OTM4NDA4XX0=
+eyJoaXN0b3J5IjpbNTI5NTYzMTg1LDQ5Mzg0MDhdfQ==
 -->
