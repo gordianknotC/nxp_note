@@ -68,7 +68,11 @@ fun readNdefClick(){
 graph LR
 demo.NDEFReadFinish --> $Write
 $Write --> demo.isReady
-demo.isReady --> demo.fin
+demo.isReady --> demo.finishAllTasks
+demo.isReady --> $password
+demo.isReady --> !password
+$password --> lauchNdefDemo
+launch
 ```
 ```kotlin
    fun writeNdefClick(){
@@ -90,5 +94,5 @@ demo.isReady --> demo.fin
         ....
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTAxMjk0NTMsODI1MjQyMDgyXX0=
+eyJoaXN0b3J5IjpbMjA5Nzc1Mzk1OCw4MjUyNDIwODJdfQ==
 -->
