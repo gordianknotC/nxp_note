@@ -75,13 +75,16 @@ $notProtec --> demo.EEPROMSpeedTest
 
 
 LED --> LedFragment
-
+LedFragment --> Demo.isReady
+Demo.isReady --> finishAllTask
+finishAllTask --> assertConnected
+LedFragment --> $unProte
 
 
 NDEF
 CONFIG
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMzU0NjcxMiwxMzUzNzY2NTQzLDQ5Mz
+eyJoaXN0b3J5IjpbMTI3MDc3MjMxMiwxMzUzNzY2NTQzLDQ5Mz
 g0MDhdfQ==
 -->
