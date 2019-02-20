@@ -45,8 +45,11 @@ graph LR
 	demo -.- $passwor
 	demo -.- $authStatu
 	demo -.- $tag
-	demo -.- ac
+	demo -.- activity
+	demo --> isReady
+	isReady --> obtainAuth
+	obtainAuth --> $authStatus
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI5NTYzMTg1LDQ5Mzg0MDhdfQ==
+eyJoaXN0b3J5IjpbLTEwNzI5OTkzMDcsNDkzODQwOF19
 -->
