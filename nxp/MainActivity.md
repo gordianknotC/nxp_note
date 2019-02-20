@@ -96,7 +96,7 @@ $unProt--> demo.NDEF
 CONFIG
 ```
 
-ShowXDialog
+### ShowXDialog
 - FlashDialog
 - AboutDialog
 - HelpDialog
@@ -105,7 +105,11 @@ ShowXDialog
 graph LR
 
 ```
+
+
+### launch
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MzAzNTgzMSw2NzQ5NTkxNzQsMTM1Mz
-c2NjU0Myw0OTM4NDA4XX0=
+eyJoaXN0b3J5IjpbNzk0Nzc5MDIsLTk4MzAzNTgzMSw2NzQ5NT
+kxNzQsMTM1Mzc2NjU0Myw0OTM4NDA4XX0=
 -->
