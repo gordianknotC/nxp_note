@@ -233,7 +233,8 @@ file structure of a flutter project would be look like this
 	flutter.buildMode=debug
 ```  
 
-### 
+### 未完成
+上述方法用了flutter i18n plugin 後由會在 res/value 底下加入 string_xx.arb ,導致編譯時出現 file name
 
 
 
@@ -300,8 +301,9 @@ end
  
 **Demo project**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI3MTk3NDc2LC0xODcyMzczMzcwLDE4MT
-g0NjQ2NjAsMTk0MDk1MzYwMiwxNzI0MTk3NjQxLDEwMTgzOTE0
-NjIsMTQ2MDMwODA1NCwxNTYxMDIyMzI5LDgwMTI0MzI0NiwtMz
-Y0NjgwMzIxLC0xOTM2NDc5MjU1LC0xNzc0Njk2ODgyXX0=
+eyJoaXN0b3J5IjpbLTE0MTE4NzIwODMsLTE4NzIzNzMzNzAsMT
+gxODQ2NDY2MCwxOTQwOTUzNjAyLDE3MjQxOTc2NDEsMTAxODM5
+MTQ2MiwxNDYwMzA4MDU0LDE1NjEwMjIzMjksODAxMjQzMjQ2LC
+0zNjQ2ODAzMjEsLTE5MzY0NzkyNTUsLTE3NzQ2OTY4ODJdfQ==
+
 -->
