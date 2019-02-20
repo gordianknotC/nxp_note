@@ -5,10 +5,10 @@
 
 ```mermaid
 graph LR
-	A --> B
+	A -.-> B
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTczNzIxNDhdfQ==
+eyJoaXN0b3J5IjpbNDkzODQwOF19
 -->
