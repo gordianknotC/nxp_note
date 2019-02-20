@@ -31,8 +31,8 @@ fun setNfcForeground() {
   mPendingIntent = PendingIntent.getActivity(
   registrar.activity(), 0,
   Intent(registrar.context(), javaClass)
-       .addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0)
-   }
+ .addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0)
+}
 ```
 
 ### onPause
@@ -68,6 +68,24 @@ graph LR
 	isReady --> obtainAuth
 	obtainAuth --> $authStatu
 	isReady --> lauchDemo
+```
+```kotlin
+   override fun onNewIntent(intent: Intent):Boolean {
+      val nfc_intent = intent;
+      super.onNewIntent(nfc_intent)
+      // Set the pattern for vibration
+      val pattern = longArrayOf(0, 100)
+
+      // Set the initial auth parameters
+      authStatus = AuthStatus.Disabled.value
+      password = null
+
+      // Vibrate on new Intent
+      val vibrator = registrar.activity().getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+      vibrator.vibrate(pattern, -1)
+      doProcess(nfc_intent)
+      return true;
+   }
 ```
 
 #### doProcess
@@ -150,7 +168,7 @@ launchNdefDemo --> !demo.connected
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MjQxNjc4MiwtMjA1MDQ3MzQ3OCwtMT
+eyJoaXN0b3J5IjpbMTQwNzEyNDM2MywtMjA1MDQ3MzQ3OCwtMT
 k3MzI2NTIzNCwtMTU2Mjc3Njc2MSwtMTQxMjkyOTQyNywtOTgz
 MDM1ODMxLDY3NDk1OTE3NCwxMzUzNzY2NTQzLDQ5Mzg0MDhdfQ
 ==
