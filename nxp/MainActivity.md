@@ -48,8 +48,17 @@ graph LR
 	demo -.- activity
 	demo --> isReady
 	isReady --> obtainAuth
-	obtainAuth --> $authStatus
+	obtainAuth --> $authStatu
+	isReady --> lauchDemo
+```
+
+launchDemo
+```mermaid
+graph LR
+
+
+
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzI5OTkzMDcsNDkzODQwOF19
+eyJoaXN0b3J5IjpbMTE3NjYyMDg0LDQ5Mzg0MDhdfQ==
 -->
