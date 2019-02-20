@@ -87,8 +87,11 @@ $unProtect--> demo.SRAMSpeedtest
 !SRAM --> !unProtec
 $unProtec --> demo.EEPROMSpeedTest
 !unProtec --> Alert
+```
 
-
+#### launchDemo - LED test
+``` mermaid
+graph LR
 LED -.- LedFragment
 LedFragment --> Demo.isReady
 Demo.isReady --> finishAllTask
@@ -98,8 +101,10 @@ LedFragment --> !unProte
 $unProte --> demo.LED
 demo.LED -.- err-taglost
 !unProte --> Aler
-
-
+```
+#### launchDemo - NDEF Test
+``` mermaid
+graph LR
 NDEF -.- NdefFragment
 NdefFragment --> $unProt
 NdefFragment --> !unProt
@@ -109,18 +114,7 @@ $unProt--> demo.NDEF
 
 
 CONFIG
-```
-
-### ShowXDialog
-- FlashDialog
-- AboutDialog
-- HelpDialog
-- DebugDialog
-```mermaid
-graph LR
-
-```
-
+``` 
 
 ### launchNdefDemo
 ```mermaid
@@ -137,7 +131,7 @@ launchNdefDemo --> !demo.connected
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc2MDYyMjY4LC0xNTYyNzc2NzYxLC0xND
-EyOTI5NDI3LC05ODMwMzU4MzEsNjc0OTU5MTc0LDEzNTM3NjY1
-NDMsNDkzODQwOF19
+eyJoaXN0b3J5IjpbLTE0MDcxOTU4OTIsLTE1NjI3NzY3NjEsLT
+E0MTI5Mjk0MjcsLTk4MzAzNTgzMSw2NzQ5NTkxNzQsMTM1Mzc2
+NjU0Myw0OTM4NDA4XX0=
 -->
