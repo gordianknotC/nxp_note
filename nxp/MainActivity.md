@@ -17,10 +17,10 @@ graph LR
 	$Adapter --> $enable
 	$Adapter --> $disable
 	$disable --> NoNfcAlert
-	$Adapter --> $null
-	$nu
+	$Adapter --> !Adapter
+	!Adapter --> 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyNjExNzI4MCw0OTM4NDA4XX0=
+eyJoaXN0b3J5IjpbLTEyNzQxMTA1MTQsNDkzODQwOF19
 -->
