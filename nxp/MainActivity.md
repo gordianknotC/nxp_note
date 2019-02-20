@@ -73,7 +73,7 @@ demo.Auth -.- $password
 demo.Auth -.- ProtectedRW
 ```
 
-#### launchDemo - SpeedTest
+> #### launchDemo - SpeedTest
 ``` mermaid
 graph LR
 NTAGRF -.- SpeedTestFragment
@@ -89,7 +89,7 @@ $unProtec --> demo.EEPROMSpeedTest
 !unProtec --> Alert
 ```
 
-#### launchDemo - LED test
+> #### launchDemo - LED test
 ``` mermaid
 graph LR
 LED -.- LedFragment
@@ -102,7 +102,7 @@ $unProte --> demo.LED
 demo.LED -.- err-taglost
 !unProte --> Aler
 ```
-#### launchDemo - NDEF Test
+> #### launchDemo - NDEF Test
 ``` mermaid
 graph LR
 NDEF -.- NdefFragment
@@ -131,7 +131,7 @@ launchNdefDemo --> !demo.connected
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDcxOTU4OTIsLTE1NjI3NzY3NjEsLT
+eyJoaXN0b3J5IjpbLTE5NzMyNjUyMzQsLTE1NjI3NzY3NjEsLT
 E0MTI5Mjk0MjcsLTk4MzAzNTgzMSw2NzQ5NTkxNzQsMTM1Mzc2
 NjU0Myw0OTM4NDA4XX0=
 -->
