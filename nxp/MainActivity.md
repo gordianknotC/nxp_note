@@ -61,16 +61,17 @@ demo.Auth -.- ProtectedRW
 NTAGRF -.- SpeedTest
 SpeedTest --> $SRAM
 SpeedTest --> !SRAM
-$SRAM --> $inProtect
-$SRAM --> !inProtect
-$inProtect --> demo.SRAMSpeedtest
-!inProtect --> Alert
+$SRAM --> $notProtect
+$SRAM --> !notProtect
+$notProtect--> demo.SRAMSpeedtest
+!notProtect--> Alert
+!SRAM 
 
 LED
 NDEF
 CONFIG
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NzM5NjYzMSwxMzUzNzY2NTQzLDQ5Mz
-g0MDhdfQ==
+eyJoaXN0b3J5IjpbNjE2MjUwNTY3LDEzNTM3NjY1NDMsNDkzOD
+QwOF19
 -->
