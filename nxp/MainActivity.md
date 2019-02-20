@@ -64,12 +64,12 @@ SpeedTest --> !SRAM
 $SRAM --> $inProtect
 $SRAM --> !inProtect
 $inProtect --> SRAMtest
-!inProtec
+!inProtect --> Alert
 
 LED
 NDEF
 CONFIG
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE4NDE2NTc5LDQ5Mzg0MDhdfQ==
+eyJoaXN0b3J5IjpbMTM1Mzc2NjU0Myw0OTM4NDA4XX0=
 -->
