@@ -187,6 +187,37 @@ $unProte --> demo.LED
 demo.LED -.- err-taglost
 !unProte --> Aler
 ```
+```kotlin
+if (currTab.data == "leds") {
+   //gordianknot....
+   if (demo!!.isReady) {
+      demo!!.finishAllTasks()
+      if ( !demo!!.isConnected) {
+         throw Exception("Demo should be connected")
+      }
+   }
+   // This demo is available even if the product is protected
+   // as long as the SRAM is unprotected
+   if ((authStatus == AuthStatus.Disabled.value
+                   || authStatus == AuthStatus.Unprotected.value
+                   || authStatus == AuthStatus.Authenticated.value
+                   || authStatus == AuthStatus.Protected_W.value
+                   || authStatus == AuthStatus.Protected_RW.value)) {
+      try {
+         // if (LedFragment.getChosen()) {
+         demo!!.LED()
+      } catch (e: Exception) {
+         e.printStackTrace()
+         LedFragment.setAnswer(activity.getString(R.string.Tag_lost))
+      }
+
+   } else {
+      message?.onToastMakeText("NTAG I2C Plus memory is protected", Toast.LENGTH_LONG, this)
+      showAuthDialog()
+   }
+}
+```
+
 > #### launchDemo - NDEF Test
 ``` mermaid
 graph LR
@@ -200,6 +231,25 @@ $unProt--> demo.NDEF
 
 CONFIG
 ``` 
+```kotlin
+if (currTab.data == "ndef") {
+    // This demo is only available when the tag is not protected
+    if ((authStatus == AuthStatus.Disabled.value
+                    || authStatus == AuthStatus.Unprotected.value
+                    || authStatus == AuthStatus.Authenticated.value)) {
+       NdefFragment.setAnswer("Tag detected")
+       try {
+          demo!!.NDEF()
+       } catch (e: Exception) {
+          // NdefFragment.setAnswer(getString(R.string.Tag_lost));
+       }
+
+    } else {
+       message?.onToastMakeText("NTAG I2C Plus memory is protected",Toast.LENGTH_LONG, this)
+       showAuthDialog()
+    }
+ }
+```
 
 ### launchNdefDemo
 > call from NdefFragment
@@ -217,7 +267,8 @@ launchNdefDemo --> !demo.connected
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5NDAzODY4LC0yMDUwNDczNDc4LC0xOT
-czMjY1MjM0LC0xNTYyNzc2NzYxLC0xNDEyOTI5NDI3LC05ODMw
-MzU4MzEsNjc0OTU5MTc0LDEzNTM3NjY1NDMsNDkzODQwOF19
+eyJoaXN0b3J5IjpbLTk2MTI2MzE3NSwtMjA1MDQ3MzQ3OCwtMT
+k3MzI2NTIzNCwtMTU2Mjc3Njc2MSwtMTQxMjkyOTQyNywtOTgz
+MDM1ODMxLDY3NDk1OTE3NCwxMzUzNzY2NTQzLDQ5Mzg0MDhdfQ
+==
 -->
