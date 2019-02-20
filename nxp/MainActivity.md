@@ -57,6 +57,11 @@ graph LR
 graph LR
 nfcIntent --> tag
 demo -.- tag
+demo -.- password
+demo -.- authStatus
+demo --> Ready
+Ready --> obtainAuthStatus
+Ready --> launchDemo
 
 ```
 
@@ -130,7 +135,7 @@ launchNdefDemo --> !demo.connected
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODk1ODg2OTAsLTE1NjI3NzY3NjEsLT
-E0MTI5Mjk0MjcsLTk4MzAzNTgzMSw2NzQ5NTkxNzQsMTM1Mzc2
-NjU0Myw0OTM4NDA4XX0=
+eyJoaXN0b3J5IjpbMzI2MjQ2NDU4LC0xNTYyNzc2NzYxLC0xND
+EyOTI5NDI3LC05ODMwMzU4MzEsNjc0OTU5MTc0LDEzNTM3NjY1
+NDMsNDkzODQwOF19
 -->
