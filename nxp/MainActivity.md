@@ -58,7 +58,10 @@ graph LR
 authenticate --> demo.Auth
 demo.Auth -.- $password
 demo.Auth -.- ProtectedRW
-NTAGRF -.- SpeedTest
+
+
+
+NTAGRF -.- SpeedTestFragment
 SpeedTest --> $SRAM
 SpeedTest --> !SRAM
 $SRAM --> $notProtect
@@ -70,11 +73,15 @@ $notProtect--> demo.SRAMSpeedtest
 $notProtec --> demo.EEPROMSpeedTest
 !notProtec --> Alert
 
-LED
+
+LED --> LedFragment
+
+
+
 NDEF
 CONFIG
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNzU3MjAwMSwxMzUzNzY2NTQzLDQ5Mz
+eyJoaXN0b3J5IjpbMTExMzU0NjcxMiwxMzUzNzY2NTQzLDQ5Mz
 g0MDhdfQ==
 -->
