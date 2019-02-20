@@ -9,8 +9,8 @@ participant DartChannel
 participant Nlib
 
 Note over Main, Nlib: 👷 Scenario - Start App
-Main --> DartChannel: register plugins
-Main --> Mediator: register mediators
+Main -->> DartChannel: register plugins
+Main -->> Mediator: register mediators
 Main -->> Nlib: instantiate native library
 Nlib -->> Mediator: add to Mediator
 
@@ -305,11 +305,11 @@ Mediator->> A2: onCreate
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTM3NTM0ODgsLTIxMTEwNTkyMzAsND
-c1NDgxNzgwLC05OTYzMTI0NDAsMTk5NTE5NDg1NywyMDM2MDc5
-MjgyLC0xMzY4NjQ0MTY2LC0xNDYwMTYzODA2LC0xNzIxOTQxOT
-IzLDE1NDU1NzU3NCw3Mjc1MTk3OCwxODUwMTU4OTM2LC0xMTQy
-NjEzOTkzLC0zODgzMzY5NTcsMTM3ODIxOTcwOCwtMTIxNDQ5MD
-czNSwtMzA4MjMwNDg0LDYwMzgwMzY0OCwtMTQ1Mzg4MDAwOCwt
-MTQ3NjI2MjM4M119
+eyJoaXN0b3J5IjpbNDQ5MDM4NDA0LC0yMTExMDU5MjMwLDQ3NT
+Q4MTc4MCwtOTk2MzEyNDQwLDE5OTUxOTQ4NTcsMjAzNjA3OTI4
+MiwtMTM2ODY0NDE2NiwtMTQ2MDE2MzgwNiwtMTcyMTk0MTkyMy
+wxNTQ1NTc1NzQsNzI3NTE5NzgsMTg1MDE1ODkzNiwtMTE0MjYx
+Mzk5MywtMzg4MzM2OTU3LDEzNzgyMTk3MDgsLTEyMTQ0OTA3Mz
+UsLTMwODIzMDQ4NCw2MDM4MDM2NDgsLTE0NTM4ODAwMDgsLTE0
+NzYyNjIzODNdfQ==
 -->
