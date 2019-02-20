@@ -8,6 +8,9 @@ WriteText
 ```mermaid
 graph LR
 demo.isReady --> demo.finishAllTask
+demo.isReady --> launchNdefDemo
+launchNdefDemo -.- password
+launchNdefDemo -.- authStatus
 
 ```
 
@@ -20,5 +23,5 @@ demo.isReady --> demo.finishAllTask
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk5NjY0MjAyXX0=
+eyJoaXN0b3J5IjpbODI1MjQyMDgyXX0=
 -->
