@@ -68,25 +68,24 @@ fun readNdefClick(){
 
 ```
 ```kotlin
-fun writeNdefClick(){  
-      ...
-      if (PseudoMainActivity.demo == null)  
-         throw ExceptionInInitializerError("demo should not be null")  
-      val demo: Ntag_I2C_Demo = PseudoMainActivity.demo as Ntag_I2C_Demo;  
-  // Close the ReadNdef Taks  
-  demo.NDEFReadFinish()  
-  
-      if (isWriteChosen == true) {  
-         if (demo.isReady) {  
-            demo.finishAllTasks()  
-            if (PseudoMainActivity.password == null)  
-               throw ExceptionInInitializerError("password should not be null")  
-            PseudoMainActivity.launchNdefDemo(  
-                    PseudoMainActivity.authStatus,  
-  PseudoMainActivity.password as ByteArray)  
-         }  
-      } ...
+   fun writeNdefClick(){
+		...
+      if (PseudoMainActivity.demo == null)
+         throw ExceptionInInitializerError("demo should not be null")
+      val demo: Ntag_I2C_Demo = PseudoMainActivity.demo as Ntag_I2C_Demo;
+      // Close the ReadNdef Taks
+      demo.NDEFReadFinish()
+
+      if (isWriteChosen == true) {
+         if (demo.isReady) {
+            demo.finishAllTasks()
+            if (PseudoMainActivity.password == null)
+               throw ExceptionInInitializerError("password should not be null")
+            PseudoMainActivity.launchNdefDemo(
+                    PseudoMainActivity.authStatus,
+                    PseudoMainActivity.password as ByteArray)
+        ....
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMDkzMzIwNiw4MjUyNDIwODJdfQ==
+eyJoaXN0b3J5IjpbNDk4NDM1OTE4LDgyNTI0MjA4Ml19
 -->
