@@ -117,9 +117,10 @@ CONFIG
 ``` 
 
 ### launchNdefDemo
+call from NdefFragment
 ```mermaid
 graph LR
-NdefFragment --> launchNdefDemo 
+launchNdefDemo 
 launchNdefDemo --> demo.connected
 demo.connected --> authenticated
 authenticated --> demo.Auth
@@ -131,7 +132,7 @@ launchNdefDemo --> !demo.connected
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzMyNjUyMzQsLTE1NjI3NzY3NjEsLT
-E0MTI5Mjk0MjcsLTk4MzAzNTgzMSw2NzQ5NTkxNzQsMTM1Mzc2
-NjU0Myw0OTM4NDA4XX0=
+eyJoaXN0b3J5IjpbLTEyNTQwNDU0MTIsLTE5NzMyNjUyMzQsLT
+E1NjI3NzY3NjEsLTE0MTI5Mjk0MjcsLTk4MzAzNTgzMSw2NzQ5
+NTkxNzQsMTM1Mzc2NjU0Myw0OTM4NDA4XX0=
 -->
