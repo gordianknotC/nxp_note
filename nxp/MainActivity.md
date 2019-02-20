@@ -22,9 +22,11 @@ graph LR
 graph LR
 	onPause --> $Adapter
 	onPause --> !Adapter
-	$Adap
+	$Adapter --> disableForeGround
+	$Adapter --> finisTask[finish all tasks]
+	
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3ODIxMTQxNCw0OTM4NDA4XX0=
+eyJoaXN0b3J5IjpbMTQ0NDgyOTU0Myw0OTM4NDA4XX0=
 -->
