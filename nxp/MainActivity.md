@@ -258,9 +258,9 @@ graph LR
 launchNdefDemo 
 launchNdefDemo --> demo.connected
 demo.connected --> authenticated
-authenticated --> demo.Auth
-authenticated --> tag_detected
-authenticated --> demo.NDEF
+authenticated --> demo.Auth-set_auth
+demo.connected --> tag_detected
+demo.connected --> demo.NDEF
 launchNdefDemo --> !demo.connected
 !demo.connected --> msg.tap_tag_to_read
 ```
@@ -292,8 +292,7 @@ fun launchNdefDemo(auth: Int, pwd: ByteArray) {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTE5MDUyOTAsLTIwNTA0NzM0NzgsLT
-E5NzMyNjUyMzQsLTE1NjI3NzY3NjEsLTE0MTI5Mjk0MjcsLTk4
-MzAzNTgzMSw2NzQ5NTkxNzQsMTM1Mzc2NjU0Myw0OTM4NDA4XX
-0=
+eyJoaXN0b3J5IjpbNTQxMTE0Mjc0LC0yMDUwNDczNDc4LC0xOT
+czMjY1MjM0LC0xNTYyNzc2NzYxLC0xNDEyOTI5NDI3LC05ODMw
+MzU4MzEsNjc0OTU5MTc0LDEzNTM3NjY1NDMsNDkzODQwOF19
 -->
