@@ -107,9 +107,13 @@ graph LR
 ```
 
 
-### launch
+### launchNdefDemo
+```mermaid
+
+
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk0Nzc5MDIsLTk4MzAzNTgzMSw2NzQ5NT
-kxNzQsMTM1Mzc2NjU0Myw0OTM4NDA4XX0=
+eyJoaXN0b3J5IjpbNDE2NzI4ODc3LC05ODMwMzU4MzEsNjc0OT
+U5MTc0LDEzNTM3NjY1NDMsNDkzODQwOF19
 -->
