@@ -23,10 +23,15 @@ graph LR
 	onPause --> $Adapter
 	onPause --> !Adapter
 	$Adapter --> disableForeGround
-	$Adapter --> finisTask[finish all tasks]
-	
-
+	$Adapter --> Demo.finisTask
+```
+onActivityResult
+```mermaid
+graph LR
+  demo.Ready --> launchDemo
+  
+  
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NDgyOTU0Myw0OTM4NDA4XX0=
+eyJoaXN0b3J5IjpbLTM4NDM1MTMwNCw0OTM4NDA4XX0=
 -->
