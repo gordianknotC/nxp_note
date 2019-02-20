@@ -263,12 +263,37 @@ authenticated --> tag_detected
 authenticated --> demo.NDEF
 launchNdefDemo --> !demo.connected
 !demo.connected --> msg.tap_tag_to_read
+```
 
+```kotlin
+fun launchNdefDemo(auth: Int, pwd: ByteArray) {
+   if (demo!!.isReady) {
+      if (demo!!.isConnected) {
+         if (auth == AuthStatus.Authenticated.value) {
+            demo!!.Auth(pwd, AuthStatus.Protected_RW.value)
+         }
+         NdefFragment.setAnswer("Tag detected")
+         try {
+            demo!!.NDEF()
+         } catch (e: Exception) {
+            NdefFragment.setAnswer("Error: Tag lost, try again")
+            e.printStackTrace()
+         }
+
+      } else {
+         if (NdefFragment.isWriteChosen) {
+            NdefFragment.setAnswer("Tap tag to write NDEF content")
+         } else {
+            NdefFragment.setAnswer("Tap tag to read NDEF content")
+         }
+      }
+   }
+}
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2MTI2MzE3NSwtMjA1MDQ3MzQ3OCwtMT
-k3MzI2NTIzNCwtMTU2Mjc3Njc2MSwtMTQxMjkyOTQyNywtOTgz
-MDM1ODMxLDY3NDk1OTE3NCwxMzUzNzY2NTQzLDQ5Mzg0MDhdfQ
-==
+eyJoaXN0b3J5IjpbLTIwMTE5MDUyOTAsLTIwNTA0NzM0NzgsLT
+E5NzMyNjUyMzQsLTE1NjI3NzY3NjEsLTE0MTI5Mjk0MjcsLTk4
+MzAzNTgzMSw2NzQ5NTkxNzQsMTM1Mzc2NjU0Myw0OTM4NDA4XX
+0=
 -->
