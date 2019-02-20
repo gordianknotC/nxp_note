@@ -13,10 +13,10 @@ graph LR
 	onCreate --> setNfcForeGround
 	setNfcForeGround --> checkNFC
 	setNfcForeGround --> pendingIntent
-	
+	checkNFC --> 
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MzY4Njg2Niw0OTM4NDA4XX0=
+eyJoaXN0b3J5IjpbLTU0MzExOTkxOSw0OTM4NDA4XX0=
 -->
