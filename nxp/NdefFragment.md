@@ -65,7 +65,10 @@ fun readNdefClick(){
 ```
 ### writeNdefClick
 ```mermaid
-
+graph LR
+demo.NDEFReadFinish --> $Write
+$Write --> demo.isReady
+demo.isReady --> demo.fin
 ```
 ```kotlin
    fun writeNdefClick(){
@@ -87,5 +90,5 @@ fun readNdefClick(){
         ....
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk4NDM1OTE4LDgyNTI0MjA4Ml19
+eyJoaXN0b3J5IjpbLTE1MTAxMjk0NTMsODI1MjQyMDgyXX0=
 -->
