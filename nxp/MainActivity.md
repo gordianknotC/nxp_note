@@ -12,11 +12,14 @@ graph LR
 
 	onCreate --> setNfcForeGround
 	setNfcForeGround --> checkNFC
-	setNfcForeGround --> pendingIntent
-	checkNFC --> 
+	setNfcForeGround --> $pendingIntent
+	checkNFC --> $Adapter
+	$Adapter --> $enable
+	$Adapter --> $disable
+	$disable --> DartAlert
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MzExOTkxOSw0OTM4NDA4XX0=
+eyJoaXN0b3J5IjpbNzkzNjEwMzk4LDQ5Mzg0MDhdfQ==
 -->
