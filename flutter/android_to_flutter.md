@@ -3,13 +3,13 @@
 
 ```mermaid
 sequenceDiagram
-participant MainActivity
+participant Main
 participant Mediator
 participant DartChannel
 participant Nlib
 
-
-
+Note over Main, Nlib: 👷 Scenario - Start App
+Main --> DartChannel: re
 
 ```
 
@@ -302,7 +302,7 @@ Mediator->> A2: onCreate
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzcyNDA1NDMxLC0yMTExMDU5MjMwLDQ3NT
+eyJoaXN0b3J5IjpbNzIzNDUxMTE2LC0yMTExMDU5MjMwLDQ3NT
 Q4MTc4MCwtOTk2MzEyNDQwLDE5OTUxOTQ4NTcsMjAzNjA3OTI4
 MiwtMTM2ODY0NDE2NiwtMTQ2MDE2MzgwNiwtMTcyMTk0MTkyMy
 wxNTQ1NTc1NzQsNzI3NTE5NzgsMTg1MDE1ODkzNiwtMTE0MjYx
