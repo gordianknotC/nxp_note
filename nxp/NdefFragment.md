@@ -19,12 +19,38 @@ launchNdefDemo -.- authStatus
 graph LR
 demo.NDEFreadFinish --> !Write
 demo.NDEFreadFinish --> demo.isReady
-dem
+demo.isReady --> demo.finishAllTask
+demo.isReady --> lauchNdefDemo
+lauchNdefDemo -.- password
+lauchNdefDemo-.- authStatus
+```
+```kotlin
+fun readNdefClick(){  
+   if (PseudoMainActivity.demo == null)  
+      throw ExceptionInInitializerError("demo should not be null")  
+   val demo: Ntag_I2C_Demo = PseudoMainActivity.demo as Ntag_I2C_Demo;  
+  
+  demo.NDEFReadFinish()  
+   val resources = registrar.activity().resources  
+  ndefPerformance = resources.getString(R.string.layout_input_ndef_read)  
+   ndefCallback = resources.getString(R.string.readNdefMsg)  
+   isWriteChosen = false  
+  
+  // Read content  
+  if (demo.isReady) {  
+      demo.finishAllTasks()  
+      if (PseudoMainActivity.password == null)  
+         throw ExceptionInInitializerError("password should not be null")  
+      PseudoMainActivity.launchNdefDemo(  
+              PseudoMainActivity.authStatus,  
+  PseudoMainActivity.password as ByteArray)  
+   }  
+}
 ```
 ### writeNdefClick
 ```mermaid
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NDMzOTc0LDgyNTI0MjA4Ml19
+eyJoaXN0b3J5IjpbNDU0MzU5NzUsODI1MjQyMDgyXX0=
 -->
