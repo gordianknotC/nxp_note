@@ -645,11 +645,13 @@ Protected_RW -.- Protected_W_SRAM
 Protected_W_SRAM -.- Protected_RW_SRAM
 Protected_W --> W_RW
 ```
-> reader.protectPlus (**byte[]** pwd, **byte[]** startAddr)
->   -
-> reader.unprotectPlus
+>reader.protectPlus (**byte[]** pwd, **byte[]** startAddr)
+	>   - write user password
+
+>reader.unprotectPlus
 >   - write default password ( 0xFF, 0xFF, 0xFF, 0xFF )
-> reader.authenticatePlus
+
+>reader.authenticatePlus
 
 ```kotlin
 public Boolean Auth(byte[] pwd, int authStatus) {
@@ -725,10 +727,10 @@ lang-length
 ### createNdefBSSPMessage
 ### createNdefSpMessage
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjIxMzk3MTAsLTEwOTcyOTg2MDUsND
-Q3MTM5MDA4LDE2MDI3ODEwMDgsMTU5NzUxMTE0MywxMDMzNDA1
-NjUzLDExMDI0NzM1OTUsMTExODM1OTU2MSwtNjU1OTg1NDgsLT
-Q5ODExMTYxOSwtMTc5MDk4OTgwNiwtMTc5MTU2MjMxOSwtODU3
-MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2OTMxLC0xNzg0Nz
-k1ODI4XX0=
+eyJoaXN0b3J5IjpbODA1NDYxMDI1LC0xMDk3Mjk4NjA1LDQ0Nz
+EzOTAwOCwxNjAyNzgxMDA4LDE1OTc1MTExNDMsMTAzMzQwNTY1
+MywxMTAyNDczNTk1LDExMTgzNTk1NjEsLTY1NTk4NTQ4LC00OT
+gxMTE2MTksLTE3OTA5ODk4MDYsLTE3OTE1NjIzMTksLTg1NzMy
+MDQ1NSwtMTExMDk4OTczMSwtMTE1NzkwNjkzMSwtMTc4NDc5NT
+gyOF19
 -->
