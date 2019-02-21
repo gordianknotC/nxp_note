@@ -632,9 +632,9 @@ W_RW --> reader.authenticatePlus
 reader.authenticatePlus -.- pwd
 
 Protected_W -.- Protected_RW
-Protected_RW -.- Protected_RW
-Protected_W_SRAM --> W_RW
-Protected_RW_SRAM --> W_RW
+Protected_RW -.- Protected_W_SRAM
+Protected_W_SRAM -.- Protected_RW_SRAM
+Protected_W --> W_RW
 ```
 > protectPlus (**byte[]** pwd, **byte[]** startAddr)
 
@@ -671,10 +671,15 @@ example usage
 ```kotlin
 // Authenticate in order to let the user use the demos
 demo!!.Auth(PseudoMainActivity.password, AuthStatus.Protected_RW.value)
+
+// This authentication is added in order to avoid authentication problems with old NFC Controllers
+      if (PseudoMainActivity.authStatus == AuthStatus.Authenticated.value) {
+         demo!!.Auth(PseudoMainActivity.password, AuthStatus.Protected_RW.value)
+      }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwODM1NDg5MiwxMTE4MzU5NTYxLC02NT
-U5ODU0OCwtNDk4MTExNjE5LC0xNzkwOTg5ODA2LC0xNzkxNTYy
-MzE5LC04NTczMjA0NTUsLTExMTA5ODk3MzEsLTExNTc5MDY5Mz
-EsLTE3ODQ3OTU4MjhdfQ==
+eyJoaXN0b3J5IjpbLTExMDQ0NjEwMzUsMTExODM1OTU2MSwtNj
+U1OTg1NDgsLTQ5ODExMTYxOSwtMTc5MDk4OTgwNiwtMTc5MTU2
+MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2OT
+MxLC0xNzg0Nzk1ODI4XX0=
 -->
