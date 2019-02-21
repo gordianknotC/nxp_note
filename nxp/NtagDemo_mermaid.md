@@ -609,7 +609,7 @@ public int ObtainAuthStatus() {
 
 
 ### Auth()
-Performs the authentication operation on NTAG I2C Plus  
+Performs the authentication operation on NTAG I2C Plus 
 
 - pwd **ByteArray** containing the password  
 - authStatus Current Authentication Status  
@@ -619,6 +619,9 @@ subgraph AuthStatus
 	unprotected
 	authenticated
 	W_RW
+	authStatus --> W_RW
+	authStatus --> authenticated
+	authStatus --> unprotected
 end
 
 unprotected --> reader.protectPlus
@@ -628,8 +631,8 @@ authenticated --> reader.unprotectPlus
 W_RW --> reader.authenticatePlus
 reader.authenticatePlus -.- pwd
 
-Protected_W --> W_RW
-Protected_RW --> W_RW
+Protected_W -.- Protected_RW
+Protected_RW -.- Protected_RW
 Protected_W_SRAM --> W_RW
 Protected_RW_SRAM --> W_RW
 ```
@@ -670,7 +673,7 @@ example usage
 demo!!.Auth(PseudoMainActivity.password, AuthStatus.Protected_RW.value)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNzQ3MDc4NywxMTE4MzU5NTYxLC02NT
+eyJoaXN0b3J5IjpbLTgwODM1NDg5MiwxMTE4MzU5NTYxLC02NT
 U5ODU0OCwtNDk4MTExNjE5LC0xNzkwOTg5ODA2LC0xNzkxNTYy
 MzE5LC04NTczMjA0NTUsLTExMTA5ODk3MzEsLTExNTc5MDY5Mz
 EsLTE3ODQ3OTU4MjhdfQ==
