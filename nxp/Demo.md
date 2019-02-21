@@ -30,12 +30,15 @@ NdefSp --> createNdefSpMessage
 
 $Write --> $addAar
 $addAar --> NdefRecord.createAar
-NdefRecor.createAar -.- packageName
+NdefRecord.createAar -.- packageName
+NdefRecord.createAar --> aarRecord
+
+nde
 
 ```
 ```kotlin
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU2Mjk2Mzg5LC04Mjg1NTYzM119
+eyJoaXN0b3J5IjpbMTAzNTAwMDc2NywtODI4NTU2MzNdfQ==
 -->
