@@ -12,11 +12,11 @@ NdefFragment
 TText
 TUri
 TBi
-TS
+TSp
 ```
 ```kotlin
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjgwNDU0NzgsLTgyODU1NjMzXX0=
+eyJoaXN0b3J5IjpbLTE0ODM2NjU5MDAsLTgyODU1NjMzXX0=
 -->
