@@ -582,13 +582,29 @@ public void LEDFinish() {
 
 ### ObtainAuthStatus()
 ``` mermaid
+graph LR
+$1k2kPlus --> AuthStatus.Disable
+!1k2kPlus --> reader.getProtectionPlus
 
 ```
 ```kotlin
-
+public int ObtainAuthStatus() {
+	try {
+		Ntag_Get_Version.Prod prod = reader.getProduct();
+		if (!prod.equals(Ntag_Get_Version.Prod.NTAG_I2C_1k_Plus)
+		 && !prod.equals(Ntag_Get_Version.Prod.NTAG_I2C_2k_Plus)) {
+			return AuthStatus.Disabled.getValue();
+		} else {
+			return reader.getProtectionPlus();
+		}
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+	return AuthStatus.Disabled.getValue();
+}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNTYzMDg1MiwtNDk4MTExNjE5LC0xNz
+eyJoaXN0b3J5IjpbMTU2NjQ5MzM3MiwtNDk4MTExNjE5LC0xNz
 kwOTg5ODA2LC0xNzkxNTYyMzE5LC04NTczMjA0NTUsLTExMTA5
 ODk3MzEsLTExNTc5MDY5MzEsLTE3ODQ3OTU4MjhdfQ==
 -->
