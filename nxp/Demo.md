@@ -119,8 +119,21 @@ execute
 doInBackground
 onProgressUpdate
 onPostExecute
+execute --> onPreExecute
+onPreExecute --> doInBackground
+doInBackground -.- onProgressUpdate
+doInBackground --> onPostExecute
+```
+```mermaid
+graph LR
+
+execute
+doInBackground
+onProgressUpdate
+onPostExecute
+
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjIyMDExNzgsLTgyODU1NjMzXX0=
+eyJoaXN0b3J5IjpbMTc1MDI2NDU1MSwtODI4NTU2MzNdfQ==
 -->
