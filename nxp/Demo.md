@@ -8,6 +8,8 @@
 graph LR
 $Write
 !Write
+$addAar
+!addAar
 
 NdefFragment
 NdefText
@@ -31,5 +33,5 @@ NdefSp --> createNdefSpMessage
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODU0ODA1NjgsLTgyODU1NjMzXX0=
+eyJoaXN0b3J5IjpbMTE2Mjc2NzgxOSwtODI4NTU2MzNdfQ==
 -->
