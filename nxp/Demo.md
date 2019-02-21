@@ -134,6 +134,7 @@ readNDEF --> readTime
 readNDEF --> msg
 Message -.- msg
 Message --> hightLevelMsg
+hightLevelMsg --> type
 hightLevelMsg--> EmptyRecord
 hightLevelMsg--> SmartPosterRecord
 hightLevelMsg--> TextRecord
@@ -145,7 +146,9 @@ SmartPosterRecord--> message
 TextRecord--> message
 AARecord--> message
 MIMERecord--> message
-
+```
+```mermaid
+graph LR
 readTime
 type
 publishProgress -.- message
@@ -154,6 +157,6 @@ publishProgress -.- type
 ```
 readNDEF: **reader** | Message: **NDEFTool.Message**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE3MTU4OTk0LDE5ODUzOTExNzgsLTgyOD
-U1NjMzXX0=
+eyJoaXN0b3J5IjpbNjE3MzM5Nzg2LDIxNzE1ODk5NCwxOTg1Mz
+kxMTc4LC04Mjg1NTYzM119
 -->
