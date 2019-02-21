@@ -28,10 +28,12 @@ NdefUri --> createNdefUriMessage
 NdefBT --> createNdefBSSPMessage
 NdefSp --> createNdefSpMessage
 
+$Write --> $addAar
+
 ```
 ```kotlin
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2Mjc2NzgxOSwtODI4NTU2MzNdfQ==
+eyJoaXN0b3J5IjpbMTY3NjUyNzQ4NSwtODI4NTU2MzNdfQ==
 -->
