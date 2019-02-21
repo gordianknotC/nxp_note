@@ -672,13 +672,12 @@ example usage
 // Authenticate in order to let the user use the demos
 demo!!.Auth(PseudoMainActivity.password, AuthStatus.Protected_RW.value)
 
-// This authentication is added in order to avoid authentication problems with old NFC Controllers
-      if (PseudoMainActivity.authStatus == AuthStatus.Authenticated.value) {
-         demo!!.Auth(PseudoMainActivity.password, AuthStatus.Protected_RW.value)
-      }
+// Perform auth operation based on the actual status  
+demo!!.Auth(PseudoMainActivity.password,  
+  PseudoMainActivity.authStatus)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDQ0NjEwMzUsMTExODM1OTU2MSwtNj
+eyJoaXN0b3J5IjpbLTEyNTIxMzU2ODcsMTExODM1OTU2MSwtNj
 U1OTg1NDgsLTQ5ODExMTYxOSwtMTc5MDk4OTgwNiwtMTc5MTU2
 MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2OT
 MxLC0xNzg0Nzk1ODI4XX0=
