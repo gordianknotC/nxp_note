@@ -450,6 +450,7 @@ private void writeConfigRegisters() {
 ```
 
 ### readTagContent
+Reads the whole tag memory content., return  Boolean indicating success or error
 ```mermaid
 
 ```
@@ -478,7 +479,7 @@ public byte[] readTagContent() {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NDk1NTE5NywtMTc5MTU2MjMxOSwtOD
-U3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2OTMxLC0xNzg0
-Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbLTE3OTA5ODk4MDYsLTE3OTE1NjIzMTksLT
+g1NzMyMDQ1NSwtMTExMDk4OTczMSwtMTE1NzkwNjkzMSwtMTc4
+NDc5NTgyOF19
 -->
