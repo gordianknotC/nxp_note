@@ -196,11 +196,14 @@ bytesWritten --> equal-0
 bytesWritten --> greater-0
 greater-0 -.-Ntag
 equal-0 -.- MiniNtag
-MiniNtag --> Al
+MiniNtag --> Alert
+
+Ntag --> writeConfigRegisters
+Ntag --> 1K2KPlus
 
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE0MTE0NzQ4LC0xNzg0Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbMTYyOTUxNTc5MSwtMTc4NDc5NTgyOF19
 -->
