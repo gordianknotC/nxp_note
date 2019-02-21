@@ -49,11 +49,11 @@ msg -.- NDEFWrite
 
 
 ```
-msg: **NDEFMessage**
+msg: **NDEFMessage** | write: **NdefFragment.Boolean**
 
 ```kotlin
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUwNTE5MjE4LC04Mjg1NTYzM119
+eyJoaXN0b3J5IjpbLTMzMDU1MDgwMCwtODI4NTU2MzNdfQ==
 -->
