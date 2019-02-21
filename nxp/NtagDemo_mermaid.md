@@ -451,7 +451,7 @@ private void writeConfigRegisters() {
 
 ### readTagContent
 Reads the whole tag memory content., return  Boolean indicating success or error
-- reader.readEEPROM ()
+- reader.readEEPROM (start, end)
 ```mermaid
 graph LR
 reader.getProduct --> memsize 
@@ -480,10 +480,34 @@ public byte[] readTagContent() {
 }
 ```
 
+### resetTagContent
+
+```mermaid
+
+```
+```kotlin
+public boolean resetTagContent() {
+	boolean success = true;
+	try {
+		byte[] d = new byte[reader.getProduct().getMemsize()];
+		reader.writeEEPROM(d, this);
+	} catch (IOException e) {
+		success = false;
+		e.printStackTrace();
+	} catch (FormatException e) {
+		success = false;
+		e.printStackTrace();
+	} catch (CommandNotSupportedException e) {
+		showDemoNotSupportedAlert();
+		e.printStackTrace();
+	}
+	return success;
+}
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzM1MTUyNzQsLTE3OTA5ODk4MDYsLT
-E3OTE1NjIzMTksLTg1NzMyMDQ1NSwtMTExMDk4OTczMSwtMTE1
-NzkwNjkzMSwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbLTgzMDY2NjE4MSwtMTc5MDk4OTgwNiwtMT
+c5MTU2MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3
+OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
 -->
