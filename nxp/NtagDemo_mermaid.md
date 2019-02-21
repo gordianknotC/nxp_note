@@ -556,8 +556,29 @@ public void LEDFinish() {
 }
 ```
 
+
+### NDEFReadFinish
+```mermaid
+
+```
+
+```kotlin
+public void NDEFReadFinish() {
+	if (ndefreadtask != null && !ndefreadtask.isCancelled()) {
+		ndefreadtask.exit = true;
+		try {
+			ndefreadtask.get();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		ndefreadtask = null;
+		// Clean all the fields
+		NdefFragment.resetNdefDemo();
+	}
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODA4NzY2NzksLTE3OTA5ODk4MDYsLT
-E3OTE1NjIzMTksLTg1NzMyMDQ1NSwtMTExMDk4OTczMSwtMTE1
-NzkwNjkzMSwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbMTY5OTU2NjkyNSwtMTc5MDk4OTgwNiwtMT
+c5MTU2MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3
+OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
 -->
