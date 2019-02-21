@@ -31,10 +31,10 @@ ndefType --> NdefUri
 ndefType --> NdefBT
 ndefType --> NdefSp
 
-NdefText --> createNdefTextMessage
-NdefUri --> createNdefUriMessage
-NdefBT --> createNdefBSSPMessage
-NdefSp --> createNdefSpMessage
+NdefText -.- createNdefTextMessage
+NdefUri -.- createNdefUriMessage
+NdefBT -.- createNdefBSSPMessage
+NdefSp -.- createNdefSpMessage
 createNdefTextMessage --> msg0
 createNdefUriMessage --> msg0
 createNdefBSSPMessage --> msg0
@@ -704,7 +704,8 @@ $Authenticated --> reader.authenticatePlus.pw.
  
 ```
 
-### creatNdefDefaultMessage
+### createNdefTextMessage
+### createNdefUriMessage
 ```mermaid
 
 ```
@@ -713,9 +714,9 @@ $Authenticated --> reader.authenticatePlus.pw.
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwMjc4MTAwOCwxNTk3NTExMTQzLDEwMz
-M0MDU2NTMsMTEwMjQ3MzU5NSwxMTE4MzU5NTYxLC02NTU5ODU0
-OCwtNDk4MTExNjE5LC0xNzkwOTg5ODA2LC0xNzkxNTYyMzE5LC
-04NTczMjA0NTUsLTExMTA5ODk3MzEsLTExNTc5MDY5MzEsLTE3
-ODQ3OTU4MjhdfQ==
+eyJoaXN0b3J5IjpbLTEzMDU4MjQ0MzAsMTYwMjc4MTAwOCwxNT
+k3NTExMTQzLDEwMzM0MDU2NTMsMTEwMjQ3MzU5NSwxMTE4MzU5
+NTYxLC02NTU5ODU0OCwtNDk4MTExNjE5LC0xNzkwOTg5ODA2LC
+0xNzkxNTYyMzE5LC04NTczMjA0NTUsLTExMTA5ODk3MzEsLTEx
+NTc5MDY5MzEsLTE3ODQ3OTU4MjhdfQ==
 -->
