@@ -615,6 +615,10 @@ Performs the authentication operation on NTAG I2C Plus
 - authStatus Current Authentication Status  
 ```mermaid
 graph LR
+unprotected
+authenticated
+W_RW
+
 unprotected --> reader.protectPlus
 reader.protectPlus -.- pwd
 reader.protectPlus -.- Ntag_I2C_Commands.Register
@@ -622,6 +626,10 @@ authenticated --> reader.unprotectPlus
 W_RW --> reader.authenticatePlus
 reader.authenticatePlus -.- pwd
 
+Protected_W --> W_RW
+Protected_RW --> W_RW
+Protected_W_SRAM --> W_RW
+Protected_RW_SRAM --> W_RW
 ```
 > protectPlus (**byte[]** pwd, **byte[]** startAddr)
 
@@ -654,8 +662,8 @@ public Boolean Auth(byte[] pwd, int authStatus) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3NTgzNDMxNywtNjU1OTg1NDgsLTQ5OD
-ExMTYxOSwtMTc5MDk4OTgwNiwtMTc5MTU2MjMxOSwtODU3MzIw
-NDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2OTMxLC0xNzg0Nzk1OD
-I4XX0=
+eyJoaXN0b3J5IjpbLTg1NDg5NTU0LC02NTU5ODU0OCwtNDk4MT
+ExNjE5LC0xNzkwOTg5ODA2LC0xNzkxNTYyMzE5LC04NTczMjA0
+NTUsLTExMTA5ODk3MzEsLTExNTc5MDY5MzEsLTE3ODQ3OTU4Mj
+hdfQ==
 -->
