@@ -186,10 +186,18 @@ graph LR
 
 ### resetTagMemory
 ``` mermaid
+graph LR
+Ntag
+MiniNtag
+bytesWritten
+equal-0
+greater-0
+bytesWritt
 
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODQ3OTU4MjhdfQ==
+eyJoaXN0b3J5IjpbLTE0ODc0ODM4NzAsLTE3ODQ3OTU4MjhdfQ
+==
 -->
