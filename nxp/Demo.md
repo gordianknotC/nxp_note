@@ -158,15 +158,20 @@ graph LR
 > readNDEF: **reader** | Message: **NDEFTool.Message** | type: **String - NdefType** | msg: **NDEFMessage** | message: **String - NdefMessage** | readTime: **Long - datarate**
 
 
-### NDEFRead
+### NDEFWrite
 ```mermaid
 graph LR
 timeStart
+timeStart --> read
+reader.writeNDEF -.- msg
 timeEnd
-readTime
+timeStart --> readTime
+timeEnd --> readTime
+
 
 ```
+msg: **NDEFMessage**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MDM0OTIwNywxNzU5NTY1OTA1LDIxNz
+eyJoaXN0b3J5IjpbLTg5NjY5MTMwMCwxNzU5NTY1OTA1LDIxNz
 E1ODk5NCwxOTg1MzkxMTc4LC04Mjg1NTYzM119
 -->
