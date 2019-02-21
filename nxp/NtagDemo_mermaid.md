@@ -681,7 +681,7 @@ demo!!.Auth(PseudoMainActivity.password,
 
 
 
-### getSessionRegisters
+### getSessionRegisters | getSessionRegister
 ```mermaid
 
 ```
@@ -695,10 +695,15 @@ public byte[] getSessionRegisters() throws IOException, FormatException {
 		return reader.read(Register.Session.getValue());
 	}
 }
+
+public byte getSessionRegister(SR_Offset off) throws IOException, FormatException {
+	byte[] register = getSessionRegisters();
+	return register[off.getValue()];
+}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTg3NjU3NCwxMTAyNDczNTk1LDExMT
-gzNTk1NjEsLTY1NTk4NTQ4LC00OTgxMTE2MTksLTE3OTA5ODk4
-MDYsLTE3OTE1NjIzMTksLTg1NzMyMDQ1NSwtMTExMDk4OTczMS
-wtMTE1NzkwNjkzMSwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbLTEwNDczNTgxMDcsMTEwMjQ3MzU5NSwxMT
+E4MzU5NTYxLC02NTU5ODU0OCwtNDk4MTExNjE5LC0xNzkwOTg5
+ODA2LC0xNzkxNTYyMzE5LC04NTczMjA0NTUsLTExMTA5ODk3Mz
+EsLTExNTc5MDY5MzEsLTE3ODQ3OTU4MjhdfQ==
 -->
