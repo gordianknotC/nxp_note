@@ -581,10 +581,13 @@ public void LEDFinish() {
 
 
 ### ObtainAuthStatus()
+Retrieves the auth status of the tag
+- reader.getProductionPlus
+- AuthStatus.Disable
 ``` mermaid
 graph LR
-$1k2kPlus --> AuthStatus.Disable
-!1k2kPlus --> reader.getProtectionPlus
+!1k2kPlus --> AuthStatus.Disable
+$1k2kPlus --> reader.getProtectionPlus
 
 ```
 ```kotlin
@@ -603,8 +606,18 @@ public int ObtainAuthStatus() {
 	return AuthStatus.Disabled.getValue();
 }
 ```
+
+
+### Auth()
+Performs the authentication operation on NTAG I2C Plus  
+
+- pwd  
+            Byte Array containing the password  
+- authStatus  
+          Current Authentication Status  
+ @return Boolean operation result
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NjQ5MzM3MiwtNDk4MTExNjE5LC0xNz
-kwOTg5ODA2LC0xNzkxNTYyMzE5LC04NTczMjA0NTUsLTExMTA5
-ODk3MzEsLTExNTc5MDY5MzEsLTE3ODQ3OTU4MjhdfQ==
+eyJoaXN0b3J5IjpbOTI0NjYyNTg4LC00OTgxMTE2MTksLTE3OT
+A5ODk4MDYsLTE3OTE1NjIzMTksLTg1NzMyMDQ1NSwtMTExMDk4
+OTczMSwtMTE1NzkwNjkzMSwtMTc4NDc5NTgyOF19
 -->
