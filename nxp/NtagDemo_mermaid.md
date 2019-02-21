@@ -300,6 +300,12 @@ reader.getConfigRegisters -.- getRegister_Settings
 getRegister_Settings --> Ntag_I2C_Registers
 RegisterConfigActivity.setAnswer -.- Ntag_I2C_Registers
 
+RegisterConfigActivity.setAnswer -.- NC_Reg
+RegisterConfigActivity.setAnswer -.- LD_Reg
+RegisterConfigActivity.setAnswer -.- SM_Reg
+RegisterConfigActivity.setAnswer -.- NS_Reg
+
+
 !Write --> !plus
 !plus --> reader.getAuth0Register
 !plus --> reader.getAccessRegister
@@ -410,6 +416,7 @@ reader.writeAuthRegisters -.- PT_I2C
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTE1NjIzMTksLTg1NzMyMDQ1NSwtMT
-ExMDk4OTczMSwtMTE1NzkwNjkzMSwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbLTYxNzQ4ODk2MSwtMTc5MTU2MjMxOSwtOD
+U3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2OTMxLC0xNzg0
+Nzk1ODI4XX0=
 -->
