@@ -147,7 +147,7 @@ TextRecord--> message
 AARecord--> message
 MIMERecord--> message
 ```
-message | readT
+message:String | type:
 ```mermaid
 graph LR
 readTime
@@ -158,6 +158,6 @@ publishProgress -.- type
 ```
 readNDEF: **reader** | Message: **NDEFTool.Message**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIwNDQ4MzU2LDIxNzE1ODk5NCwxOTg1Mz
-kxMTc4LC04Mjg1NTYzM119
+eyJoaXN0b3J5IjpbMTc1OTU2NTkwNSwyMTcxNTg5OTQsMTk4NT
+M5MTE3OCwtODI4NTU2MzNdfQ==
 -->
