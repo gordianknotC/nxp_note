@@ -11,12 +11,14 @@ $Write
 NdefFragment
 NdefText
 NdefUri
-NdefBi
-NdeSp
+NdefBT
+NdefSp
+
+createNdefTextMessage --> Ndef
 ```
 ```kotlin
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNDE0NDY5NCwtODI4NTU2MzNdfQ==
+eyJoaXN0b3J5IjpbMTc0MzI0NjQ5LC04Mjg1NTYzM119
 -->
