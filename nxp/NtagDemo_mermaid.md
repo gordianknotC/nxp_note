@@ -311,10 +311,14 @@ RegisterConfigActivity.setAnswer -.- I2C_CLOCK_STR
 end
 
 !Write --> !plus
-subgraph RegisterC
 !plus --> reader.getAuth0Register
 !plus --> reader.getAccessRegister
 !plus --> reader.getPTI2CRegister
+subgraph RegisterConfigActivity
+	reader.getAuth0Register -.- setAuth0
+	reader.getAccessRegister -.- setAcess
+	reader.getPTI2CRegister -.- setPTI2C
+end
 reader.getAuth0Register -.- Ntag_I2C_Plus_Registers
 reader.getAccessRegister-.- Ntag_I2C_Plus_Registers
 reader.getPTI2CRegister-.- Ntag_I2C_Plus_Registers
@@ -419,9 +423,12 @@ reader.writeAuthRegisters -.- AUTH0
 reader.writeAuthRegisters -.- ACCESS
 reader.writeAuthRegisters -.- PT_I2C
 ```
+```kotlin
+
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NjU4MzY3NCwtMTc5MTU2MjMxOSwtOD
-U3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2OTMxLC0xNzg0
-Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbLTE5NzU4MDUyNzMsLTE3OTE1NjIzMTksLT
+g1NzMyMDQ1NSwtMTExMDk4OTczMSwtMTE1NzkwNjkzMSwtMTc4
+NDc5NTgyOF19
 -->
