@@ -139,14 +139,20 @@ hightLevelMsg--> TextRecord
 hightLevelMsg--> AARecord
 hightLevelMsg--> MIMERecord
 
-EmptyRecord --> messzage
-EmptyRecord --> messzage
-EmptyRecord --> messzage
+EmptyRecord --> message
+SmartPosterRecord--> message
+TextRecord--> message
+AARecord--> message
+MIMERecord--> message
 
-
+readTime
+type
+publishProgress -.- message
+publishProgress -.- readTime
+publishProgress -.- type
 ```
 readNDEF: **reader** | Message: **NDEFTool.Message**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQxOTIzMzM4LDE5ODUzOTExNzgsLTgyOD
+eyJoaXN0b3J5IjpbMjE4MDQ3NzMyLDE5ODUzOTExNzgsLTgyOD
 U1NjMzXX0=
 -->
