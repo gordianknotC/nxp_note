@@ -4,6 +4,7 @@
 
 
 ### NDEF()
+read NDEF / write
 ``` mermaid
 graph LR
 $Write
@@ -34,7 +35,8 @@ $addAar --> NdefRecord.createAar
 NdefRecord.createAar -.- packageName
 NdefRecord.createAar --> aarRecord
 
-msg --> 
+msg --> aarRecord
+!Write --> NDEFReadTask
 
 
 ```
@@ -42,5 +44,5 @@ msg -->
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI0NjM0MDI1LC04Mjg1NTYzM119
+eyJoaXN0b3J5IjpbLTEyNDU2MjIzNTUsLTgyODU1NjMzXX0=
 -->
