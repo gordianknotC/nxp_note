@@ -253,11 +253,16 @@ public int resetTagMemory() {
 }
 ```
 
+### readSessionRegisters
+```mermaid
+reader
+```
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNzk3MzIzNiwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbLTEwOTMwNzE4OTEsLTE3ODQ3OTU4MjhdfQ
+==
 -->
