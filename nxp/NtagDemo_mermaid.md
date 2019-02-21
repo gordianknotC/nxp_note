@@ -705,15 +705,18 @@ $Authenticated --> reader.authenticatePlus.pw.
 ```
 ### createNdefTextMessage
 ```mermaid
-
+text-bytes
+lang-bytes
+text-length
+lang-length
 ```
 ### createNdefUriMessage
 ### createNdefBSSPMessage
 ### createNdefSpMessage
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzA3MDQzMjgsMTYwMjc4MTAwOCwxNT
-k3NTExMTQzLDEwMzM0MDU2NTMsMTEwMjQ3MzU5NSwxMTE4MzU5
-NTYxLC02NTU5ODU0OCwtNDk4MTExNjE5LC0xNzkwOTg5ODA2LC
-0xNzkxNTYyMzE5LC04NTczMjA0NTUsLTExMTA5ODk3MzEsLTEx
-NTc5MDY5MzEsLTE3ODQ3OTU4MjhdfQ==
+eyJoaXN0b3J5IjpbNDQ3MTM5MDA4LDE2MDI3ODEwMDgsMTU5Nz
+UxMTE0MywxMDMzNDA1NjUzLDExMDI0NzM1OTUsMTExODM1OTU2
+MSwtNjU1OTg1NDgsLTQ5ODExMTYxOSwtMTc5MDk4OTgwNiwtMT
+c5MTU2MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3
+OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
 -->
