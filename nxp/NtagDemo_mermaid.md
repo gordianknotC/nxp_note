@@ -685,22 +685,22 @@ demo!!.Auth(PseudoMainActivity.password,
 ... todo
 ```mermaid
 graph LR
-
-execute
-doInBackground
-onProgressUpdate
-onPostExecute
-execute --> onPreExecute
-onPreExecute --> doInBackground
-doInBackground -.- onProgressUpdate
-doInBackground --> onPostExecute
+	execute
+	doInBackground
+	onProgressUpdate
+	onPostExecute
+	execute --> onPreExecute
+	onPreExecute --> doInBackground
+	doInBackground -.- onProgressUpdate
+	doInBackground --> onPostExecute
 ```
 ```kotlin
  
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMzQwNTY1MywxMTAyNDczNTk1LDExMT
-gzNTk1NjEsLTY1NTk4NTQ4LC00OTgxMTE2MTksLTE3OTA5ODk4
-MDYsLTE3OTE1NjIzMTksLTg1NzMyMDQ1NSwtMTExMDk4OTczMS
-wtMTE1NzkwNjkzMSwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbMTU5NzUxMTE0MywxMDMzNDA1NjUzLDExMD
+I0NzM1OTUsMTExODM1OTU2MSwtNjU1OTg1NDgsLTQ5ODExMTYx
+OSwtMTc5MDk4OTgwNiwtMTc5MTU2MjMxOSwtODU3MzIwNDU1LC
+0xMTEwOTg5NzMxLC0xMTU3OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
+
 -->
