@@ -485,8 +485,8 @@ public byte[] readTagContent() {
 ```mermaid
 graph LR
 reader.getProduct --> memsize
-memsize --> EmpbyteOfMemsize
-reader.writeEEPROM -.- byteOfMemsize
+memsize --> EmptyBytesOfMemsize
+reader.writeEEPROM -.- EmptyBytesOfMemsize
 ```
 ```kotlin
 public boolean resetTagContent() {
@@ -509,8 +509,29 @@ public boolean resetTagContent() {
 ```
 
 
+### LED
+```mermaid
+setAnswer
+setT
+```
+
+```kotlin
+public void LED() throws IOException, FormatException {
+	// Reset UI
+	LedFragment.setAnswer(main.getResources().getString(R.string.readConf));
+	LedFragment.setTemperatureC(0);
+	LedFragment.setTemperatureF(0);
+	LedFragment.setVoltage(0);
+
+	// The demo is executed in a separate thread to let the GUI run
+	lTask = new LedTask();
+	lTask.execute();
+}
+```
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MDcyNywtMTc5MDk4OTgwNiwtMTc5MT
-U2MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2
-OTMxLC0xNzg0Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbLTU1MTgwMTMzNSwtMTc5MDk4OTgwNiwtMT
+c5MTU2MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3
+OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
 -->
