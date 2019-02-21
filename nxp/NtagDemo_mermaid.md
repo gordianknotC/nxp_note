@@ -395,9 +395,18 @@ reader.writeConfigRegisters -.- WD_LS_Reg
 reader.writeConfigRegisters -.- WD_MS_Reg
 reader.writeConfigRegisters -.- I2C_CLOCK_STR
 
+subgraph RegisterConfigActivity
+	AUTH0
+	ACCESS
+	PT_I2C
+end
+
+reader.writeAuthRegisters -.- AUTH0
+reader.writeAuthRegisters -.- ACCESS
+reader.writeAuthRegisters -.- PT_I2C
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxODIyNjYzNiwtODU3MzIwNDU1LC0xMT
+eyJoaXN0b3J5IjpbMjAwMDY2NzA4NywtODU3MzIwNDU1LC0xMT
 EwOTg5NzMxLC0xMTU3OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
 -->
