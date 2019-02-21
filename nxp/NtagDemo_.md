@@ -282,10 +282,29 @@ Builds a String array for the Registers.
 
 
 
+-----------------------------------------------------------
 
+
+### resetSessionRegisters
+Resets the tag to its delivery values (including config registers).
+#### describe functioning process in brief
+* params
+	* @return **int** indicating number of bytes written
+	##### referenced in
+	- ResetMemoryActivity
+		- doInBackground
+	 ##### example - statistic time to reset memory
+	```java
+	long regTimeOutStart = System.currentTimeMillis();  
+	// Reset Tag demo will return the number of bytes written  
+	int bytes = demo.resetTagMemory();  
+	// Memory erase time statistics  
+	timeToResetMemory = System.currentTimeMillis() - regTimeOutStart;  
+	```
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTg3MjkxNDldfQ==
+eyJoaXN0b3J5IjpbLTE5MDM0NzQxMDUsLTEyMTg3MjkxNDldfQ
+==
 -->
