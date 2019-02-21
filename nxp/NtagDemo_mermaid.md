@@ -447,6 +447,8 @@ reader.writeAuthRegisters -.- ACCESS
 reader.writeAuthRegisters -.- PT_I2C
 ```
 > reader.writeAuthRegisters
+>    - write default password (0xFF 0xFF 0xFF 0xFF)
+>     
 ```kotlin
 private void writeConfigRegisters() {
 	try {
@@ -721,10 +723,10 @@ lang-length
 ### createNdefBSSPMessage
 ### createNdefSpMessage
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNzc5OTg0MSwtMTA5NzI5ODYwNSw0ND
-cxMzkwMDgsMTYwMjc4MTAwOCwxNTk3NTExMTQzLDEwMzM0MDU2
-NTMsMTEwMjQ3MzU5NSwxMTE4MzU5NTYxLC02NTU5ODU0OCwtND
-k4MTExNjE5LC0xNzkwOTg5ODA2LC0xNzkxNTYyMzE5LC04NTcz
-MjA0NTUsLTExMTA5ODk3MzEsLTExNTc5MDY5MzEsLTE3ODQ3OT
-U4MjhdfQ==
+eyJoaXN0b3J5IjpbMzU2NDIzMDI2LC0xMDk3Mjk4NjA1LDQ0Nz
+EzOTAwOCwxNjAyNzgxMDA4LDE1OTc1MTExNDMsMTAzMzQwNTY1
+MywxMTAyNDczNTk1LDExMTgzNTk1NjEsLTY1NTk4NTQ4LC00OT
+gxMTE2MTksLTE3OTA5ODk4MDYsLTE3OTE1NjIzMTksLTg1NzMy
+MDQ1NSwtMTExMDk4OTczMSwtMTE1NzkwNjkzMSwtMTc4NDc5NT
+gyOF19
 -->
