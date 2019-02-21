@@ -375,7 +375,13 @@ public void readWriteConfigRegister() throws CommandNotSupportedException {
 	}
 }
 ```
+
+### writeConfigRegisters
+
+```mermaid
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDA5NzYxMDQsLTExMTA5ODk3MzEsLT
-ExNTc5MDY5MzEsLTE3ODQ3OTU4MjhdfQ==
+eyJoaXN0b3J5IjpbLTg1NzMyMDQ1NSwtMTExMDk4OTczMSwtMT
+E1NzkwNjkzMSwtMTc4NDc5NTgyOF19
 -->
