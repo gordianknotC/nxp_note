@@ -200,10 +200,64 @@ MiniNtag --> Alert
 
 Ntag --> writeConfigRegisters
 Ntag --> 1K2KPlus
+1K2KPlus --> writeAuthRegisters
+```
+```kotlin
+public int resetTagMemory() {
+	int bytesWritten = 0;
 
+	try {
+		bytesWritten = reader.writeDeliveryNdef();
+	} catch (Exception e) {
+		e.printStackTrace();
+		bytesWritten = -1;
+	}
+	if(bytesWritten == 0) {
+		showDemoNotSupportedAlert();
+	} else {
+		byte NC_REG = (byte) 0x01;
+		byte LD_Reg = (byte) 0x00;
+		byte SM_Reg = (byte) 0xF8;
+		byte WD_LS_Reg = (byte) 0x48;
+		byte WD_MS_Reg = (byte) 0x08;
+		byte I2C_CLOCK_STR = (byte) 0x01;
+		// If we could reset the memory map, we should be able to write the config registers
+		try {
+			reader.writeConfigRegisters(NC_REG, LD_Reg,
+					SM_Reg, WD_LS_Reg, WD_MS_Reg, I2C_CLOCK_STR);
+		} catch (Exception e) {
+			//Toast.makeText(main, "Error writing configuration registers", Toast.LENGTH_LONG).show();
+			toastText(main, "Error writing configuration registers", Toast.LENGTH_LONG);
+			e.printStackTrace();
+			bytesWritten = -1;
+		}
+
+		try {
+			Ntag_Get_Version.Prod prod = reader.getProduct();
+
+			if (prod.equals(Ntag_Get_Version.Prod.NTAG_I2C_1k_Plus)
+			 || prod.equals(Ntag_Get_Version.Prod.NTAG_I2C_2k_Plus)) {
+				byte AUTH0 = (byte) 0xFF;
+				byte ACCESS = (byte) 0x00;
+				byte PT_I2C = (byte) 0x00;
+				reader.writeAuthRegisters(AUTH0, ACCESS, PT_I2C);
+			}
+		} catch (Exception e) {
+			//Toast.makeText(main, "Error writing authentication registers", Toast.LENGTH_LONG).show();
+			toastText(main, "Error writing authentication registers", Toast.LENGTH_LONG);
+			e.printStackTrace();
+			bytesWritten = -1;
+		}
+	}
+	return bytesWritten;
+}
 ```
 
 
+
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyOTUxNTc5MSwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbMTkwNzk3MzIzNiwtMTc4NDc5NTgyOF19
 -->
