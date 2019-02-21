@@ -289,17 +289,18 @@ $Write
 $1k2kPlus
 !1k2kPlus
 
-$Write --> $1k2kPlus
-$1k2kPlus --> Alert
+$Write --> $1k2kPlus+Auth
+$1k2kPlus+Auth --> Alert
 $Write --> !1k2kPlus
 !1k2kPlus -> writeConfigRegisters
 
+!Write --> configRegisters
 
 ```
 > Write: **RegisterConfigActivity.Boolean**
 > 1k2kPlus: **Ntag_Get_version.Prod** via reader.getProduct
-
+>1k2kPlus+Auth: **RegisterConfigActivity.getAuth0()**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNzI5MzMzLC0xNzg0Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbLTg0NjY1NzM1OCwtMTc4NDc5NTgyOF19
 -->
