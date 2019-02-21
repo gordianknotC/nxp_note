@@ -510,6 +510,7 @@ public boolean resetTagContent() {
 
 
 ### LED
+Performs the LED Demo
 ```mermaid
 graph LR
 subgraph LedFragment
@@ -546,7 +547,7 @@ public void LED() throws IOException, FormatException {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTczMzYxNzgsLTE3OTA5ODk4MDYsLT
-E3OTE1NjIzMTksLTg1NzMyMDQ1NSwtMTExMDk4OTczMSwtMTE1
-NzkwNjkzMSwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbMTc4MTM0NDE4MSwtMTc5MDk4OTgwNiwtMT
+c5MTU2MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3
+OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
 -->
