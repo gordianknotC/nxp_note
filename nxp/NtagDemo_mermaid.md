@@ -611,11 +611,43 @@ public int ObtainAuthStatus() {
 ### Auth()
 Performs the authentication operation on NTAG I2C Plus  
 
-- pwd   Byte Array containing the password  
-- authStatus            Current Authentication Status  
+- pwd   **ByteArray** containing the password  
+- authStatus Current Authentication Status  
+```mermaid
 
+```
+
+```kotlin
+public Boolean Auth(byte[] pwd, int authStatus) {
+	try {
+		if(authStatus == AuthStatus.Unprotected.getValue()) {
+			reader.protectPlus(pwd, Register.Capability_Container.getValue());
+		} else if(authStatus == AuthStatus.Authenticated.getValue()) {
+			reader.unprotectPlus();
+		} else if(authStatus == AuthStatus.Protected_W.getValue()
+				|| authStatus == AuthStatus.Protected_RW.getValue()
+				|| authStatus == AuthStatus.Protected_W_SRAM.getValue()
+				|| authStatus == AuthStatus.Protected_RW_SRAM.getValue()) {
+			byte[] pack = reader.authenticatePlus(pwd);
+			if(pack.length < 2) {
+				return false;
+			}
+		}
+		return true;
+	} catch (IOException e) {
+		e.printStackTrace();
+	} catch (FormatException e) {
+		e.printStackTrace();
+	} catch (NotPlusTagException e) {
+		showTagNotPlusAlert();
+		e.printStackTrace();
+	}
+	return false;
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1NTk4NTQ4LC00OTgxMTE2MTksLTE3OT
-A5ODk4MDYsLTE3OTE1NjIzMTksLTg1NzMyMDQ1NSwtMTExMDk4
-OTczMSwtMTE1NzkwNjkzMSwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbLTgyMTY3MzkyNiwtNjU1OTg1NDgsLTQ5OD
+ExMTYxOSwtMTc5MDk4OTgwNiwtMTc5MTU2MjMxOSwtODU3MzIw
+NDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2OTMxLC0xNzg0Nzk1OD
+I4XX0=
 -->
