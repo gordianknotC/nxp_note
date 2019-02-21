@@ -513,10 +513,10 @@ public boolean resetTagContent() {
 ```mermaid
 graph LR
 subgraph LedFragment
-	setAnswer -.- default
+	setAnswer -.- defaults
 	setTemperatureC -.- default0
-	setTemperatureF -.- 0
-	setVoltage
+	setTemperatureF -.- default0
+	setVoltage -.- default0
 end
 
 LedTask
@@ -536,9 +536,11 @@ public void LED() throws IOException, FormatException {
 }
 ```
 
+### LEDTask
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAwMjQzNjkyLC0xNzkwOTg5ODA2LC0xNz
-kxNTYyMzE5LC04NTczMjA0NTUsLTExMTA5ODk3MzEsLTExNTc5
-MDY5MzEsLTE3ODQ3OTU4MjhdfQ==
+eyJoaXN0b3J5IjpbLTEzNjQzMjE2ODAsLTE3OTA5ODk4MDYsLT
+E3OTE1NjIzMTksLTg1NzMyMDQ1NSwtMTExMDk4OTczMSwtMTE1
+NzkwNjkzMSwtMTc4NDc5NTgyOF19
 -->
