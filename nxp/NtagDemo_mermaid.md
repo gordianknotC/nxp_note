@@ -259,7 +259,11 @@ graph LR
 reader.getSessionRegisters --> reg
 getRegister_Settings -.- reg
 getRegister_Settings --> Ntag_I2C_Registers
-RegisterSeesionActivity.SetAnswer -.- Ntag_I2C_Registers
+RegisterSessionActivity.SetAnswer -.- Ntag_I2C_Registers
+showToast
+```
+#### RegisterSessionActivity.SetAnswer
+```mermaid
 
 ```
 
@@ -268,5 +272,5 @@ RegisterSeesionActivity.SetAnswer -.- Ntag_I2C_Registers
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjEyMzAwMSwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbLTQwNDYyMzY2NCwtMTc4NDc5NTgyOF19
 -->
