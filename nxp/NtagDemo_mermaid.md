@@ -696,15 +696,19 @@ graph LR
 ```
 ```mermaid
 graph LR
-rea	
+$1k2kPlus --> $Authenticated
+$1k2kPlus --> !Authenticated
+$Authenticated --> reader.authenticatePlus.pw.
+
+
 ```
 ```kotlin
  
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0NjUzOTU3OCwxNTk3NTExMTQzLDEwMz
-M0MDU2NTMsMTEwMjQ3MzU5NSwxMTE4MzU5NTYxLC02NTU5ODU0
-OCwtNDk4MTExNjE5LC0xNzkwOTg5ODA2LC0xNzkxNTYyMzE5LC
-04NTczMjA0NTUsLTExMTA5ODk3MzEsLTExNTc5MDY5MzEsLTE3
-ODQ3OTU4MjhdfQ==
+eyJoaXN0b3J5IjpbOTY5NTQ5MjU1LDE1OTc1MTExNDMsMTAzMz
+QwNTY1MywxMTAyNDczNTk1LDExMTgzNTk1NjEsLTY1NTk4NTQ4
+LC00OTgxMTE2MTksLTE3OTA5ODk4MDYsLTE3OTE1NjIzMTksLT
+g1NzMyMDQ1NSwtMTExMDk4OTczMSwtMTE1NzkwNjkzMSwtMTc4
+NDc5NTgyOF19
 -->
