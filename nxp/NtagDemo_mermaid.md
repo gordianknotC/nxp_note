@@ -537,17 +537,27 @@ public void LED() throws IOException, FormatException {
 }
 ```
 
-### LEDTask
+### LEDFinish
 ```mermaid
 
 ```
 
 ```Kotlin
-
+public void LEDFinish() {
+if (lTask != null && !lTask.isCancelled()) {
+	lTask.exit = true;
+	try {
+		lTask.get();
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	lTask = null;
+}
+}
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MTM0NDE4MSwtMTc5MDk4OTgwNiwtMT
+eyJoaXN0b3J5IjpbMTUwNjg3MzkzNywtMTc5MDk4OTgwNiwtMT
 c5MTU2MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3
 OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
 -->
