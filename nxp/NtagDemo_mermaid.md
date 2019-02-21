@@ -616,6 +616,8 @@ Performs the authentication operation on NTAG I2C Plus
 ```mermaid
 graph LR
 unprotected --> reader.protectPlus
+reader.protectPlus -.- pwd
+reader.protectPlus -.- Ntag_I2C_Commands.Register
 authenticated
 W_RW
 
@@ -651,7 +653,7 @@ public Boolean Auth(byte[] pwd, int authStatus) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTQzMDE1ODMsLTY1NTk4NTQ4LC00OT
+eyJoaXN0b3J5IjpbLTE1ODU2MjU0MzksLTY1NTk4NTQ4LC00OT
 gxMTE2MTksLTE3OTA5ODk4MDYsLTE3OTE1NjIzMTksLTg1NzMy
 MDQ1NSwtMTExMDk4OTczMSwtMTE1NzkwNjkzMSwtMTc4NDc5NT
 gyOF19
