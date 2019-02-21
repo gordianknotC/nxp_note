@@ -109,6 +109,15 @@ if (NdefFragment.isWriteChosen()) {
 }
 }
 ```
+
+
+### NDEFReadTask()
+```mermaid
+graph LR
+
+execute
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3MjMwNjU2NywtODI4NTU2MzNdfQ==
+eyJoaXN0b3J5IjpbMTUzNDgzMjU0NywtODI4NTU2MzNdfQ==
 -->
