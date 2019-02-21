@@ -580,8 +580,15 @@ public void LEDFinish() {
 ```
 
 
+### ObtainAuthStatus()
+``` mermaid
+
+```
+```kotlin
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5ODExMTYxOSwtMTc5MDk4OTgwNiwtMT
-c5MTU2MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3
-OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbLTUyNTYzMDg1MiwtNDk4MTExNjE5LC0xNz
+kwOTg5ODA2LC0xNzkxNTYyMzE5LC04NTczMjA0NTUsLTExMTA5
+ODk3MzEsLTExNTc5MDY5MzEsLTE3ODQ3OTU4MjhdfQ==
 -->
