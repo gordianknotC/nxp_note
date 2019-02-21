@@ -130,9 +130,10 @@ graph LR
 msg
 
 readNDEF --> msg
-
+Message -.- msg
 ```
-readNDEF: **reader**
+readNDEF: **reader** | Message: **NDEFTool.Message**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NTM5MTE3OCwtODI4NTU2MzNdfQ==
+eyJoaXN0b3J5IjpbMTUwNzk1NDU2MSwxOTg1MzkxMTc4LC04Mj
+g1NTYzM119
 -->
