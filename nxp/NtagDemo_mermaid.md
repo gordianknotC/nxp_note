@@ -483,7 +483,10 @@ public byte[] readTagContent() {
 ### resetTagContent
 
 ```mermaid
-
+graph LR
+reader.getProduct --> memsize
+memsize --> EmpbyteOfMemsize
+reader.writeEEPROM -.- byteOfMemsize
 ```
 ```kotlin
 public boolean resetTagContent() {
@@ -507,7 +510,7 @@ public boolean resetTagContent() {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzMDY2NjE4MSwtMTc5MDk4OTgwNiwtMT
-c5MTU2MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3
-OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbLTI2MDcyNywtMTc5MDk4OTgwNiwtMTc5MT
+U2MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2
+OTMxLC0xNzg0Nzk1ODI4XX0=
 -->
