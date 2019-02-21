@@ -130,6 +130,7 @@ doInBackground --> onPostExecute
 graph LR
 msg
 
+readNDEF --> readTime
 readNDEF --> msg
 Message -.- msg
 Message --> hightLevelMsg
@@ -153,6 +154,6 @@ publishProgress -.- type
 ```
 readNDEF: **reader** | Message: **NDEFTool.Message**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE4MDQ3NzMyLDE5ODUzOTExNzgsLTgyOD
+eyJoaXN0b3J5IjpbMjE3MTU4OTk0LDE5ODUzOTExNzgsLTgyOD
 U1NjMzXX0=
 -->
