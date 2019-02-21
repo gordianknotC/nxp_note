@@ -4,7 +4,7 @@
 
 
 ### NDEF()
-read NDEF / write
+read | write NDEF
 ``` mermaid
 graph LR
 $Write
@@ -44,5 +44,5 @@ msg --> aarRecord
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDU2MjIzNTUsLTgyODU1NjMzXX0=
+eyJoaXN0b3J5IjpbLTQ3MzczNjc5NiwtODI4NTU2MzNdfQ==
 -->
