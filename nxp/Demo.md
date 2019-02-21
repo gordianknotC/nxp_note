@@ -9,14 +9,14 @@ graph LR
 $Write
 !Write
 NdefFragment
-TText
-TUri
-TBi
-TSp
+NdefText
+NdefUri
+NdefBi
+NdeSp
 ```
 ```kotlin
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODM2NjU5MDAsLTgyODU1NjMzXX0=
+eyJoaXN0b3J5IjpbMTgyNDE0NDY5NCwtODI4NTU2MzNdfQ==
 -->
