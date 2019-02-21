@@ -6,6 +6,7 @@
 read | write NDEF
 ``` mermaid
 graph LR
+ 
 $Write
 !Write
 $addAar
@@ -54,5 +55,5 @@ msg: **NDEFMessage**
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2MTI3ODAwNCwtODI4NTU2MzNdfQ==
+eyJoaXN0b3J5IjpbNTUwNTE5MjE4LC04Mjg1NTYzM119
 -->
