@@ -16,16 +16,20 @@ NdefBT
 NdefSp
 ndefType
 
+$Write --> ndefType
 ndefType --> NdefText
 ndefType --> NdefUri
 ndefType --> NdefBT
 ndefType --> NdefSp
-NdefText --> createNdefTextMes
+NdefText --> createNdefTextMessage
+NdefUri --> createNdefUriMessage
+NdefBT --> createNdefBSSPMessage
+NdefSp --> createNdefSpMessage
 
 ```
 ```kotlin
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDg0MTg5MzEsLTgyODU1NjMzXX0=
+eyJoaXN0b3J5IjpbLTE0ODU0ODA1NjgsLTgyODU1NjMzXX0=
 -->
