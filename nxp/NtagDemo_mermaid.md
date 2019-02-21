@@ -300,11 +300,15 @@ reader.getConfigRegisters -.- getRegister_Settings
 getRegister_Settings --> Ntag_I2C_Registers
 RegisterConfigActivity.setAnswer -.- Ntag_I2C_Registers
 
+subgraph RegisterConfigActivity
 RegisterConfigActivity.setAnswer -.- NC_Reg
 RegisterConfigActivity.setAnswer -.- LD_Reg
 RegisterConfigActivity.setAnswer -.- SM_Reg
 RegisterConfigActivity.setAnswer -.- NS_Reg
-
+RegisterConfigActivity.setAnswer -.- WD_LS_Reg
+RegisterConfigActivity.setAnswer -.- WD_MS_Reg
+RegisterConfigActivity.setAnswer -.- I2C_CLOCK_STR
+end
 
 !Write --> !plus
 !plus --> reader.getAuth0Register
@@ -416,7 +420,7 @@ reader.writeAuthRegisters -.- PT_I2C
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNzQ4ODk2MSwtMTc5MTU2MjMxOSwtOD
+eyJoaXN0b3J5IjpbMTI1ODQ4MTc1NCwtMTc5MTU2MjMxOSwtOD
 U3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2OTMxLC0xNzg0
 Nzk1ODI4XX0=
 -->
