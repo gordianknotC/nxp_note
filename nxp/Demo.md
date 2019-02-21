@@ -132,15 +132,16 @@ msg
 
 readNDEF --> msg
 Message -.- msg
-Message --> EmptyRecord
-Message --> SmartPosterRecord
-Message --> TextRecord
-Message --> AARecord
-Message --> MIMERecord
+Message --> hightLevelMsg
+hightLevelMsg--> EmptyRecord
+hightLevelMsg--> SmartPosterRecord
+hightLevelMsg--> TextRecord
+hightLevelMsg--> AARecord
+hightLevelMsg--> MIMERecord
 
 ```
 readNDEF: **reader** | Message: **NDEFTool.Message**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzMDI5MDIxNywxOTg1MzkxMTc4LC04Mj
-g1NTYzM119
+eyJoaXN0b3J5IjpbODk4NTgwMDc3LDE5ODUzOTExNzgsLTgyOD
+U1NjMzXX0=
 -->
