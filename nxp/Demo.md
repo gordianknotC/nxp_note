@@ -11,7 +11,7 @@ $Write
 $addAar
 !addAar
 
-NdefFragment
+subgraph NdefFragment
 NdefText
 NdefUri
 NdefBT
@@ -44,9 +44,11 @@ msg -.- NDEFWrite
 
 
 ```
+msg: **NDEFMessage**
+
 ```kotlin
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDA4ODYyMDAsLTgyODU1NjMzXX0=
+eyJoaXN0b3J5IjpbLTk4ODc2Njk0MywtODI4NTU2MzNdfQ==
 -->
