@@ -173,6 +173,29 @@ timeEnd --> readTime
 msg: **NDEFMessage**
 
 
+### NDEFReadFinish
+```mermaid
+graph LR
+NdefFragment.resetNdefDemo
+```
+
+```kotlin
+public void NDEFReadFinish() {
+	if (ndefreadtask != null && !ndefreadtask.isCancelled()) {
+		ndefreadtask.exit = true;
+		try {
+			ndefreadtask.get();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		ndefreadtask = null;
+		// Clean all the fields
+		NdefFragment.resetNdefDemo();
+	}
+}
+```
+
+
 ### finishAllTasks
 ```mermaid
 graph LR
@@ -557,28 +580,8 @@ public void LEDFinish() {
 ```
 
 
-### NDEFReadFinish
-```mermaid
-
-```
-
-```kotlin
-public void NDEFReadFinish() {
-	if (ndefreadtask != null && !ndefreadtask.isCancelled()) {
-		ndefreadtask.exit = true;
-		try {
-			ndefreadtask.get();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		ndefreadtask = null;
-		// Clean all the fields
-		NdefFragment.resetNdefDemo();
-	}
-}
-```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5OTU2NjkyNSwtMTc5MDk4OTgwNiwtMT
+eyJoaXN0b3J5IjpbLTQ5ODExMTYxOSwtMTc5MDk4OTgwNiwtMT
 c5MTU2MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3
 OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
 -->
