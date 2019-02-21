@@ -618,12 +618,12 @@ graph LR
 unprotected --> reader.protectPlus
 reader.protectPlus -.- pwd
 reader.protectPlus -.- Ntag_I2C_Commands.Register
-authenticated
-W_RW
-
+authenticated --> reader.unprotectPlus
+W_RW --> reader.authenticatePlus
+reader.authenticatePlus -.- pwd
 
 ```
-> protectPlus ()
+> protectPlus (**byte[]** pwd, **byte[]** startAddr)
 
 ```kotlin
 public Boolean Auth(byte[] pwd, int authStatus) {
@@ -654,8 +654,8 @@ public Boolean Auth(byte[] pwd, int authStatus) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjY4NTIxNDcsLTY1NTk4NTQ4LC00OT
-gxMTE2MTksLTE3OTA5ODk4MDYsLTE3OTE1NjIzMTksLTg1NzMy
-MDQ1NSwtMTExMDk4OTczMSwtMTE1NzkwNjkzMSwtMTc4NDc5NT
-gyOF19
+eyJoaXN0b3J5IjpbLTM3NTgzNDMxNywtNjU1OTg1NDgsLTQ5OD
+ExMTYxOSwtMTc5MDk4OTgwNiwtMTc5MTU2MjMxOSwtODU3MzIw
+NDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2OTMxLC0xNzg0Nzk1OD
+I4XX0=
 -->
