@@ -478,7 +478,10 @@ private void writeConfigRegisters() {
 ### readTagContent
 Reads the whole tag memory content., return  Boolean indicating success or error
 - reader.readEEPROM (start, end)
+
 referenced in ReadMemoryActivity
+
+
 ```mermaid
 graph LR
 reader.getProduct --> memsize 
@@ -728,10 +731,10 @@ lang-length
 ### createNdefBSSPMessage
 ### createNdefSpMessage
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjM0MDk0OTEsODA1NDYxMDI1LC0xMD
-k3Mjk4NjA1LDQ0NzEzOTAwOCwxNjAyNzgxMDA4LDE1OTc1MTEx
-NDMsMTAzMzQwNTY1MywxMTAyNDczNTk1LDExMTgzNTk1NjEsLT
-Y1NTk4NTQ4LC00OTgxMTE2MTksLTE3OTA5ODk4MDYsLTE3OTE1
-NjIzMTksLTg1NzMyMDQ1NSwtMTExMDk4OTczMSwtMTE1NzkwNj
-kzMSwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbNzIwMzQ0NDE5LDgwNTQ2MTAyNSwtMTA5Nz
+I5ODYwNSw0NDcxMzkwMDgsMTYwMjc4MTAwOCwxNTk3NTExMTQz
+LDEwMzM0MDU2NTMsMTEwMjQ3MzU5NSwxMTE4MzU5NTYxLC02NT
+U5ODU0OCwtNDk4MTExNjE5LC0xNzkwOTg5ODA2LC0xNzkxNTYy
+MzE5LC04NTczMjA0NTUsLTExMTA5ODk3MzEsLTExNTc5MDY5Mz
+EsLTE3ODQ3OTU4MjhdfQ==
 -->
