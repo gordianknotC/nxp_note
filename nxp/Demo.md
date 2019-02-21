@@ -22,6 +22,7 @@ msg --> ndefType
 $Write --> NDEFWrite
 $Write --> ndefType
 $Write --> $addAar
+!Write --> NDEFReadTask
 
 ndefType --> NdefText
 ndefType --> NdefUri
@@ -32,13 +33,12 @@ NdefUri --> createNdefUriMessage
 NdefBT --> createNdefBSSPMessage
 NdefSp --> createNdefSpMessage
 
-
 $addAar --> NdefRecord.createAar
 NdefRecord.createAar -.- packageName
 NdefRecord.createAar --> aarRecord
 
 msg --> aarRecord
-!Write --> NDEFReadTask
+msg -.- NDEFWrite
 
 
 
@@ -48,5 +48,5 @@ msg --> aarRecord
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NDk5MDY3NSwtODI4NTU2MzNdfQ==
+eyJoaXN0b3J5IjpbLTIwNDA4ODYyMDAsLTgyODU1NjMzXX0=
 -->
