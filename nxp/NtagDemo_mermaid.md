@@ -311,6 +311,7 @@ RegisterConfigActivity.setAnswer -.- I2C_CLOCK_STR
 end
 
 !Write --> !plus
+subgraph RegisterC
 !plus --> reader.getAuth0Register
 !plus --> reader.getAccessRegister
 !plus --> reader.getPTI2CRegister
@@ -420,7 +421,7 @@ reader.writeAuthRegisters -.- PT_I2C
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1ODQ4MTc1NCwtMTc5MTU2MjMxOSwtOD
+eyJoaXN0b3J5IjpbMTc3NjU4MzY3NCwtMTc5MTU2MjMxOSwtOD
 U3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2OTMxLC0xNzg0
 Nzk1ODI4XX0=
 -->
