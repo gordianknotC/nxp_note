@@ -124,6 +124,7 @@ onPreExecute --> doInBackground
 doInBackground -.- onProgressUpdate
 doInBackground --> onPostExecute
 ```
+
 **doInBackground**
 ```mermaid
 graph LR
@@ -134,6 +135,6 @@ Message -.- msg
 ```
 readNDEF: **reader** | Message: **NDEFTool.Message**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNzk1NDU2MSwxOTg1MzkxMTc4LC04Mj
+eyJoaXN0b3J5IjpbLTQ4NTc1Njc4MSwxOTg1MzkxMTc4LC04Mj
 g1NTYzM119
 -->
