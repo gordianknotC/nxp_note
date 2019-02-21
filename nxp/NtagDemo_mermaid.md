@@ -283,9 +283,13 @@ public void readSessionRegisters() throws CommandNotSupportedException {
 
 ### readWriteConfigRegister
 ```mermaid
+gra
 $Write
 !Write
-1k2kPlus
+$1k2kPlus
+!1k2kPlus
+
+
 
 ```
 > Write: **RegisterConfigActivity.Boolean**
@@ -293,5 +297,5 @@ $Write
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk2MDUyMjgzLC0xNzg0Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbNjQ0ODI5Mzg5LC0xNzg0Nzk1ODI4XX0=
 -->
