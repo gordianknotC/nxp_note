@@ -11,7 +11,7 @@ $Write
 !Write
 $addAar
 
-subgraph NdefFragment
+subgraph NdefFragment - WriteOptions
 	NdefText
 	NdefUri
 	NdefBT
@@ -70,7 +70,7 @@ if (NdefFragment.isWriteChosen()) {
 	}
 	if(msg == null) {
 		toastText(main, "Please add correct input values", Toast.LENGTH_LONG) ;
-		NdefFragment.setAnswer(main.getResources().getString(R.string.format_error));
+		NdefFragment.setAnswer(...error...);
 	}
 	if(NdefFragment.isAarRecordSelected()) {
 		NdefRecord aarRecord = NdefRecord.createApplicationRecord(PseudoMainActivity.getPACKAGE_NAME());
@@ -109,5 +109,5 @@ if (NdefFragment.isWriteChosen()) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NjkyMywtODI4NTU2MzNdfQ==
+eyJoaXN0b3J5IjpbLTEwMTc1NjE3OTcsLTgyODU1NjMzXX0=
 -->
