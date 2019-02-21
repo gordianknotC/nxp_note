@@ -17,9 +17,10 @@ NdefUri
 NdefBT
 NdefSp
 ndefType
-msg --> ndefType
 
+msg --> ndefType
 $Write --> ndefType
+
 ndefType --> NdefText
 ndefType --> NdefUri
 ndefType --> NdefBT
@@ -37,12 +38,13 @@ NdefRecord.createAar --> aarRecord
 msg --> aarRecord
 !Write --> NDEFReadTask
 
-NDEFWrite -.- msg
+
+
 
 ```
 ```kotlin
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NzA3NjQwMSwtODI4NTU2MzNdfQ==
+eyJoaXN0b3J5IjpbLTE2NTE4NTc3MjAsLTgyODU1NjMzXX0=
 -->
