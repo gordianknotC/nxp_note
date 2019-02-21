@@ -286,15 +286,15 @@ public void readSessionRegisters() throws CommandNotSupportedException {
 graph LR
 $Write
 !Write
-$1k2kPlus
-!1k2kPlus
+$1k2kPlus+Auth
+!1k2kPlus+Auth
 
 $Write --> $1k2kPlus+Auth
 $1k2kPlus+Auth --> Alert
-$Write --> !1k2kPlus
-!1k2kPlus -> writeConfigRegisters
+$Write --> !1k2kPlus+Auth
+!1k2kPlus+Auth --> writeConfigRegisters
 
-!Write --> configRegisters
+!Write
 
 ```
 > Write: **RegisterConfigActivity.Boolean**
@@ -302,5 +302,5 @@ $Write --> !1k2kPlus
 >1k2kPlus+Auth: **RegisterConfigActivity.getAuth0()**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0NjY1NzM1OCwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbLTk3ODQzNzc4OSwtMTc4NDc5NTgyOF19
 -->
