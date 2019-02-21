@@ -379,9 +379,17 @@ public void readWriteConfigRegister() throws CommandNotSupportedException {
 ### writeConfigRegisters
 
 ```mermaid
+graph LR
+NC_Reg
+LD_Reg
+SM_Reg
+WD_LS_Reg
+WD_MS+Reg
+I2C
+
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1NzMyMDQ1NSwtMTExMDk4OTczMSwtMT
-E1NzkwNjkzMSwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbLTIwNTQxNzAzNDAsLTg1NzMyMDQ1NSwtMT
+ExMDk4OTczMSwtMTE1NzkwNjkzMSwtMTc4NDc5NTgyOF19
 -->
