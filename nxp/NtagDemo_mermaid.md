@@ -611,9 +611,13 @@ public int ObtainAuthStatus() {
 ### Auth()
 Performs the authentication operation on NTAG I2C Plus  
 
-- pwd   **ByteArray** containing the password  
+- pwd **ByteArray** containing the password  
 - authStatus Current Authentication Status  
 ```mermaid
+unprotected
+authenticated
+
+
 
 ```
 
@@ -646,8 +650,8 @@ public Boolean Auth(byte[] pwd, int authStatus) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMTY3MzkyNiwtNjU1OTg1NDgsLTQ5OD
-ExMTYxOSwtMTc5MDk4OTgwNiwtMTc5MTU2MjMxOSwtODU3MzIw
-NDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2OTMxLC0xNzg0Nzk1OD
-I4XX0=
+eyJoaXN0b3J5IjpbLTEzNzI1MzE4NDQsLTY1NTk4NTQ4LC00OT
+gxMTE2MTksLTE3OTA5ODk4MDYsLTE3OTE1NjIzMTksLTg1NzMy
+MDQ1NSwtMTExMDk4OTczMSwtMTE1NzkwNjkzMSwtMTc4NDc5NT
+gyOF19
 -->
