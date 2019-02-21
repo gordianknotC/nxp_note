@@ -636,7 +636,8 @@ Protected_RW -.- Protected_W_SRAM
 Protected_W_SRAM -.- Protected_RW_SRAM
 Protected_W --> W_RW
 ```
-> protectPlus (**byte[]** pwd, **byte[]** startAddr)
+> reader.protectPlus (**byte[]** pwd, **byte[]** startAddr)
+> 
 
 ```kotlin
 public Boolean Auth(byte[] pwd, int authStatus) {
@@ -677,8 +678,8 @@ demo!!.Auth(PseudoMainActivity.password,
   PseudoMainActivity.authStatus)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTIxMzU2ODcsMTExODM1OTU2MSwtNj
-U1OTg1NDgsLTQ5ODExMTYxOSwtMTc5MDk4OTgwNiwtMTc5MTU2
-MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2OT
-MxLC0xNzg0Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbMTc1Nzc5NDc2LDExMTgzNTk1NjEsLTY1NT
+k4NTQ4LC00OTgxMTE2MTksLTE3OTA5ODk4MDYsLTE3OTE1NjIz
+MTksLTg1NzMyMDQ1NSwtMTExMDk4OTczMSwtMTE1NzkwNjkzMS
+wtMTc4NDc5NTgyOF19
 -->
