@@ -255,7 +255,12 @@ public int resetTagMemory() {
 
 ### readSessionRegisters
 ```mermaid
-reader
+graph LR
+reader.getSessionRegisters --> reg
+getRegister_Settings -.- reg
+getRegister_Settings --> Ntag_I2C_Registers
+RegisterSeesionActivity.SetAnswer -.- Ntag_I2C_Registers
+
 ```
 
 
@@ -263,6 +268,5 @@ reader
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTMwNzE4OTEsLTE3ODQ3OTU4MjhdfQ
-==
+eyJoaXN0b3J5IjpbLTE3MjEyMzAwMSwtMTc4NDc5NTgyOF19
 -->
