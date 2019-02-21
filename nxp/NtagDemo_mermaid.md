@@ -424,11 +424,61 @@ reader.writeAuthRegisters -.- ACCESS
 reader.writeAuthRegisters -.- PT_I2C
 ```
 ```kotlin
-
+private void writeConfigRegisters() {
+	try {
+		byte NC_Reg = (byte) RegisterConfigActivity.getNC_Reg();
+		byte LD_Reg = (byte) RegisterConfigActivity.getLD_Reg();
+		byte SM_Reg = (byte) RegisterConfigActivity.getSM_Reg();
+		byte WD_LS_Reg = (byte) RegisterConfigActivity.getWD_LS_Reg();
+		byte WD_MS_Reg = (byte) RegisterConfigActivity.getWD_MS_Reg();
+		byte I2C_CLOCK_STR = (byte) RegisterConfigActivity.getI2C_CLOCK_STR();
+		reader.writeConfigRegisters(NC_Reg, LD_Reg, SM_Reg, WD_LS_Reg, WD_MS_Reg, I2C_CLOCK_STR);
+		Ntag_Get_Version.Prod prod = reader.getProduct();
+		if (prod.equals(Ntag_Get_Version.Prod.NTAG_I2C_1k_Plus)
+		 || prod.equals(Ntag_Get_Version.Prod.NTAG_I2C_2k_Plus)) {
+			byte AUTH0 = (byte) RegisterConfigActivity.getAuth0();
+			byte ACCESS = (byte) RegisterConfigActivity.getAccess();
+			byte PT_I2C = (byte) RegisterConfigActivity.getPtI2C();
+			reader.writeAuthRegisters(AUTH0, ACCESS, PT_I2C);
+		}
+		toastText(main, "write tag successfully done",	Toast.LENGTH_LONG) ;
+	} catch (Exception e) {
+		e.printStackTrace();
+		toastText(main, "write tag failed", Toast.LENGTH_LONG) ;
+}
+}
 ```
 
+### readTagContent
+```mermaid
+
+```
+```kotlin
+public byte[] readTagContent() {
+	byte[] bytes = null;
+	try {
+		// The user memory and the first four pages are displayed
+		int memSize = reader.getProduct().getMemsize() + 16;
+		// Read all the pages using the fast read method
+		bytes = reader.readEEPROM(0, memSize / reader.getBlockSize());
+	} catch (IOException e) {
+		e.printStackTrace();
+	} catch (FormatException e) {
+		e.printStackTrace();
+	} catch (CommandNotSupportedException e) {
+		e.printStackTrace();
+		showDemoNotSupportedAlert();
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return bytes;
+}
+```
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzU4MDUyNzMsLTE3OTE1NjIzMTksLT
-g1NzMyMDQ1NSwtMTExMDk4OTczMSwtMTE1NzkwNjkzMSwtMTc4
-NDc5NTgyOF19
+eyJoaXN0b3J5IjpbMTI4NDk1NTE5NywtMTc5MTU2MjMxOSwtOD
+U3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2OTMxLC0xNzg0
+Nzk1ODI4XX0=
 -->
