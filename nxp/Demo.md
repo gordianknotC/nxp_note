@@ -9,14 +9,15 @@ graph LR
 $Write
 !Write
 $addAar
-!addAar
+
 
 subgraph NdefFragment
-NdefText
-NdefUri
-NdefBT
-NdefSp
-ndefType
+	NdefText
+	NdefUri
+	NdefBT
+	NdefSp
+	ndefType
+end
 
 msg --> ndefType
 $Write --> NDEFWrite
@@ -28,10 +29,13 @@ ndefType --> NdefText
 ndefType --> NdefUri
 ndefType --> NdefBT
 ndefType --> NdefSp
+
+
 NdefText --> createNdefTextMessage
 NdefUri --> createNdefUriMessage
 NdefBT --> createNdefBSSPMessage
 NdefSp --> createNdefSpMessage
+ 
 
 $addAar --> NdefRecord.createAar
 NdefRecord.createAar -.- packageName
@@ -50,5 +54,5 @@ msg: **NDEFMessage**
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4ODc2Njk0MywtODI4NTU2MzNdfQ==
+eyJoaXN0b3J5IjpbMTI2MTI3ODAwNCwtODI4NTU2MzNdfQ==
 -->
