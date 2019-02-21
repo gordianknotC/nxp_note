@@ -262,15 +262,13 @@ getRegister_Settings --> Ntag_I2C_Registers
 RegisterSessionActivity.SetAnswer -.- Ntag_I2C_Registers
 showToast
 ```
-#### RegisterSessionActivity.SetAnswer
-```mermaid
-
-```
+> RegisterSessionActivity.SetAnswer -> turn Ntag_I2C_Registers into readable map
+> 
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNDYyMzY2NCwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbLTY3MzY4ODc5MSwtMTc4NDc5NTgyOF19
 -->
