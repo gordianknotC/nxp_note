@@ -283,11 +283,15 @@ public void readSessionRegisters() throws CommandNotSupportedException {
 
 ### readWriteConfigRegister
 ```mermaid
+$Write
+!Write
+1k2kPlus
 
 ```
-> W
+> Write: **RegisterConfigActivity.Boolean**
+> 1k2kPlus: **Ntag_Get_version.Prod** via reader.getProduct
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU1NDgzODkzLC0xNzg0Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbNDk2MDUyMjgzLC0xNzg0Nzk1ODI4XX0=
 -->
