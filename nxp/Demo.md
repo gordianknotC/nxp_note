@@ -2,7 +2,6 @@
 
 
 
-
 ### NDEF()
 read | write NDEF
 ``` mermaid
@@ -38,11 +37,12 @@ NdefRecord.createAar --> aarRecord
 msg --> aarRecord
 !Write --> NDEFReadTask
 
+NDEFWrite -.- msg
 
 ```
 ```kotlin
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MzczNjc5NiwtODI4NTU2MzNdfQ==
+eyJoaXN0b3J5IjpbLTk3NzA3NjQwMSwtODI4NTU2MzNdfQ==
 -->
