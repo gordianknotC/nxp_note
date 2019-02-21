@@ -17,6 +17,7 @@ NdefUri
 NdefBT
 NdefSp
 ndefType
+msg --> ndefType
 
 $Write --> ndefType
 ndefType --> NdefText
@@ -33,12 +34,13 @@ $addAar --> NdefRecord.createAar
 NdefRecord.createAar -.- packageName
 NdefRecord.createAar --> aarRecord
 
-nde
+msg --> 
+
 
 ```
 ```kotlin
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzNTAwMDc2NywtODI4NTU2MzNdfQ==
+eyJoaXN0b3J5IjpbNjI0NjM0MDI1LC04Mjg1NTYzM119
 -->
