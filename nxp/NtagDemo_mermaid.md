@@ -283,12 +283,16 @@ public void readSessionRegisters() throws CommandNotSupportedException {
 
 ### readWriteConfigRegister
 ```mermaid
-gra
+graph LR
 $Write
 !Write
 $1k2kPlus
 !1k2kPlus
 
+$Write --> $1k2kPlus
+$1k2kPlus --> Alert
+$Write --> !1k2kPlus
+!1k2kPlus -> writeConfigRegisters
 
 
 ```
@@ -297,5 +301,5 @@ $1k2kPlus
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ0ODI5Mzg5LC0xNzg0Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbLTIzNzI5MzMzLC0xNzg0Nzk1ODI4XX0=
 -->
