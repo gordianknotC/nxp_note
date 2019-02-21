@@ -29,11 +29,13 @@ NdefBT --> createNdefBSSPMessage
 NdefSp --> createNdefSpMessage
 
 $Write --> $addAar
+$addAar --> NdefRecord.createAar
+NdefRecor.createAar -.- packageName
 
 ```
 ```kotlin
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NjUyNzQ4NSwtODI4NTU2MzNdfQ==
+eyJoaXN0b3J5IjpbNjU2Mjk2Mzg5LC04Mjg1NTYzM119
 -->
