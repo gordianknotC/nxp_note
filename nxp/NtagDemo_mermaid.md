@@ -542,22 +542,22 @@ public void LED() throws IOException, FormatException {
 
 ```
 
-```Kotlin
+```kotlin
 public void LEDFinish() {
-if (lTask != null && !lTask.isCancelled()) {
-	lTask.exit = true;
-	try {
-		lTask.get();
-	} catch (Exception e) {
-		e.printStackTrace();
+	if (lTask != null && !lTask.isCancelled()) {
+		lTask.exit = true;
+		try {
+			lTask.get();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		lTask = null;
 	}
-	lTask = null;
-}
 }
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNjg3MzkzNywtMTc5MDk4OTgwNiwtMT
-c5MTU2MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3
-OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbLTE5ODA4NzY2NzksLTE3OTA5ODk4MDYsLT
+E3OTE1NjIzMTksLTg1NzMyMDQ1NSwtMTExMDk4OTczMSwtMTE1
+NzkwNjkzMSwtMTc4NDc5NTgyOF19
 -->
