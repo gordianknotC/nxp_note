@@ -64,6 +64,7 @@ fun readNdefClick(){
 }
 ```
 ### writeNdefClick
+lauchNdefDemo (MainActivity) --> NdefFragment --> Demo.NDEF
 ```mermaid
 graph LR
 demo.NDEFReadFinish --> $Write
@@ -116,6 +117,6 @@ NdefEditText -->|..|text_data
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MTE1NTE0NCwxNzA5MTYxNTc4LDgyNT
-I0MjA4Ml19
+eyJoaXN0b3J5IjpbLTE3MjMxOTk2NzMsMTcwOTE2MTU3OCw4Mj
+UyNDIwODJdfQ==
 -->
