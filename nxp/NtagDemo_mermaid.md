@@ -629,7 +629,8 @@ reader.protectPlus -.- pwd
 reader.protectPlus -.- Ntag_I2C_Commands.Register
 authenticated --> reader.unprotectPlus
 W_RW --> reader.authenticatePlus
-reader.authenticatePlus -.- pwd
+reader.authenticatePlus --> reader.pwdAuth
+reader.pwdAuth -.- pwd
 
 Protected_W -.- Protected_RW
 Protected_RW -.- Protected_W_SRAM
@@ -714,9 +715,9 @@ lang-length
 ### createNdefBSSPMessage
 ### createNdefSpMessage
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ3MTM5MDA4LDE2MDI3ODEwMDgsMTU5Nz
-UxMTE0MywxMDMzNDA1NjUzLDExMDI0NzM1OTUsMTExODM1OTU2
-MSwtNjU1OTg1NDgsLTQ5ODExMTYxOSwtMTc5MDk4OTgwNiwtMT
-c5MTU2MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3
-OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbMjAxMTQyNzU1Miw0NDcxMzkwMDgsMTYwMj
+c4MTAwOCwxNTk3NTExMTQzLDEwMzM0MDU2NTMsMTEwMjQ3MzU5
+NSwxMTE4MzU5NTYxLC02NTU5ODU0OCwtNDk4MTExNjE5LC0xNz
+kwOTg5ODA2LC0xNzkxNTYyMzE5LC04NTczMjA0NTUsLTExMTA5
+ODk3MzEsLTExNTc5MDY5MzEsLTE3ODQ3OTU4MjhdfQ==
 -->
