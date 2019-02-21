@@ -294,7 +294,8 @@ $1k2kPlus+Auth --> Alert
 $Write --> !1k2kPlus+Auth
 !1k2kPlus+Auth --> writeConfigRegisters
 
-!Write --> reader.getConfigRegisters
+!Write --> 
+reader.getConfigRegisters
 reader.getConfigRegisters -.- getRegister_Settings
 getRegister_Settings --> Ntag_I2C_Registers
 RegisterConfigActivity.setAnswer -.- Ntag_I2C_Registers
@@ -306,6 +307,6 @@ RegisterConfigActivity.setAnswer -.- Ntag_I2C_Registers
 > getRegister_Settings(byte[]): **Ntag_I2C_Registers**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTA5ODk3MzEsLTExNTc5MDY5MzEsLT
-E3ODQ3OTU4MjhdfQ==
+eyJoaXN0b3J5IjpbLTE5MjY0ODQyNDEsLTExMTA5ODk3MzEsLT
+ExNTc5MDY5MzEsLTE3ODQ3OTU4MjhdfQ==
 -->
