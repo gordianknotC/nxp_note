@@ -614,9 +614,10 @@ Performs the authentication operation on NTAG I2C Plus
 - pwd **ByteArray** containing the password  
 - authStatus Current Authentication Status  
 ```mermaid
-unprotected
+graph LR
+unprotected --> reader.protectPlus
 authenticated
-
+W_RW
 
 
 ```
@@ -650,7 +651,7 @@ public Boolean Auth(byte[] pwd, int authStatus) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzI1MzE4NDQsLTY1NTk4NTQ4LC00OT
+eyJoaXN0b3J5IjpbLTExOTQzMDE1ODMsLTY1NTk4NTQ4LC00OT
 gxMTE2MTksLTE3OTA5ODk4MDYsLTE3OTE1NjIzMTksLTg1NzMy
 MDQ1NSwtMTExMDk4OTczMSwtMTE1NzkwNjkzMSwtMTc4NDc5NT
 gyOF19
