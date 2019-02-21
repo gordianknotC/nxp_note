@@ -116,8 +116,11 @@ if (NdefFragment.isWriteChosen()) {
 graph LR
 
 execute
+doInBackground
+onProgressUpdate
+onPostExecute
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNDgzMjU0NywtODI4NTU2MzNdfQ==
+eyJoaXN0b3J5IjpbLTE0MjIyMDExNzgsLTgyODU1NjMzXX0=
 -->
