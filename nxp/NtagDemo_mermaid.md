@@ -681,28 +681,16 @@ demo!!.Auth(PseudoMainActivity.password,
 
 
 
-### getSessionRegisters | getSessionRegister
+### SRAMSpeedtest | SRAMSpeedtestTask (AsyncTask
+... todo
 ```mermaid
 
 ```
 ```kotlin
-public byte[] getSessionRegisters() throws IOException, FormatException {
-	if (getProduct() == Prod.NTAG_I2C_1k_Plus || getProduct() == Prod.NTAG_I2C_2k_Plus) {
-		reader.SectorSelect((byte) 0);
-		return reader.read(Register.Session_PLUS.getValue());
-	} else {
-		reader.SectorSelect((byte) 3);
-		return reader.read(Register.Session.getValue());
-	}
-}
-
-public byte getSessionRegister(SR_Offset off) throws IOException, FormatException {
-	byte[] register = getSessionRegisters();
-	return register[off.getValue()];
-}
+ 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDczNTgxMDcsMTEwMjQ3MzU5NSwxMT
+eyJoaXN0b3J5IjpbLTIwNjY1MjU0MDYsMTEwMjQ3MzU5NSwxMT
 E4MzU5NTYxLC02NTU5ODU0OCwtNDk4MTExNjE5LC0xNzkwOTg5
 ODA2LC0xNzkxNTYyMzE5LC04NTczMjA0NTUsLTExMTA5ODk3Mz
 EsLTExNTc5MDY5MzEsLTE3ODQ3OTU4MjhdfQ==
