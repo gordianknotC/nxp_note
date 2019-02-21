@@ -160,9 +160,13 @@ graph LR
 
 ### NDEFRead
 ```mermaid
+graph LR
+timeStart
+timeEnd
+readTime
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyODEyNDk3LDE3NTk1NjU5MDUsMjE3MT
-U4OTk0LDE5ODUzOTExNzgsLTgyODU1NjMzXX0=
+eyJoaXN0b3J5IjpbLTQ3MDM0OTIwNywxNzU5NTY1OTA1LDIxNz
+E1ODk5NCwxOTg1MzkxMTc4LC04Mjg1NTYzM119
 -->
