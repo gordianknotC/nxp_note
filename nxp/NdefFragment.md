@@ -108,12 +108,14 @@ NdefEditLink
 
 RadioNdefText --> NdefEditText
 RadioNdefUrl --> NdefEditText
-RadioNdefSp --
+RadioNdefSp --> NdefEditLink
 
+NdefEditLink -->|http://www|text_data
+NdefEditText -->|..|text_data
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ2MTU1MjUxLDE3MDkxNjE1NzgsODI1Mj
-QyMDgyXX0=
+eyJoaXN0b3J5IjpbLTU1MTE1NTE0NCwxNzA5MTYxNTc4LDgyNT
+I0MjA4Ml19
 -->
