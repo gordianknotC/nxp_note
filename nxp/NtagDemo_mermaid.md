@@ -446,6 +446,7 @@ reader.writeAuthRegisters -.- AUTH0
 reader.writeAuthRegisters -.- ACCESS
 reader.writeAuthRegisters -.- PT_I2C
 ```
+> reader.writeAuthRegisters
 ```kotlin
 private void writeConfigRegisters() {
 	try {
@@ -720,9 +721,10 @@ lang-length
 ### createNdefBSSPMessage
 ### createNdefSpMessage
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTcyOTg2MDUsNDQ3MTM5MDA4LDE2MD
-I3ODEwMDgsMTU5NzUxMTE0MywxMDMzNDA1NjUzLDExMDI0NzM1
-OTUsMTExODM1OTU2MSwtNjU1OTg1NDgsLTQ5ODExMTYxOSwtMT
-c5MDk4OTgwNiwtMTc5MTU2MjMxOSwtODU3MzIwNDU1LC0xMTEw
-OTg5NzMxLC0xMTU3OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbLTMzNzc5OTg0MSwtMTA5NzI5ODYwNSw0ND
+cxMzkwMDgsMTYwMjc4MTAwOCwxNTk3NTExMTQzLDEwMzM0MDU2
+NTMsMTEwMjQ3MzU5NSwxMTE4MzU5NTYxLC02NTU5ODU0OCwtND
+k4MTExNjE5LC0xNzkwOTg5ODA2LC0xNzkxNTYyMzE5LC04NTcz
+MjA0NTUsLTExMTA5ODk3MzEsLTExNTc5MDY5MzEsLTE3ODQ3OT
+U4MjhdfQ==
 -->
