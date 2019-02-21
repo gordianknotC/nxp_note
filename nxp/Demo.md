@@ -11,7 +11,6 @@ $Write
 !Write
 $addAar
 
-
 subgraph NdefFragment
 	NdefText
 	NdefUri
@@ -31,12 +30,14 @@ ndefType --> NdefUri
 ndefType --> NdefBT
 ndefType --> NdefSp
 
-
 NdefText --> createNdefTextMessage
 NdefUri --> createNdefUriMessage
 NdefBT --> createNdefBSSPMessage
 NdefSp --> createNdefSpMessage
- 
+createNdefTextMessage --> msg0
+createNdefUriMessage --> msg0
+createNdefBSSPMessage --> msg0
+createNdefSpMessage --> msg0
 
 $addAar --> NdefRecord.createAar
 NdefRecord.createAar -.- packageName
@@ -55,5 +56,5 @@ msg: **NDEFMessage** | write: **NdefFragment.Boolean**
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzMDU1MDgwMCwtODI4NTU2MzNdfQ==
+eyJoaXN0b3J5IjpbLTIwMTgwMjI3NDgsLTgyODU1NjMzXX0=
 -->
