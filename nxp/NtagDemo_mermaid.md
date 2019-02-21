@@ -317,7 +317,65 @@ Ntag_I2C_Plus_Registers --> updateToDart
 > reader.getConfigRegisters: **byte[]**
 > getRegister_Settings(byte[]): **Ntag_I2C_Registers**
 
+```kotlin
+public void readWriteConfigRegister() throws CommandNotSupportedException {
+	// Check if the operation is read or write
+	if (RegisterConfigActivity.isWriteChosen()) {
+		try {
+			Ntag_Get_Version.Prod prod = reader.getProduct();
+			if((prod.equals(Ntag_Get_Version.Prod.NTAG_I2C_1k_Plus)
+			 || prod.equals(Ntag_Get_Version.Prod.NTAG_I2C_2k_Plus))
+			 && (RegisterConfigActivity.getAuth0() & 0xFF) <= 0xEB) {
+				showAuthWriteConfigAlert();
+			 } else {
+				writeConfigRegisters();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	} //END if get chosen
+	else {
+		try {
+			byte[] configRegisters = reader.getConfigRegisters();
+
+			Ntag_I2C_Registers answer = getRegister_Settings(configRegisters);
+			RegisterConfigActivity.setAnswer(answer);
+			RegisterConfigActivity.setNC_Reg(configRegisters[CR_Offset.NC_REG.getValue()]);
+			RegisterConfigActivity.setLD_Reg(configRegisters[CR_Offset.LAST_NDEF_PAGE.getValue()]);
+			RegisterConfigActivity.setSM_Reg(configRegisters[CR_Offset.SM_REG.getValue()]);
+			RegisterConfigActivity.setNS_Reg(configRegisters[CR_Offset.REG_LOCK.getValue()]);
+			RegisterConfigActivity.setWD_LS_Reg(configRegisters[CR_Offset.WDT_LS.getValue()]);
+			RegisterConfigActivity.setWD_MS_Reg(configRegisters[CR_Offset.WDT_MS.getValue()]);
+			RegisterConfigActivity.setI2C_CLOCK_STR(configRegisters[CR_Offset.I2C_CLOCK_STR.getValue()]);
+
+			Ntag_Get_Version.Prod prod = reader.getProduct();
+			if (prod.equals(Ntag_Get_Version.Prod.NTAG_I2C_1k_Plus)
+			 || prod.equals(Ntag_Get_Version.Prod.NTAG_I2C_2k_Plus)) {
+				byte[] auth0Register = reader.getAuth0Register();
+				byte[] accessRegister = reader.getAccessRegister();
+				byte[] pti2cRegister = reader.getPTI2CRegister();
+
+				Ntag_I2C_Plus_Registers answerPlus = getPlusAuth_Settings(auth0Register, accessRegister, pti2cRegister);
+				RegisterConfigActivity.setAnswerPlus(answerPlus);
+				RegisterConfigActivity.setAuth0(auth0Register[3]);
+				RegisterConfigActivity.setAccess(accessRegister[0]);
+				RegisterConfigActivity.setPtI2C(pti2cRegister[0]);
+			}
+			//grodianknot
+			RegisterConfigActivity.updateToDart();
+			toastText(main, "read tag successfully done",
+					Toast.LENGTH_LONG) ;
+		} catch (CommandNotSupportedException e) {
+			e.printStackTrace();
+			throw e;
+		} catch (Exception e) {
+			e.printStackTrace();
+			toastText(main, "read tag failed", Toast.LENGTH_LONG);
+		}
+	}
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMTY1NjA0MywtMTExMDk4OTczMSwtMT
-E1NzkwNjkzMSwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbLTE3MDA5NzYxMDQsLTExMTA5ODk3MzEsLT
+ExNTc5MDY5MzEsLTE3ODQ3OTU4MjhdfQ==
 -->
