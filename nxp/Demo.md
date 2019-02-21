@@ -48,7 +48,8 @@ msg -.- NDEFWrite
 msg0 -.- NDEFWrite
 
 ```
-msg: **NDEFMessage** | write: **NdefFragment.Boolean**
+msg: **NDEFMessage** | write: **NdefFragment.Boolean** 
+NDEFWrite: 在這裡將 AAR 寫入 NdefRecords 中的第二筆 (android官方建戈
 
 ```kotlin
 public void NDEF() throws IOException {
@@ -109,5 +110,5 @@ if (NdefFragment.isWriteChosen()) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMTE3MzYxMywtODI4NTU2MzNdfQ==
+eyJoaXN0b3J5IjpbLTcyMzYzMDg2MCwtODI4NTU2MzNdfQ==
 -->
