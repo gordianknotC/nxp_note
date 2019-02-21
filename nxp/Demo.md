@@ -3,7 +3,8 @@
 
 
 ### NDEF()
-read | write NDEF
+- read - by NDEFReadTask
+- write - by NDEFWrite
 ``` mermaid
 graph LR
  
@@ -170,7 +171,12 @@ timeStart --> readTime
 timeEnd --> readTime
 ```
 msg: **NDEFMessage**
+
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNjI4MDk4MCwxNzU5NTY1OTA1LDIxNz
-E1ODk5NCwxOTg1MzkxMTc4LC04Mjg1NTYzM119
+eyJoaXN0b3J5IjpbMzcyMTc5ODE1LC02MDYyODA5ODAsMTc1OT
+U2NTkwNSwyMTcxNTg5OTQsMTk4NTM5MTE3OCwtODI4NTU2MzNd
+fQ==
 -->
