@@ -94,6 +94,9 @@ lauchNdefDemo-.- password
                     PseudoMainActivity.password as ByteArray)
         ....
 ```
+
+different op
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwOTE2MTU3OCw4MjUyNDIwODJdfQ==
+eyJoaXN0b3J5IjpbODYyMDAzNTAsMTcwOTE2MTU3OCw4MjUyND
+IwODJdfQ==
 -->
