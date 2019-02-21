@@ -381,7 +381,7 @@ public void readWriteConfigRegister() throws CommandNotSupportedException {
 ```mermaid
 graph LR
 $1k2kPlus
-!1k2kPlus
+
 
 subgraph RegisterConfigActivity
 	NC_Reg
@@ -399,9 +399,9 @@ reader.writeConfigRegisters -.- WD_MS_Reg
 reader.writeConfigRegisters -.- I2C_CLOCK_STR
 
 subgraph __RegisterConfigActivity__
-	AUTH0
-	ACCESS
-	PT_I2C
+	AUTH0 -.- getAuth0
+	ACCESS -.- getAccess
+	PT_I2C -.- getPtI2C
 end
 $1k2kPlus --> reader.writeAuthRegisters
 reader.writeAuthRegisters -.- AUTH0
@@ -410,6 +410,6 @@ reader.writeAuthRegisters -.- PT_I2C
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU5ODIxODksLTg1NzMyMDQ1NSwtMTExMD
-k4OTczMSwtMTE1NzkwNjkzMSwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbLTE3OTE1NjIzMTksLTg1NzMyMDQ1NSwtMT
+ExMDk4OTczMSwtMTE1NzkwNjkzMSwtMTc4NDc5NTgyOF19
 -->
