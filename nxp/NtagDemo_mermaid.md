@@ -611,13 +611,11 @@ public int ObtainAuthStatus() {
 ### Auth()
 Performs the authentication operation on NTAG I2C Plus  
 
-- pwd  
-            Byte Array containing the password  
-- authStatus  
-          Current Authentication Status  
- @return Boolean operation result
+- pwd   Byte Array containing the password  
+- authStatus            Current Authentication Status  
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI0NjYyNTg4LC00OTgxMTE2MTksLTE3OT
+eyJoaXN0b3J5IjpbLTY1NTk4NTQ4LC00OTgxMTE2MTksLTE3OT
 A5ODk4MDYsLTE3OTE1NjIzMTksLTg1NzMyMDQ1NSwtMTExMDk4
 OTczMSwtMTE1NzkwNjkzMSwtMTc4NDc5NTgyOF19
 -->
