@@ -156,7 +156,13 @@ graph LR
 	publishProgress -.- type
 ```
 > readNDEF: **reader** | Message: **NDEFTool.Message** | type: **String - NdefType** | msg: **NDEFMessage** | message: **String - NdefMessage** | readTime: **Long - datarate**
+
+
+### NDEFRead
+```mermaid
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk1NjU3NjY2LDE3NTk1NjU5MDUsMjE3MT
+eyJoaXN0b3J5IjpbMTUyODEyNDk3LDE3NTk1NjU5MDUsMjE3MT
 U4OTk0LDE5ODUzOTExNzgsLTgyODU1NjMzXX0=
 -->
