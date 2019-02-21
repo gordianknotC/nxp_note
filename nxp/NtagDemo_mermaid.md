@@ -192,12 +192,15 @@ MiniNtag
 bytesWritten
 equal-0
 greater-0
-bytesWritt
+bytesWritten --> equal-0
+bytesWritten --> greater-0
+greater-0 -.-Ntag
+equal-0 -.- MiniNtag
+MiniNtag --> Al
 
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODc0ODM4NzAsLTE3ODQ3OTU4MjhdfQ
-==
+eyJoaXN0b3J5IjpbNTE0MTE0NzQ4LC0xNzg0Nzk1ODI4XX0=
 -->
