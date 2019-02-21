@@ -663,9 +663,15 @@ public Boolean Auth(byte[] pwd, int authStatus) {
 	return false;
 }
 ```
+
+example usage
+```kotlin
+// Authenticate in order to let the user use the demos
+demo!!.Auth(PseudoMainActivity.password, AuthStatus.Protected_RW.value)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExODM1OTU2MSwtNjU1OTg1NDgsLTQ5OD
-ExMTYxOSwtMTc5MDk4OTgwNiwtMTc5MTU2MjMxOSwtODU3MzIw
-NDU1LC0xMTEwOTg5NzMxLC0xMTU3OTA2OTMxLC0xNzg0Nzk1OD
-I4XX0=
+eyJoaXN0b3J5IjpbMTkzNzQ3MDc4NywxMTE4MzU5NTYxLC02NT
+U5ODU0OCwtNDk4MTExNjE5LC0xNzkwOTg5ODA2LC0xNzkxNTYy
+MzE5LC04NTczMjA0NTUsLTExMTA5ODk3MzEsLTExNTc5MDY5Mz
+EsLTE3ODQ3OTU4MjhdfQ==
 -->
