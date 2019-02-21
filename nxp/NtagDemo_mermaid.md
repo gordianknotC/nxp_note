@@ -304,6 +304,12 @@ RegisterConfigActivity.setAnswer -.- Ntag_I2C_Registers
 !plus --> reader.getAuth0Register
 !plus --> reader.getAccessRegister
 !plus --> reader.getPTI2CRegister
+reader.getAuth0Register -.- Ntag_I2C_Plus_Registers
+reader.getAccessRegister-.- Ntag_I2C_Plus_Registers
+reader.getPTI2CRegister-.- Ntag_I2C_Plus_Registers
+
+Ntag_I2C_Registers --> updateToDart
+Ntag_I2C_Plus_Registers --> updateToDart
 ```
 > Write: **RegisterConfigActivity.Boolean**
 > 1k2kPlus: **Ntag_Get_version.Prod** via reader.getProduct
@@ -312,6 +318,6 @@ RegisterConfigActivity.setAnswer -.- Ntag_I2C_Registers
 > getRegister_Settings(byte[]): **Ntag_I2C_Registers**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzAwNTk3Mzk5LC0xMTEwOTg5NzMxLC0xMT
-U3OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbMTAyMTY1NjA0MywtMTExMDk4OTczMSwtMT
+E1NzkwNjkzMSwtMTc4NDc5NTgyOF19
 -->
