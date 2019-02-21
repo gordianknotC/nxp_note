@@ -95,8 +95,25 @@ lauchNdefDemo-.- password
         ....
 ```
 
-different op
+different options
+```mermaid
+graph LR
+RadioNdefText
+RadioNdefUrl
+RadioNdefBt
+RadioNdefSp
+
+NdefEditText
+NdefEditLink
+
+RadioNdefText --> NdefEditText
+RadioNdefUrl --> NdefEditText
+RadioNdefSp --
+
+
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYyMDAzNTAsMTcwOTE2MTU3OCw4MjUyND
-IwODJdfQ==
+eyJoaXN0b3J5IjpbNTQ2MTU1MjUxLDE3MDkxNjE1NzgsODI1Mj
+QyMDgyXX0=
 -->
