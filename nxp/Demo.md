@@ -173,10 +173,19 @@ timeEnd --> readTime
 msg: **NDEFMessage**
 
 
+### finishAllTasks
+```mermaid
+graph LR
+LEDFinish
+SRAMSpeedFinish
+EEPROMSpeedFinish
+WriteEmptyNdefFinish
+
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzcyMTc5ODE1LC02MDYyODA5ODAsMTc1OT
-U2NTkwNSwyMTcxNTg5OTQsMTk4NTM5MTE3OCwtODI4NTU2MzNd
-fQ==
+eyJoaXN0b3J5IjpbMjI4NDEzOTQ0LDM3MjE3OTgxNSwtNjA2Mj
+gwOTgwLDE3NTk1NjU5MDUsMjE3MTU4OTk0LDE5ODUzOTExNzgs
+LTgyODU1NjMzXX0=
 -->
