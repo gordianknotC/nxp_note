@@ -623,6 +623,7 @@ W_RW
 
 
 ```
+> protectPlus ()
 
 ```kotlin
 public Boolean Auth(byte[] pwd, int authStatus) {
@@ -653,7 +654,7 @@ public Boolean Auth(byte[] pwd, int authStatus) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODU2MjU0MzksLTY1NTk4NTQ4LC00OT
+eyJoaXN0b3J5IjpbLTIwNjY4NTIxNDcsLTY1NTk4NTQ4LC00OT
 gxMTE2MTksLTE3OTA5ODk4MDYsLTE3OTE1NjIzMTksLTg1NzMy
 MDQ1NSwtMTExMDk4OTczMSwtMTE1NzkwNjkzMSwtMTc4NDc5NT
 gyOF19
