@@ -176,16 +176,16 @@ msg: **NDEFMessage**
 ### finishAllTasks
 ```mermaid
 graph LR
-LEDFinish
-SRAMSpeedFinish
-EEPROMSpeedFinish
-WriteEmptyNdefFinish
-
+	LEDFinish
+	SRAMSpeedFinish
+	EEPROMSpeedFinish
+	WriteEmptyNdefFinish
+	NDEFReadFinish
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI4NDEzOTQ0LDM3MjE3OTgxNSwtNjA2Mj
-gwOTgwLDE3NTk1NjU5MDUsMjE3MTU4OTk0LDE5ODUzOTExNzgs
-LTgyODU1NjMzXX0=
+eyJoaXN0b3J5IjpbMjA0NDMwNTQyNCwzNzIxNzk4MTUsLTYwNj
+I4MDk4MCwxNzU5NTY1OTA1LDIxNzE1ODk5NCwxOTg1MzkxMTc4
+LC04Mjg1NTYzM119
 -->
