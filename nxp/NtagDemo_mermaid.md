@@ -264,11 +264,30 @@ showToast
 ```
 > RegisterSessionActivity.SetAnswer -> turn Ntag_I2C_Registers into readable map
 > 
+```kotlin
+public void readSessionRegisters() throws CommandNotSupportedException {
+	try {
+		byte[] sessionRegisters = reader.getSessionRegisters();
+		Ntag_I2C_Registers answer = getRegister_Settings(sessionRegisters);
+		RegisterSessionActivity.SetAnswer(answer, main);
+		toastText(main, "read tag successfully done", Toast.LENGTH_LONG) ;
+	} catch (CommandNotSupportedException e) {
+		e.printStackTrace();
+		throw e;
+	} catch (Exception e) {
+		e.printStackTrace();
+		toastText(main, "read tag failed", Toast.LENGTH_LONG) ;
+	}
+}
+```
 
+### readWriteConfigRegister
+```mermaid
 
-
+```
+> W
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MzY4ODc5MSwtMTc4NDc5NTgyOF19
+eyJoaXN0b3J5IjpbMjU1NDgzODkzLC0xNzg0Nzk1ODI4XX0=
 -->
