@@ -139,9 +139,14 @@ hightLevelMsg--> TextRecord
 hightLevelMsg--> AARecord
 hightLevelMsg--> MIMERecord
 
+EmptyRecord --> messzage
+EmptyRecord --> messzage
+EmptyRecord --> messzage
+
+
 ```
 readNDEF: **reader** | Message: **NDEFTool.Message**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk4NTgwMDc3LDE5ODUzOTExNzgsLTgyOD
+eyJoaXN0b3J5IjpbMjQxOTIzMzM4LDE5ODUzOTExNzgsLTgyOD
 U1NjMzXX0=
 -->
