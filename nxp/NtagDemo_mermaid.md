@@ -616,7 +616,8 @@ Performs the authentication operation on NTAG I2C Plus
 
 perform authentication on Tag
 - reader.authenticate -> reader.pwdAuth
-- reader.unprotect
+- reader.unprotectPlus
+- reader.protectPlus
 ```mermaid
 graph LR
 subgraph AuthStatus
@@ -719,9 +720,9 @@ lang-length
 ### createNdefBSSPMessage
 ### createNdefSpMessage
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2OTU5ODQyMiw0NDcxMzkwMDgsMTYwMj
-c4MTAwOCwxNTk3NTExMTQzLDEwMzM0MDU2NTMsMTEwMjQ3MzU5
-NSwxMTE4MzU5NTYxLC02NTU5ODU0OCwtNDk4MTExNjE5LC0xNz
-kwOTg5ODA2LC0xNzkxNTYyMzE5LC04NTczMjA0NTUsLTExMTA5
-ODk3MzEsLTExNTc5MDY5MzEsLTE3ODQ3OTU4MjhdfQ==
+eyJoaXN0b3J5IjpbLTEwOTcyOTg2MDUsNDQ3MTM5MDA4LDE2MD
+I3ODEwMDgsMTU5NzUxMTE0MywxMDMzNDA1NjUzLDExMDI0NzM1
+OTUsMTExODM1OTU2MSwtNjU1OTg1NDgsLTQ5ODExMTYxOSwtMT
+c5MDk4OTgwNiwtMTc5MTU2MjMxOSwtODU3MzIwNDU1LC0xMTEw
+OTg5NzMxLC0xMTU3OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
 -->
