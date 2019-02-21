@@ -159,19 +159,18 @@ graph LR
 
 
 ### NDEFWrite
+只call了read.writeNDEF, 並計算時間
 ```mermaid
 graph LR
 timeStart
-timeStart --> read
+timeStart --> reader.writeNDEF
 reader.writeNDEF -.- msg
-timeEnd
+msg --> timeEnd
 timeStart --> readTime
 timeEnd --> readTime
-
-
 ```
 msg: **NDEFMessage**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NjY5MTMwMCwxNzU5NTY1OTA1LDIxNz
+eyJoaXN0b3J5IjpbLTYwNjI4MDk4MCwxNzU5NTY1OTA1LDIxNz
 E1ODk5NCwxOTg1MzkxMTc4LC04Mjg1NTYzM119
 -->
