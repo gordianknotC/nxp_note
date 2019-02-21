@@ -263,7 +263,7 @@ RegisterSessionActivity.SetAnswer -.- Ntag_I2C_Registers
 showToast
 ```
 > RegisterSessionActivity.SetAnswer -> turn **Ntag_I2C_Registers** into readable map
-> 
+>  getRegister_Settings(byte[]) -> **Ntag_I2C_Registers**
 ```kotlin
 public void readSessionRegisters() throws CommandNotSupportedException {
 	try {
@@ -295,12 +295,15 @@ $Write --> !1k2kPlus+Auth
 !1k2kPlus+Auth --> writeConfigRegisters
 
 !Write --> reader.getConfigRegisters
-
+reader.getConfigRegisters -.- getRegister_Settings
+getRegister_Settings --> Ntag_I2C_Registers
 ```
 > Write: **RegisterConfigActivity.Boolean**
 > 1k2kPlus: **Ntag_Get_version.Prod** via reader.getProduct
 >1k2kPlus+Auth: **RegisterConfigActivity.getAuth0()**
+>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU2Mjc5NjE4LC0xNzg0Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbLTE3Mzg1MzM1NjAsLTE3ODQ3OTU4MjhdfQ
+==
 -->
