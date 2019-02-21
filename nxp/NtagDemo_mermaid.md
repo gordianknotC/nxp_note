@@ -678,9 +678,27 @@ demo!!.Auth(PseudoMainActivity.password, AuthStatus.Protected_RW.value)
 demo!!.Auth(PseudoMainActivity.password,  
   PseudoMainActivity.authStatus)
 ```
+
+
+
+### getSessionRegisters
+```mermaid
+
+```
+```kotlin
+public byte[] getSessionRegisters() throws IOException, FormatException {
+	if (getProduct() == Prod.NTAG_I2C_1k_Plus || getProduct() == Prod.NTAG_I2C_2k_Plus) {
+		reader.SectorSelect((byte) 0);
+		return reader.read(Register.Session_PLUS.getValue());
+	} else {
+		reader.SectorSelect((byte) 3);
+		return reader.read(Register.Session.getValue());
+	}
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMjQ3MzU5NSwxMTE4MzU5NTYxLC02NT
-U5ODU0OCwtNDk4MTExNjE5LC0xNzkwOTg5ODA2LC0xNzkxNTYy
-MzE5LC04NTczMjA0NTUsLTExMTA5ODk3MzEsLTExNTc5MDY5Mz
-EsLTE3ODQ3OTU4MjhdfQ==
+eyJoaXN0b3J5IjpbLTE4MTg3NjU3NCwxMTAyNDczNTk1LDExMT
+gzNTk1NjEsLTY1NTk4NTQ4LC00OTgxMTE2MTksLTE3OTA5ODk4
+MDYsLTE3OTE1NjIzMTksLTg1NzMyMDQ1NSwtMTExMDk4OTczMS
+wtMTE1NzkwNjkzMSwtMTc4NDc5NTgyOF19
 -->
