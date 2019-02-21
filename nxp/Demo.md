@@ -8,17 +8,24 @@
 graph LR
 $Write
 !Write
+
 NdefFragment
 NdefText
 NdefUri
 NdefBT
 NdefSp
+ndefType
 
-createNdefTextMessage --> Ndef
+ndefType --> NdefText
+ndefType --> NdefUri
+ndefType --> NdefBT
+ndefType --> NdefSp
+NdefText --> createNdefTextMes
+
 ```
 ```kotlin
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MzI0NjQ5LC04Mjg1NTYzM119
+eyJoaXN0b3J5IjpbLTE1NDg0MTg5MzEsLTgyODU1NjMzXX0=
 -->
