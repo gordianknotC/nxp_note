@@ -300,10 +300,11 @@ getRegister_Settings --> Ntag_I2C_Registers
 ```
 > Write: **RegisterConfigActivity.Boolean**
 > 1k2kPlus: **Ntag_Get_version.Prod** via reader.getProduct
->1k2kPlus+Auth: **RegisterConfigActivity.getAuth0()**
->
+> 1k2kPlus+Auth: **RegisterConfigActivity.getAuth0()**
+> reader.getConfigRegisters: **byte[]**
+> getRegister_Settings(byte[]): **Ntag_I2C_Registers**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mzg1MzM1NjAsLTE3ODQ3OTU4MjhdfQ
+eyJoaXN0b3J5IjpbLTExNTc5MDY5MzEsLTE3ODQ3OTU4MjhdfQ
 ==
 -->
