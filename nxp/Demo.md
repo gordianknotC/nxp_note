@@ -19,7 +19,7 @@ subgraph NdefFragment - WriteOptions
 	ndefType
 end
 
-msg --> ndefType
+
 $Write --> NDEFWrite
 $Write --> ndefType
 $Write --> $addAar
@@ -43,7 +43,7 @@ $addAar --> NdefRecord.createAar
 NdefRecord.createAar -.- packageName
 NdefRecord.createAar --> aarRecord
 
-msg --> aarRecord
+aarRecord --> msg
 msg -.- NDEFWrite
 msg0 -.- NDEFWrite
 
@@ -109,5 +109,5 @@ if (NdefFragment.isWriteChosen()) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTc1NjE3OTcsLTgyODU1NjMzXX0=
+eyJoaXN0b3J5IjpbMTAyMTE3MzYxMywtODI4NTU2MzNdfQ==
 -->
