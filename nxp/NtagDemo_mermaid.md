@@ -681,17 +681,26 @@ demo!!.Auth(PseudoMainActivity.password,
 
 
 
-### SRAMSpeedtest | SRAMSpeedtestTask (AsyncTask
+### SRAMSpeedtest | SRAMSpeedtestTask (AsyncTask)
 ... todo
 ```mermaid
+graph LR
 
+execute
+doInBackground
+onProgressUpdate
+onPostExecute
+execute --> onPreExecute
+onPreExecute --> doInBackground
+doInBackground -.- onProgressUpdate
+doInBackground --> onPostExecute
 ```
 ```kotlin
  
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjY1MjU0MDYsMTEwMjQ3MzU5NSwxMT
-E4MzU5NTYxLC02NTU5ODU0OCwtNDk4MTExNjE5LC0xNzkwOTg5
-ODA2LC0xNzkxNTYyMzE5LC04NTczMjA0NTUsLTExMTA5ODk3Mz
-EsLTExNTc5MDY5MzEsLTE3ODQ3OTU4MjhdfQ==
+eyJoaXN0b3J5IjpbMTAzMzQwNTY1MywxMTAyNDczNTk1LDExMT
+gzNTk1NjEsLTY1NTk4NTQ4LC00OTgxMTE2MTksLTE3OTA5ODk4
+MDYsLTE3OTE1NjIzMTksLTg1NzMyMDQ1NSwtMTExMDk4OTczMS
+wtMTE1NzkwNjkzMSwtMTc4NDc5NTgyOF19
 -->
