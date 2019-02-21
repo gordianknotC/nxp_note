@@ -124,16 +124,15 @@ onPreExecute --> doInBackground
 doInBackground -.- onProgressUpdate
 doInBackground --> onPostExecute
 ```
+**doInBackground**
 ```mermaid
 graph LR
+msg
 
-execute
-doInBackground
-onProgressUpdate
-onPostExecute
-
+readNDEF --> msg
 
 ```
+readNDEF: **reader**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MDI2NDU1MSwtODI4NTU2MzNdfQ==
+eyJoaXN0b3J5IjpbMTk4NTM5MTE3OCwtODI4NTU2MzNdfQ==
 -->
