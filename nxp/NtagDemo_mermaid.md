@@ -511,8 +511,15 @@ public boolean resetTagContent() {
 
 ### LED
 ```mermaid
-setAnswer
-setT
+graph LR
+subgraph LedFragment
+	setAnswer -.- default
+	setTemperatureC -.- default0
+	setTemperatureF -.- 0
+	setVoltage
+end
+
+LedTask
 ```
 
 ```kotlin
@@ -531,7 +538,7 @@ public void LED() throws IOException, FormatException {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MTgwMTMzNSwtMTc5MDk4OTgwNiwtMT
-c5MTU2MjMxOSwtODU3MzIwNDU1LC0xMTEwOTg5NzMxLC0xMTU3
-OTA2OTMxLC0xNzg0Nzk1ODI4XX0=
+eyJoaXN0b3J5IjpbNzAwMjQzNjkyLC0xNzkwOTg5ODA2LC0xNz
+kxNTYyMzE5LC04NTczMjA0NTUsLTExMTA5ODk3MzEsLTExNTc5
+MDY5MzEsLTE3ODQ3OTU4MjhdfQ==
 -->
