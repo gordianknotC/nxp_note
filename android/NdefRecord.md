@@ -165,13 +165,17 @@ Add the following code in the `onCreate()` method of your activity:
 		var pendingIntent: PendingIntent = 
 			PendingIntent.getActivity(this, 0, intent, 0)
 	```
->  留意pendingIntent 中的 Action flag, 要符合Manifect.xml 中的設定；假定Manifest.xml中設定了singleTask, 則pendingIntent的設定如下
-```kotlin 
-fun genPendingIntent(activity:Activity, cls: Class<*>):PendingIntent{
-   return PendingIntent.getActivity(activity.applicationContext, 0,
-     Intent(activity.applicationContext, cls).addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT), 0)
-}
-```
+
+	>  留意pendingIntent 中的 Action flag, 要符合Manifect.xml 中的設定；假定Manifest.xml中設定了singleTask, 則pendingIntent的設定如下
+
+	```kotlin 
+	fun genPendingIntent(activity:Activity, cls: Class<*>):PendingIntent{
+	   return PendingIntent.getActivity(activity.applicationContext, 0,
+	     Intent(activity.applicationContext, cls)
+	     .addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT), 0)
+	}
+	```
+
 
 	- Declare intent filters to handle the intents that you want to intercept. The foreground dispatch system checks the specified intent filters with the intent that is received **when the device scans a tag**. 
 		> If it matches, then your application handles the intent. 
@@ -212,7 +216,7 @@ fun genPendingIntent(activity:Activity, cls: Class<*>):PendingIntent{
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3NjY1ODU4NSwxODkyODk2NDYxLDY0MT
-gzODk3LDExMTU1ODcyMDQsMTIwMjQ3ODUyOCwzNTA2NTE5ODdd
-fQ==
+eyJoaXN0b3J5IjpbOTE3MjUyNjQzLDE4OTI4OTY0NjEsNjQxOD
+M4OTcsMTExNTU4NzIwNCwxMjAyNDc4NTI4LDM1MDY1MTk4N119
+
 -->
