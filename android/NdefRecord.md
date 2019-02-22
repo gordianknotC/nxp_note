@@ -166,7 +166,7 @@ Add the following code in the `onCreate()` method of your activity:
 			PendingIntent.getActivity(this, 0, intent, 0)
 	```
 
-	>  留意pendingIntent 中的 Action flag, 要符合Manifect.xml 中的設定；假定Manifest.xml中設定了singleTask, 則pendingIntent的設定如下
+	>  留意pendingIntent 中的 FLAG_ACTIVITY 要符合Manifect.xml 中的設定；假定Manifest.xml中設定了singleTask, 則pendingIntent的設定如下
 
 	```kotlin 
 	fun genPendingIntent(activity:Activity, cls: Class<*>):PendingIntent{
@@ -216,7 +216,7 @@ Add the following code in the `onCreate()` method of your activity:
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE3MjUyNjQzLDE4OTI4OTY0NjEsNjQxOD
+eyJoaXN0b3J5IjpbNDczNzg0MDQzLDE4OTI4OTY0NjEsNjQxOD
 M4OTcsMTExNTU4NzIwNCwxMjAyNDc4NTI4LDM1MDY1MTk4N119
 
 -->
