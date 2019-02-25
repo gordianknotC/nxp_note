@@ -2,7 +2,12 @@
 
 ## Resources
 Resources are the things your application exposes through its HTTP API.
+In HTTP, resource means data which is the one being transferred and manipulated.
 
+-   GET — Get a list of resources or single resource
+-   POST — Create new resource
+-   PUT — Update existing resource
+-   DELETE — Delete a resource
 
 ## Routing
 The route /organizations/:id will match the paths /organizations/1, /organizations/2, and so on.
@@ -28,5 +33,6 @@ A channel must have exactly one endpoint controller. It can be preceded by zero 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4NjAwODgwNCwxNTU5MzExMjQxXX0=
+eyJoaXN0b3J5IjpbLTU2ODUzOTg1LDIwODYwMDg4MDQsMTU1OT
+MxMTI0MV19
 -->
