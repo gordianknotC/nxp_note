@@ -12,7 +12,11 @@ The route /organizations/:id will match the paths /organizations/1, /organizatio
 ## Controllers
 Controllers are objects that handle requests. For example, a controller might fetch rows from a database and send them to the client in the response body. Another controller might verify the username and password of a request's Authorization header are valid. **Controllers are linked together to form a series of actions to take for a request. These linked together controllers are called a _channel_.**
 
+There are two flavors of controllers. An  _endpoint controller_  performs operations on a resource or resource collection, and always sends a response. Endpoint controllers  _fulfill_  requests by returning the state of a resource or by changing the state of a resource. You write most of your application-specific logic endpoint controllers.
 
+A  _middleware controller_  takes an action for a request, but isn't responsible for fulfilling the request. Middleware controllers can do many different things and are often reusable in many channels. Most often, a middleware controller validates something about a request before it reaches an endpoint controller. Middleware controllers can send a response for a request, and doing so prevents any other controller in that channel from handling the request.
+
+A channel must have exactly one endpoint controller. It can be preceded by zero or more middleware controllers. See the guides on  [Controllers](https://aqueduct.io/docs/http/controller/)  and  [ResourceControllers](https://aqueduct.io/docs/http/resource_controller/)  for usage details.
 
 
 
@@ -21,5 +25,5 @@ Controllers are objects that handle requests. For example, a controller might fe
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1OTMxMTI0MV19
+eyJoaXN0b3J5IjpbNzYxNjYzODQzLDE1NTkzMTEyNDFdfQ==
 -->
