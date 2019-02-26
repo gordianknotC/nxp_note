@@ -106,10 +106,12 @@ class MyApplicationChannel extends ApplicationChannel {
 }
 ```
 
-The `ManagedDataModel.fromCurrentMirrorSystem` finds every `ManagedObject<T>`subclass in your application's code. Optionally, you may specify an exact list:
+The `ManagedDataModel.fromCurrentMirrorSystem` finds every **`ManagedObject<T>`** subclass in your application's code. Optionally, you may specify an exact list:
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIwMDgyMjM4LC04NTIwNTY1NDQsLTY3MT
-Y5MzMyMywtMjAxNjcxMzQwMSwtNDQzNjQ2NzgsLTExODk4NDkw
-NSw1Mzg5MjQ3MTIsMTc5MzI0Mjg1NywtNTY4NTM5ODUsMjA4Nj
-AwODgwNCwxNTU5MzExMjQxXX0=
+eyJoaXN0b3J5IjpbMTEyNTEyMTAwOCw2MjAwODIyMzgsLTg1Mj
+A1NjU0NCwtNjcxNjkzMzIzLC0yMDE2NzEzNDAxLC00NDM2NDY3
+OCwtMTE4OTg0OTA1LDUzODkyNDcxMiwxNzkzMjQyODU3LC01Nj
+g1Mzk4NSwyMDg2MDA4ODA0LDE1NTkzMTEyNDFdfQ==
 -->
