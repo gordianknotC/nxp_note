@@ -31,8 +31,7 @@ class Author extends ManagedObject<_Author> implements _Author {
 
 ### Example: One-to-Many Relationship
 
-An author has many books:
-
+#### An author has many books:
 ```dart
 class Author extends ManagedObject<_Author> implements _Author {}
 class _Author {
@@ -55,11 +54,30 @@ class _Book {
   Author author;
 }
 ```
+#### To insert an author and a book associated with that author:
+```dart
+final authorQuery = Query<Author>(context)
+  ..values.name = "Fred";
+final author = await authorQuery.insert();
 
-
-
-
-
+final bookQuery = Query<Book>(context)
+  ..values.name = "Title"
+  ..values.author.id = author.id;
+final book = await bookQuery.insert();
+```
+#### To fetch authors and their books:
+```dart
+final query = Query<Author>(context)
+  ..join(set: (a) => a.books);
+final authors = await query.fetch();
+```
+To fetch a book and their full author object:
+```dart
+final query = Query<Book>(context)
+  ..where((b) => b.id).equalTo(1)
+  ..join(object: (a) => a.author);
+final books = await query.fetch();
+```
 
 
 
@@ -72,5 +90,5 @@ class _Book {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTQ0OTgyMiwyMDg5NzI2NDM0XX0=
+eyJoaXN0b3J5IjpbMjE0Mjc4OTY3MywyMDg5NzI2NDM0XX0=
 -->
