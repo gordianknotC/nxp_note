@@ -108,10 +108,14 @@ class MyApplicationChannel extends ApplicationChannel {
 
 The `ManagedDataModel.fromCurrentMirrorSystem` finds every **`ManagedObject<T>`** subclass in your application's code. Optionally, you may specify an exact list:
 
+```dart
+var dataModel = ManagedDataModel([User, Post, Friendship]);
+```
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyNTEyMTAwOCw2MjAwODIyMzgsLTg1Mj
-A1NjU0NCwtNjcxNjkzMzIzLC0yMDE2NzEzNDAxLC00NDM2NDY3
-OCwtMTE4OTg0OTA1LDUzODkyNDcxMiwxNzkzMjQyODU3LC01Nj
-g1Mzk4NSwyMDg2MDA4ODA0LDE1NTkzMTEyNDFdfQ==
+eyJoaXN0b3J5IjpbNDcyOTk5NDExLDYyMDA4MjIzOCwtODUyMD
+U2NTQ0LC02NzE2OTMzMjMsLTIwMTY3MTM0MDEsLTQ0MzY0Njc4
+LC0xMTg5ODQ5MDUsNTM4OTI0NzEyLDE3OTMyNDI4NTcsLTU2OD
+UzOTg1LDIwODYwMDg4MDQsMTU1OTMxMTI0MV19
 -->
