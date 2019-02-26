@@ -87,12 +87,27 @@ The interface to a database from Aqueduct is an instance of  `ManagedContext`  t
 -   a  `ManagedDataModel`  that describes your application's data model
 -   a  `PersistentStore`  that manages a connection to a single database
 
-A `ManagedContext` uses these two objects to coordinate moving data to and from your application and a database. A**`Query<T>`** object uses a context's persistent store to determine which database to send commands to, and a data model to map database rows to objects and vice versa.
+A **`ManagedContext`** uses these two objects to coordinate moving data to and from your application and a database. A **`Query<T>`** object uses a context's persistent store to determine **which database to send commands to**, and a **data model to map database rows to objects** and vice versa.
 
 A context, like all service objects, is created in **`ApplicationChannel.prepare`**.
+
+```dart
+class MyApplicationChannel extends ApplicationChannel {
+  ManagedContext context;
+
+  @override
+  Future prepare() async {
+    var dataModel = ManagedDataModel.fromCurrentMirrorSystem();
+    var psc = PostgreSQLPersistentStore.fromConnectionInfo(
+        "my_app_name_user", "password", "localhost", 5432, "my_app_name");
+
+    context = ManagedContext(dataModel, psc);
+  }
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNjk4OTAsLTY3MTY5MzMyMywtMjAxNj
-cxMzQwMSwtNDQzNjQ2NzgsLTExODk4NDkwNSw1Mzg5MjQ3MTIs
-MTc5MzI0Mjg1NywtNTY4NTM5ODUsMjA4NjAwODgwNCwxNTU5Mz
-ExMjQxXX0=
+eyJoaXN0b3J5IjpbLTEzMzA4MjM3ODIsLTY3MTY5MzMyMywtMj
+AxNjcxMzQwMSwtNDQzNjQ2NzgsLTExODk4NDkwNSw1Mzg5MjQ3
+MTIsMTc5MzI0Mjg1NywtNTY4NTM5ODUsMjA4NjAwODgwNCwxNT
+U5MzExMjQxXX0=
 -->
