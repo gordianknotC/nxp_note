@@ -118,6 +118,7 @@ var dataModel = ManagedDataModel([User, Post, Friendship]);
 
 following  `Configuration`  subclass:
 
+```dart
 class TodoConfiguration extends Configuration {
   TodoConfiguration(String fileName) : super.fromFile(fileName);
 
@@ -127,9 +128,11 @@ class TodoConfiguration extends Configuration {
   @optionalConfiguration
   int identifier;
 }
+```
 
 This would read a YAML file like this:
 
+```yaml
 database:
   username: fred
   password: fredspassword
@@ -138,6 +141,7 @@ database:
   databaseName: fredsdb
 apiBaseURL: /api
 identifier: 2
+```
 
 If required properties are omitted from the YAML file being read, application startup will fail and throw an informative error.
 
@@ -153,10 +157,10 @@ If required properties are omitted from the YAML file being read, application st
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2Mjg0OTk3MywxNTYyNTQ1MDQxLDEyND
-ExMTYyODUsLTQxMDQ4MDQ5LC0zMTgxMTU2NjEsNDcyOTk5NDEx
-LDYyMDA4MjIzOCwtODUyMDU2NTQ0LC02NzE2OTMzMjMsLTIwMT
-Y3MTM0MDEsLTQ0MzY0Njc4LC0xMTg5ODQ5MDUsNTM4OTI0NzEy
-LDE3OTMyNDI4NTcsLTU2ODUzOTg1LDIwODYwMDg4MDQsMTU1OT
-MxMTI0MV19
+eyJoaXN0b3J5IjpbODIyOTgwNjQ1LDE1NjI1NDUwNDEsMTI0MT
+ExNjI4NSwtNDEwNDgwNDksLTMxODExNTY2MSw0NzI5OTk0MTEs
+NjIwMDgyMjM4LC04NTIwNTY1NDQsLTY3MTY5MzMyMywtMjAxNj
+cxMzQwMSwtNDQzNjQ2NzgsLTExODk4NDkwNSw1Mzg5MjQ3MTIs
+MTc5MzI0Mjg1NywtNTY4NTM5ODUsMjA4NjAwODgwNCwxNTU5Mz
+ExMjQxXX0=
 -->
