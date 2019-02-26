@@ -27,7 +27,11 @@ There are two flavors of controllers.
 A channel must have exactly one endpoint controller. It can be preceded by zero or more middleware controllers. See the guides on  [Controllers](https://aqueduct.io/docs/http/controller/)  and  [ResourceControllers](https://aqueduct.io/docs/http/resource_controller/)  for usage details.
 
 
+### @Operation.get
 
+Notice that we didn't have to override  **`handle`**  in  `ResourceController`. A  `ResourceController`  implements this method to call one of our  **_operation** methods_. An operation method - like  `getAllHeroes`  and  `getHeroByID`  - must have an  `Operation`annotation. The named constructor  `Operation.get`  means these methods get called when the request's method is GET. An operation method must also return a  `Future<Response>`.
+
+`getHeroByID`'s annotation also has an argument - the name of our path variable  `id`. If that path variable exists in the request's path,  `getHeroByID`  will be called. If it doesn't exist,
 
 
 
@@ -36,6 +40,6 @@ A channel must have exactly one endpoint controller. It can be preceded by zero 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MzI0Mjg1NywtNTY4NTM5ODUsMjA4Nj
-AwODgwNCwxNTU5MzExMjQxXX0=
+eyJoaXN0b3J5IjpbLTE1MDM5NTk5MTMsMTc5MzI0Mjg1NywtNT
+Y4NTM5ODUsMjA4NjAwODgwNCwxNTU5MzExMjQxXX0=
 -->
