@@ -63,11 +63,11 @@ class HeroesController extends ResourceController {
 
 ## Request Binding @bind
 
-In our `getHeroByID` method, we make a dangerous assumption that the path variable 'id' can be parsed into an integer. If 'id' were something else, like a string, `int.parse` would throw an exception.
+In our  `getHeroByID`  method, we make a dangerous assumption that the path variable 'id' can be parsed into an integer. If 'id' were something else, like a string,  `int.parse`  would throw an exception. When exceptions are thrown in operation methods, the controller catches it and sends a 500 Server Error response. 500s are bad, they don't tell the client what's wrong. A 404 Not Found is a better response here, but writing the code to catch that exception and create this response is cumbersome.
 
-
+Instead, we can rely on a feature of operation methods called  _request binding_. An operation method can declare parameters and  _bind_  them to properties of the request.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODI0MzczMDQsLTExODk4NDkwNSw1Mz
-g5MjQ3MTIsMTc5MzI0Mjg1NywtNTY4NTM5ODUsMjA4NjAwODgw
-NCwxNTU5MzExMjQxXX0=
+eyJoaXN0b3J5IjpbLTQ0MzY0Njc4LC0xMTg5ODQ5MDUsNTM4OT
+I0NzEyLDE3OTMyNDI4NTcsLTU2ODUzOTg1LDIwODYwMDg4MDQs
+MTU1OTMxMTI0MV19
 -->
