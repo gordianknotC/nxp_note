@@ -157,7 +157,14 @@ apiBaseURL: /api
 
 ### Configuration Conventions and Deployment Options
 
-Aqueduct uses two configuration files for a project: `config.yaml` and `config.src.yaml`. The latter is the _configuration source file_. The configuration source file declares key-value pairs that will be used when running the application tests. Deployed instances use `config.yaml`.
+Aqueduct uses two configuration files for a project: `config.yaml` and `config.src.yaml`. 
+
+- The latter is the _configuration source file_. 
+  The configuration source file declares key-value pairs that will be used when running the application tests. Deployed instances use `config.yaml`.
+
+
+
+
 
 
 
@@ -165,10 +172,10 @@ Aqueduct uses two configuration files for a project: `config.yaml` and `config.s
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzAyNDI0NSwzNTg5OTY5MzEsLTE2OT
-Y5MzM4MTEsMTU2MjU0NTA0MSwxMjQxMTE2Mjg1LC00MTA0ODA0
-OSwtMzE4MTE1NjYxLDQ3Mjk5OTQxMSw2MjAwODIyMzgsLTg1Mj
-A1NjU0NCwtNjcxNjkzMzIzLC0yMDE2NzEzNDAxLC00NDM2NDY3
-OCwtMTE4OTg0OTA1LDUzODkyNDcxMiwxNzkzMjQyODU3LC01Nj
-g1Mzk4NSwyMDg2MDA4ODA0LDE1NTkzMTEyNDFdfQ==
+eyJoaXN0b3J5IjpbNjc4MzkwODI0LDM1ODk5NjkzMSwtMTY5Nj
+kzMzgxMSwxNTYyNTQ1MDQxLDEyNDExMTYyODUsLTQxMDQ4MDQ5
+LC0zMTgxMTU2NjEsNDcyOTk5NDExLDYyMDA4MjIzOCwtODUyMD
+U2NTQ0LC02NzE2OTMzMjMsLTIwMTY3MTM0MDEsLTQ0MzY0Njc4
+LC0xMTg5ODQ5MDUsNTM4OTI0NzEyLDE3OTMyNDI4NTcsLTU2OD
+UzOTg1LDIwODYwMDg4MDQsMTU1OTMxMTI0MV19
 -->
