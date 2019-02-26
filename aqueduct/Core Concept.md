@@ -34,6 +34,30 @@ we didn't have to override  **`handle`**  in  `ResourceController`. A  `Resource
 
 `getHeroByID`'s annotation also has an argument - the name of our path variable  `id`. If that path variable exists in the request's path,  `getHeroByID`  will be called. If it doesn't exist,
 
+```dart
+class HeroesController extends ResourceController {
+  final _heroes = [
+    {'id': 11, 'name': 'Mr. Nice'},
+    {'id': 12, 'name': 'Narco'},
+    {'id': 13, 'name': 'Bombasto'},
+    {'id': 14, 'name': 'Celeritas'},
+    {'id': 15, 'name': 'Magneta'},
+  ];
+  @Operation.get()
+  Future<Response> getAllHeroes() async {
+    return Response.ok(_heroes);
+  }
+  @Operation.get('id')
+  Future<Response> getHeroByID() async {
+    final id = int.parse(request.path.variables['id']);
+    final hero = _heroes.firstWhere((hero) => hero['id'] == id, orElse: () => null);
+    if (hero == null) {
+      return Response.notFound();
+    }
+    return Response.ok(hero);
+  }
+}
+```
 
 
 
@@ -41,6 +65,6 @@ we didn't have to override  **`handle`**  in  `ResourceController`. A  `Resource
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODAxMzI0MTgsMTc5MzI0Mjg1NywtNT
-Y4NTM5ODUsMjA4NjAwODgwNCwxNTU5MzExMjQxXX0=
+eyJoaXN0b3J5IjpbNTM4OTI0NzEyLDE3OTMyNDI4NTcsLTU2OD
+UzOTg1LDIwODYwMDg4MDQsMTU1OTMxMTI0MV19
 -->
