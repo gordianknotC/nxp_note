@@ -169,13 +169,15 @@ This pattern is used for two reasons:
 
 For example, a production API instance might have the following  `config.yaml`  file with connection info for a production database:
 
+```yaml
+database: postgres://app_user:$%4jlkn#an*@mOZkea2@somedns.name.com:5432/production_db
 ```
-database: postgres://app_user:$%4jlkn#an*@mOZkea2@somedns.name.com:5432/production_db```
 
 Whereas  `config.src.yaml`  would have connection info for a local, test database:
 
+```yaml
 database: postgres://test:test@localhost:5432/temporary_db
-
+```
 
 
 
@@ -184,7 +186,7 @@ database: postgres://test:test@localhost:5432/temporary_db
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MTA0OTM1OCwzNTg5OTY5MzEsLTE2OT
+eyJoaXN0b3J5IjpbLTgwNTIxOTg0NiwzNTg5OTY5MzEsLTE2OT
 Y5MzM4MTEsMTU2MjU0NTA0MSwxMjQxMTE2Mjg1LC00MTA0ODA0
 OSwtMzE4MTE1NjYxLDQ3Mjk5OTQxMSw2MjAwODIyMzgsLTg1Mj
 A1NjU0NCwtNjcxNjkzMzIzLC0yMDE2NzEzNDAxLC00NDM2NDY3
