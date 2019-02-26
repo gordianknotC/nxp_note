@@ -116,7 +116,30 @@ var dataModel = ManagedDataModel([User, Post, Friendship]);
 
 ## Configuration Files
 
+following  `Configuration`  subclass:
 
+class TodoConfiguration extends Configuration {
+  TodoConfiguration(String fileName) : super.fromFile(fileName);
+
+  DatabaseConnectionConfiguration database;
+  String apiBaseURL;
+
+  @optionalConfiguration
+  int identifier;
+}
+
+This would read a YAML file like this:
+
+database:
+  username: fred
+  password: fredspassword
+  host: db.myapp.com
+  port: 5432
+  databaseName: fredsdb
+apiBaseURL: /api
+identifier: 2
+
+If required properties are omitted from the YAML file being read, application startup will fail and throw an informative error.
 
 
 
@@ -130,7 +153,7 @@ var dataModel = ManagedDataModel([User, Post, Friendship]);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxODUxMDc3NCwxNTYyNTQ1MDQxLDEyND
+eyJoaXN0b3J5IjpbMTc2Mjg0OTk3MywxNTYyNTQ1MDQxLDEyND
 ExMTYyODUsLTQxMDQ4MDQ5LC0zMTgxMTU2NjEsNDcyOTk5NDEx
 LDYyMDA4MjIzOCwtODUyMDU2NTQ0LC02NzE2OTMzMjMsLTIwMT
 Y3MTM0MDEsLTQ0MzY0Njc4LC0xMTg5ODQ5MDUsNTM4OTI0NzEy
