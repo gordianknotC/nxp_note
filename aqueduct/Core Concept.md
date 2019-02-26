@@ -145,14 +145,15 @@ identifier: 2
 
 If required properties are omitted from the YAML file being read, application startup will fail and throw an informative error.
 
-You may use `Configuration`s to read values from environment variables. In `config.yaml`, use a `$`-prefixed environment variable name instead of a value:
+You may use `Configuration`s to read values from environment variables. In `config.yaml`, use a **`$`-prefixed** ***environment variable*** name instead of a value:
 
 ```yaml
 database: $DATABASE_CONNECTION_URL
 apiBaseURL: /api
 ```
+> $: 指向 ENV variable
 
-If the environment variable `DATABASE_CONNECTION_URL`'s value were `"postgres://user:password@localhost:5432/test"`, the value of `TodoConfiguration.database` will be that string at runtime. (Note that `DatabaseConnectionConfiguration` may either have a YAML object for each connection attribute, or a database connection string.)
+If the environment variable  `DATABASE_CONNECTION_URL`'s  value were `"postgres://user:password@localhost:5432/test"`, the value of `TodoConfiguration.database` will be that string at runtime. (Note that `DatabaseConnectionConfiguration` may either have a YAML object for each connection attribute, or a database connection string.)
 
 
 
@@ -163,10 +164,10 @@ If the environment variable `DATABASE_CONNECTION_URL`'s value were `"postgres://
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjAzNjc2NTYsLTE2OTY5MzM4MTEsMT
-U2MjU0NTA0MSwxMjQxMTE2Mjg1LC00MTA0ODA0OSwtMzE4MTE1
-NjYxLDQ3Mjk5OTQxMSw2MjAwODIyMzgsLTg1MjA1NjU0NCwtNj
-cxNjkzMzIzLC0yMDE2NzEzNDAxLC00NDM2NDY3OCwtMTE4OTg0
-OTA1LDUzODkyNDcxMiwxNzkzMjQyODU3LC01Njg1Mzk4NSwyMD
-g2MDA4ODA0LDE1NTkzMTEyNDFdfQ==
+eyJoaXN0b3J5IjpbMzU4OTk2OTMxLC0xNjk2OTMzODExLDE1Nj
+I1NDUwNDEsMTI0MTExNjI4NSwtNDEwNDgwNDksLTMxODExNTY2
+MSw0NzI5OTk0MTEsNjIwMDgyMjM4LC04NTIwNTY1NDQsLTY3MT
+Y5MzMyMywtMjAxNjcxMzQwMSwtNDQzNjQ2NzgsLTExODk4NDkw
+NSw1Mzg5MjQ3MTIsMTc5MzI0Mjg1NywtNTY4NTM5ODUsMjA4Nj
+AwODgwNCwxNTU5MzExMjQxXX0=
 -->
