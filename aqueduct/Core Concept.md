@@ -114,6 +114,10 @@ var dataModel = ManagedDataModel([User, Post, Friendship]);
 ```
 
 
+## Configuration Files
+
+
+
 
 
 
@@ -125,9 +129,10 @@ var dataModel = ManagedDataModel([User, Post, Friendship]);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MjU0NTA0MSwxMjQxMTE2Mjg1LC00MT
-A0ODA0OSwtMzE4MTE1NjYxLDQ3Mjk5OTQxMSw2MjAwODIyMzgs
-LTg1MjA1NjU0NCwtNjcxNjkzMzIzLC0yMDE2NzEzNDAxLC00ND
-M2NDY3OCwtMTE4OTg0OTA1LDUzODkyNDcxMiwxNzkzMjQyODU3
-LC01Njg1Mzk4NSwyMDg2MDA4ODA0LDE1NTkzMTEyNDFdfQ==
+eyJoaXN0b3J5IjpbOTQ5MTk0NTI0LDE1NjI1NDUwNDEsMTI0MT
+ExNjI4NSwtNDEwNDgwNDksLTMxODExNTY2MSw0NzI5OTk0MTEs
+NjIwMDgyMjM4LC04NTIwNTY1NDQsLTY3MTY5MzMyMywtMjAxNj
+cxMzQwMSwtNDQzNjQ2NzgsLTExODk4NDkwNSw1Mzg5MjQ3MTIs
+MTc5MzI0Mjg1NywtNTY4NTM5ODUsMjA4NjAwODgwNCwxNTU5Mz
+ExMjQxXX0=
 -->
