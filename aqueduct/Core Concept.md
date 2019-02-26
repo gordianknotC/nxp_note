@@ -75,12 +75,11 @@ Future<Response> getHeroByID(@Bind.path('id') int id) async {
   if (hero == null) {
     return Response.notFound();
   }
-
   return Response.ok(hero);
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTY3MTM0MDEsLTQ0MzY0Njc4LC0xMT
-g5ODQ5MDUsNTM4OTI0NzEyLDE3OTMyNDI4NTcsLTU2ODUzOTg1
-LDIwODYwMDg4MDQsMTU1OTMxMTI0MV19
+eyJoaXN0b3J5IjpbLTY3MTY5MzMyMywtMjAxNjcxMzQwMSwtND
+QzNjQ2NzgsLTExODk4NDkwNSw1Mzg5MjQ3MTIsMTc5MzI0Mjg1
+NywtNTY4NTM5ODUsMjA4NjAwODgwNCwxNTU5MzExMjQxXX0=
 -->
