@@ -145,9 +145,12 @@ identifier: 2
 
 If required properties are omitted from the YAML file being read, application startup will fail and throw an informative error.
 
+You may use `Configuration`s to read values from environment variables. In `config.yaml`, use a `$`-prefixed environment variable name instead of a value:
 
-
-
+```
+database: $DATABASE_CONNECTION_URL
+apiBaseURL: /api
+```
 
 
 
@@ -157,10 +160,10 @@ If required properties are omitted from the YAML file being read, application st
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODIyOTgwNjQ1LDE1NjI1NDUwNDEsMTI0MT
-ExNjI4NSwtNDEwNDgwNDksLTMxODExNTY2MSw0NzI5OTk0MTEs
-NjIwMDgyMjM4LC04NTIwNTY1NDQsLTY3MTY5MzMyMywtMjAxNj
-cxMzQwMSwtNDQzNjQ2NzgsLTExODk4NDkwNSw1Mzg5MjQ3MTIs
-MTc5MzI0Mjg1NywtNTY4NTM5ODUsMjA4NjAwODgwNCwxNTU5Mz
-ExMjQxXX0=
+eyJoaXN0b3J5IjpbLTE2OTY5MzM4MTEsMTU2MjU0NTA0MSwxMj
+QxMTE2Mjg1LC00MTA0ODA0OSwtMzE4MTE1NjYxLDQ3Mjk5OTQx
+MSw2MjAwODIyMzgsLTg1MjA1NjU0NCwtNjcxNjkzMzIzLC0yMD
+E2NzEzNDAxLC00NDM2NDY3OCwtMTE4OTg0OTA1LDUzODkyNDcx
+MiwxNzkzMjQyODU3LC01Njg1Mzk4NSwyMDg2MDA4ODA0LDE1NT
+kzMTEyNDFdfQ==
 -->
