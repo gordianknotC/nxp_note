@@ -63,11 +63,11 @@ class HeroesController extends ResourceController {
 
 ## Request Binding @bind
 
-
+In our `getHeroByID` method, we make a dangerous assumption that the path variable 'id' can be parsed into an integer. If 'id' were something else, like a string, `int.parse` would throw an exception.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODk4NDkwNSw1Mzg5MjQ3MTIsMTc5Mz
-I0Mjg1NywtNTY4NTM5ODUsMjA4NjAwODgwNCwxNTU5MzExMjQx
-XX0=
+eyJoaXN0b3J5IjpbLTE3ODI0MzczMDQsLTExODk4NDkwNSw1Mz
+g5MjQ3MTIsMTc5MzI0Mjg1NywtNTY4NTM5ODUsMjA4NjAwODgw
+NCwxNTU5MzExMjQxXX0=
 -->
