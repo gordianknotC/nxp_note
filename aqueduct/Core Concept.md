@@ -82,6 +82,7 @@ Future<Response> getHeroByID(@Bind.path('id') int id) async {
 
 ## Using ManagedContext to Connect to a Database
 
+
 The interface to a database from Aqueduct is an instance of  `ManagedContext`  that contains the following two objects:
 
 -   a  `ManagedDataModel`  that describes your application's data model
@@ -115,7 +116,7 @@ var dataModel = ManagedDataModel([User, Post, Friendship]);
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxOTQ4NjMwNSw0NzI5OTk0MTEsNjIwMD
+eyJoaXN0b3J5IjpbLTMxODExNTY2MSw0NzI5OTk0MTEsNjIwMD
 gyMjM4LC04NTIwNTY1NDQsLTY3MTY5MzMyMywtMjAxNjcxMzQw
 MSwtNDQzNjQ2NzgsLTExODk4NDkwNSw1Mzg5MjQ3MTIsMTc5Mz
 I0Mjg1NywtNTY4NTM5ODUsMjA4NjAwODgwNCwxNTU5MzExMjQx
