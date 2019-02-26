@@ -42,6 +42,10 @@ class Author extends ManagedObject<_Author> implements _Author {
 
 
 
+
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0ODA2NDQ0NiwyMDg5NzI2NDM0XX0=
+eyJoaXN0b3J5IjpbMTMxMDczNDMzMCwyMDg5NzI2NDM0XX0=
 -->
