@@ -12,7 +12,10 @@ class Author extends ManagedObject<_Author> implements _Author {
   }
 }
 ```
-By default, a transient property is ignored when reading an object from a request body or writing the object to a response body (see the guide on  [serialization](https://aqueduct.io/docs/db/serialization/)  for more details). You can annotate a transient property with  `Serialize`  so that it is able to be read from a request body, written to a response body, or both. For example:
+By default, a transient property is ignored when reading an object from a request body or writing the object to a response body (see the guide on  [serialization](https://aqueduct.io/docs/db/serialization/)  for more details). 
+
+> ⚡ You can annotate a transient property with  `Serialize`   so that it is able to be **read from a request body**, **written to a response body**, or both. For example:
+
 ```dart
 class Author extends ManagedObject<_Author> implements _Author {
   @Serialize()
@@ -40,5 +43,5 @@ class Author extends ManagedObject<_Author> implements _Author {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0NDMzMzYzMywyMDg5NzI2NDM0XX0=
+eyJoaXN0b3J5IjpbLTI0ODA2NDQ0NiwyMDg5NzI2NDM0XX0=
 -->
