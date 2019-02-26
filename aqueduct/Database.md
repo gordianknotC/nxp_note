@@ -33,7 +33,28 @@ class Author extends ManagedObject<_Author> implements _Author {
 
 An author has many books:
 
+```dart
+class Author extends ManagedObject<_Author> implements _Author {}
+class _Author {
+  @primaryKey
+  int id;
 
+  String name;
+
+  ManagedSet<Book> books;
+}
+
+class Book extends ManagedObject<_Book> implements _Book {}
+class _Book {
+  @primaryKey
+  int id;
+
+  String name;
+
+  @Relate(#books)
+  Author author;
+}
+```
 
 
 
@@ -51,5 +72,5 @@ An author has many books:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTIxMzkxMTgsMjA4OTcyNjQzNF19
+eyJoaXN0b3J5IjpbLTExMTQ0OTgyMiwyMDg5NzI2NDM0XX0=
 -->
