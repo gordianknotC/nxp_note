@@ -29,6 +29,10 @@ class Author extends ManagedObject<_Author> implements _Author {
 }
 ```
 
+### Example: One-to-Many Relationship
+
+An author has many books:
+
 
 
 
@@ -47,5 +51,5 @@ class Author extends ManagedObject<_Author> implements _Author {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMDczNDMzMCwyMDg5NzI2NDM0XX0=
+eyJoaXN0b3J5IjpbLTEzOTIxMzkxMTgsMjA4OTcyNjQzNF19
 -->
