@@ -66,8 +66,21 @@ class HeroesController extends ResourceController {
 In our  `getHeroByID`  method, we make a dangerous assumption that the path variable 'id' can be parsed into an integer. If 'id' were something else, like a string,  `int.parse`  would throw an exception. When exceptions are thrown in operation methods, the controller catches it and sends a 500 Server Error response. 500s are bad, they don't tell the client what's wrong. A 404 Not Found is a better response here, but writing the code to catch that exception and create this response is cumbersome.
 
 Instead, we can rely on a feature of operation methods called  _request binding_. An operation method can declare parameters and  _bind_  them to properties of the request.
+
+```dart
+@Operation.get('id')
+Future<Response> getHeroByID(@Bind.path('id') int id) async {
+  final hero = _heroes.firstWhere((hero) => hero['id'] == id, orElse: () => null);
+
+  if (hero == null) {
+    return Response.notFound();
+  }
+
+  return Response.ok(hero);
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0MzY0Njc4LC0xMTg5ODQ5MDUsNTM4OT
-I0NzEyLDE3OTMyNDI4NTcsLTU2ODUzOTg1LDIwODYwMDg4MDQs
-MTU1OTMxMTI0MV19
+eyJoaXN0b3J5IjpbLTIwMTY3MTM0MDEsLTQ0MzY0Njc4LC0xMT
+g5ODQ5MDUsNTM4OTI0NzEyLDE3OTMyNDI4NTcsLTU2ODUzOTg1
+LDIwODYwMDg4MDQsMTU1OTMxMTI0MV19
 -->
