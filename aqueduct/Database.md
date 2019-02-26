@@ -71,6 +71,8 @@ final query = Query<Author>(context)
   ..join(set: (a) => a.books);
 final authors = await query.fetch();
 ```
+> ⚡ **set:** indicates **ManagedSet** which is an list of int referenced to a target table
+
 #### To fetch a book and their full author object:
 ```dart
 final query = Query<Book>(context)
@@ -79,6 +81,7 @@ final query = Query<Book>(context)
 final books = await query.fetch();
 ```
 
+> ⚡ **object:** indicates a **Relate** object which is an list of int referenced to a target table
 
 
 
@@ -90,5 +93,5 @@ final books = await query.fetch();
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5OTA4NTI3MywyMDg5NzI2NDM0XX0=
+eyJoaXN0b3J5IjpbLTExMjk5OTEyNDIsMjA4OTcyNjQzNF19
 -->
