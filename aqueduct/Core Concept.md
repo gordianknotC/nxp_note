@@ -99,15 +99,15 @@ class MyApplicationChannel extends ApplicationChannel {
   Future prepare() async {
     var dataModel = ManagedDataModel.fromCurrentMirrorSystem();
     var psc = PostgreSQLPersistentStore.fromConnectionInfo(
-        "my_app_name_user", "password", "localhost", 5432, "my_app_name");
+   "my_app_name_user", "password", "localhost", 5432, "my_app_name");
 
     context = ManagedContext(dataModel, psc);
   }
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzA4MjM3ODIsLTY3MTY5MzMyMywtMj
-AxNjcxMzQwMSwtNDQzNjQ2NzgsLTExODk4NDkwNSw1Mzg5MjQ3
-MTIsMTc5MzI0Mjg1NywtNTY4NTM5ODUsMjA4NjAwODgwNCwxNT
-U5MzExMjQxXX0=
+eyJoaXN0b3J5IjpbLTg1MjA1NjU0NCwtNjcxNjkzMzIzLC0yMD
+E2NzEzNDAxLC00NDM2NDY3OCwtMTE4OTg0OTA1LDUzODkyNDcx
+MiwxNzkzMjQyODU3LC01Njg1Mzk4NSwyMDg2MDA4ODA0LDE1NT
+kzMTEyNDFdfQ==
 -->
