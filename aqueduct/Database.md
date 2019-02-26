@@ -71,7 +71,7 @@ final query = Query<Author>(context)
   ..join(set: (a) => a.books);
 final authors = await query.fetch();
 ```
-To fetch a book and their full author object:
+#### To fetch a book and their full author object:
 ```dart
 final query = Query<Book>(context)
   ..where((b) => b.id).equalTo(1)
@@ -90,5 +90,5 @@ final books = await query.fetch();
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0Mjc4OTY3MywyMDg5NzI2NDM0XX0=
+eyJoaXN0b3J5IjpbMjA5OTA4NTI3MywyMDg5NzI2NDM0XX0=
 -->
