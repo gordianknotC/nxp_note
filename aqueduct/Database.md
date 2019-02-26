@@ -81,7 +81,7 @@ final query = Query<Book>(context)
 final books = await query.fetch();
 ```
 
-> ⚡ **object:** indicates a **Relate** object which is an list of int referenced to a target table
+> ⚡ **object:** indicates a **Relate** object which referenced from author
 
 
 
@@ -93,5 +93,5 @@ final books = await query.fetch();
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjk5OTEyNDIsMjA4OTcyNjQzNF19
+eyJoaXN0b3J5IjpbMTI0NDA1NTgxLDIwODk3MjY0MzRdfQ==
 -->
