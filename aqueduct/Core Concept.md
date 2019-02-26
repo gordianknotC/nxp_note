@@ -153,10 +153,11 @@ apiBaseURL: /api
 ```
 > $: 指向 ENV variable
 
-If the environment variable  `DATABASE_CONNECTION_URL`'s  value were `"postgres://user:password@localhost:5432/test"`, the value of `TodoConfiguration.database` will be that string at runtime. (Note that `DatabaseConnectionConfiguration` may either have a YAML object for each connection attribute, or a database connection string.)
+ 
 
+### Configuration Conventions and Deployment Options
 
-
+Aqueduct uses two configuration files for a project: `config.yaml` and `config.src.yaml`. The latter is the _configuration source file_. The configuration source file declares key-value pairs that will be used when running the application tests. Deployed instances use `config.yaml`.
 
 
 
@@ -164,10 +165,10 @@ If the environment variable  `DATABASE_CONNECTION_URL`'s  value were `"postgres:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU4OTk2OTMxLC0xNjk2OTMzODExLDE1Nj
-I1NDUwNDEsMTI0MTExNjI4NSwtNDEwNDgwNDksLTMxODExNTY2
-MSw0NzI5OTk0MTEsNjIwMDgyMjM4LC04NTIwNTY1NDQsLTY3MT
-Y5MzMyMywtMjAxNjcxMzQwMSwtNDQzNjQ2NzgsLTExODk4NDkw
-NSw1Mzg5MjQ3MTIsMTc5MzI0Mjg1NywtNTY4NTM5ODUsMjA4Nj
-AwODgwNCwxNTU5MzExMjQxXX0=
+eyJoaXN0b3J5IjpbLTE5MzAyNDI0NSwzNTg5OTY5MzEsLTE2OT
+Y5MzM4MTEsMTU2MjU0NTA0MSwxMjQxMTE2Mjg1LC00MTA0ODA0
+OSwtMzE4MTE1NjYxLDQ3Mjk5OTQxMSw2MjAwODIyMzgsLTg1Mj
+A1NjU0NCwtNjcxNjkzMzIzLC0yMDE2NzEzNDAxLC00NDM2NDY3
+OCwtMTE4OTg0OTA1LDUzODkyNDcxMiwxNzkzMjQyODU3LC01Nj
+g1Mzk4NSwyMDg2MDA4ODA0LDE1NTkzMTEyNDFdfQ==
 -->
