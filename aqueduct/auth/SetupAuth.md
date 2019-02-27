@@ -75,13 +75,12 @@ class MyApplicationChannel extends ApplicationChannel {
 
 The type argument to  `ManagedAuthDelegate<T>`  represents the application's concept of a 'user' or 'account' - OAuth 2.0 terminology would refer to this type as a  **_resource owner_**. 
 
-A resource owner must be a  `ManagedObject<T>`  subclass that is specific to your application. Its **table** definition  _must extend_`ResourceOwnerTableDefinition`  and the instance type must implement  `ManagedAuthResourceOwner<T>`, where  `T`  is the table definition. A basic definition may look like this:
+A resource owner must be a  `ManagedObject<T>`  subclass that is specific to your application. Its **table** definition  **_must extend_** `ResourceOwnerTableDefinition`  and the instance type must implement  `ManagedAuthResourceOwner<T>`, where  `T`  is the table definition. A basic definition may look like this:
 
 ```dart
 class User extends ManagedObject<_User>
     implements _User, ManagedAuthResourceOwner<_User> {
 }
-
 class _User extends ResourceOwnerTableDefinition {
   @Column(unique: true)
   String email;
@@ -126,8 +125,23 @@ class _User extends ResourceOwnerTableDefinition {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NDI5NjE4MSwtNDE2OTQwMDk1LC0xNz
+eyJoaXN0b3J5IjpbMTE5ODgwMDM2NywtNDE2OTQwMDk1LC0xNz
 kzNDQyNTEwLDE4MDQ4OTg1OCwtMjcxNDg0MDkyLDE3NjA0MjI5
 Ml19
 -->
