@@ -236,13 +236,34 @@ class _Employee {
 ```
 
  
+## Auth
  
-
+```dart
+class User extends ManagedObject<_User> implements _User, ManagedAuthResourceOwner<_User> {  
+  @Serialize(input: true, output: false)  
+  String password;  
+}  
+  
+class _User extends ResourceOwnerTableDefinition {  
+  @Column(unique: true)  
+  String email;  
+  
+  ManagedSet<Note> notes;  
+  
+  /* This class inherits the following from ManagedAuthenticatable:  
+     @managedPrimaryKey  
+ int id;     @ManagedColumnAttributes(unique: true, indexed: true)  
+ String username;     @ManagedColumnAttributes(omitByDefault: true)  
+ String hashedPassword;     @ManagedColumnAttributes(omitByDefault: true)  
+ String salt;     ManagedSet<ManagedToken> tokens;  
+ */}
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQxNzk0MzE0LC0xMjg3NDYwOTgwLDkzNT
-E2NTc2NywxOTU0OTc4ODU3LDM0NDA1MTg5OSw2ODMzMjI4NzIs
-LTE3MDExNDI1OTQsLTEwMzUzMTY2OTIsMjA3MDIyNzQwOCwxMz
-cyNzU4Njk2LDEyNDQwNTU4MSwyMDg5NzI2NDM0XX0=
+eyJoaXN0b3J5IjpbLTQxMTk5NTUwNCw4NDE3OTQzMTQsLTEyOD
+c0NjA5ODAsOTM1MTY1NzY3LDE5NTQ5Nzg4NTcsMzQ0MDUxODk5
+LDY4MzMyMjg3MiwtMTcwMTE0MjU5NCwtMTAzNTMxNjY5MiwyMD
+cwMjI3NDA4LDEzNzI3NTg2OTYsMTI0NDA1NTgxLDIwODk3MjY0
+MzRdfQ==
 -->
