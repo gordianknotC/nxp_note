@@ -172,6 +172,7 @@ A  `ManagedObject<T>`  can be converted to and from  `Map<String, dynamic>`  obj
 	final object = MyManagedObject();
 	final map = object.asMap();
 	```
+	
 |dart type| serialized type |
 |--|--|
 | int | number(int) |
@@ -196,7 +197,7 @@ A  `ManagedObject<T>`  can be converted to and from  `Map<String, dynamic>`  obj
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY4Nzc4NTQ1LDE5NTQ5Nzg4NTcsMzQ0MD
+eyJoaXN0b3J5IjpbOTM1MTY1NzY3LDE5NTQ5Nzg4NTcsMzQ0MD
 UxODk5LDY4MzMyMjg3MiwtMTcwMTE0MjU5NCwtMTAzNTMxNjY5
 MiwyMDcwMjI3NDA4LDEzNzI3NTg2OTYsMTI0NDA1NTgxLDIwOD
 k3MjY0MzRdfQ==
