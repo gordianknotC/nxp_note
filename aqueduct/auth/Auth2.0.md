@@ -48,7 +48,9 @@ So, for an ecosystem that has a web client, an Android and an iOS app there woul
 
 The client application usually stores that identifier in a database. This identifier is called a  **_client identifier_**. Client identifiers are added to Aqueduct applications with the  `aqueduct auth`  tool (see  [Aqueduct Auth CLI](https://aqueduct.io/docs/auth/cli/)).
 
-When the user is logging in through an application, they submit their username and password. The user doesn't provide the client identifier - in fact, the user doesn't know it. The application sends a request with the user's username and password in the request body, and the client identifier in the Authorization header. All three have to check out for the server to give the application back a token. The full request in pseudo-code looks something like:
+When the user is logging in through an application, they submit their username and password. The user doesn't provide the client identifier - in fact, the user doesn't know it. 
+
+The application sends a request with the user's username and password in the request body, and the client identifier in the Authorization header. All three have to check out for the server to give the application back a token. The full request in pseudo-code looks something like:
 
 
 ```dart
@@ -110,6 +112,6 @@ This is called the  _authorization code grant_  - or just 'auth code flow'. An i
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE3MzI2MjQyLDE3MTcyMTkwOSwtNjI4ND
-AxODA3LDQzNjExMjQ3MF19
+eyJoaXN0b3J5IjpbLTEzNTgxNjUzNzgsMzE3MzI2MjQyLDE3MT
+cyMTkwOSwtNjI4NDAxODA3LDQzNjExMjQ3MF19
 -->
