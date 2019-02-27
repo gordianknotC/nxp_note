@@ -65,9 +65,12 @@ The response to a password token request is a JSON body that follows the OAuth 2
 The  `expires_in`  field is a computed property based on the delta of the issue date and expiration date. You should avoid manually editing the values for the columns  `issuedate`  and  `expirationdate`
 
 > Tokens are refreshed through **the same** endpoint, but with a payload that only contains the **refresh token** and  **`grant_type=refresh_token`**.
+
 ```dart
-grant_type=refresh_token&refresh_token=kjasdiuz9u3namnsd
+var body = "username=bob@stablekernel.com&password=foobar"
+"&grant_type=refresh_token&refresh_token=kjasdiuz9u3namnsd";
 ```
+
 See  [Aqueduct Auth CLI](https://aqueduct.io/docs/auth/cli/)  for more details on creating OAuth 2.0 client identifier and secrets.
 
 If an Aqueduct application is using scope, an additional  `scope`  parameter can contain a space-delimited list of requested authorization scope. Only allowed scopes are returned and granted, and if no scopes are allowed then the request fails. If scope is provided, granted scope will be available in the response body.
@@ -132,6 +135,6 @@ grant_type=authorization_code&code=abcd672kk
 
 An access token will be returned to the server which your friend then stores in their database. Whenever one of their users makes a request that requires accessing your application's data, they will execute requests with that access token.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU4MjcyOTAwLDEwMjIzNjk0NzQsMTczMz
-U1MDk5M119
+eyJoaXN0b3J5IjpbLTE3MzQ4NTkzNDEsMTAyMjM2OTQ3NCwxNz
+MzNTUwOTkzXX0=
 -->
