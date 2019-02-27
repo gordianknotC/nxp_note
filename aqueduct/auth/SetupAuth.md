@@ -94,8 +94,7 @@ By extending  **`ResourceOwnerTableDefinition`**  in the table definition, the d
 -   a password hash
 -   a salt used to generate the password hash
 
-
-
+The interface `ManagedAuthResourceOwner<T>` is a requirement that ensures the type argument is both a `ManagedObject<T>` and `ResourceOwnerTableDefinition`, and serves no other purpose than to restrict `ManagedAuthDelegate<T>`'s type parameter.
 
 
 
@@ -147,7 +146,7 @@ By extending  **`ResourceOwnerTableDefinition`**  in the table definition, the d
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4Mjk5Mzg0MSwtNDE2OTQwMDk1LC0xNz
-kzNDQyNTEwLDE4MDQ4OTg1OCwtMjcxNDg0MDkyLDE3NjA0MjI5
-Ml19
+eyJoaXN0b3J5IjpbMTIzMzYyMjg1OSwxNTgyOTkzODQxLC00MT
+Y5NDAwOTUsLTE3OTM0NDI1MTAsMTgwNDg5ODU4LC0yNzE0ODQw
+OTIsMTc2MDQyMjkyXX0=
 -->
