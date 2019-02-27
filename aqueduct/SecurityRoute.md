@@ -113,7 +113,7 @@ class NewsFeedController extends ResourceController {
 
 Throughout this guide, the argument to an instance of  `Authorizer`  has been referred to as an  `AuthServer`. This is true - but only because  `AuthServer`  implements  `AuthValidator`.  `AuthValidator`  is an interface for verifying bearer tokens and username/password credentials.
 
-You may use  `Authorizer`  without using  `AuthServer`. For example, an application that doesn't use OAuth 2.0 could provide its own  `AuthValidator`  interface to simply verify the username and password of every request:
+You may use  `Authorizer`  without using  `AuthServer`. For example, an application that **doesn't** use OAuth 2.0 could provide its own  `AuthValidator`  interface to simply verify the username and password of every request:
 
 ```dart
 class BasicValidator implements AuthValidator {
@@ -130,7 +130,7 @@ class BasicValidator implements AuthValidator {
 }
 ```
 
-The  `validate`  method must return an  `Authorization`  if the credentials are valid, or null if they are not. The  `parser`  lets the validator know the format of the Authorization header (e.g., 'Basic' or 'Bearer') and  `authorizationData`  is the meaningful information in that header. There are two concrete types of  `AuthorizationParser<T>`:  `AuthorizationBasicParser`  and  `AuthorizationBearerParser`. The authorization data for a basic parser is an instance of  `AuthBasicCredentials`  that contain the username and password, while the bearer parser's authorization data is the bearer token string.
+The  `validate`  method must return an  **`Authorization`**  if the credentials are **valid**, or null if they are not. The  `parser`  lets the validator know the format of the Authorization header (e.g., 'Basic' or 'Bearer') and  `authorizationData`  is the meaningful information in that header. There are two concrete types of  `AuthorizationParser<T>`:  `AuthorizationBasicParser`  and  `AuthorizationBearerParser`. The authorization data for a basic parser is an instance of  `AuthBasicCredentials`  that contain the username and password, while the bearer parser's authorization data is the bearer token string.
 
 
 
@@ -156,7 +156,7 @@ The  `validate`  method must return an  `Authorization`  if the credentials are 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4NjA3NjA2MywtMTg5MzkzMTcxNCwtMT
-EwNTA4Mzc2OSwtMTg4ODc2OTc4NSw1NjI4ODY2ODAsMTQyODY4
-MzUzNSwxNjU4MTIwMTU3XX0=
+eyJoaXN0b3J5IjpbMTM1ODAxNDQzMSwyMDg2MDc2MDYzLC0xOD
+kzOTMxNzE0LC0xMTA1MDgzNzY5LC0xODg4NzY5Nzg1LDU2Mjg4
+NjY4MCwxNDI4NjgzNTM1LDE2NTgxMjAxNTddfQ==
 -->
