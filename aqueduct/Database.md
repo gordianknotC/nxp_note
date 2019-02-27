@@ -180,15 +180,9 @@ A  `ManagedObject<T>`  can be converted to and from  `Map<String, dynamic>`  obj
 | DateTime| ISO 8601 Timestamp (`String`) |
 | bool | boolean(bool) |
 | Document | map or list (`Map<String, dynamic>` or `List<dynamic>`) |
-| enum | S |
-| int | number(int) |
-| int | number(int) |
-| int | number(int) |
-| int | number(int) |
-| int | number(int) |
-| int | number(int) |
-
-
+| enum |string(String) |
+| RelationShip | list or maps |
+ 
 
 
 
@@ -202,8 +196,8 @@ A  `ManagedObject<T>`  can be converted to and from  `Map<String, dynamic>`  obj
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0OTk2MDUxNywxOTU0OTc4ODU3LDM0ND
-A1MTg5OSw2ODMzMjI4NzIsLTE3MDExNDI1OTQsLTEwMzUzMTY2
-OTIsMjA3MDIyNzQwOCwxMzcyNzU4Njk2LDEyNDQwNTU4MSwyMD
-g5NzI2NDM0XX0=
+eyJoaXN0b3J5IjpbNDY4Nzc4NTQ1LDE5NTQ5Nzg4NTcsMzQ0MD
+UxODk5LDY4MzMyMjg3MiwtMTcwMTE0MjU5NCwtMTAzNTMxNjY5
+MiwyMDcwMjI3NDA4LDEzNzI3NTg2OTYsMTI0NDA1NTgxLDIwOD
+k3MjY0MzRdfQ==
 -->
