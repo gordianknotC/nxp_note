@@ -85,6 +85,27 @@ final books = await query.fetch();
 > ⚡ **object:** indicates a **Relate** object which referenced from author
 
 
+
+### Example: Hierarchical Relationships (Self Referencing)
+
+Hierarchical relationships follow the same rules as all other relationship, but declare the foreign key property and the inverse in the same type.
+```dart
+class Person extends ManagedObject<_Person> implements _Person {}
+class _Person {
+  @primaryKey
+  int id;
+
+  String name;
+
+  ManagedSet<Person> children;
+
+  @Relate(#children)
+  Person parent;
+}
+```
+
+
+
 ### Example: Many-to-Many Relationship
 
 ```dart
@@ -125,6 +146,6 @@ class _Player {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3Mjc1ODY5NiwxMjQ0MDU1ODEsMjA4OT
-cyNjQzNF19
+eyJoaXN0b3J5IjpbMjA3MDIyNzQwOCwxMzcyNzU4Njk2LDEyND
+QwNTU4MSwyMDg5NzI2NDM0XX0=
 -->
