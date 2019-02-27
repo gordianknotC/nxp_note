@@ -108,6 +108,7 @@ class _Person {
 
 ### Example: Many-to-Many Relationship
 
+Hierarchical relationships follow the same rules as all other relationship, but declare the foreign key property and the inverse in the same type.
 
 ```dart
 class Team extends ManagedObject<_Team> implements _Team {}
@@ -143,11 +144,30 @@ class _Player {
 ```
 
 
+## ManagedObject Serialization and Deserialization
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDExNDI1OTQsLTEwMzUzMTY2OTIsMj
-A3MDIyNzQwOCwxMzcyNzU4Njk2LDEyNDQwNTU4MSwyMDg5NzI2
-NDM0XX0=
+eyJoaXN0b3J5IjpbNjgzMzIyODcyLC0xNzAxMTQyNTk0LC0xMD
+M1MzE2NjkyLDIwNzAyMjc0MDgsMTM3Mjc1ODY5NiwxMjQ0MDU1
+ODEsMjA4OTcyNjQzNF19
 -->
