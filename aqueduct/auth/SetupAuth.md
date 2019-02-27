@@ -73,7 +73,9 @@ class MyApplicationChannel extends ApplicationChannel {
 
 `ManagedAuthDelegate<T>`  is a concrete implementation of  `AuthServerDelegate`, providing storage of authorization tokens and clients for an  `AuthServer`. Storage is accomplished by Aqueduct's ORM.  `ManagedAuthDelegate<T>`, by default, is not part of the standard  `aqueduct`  library. To use this class, an application must import  `package:aqueduct/managed_auth.dart`.
 
-The type argument to  `ManagedAuthDelegate<T>`  represents the application's concept of a 'user' or 'account' - OAuth 2.0 terminology would refer to this type as a  **_resource owner_**. A resource owner must be a  `ManagedObject<T>`  subclass that is specific to your application. Its table definition  _must extend_`ResourceOwnerTableDefinition`  and the instance type must implement  `ManagedAuthResourceOwner<T>`, where  `T`  is the table definition. A basic definition may look like this:
+The type argument to  `ManagedAuthDelegate<T>`  represents the application's concept of a 'user' or 'account' - OAuth 2.0 terminology would refer to this type as a  **_resource owner_**. 
+
+A resource owner must be a  `ManagedObject<T>`  subclass that is specific to your application. Its **table** definition  _must extend_`ResourceOwnerTableDefinition`  and the instance type must implement  `ManagedAuthResourceOwner<T>`, where  `T`  is the table definition. A basic definition may look like this:
 
 ```dart
 class User extends ManagedObject<_User>
@@ -125,7 +127,7 @@ class _User extends ResourceOwnerTableDefinition {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU1Mjg2NDQ3LC00MTY5NDAwOTUsLTE3OT
-M0NDI1MTAsMTgwNDg5ODU4LC0yNzE0ODQwOTIsMTc2MDQyMjky
-XX0=
+eyJoaXN0b3J5IjpbLTM0NDI5NjE4MSwtNDE2OTQwMDk1LC0xNz
+kzNDQyNTEwLDE4MDQ4OTg1OCwtMjcxNDg0MDkyLDE3NjA0MjI5
+Ml19
 -->
