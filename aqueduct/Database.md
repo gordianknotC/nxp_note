@@ -71,6 +71,7 @@ final query = Query<Author>(context)
   ..join(set: (a) => a.books);
 final authors = await query.fetch();
 ```
+
 > ⚡ **set:** indicates **ManagedSet** which is an list of int referenced to a target table
 
 #### To fetch a book and their full author object:
@@ -124,6 +125,6 @@ class _Player {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MjI2NDcyNiwxMjQ0MDU1ODEsMjA4OT
+eyJoaXN0b3J5IjpbMTM3Mjc1ODY5NiwxMjQ0MDU1ODEsMjA4OT
 cyNjQzNF19
 -->
