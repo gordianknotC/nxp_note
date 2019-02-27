@@ -93,10 +93,10 @@ An  `AuthCodeController`  responds to both  `GET`  and  `POST`  requests. When i
 
 Setting up an  `AuthCodeController`  is nearly as simple as setting up an  `AuthController`, but requires a function that renders the HTML login form. Here's an example:
 
+```dart
 @override
 Controller get entryPoint {
   final router = Router();
-
   router
     .route("/auth/code")
     .link(() => AuthCodeController(
@@ -114,6 +114,7 @@ Future<String> renderLogin(
 
   return html;
 }
+```
 
 It is important that all values passed to HTML rendering function are sent in the form's query parameters - they contain necessary security components and scope information.
 
@@ -135,6 +136,6 @@ grant_type=authorization_code&code=abcd672kk
 
 An access token will be returned to the server which your friend then stores in their database. Whenever one of their users makes a request that requires accessing your application's data, they will execute requests with that access token.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NTc5NTMxNSwtMTczNDg1OTM0MSwxMD
-IyMzY5NDc0LDE3MzM1NTA5OTNdfQ==
+eyJoaXN0b3J5IjpbLTE4NTIxMDQ2ODgsMTc5NTc5NTMxNSwtMT
+czNDg1OTM0MSwxMDIyMzY5NDc0LDE3MzM1NTA5OTNdfQ==
 -->
