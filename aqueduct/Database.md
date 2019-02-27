@@ -258,7 +258,7 @@ class RegisterController extends QueryController<User> {
       return Response.badRequest(body: {"error": "username and password required."});  
   }  
   
-    query.values.username = query.values.username.toLowerCase();  
+  query.values.username = query.values.username.toLowerCase();  
   
   final salt = AuthUtility.generateRandomSalt();  
   final hashedPassword = AuthUtility.generatePasswordHash(query.values.password, salt);  
@@ -281,9 +281,9 @@ class RegisterController extends QueryController<User> {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzQ3MjAwODUsODQxNzk0MzE0LC0xMj
-g3NDYwOTgwLDkzNTE2NTc2NywxOTU0OTc4ODU3LDM0NDA1MTg5
-OSw2ODMzMjI4NzIsLTE3MDExNDI1OTQsLTEwMzUzMTY2OTIsMj
-A3MDIyNzQwOCwxMzcyNzU4Njk2LDEyNDQwNTU4MSwyMDg5NzI2
-NDM0XX0=
+eyJoaXN0b3J5IjpbLTEyMjYwMDk1NTcsLTE1MzQ3MjAwODUsOD
+QxNzk0MzE0LC0xMjg3NDYwOTgwLDkzNTE2NTc2NywxOTU0OTc4
+ODU3LDM0NDA1MTg5OSw2ODMzMjI4NzIsLTE3MDExNDI1OTQsLT
+EwMzUzMTY2OTIsMjA3MDIyNzQwOCwxMzcyNzU4Njk2LDEyNDQw
+NTU4MSwyMDg5NzI2NDM0XX0=
 -->
