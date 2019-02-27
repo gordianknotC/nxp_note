@@ -38,7 +38,11 @@ This **credential-for-token exchange** happens by sending a **POST** request to 
 
 OAuth 2.0 makes a subtle distinction: a user and the application they are using are not the same thing. It's intuitive to think of a user as "making a request to the server", but in reality, the user makes a request to an application and  _the application_  makes the request to the server. The server  _grants_  the application access on behalf of the user. In other words, when a user enters their credentials into an application, the application goes to the server and says "Hey, this user said I can do stuff for them. Look, this is their secret password!"
 
-This is an important distinction, because an OAuth 2.0 server doesn't just verify users: it also verifies applications. An application has a identifier that has been registered with the server. So, for an ecosystem that has a web client, an Android and an iOS app there would likely be three identifiers - one for each. The client application usually stores that identifier in a database. This identifier is called a  _client identifier_. Client identifiers are added to Aqueduct applications with the  `aqueduct auth`  tool (see  [Aqueduct Auth CLI](https://aqueduct.io/docs/auth/cli/)).
+This is an important distinction, because an **OAuth 2.0 server doesn't just verify users: it also verifies applications.** An application has a identifier that has been registered with the server. 
+
+So, for an ecosystem that has a web client, an Android and an iOS app there would likely be three identifiers - one for each. 
+> -
+The client application usually stores that identifier in a database. This identifier is called a  _client identifier_. Client identifiers are added to Aqueduct applications with the  `aqueduct auth`  tool (see  [Aqueduct Auth CLI](https://aqueduct.io/docs/auth/cli/)).
 
 When the user is logging in through an application, they submit their username and password. The user doesn't provide the client identifier - in fact, the user doesn't know it. The application sends a request with the user's username and password in the request body, and the client identifier in the Authorization header. All three have to check out for the server to give the application back a token. The full request in pseudo-code looks something like:
 
@@ -102,6 +106,6 @@ This is called the  _authorization code grant_  - or just 'auth code flow'. An i
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxNzIxOTA5LC02Mjg0MDE4MDcsNDM2MT
-EyNDcwXX0=
+eyJoaXN0b3J5IjpbLTEyMTQwNTQzMCwxNzE3MjE5MDksLTYyOD
+QwMTgwNyw0MzYxMTI0NzBdfQ==
 -->
