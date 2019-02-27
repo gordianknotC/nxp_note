@@ -1,7 +1,13 @@
 
 # Creating AuthServers to Authenticate and Authorize
 
-An  `AuthServer`  is a service that handles creating, verifying and refreshing authorization tokens. You create an  `AuthServer`  in your application channel and inject into types that deal with authorization. This types include:
+> An  `AuthServer`  is a service that handles 
+> - creating
+> - verifying and 
+> - refreshing 
+> authorization tokens. You create an  `AuthServer`  in your application channel and inject into types that deal with authorization. 
+
+This types include:
 
 -   `Authorizer`: middleware controller that protects endpoint controllers from unauthorized access
 -   `AuthController`: endpoint controller that grants access tokens
@@ -57,5 +63,5 @@ An  `AuthServer`  must persist the data it uses and creates - like client identi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI0MDYxMDhdfQ==
+eyJoaXN0b3J5IjpbLTIwNjQ2NTA1NDVdfQ==
 -->
