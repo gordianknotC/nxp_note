@@ -210,6 +210,12 @@ class UserController extends ResourceController {
 > _
 
 
+## Behavior of Null Values
+
+A property of a **managed** object **can be null for two reasons:** 
+	- the value is actually null
+	- or the value is not available
+For example, when you create a new instance of a managed object, none of its values are available (the object is empty). When encoding an object into a map, only the available values are included and the keys for any unavailable properties are omitted:
 
 
 
@@ -219,8 +225,8 @@ class UserController extends ResourceController {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODc0NjA5ODAsOTM1MTY1NzY3LDE5NT
-Q5Nzg4NTcsMzQ0MDUxODk5LDY4MzMyMjg3MiwtMTcwMTE0MjU5
-NCwtMTAzNTMxNjY5MiwyMDcwMjI3NDA4LDEzNzI3NTg2OTYsMT
-I0NDA1NTgxLDIwODk3MjY0MzRdfQ==
+eyJoaXN0b3J5IjpbLTEzNTc3ODQyNzEsLTEyODc0NjA5ODAsOT
+M1MTY1NzY3LDE5NTQ5Nzg4NTcsMzQ0MDUxODk5LDY4MzMyMjg3
+MiwtMTcwMTE0MjU5NCwtMTAzNTMxNjY5MiwyMDcwMjI3NDA4LD
+EzNzI3NTg2OTYsMTI0NDA1NTgxLDIwODk3MjY0MzRdfQ==
 -->
