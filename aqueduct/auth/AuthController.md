@@ -29,6 +29,7 @@ To grant an **access token**, a client application sends a HTTP  **`POST`**  to 
 
 The body must also contain the key-value pair  **`grant_type=password`**. For example, the following Dart code will initiate successful authentication:
 
+#### client request:
 ```dart
 var clientID = "com.app.demo";
 var clientSecret = "mySecret";
@@ -51,7 +52,7 @@ var clientCredentials = Base64Encoder().convert("$clientID:".codeUnits);
 ```
 
 The response to a password token request is a JSON body that follows the OAuth 2.0 specification:
-
+#### server response
 ```dart
 {
   "access_token": "..."
@@ -131,6 +132,6 @@ grant_type=authorization_code&code=abcd672kk
 
 An access token will be returned to the server which your friend then stores in their database. Whenever one of their users makes a request that requires accessing your application's data, they will execute requests with that access token.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwNjM5MjcwOSwxMDIyMzY5NDc0LDE3Mz
+eyJoaXN0b3J5IjpbMTUyMjAwNzY0MSwxMDIyMzY5NDc0LDE3Mz
 M1NTA5OTNdfQ==
 -->
