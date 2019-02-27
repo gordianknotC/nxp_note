@@ -28,10 +28,10 @@ Controller get entryPoint {
 
 An  `Authorizer`  parses the Authorization header of an HTTP request. The named constructors of  `Authorizer`indicate the required format of Authorization header. 
 
-- The  `Authorization.bearer()` 
+- The  **`Authorization.bearer()`** 
    constructor expects an OAuth 2.0 bearer token in the header, which has the following format:
 
-> Authorization: Bearer 768iuzjkx82jkasjkd9z9
+	Authorization: Bearer 768iuzjkx82jkasjkd9z9
 
 - `Authorizer.basic`  
   expects HTTP Basic Authentication, where the username and password are joined with the colon character (`:`) and Base 64-encoded:
@@ -149,5 +149,5 @@ The  `validate`  method must return an  `Authorization`  if the credentials are 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MzgxNTc3NF19
+eyJoaXN0b3J5IjpbLTE1MjM5NDkwOTZdfQ==
 -->
