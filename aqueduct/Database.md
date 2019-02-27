@@ -149,6 +149,8 @@ class _Player {
 
 In this guide, you will learn how  `ManagedObject<T>`s are read from HTTP request bodies and written to HTTP response bodies.
 
+
+
 ## Basic Behavior
 
 A  `ManagedObject<T>`  can be converted to and from  `Map<String, dynamic>`  objects (which can be encoded and decoded into request or response body using JSON or some other data format). 
@@ -160,8 +162,9 @@ A  `ManagedObject<T>`  can be converted to and from  `Map<String, dynamic>`  obj
 	  "key": "value"
 	});
 	```
-When decoding, the value for each key in the map is assigned to the managed object property of the same name. 
-> ⚡ If a key exists in the map and the managed object does not have a property of the same name, a `ValidationException` will be thrown (this sends a **400 Bad Request response if uncaught**).
+	When decoding, the value for each key in the map is assigned to the managed object property of the same name. 
+
+	> ⚡ If a key exists in the map and the managed object does not have a property of the same name, a `ValidationException` will be thrown (this sends a **400 Bad Request response if uncaught**).
 
 
 - To encode a map into a managed object is converted, use the instance method  `asMap`:
@@ -183,7 +186,7 @@ When decoding, the value for each key in the map is assigned to the managed obje
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzOTY4Mjc4MSw2ODMzMjI4NzIsLTE3MD
-ExNDI1OTQsLTEwMzUzMTY2OTIsMjA3MDIyNzQwOCwxMzcyNzU4
-Njk2LDEyNDQwNTU4MSwyMDg5NzI2NDM0XX0=
+eyJoaXN0b3J5IjpbMzQ0MDUxODk5LDY4MzMyMjg3MiwtMTcwMT
+E0MjU5NCwtMTAzNTMxNjY5MiwyMDcwMjI3NDA4LDEzNzI3NTg2
+OTYsMTI0NDA1NTgxLDIwODk3MjY0MzRdfQ==
 -->
