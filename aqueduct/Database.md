@@ -201,9 +201,12 @@ class UserController extends ResourceController {
   }
 }
 ```
-
 > ⚡ **@Bind.body()**
 > Binds an HTTP request body to an [ResourceController] property or operation method argument.
+> _
+
+> ⚡ **Autoincrementing Properties**
+> Properties that are autoincrementing will never be read from a map from `readFromMap`.
 > _
 
 
@@ -216,8 +219,8 @@ class UserController extends ResourceController {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM4NzMxODAxLDkzNTE2NTc2NywxOTU0OT
-c4ODU3LDM0NDA1MTg5OSw2ODMzMjI4NzIsLTE3MDExNDI1OTQs
-LTEwMzUzMTY2OTIsMjA3MDIyNzQwOCwxMzcyNzU4Njk2LDEyND
-QwNTU4MSwyMDg5NzI2NDM0XX0=
+eyJoaXN0b3J5IjpbLTEyODc0NjA5ODAsOTM1MTY1NzY3LDE5NT
+Q5Nzg4NTcsMzQ0MDUxODk5LDY4MzMyMjg3MiwtMTcwMTE0MjU5
+NCwtMTAzNTMxNjY5MiwyMDcwMjI3NDA4LDEzNzI3NTg2OTYsMT
+I0NDA1NTgxLDIwODk3MjY0MzRdfQ==
 -->
