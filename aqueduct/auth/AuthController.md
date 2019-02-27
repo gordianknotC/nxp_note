@@ -27,7 +27,7 @@ To grant an **access token**, a client application sends a HTTP  **`POST`**  to 
 -   an Authorization header with the **Client ID** and **Client Secret** (if one exists) and,
 -   a  `x-www-form-urlencoded`  body with the username and password of the authenticating user.
 
-The body must also contain the key-value pair  `grant_type=password`. For example, the following Dart code will initiate successful authentication:
+The body must also contain the key-value pair  **`grant_type=password`**. For example, the following Dart code will initiate successful authentication:
 
 ```dart
 var clientID = "com.app.demo";
@@ -128,6 +128,6 @@ grant_type=authorization_code&code=abcd672kk
 
 An access token will be returned to the server which your friend then stores in their database. Whenever one of their users makes a request that requires accessing your application's data, they will execute requests with that access token.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTU5OTUyNjMsMTAyMjM2OTQ3NCwxNz
-MzNTUwOTkzXX0=
+eyJoaXN0b3J5IjpbMTIzNDk3ODQ5NywxMDIyMzY5NDc0LDE3Mz
+M1NTA5OTNdfQ==
 -->
