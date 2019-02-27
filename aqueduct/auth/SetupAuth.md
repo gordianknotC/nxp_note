@@ -10,7 +10,7 @@
 This types include:
 
 -   `Authorizer`: middleware controller that protects endpoint controllers from unauthorized access
--   `AuthController`: endpoint controller that grants access** tokens
+-   `AuthController`: endpoint controller that grants **access tokens**
 -   `AuthCodeController`: endpoint controller that grants authorization codes to be **exchanged** for access tokens
 
 An  `AuthServer`  must persist the data it uses and creates - like client identifiers and access tokens. Storage is often performed by a database, but it can be in memory, a cache or some other medium. Because of the many different storage mediums, an  `AuthServer`  doesn't perform any storage itself - it relies on an instance of  `AuthServerDelegate`  specific to your application. This allows storage to be independent of verification logic.
@@ -63,5 +63,5 @@ An  `AuthServer`  must persist the data it uses and creates - like client identi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NTcyNTA2OF19
+eyJoaXN0b3J5IjpbMTc2MDQyMjkyXX0=
 -->
