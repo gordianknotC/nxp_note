@@ -222,12 +222,23 @@ For example, when you create a new instance of a managed object, none of its val
 
 By default, transient properties - those declared in the **managed** object subclass, **not the table definition** - are  **_not_**  included in an object's  `asMap()`. The  **`Serialize`**  annotation **allows** a transient property to be included in this map.
 
-
+```dart
+class Employee extends ManagedObject<_Employee> implements _Employee {
+  int a; // NOT included in asMap, NOT read in readFromMap
+  @Serialize() int b; // included in asMap, read in readFromMap
+  @Serialize(input: true, output: false) int c; // NOT included in asMap, read in readFromMap
+  @Serialize(input: false, output: true) int d; // included in asMap, NOT read in readFromMap
+}
+class _Employee {
+  @primaryKey
+  int id;
+}
+```
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0NzUyOTc4OSwtMTI4NzQ2MDk4MCw5Mz
+eyJoaXN0b3J5IjpbLTMzMjk5MzAyNywtMTI4NzQ2MDk4MCw5Mz
 UxNjU3NjcsMTk1NDk3ODg1NywzNDQwNTE4OTksNjgzMzIyODcy
 LC0xNzAxMTQyNTk0LC0xMDM1MzE2NjkyLDIwNzAyMjc0MDgsMT
 M3Mjc1ODY5NiwxMjQ0MDU1ODEsMjA4OTcyNjQzNF19
