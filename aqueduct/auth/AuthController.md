@@ -81,7 +81,7 @@ Once granted, an access token can be used to pass  `Authorizer.bearer()`s in the
 
 ### Issue Authorization Codes with AuthCodeController
 
-An  `AuthCodeController`  manages the OAuth 2.0 authorization code flow. The authorization code flow is used when an Aqueduct application allows third party applications access to authorized resources.
+An  `AuthCodeController`  manages the OAuth 2.0 authorization code flow. The authorization code flow is used when an Aqueduct application **allows third party** applications access to authorized resources.
 
 Let's say you've built an Aqueduct application that allows people to store notes for themselves. Now, a friend approaches you with their application that is a to-do list. Instead of building their own note-taking feature, your friend wants users of their application to access the notes the user has stored in your application. While trustworthy, you don't want your friend to have access to the username and passwords of your subscribers.
 
@@ -135,6 +135,6 @@ grant_type=authorization_code&code=abcd672kk
 
 An access token will be returned to the server which your friend then stores in their database. Whenever one of their users makes a request that requires accessing your application's data, they will execute requests with that access token.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzQ4NTkzNDEsMTAyMjM2OTQ3NCwxNz
-MzNTUwOTkzXX0=
+eyJoaXN0b3J5IjpbMTc5NTc5NTMxNSwtMTczNDg1OTM0MSwxMD
+IyMzY5NDc0LDE3MzM1NTA5OTNdfQ==
 -->
