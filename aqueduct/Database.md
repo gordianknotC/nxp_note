@@ -155,7 +155,8 @@ In this guide, you will learn how  `ManagedObject<T>`s are read from HTTP reques
 
 A  `ManagedObject<T>`  can be converted to and from  `Map<String, dynamic>`  objects (which can be encoded and decoded into request or response body using JSON or some other data format). 
 
-- To decode a  `ManagedObject`  into a  `Map`, use the instance method  `readFromMap`:
+- **`readFromMap`:**
+  To decode a  `ManagedObject`  into a  `Map`, use the instance method  
 	```dart
 	final object = MyManagedObject();
 	object.readFromMap({
@@ -167,7 +168,8 @@ A  `ManagedObject<T>`  can be converted to and from  `Map<String, dynamic>`  obj
 	> ⚡ If a key exists in the map and the managed object does not have a property of the same name, a `ValidationException` will be thrown (this sends a **400 Bad Request response if uncaught**).
 
 
-- To encode a map into a managed object is converted, use the instance method  `asMap`:
+- **`asMap`:**
+  To encode a map into a managed object is converted, use the instance method  
 	```dart
 	final object = MyManagedObject();
 	final map = object.asMap();
@@ -197,8 +199,8 @@ A  `ManagedObject<T>`  can be converted to and from  `Map<String, dynamic>`  obj
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM1MTY1NzY3LDE5NTQ5Nzg4NTcsMzQ0MD
-UxODk5LDY4MzMyMjg3MiwtMTcwMTE0MjU5NCwtMTAzNTMxNjY5
-MiwyMDcwMjI3NDA4LDEzNzI3NTg2OTYsMTI0NDA1NTgxLDIwOD
-k3MjY0MzRdfQ==
+eyJoaXN0b3J5IjpbMTAzMjIxNTczMSw5MzUxNjU3NjcsMTk1ND
+k3ODg1NywzNDQwNTE4OTksNjgzMzIyODcyLC0xNzAxMTQyNTk0
+LC0xMDM1MzE2NjkyLDIwNzAyMjc0MDgsMTM3Mjc1ODY5NiwxMj
+Q0MDU1ODEsMjA4OTcyNjQzNF19
 -->
