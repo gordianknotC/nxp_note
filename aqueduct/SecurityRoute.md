@@ -1,8 +1,6 @@
 
 
 
-[](https://github.com/stablekernel/aqueduct/edit/docs/source/source/docs/auth/authorizer.md "Edit this page")
-
 # Securing Routes with Authorizer
 
 Instances of  `Authorizer`  are added to an application channel to verify HTTP request's authorization information before passing the request onwards. They protect channel access and typically come right after  `route`. Here's an example:
@@ -143,5 +141,5 @@ The  `validate`  method must return an  `Authorization`  if the credentials are 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjgwMzU4OF19
+eyJoaXN0b3J5IjpbLTE0NDcyOTUyOTNdfQ==
 -->
