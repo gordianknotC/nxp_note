@@ -218,15 +218,17 @@ A property of a **managed** object **can be null for two reasons:**
 For example, when you create a new instance of a managed object, none of its values are available (the object is empty). When encoding an object into a map, only the available values are included and the keys for any unavailable properties are omitted:
 
 
+## Behavior of Transient Properties
 
+By default, transient properties - those declared in the managed object subclass, not the table definition - are  _not_  included in an object's  `asMap()`. The  `Serialize`annotation allows a transient property to be included in this map.
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTc3ODQyNzEsLTEyODc0NjA5ODAsOT
-M1MTY1NzY3LDE5NTQ5Nzg4NTcsMzQ0MDUxODk5LDY4MzMyMjg3
-MiwtMTcwMTE0MjU5NCwtMTAzNTMxNjY5MiwyMDcwMjI3NDA4LD
-EzNzI3NTg2OTYsMTI0NDA1NTgxLDIwODk3MjY0MzRdfQ==
+eyJoaXN0b3J5IjpbMzI4MzkxMzY0LC0xMjg3NDYwOTgwLDkzNT
+E2NTc2NywxOTU0OTc4ODU3LDM0NDA1MTg5OSw2ODMzMjI4NzIs
+LTE3MDExNDI1OTQsLTEwMzUzMTY2OTIsMjA3MDIyNzQwOCwxMz
+cyNzU4Njk2LDEyNDQwNTU4MSwyMDg5NzI2NDM0XX0=
 -->
