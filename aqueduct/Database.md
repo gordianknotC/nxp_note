@@ -1,5 +1,5 @@
 
-### Transient Properties
+## Transient Properties
 
 Properties declares in a managed object subclass are called  _transient_  because they are not stored in a database. For example, consider an  `Author`  type that stores first and last name as separate columns. Instead of redundantly storing a 'full name' in the database
 
@@ -29,7 +29,7 @@ class Author extends ManagedObject<_Author> implements _Author {
 }
 ```
 
-### Example: One-to-Many Relationship
+## Example: One-to-Many Relationship
 
 #### An author has many books:
 ```dart
@@ -106,7 +106,7 @@ class _Person {
 
 
 
-### Example: Many-to-Many Relationship
+## Example: Many-to-Many Relationship
 
 Hierarchical relationships follow the same rules as all other relationship, but declare the foreign key property and the inverse in the same type.
 
@@ -220,15 +220,15 @@ For example, when you create a new instance of a managed object, none of its val
 
 ## Behavior of Transient Properties
 
-By default, transient properties - those declared in the managed object subclass, not the table definition - are  _not_  included in an object's  `asMap()`. The  `Serialize`annotation allows a transient property to be included in this map.
+By default, transient properties - those declared in the **managed** object subclass, **not the table definition** - are  **_not_**  included in an object's  `asMap()`. The  `Serialize`annotation allows a transient property to be included in this map.
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI4MzkxMzY0LC0xMjg3NDYwOTgwLDkzNT
-E2NTc2NywxOTU0OTc4ODU3LDM0NDA1MTg5OSw2ODMzMjI4NzIs
-LTE3MDExNDI1OTQsLTEwMzUzMTY2OTIsMjA3MDIyNzQwOCwxMz
-cyNzU4Njk2LDEyNDQwNTU4MSwyMDg5NzI2NDM0XX0=
+eyJoaXN0b3J5IjpbMTM0NzQ3MjYzNywtMTI4NzQ2MDk4MCw5Mz
+UxNjU3NjcsMTk1NDk3ODg1NywzNDQwNTE4OTksNjgzMzIyODcy
+LC0xNzAxMTQyNTk0LC0xMDM1MzE2NjkyLDIwNzAyMjc0MDgsMT
+M3Mjc1ODY5NiwxMjQ0MDU1ODEsMjA4OTcyNjQzNF19
 -->
