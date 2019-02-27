@@ -42,7 +42,7 @@ An  `Authorizer`  parses the Authorization header of an HTTP request. The named 
 
 If the header can't be parsed, doesn't exist or is in the wrong format, an  `Authorizer`  responds to the request with a 401 status code and prevents the next controller from receiving the request.
 
-Once parsed, an  `Authorizer`  sends the information - either the bearer token, or the username and password - to its  `AuthServer`  for verification. If the  `AuthServer`  rejects the authorization info, the  `Authorizer`  responds to the request with a 401 status code and prevents the next controller from receiving the request. Otherwise, the request continues to the next controller.
+> ⚡ Once parsed, an  `Authorizer`  sends the information - either the bearer token, or the username and password - to its  `AuthServer`  for verification. If the  `AuthServer`  rejects the authorization info, the  `Authorizer`  responds to the request with a 401 status code and prevents the next controller from receiving the request. Otherwise, the request continues to the next controller.
 
 For  `Authorizer.bearer`, the value in a request's header must be a valid, unexpired access token. These types of authorizers are used when an endpoint requires a logged in user.
 
@@ -150,5 +150,5 @@ The  `validate`  method must return an  `Authorization`  if the credentials are 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYwNjMxNjQ0XX0=
+eyJoaXN0b3J5IjpbMTY1ODEyMDE1N119
 -->
