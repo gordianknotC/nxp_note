@@ -75,7 +75,6 @@ Controllers protected by an  `Authorizer`  can access this information to furthe
 ```dart
 class NewsFeedController extends ResourceController {
   NewsFeedController(this.context);
-
   ManagedContext context;
 
   @Operation.get()
@@ -158,7 +157,7 @@ The  `validate`  method must return an  `Authorization`  if the credentials are 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzOTcyMDc4NCwtMTEwNTA4Mzc2OSwtMT
-g4ODc2OTc4NSw1NjI4ODY2ODAsMTQyODY4MzUzNSwxNjU4MTIw
-MTU3XX0=
+eyJoaXN0b3J5IjpbLTE4OTM5MzE3MTQsLTExMDUwODM3NjksLT
+E4ODg3Njk3ODUsNTYyODg2NjgwLDE0Mjg2ODM1MzUsMTY1ODEy
+MDE1N119
 -->
