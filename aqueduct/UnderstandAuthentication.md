@@ -66,8 +66,8 @@ If you specify  client-certificate authentication, the web server will authentic
 
 With  _mutual authentication_ , the server and the client authenticate each other. There are two types of mutual authentication:
 
--   Certificate-based mutual authentication (see  [Figure 32-4](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security5.html#wp488092))
--   User name- and password-based mutual authentication (see  [Figure 32-5](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security5.html#wp483607))
+-   **Certificate-based** mutual authentication (see  [Figure 32-4](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security5.html#wp488092))
+-   **User name- and password-based** mutual authentication (see  [Figure 32-5](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security5.html#wp483607))
 
 
 [Figure 32-4](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security5.html#wp488092)  shows what occurs during certificate-based mutual authentication.
@@ -390,6 +390,6 @@ Read the section  [Specifying a Secure Connection](http://lia.deis.unibo.it/Cour
 
 `https://localhost:8181/formbasedauth`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk0Njc1NDA2LC0zMTM3MjY0OTgsOTIwMj
-A0OTY2XX0=
+eyJoaXN0b3J5IjpbMTc2NjM0NzU5OCwtMzEzNzI2NDk4LDkyMD
+IwNDk2Nl19
 -->
