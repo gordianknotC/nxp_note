@@ -65,6 +65,7 @@ With  _mutual authentication_, the server and the client authenticate each other
 -   Certificate-based mutual authentication (see  [Figure 32-4](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security5.html#wp488092))
 -   User name- and password-based mutual authentication (see  [Figure 32-5](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security5.html#wp483607))
 
+
 [Figure 32-4](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security5.html#wp488092)  shows what occurs during certificate-based mutual authentication.
 
 ![Certificate-Based Mutual Authentication](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/images/security-sslBasedMutualAuthenticationWithCertificates.gif)
@@ -385,5 +386,5 @@ Read the section  [Specifying a Secure Connection](http://lia.deis.unibo.it/Cour
 
 `https://localhost:8181/formbasedauth`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1NzEwNTU5Ml19
+eyJoaXN0b3J5IjpbOTIwMjA0OTY2XX0=
 -->
