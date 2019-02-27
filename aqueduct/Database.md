@@ -144,9 +144,14 @@ class _Player {
 ```
 
 
+
 ## ManagedObject Serialization and Deserialization
 
+In this guide, you will learn how  `ManagedObject<T>`s are read from HTTP request bodies and written to HTTP response bodies.
 
+## Basic Behavior
+
+A  `ManagedObject<T>`  can be converted to and from  `Map<String, dynamic>`  objects (which can be encoded and decoded into request or response body using JSON or some other data format). To decode a  `ManagedObject`  into a  `Map`, use the instance method  `readFromMap`:
 
 
 
@@ -167,7 +172,7 @@ class _Player {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjgzMzIyODcyLC0xNzAxMTQyNTk0LC0xMD
-M1MzE2NjkyLDIwNzAyMjc0MDgsMTM3Mjc1ODY5NiwxMjQ0MDU1
-ODEsMjA4OTcyNjQzNF19
+eyJoaXN0b3J5IjpbMjA0MjA2MjcwNCw2ODMzMjI4NzIsLTE3MD
+ExNDI1OTQsLTEwMzUzMTY2OTIsMjA3MDIyNzQwOCwxMzcyNzU4
+Njk2LDEyNDQwNTU4MSwyMDg5NzI2NDM0XX0=
 -->
