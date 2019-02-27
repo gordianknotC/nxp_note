@@ -159,7 +159,7 @@ object.readFromMap({
   "key": "value"
 });
 ```
-
+When decoding, the value for each key in the map is assigned to the managed object property of the same name. If a key exists in the map and the managed object does not have a property of the same name, a `ValidationException` will be thrown (this sends a 400 Bad Request response if uncaught).
 
 
 
@@ -178,7 +178,7 @@ object.readFromMap({
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4OTI0OTIwNCw2ODMzMjI4NzIsLTE3MD
-ExNDI1OTQsLTEwMzUzMTY2OTIsMjA3MDIyNzQwOCwxMzcyNzU4
-Njk2LDEyNDQwNTU4MSwyMDg5NzI2NDM0XX0=
+eyJoaXN0b3J5IjpbOTk1ODU1MTQ0LDY4MzMyMjg3MiwtMTcwMT
+E0MjU5NCwtMTAzNTMxNjY5MiwyMDcwMjI3NDA4LDEzNzI3NTg2
+OTYsMTI0NDA1NTgxLDIwODk3MjY0MzRdfQ==
 -->
