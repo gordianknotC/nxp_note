@@ -1,15 +1,13 @@
+following material fetched from [here](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security5.html)
+
  ## Understanding Login Authentication
 
 When you try to access a protected web resource, the web container activates the authentication mechanism that has been configured for that resource. You can specify the following authentication mechanisms:
 
 -   HTTP basic authentication
-
 -   Form-based login authentication
-
 -   Client certificate authentication
-
 -   Mutual authentication
-
 -   Digest authentication
 
 If you do not specify one of these mechanisms, the user will not be authenticated.
@@ -25,14 +23,11 @@ Figure 32-2 HTTP Basic Authentication
 With basic authentication, the following things occur:
 
 -   A client requests access to a protected resource.
-
 -   The web server returns a dialog box that requests the user name and password.
-
 -   The client submits the user name and password to the server.
-
 -   The server validates the credentials and, if successful, returns the requested resource.
 
-HTTP basic authentication is not particularly secure. Basic authentication sends user names and passwords over the Internet as text that is uu-encoded (Unix-to-Unix encoded) but not encrypted. This form of authentication, which uses Base64 encoding, can expose your user names and passwords unless all connections are over SSL. If someone can intercept the transmission, the user name and password information can easily be decoded.
+HTTP basic authentication is **not** particularly secure. Basic authentication sends user names and passwords over the Internet as text that is uu-encoded (Unix-to-Unix encoded) but not encrypted. This form of authentication, which uses Base64 encoding, can expose your user names and passwords unless all connections are over SSL. If someone can intercept the transmission, the user name and password information can easily be decoded.
 
 [Example: Basic Authentication with JAX-RPC](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security7.html#wp156943)  is an example application that uses HTTP basic authentication in a JAX-RPC service.
 
@@ -394,5 +389,5 @@ Read the section  [Specifying a Secure Connection](http://lia.deis.unibo.it/Cour
 
 `https://localhost:8181/formbasedauth`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODQwMjM0MjhdfQ==
+eyJoaXN0b3J5IjpbLTE1ODMwNjMzMTJdfQ==
 -->
