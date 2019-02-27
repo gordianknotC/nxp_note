@@ -76,7 +76,7 @@ An access token can expire. How long it takes to expire is up to the server - Aq
 }
 ```
 
-The application hangs on to both an access token and a refresh token. When the token expires, it will send the refresh token back to the server to get a replacement access token. This is done through the same route that the access token came from -  `/auth/token`  - except the parameters are a bit different:
+The application hangs on to both an access token and a refresh token. **When the token expires, it will send the refresh token back to the server** to get a replacement access token. This is done through the same route that the access token came from -  `/auth/token`  - except the parameters are a bit different:
 
 ```dart
 var request = HTTPRequest("/auth/token");
@@ -112,6 +112,6 @@ This is called the  _authorization code grant_  - or just 'auth code flow'. An i
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MjQ2NTkzMSwzMTczMjYyNDIsMTcxNz
+eyJoaXN0b3J5IjpbMTI1MjcyNzY2OSwzMTczMjYyNDIsMTcxNz
 IxOTA5LC02Mjg0MDE4MDcsNDM2MTEyNDcwXX0=
 -->
