@@ -248,8 +248,6 @@ class User extends ManagedObject<_User> implements _User, ManagedAuthResourceOwn
   @Serialize(input: true, output: false)  
   String password;
 }
-
- 
 class RegisterController extends QueryController<User> {  
   RegisterController(ManagedContext context, this.authServer) : super(context);  
   final AuthServer authServer;  
@@ -283,9 +281,9 @@ class RegisterController extends QueryController<User> {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NzYzNDk1Myw4NDE3OTQzMTQsLTEyOD
-c0NjA5ODAsOTM1MTY1NzY3LDE5NTQ5Nzg4NTcsMzQ0MDUxODk5
-LDY4MzMyMjg3MiwtMTcwMTE0MjU5NCwtMTAzNTMxNjY5MiwyMD
-cwMjI3NDA4LDEzNzI3NTg2OTYsMTI0NDA1NTgxLDIwODk3MjY0
-MzRdfQ==
+eyJoaXN0b3J5IjpbLTE1MzQ3MjAwODUsODQxNzk0MzE0LC0xMj
+g3NDYwOTgwLDkzNTE2NTc2NywxOTU0OTc4ODU3LDM0NDA1MTg5
+OSw2ODMzMjI4NzIsLTE3MDExNDI1OTQsLTEwMzUzMTY2OTIsMj
+A3MDIyNzQwOCwxMzcyNzU4Njk2LDEyNDQwNTU4MSwyMDg5NzI2
+NDM0XX0=
 -->
