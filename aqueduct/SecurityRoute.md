@@ -57,10 +57,12 @@ authorizers, credentials are verified by finding an OAuth 2.0 client identifier 
 
 An  `Authorizer`  may restrict access to controllers based on the scope of the request's bearer token. By default, an  `Authorizer.bearer`  allows any valid bearer token to pass through it. If desired, an  `Authorizer`  is initialized with a list of required scopes. A request may only pass the  `Authorizer`  if it has access to  _all_  scopes listed in the  `Authorizer`. For example, the following requires at least  `user:posts`  and  `location`  scope:
 
+```dart
 router
   .route("/checkin")
   .link(() => Authorizer.bearer(authServer, scopes: ["user:posts", "location"]))
   .link(() => CheckInController());
+```
 
 Note that you don't have to use an  `Authorizer`  to restrict access based on scope. A controller has access to scope information after the request has passed through an  `Authorizer`, so it can use the scope to make more granular authorization decisions.
 
@@ -155,6 +157,6 @@ The  `validate`  method must return an  `Authorization`  if the credentials are 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTYyODg2NjgwLDE0Mjg2ODM1MzUsMTY1OD
-EyMDE1N119
+eyJoaXN0b3J5IjpbLTE4ODg3Njk3ODUsNTYyODg2NjgwLDE0Mj
+g2ODM1MzUsMTY1ODEyMDE1N119
 -->
