@@ -186,7 +186,21 @@ A  `ManagedObject<T>`  can be converted to and from  `Map<String, dynamic>`  obj
 | enum |string(String) |
 | RelationShip | list or maps |
  
+Both  `asMap`  and  `readFromMap`  are inherited methods from  `Serializable`. As a  `Serializable`, a managed object can be  [bound to a request body in an  `ResourceController`  operation method](https://aqueduct.io/docs/http/resource_controller/)  and  [encoded as a response body object](https://aqueduct.io/docs/http/request_and_response/). For example:
 
+```dart
+class UserController extends ResourceController {
+  @Operation.post()
+  Future<Response> createUser(@Bind.body() User user) async {
+    var query = Query<User>(context)
+      ..values = user;
+
+    final newUser = await query.insert();
+
+    return Response.ok(newUser);
+  }
+}
+```
 
 
 
@@ -199,7 +213,7 @@ A  `ManagedObject<T>`  can be converted to and from  `Map<String, dynamic>`  obj
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMjIxNTczMSw5MzUxNjU3NjcsMTk1ND
+eyJoaXN0b3J5IjpbMTMzMTYxNTY0NCw5MzUxNjU3NjcsMTk1ND
 k3ODg1NywzNDQwNTE4OTksNjgzMzIyODcyLC0xNzAxMTQyNTk0
 LC0xMDM1MzE2NjkyLDIwNzAyMjc0MDgsMTM3Mjc1ODY5NiwxMj
 Q0MDU1ODEsMjA4OTcyNjQzNF19
