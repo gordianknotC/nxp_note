@@ -234,12 +234,23 @@ class _Employee {
   int id;
 }
 ```
+> ⚡ Getters with the `Serialize` annotation will be written in `asMap` and setters with the annotation will be read in `readFromMap`.
 
+```dart
+class User extends ManagedObject<_User> implements _User {
+  @Serialize()
+  set transientValue(String s) {
+    ...
+  }
+  @Serialize()
+  String get transientValue => ...;
+}
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzMjk5MzAyNywtMTI4NzQ2MDk4MCw5Mz
-UxNjU3NjcsMTk1NDk3ODg1NywzNDQwNTE4OTksNjgzMzIyODcy
-LC0xNzAxMTQyNTk0LC0xMDM1MzE2NjkyLDIwNzAyMjc0MDgsMT
-M3Mjc1ODY5NiwxMjQ0MDU1ODEsMjA4OTcyNjQzNF19
+eyJoaXN0b3J5IjpbLTE0MTgxNzA1NjEsLTEyODc0NjA5ODAsOT
+M1MTY1NzY3LDE5NTQ5Nzg4NTcsMzQ0MDUxODk5LDY4MzMyMjg3
+MiwtMTcwMTE0MjU5NCwtMTAzNTMxNjY5MiwyMDcwMjI3NDA4LD
+EzNzI3NTg2OTYsMTI0NDA1NTgxLDIwODk3MjY0MzRdfQ==
 -->
