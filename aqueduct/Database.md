@@ -172,6 +172,21 @@ A  `ManagedObject<T>`  can be converted to and from  `Map<String, dynamic>`  obj
 	final object = MyManagedObject();
 	final map = object.asMap();
 	```
+|dart type| serialized type |
+|--|--|
+| int | number(int) |
+| double| number(double) |
+| String| string(String) |
+| DateTime| ISO 8601 Timestamp (`String`) |
+| bool | boolean(bool) |
+| Document | map or list (`Map<String, dynamic>` or `List<dynamic>`) |
+| enum | S |
+| int | number(int) |
+| int | number(int) |
+| int | number(int) |
+| int | number(int) |
+| int | number(int) |
+| int | number(int) |
 
 
 
@@ -187,7 +202,8 @@ A  `ManagedObject<T>`  can be converted to and from  `Map<String, dynamic>`  obj
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NDk3ODg1NywzNDQwNTE4OTksNjgzMz
-IyODcyLC0xNzAxMTQyNTk0LC0xMDM1MzE2NjkyLDIwNzAyMjc0
-MDgsMTM3Mjc1ODY5NiwxMjQ0MDU1ODEsMjA4OTcyNjQzNF19
+eyJoaXN0b3J5IjpbMTM0OTk2MDUxNywxOTU0OTc4ODU3LDM0ND
+A1MTg5OSw2ODMzMjI4NzIsLTE3MDExNDI1OTQsLTEwMzUzMTY2
+OTIsMjA3MDIyNzQwOCwxMzcyNzU4Njk2LDEyNDQwNTU4MSwyMD
+g5NzI2NDM0XX0=
 -->
