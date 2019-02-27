@@ -194,6 +194,30 @@ For example, when you create a new instance of a managed object, none of its val
 
 By default, transient properties - those declared in the **managed** object subclass, **not the table definition** - are  **_not_**  included in an object's  `asMap()`. The  **`Serialize`**  annotation **allows** a transient property to be included in this map.
 
+Properties declares in a managed object subclass are called  _transient_  because they are not stored in a database. For example, consider an  `Author`  type that stores first and last name as separate columns. Instead of redundantly storing a 'full name' in the database
+
+```dart
+class Author extends ManagedObject<_Author> implements _Author {
+  String get name => "$firstName  $lastName";
+  set name(String fullName) {
+    firstName = fullName.split(" ").first;
+    lastName = fullName.split(" ").last;
+  }
+}
+```
+
+```dart
+class Author extends ManagedObject<_Author> implements _Author {
+  @Serialize()
+  String get name => "$firstName  $lastName";
+
+  @Serialize()
+  set name(String fullName) {
+    firstName = fullName.split(" ").first;
+    lastName = fullName.split(" ").last;
+  }
+}
+```
 ```dart
 class Employee extends ManagedObject<_Employee> implements _Employee {
   int a; // NOT included in asMap, NOT read in readFromMap
@@ -219,41 +243,13 @@ class User extends ManagedObject<_User> implements _User {
 }
 ```
 
-## Transient Properties
-
-Properties declares in a managed object subclass are called  _transient_  because they are not stored in a database. For example, consider an  `Author`  type that stores first and last name as separate columns. Instead of redundantly storing a 'full name' in the database
-
-```dart
-class Author extends ManagedObject<_Author> implements _Author {
-  String get name => "$firstName  $lastName";
-  set name(String fullName) {
-    firstName = fullName.split(" ").first;
-    lastName = fullName.split(" ").last;
-  }
-}
-```
-By default, a transient property is ignored when reading an object from a request body or writing the object to a response body (see the guide on  [serialization](https://aqueduct.io/docs/db/serialization/)  for more details). 
-
-> ⚡ You can annotate a transient property with  `Serialize`   so that it is able to be **read from a request body**, **written to a response body**, or both. For example:
-
-```dart
-class Author extends ManagedObject<_Author> implements _Author {
-  @Serialize()
-  String get name => "$firstName  $lastName";
-
-  @Serialize()
-  set name(String fullName) {
-    firstName = fullName.split(" ").first;
-    lastName = fullName.split(" ").last;
-  }
-}
-```
+ 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDk2NzYyMjMsLTEyODc0NjA5ODAsOT
-M1MTY1NzY3LDE5NTQ5Nzg4NTcsMzQ0MDUxODk5LDY4MzMyMjg3
-MiwtMTcwMTE0MjU5NCwtMTAzNTMxNjY5MiwyMDcwMjI3NDA4LD
-EzNzI3NTg2OTYsMTI0NDA1NTgxLDIwODk3MjY0MzRdfQ==
+eyJoaXN0b3J5IjpbNTQ5MTYyNDIyLC0xMjg3NDYwOTgwLDkzNT
+E2NTc2NywxOTU0OTc4ODU3LDM0NDA1MTg5OSw2ODMzMjI4NzIs
+LTE3MDExNDI1OTQsLTEwMzUzMTY2OTIsMjA3MDIyNzQwOCwxMz
+cyNzU4Njk2LDEyNDQwNTU4MSwyMDg5NzI2NDM0XX0=
 -->
