@@ -34,7 +34,7 @@ In OAuth 2.0, the user gives their username and password to a client application
 
 > 📝 A access token is a long, random string that no one can guess. When the user wants to do more stuff, the application sends the **token** with **every request**, instead of the user's **password**. 
 
-This credential-for-token exchange happens by sending a POST request to some endpoint, where the username and password are sent in the request body. Typically, an Aqueduct application's route for this is  `/auth/token`  and handled by an instance of  [AuthController](https://aqueduct.io/docs/auth/controllers/).
+This **credential-for-token exchange** happens by sending a **POST** request to some endpoint, where the username and password are sent in the request body. Typically, an Aqueduct application's route for this is  `/auth/token`  and handled by an instance of  [AuthController](https://aqueduct.io/docs/auth/controllers/).
 
 OAuth 2.0 makes a subtle distinction: a user and the application they are using are not the same thing. It's intuitive to think of a user as "making a request to the server", but in reality, the user makes a request to an application and  _the application_  makes the request to the server. The server  _grants_  the application access on behalf of the user. In other words, when a user enters their credentials into an application, the application goes to the server and says "Hey, this user said I can do stuff for them. Look, this is their secret password!"
 
@@ -102,6 +102,6 @@ This is called the  _authorization code grant_  - or just 'auth code flow'. An i
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2MjY5MjQyNywtNjI4NDAxODA3LDQzNj
-ExMjQ3MF19
+eyJoaXN0b3J5IjpbMTcxNzIxOTA5LC02Mjg0MDE4MDcsNDM2MT
+EyNDcwXX0=
 -->
