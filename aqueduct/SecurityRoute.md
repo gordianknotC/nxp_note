@@ -130,7 +130,11 @@ class BasicValidator implements AuthValidator {
 }
 ```
 
-The  `validate`  method must return an  **`Authorization`**  if the credentials are **valid**, or null if they are not. The  `parser`  lets the validator know the format of the Authorization header (e.g., 'Basic' or 'Bearer') and  `authorizationData`  is the meaningful information in that header. There are two concrete types of  `AuthorizationParser<T>`:  `AuthorizationBasicParser`  and  `AuthorizationBearerParser`. The authorization data for a basic parser is an instance of  `AuthBasicCredentials`  that contain the username and password, while the bearer parser's authorization data is the bearer token string.
+- The  `validate`  method must return an  
+	- **`Authorization`**  if the credentials are **valid**, or 
+	- **null** if they are **not**. 
+
+The  `parser`  lets the validator know the format of the Authorization header (e.g., 'Basic' or 'Bearer') and  `authorizationData`  is the meaningful information in that header. There are two concrete types of  `AuthorizationParser<T>`:  `AuthorizationBasicParser`  and  `AuthorizationBearerParser`. The authorization data for a basic parser is an instance of  `AuthBasicCredentials`  that contain the username and password, while the bearer parser's authorization data is the bearer token string.
 
 
 
@@ -156,7 +160,7 @@ The  `validate`  method must return an  **`Authorization`**  if the credentials 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1ODAxNDQzMSwyMDg2MDc2MDYzLC0xOD
-kzOTMxNzE0LC0xMTA1MDgzNzY5LC0xODg4NzY5Nzg1LDU2Mjg4
-NjY4MCwxNDI4NjgzNTM1LDE2NTgxMjAxNTddfQ==
+eyJoaXN0b3J5IjpbLTE2Njg0NTI1OTIsMjA4NjA3NjA2MywtMT
+g5MzkzMTcxNCwtMTEwNTA4Mzc2OSwtMTg4ODc2OTc4NSw1NjI4
+ODY2ODAsMTQyODY4MzUzNSwxNjU4MTIwMTU3XX0=
 -->
