@@ -269,7 +269,7 @@ class RegisterController extends QueryController<User> {
   
   final u = await query.insert();  
   final token = await authServer.authenticate(  
-       u.username,  
+      u.username,  
   query.values.password,  
   request.authorization.credentials.username,  
   request.authorization.credentials.password);  
@@ -281,9 +281,9 @@ class RegisterController extends QueryController<User> {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjYwMDk1NTcsLTE1MzQ3MjAwODUsOD
-QxNzk0MzE0LC0xMjg3NDYwOTgwLDkzNTE2NTc2NywxOTU0OTc4
-ODU3LDM0NDA1MTg5OSw2ODMzMjI4NzIsLTE3MDExNDI1OTQsLT
-EwMzUzMTY2OTIsMjA3MDIyNzQwOCwxMzcyNzU4Njk2LDEyNDQw
-NTU4MSwyMDg5NzI2NDM0XX0=
+eyJoaXN0b3J5IjpbLTE3NjA2MjQxNDMsLTEyMjYwMDk1NTcsLT
+E1MzQ3MjAwODUsODQxNzk0MzE0LC0xMjg3NDYwOTgwLDkzNTE2
+NTc2NywxOTU0OTc4ODU3LDM0NDA1MTg5OSw2ODMzMjI4NzIsLT
+E3MDExNDI1OTQsLTEwMzUzMTY2OTIsMjA3MDIyNzQwOCwxMzcy
+NzU4Njk2LDEyNDQwNTU4MSwyMDg5NzI2NDM0XX0=
 -->
