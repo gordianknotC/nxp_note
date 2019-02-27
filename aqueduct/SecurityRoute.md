@@ -137,8 +137,13 @@ class BasicValidator implements AuthValidator {
 The  `parser`  lets the validator know the format of the Authorization header (e.g., 'Basic' or 'Bearer') and  `authorizationData`  is the meaningful information in that header. 
 
 There are two concrete types of  `AuthorizationParser<T>`
-	- `AuthorizationBasicParser` : The authorization data for a basic parser is an instance of  `AuthBasicCredentials`  that contain the username and password 
-	- `AuthorizationBearerParser`: the bearer parser's authorization data is the bearer token string.
+- `AuthorizationBasicParser` : 
+	The authorization data for a basic parser is an instance of  `AuthBasicCredentials`  that contain the username and password 
+- `AuthorizationBearerParser`: 
+	the bearer parser's authorization data is the bearer token string.
+
+
+
 
 
 
@@ -164,7 +169,7 @@ There are two concrete types of  `AuthorizationParser<T>`
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NDU4Mjk3MiwyMDg2MDc2MDYzLC0xOD
+eyJoaXN0b3J5IjpbMjEzODExODg1NCwyMDg2MDc2MDYzLC0xOD
 kzOTMxNzE0LC0xMTA1MDgzNzY5LC0xODg4NzY5Nzg1LDU2Mjg4
 NjY4MCwxNDI4NjgzNTM1LDE2NTgxMjAxNTddfQ==
 -->
