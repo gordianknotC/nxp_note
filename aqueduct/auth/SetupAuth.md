@@ -38,9 +38,37 @@ class MyApplicationChannel extends ApplicationChannel {
   ...
 }
 ```
+While `AuthServer` has methods for handling authorization tasks, it is rarely used directly. Instead, `AuthCodeController` and `AuthController` are hooked up to routes to grant authorization tokens through your application's HTTP API. Instances of `Authorizer` secure routes in channels. All of these types invoke the appropriate methods on the `AuthServer`. Here's an example `ApplicationChannel` subclass that sets up and uses authorization:
 
+```dart
+import 'package:aqueduct/aqueduct.dart';
+import 'package:aqueduct/managed_auth.dart';
 
-
+class MyApplicationChannel extends ApplicationChannel {
+  AuthServer authServer;
+  ManagedContext context;
+  @override
+  Future prepare() async {
+    context = ManagedContext(...);
+    final delegate = ManagedAuthDelegate<User>(context);
+    authServer = AuthServer(delegate);
+  }
+  @override
+  Controller get entryPoint {
+    final router = Router();
+    // Set up auth token route- this grants and refresh tokens
+    router.route("/auth/token").link(() => AuthController(authServer));
+    // Set up auth code route- this grants temporary access codes that can be exchanged for token
+    router.route("/auth/code").link(() => AuthCodeController(authServer));
+    // Set up protected route
+    router
+      .route("/protected")
+      .link(() => Authorizer.bearer(authServer))
+      .link(() => ProtectedController());
+    return router;
+  }
+}
+```
 
 
 
@@ -84,6 +112,6 @@ class MyApplicationChannel extends ApplicationChannel {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNDg5ODU4LC0yNzE0ODQwOTIsMTc2MD
-QyMjkyXX0=
+eyJoaXN0b3J5IjpbLTE3OTM0NDI1MTAsMTgwNDg5ODU4LC0yNz
+E0ODQwOTIsMTc2MDQyMjkyXX0=
 -->
