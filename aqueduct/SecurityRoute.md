@@ -68,9 +68,7 @@ Note that you don't have to use an  `Authorizer`  to restrict access based on sc
 
 ### Authorization Objects
 
-A **bearer token** represents a granted authorization - at some point in the past, a user provided their credentials and the token is the proof of that. When a bearer token is sent in the authorization header of an HTTP request, the application can look up which user the token is for and the client application it was issued for. This information is stored in an instance of  `Authorization`  after the token has been verified and is assigned to  `Request.authorization`.
-
-Controllers protected by an  `Authorizer`  can access this information to further determine their behavior. For example, a social networking application might have a  `/news_feed`  endpoint protected by an  `Authorizer`. When an authenticated user makes a request for  `/news_feed`, the controller will return that user's news feed. It can determine this by using the  `Authorization`:
+For example, a social networking application might have a  `/news_feed`  endpoint protected by an  `Authorizer`. When an authenticated user makes a request for  `/news_feed`, the controller will return that user's news feed. It can determine this by using the  `Authorization`:
 
 ```dart
 class NewsFeedController extends ResourceController {
@@ -92,9 +90,9 @@ In the above controller, it's impossible for a user to access another user's pos
 
 `Authorization`  objects also retain the scope of an access token so that a controller can make more granular decisions about the information/action in the endpoint. Checking whether an  `Authorization`  has access to a particular scope is accomplished by either looking at the list of its  `scopes`  or using  `authorizedForScope`:
 
+```dart
 class NewsFeedController extends ResourceController {
   NewsFeedController(this.context);
-
   ManagedContext context;
 
   @Operation.get()
@@ -102,15 +100,14 @@ class NewsFeedController extends ResourceController {
     if (!request.authorization.authorizedForScope("user:feed")) {
       return Response.unauthorized();
     }
-
     var forUserID = request.authorization.ownerID;
-
     var query = Query<Post>(context)
       ..where((p) => p.author).identifiedBy(forUserID);
 
     return Response.ok(await query.fetch());
   }
 }
+```
 
 ### Using Authorizers Without AuthServer
 
@@ -157,7 +154,7 @@ The  `validate`  method must return an  `Authorization`  if the credentials are 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTM5MzE3MTQsLTExMDUwODM3NjksLT
-E4ODg3Njk3ODUsNTYyODg2NjgwLDE0Mjg2ODM1MzUsMTY1ODEy
-MDE1N119
+eyJoaXN0b3J5IjpbLTEzMDEwNDM5NiwtMTg5MzkzMTcxNCwtMT
+EwNTA4Mzc2OSwtMTg4ODc2OTc4NSw1NjI4ODY2ODAsMTQyODY4
+MzUzNSwxNjU4MTIwMTU3XX0=
 -->
