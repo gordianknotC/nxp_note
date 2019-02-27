@@ -84,7 +84,7 @@ final books = await query.fetch();
 > ⚡ **object:** indicates a **Relate** object which referenced from author
 
 
-
+### Example: Many-to-Many Relationship
 
 
 
@@ -93,5 +93,6 @@ final books = await query.fetch();
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NDA1NTgxLDIwODk3MjY0MzRdfQ==
+eyJoaXN0b3J5IjpbOTEzNjMwMTIzLDEyNDQwNTU4MSwyMDg5Nz
+I2NDM0XX0=
 -->
