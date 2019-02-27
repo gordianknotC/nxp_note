@@ -31,13 +31,14 @@ An  `Authorizer`  parses the Authorization header of an HTTP request. The named 
 - The  **`Authorization.bearer()`** 
    constructor expects an OAuth 2.0 bearer token in the header, which has the following format:
 
-	Authorization: **Bearer 768iuzjkx82jkasjkd9z9**
+	- Authorization: **Bearer 768iuzjkx82jkasjkd9z9**
 
-- `Authorizer.basic`  
+- **`Authorizer.basic`**  
   expects HTTP Basic Authentication, where the username and password are joined with the colon character (`:`) and Base 64-encoded:
 
-// 'dXNlcjpwYXNzd29yZA==' is 'user:password'
-Authorization: **Basic dXNlcjpwYXNzd29yZA==**
+	- // 'dXNlcjpwYXNzd29yZA==' is 'user:password'
+	Authorization: **Basic dXNlcjpwYXNzd29yZA==**
+
 
 If the header can't be parsed, doesn't exist or is in the wrong format, an  `Authorizer`  responds to the request with a 401 status code and prevents the next controller from receiving the request.
 
@@ -149,5 +150,5 @@ The  `validate`  method must return an  `Authorization`  if the credentials are 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjUzMzIyNF19
+eyJoaXN0b3J5IjpbOTYwNjMxNjQ0XX0=
 -->
