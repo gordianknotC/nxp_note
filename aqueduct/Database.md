@@ -220,14 +220,14 @@ For example, when you create a new instance of a managed object, none of its val
 
 ## Behavior of Transient Properties
 
-By default, transient properties - those declared in the **managed** object subclass, **not the table definition** - are  **_not_**  included in an object's  `asMap()`. The  `Serialize`annotation allows a transient property to be included in this map.
+By default, transient properties - those declared in the **managed** object subclass, **not the table definition** - are  **_not_**  included in an object's  `asMap()`. The  **`Serialize`**  annotation **allows** a transient property to be included in this map.
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NzQ3MjYzNywtMTI4NzQ2MDk4MCw5Mz
+eyJoaXN0b3J5IjpbMjA0NzUyOTc4OSwtMTI4NzQ2MDk4MCw5Mz
 UxNjU3NjcsMTk1NDk3ODg1NywzNDQwNTE4OTksNjgzMzIyODcy
 LC0xNzAxMTQyNTk0LC0xMDM1MzE2NjkyLDIwNzAyMjc0MDgsMT
 M3Mjc1ODY5NiwxMjQ0MDU1ODEsMjA4OTcyNjQzNF19
