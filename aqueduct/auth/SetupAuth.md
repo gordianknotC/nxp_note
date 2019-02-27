@@ -87,6 +87,12 @@ class _User extends ResourceOwnerTableDefinition {
 }
 ```
 
+By extending  **`ResourceOwnerTableDefinition`**  in the table definition, the database table has the following four columns:
+
+-   an integer primary key named  `id`
+-   a unique string  `username`
+-   a password hash
+-   a salt used to generate the password hash
 
 
 
@@ -141,7 +147,7 @@ class _User extends ResourceOwnerTableDefinition {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5ODgwMDM2NywtNDE2OTQwMDk1LC0xNz
+eyJoaXN0b3J5IjpbMTU4Mjk5Mzg0MSwtNDE2OTQwMDk1LC0xNz
 kzNDQyNTEwLDE4MDQ4OTg1OCwtMjcxNDg0MDkyLDE3NjA0MjI5
 Ml19
 -->
