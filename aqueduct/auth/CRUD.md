@@ -1,5 +1,6 @@
 
- [](https://github.com/stablekernel/aqueduct/edit/docs/source/source/docs/db/executing_queries.md "Edit this page")
+
+
 
 # Inserting, Updating, Deleting and Fetching Objects
 
@@ -232,5 +233,5 @@ Aqueduct will parameterize and reuse queries when possible. This allows for sign
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNTQ0NDEyMl19
+eyJoaXN0b3J5IjpbOTEyNzIxNTQ3XX0=
 -->
