@@ -95,6 +95,8 @@ Exchanging a refresh token has the same response as the initial exchange for use
 
 The verification and storage of authorization and authentication information is managed by an  [AuthServer](https://aqueduct.io/docs/auth/server/).
 
+
+
 ### Other Methods for Obtaining Authorization
 
 The method of getting a token above - sending a username and password to  `/auth/token`  - is just one of four possible methods OAuth 2.0 uses to authenticate a user. This particular one is called the  _resource owner password credentials grant_. A resource owner is a fancy word for a 'user'. We can shorten it up to just the 'password flow'. It's probably the most common flow - mobiles applications and front-end web applications often use this flow. When you enter your credentials, the client application sends them directly to the server.
@@ -114,6 +116,7 @@ This is called the  _authorization code grant_  - or just 'auth code flow'. An i
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMyMTIwNTg2LDMxNzMyNjI0MiwxNzE3Mj
-E5MDksLTYyODQwMTgwNyw0MzYxMTI0NzBdfQ==
+eyJoaXN0b3J5IjpbNjY3MDU3MTAsNTMyMTIwNTg2LDMxNzMyNj
+I0MiwxNzE3MjE5MDksLTYyODQwMTgwNyw0MzYxMTI0NzBdfQ==
+
 -->
