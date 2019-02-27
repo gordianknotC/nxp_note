@@ -218,6 +218,10 @@ class Author extends ManagedObject<_Author> implements _Author {
   }
 }
 ```
+> ⚡ Getters with the `Serialize` annotation will be written in `asMap` and setters with the annotation will be read in `readFromMap`.
+
+> ⚡ You can annotate a transient property with  `Serialize`   so that it is able to be **read from a request body**, **written to a response body**, or both. For example:
+
 ```dart
 class Employee extends ManagedObject<_Employee> implements _Employee {
   int a; // NOT included in asMap, NOT read in readFromMap
@@ -230,25 +234,14 @@ class _Employee {
   int id;
 }
 ```
-> ⚡ Getters with the `Serialize` annotation will be written in `asMap` and setters with the annotation will be read in `readFromMap`.
 
-```dart
-class User extends ManagedObject<_User> implements _User {
-  @Serialize()
-  set transientValue(String s) {
-    ...
-  }
-  @Serialize()
-  String get transientValue => ...;
-}
-```
-
+ 
  
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ5MTYyNDIyLC0xMjg3NDYwOTgwLDkzNT
+eyJoaXN0b3J5IjpbODQxNzk0MzE0LC0xMjg3NDYwOTgwLDkzNT
 E2NTc2NywxOTU0OTc4ODU3LDM0NDA1MTg5OSw2ODMzMjI4NzIs
 LTE3MDExNDI1OTQsLTEwMzUzMTY2OTIsMjA3MDIyNzQwOCwxMz
 cyNzU4Njk2LDEyNDQwNTU4MSwyMDg5NzI2NDM0XX0=
