@@ -44,9 +44,11 @@ If the header can't be parsed, doesn't exist or is in the wrong format, an  `Aut
 
 > ⚡ Once parsed, an  `Authorizer`  sends the information - either the bearer token, or the username and password - to its  `AuthServer`  for verification. If the  `AuthServer`  rejects the authorization info, the  `Authorizer`  responds to the request with a 401 status code and prevents the next controller from receiving the request. Otherwise, the request continues to the next controller.
 
-For  `Authorizer.bearer`, the value in a request's header must be a valid, **unexpired access token**. These types of authorizers are used when an endpoint requires a **logged in user**.
+- For  `Authorizer.bearer`
+the value in a request's header must be a valid, **unexpired access token**. These types of authorizers are used when an endpoint requires a **logged in user**.
 
-For  `Authorizer.basic`  authorizers, credentials are verified by finding an OAuth 2.0 client identifier and ensuring its client secret matches. Routes with this type of authorizer are known as  **_client authenticated_**  routes. These types of authorizers are used when an endpoint requires a **valid client application**, but **not** a logged in user.
+- For  `Authorizer.basic`  
+authorizers, credentials are verified by finding an OAuth 2.0 client identifier and ensuring its client secret matches. Routes with this type of authorizer are known as  **_client authenticated_**  routes. These types of authorizers are used when an endpoint requires a **valid client application**, but **not** a logged in user.
 
 ### Authorizer and OAuth 2.0 Scope
 
@@ -150,5 +152,5 @@ The  `validate`  method must return an  `Authorization`  if the credentials are 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzNDIyNjIxLDE2NTgxMjAxNTddfQ==
+eyJoaXN0b3J5IjpbMTQyODY4MzUzNSwxNjU4MTIwMTU3XX0=
 -->
