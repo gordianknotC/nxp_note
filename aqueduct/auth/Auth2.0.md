@@ -67,6 +67,7 @@ request.body = {
 
 An access token can expire. How long it takes to expire is up to the server - Aqueduct defaults to 24 hours. At first glance, this means that the application would have to ask the user for a password again. But, tokens can also be refreshed. **Refreshing a token grants a brand new access token**, but **without** having to ask for the password. This is possible because an access token comes with a  **_refresh token_**. The refresh token is another long, random string. So, the JSON the server sends back when granting a token looks like this:
 
+**The access token**
 ```json
 {
   "access_token" : "Abca09zzzza2o2kelmzlli3ijlka",
@@ -78,6 +79,7 @@ An access token can expire. How long it takes to expire is up to the server - Aq
 
 The application hangs on to both an access token and a refresh token. **When the token expires, it will send the refresh token back to the server** to get a replacement access token. This is done through the same route that the access token came from -  `/auth/token`  - except the parameters are a bit different:
 
+**The refresh token**
 ```dart
 var request = HTTPRequest("/auth/token");
 request.method = "POST";
@@ -112,6 +114,6 @@ This is called the  _authorization code grant_  - or just 'auth code flow'. An i
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MjcyNzY2OSwzMTczMjYyNDIsMTcxNz
-IxOTA5LC02Mjg0MDE4MDcsNDM2MTEyNDcwXX0=
+eyJoaXN0b3J5IjpbNTMyMTIwNTg2LDMxNzMyNjI0MiwxNzE3Mj
+E5MDksLTYyODQwMTgwNyw0MzYxMTI0NzBdfQ==
 -->
