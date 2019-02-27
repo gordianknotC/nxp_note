@@ -33,7 +33,7 @@ An  `Authorizer`  parses the Authorization header of an HTTP request. The named 
 
 	- Authorization: **Bearer 768iuzjkx82jkasjkd9z9**
 
->  #### 📝 what are **bear** indicates to??
+>  #### 📝 **bear** - a word borrowed from client-certificate authenticcateion
 >  Client-certificate authentication is a more secure method of authentication than either basic or form-based authentication. It **uses HTTP over SSL**, in which the server and, optionally, the client **authenticate one another** using public key certificates.  Secure Socket Layer  (SSL) provides data encryption, server authentication, message integrity, and optional client authentication for a TCP/IP connection. **You can think of a  public key certificate  as the digital equivalent of a passport**. It is issued by a trusted organization, which is called a  certificate authority  (CA), and provides identification for the **bearer**.
 
 - **`Authorizer.basic`**  
@@ -155,6 +155,6 @@ The  `validate`  method must return an  `Authorization`  if the credentials are 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNTY5ODIzNCwxNDI4NjgzNTM1LDE2NT
-gxMjAxNTddfQ==
+eyJoaXN0b3J5IjpbNTYyODg2NjgwLDE0Mjg2ODM1MzUsMTY1OD
+EyMDE1N119
 -->
