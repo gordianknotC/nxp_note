@@ -72,6 +72,7 @@ A **bearer token** represents a granted authorization - at some point in the pas
 
 Controllers protected by an  `Authorizer`  can access this information to further determine their behavior. For example, a social networking application might have a  `/news_feed`  endpoint protected by an  `Authorizer`. When an authenticated user makes a request for  `/news_feed`, the controller will return that user's news feed. It can determine this by using the  `Authorization`:
 
+```dart
 class NewsFeedController extends ResourceController {
   NewsFeedController(this.context);
 
@@ -87,7 +88,7 @@ class NewsFeedController extends ResourceController {
     return Response.ok(await query.fetch());
   }
 }
-
+```
 In the above controller, it's impossible for a user to access another user's posts.
 
 `Authorization`  objects also retain the scope of an access token so that a controller can make more granular decisions about the information/action in the endpoint. Checking whether an  `Authorization`  has access to a particular scope is accomplished by either looking at the list of its  `scopes`  or using  `authorizedForScope`:
@@ -157,6 +158,7 @@ The  `validate`  method must return an  `Authorization`  if the credentials are 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDUwODM3NjksLTE4ODg3Njk3ODUsNT
-YyODg2NjgwLDE0Mjg2ODM1MzUsMTY1ODEyMDE1N119
+eyJoaXN0b3J5IjpbMjEzOTcyMDc4NCwtMTEwNTA4Mzc2OSwtMT
+g4ODc2OTc4NSw1NjI4ODY2ODAsMTQyODY4MzUzNSwxNjU4MTIw
+MTU3XX0=
 -->
