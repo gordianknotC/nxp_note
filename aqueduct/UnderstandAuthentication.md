@@ -74,20 +74,15 @@ With  _mutual authentication_ , the server and the client authenticate each othe
 
 ![Certificate-Based Mutual Authentication](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/images/security-sslBasedMutualAuthenticationWithCertificates.gif)
 
-Figure 32-4 Certificate-Based Mutual Authentication
+Figure 32-4 **Certificate-Based** Mutual Authentication
 
 In certificate-based mutual authentication, the following things occur:
 
 -   A client requests access to a protected resource.
-
 -   The web server presents its certificate to the client.
-
 -   The client verifies the server's certificate.
-
 -   If successful, the client sends its certificate to the server.
-
 -   The server verifies the client's credentials.
-
 -   If successful, the server grants access to the protected resource requested by the client.
 
 [Example: Client-Certificate Authentication over HTTP/SSL with JAX-RPC](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security7.html#wp498398)  describes an example application that uses certificate-based mutual authentication.
@@ -390,6 +385,6 @@ Read the section  [Specifying a Secure Connection](http://lia.deis.unibo.it/Cour
 
 `https://localhost:8181/formbasedauth`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NjM0NzU5OCwtMzEzNzI2NDk4LDkyMD
-IwNDk2Nl19
+eyJoaXN0b3J5IjpbMTYxODY3MzUwNCwxNzY2MzQ3NTk4LC0zMT
+M3MjY0OTgsOTIwMjA0OTY2XX0=
 -->
