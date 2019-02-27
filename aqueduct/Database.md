@@ -86,13 +86,44 @@ final books = await query.fetch();
 
 ### Example: Many-to-Many Relationship
 
+```dart
+class Team extends ManagedObject<_Team> implements _Team {}
+class _Team {
+  @primaryKey
+  int id;
 
+  String name;
+  ManagedSet<TeamPlayer> teamPlayers;
+}
+
+// This type is a join table
+class _TeamPlayer extends ManagedObject<_TeamPlayer> implements _TeamPlayer {}
+class _TeamPlayer {
+  @primaryKey
+  int id;  
+
+  @Relate(#teamPlayers)
+  Team team;
+
+  @Relate(#teamPlayers)
+  Player player;
+}
+
+class Player extends ManagedObject<_Player> implements _Player {}
+class _Player {
+  @primaryKey
+  int id;
+
+  String name;
+  ManagedSet<TeamPlayer> teamPlayers;
+}
+```
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTEzNjMwMTIzLDEyNDQwNTU4MSwyMDg5Nz
-I2NDM0XX0=
+eyJoaXN0b3J5IjpbMTU2MjI2NDcyNiwxMjQ0MDU1ODEsMjA4OT
+cyNjQzNF19
 -->
