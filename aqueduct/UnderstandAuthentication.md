@@ -50,6 +50,8 @@ Form-based authentication is **not** particularly secure. In form-based authenti
 
 [Example: Using Form-Based Authentication](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security5.html#wp303355)  is an example application that uses form-based authentication.
 
+
+
 ### Using Client-Certificate Authentication
 
 Client-certificate authentication is a more secure method of authentication than either basic or form-based authentication. It **uses HTTP over SSL**, in which the server and, optionally, the client **authenticate one another** using public key certificates.  Secure Socket Layer  (SSL) provides data encryption, server authentication, message integrity, and optional client authentication for a TCP/IP connection. **You can think of a  public key certificate  as the digital equivalent of a passport**. It is issued by a trusted organization, which is called a  certificate authority  (CA), and provides identification for the **bearer**.
@@ -57,6 +59,8 @@ Client-certificate authentication is a more secure method of authentication than
 If you specify  client-certificate authentication, the web server will authenticate the client using the client's  X.509 certificate, a public key certificate that conforms to a standard that is defined by X.509 Public Key Infrastructure (PKI). Before running an application that uses SSL, you must configure SSL support on the server (see  [Installing and Configuring SSL Support](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security6.html#wp509934)) and set up the public key certificate (see  [Understanding Digital Certificates](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security6.html#wp80737)).
 
 [Example: Client-Certificate Authentication over HTTP/SSL with JAX-RPC](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security7.html#wp498398)  describes an example application that uses client-certificate authentication.
+
+
 
 ### Using Mutual Authentication
 
@@ -386,5 +390,5 @@ Read the section  [Specifying a Secure Connection](http://lia.deis.unibo.it/Cour
 
 `https://localhost:8181/formbasedauth`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIwMjA0OTY2XX0=
+eyJoaXN0b3J5IjpbLTMxMzcyNjQ5OCw5MjAyMDQ5NjZdfQ==
 -->
