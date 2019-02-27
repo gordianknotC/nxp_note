@@ -4,20 +4,23 @@ An application using Aqueduct's Auth framework must have endpoints to exchange c
 
 ### Issue, Refresh and Exchange Tokens with AuthController
 
-An  `AuthController`  grants access tokens and refreshes them. It also exchanges authorization codes obtained from  `AuthCodeController`  for access tokens.
+An  `AuthController`  
+- grants access tokens 
+- refreshes tokens 
+- exchanges authorization codes obtained from  `AuthCodeController`  for access tokens.
 
 Using an  `AuthController`  in an application is straightforward - hook it up to a  `Router`  and pass it an  `AuthServer`.
 
+```dart
 @override
 Controller get entryPoint {
   final router = Router();
-
   router
     .route("/auth/token")
     .link(() => AuthController(authServer));
-
   return router;
 }
+```
 
 To grant an access token, a client application sends a HTTP  `POST`  to the controller. The request must have:
 
@@ -123,5 +126,5 @@ grant_type=authorization_code&code=abcd672kk
 
 An access token will be returned to the server which your friend then stores in their database. Whenever one of their users makes a request that requires accessing your application's data, they will execute requests with that access token.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMzU1MDk5M119
+eyJoaXN0b3J5IjpbMTAyMjM2OTQ3NCwxNzMzNTUwOTkzXX0=
 -->
