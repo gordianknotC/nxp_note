@@ -68,7 +68,7 @@ Note that you don't have to use an  `Authorizer`  to restrict access based on sc
 
 ### Authorization Objects
 
-A bearer token represents a granted authorization - at some point in the past, a user provided their credentials and the token is the proof of that. When a bearer token is sent in the authorization header of an HTTP request, the application can look up which user the token is for and the client application it was issued for. This information is stored in an instance of  `Authorization`  after the token has been verified and is assigned to  `Request.authorization`.
+A **bearer token** represents a granted authorization - at some point in the past, a user provided their credentials and the token is the proof of that. When a bearer token is sent in the authorization header of an HTTP request, the application can look up which user the token is for and the client application it was issued for. This information is stored in an instance of  `Authorization`  after the token has been verified and is assigned to  `Request.authorization`.
 
 Controllers protected by an  `Authorizer`  can access this information to further determine their behavior. For example, a social networking application might have a  `/news_feed`  endpoint protected by an  `Authorizer`. When an authenticated user makes a request for  `/news_feed`, the controller will return that user's news feed. It can determine this by using the  `Authorization`:
 
@@ -157,6 +157,6 @@ The  `validate`  method must return an  `Authorization`  if the credentials are 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODg3Njk3ODUsNTYyODg2NjgwLDE0Mj
-g2ODM1MzUsMTY1ODEyMDE1N119
+eyJoaXN0b3J5IjpbLTExMDUwODM3NjksLTE4ODg3Njk3ODUsNT
+YyODg2NjgwLDE0Mjg2ODM1MzUsMTY1ODEyMDE1N119
 -->
