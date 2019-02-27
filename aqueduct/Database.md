@@ -109,7 +109,6 @@ class _Person {
 ### Example: Many-to-Many Relationship
 
 
-
 ```dart
 class Team extends ManagedObject<_Team> implements _Team {}
 class _Team {
@@ -148,6 +147,7 @@ class _Player {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzUzMTY2OTIsMjA3MDIyNzQwOCwxMz
-cyNzU4Njk2LDEyNDQwNTU4MSwyMDg5NzI2NDM0XX0=
+eyJoaXN0b3J5IjpbLTE3MDExNDI1OTQsLTEwMzUzMTY2OTIsMj
+A3MDIyNzQwOCwxMzcyNzU4Njk2LDEyNDQwNTU4MSwyMDg5NzI2
+NDM0XX0=
 -->
