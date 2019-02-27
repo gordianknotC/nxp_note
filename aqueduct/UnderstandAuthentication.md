@@ -62,7 +62,7 @@ If you specify  client-certificate authentication, the web server will authentic
 
 
 
-### Using Mutual Authentication
+### 📝 Using Mutual Authentication
 
 With  _mutual authentication_ , the server and the client authenticate each other. There are two types of mutual authentication:
 
@@ -91,7 +91,7 @@ In certificate-based mutual authentication, the following things occur:
 
 ![Username/Password-Based Mutual Authentication](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/images/security-sslBasedMutualAuthenticationWithUsernamePassword.gif)
 
-Figure 32-5 User Name- and Password-Based Mutual Authentication
+⚡ Figure 32-5 User Name- and Password-Based Mutual Authentication
 
 In user name- and password-based mutual authentication, the following things occur:
 
@@ -104,6 +104,6 @@ In user name- and password-based mutual authentication, the following things occ
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTIxODI2MzYsMTYxODY3MzUwNCwxNzY2Mz
-Q3NTk4LC0zMTM3MjY0OTgsOTIwMjA0OTY2XX0=
+eyJoaXN0b3J5IjpbLTI2MTcyMTg0MywxNjE4NjczNTA0LDE3Nj
+YzNDc1OTgsLTMxMzcyNjQ5OCw5MjAyMDQ5NjZdfQ==
 -->
