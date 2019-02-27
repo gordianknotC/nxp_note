@@ -23,6 +23,21 @@ An  `AuthServer`  must persist the data it uses and creates - like client identi
 
 This concrete implementation is named  `ManagedAuthDelegate<T>`. It exists in a sub-package of Aqueduct and must be explicitly imported. Here's an example of creating an  `AuthServer`  and  `ManagedAuthDelegate<T>`:
 
+```dart
+import 'package:aqueduct/aqueduct.dart';
+import 'package:aqueduct/managed_auth.dart';
+
+class MyApplicationChannel extends ApplicationChannel {  
+  AuthServer authServer;
+  @override
+  Future prepare() async {
+    final context = ManagedContext(...);
+    final delegate = ManagedAuthDelegate<User>(context);
+    authServer = AuthServer(delegate);
+  }
+  ...
+}
+```
 
 
 
@@ -69,5 +84,6 @@ This concrete implementation is named  `ManagedAuthDelegate<T>`. It exists in a 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MTQ4NDA5MiwxNzYwNDIyOTJdfQ==
+eyJoaXN0b3J5IjpbMTgwNDg5ODU4LC0yNzE0ODQwOTIsMTc2MD
+QyMjkyXX0=
 -->
