@@ -20,9 +20,15 @@ The  `aqueduct auth`  command-line tool manages configuration - such as client i
 
 Most applications have the concept of a user. To prevent just anyone from saying they are this user, the user has a password. When a user wants to use your application, they send their username and password to the server so it can ensure they are who they say they are.
 
-The simple way to do this is to send the username and password in an Authorization header for every request. Two reasons this is bad: - first, every time the user wants to do something, their password is sent in every request and that can be unsafe. Second, any application that wants to keep the user logged in has to store that password - and that is unsafe.
+The simple way to do this is to send the username and password in an Authorization header for every request. Two reasons this is bad: - 
 
-In OAuth 2.0, the user gives their username and password to a client application once. The application sends those credentials to a server, and the server gives the application back an access token. A access token is a long, random string that no one can guess. When the user wants to do more stuff, the application sends the token with every request, instead of the user's password. The server checks the token, makes sure its not expired, and then lets the application's request go through. The application doesn't have to store the password and doesn't have to ask the user for their password again.
+- first, every time the user wants to do something, their password is sent in every request and that can be unsafe. 
+- Second, any application that wants to keep the user logged in has to store that password - and that is unsafe.
+
+In OAuth 2.0, the user gives their username and password to a client application **once**. 
+- The application sends those credentials to a server
+- the server gives the application back an access token. 
+A access token is a long, random string that no one can guess. When the user wants to do more stuff, the application sends the token with every request, instead of the user's password. The server checks the token, makes sure its not expired, and then lets the application's request go through. The application doesn't have to store the password and doesn't have to ask the user for their password again.
 
 This credential-for-token exchange happens by sending a POST request to some endpoint, where the username and password are sent in the request body. Typically, an Aqueduct application's route for this is  `/auth/token`  and handled by an instance of  [AuthController](https://aqueduct.io/docs/auth/controllers/).
 
@@ -92,6 +98,6 @@ This is called the  _authorization code grant_  - or just 'auth code flow'. An i
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM3OTQwODY4LC02Mjg0MDE4MDcsNDM2MT
-EyNDcwXX0=
+eyJoaXN0b3J5IjpbMTE2MTQ3OTE4NSwtNjI4NDAxODA3LDQzNj
+ExMjQ3MF19
 -->
