@@ -202,6 +202,9 @@ class UserController extends ResourceController {
 }
 ```
 
+> ⚡ **@Bind.body()**
+> Binds an HTTP request body to an [ResourceController] property or operation method argument.
+> _
 
 
 
@@ -213,8 +216,8 @@ class UserController extends ResourceController {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMTYxNTY0NCw5MzUxNjU3NjcsMTk1ND
-k3ODg1NywzNDQwNTE4OTksNjgzMzIyODcyLC0xNzAxMTQyNTk0
-LC0xMDM1MzE2NjkyLDIwNzAyMjc0MDgsMTM3Mjc1ODY5NiwxMj
-Q0MDU1ODEsMjA4OTcyNjQzNF19
+eyJoaXN0b3J5IjpbNjM4NzMxODAxLDkzNTE2NTc2NywxOTU0OT
+c4ODU3LDM0NDA1MTg5OSw2ODMzMjI4NzIsLTE3MDExNDI1OTQs
+LTEwMzUzMTY2OTIsMjA3MDIyNzQwOCwxMzcyNzU4Njk2LDEyND
+QwNTU4MSwyMDg5NzI2NDM0XX0=
 -->
