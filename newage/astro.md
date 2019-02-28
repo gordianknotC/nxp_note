@@ -83,6 +83,7 @@ JSON -.- body.
 body. -.- json.encodeBody...
 POST --> AuthCodeLogin...
 AuthCodeLogin... -.- body
+body -.- Key&Value_String
 
 
 
@@ -147,7 +148,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMyMDcwNjkzLDExMzU4MjExMzIsLTc0OD
-M1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3
-NzgsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbMTM3NDE1MDUsNjMyMDcwNjkzLDExMzU4Mj
+ExMzIsLTc0ODM1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OTkwMjM3
+LC04NDkzMzE3NzgsMjA0MDI5NzYyMl19
 -->
