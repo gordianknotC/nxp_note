@@ -8,13 +8,13 @@ expires_in
 
 AuthToken --- access_token
 AuthToken --- refresh_token
-AuthToken ---|indicates duration| expires_in
+AuthToken --- |indicates duration| expires_in
 expires_in -.- Now
-Now -.-|DateTime.toIso8601String| expiaresAt___
+Now -.- |DateTime.toIso8601String| expiaresAt___
 ```
 ```mermaid
 graph LR
-AuthToken -.- isExpired
+AuthToken --- isExpired
 ```
 ```dart
 fromMap() =>
@@ -74,7 +74,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE2MzE1MjM4LC03NDgzNTQ0MSwtMTE5MD
-AyMDA2NiwtMTE0ODk5MDIzNywtODQ5MzMxNzc4LDIwNDAyOTc2
-MjJdfQ==
+eyJoaXN0b3J5IjpbMTAwOTI1MjgwMywtNzQ4MzU0NDEsLTExOT
+AwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMzMTc3OCwyMDQwMjk3
+NjIyXX0=
 -->
