@@ -56,12 +56,12 @@ bool get isAuthenticated =>
 param - **User** user
 ```mermaid
 graph LR
-storeUserKey -.- user.json....
+_storedUserKey-.- user.json....
 SetauthenticatedUser --> $User...
 SetauthenticatedUser --> !User...
 $User... --> storageProvider
 storageProvider --> store
-store --> storeUserKey
+store --> _storedUserKey
 store --> User...
 
 !User... --> storageProvider.
@@ -185,9 +185,9 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTkxODAyOTIwLDIxNDcyNDI4ODEsLTExND
-AzODU4MzMsNzc2MzI3ODA4LDc1MjkzMjQ4LDI0MzEwNDc4NCw2
-MzIwNzA2OTMsMTEzNTgyMTEzMiwtNzQ4MzU0NDEsLTExOTAwMj
-AwNjYsLTExNDg5OTAyMzcsLTg0OTMzMTc3OCwyMDQwMjk3NjIy
-XX0=
+eyJoaXN0b3J5IjpbLTgwNjc4Mjk1NiwyMTQ3MjQyODgxLC0xMT
+QwMzg1ODMzLDc3NjMyNzgwOCw3NTI5MzI0OCwyNDMxMDQ3ODQs
+NjMyMDcwNjkzLDExMzU4MjExMzIsLTc0ODM1NDQxLC0xMTkwMD
+IwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3NzgsMjA0MDI5NzYy
+Ml19
 -->
