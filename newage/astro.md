@@ -141,7 +141,7 @@ graph LR
 ```
 
 ## UserService
-### UserService
+### UserService.login
 ```mermaid
 graph TB
 Store
@@ -200,7 +200,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxODIxMTkwNiwxNDc2NzU0OTYxLDIxND
+eyJoaXN0b3J5IjpbMTE4MDkyOTk1NSwxNDc2NzU0OTYxLDIxND
 cyNDI4ODEsLTExNDAzODU4MzMsNzc2MzI3ODA4LDc1MjkzMjQ4
 LDI0MzEwNDc4NCw2MzIwNzA2OTMsMTEzNTgyMTEzMiwtNzQ4Mz
 U0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMzMTc3
