@@ -72,14 +72,11 @@ graph LR
 end
 RequestHeader --> executeRequest
 ```
+
 ### noteContoller.executeRequest
 param - **Request** request
 ```mermaid
 graph LR
-RequestHeader --> executeRequest  
-executeRequest --> GET
-executeRequest --> POST
-
 subgraph GET
 	GET. -.- RequestPath
 	GET. -.- Header
@@ -93,6 +90,10 @@ subgraph POST
 	AuthCodeLogin... -.- body
 	body -.- Key&Value_String
 end
+
+RequestHeader --> executeRequest  
+executeRequest --> GET
+executeRequest --> POST
 ```
 
 
@@ -154,7 +155,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODYwNzM2MjksNjMyMDcwNjkzLDExMz
-U4MjExMzIsLTc0ODM1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OTkw
-MjM3LC04NDkzMzE3NzgsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbLTQ5NzE4NTQwNSw2MzIwNzA2OTMsMTEzNT
+gyMTEzMiwtNzQ4MzU0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAy
+MzcsLTg0OTMzMTc3OCwyMDQwMjk3NjIyXX0=
 -->
