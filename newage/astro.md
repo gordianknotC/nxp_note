@@ -149,7 +149,9 @@ POST
 POST -.-> username
 POST -.-> password
 POST -.-> grand_type
-
+password --> request
+grand_type --> request
+username --> request
 Store -.-> executeClientRequest
 ```
 
@@ -205,9 +207,9 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzI1NTkzNzMsMTE4MDkyOTk1NSwxND
-c2NzU0OTYxLDIxNDcyNDI4ODEsLTExNDAzODU4MzMsNzc2MzI3
-ODA4LDc1MjkzMjQ4LDI0MzEwNDc4NCw2MzIwNzA2OTMsMTEzNT
-gyMTEzMiwtNzQ4MzU0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAy
-MzcsLTg0OTMzMTc3OCwyMDQwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbLTk3MDk1NzAxNCwxMTgwOTI5OTU1LDE0Nz
+Y3NTQ5NjEsMjE0NzI0Mjg4MSwtMTE0MDM4NTgzMyw3NzYzMjc4
+MDgsNzUyOTMyNDgsMjQzMTA0Nzg0LDYzMjA3MDY5MywxMTM1OD
+IxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0ODk5MDIz
+NywtODQ5MzMxNzc4LDIwNDAyOTc2MjJdfQ==
 -->
