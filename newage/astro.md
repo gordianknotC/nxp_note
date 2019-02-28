@@ -75,8 +75,12 @@ RequestHeader --> executeRequest
 executeRequest --> GET
 executeRequest --> POST
 
+GET -.- RequestPath
+GET -.- Header
+
 POST --> JSON
 JSON -.- body.
+body. -.- json.encodeBody...
 POST --> AuthCodeLogin...
 AuthCodeLogin... -.- body
 
@@ -143,7 +147,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMjI3OTk2LDExMzU4MjExMzIsLTc0OD
+eyJoaXN0b3J5IjpbNjMyMDcwNjkzLDExMzU4MjExMzIsLTc0OD
 M1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3
 NzgsMjA0MDI5NzYyMl19
 -->
