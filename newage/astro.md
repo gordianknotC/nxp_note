@@ -120,7 +120,8 @@ graph LR
 	token --> $isExpired
 	$isExpired --> Error
 	token --> !isExpired
-	!isExpired -->
+	!isExpired -->|set auth into request header| setHeader
+	!isExpired --> executeRequest
 ```
 
 ### Store
@@ -177,8 +178,8 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY3MjA2OTc0LC0xMTQwMzg1ODMzLDc3Nj
-MyNzgwOCw3NTI5MzI0OCwyNDMxMDQ3ODQsNjMyMDcwNjkzLDEx
-MzU4MjExMzIsLTc0ODM1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OT
-kwMjM3LC04NDkzMzE3NzgsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbMjE0NzI0Mjg4MSwtMTE0MDM4NTgzMyw3Nz
+YzMjc4MDgsNzUyOTMyNDgsMjQzMTA0Nzg0LDYzMjA3MDY5Mywx
+MTM1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0OD
+k5MDIzNywtODQ5MzMxNzc4LDIwNDAyOTc2MjJdfQ==
 -->
