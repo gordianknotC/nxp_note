@@ -42,6 +42,15 @@ StorageProvider -.- delete
 
 ```
 
+
+### User
+```dart
+int id;  
+String email;  
+List<Note> notes = [];  
+AuthorizationToken token;
+```
+
 ### noteService.SetAuthenticateUser
 param - **User** user
 ```mermaid
@@ -157,7 +166,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5OTI5MzIxMyw2MzIwNzA2OTMsMTEzNT
+eyJoaXN0b3J5IjpbMTgwNzUyNDU3OCw2MzIwNzA2OTMsMTEzNT
 gyMTEzMiwtNzQ4MzU0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAy
 MzcsLTg0OTMzMTc3OCwyMDQwMjk3NjIyXX0=
 -->
