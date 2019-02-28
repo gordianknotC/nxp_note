@@ -43,6 +43,7 @@ StorageProvider -.- delete
 ```
 
 ### noteService.authenticateUser
+param - **User** user
 ```mermaid
 graph LR
 storeUserKey -.- user.json....
@@ -61,8 +62,9 @@ noteController --> clearCache...
 ```
 
 ### noteContoller.executeClientRequest
+param - **Request** request
 ```mermaid
-graph L
+graph LR
 ```
 
 
@@ -124,7 +126,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDk5Mzg0LDExMzU4MjExMzIsLTc0OD
+eyJoaXN0b3J5IjpbMTE4NDM5NDg0LDExMzU4MjExMzIsLTc0OD
 M1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3
 NzgsMjA0MDI5NzYyMl19
 -->
