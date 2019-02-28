@@ -131,7 +131,8 @@ graph LR
 storageProvider -.- load
 load --> |_storedUserKey| contents
 contents --> authenticatedUser
-
+userController --> add
+authenticatedUser --> add
 ```
 
 
@@ -189,9 +190,9 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NjY5NDA4MiwyMTQ3MjQyODgxLC0xMT
-QwMzg1ODMzLDc3NjMyNzgwOCw3NTI5MzI0OCwyNDMxMDQ3ODQs
-NjMyMDcwNjkzLDExMzU4MjExMzIsLTc0ODM1NDQxLC0xMTkwMD
-IwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3NzgsMjA0MDI5NzYy
-Ml19
+eyJoaXN0b3J5IjpbLTE3MzE2MDY1NzUsMjE0NzI0Mjg4MSwtMT
+E0MDM4NTgzMyw3NzYzMjc4MDgsNzUyOTMyNDgsMjQzMTA0Nzg0
+LDYzMjA3MDY5MywxMTM1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MD
+AyMDA2NiwtMTE0ODk5MDIzNywtODQ5MzMxNzc4LDIwNDAyOTc2
+MjJdfQ==
 -->
