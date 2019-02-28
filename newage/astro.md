@@ -143,12 +143,13 @@ graph LR
 ## UserService
 ### UserService.login
 ```mermaid
-graph TB
+graph LR
 Store
 POST
 POST -.-> username
 POST -.-> password
 POST -.-> grand_type
+
 ```
 
 
@@ -203,7 +204,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3MTM2NDE5MSwxMTgwOTI5OTU1LDE0Nz
+eyJoaXN0b3J5IjpbMTIzNzkyMjMzMSwxMTgwOTI5OTU1LDE0Nz
 Y3NTQ5NjEsMjE0NzI0Mjg4MSwtMTE0MDM4NTgzMyw3NzYzMjc4
 MDgsNzUyOTMyNDgsMjQzMTA0Nzg0LDYzMjA3MDY5MywxMTM1OD
 IxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0ODk5MDIz
