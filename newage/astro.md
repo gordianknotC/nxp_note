@@ -5,12 +5,13 @@ graph LR
 access_token -.- String
 refresh_token -.- String
 expires_in
-expiresAt
+
 
 AuthToken --> access_token
 AuthToken --> refresh_token
 AuthToken -->|indicates duration| expires_in
-AuthToken -->|expiration date| expiresAt
+expires_in -.- Now
+Now -.-
 
 ```
 ```mermaid
@@ -59,6 +60,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0ODM1NDQxLC0xMTkwMDIwMDY2LC0xMT
-Q4OTkwMjM3LC04NDkzMzE3NzgsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbLTE4NDUwNzk3NTMsLTc0ODM1NDQxLC0xMT
+kwMDIwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3NzgsMjA0MDI5
+NzYyMl19
 -->
