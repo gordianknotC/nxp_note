@@ -82,6 +82,12 @@ graph LR
 end
 RequestHeader --> executeRequest
 ```
+```dart
+Future<Response> executeClientRequest(Request request) async {  
+  request.headers[HttpHeaders.authorizationHeader] = clientAuthorization;  
+  return executeRequest(request);  
+}
+```
 
 ### noteContoller.executeRequest
 param - **Request** request
@@ -167,8 +173,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTE5MTc3OTAsMjQzMTA0Nzg0LDYzMj
-A3MDY5MywxMTM1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2
-NiwtMTE0ODk5MDIzNywtODQ5MzMxNzc4LDIwNDAyOTc2MjJdfQ
-==
+eyJoaXN0b3J5IjpbMjAyOTE4OTcwNSwyNDMxMDQ3ODQsNjMyMD
+cwNjkzLDExMzU4MjExMzIsLTc0ODM1NDQxLC0xMTkwMDIwMDY2
+LC0xMTQ4OTkwMjM3LC04NDkzMzE3NzgsMjA0MDI5NzYyMl19
 -->
