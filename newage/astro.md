@@ -123,6 +123,13 @@ graph LR
 	!isExpired -->|set auth into request header| setHeader
 	!isExpired --> executeRequest
 ```
+### noteContoller._loadPersistentUser
+```mermaid
+graph LR
+storageProvider -.- load
+load -.- _storedUserKey
+```
+
 
 ### Store
 ```mermaid
@@ -178,8 +185,9 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NzI0Mjg4MSwtMTE0MDM4NTgzMyw3Nz
-YzMjc4MDgsNzUyOTMyNDgsMjQzMTA0Nzg0LDYzMjA3MDY5Mywx
-MTM1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0OD
-k5MDIzNywtODQ5MzMxNzc4LDIwNDAyOTc2MjJdfQ==
+eyJoaXN0b3J5IjpbOTkxODAyOTIwLDIxNDcyNDI4ODEsLTExND
+AzODU4MzMsNzc2MzI3ODA4LDc1MjkzMjQ4LDI0MzEwNDc4NCw2
+MzIwNzA2OTMsMTEzNTgyMTEzMiwtNzQ4MzU0NDEsLTExOTAwMj
+AwNjYsLTExNDg5OTAyMzcsLTg0OTMzMTc3OCwyMDQwMjk3NjIy
+XX0=
 -->
