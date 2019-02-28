@@ -1,5 +1,5 @@
 
-### AuthToken
+### AuthorizationToken
 ```mermaid
 graph LR
 access_token -.- String
@@ -169,8 +169,8 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc2MzI3ODA4LDc1MjkzMjQ4LDI0MzEwND
-c4NCw2MzIwNzA2OTMsMTEzNTgyMTEzMiwtNzQ4MzU0NDEsLTEx
-OTAwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMzMTc3OCwyMDQwMj
-k3NjIyXX0=
+eyJoaXN0b3J5IjpbLTExNDAzODU4MzMsNzc2MzI3ODA4LDc1Mj
+kzMjQ4LDI0MzEwNDc4NCw2MzIwNzA2OTMsMTEzNTgyMTEzMiwt
+NzQ4MzU0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAyMzcsLTg0OT
+MzMTc3OCwyMDQwMjk3NjIyXX0=
 -->
