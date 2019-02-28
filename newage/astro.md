@@ -114,8 +114,9 @@ executeRequest --> POST
 param - Request request
 param - AuthorizationToken token
 ```mermaid
-
-
+graph LR
+	executeUserRequest -->|request| executeRequest
+```
 
 ### Store
 ```mermaid
@@ -171,8 +172,8 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTAwODM4NjgsLTExNDAzODU4MzMsNz
-c2MzI3ODA4LDc1MjkzMjQ4LDI0MzEwNDc4NCw2MzIwNzA2OTMs
-MTEzNTgyMTEzMiwtNzQ4MzU0NDEsLTExOTAwMjAwNjYsLTExND
-g5OTAyMzcsLTg0OTMzMTc3OCwyMDQwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbMTUxMTMwMTkwMCwtMTE0MDM4NTgzMyw3Nz
+YzMjc4MDgsNzUyOTMyNDgsMjQzMTA0Nzg0LDYzMjA3MDY5Mywx
+MTM1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0OD
+k5MDIzNywtODQ5MzMxNzc4LDIwNDAyOTc2MjJdfQ==
 -->
