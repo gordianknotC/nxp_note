@@ -49,11 +49,13 @@ storeUserKey -.- user.json....
 SetauthenticatedUser --> $User...
 SetauthenticatedUser --> !User...
 !User... --> storageProvider
-SetauthenticatedUser -.- storageProvider
-SetauthenticatedUser -.- onteController
 storageProvider --> store
 store --> storeUserKey
 store --> User...
+
+$User... ---> storageProvider
+
+ SetauthenticatedUser -.- onteController
 ```
 
 
@@ -113,7 +115,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NDc5MTg0OCwxMTM1ODIxMTMyLC03ND
+eyJoaXN0b3J5IjpbMjEwMDY1ODc2MCwxMTM1ODIxMTMyLC03ND
 gzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0ODk5MDIzNywtODQ5MzMx
 Nzc4LDIwNDAyOTc2MjJdfQ==
 -->
