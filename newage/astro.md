@@ -70,7 +70,10 @@ request -.-|autherizationHeader| headers
 authString -.- headers
 requestHeader --> request
 end
-RequestHeader --> executeReqest  
+RequestHeader --> executeRequest  
+executeRequest --> GET
+executeRequest --> POST
+
 ```
 
 
@@ -132,7 +135,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDk5MTk3ODEsMTEzNTgyMTEzMiwtNz
-Q4MzU0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMz
-MTc3OCwyMDQwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbLTgwNjMwODUwMiwxMTM1ODIxMTMyLC03ND
+gzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0ODk5MDIzNywtODQ5MzMx
+Nzc4LDIwNDAyOTc2MjJdfQ==
 -->
