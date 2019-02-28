@@ -146,7 +146,7 @@ graph LR
 - param - **String** password
 ```mermaid
 graph LR
-subgraph feed request and get response
+subgraph feed request to auth/token and get response
 	POST
 	POST -.-> username
 	POST -.-> password
@@ -171,7 +171,19 @@ response.body -.-> AuthorizationToken
 - param - **register** username
 - param - **String** password
 ```mermaid
+graph LR
+subgraph feed request to register/ and get response
+	POST
+	POST -.-> username
+	POST -.-> password
+	password --> request
+	username --> request
 
+	Store
+	Store -.-> executeClientRequest
+	request --> executeClientRequest
+	executeClientRequest -.-> response
+end
 ```
 
 
@@ -228,7 +240,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTgxMjc5NDMsLTUxMDQ0NzcxOCw3MT
+eyJoaXN0b3J5IjpbLTE4MzIzMzUzNTAsLTUxMDQ0NzcxOCw3MT
 M3NjEwMTUsLTE5OTU1NDE1NDgsMTE4MDkyOTk1NSwxNDc2NzU0
 OTYxLDIxNDcyNDI4ODEsLTExNDAzODU4MzMsNzc2MzI3ODA4LD
 c1MjkzMjQ4LDI0MzEwNDc4NCw2MzIwNzA2OTMsMTEzNTgyMTEz
