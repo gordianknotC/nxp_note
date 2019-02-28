@@ -36,9 +36,10 @@ StorageProvider
 load -.- path
 store -.- path
 delete -.- path
-StorageProvider-.- load
+StorageProvider -.- load
 StorageProvider -.- store
-StorageProvider -.- 
+StorageProvider -.- delete
+
 ```
 
 ### noteService
@@ -105,7 +106,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDQzNzg1NywxMTM1ODIxMTMyLC03ND
-gzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0ODk5MDIzNywtODQ5MzMx
-Nzc4LDIwNDAyOTc2MjJdfQ==
+eyJoaXN0b3J5IjpbMTc5OTY2NzAwLDExMzU4MjExMzIsLTc0OD
+M1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3
+NzgsMjA0MDI5NzYyMl19
 -->
