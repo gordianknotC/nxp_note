@@ -28,11 +28,17 @@ Map<String, dynamic> asMap() =>
 	"expiresAt": expiresAt.toIso8601String()  
 };
 ```
+### Store
+```mermaid
+graph TB
+
+```
+
 
 ### UserService
 ```mermaid
 graph TB
-
+Store
 
 ```
 
@@ -76,7 +82,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzExODE2OTYsLTc0ODM1NDQxLC0xMT
-kwMDIwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3NzgsMjA0MDI5
-NzYyMl19
+eyJoaXN0b3J5IjpbMTEzNTgyMTEzMiwtNzQ4MzU0NDEsLTExOT
+AwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMzMTc3OCwyMDQwMjk3
+NjIyXX0=
 -->
