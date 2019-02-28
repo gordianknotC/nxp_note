@@ -1,5 +1,5 @@
 
-### AuthorizationToken
+## AuthorizationToken
 ```mermaid
 graph LR
 access_token -.- String
@@ -29,7 +29,7 @@ Map<String, dynamic> asMap() =>
 };
 ```
 
-### StorageProvider
+## StorageProvider
  ```mermaid
 graph LR
 StorageProvider
@@ -42,7 +42,7 @@ StorageProvider -.- delete
 
 ```
 
-### User
+## User
 ```dart
 int id;  
 String email;  
@@ -51,7 +51,7 @@ AuthorizationToken token;
 bool get isAuthenticated => 
 	token != null && !token.isExpired;
 ```
-
+## noteService
 ### noteService.SetAuthenticateUser
 param - **User** user
 ```mermaid
@@ -136,6 +136,8 @@ authenticatedUser --> add
 ```
 
 
+
+
 ### Store
 ```mermaid
 graph TB
@@ -190,9 +192,9 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3Njc1NDk2MSwyMTQ3MjQyODgxLC0xMT
-QwMzg1ODMzLDc3NjMyNzgwOCw3NTI5MzI0OCwyNDMxMDQ3ODQs
-NjMyMDcwNjkzLDExMzU4MjExMzIsLTc0ODM1NDQxLC0xMTkwMD
-IwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3NzgsMjA0MDI5NzYy
-Ml19
+eyJoaXN0b3J5IjpbLTE0MDA5ODQwNTUsMTQ3Njc1NDk2MSwyMT
+Q3MjQyODgxLC0xMTQwMzg1ODMzLDc3NjMyNzgwOCw3NTI5MzI0
+OCwyNDMxMDQ3ODQsNjMyMDcwNjkzLDExMzU4MjExMzIsLTc0OD
+M1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3
+NzgsMjA0MDI5NzYyMl19
 -->
