@@ -46,7 +46,10 @@ StorageProvider -.- delete
 ```mermaid
 graph LR
 storeUserKey -.- user.json....
-
+SetauthenticatedUser -.- storageProvider
+SetauthenticatedUser -.- onteController
+storageProvider --> store
+store --> storeUserKey
 ```
 
 
@@ -106,7 +109,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTA1NDQwMzAsMTEzNTgyMTEzMiwtNz
+eyJoaXN0b3J5IjpbLTE1ODcxNjMxOTEsMTEzNTgyMTEzMiwtNz
 Q4MzU0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMz
 MTc3OCwyMDQwMjk3NjIyXX0=
 -->
