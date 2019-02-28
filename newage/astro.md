@@ -120,7 +120,7 @@ graph LR
 	token --> $isExpired
 	$isExpired --> Error
 	token --> !isExpired
-	!isExpired
+	!isExpired -->
 ```
 
 ### Store
@@ -177,7 +177,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYxMzkwMDc2LC0xMTQwMzg1ODMzLDc3Nj
+eyJoaXN0b3J5IjpbOTY3MjA2OTc0LC0xMTQwMzg1ODMzLDc3Nj
 MyNzgwOCw3NTI5MzI0OCwyNDMxMDQ3ODQsNjMyMDcwNjkzLDEx
 MzU4MjExMzIsLTc0ODM1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OT
 kwMjM3LC04NDkzMzE3NzgsMjA0MDI5NzYyMl19
