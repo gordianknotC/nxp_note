@@ -144,7 +144,7 @@ graph LR
 ### UserService.login
 ```mermaid
 graph LR
-
+subgraph 
 POST
 POST -.-> username
 POST -.-> password
@@ -158,8 +158,8 @@ Store -.-> executeClientRequest
 request --> executeClientRequest
 executeClientRequest -.-> response
 
-response -.-> error
-response -.-> getAuthenticatedUser
+response. -.-> error
+response. -.-> authorizeToken
 ```
 
 
@@ -214,10 +214,10 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0MTA3MTU3MiwtMTk5NTU0MTU0OCwxMT
-gwOTI5OTU1LDE0NzY3NTQ5NjEsMjE0NzI0Mjg4MSwtMTE0MDM4
-NTgzMyw3NzYzMjc4MDgsNzUyOTMyNDgsMjQzMTA0Nzg0LDYzMj
-A3MDY5MywxMTM1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2
-NiwtMTE0ODk5MDIzNywtODQ5MzMxNzc4LDIwNDAyOTc2MjJdfQ
-==
+eyJoaXN0b3J5IjpbLTE4Nzk2NDM4MDYsLTE5OTU1NDE1NDgsMT
+E4MDkyOTk1NSwxNDc2NzU0OTYxLDIxNDcyNDI4ODEsLTExNDAz
+ODU4MzMsNzc2MzI3ODA4LDc1MjkzMjQ4LDI0MzEwNDc4NCw2Mz
+IwNzA2OTMsMTEzNTgyMTEzMiwtNzQ4MzU0NDEsLTExOTAwMjAw
+NjYsLTExNDg5OTAyMzcsLTg0OTMzMTc3OCwyMDQwMjk3NjIyXX
+0=
 -->
