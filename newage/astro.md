@@ -29,8 +29,18 @@ Map<String, dynamic> asMap() =>
 };
 ```
 
-###
- 
+### StorageProvider
+ ```mermaid
+graph LR
+StorageProvider
+load -.- path
+store -.- path
+delete -.- path
+StorageProvider-.- load
+StorageProvider -.- store
+StorageProvider -.- 
+```
+
 ### noteService
 ```mermaid
 graph LR
@@ -95,7 +105,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc4MjA5NTIwLDExMzU4MjExMzIsLTc0OD
-M1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3
-NzgsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbLTE3NDQzNzg1NywxMTM1ODIxMTMyLC03ND
+gzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0ODk5MDIzNywtODQ5MzMx
+Nzc4LDIwNDAyOTc2MjJdfQ==
 -->
