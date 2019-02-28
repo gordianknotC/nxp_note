@@ -42,22 +42,22 @@ StorageProvider -.- delete
 
 ```
 
-### noteService.authenticateUser
+### noteService.SetAuthenticateUser
 param - **User** user
 ```mermaid
 graph LR
 storeUserKey -.- user.json....
 SetauthenticatedUser --> $User...
 SetauthenticatedUser --> !User...
-!User... --> storageProvider
+$User... --> storageProvider
 storageProvider --> store
 store --> storeUserKey
 store --> User...
 
-$User... --> storageProvider.
+!User... --> storageProvider.
 storageProvider. --> delete
 delete --> storageKey...
-$User... --> noteController
+!User... --> noteController
 noteController --> clearCache...
 ```
 
@@ -157,7 +157,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTI2OTQ2MTgsNjMyMDcwNjkzLDExMz
-U4MjExMzIsLTc0ODM1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OTkw
-MjM3LC04NDkzMzE3NzgsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbMTg5OTI5MzIxMyw2MzIwNzA2OTMsMTEzNT
+gyMTEzMiwtNzQ4MzU0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAy
+MzcsLTg0OTMzMTc3OCwyMDQwMjk3NjIyXX0=
 -->
