@@ -65,7 +65,8 @@ noteController --> clearCache...
 param - **Request** request
 ```mermaid
 graph LR
-request -.- headers
+request -.-|autherizationHeader| headers
+authString --> headers
 
 ```
 
@@ -128,7 +129,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTE4MTI5NjUsMTEzNTgyMTEzMiwtNz
-Q4MzU0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMz
-MTc3OCwyMDQwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbMTQyNDk0NjI0MiwxMTM1ODIxMTMyLC03ND
+gzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0ODk5MDIzNywtODQ5MzMx
+Nzc4LDIwNDAyOTc2MjJdfQ==
 -->
