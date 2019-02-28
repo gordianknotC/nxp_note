@@ -155,7 +155,11 @@ username --> request
 
 Store
 Store -.-> executeClientRequest
+request --> executeClientRequest
 executeClientRequest -.-> response
+
+response -.-> error
+response -.-> getAuthenticatedUser
 ```
 
 
@@ -210,9 +214,10 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTU1NDE1NDgsMTE4MDkyOTk1NSwxND
-c2NzU0OTYxLDIxNDcyNDI4ODEsLTExNDAzODU4MzMsNzc2MzI3
-ODA4LDc1MjkzMjQ4LDI0MzEwNDc4NCw2MzIwNzA2OTMsMTEzNT
-gyMTEzMiwtNzQ4MzU0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAy
-MzcsLTg0OTMzMTc3OCwyMDQwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbMTY0MTA3MTU3MiwtMTk5NTU0MTU0OCwxMT
+gwOTI5OTU1LDE0NzY3NTQ5NjEsMjE0NzI0Mjg4MSwtMTE0MDM4
+NTgzMyw3NzYzMjc4MDgsNzUyOTMyNDgsMjQzMTA0Nzg0LDYzMj
+A3MDY5MywxMTM1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2
+NiwtMTE0ODk5MDIzNywtODQ5MzMxNzc4LDIwNDAyOTc2MjJdfQ
+==
 -->
