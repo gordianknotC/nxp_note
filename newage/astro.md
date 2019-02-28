@@ -2,8 +2,8 @@
 ### AuthToken
 ```mermaid
 graph LR
-access_token -.
-refresh_token
+access_token -.- String
+refresh_token -.- String
 expires_in
 expiresAt
 
@@ -59,6 +59,6 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjA4MTA2NTQsLTExOTAwMjAwNjYsLT
-ExNDg5OTAyMzcsLTg0OTMzMTc3OCwyMDQwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbLTc0ODM1NDQxLC0xMTkwMDIwMDY2LC0xMT
+Q4OTkwMjM3LC04NDkzMzE3NzgsMjA0MDI5NzYyMl19
 -->
