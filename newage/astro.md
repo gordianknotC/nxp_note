@@ -53,9 +53,12 @@ storageProvider --> store
 store --> storeUserKey
 store --> User...
 
-$User... ---> storageProvider
+$User... --> storageProvider.
+storageProvider. --> delete
+delete --> storageKey...
+$User... --> noteController
+noteController --> clearCache...
 
- SetauthenticatedUser -.- onteController
 ```
 
 
@@ -115,7 +118,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMDY1ODc2MCwxMTM1ODIxMTMyLC03ND
-gzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0ODk5MDIzNywtODQ5MzMx
-Nzc4LDIwNDAyOTc2MjJdfQ==
+eyJoaXN0b3J5IjpbMjUyODQxMzEsMTEzNTgyMTEzMiwtNzQ4Mz
+U0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMzMTc3
+OCwyMDQwMjk3NjIyXX0=
 -->
