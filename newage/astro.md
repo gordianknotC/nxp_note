@@ -159,8 +159,11 @@ subgraph feed request and get response
 	executeClientRequest -.-> response
 end
 
-response. -.-> error
-response. -.-> authorizeToken
+response. -.-> !status200
+!status200 -.-> error
+response. -.-> $status200
+$status200 -
+$status200 -.-> AuthorizationToken
 
 
 ```
@@ -217,7 +220,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyOTQxMDY2NCwtMTk5NTU0MTU0OCwxMT
+eyJoaXN0b3J5IjpbMTQ4MTQ0MTU2MSwtMTk5NTU0MTU0OCwxMT
 gwOTI5OTU1LDE0NzY3NTQ5NjEsMjE0NzI0Mjg4MSwtMTE0MDM4
 NTgzMyw3NzYzMjc4MDgsNzUyOTMyNDgsMjQzMTA0Nzg0LDYzMj
 A3MDY5MywxMTM1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2
