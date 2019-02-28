@@ -49,6 +49,8 @@ int id;
 String email;  
 List<Note> notes = [];  
 AuthorizationToken token;
+bool get isAuthenticated => 
+	token != null && !token.isExpired;
 ```
 
 ### noteService.SetAuthenticateUser
@@ -166,7 +168,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNzUyNDU3OCw2MzIwNzA2OTMsMTEzNT
-gyMTEzMiwtNzQ4MzU0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAy
-MzcsLTg0OTMzMTc3OCwyMDQwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbMjQzMTA0Nzg0LDYzMjA3MDY5MywxMTM1OD
+IxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0ODk5MDIz
+NywtODQ5MzMxNzc4LDIwNDAyOTc2MjJdfQ==
 -->
