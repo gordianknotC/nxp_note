@@ -73,7 +73,9 @@ end
 RequestHeader --> executeRequest  
 executeRequest --> GET
 executeRequest --> POST
-
+POST --> JSON
+JSON 
+POST --> AuthCodeLogin...
 ```
 
 
@@ -135,7 +137,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNjMwODUwMiwxMTM1ODIxMTMyLC03ND
-gzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0ODk5MDIzNywtODQ5MzMx
-Nzc4LDIwNDAyOTc2MjJdfQ==
+eyJoaXN0b3J5IjpbLTE4NjE4MzA5NzYsMTEzNTgyMTEzMiwtNz
+Q4MzU0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMz
+MTc3OCwyMDQwMjk3NjIyXX0=
 -->
