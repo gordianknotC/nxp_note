@@ -68,6 +68,9 @@ graph LR
 request -.-|autherizationHeader| headers
 authString --> headers
 
+requestHeader --> request
+
+executeReqest
 ```
 
 
@@ -129,7 +132,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyNDk0NjI0MiwxMTM1ODIxMTMyLC03ND
+eyJoaXN0b3J5IjpbLTY2NTc5NDU5MiwxMTM1ODIxMTMyLC03ND
 gzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0ODk5MDIzNywtODQ5MzMx
 Nzc4LDIwNDAyOTc2MjJdfQ==
 -->
