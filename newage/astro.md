@@ -65,6 +65,8 @@ noteController --> clearCache...
 param - **Request** request
 ```mermaid
 graph LR
+request -.- headers
+
 ```
 
 
@@ -126,7 +128,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NDM5NDg0LDExMzU4MjExMzIsLTc0OD
-M1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3
-NzgsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbLTE3MTE4MTI5NjUsMTEzNTgyMTEzMiwtNz
+Q4MzU0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMz
+MTc3OCwyMDQwMjk3NjIyXX0=
 -->
