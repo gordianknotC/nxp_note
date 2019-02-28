@@ -42,7 +42,6 @@ StorageProvider -.- delete
 
 ```
 
-
 ### User
 ```dart
 int id;  
@@ -168,7 +167,8 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQzMTA0Nzg0LDYzMjA3MDY5MywxMTM1OD
-IxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0ODk5MDIz
-NywtODQ5MzMxNzc4LDIwNDAyOTc2MjJdfQ==
+eyJoaXN0b3J5IjpbLTE3MTE5MTc3OTAsMjQzMTA0Nzg0LDYzMj
+A3MDY5MywxMTM1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2
+NiwtMTE0ODk5MDIzNywtODQ5MzMxNzc4LDIwNDAyOTc2MjJdfQ
+==
 -->
