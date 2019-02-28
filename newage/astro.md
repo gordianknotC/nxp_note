@@ -142,6 +142,8 @@ graph LR
 
 ## UserService
 ### UserService.login
+- param - **register** username
+- param - **String** password
 ```mermaid
 graph LR
 subgraph feed request and get response
@@ -164,9 +166,15 @@ response. -.-> !status200
 response. -.-> $status200
 $status200 -.-> response.body
 response.body -.-> AuthorizationToken
-
+```
+### UserService.register
+- param - **register** username
+- param - **String** password
+```mermaid
 
 ```
+
+
 
 
 
@@ -220,10 +228,10 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMDQ0NzcxOCw3MTM3NjEwMTUsLTE5OT
-U1NDE1NDgsMTE4MDkyOTk1NSwxNDc2NzU0OTYxLDIxNDcyNDI4
-ODEsLTExNDAzODU4MzMsNzc2MzI3ODA4LDc1MjkzMjQ4LDI0Mz
-EwNDc4NCw2MzIwNzA2OTMsMTEzNTgyMTEzMiwtNzQ4MzU0NDEs
-LTExOTAwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMzMTc3OCwyMD
-QwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbLTEzNTgxMjc5NDMsLTUxMDQ0NzcxOCw3MT
+M3NjEwMTUsLTE5OTU1NDE1NDgsMTE4MDkyOTk1NSwxNDc2NzU0
+OTYxLDIxNDcyNDI4ODEsLTExNDAzODU4MzMsNzc2MzI3ODA4LD
+c1MjkzMjQ4LDI0MzEwNDc4NCw2MzIwNzA2OTMsMTEzNTgyMTEz
+MiwtNzQ4MzU0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAyMzcsLT
+g0OTMzMTc3OCwyMDQwMjk3NjIyXX0=
 -->
