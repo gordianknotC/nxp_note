@@ -136,10 +136,12 @@ authenticatedUser --> add
 ```
 ## ServiceController
 ```mermaid
-
+graph LR
+	add --> eventName
 ```
 
 ## UserService
+### UserService
 ```mermaid
 graph TB
 Store
@@ -198,9 +200,9 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzA2NTIyODUsMTQ3Njc1NDk2MSwyMT
-Q3MjQyODgxLC0xMTQwMzg1ODMzLDc3NjMyNzgwOCw3NTI5MzI0
-OCwyNDMxMDQ3ODQsNjMyMDcwNjkzLDExMzU4MjExMzIsLTc0OD
-M1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3
-NzgsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbLTYxODIxMTkwNiwxNDc2NzU0OTYxLDIxND
+cyNDI4ODEsLTExNDAzODU4MzMsNzc2MzI3ODA4LDc1MjkzMjQ4
+LDI0MzEwNDc4NCw2MzIwNzA2OTMsMTEzNTgyMTEzMiwtNzQ4Mz
+U0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMzMTc3
+OCwyMDQwMjk3NjIyXX0=
 -->
