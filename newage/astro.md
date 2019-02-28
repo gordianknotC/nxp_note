@@ -193,7 +193,12 @@ response. -.-> $status409
 $status409 -.-> user_already_exists....
 ```
 ### UserService.getAuthenticatedUser
-- param - 
+- param - **AuthorizationToken** token
+
+
+
+
+
 
 
 
@@ -248,7 +253,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUwNTkzNjEyLC0xODMyMzM1MzUwLC01MT
+eyJoaXN0b3J5IjpbMjc3NjgwNjAxLC0xODMyMzM1MzUwLC01MT
 A0NDc3MTgsNzEzNzYxMDE1LC0xOTk1NTQxNTQ4LDExODA5Mjk5
 NTUsMTQ3Njc1NDk2MSwyMTQ3MjQyODgxLC0xMTQwMzg1ODMzLD
 c3NjMyNzgwOCw3NTI5MzI0OCwyNDMxMDQ3ODQsNjMyMDcwNjkz
