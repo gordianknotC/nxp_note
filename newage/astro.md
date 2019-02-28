@@ -115,7 +115,12 @@ param - Request request
 param - AuthorizationToken token
 ```mermaid
 graph LR
-	executeUserRequest -->|request| executeRequest
+	executeUserRequest --> request
+	executeUserRequest --> token
+	token --> $isExpired
+	$isExpired --> Error
+	token --> !isExpired
+	!isExpired
 ```
 
 ### Store
@@ -172,8 +177,8 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMTMwMTkwMCwtMTE0MDM4NTgzMyw3Nz
-YzMjc4MDgsNzUyOTMyNDgsMjQzMTA0Nzg0LDYzMjA3MDY5Mywx
-MTM1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0OD
-k5MDIzNywtODQ5MzMxNzc4LDIwNDAyOTc2MjJdfQ==
+eyJoaXN0b3J5IjpbNDYxMzkwMDc2LC0xMTQwMzg1ODMzLDc3Nj
+MyNzgwOCw3NTI5MzI0OCwyNDMxMDQ3ODQsNjMyMDcwNjkzLDEx
+MzU4MjExMzIsLTc0ODM1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OT
+kwMjM3LC04NDkzMzE3NzgsMjA0MDI5NzYyMl19
 -->
