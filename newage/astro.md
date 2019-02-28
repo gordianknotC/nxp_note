@@ -131,10 +131,15 @@ graph LR
 storageProvider -.- load
 load --> |_storedUserKey| contents
 contents --> authenticatedUser
-userController --> add
+UserService--> add
 authenticatedUser --> add
 ```
+## UserService
+```mermaid
+graph TB
+Store
 
+```
 
 
 
@@ -145,12 +150,8 @@ graph TB
 ```
 
 
-### UserService
-```mermaid
-graph TB
-Store
 
-```
+
 
 
 
@@ -192,7 +193,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDA5ODQwNTUsMTQ3Njc1NDk2MSwyMT
+eyJoaXN0b3J5IjpbLTE0ODQ5NzE2ODEsMTQ3Njc1NDk2MSwyMT
 Q3MjQyODgxLC0xMTQwMzg1ODMzLDc3NjMyNzgwOCw3NTI5MzI0
 OCwyNDMxMDQ3ODQsNjMyMDcwNjkzLDExMzU4MjExMzIsLTc0OD
 M1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3
