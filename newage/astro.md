@@ -163,7 +163,7 @@ response. -.-> !status200
 !status200 -.-> error
 response. -.-> $status200
 $status200 -.-> response.body
-$status200 -.-> AuthorizationToken
+response.body -.-> AuthorizationToken
 
 
 ```
@@ -220,9 +220,10 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEzNzYxMDE1LC0xOTk1NTQxNTQ4LDExOD
-A5Mjk5NTUsMTQ3Njc1NDk2MSwyMTQ3MjQyODgxLC0xMTQwMzg1
-ODMzLDc3NjMyNzgwOCw3NTI5MzI0OCwyNDMxMDQ3ODQsNjMyMD
-cwNjkzLDExMzU4MjExMzIsLTc0ODM1NDQxLC0xMTkwMDIwMDY2
-LC0xMTQ4OTkwMjM3LC04NDkzMzE3NzgsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbLTUxMDQ0NzcxOCw3MTM3NjEwMTUsLTE5OT
+U1NDE1NDgsMTE4MDkyOTk1NSwxNDc2NzU0OTYxLDIxNDcyNDI4
+ODEsLTExNDAzODU4MzMsNzc2MzI3ODA4LDc1MjkzMjQ4LDI0Mz
+EwNDc4NCw2MzIwNzA2OTMsMTEzNTgyMTEzMiwtNzQ4MzU0NDEs
+LTExOTAwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMzMTc3OCwyMD
+QwMjk3NjIyXX0=
 -->
