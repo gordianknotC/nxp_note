@@ -76,9 +76,7 @@ param - **Request** request
 ```mermaid
 graph LR
 	subgraph RequestHeader
-	request -.-|autherizationHeader| headers
-	authString -.- headers
-	requestHeader --> request
+	request -.-|autherizationHeader| authString 
 end
 RequestHeader --> executeRequest
 ```
@@ -173,7 +171,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyOTE4OTcwNSwyNDMxMDQ3ODQsNjMyMD
-cwNjkzLDExMzU4MjExMzIsLTc0ODM1NDQxLC0xMTkwMDIwMDY2
-LC0xMTQ4OTkwMjM3LC04NDkzMzE3NzgsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbNzUyOTMyNDgsMjQzMTA0Nzg0LDYzMjA3MD
+Y5MywxMTM1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2Niwt
+MTE0ODk5MDIzNywtODQ5MzMxNzc4LDIwNDAyOTc2MjJdfQ==
 -->
