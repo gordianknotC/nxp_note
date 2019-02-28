@@ -145,22 +145,24 @@ graph LR
 ```mermaid
 graph LR
 subgraph feed request and get response
-POST
-POST -.-> username
-POST -.-> password
-POST -.-> grand_type
-password --> request
-grand_type --> request
-username --> request
+	POST
+	POST -.-> username
+	POST -.-> password
+	POST -.-> grand_type
+	password --> request
+	grand_type --> request
+	username --> request
 
-Store
-Store -.-> executeClientRequest
-request --> executeClientRequest
-executeClientRequest -.-> response
+	Store
+	Store -.-> executeClientRequest
+	request --> executeClientRequest
+	executeClientRequest -.-> response
 end
 
 response. -.-> error
 response. -.-> authorizeToken
+
+
 ```
 
 
@@ -215,9 +217,10 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNDk5NDI4LC0xOTk1NTQxNTQ4LDExOD
-A5Mjk5NTUsMTQ3Njc1NDk2MSwyMTQ3MjQyODgxLC0xMTQwMzg1
-ODMzLDc3NjMyNzgwOCw3NTI5MzI0OCwyNDMxMDQ3ODQsNjMyMD
-cwNjkzLDExMzU4MjExMzIsLTc0ODM1NDQxLC0xMTkwMDIwMDY2
-LC0xMTQ4OTkwMjM3LC04NDkzMzE3NzgsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbLTIyOTQxMDY2NCwtMTk5NTU0MTU0OCwxMT
+gwOTI5OTU1LDE0NzY3NTQ5NjEsMjE0NzI0Mjg4MSwtMTE0MDM4
+NTgzMyw3NzYzMjc4MDgsNzUyOTMyNDgsMjQzMTA0Nzg0LDYzMj
+A3MDY5MywxMTM1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2
+NiwtMTE0ODk5MDIzNywtODQ5MzMxNzc4LDIwNDAyOTc2MjJdfQ
+==
 -->
