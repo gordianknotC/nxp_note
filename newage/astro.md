@@ -186,15 +186,12 @@ subgraph feed request to register/ and get response
 end
 
 response. -.-> error
-
 response. -.-> $status200
 $status200 -.-> response.body
 response.body -.-> AuthorizationToken
 response. -.-> $status409
-$status409 -.-> 
+$status409 -.-> user_already_exists....
 ```
-
-
 
 
 
@@ -248,10 +245,10 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEyNzQ0MzksLTE4MzIzMzUzNTAsLTUxMD
-Q0NzcxOCw3MTM3NjEwMTUsLTE5OTU1NDE1NDgsMTE4MDkyOTk1
-NSwxNDc2NzU0OTYxLDIxNDcyNDI4ODEsLTExNDAzODU4MzMsNz
-c2MzI3ODA4LDc1MjkzMjQ4LDI0MzEwNDc4NCw2MzIwNzA2OTMs
-MTEzNTgyMTEzMiwtNzQ4MzU0NDEsLTExOTAwMjAwNjYsLTExND
-g5OTAyMzcsLTg0OTMzMTc3OCwyMDQwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbLTEyMjk1MDE3MjgsLTE4MzIzMzUzNTAsLT
+UxMDQ0NzcxOCw3MTM3NjEwMTUsLTE5OTU1NDE1NDgsMTE4MDky
+OTk1NSwxNDc2NzU0OTYxLDIxNDcyNDI4ODEsLTExNDAzODU4Mz
+MsNzc2MzI3ODA4LDc1MjkzMjQ4LDI0MzEwNDc4NCw2MzIwNzA2
+OTMsMTEzNTgyMTEzMiwtNzQ4MzU0NDEsLTExOTAwMjAwNjYsLT
+ExNDg5OTAyMzcsLTg0OTMzMTc3OCwyMDQwMjk3NjIyXX0=
 -->
