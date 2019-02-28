@@ -65,17 +65,23 @@ noteController --> clearCache...
 param - **Request** request
 ```mermaid
 graph LR
-subgraph RequestHeader
-request -.-|autherizationHeader| headers
-authString -.- headers
-requestHeader --> request
+	subgraph RequestHeader
+	request -.-|autherizationHeader| headers
+	authString -.- headers
+	requestHeader --> request
 end
+
 RequestHeader --> executeRequest  
 executeRequest --> GET
 executeRequest --> POST
+
 POST --> JSON
-JSON 
+JSON -.- body.
 POST --> AuthCodeLogin...
+AuthCodeLogin... -.- body
+
+
+
 ```
 
 
@@ -137,7 +143,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjE4MzA5NzYsMTEzNTgyMTEzMiwtNz
-Q4MzU0NDEsLTExOTAwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMz
-MTc3OCwyMDQwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbMTYxMjI3OTk2LDExMzU4MjExMzIsLTc0OD
+M1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3
+NzgsMjA0MDI5NzYyMl19
 -->
