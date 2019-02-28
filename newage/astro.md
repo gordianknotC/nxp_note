@@ -45,8 +45,7 @@ StorageProvider -.- delete
 ### noteService
 ```mermaid
 graph LR
-
-
+storeUserKey -.- "User.json
 ```
 
 
@@ -106,7 +105,7 @@ Store
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5OTY2NzAwLDExMzU4MjExMzIsLTc0OD
+eyJoaXN0b3J5IjpbNzY5ODQ3Mzg2LDExMzU4MjExMzIsLTc0OD
 M1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3
 NzgsMjA0MDI5NzYyMl19
 -->
