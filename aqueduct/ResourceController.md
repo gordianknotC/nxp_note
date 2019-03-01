@@ -228,7 +228,7 @@ class CityController extends ResourceController {
 ```
 Since there is only one request body,  `Bind.body()`  doesn't take any identifying arguments.
 
-The bound parameter type (`City`  in this example) must implement  `Serializable`. This interface requires two methods to be implemented: one to read data from a request body and another to write data to a response body. Here is an example:
+> The bound parameter type (**`City`**  in this example) must implement  **`Serializable`**. This interface requires two methods to be implemented: one to read data from a request body and another to write data to a response body. Here is an example:
 ```dart
 class City extends Serializable {
   int id;
@@ -249,7 +249,9 @@ class City extends Serializable {
   }
 }
 ```
-ManagedObject and Serializable
+
+
+#### ManagedObject and Serializable
 
 `ManagedObject`s from Aqueduct's ORM implement  `Serializable`  without having to implement these two methods.
 
@@ -459,6 +461,6 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NTY0ODg3MSw1MDc3Njg3NzAsLTU2Nz
+eyJoaXN0b3J5IjpbMTQ3NDk1OTk0MSw1MDc3Njg3NzAsLTU2Nz
 QzOTE3Niw0MTMwMzE0MTFdfQ==
 -->
