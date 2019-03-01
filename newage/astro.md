@@ -64,7 +64,7 @@ graph LR
 ### UserService.login
 - param - **register** username
 - param - **String** password
-- return - **FutureUser**
+- return - **Future(User)**
 ```mermaid
 graph LR
 subgraph feed request to auth/token and get response
@@ -87,6 +87,25 @@ response. -.-> !status200
 response. -.-> $status200
 $status200 -.-> response.body
 response.body -.-> AuthorizationToken
+```
+```dart
+Future<User> login(String username, String password) async {  
+  var req = new Request.post("/auth/token", {  
+    "username": username,  
+  "password": password,  
+  "grant_type": "password"  
+  }, contentType: new ContentType("application", "x-www-form-urlencoded"));  
+  var response = await store.executeClientRequest(req);  
+  if (response.error != null) {  
+    addError(response.error);  
+  return null;  
+  }  
+  switch (response.statusCode) {  
+    case 200: return getAuthenticatedUser(token: new AuthorizationToken.fromMap(response.body));  
+  default: addError(new APIError(response.body["error"]));  
+  }  
+  return null;  
+}
 ```
 
 
@@ -281,11 +300,11 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ5NTY5MTk4LC0yODEyMTE5MDAsMTY1ND
-IxNjI3LDk3MzAyMTQ2NCwtMTY5NTY2OTQwOCwtNjI0MTk2NjA0
-LDI3NzY4MDYwMSwtMTgzMjMzNTM1MCwtNTEwNDQ3NzE4LDcxMz
-c2MTAxNSwtMTk5NTU0MTU0OCwxMTgwOTI5OTU1LDE0NzY3NTQ5
-NjEsMjE0NzI0Mjg4MSwtMTE0MDM4NTgzMyw3NzYzMjc4MDgsNz
-UyOTMyNDgsMjQzMTA0Nzg0LDYzMjA3MDY5MywxMTM1ODIxMTMy
-XX0=
+eyJoaXN0b3J5IjpbLTEwNjkxMjQ1MTIsLTI4MTIxMTkwMCwxNj
+U0MjE2MjcsOTczMDIxNDY0LC0xNjk1NjY5NDA4LC02MjQxOTY2
+MDQsMjc3NjgwNjAxLC0xODMyMzM1MzUwLC01MTA0NDc3MTgsNz
+EzNzYxMDE1LC0xOTk1NTQxNTQ4LDExODA5Mjk5NTUsMTQ3Njc1
+NDk2MSwyMTQ3MjQyODgxLC0xMTQwMzg1ODMzLDc3NjMyNzgwOC
+w3NTI5MzI0OCwyNDMxMDQ3ODQsNjMyMDcwNjkzLDExMzU4MjEx
+MzJdfQ==
 -->
