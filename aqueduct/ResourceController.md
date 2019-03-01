@@ -124,7 +124,7 @@ You may bind any number of HTTP request properties to a single operation method.
 
 ### Optional Bindings
 
-Bindings can be made optional. If a binding is optional, the operation method will still be called even if the bound property isn't in a request. To make a binding optional, move it to the optional parameters of an operation method:
+> ⚡ Bindings can be made optional. If a binding is optional, the operation method will still be called even if the bound property isn't in a request. To make a binding optional, move it to the optional parameters of an operation method:
 ```dart
 @Operation.get()
 Future<Response> getAllCities({@Bind.header('x-api-key') String apiKey}) async {
@@ -459,6 +459,6 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0OTc0NTI5LC01Njc0MzkxNzYsNDEzMD
+eyJoaXN0b3J5IjpbNTA3NzY4NzcwLC01Njc0MzkxNzYsNDEzMD
 MxNDExXX0=
 -->
