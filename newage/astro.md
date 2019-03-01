@@ -50,9 +50,8 @@ List<Note> notes = [];
 AuthorizationToken token;
 bool get isAuthenticated => 
 	token != null && !token.isExpired;
-`
-
 ```
+
 ## ServiceController
 ```mermaid
 graph LR
@@ -65,6 +64,7 @@ graph LR
 - param - **register** username
 - param - **String** password
 - return - **Future(User)**
+- vars - **Store** store
 ```mermaid
 graph LR
 
@@ -307,7 +307,7 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjI0MjEyOTAsLTI3MTIzNzE3NSwtMj
+eyJoaXN0b3J5IjpbLTEzOTkzMTk3NDAsLTI3MTIzNzE3NSwtMj
 U2NjIwMzc5LC0xMDY5MTI0NTEyLC0yODEyMTE5MDAsMTY1NDIx
 NjI3LDk3MzAyMTQ2NCwtMTY5NTY2OTQwOCwtNjI0MTk2NjA0LD
 I3NzY4MDYwMSwtMTgzMjMzNTM1MCwtNTEwNDQ3NzE4LDcxMzc2
