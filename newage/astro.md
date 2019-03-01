@@ -244,7 +244,16 @@ graph LR
 	storageProvider.delete -.- _storedUserKey.
 ```
 ### Store.executeClientRequest
-
+- param - **Request** request
+```mermaid
+```mermaid
+graph LR
+	subgraph RequestHeader
+	request -.-|autherizationHeader| authString 
+end
+RequestHeader --> executeRequest
+```
+```
 
 ### Store.executeUserRequest
 
@@ -292,11 +301,11 @@ graph LR
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDY3NjgyOTYsLTE2OTU2Njk0MDgsLT
-YyNDE5NjYwNCwyNzc2ODA2MDEsLTE4MzIzMzUzNTAsLTUxMDQ0
-NzcxOCw3MTM3NjEwMTUsLTE5OTU1NDE1NDgsMTE4MDkyOTk1NS
-wxNDc2NzU0OTYxLDIxNDcyNDI4ODEsLTExNDAzODU4MzMsNzc2
-MzI3ODA4LDc1MjkzMjQ4LDI0MzEwNDc4NCw2MzIwNzA2OTMsMT
-EzNTgyMTEzMiwtNzQ4MzU0NDEsLTExOTAwMjAwNjYsLTExNDg5
-OTAyMzddfQ==
+eyJoaXN0b3J5IjpbMTc2MDExOTI0MCwtMTY5NTY2OTQwOCwtNj
+I0MTk2NjA0LDI3NzY4MDYwMSwtMTgzMjMzNTM1MCwtNTEwNDQ3
+NzE4LDcxMzc2MTAxNSwtMTk5NTU0MTU0OCwxMTgwOTI5OTU1LD
+E0NzY3NTQ5NjEsMjE0NzI0Mjg4MSwtMTE0MDM4NTgzMyw3NzYz
+Mjc4MDgsNzUyOTMyNDgsMjQzMTA0Nzg0LDYzMjA3MDY5MywxMT
+M1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0ODk5
+MDIzN119
 -->
