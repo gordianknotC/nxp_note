@@ -235,18 +235,18 @@ end
 - param - **User** user
 ```mermaid
 graph LR
-storageProvider -.-> store
-store -.-> User.asMap
-store -.-> _storedUserKey
-$User --> storageProvider
-!User --> noteController.clearCache
-!User --> storageProvider.delete
-storageProvider.delete -.- _storedUserKey.
+	storageProvider -.-> store
+	store -.-> User.asMap
+	store -.-> _storedUserKey
+	$User --> storageProvider
+	!User --> noteController.clearCache
+	!User --> storageProvider.delete
+	storageProvider.delete -.- _storedUserKey.
 ```
+### Store.executeClientRequest
 
 
-
-
+### Store.executeUserRequest
 
 
 
@@ -292,7 +292,7 @@ storageProvider.delete -.- _storedUserKey.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTQyMzQ2MjIsLTE2OTU2Njk0MDgsLT
+eyJoaXN0b3J5IjpbLTEyNDY3NjgyOTYsLTE2OTU2Njk0MDgsLT
 YyNDE5NjYwNCwyNzc2ODA2MDEsLTE4MzIzMzUzNTAsLTUxMDQ0
 NzcxOCw3MTM3NjEwMTUsLTE5OTU1NDE1NDgsMTE4MDkyOTk1NS
 wxNDc2NzU0OTYxLDIxNDcyNDI4ODEsLTExNDAzODU4MzMsNzc2
