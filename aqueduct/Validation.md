@@ -103,11 +103,12 @@ Because  `email`  was not set on  `Query.values`, validations will not be run on
 @Validate.present(onUpdate: false, onInsert: true)
 String email;
 ```
-The inverse of  `Validate.present()`  is  `Validate.absent()`. This validation prevents a property from being set. This is useful when a value should be included during insertion, but can't be updated. Here's an example:
+> ⚡ The inverse of  `Validate.present()`  is  `Validate.absent()`. This validation **prevents a property from being set**. This is useful when a value should be included **during insertion**, but **can't be updated**. Here's an example:
 ```dart
 @Validate.absent(onUpdate: true, onInsert: false)
 String canOnlyBeSetOnce;
 ```
+
 In the above declaration, the validator is only run on update operations and ensures that the property  `canOnlyBeSetOnce`  does not have a value. Because this validator is not run on insert operations, there is no restriction when the object is first inserted.
 
 Validators are not run when a value is null. For example, the following insertion explicitly inserts  `null`  for the property  `email`:
@@ -239,6 +240,6 @@ class _Person {
 ```
 Both  `willUpdate`  and  `willInsert`  are run before any validation occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NDUzMjIwLC03ODc1ODQzMzQsMTAzMT
+eyJoaXN0b3J5IjpbNzk0MjcxODIxLC03ODc1ODQzMzQsMTAzMT
 MyNjIwXX0=
 -->
