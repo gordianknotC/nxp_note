@@ -67,20 +67,20 @@ Future<Response> getUserItem() async {
   return new Response.ok(...);
 }
 ```
-If no operation method exists for a request, a 405 Method Not Allowed response is automatically sent and no operation method is invoked.
+If no operation method exists for a request, a **405** **Method Not Allowed response** is automatically sent and no operation method is invoked.
 
 ## Routing to a ResourceController
 
 A  `ResourceController`  subclass must be preceded by a  `Router`  in the application channel. The  `Router`  will parse path variables so that the controller can use them to determine which operation method should be invoked. A typical route to a  `ResourceController`  contains an optional identifying path variable:
-
+```
 router
   .route("/cities/[:name]")
   .link(() => new CityController());
-
+```
 This route would allow  `CityController`  to implement operation methods for all HTTP methods with both no path variables and the 'name' path variable.
 
 It is considered good practice to break sub-resources into their own controller. For example, the following is preferred:
-
+```
 router
   .route("/cities/[:name]")
   .link(() => new CityController());
@@ -88,13 +88,13 @@ router
 router
   .route("/cities/:name/attractions/[:id]")
   .link(() => new CityAttractionController());
-
+```
 By contrast, the route  `/cities/[:name/[attractions/[:id]]]`, while valid, makes controller logic much more unwieldy.
 
 ## Request Bindings
 
 Operation methods may  _bind_  properties of an HTTP request to its parameters. When the operation method is invoked, the value of that property is passed as an argument to the operation method. For example, the following binds the header named 'X-API-Key' to the argument  `apiKey`:
-
+```
 @Operation.get('name')
 Future<Response> getCityByName(@Bind.header('x-api-key') String apiKey) async {
   if (!isValid(apiKey)) {
@@ -103,28 +103,13 @@ Future<Response> getCityByName(@Bind.header('x-api-key') String apiKey) async {
 
   return new Response.ok(...);
 }
-
+```
 The following table shows the possible types of bindings:
+|  |  |
+|--|--|
+|  |  |
 
-Property
-
-Binding
-
-Path Variable
-
-`@Bind.path(pathVariableName)`
-
-URL Query Parameter
-
-`@Bind.query(queryParameterName)`
-
-Header
-
-`@Bind.header(headerName)`
-
-Request Body
-
-`@Bind.body()`
+ 
 
 You may bind any number of HTTP request properties to a single operation method.
 
@@ -464,6 +449,6 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2NjMxMDE4MywtNTY3NDM5MTc2LDQxMz
-AzMTQxMV19
+eyJoaXN0b3J5IjpbLTg2ODk3NjI2LC01Njc0MzkxNzYsNDEzMD
+MxNDExXX0=
 -->
