@@ -1,4 +1,4 @@
-### Issue Authorization Codes with AuthCodeController
+# Issue Authorization Codes with AuthCodeController
 
 An  `AuthCodeController`  manages the OAuth 2.0 authorization code flow. The authorization code flow is used when an Aqueduct application **allows third party** applications access to authorized resources.
 
@@ -55,5 +55,6 @@ grant_type=authorization_code&code=abcd672kk
 
 An access token will be returned to the server which your friend then stores in their database. Whenever one of their users makes a request that requires accessing your application's data, they will execute requests with that access token.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDU3MjkzMDRdfQ==
+eyJoaXN0b3J5IjpbLTE2MTA1NzM4MTYsLTIxNDU3MjkzMDRdfQ
+==
 -->
