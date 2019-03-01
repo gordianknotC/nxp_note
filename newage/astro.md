@@ -64,6 +64,7 @@ graph LR
 ### UserService.login
 - param - **register** username
 - param - **String** password
+- return - **FutureUser**
 ```mermaid
 graph LR
 subgraph feed request to auth/token and get response
@@ -280,11 +281,11 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4MTIxMTkwMCwxNjU0MjE2MjcsOTczMD
-IxNDY0LC0xNjk1NjY5NDA4LC02MjQxOTY2MDQsMjc3NjgwNjAx
-LC0xODMyMzM1MzUwLC01MTA0NDc3MTgsNzEzNzYxMDE1LC0xOT
-k1NTQxNTQ4LDExODA5Mjk5NTUsMTQ3Njc1NDk2MSwyMTQ3MjQy
-ODgxLC0xMTQwMzg1ODMzLDc3NjMyNzgwOCw3NTI5MzI0OCwyND
-MxMDQ3ODQsNjMyMDcwNjkzLDExMzU4MjExMzIsLTc0ODM1NDQx
+eyJoaXN0b3J5IjpbOTQ5NTY5MTk4LC0yODEyMTE5MDAsMTY1ND
+IxNjI3LDk3MzAyMTQ2NCwtMTY5NTY2OTQwOCwtNjI0MTk2NjA0
+LDI3NzY4MDYwMSwtMTgzMjMzNTM1MCwtNTEwNDQ3NzE4LDcxMz
+c2MTAxNSwtMTk5NTU0MTU0OCwxMTgwOTI5OTU1LDE0NzY3NTQ5
+NjEsMjE0NzI0Mjg4MSwtMTE0MDM4NTgzMyw3NzYzMjc4MDgsNz
+UyOTMyNDgsMjQzMTA0Nzg0LDYzMjA3MDY5MywxMTM1ODIxMTMy
 XX0=
 -->
