@@ -6,7 +6,7 @@ subgraph Store
 	UserService
 	subgraph methods
 		executeClientRequest -.- Request
-		executeUserRequest -.- Request
+		executeUserRequest -.- Request.
 		executeUserRequest -.- token
 		 
 	end
@@ -327,5 +327,5 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzc0OTg1Ml19
+eyJoaXN0b3J5IjpbLTEzNTk4ODc1NTJdfQ==
 -->
