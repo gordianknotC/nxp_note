@@ -80,12 +80,13 @@ A property may have more than one  `Validate`  metadata. In this case, all of th
 String tenCapitalLetters;
 ```
 
-> By default, validations are executed when a  `Query<T>`'s  **`insert`**  or  **`update`**  method is invoked. A validator can be restricted to only run on  `insert`  or  `update`  by passing values for its optional constructor arguments  `onUpdate`  and  `onInsert`:
+> ⚡ By default, validations are executed when a  `Query<T>`'s  **`insert`**  or  **`update`**  method is invoked. A validator can be restricted to only run on  **`insert`**  or  **`update`**  by passing values for its optional constructor arguments  **`onUpdate`**  and  **`onInsert`**:
 ```dart
 @Validate.matches(r"^[A-Z]+$", onInsert: true, onUpdate: false)
 String validateOnInsertOnly;
 ```
-It is important to understand how validations work when a value for a property is  _not_  specified in an insert or update query. For example, consider a  `Person`  with a  `name`  and  `email`  property and then inserted in a query where  `email`  hasn't been set:
+
+It is important to understand how validations work when a value for a property is  **_not_**  specified in an insert or update query. For example, consider a  `Person`  with a  `name`  and  `email`  property and then inserted in a query where  `email`  hasn't been set:
 ```dart
 var query = new Query<Person>(context)
   ..values.name = "Bob";
@@ -235,5 +236,5 @@ class _Person {
 ```
 Both  `willUpdate`  and  `willInsert`  are run before any validation occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MDYyNTkxOSwxMDMxMzI2MjBdfQ==
+eyJoaXN0b3J5IjpbMTAyMjM5MjcyMiwxMDMxMzI2MjBdfQ==
 -->
