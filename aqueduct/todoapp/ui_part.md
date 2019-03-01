@@ -12,7 +12,7 @@ subgraph Store
 		Request --> executeRequest
 		Request. --> executeRequest
 		token --> executeRequest 
-		 
+		executeRequest  --> send_http_request
 		subgraph setAuthenticateUser
 			User
 			setAuthenticateUser -.-> NoteService
@@ -341,6 +341,6 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzODcwODI4MywxNDA0ODA3NDExLDY5MT
-Y3NTY3M119
+eyJoaXN0b3J5IjpbMTc4MTQxMjQwMiwtODM4NzA4MjgzLDE0MD
+Q4MDc0MTEsNjkxNjc1NjczXX0=
 -->
