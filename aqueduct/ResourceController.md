@@ -254,7 +254,7 @@ class City extends Serializable {
 ```
 
 
-> **ManagedObject and Serializable**
+> 🔥 **ManagedObject and Serializable**
 > `ManagedObject`s from Aqueduct's ORM implement  `Serializable`  without having to implement these two methods.
 
 Aqueduct will automatically decode the request body from it's content-type, create a new instance of the bound parameter type, and invoke its  `readFromMap`  method. In the above example, a valid request body would be the following JSON:
@@ -463,6 +463,6 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MTY0MTQyNiw1MDc3Njg3NzAsLTU2Nz
+eyJoaXN0b3J5IjpbLTE1MTUyMDEzOCw1MDc3Njg3NzAsLTU2Nz
 QzOTE3Niw0MTMwMzE0MTFdfQ==
 -->
