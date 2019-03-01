@@ -93,7 +93,7 @@ By contrast, the route  `/cities/[:name/[attractions/[:id]]]`, while valid, make
 
 ## Request Bindings
 
-Operation methods may  _bind_  properties of an HTTP request to its parameters. When the operation method is invoked, the value of that property is passed as an argument to the operation method. For example, the following binds the header named 'X-API-Key' to the argument  `apiKey`:
+Operation methods may  _bind_  properties of an HTTP request to its parameters. When the operation method is invoked, the **value of that property** is passed as an argument to the operation method. For example, the following binds the header named 'X-API-Key' to the argument  `apiKey`:
 ```dart
 @Operation.get('name')
 Future<Response> getCityByName(@Bind.header('x-api-key') String apiKey) async {
@@ -105,7 +105,8 @@ Future<Response> getCityByName(@Bind.header('x-api-key') String apiKey) async {
 }
 ```
 
-⚡ The following table shows the possible types of bindings:
+> ⚡ The following table shows the possible types of bindings:
+>  
 | property | binding |
 |----------|---------|
 | Path Variable | @Bind.path(pathVariableName) |
@@ -457,6 +458,6 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTQxNTM0OTMsLTU2NzQzOTE3Niw0MT
-MwMzE0MTFdfQ==
+eyJoaXN0b3J5IjpbOTE0NjA4MDI5LC01Njc0MzkxNzYsNDEzMD
+MxNDExXX0=
 -->
