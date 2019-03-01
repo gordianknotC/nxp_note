@@ -51,22 +51,22 @@ The named constructor of  `Operation`  tells us which HTTP method the operation 
 -   `Operation.put()`
 -   `Operation.delete()`
 
-> The canonical  `Operation()`  constructor takes the HTTP method as its first argument for non-standard operations, e.g.:
+> ⚡ The canonical  `Operation()`  constructor takes the HTTP method as its first argument for **non-standard** operations, e.g.:
 ```dart
 @Operation('PATCH', 'id')
 Future<Response> patchObjectWithID() async => ...;
-
-All  `Operation`  constructors take a variable list of path variables. There can be multiple path variables for an operation. An operation method will only be invoked if all of its path variables are present in the request path. There can be multiple operation methods for a given HTTP method, as long as each expects a different set of path variables.
+```
+All  `Operation`  constructors take a variable **list** of **path variables**. There can be multiple path variables for an operation. An operation method will only be invoked if all of its path variables are present in the request path. There can be multiple operation methods for a given HTTP method, as long as each expects a different set of path variables.
 
 Here's an example of an operation that requires two path variables:
-
+```dart
 @Operation.get('userID', 'itemID')
 Future<Response> getUserItem() async {
   final userID = request.path.variables['userID'];
   final itemID = request.path.variables['itemID'];
   return new Response.ok(...);
 }
-
+```
 If no operation method exists for a request, a 405 Method Not Allowed response is automatically sent and no operation method is invoked.
 
 ## Routing to a ResourceController
@@ -464,6 +464,6 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU3MzY5Nzg3LC01Njc0MzkxNzYsNDEzMD
-MxNDExXX0=
+eyJoaXN0b3J5IjpbLTE1OTc5MjE2NywtNTY3NDM5MTc2LDQxMz
+AzMTQxMV19
 -->
