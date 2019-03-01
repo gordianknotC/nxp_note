@@ -13,14 +13,16 @@ These methods that are invoked for an operation are called  _operation methods_.
 
 ## Operation Methods
 
-An operation method is an instance method of a  **`ResourceController`**  subclass that has an  **`@Operation`**  annotation. It must return an instance of  `Future<Response>`. Here's an example:
+> ⚡ An **operation method** is an instance method of a  **`ResourceController`**  subclass that has an  **`@Operation`**  annotation. It must return an instance of  **`Future<Response>`**. Here's an example:
 
+```dart
 class CityController extends ResourceController {
   @Operation.get()
   Future<Response> getAllCities() async {
     return new Response.ok(["Atlanta", "Madison", "Mountain View"]);
   }
 }
+```
 
 The above operation method will be invoked when  `CityController`  handles  `GET`  requests without path variables. To handle operation methods with path variables, the name of the path variable is added to the  `@Operation`  annotation:
 
@@ -461,5 +463,5 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDk3ODk4MzcsNDEzMDMxNDExXX0=
+eyJoaXN0b3J5IjpbLTI3NDAxMTA5Myw0MTMwMzE0MTFdfQ==
 -->
