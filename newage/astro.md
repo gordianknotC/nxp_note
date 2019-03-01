@@ -168,6 +168,8 @@ response. -.-> $status200
 $status200 -.-> response.body
 response.body -.-> AuthorizationToken
 ```
+
+
 ### UserService.register
 - param - **register** username
 - param - **String** password
@@ -265,12 +267,16 @@ graph TB
 
 
 
+
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyMjIxNTY1MCwyNzc2ODA2MDEsLTE4Mz
-IzMzUzNTAsLTUxMDQ0NzcxOCw3MTM3NjEwMTUsLTE5OTU1NDE1
-NDgsMTE4MDkyOTk1NSwxNDc2NzU0OTYxLDIxNDcyNDI4ODEsLT
-ExNDAzODU4MzMsNzc2MzI3ODA4LDc1MjkzMjQ4LDI0MzEwNDc4
-NCw2MzIwNzA2OTMsMTEzNTgyMTEzMiwtNzQ4MzU0NDEsLTExOT
-AwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMzMTc3OCwyMDQwMjk3
-NjIyXX0=
+eyJoaXN0b3J5IjpbMTIwNDQ3Njc4LDI3NzY4MDYwMSwtMTgzMj
+MzNTM1MCwtNTEwNDQ3NzE4LDcxMzc2MTAxNSwtMTk5NTU0MTU0
+OCwxMTgwOTI5OTU1LDE0NzY3NTQ5NjEsMjE0NzI0Mjg4MSwtMT
+E0MDM4NTgzMyw3NzYzMjc4MDgsNzUyOTMyNDgsMjQzMTA0Nzg0
+LDYzMjA3MDY5MywxMTM1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MD
+AyMDA2NiwtMTE0ODk5MDIzNywtODQ5MzMxNzc4LDIwNDAyOTc2
+MjJdfQ==
 -->
