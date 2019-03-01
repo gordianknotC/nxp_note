@@ -70,6 +70,7 @@ A  `ValidationContext`  also has information about the property being validated,
 
 
 
+
 ### Validation Behavior
 
 A property may have more than one  `Validate`  metadata. In this case, all of the validations for a property must pass. The order in which multiple validations are performed is undefined and subject to change. Here's an example of validations that ensure a property's value is 10 characters long and only contains 10 alphabetic capital letters:
@@ -78,7 +79,8 @@ A property may have more than one  `Validate`  metadata. In this case, all of th
 @Validate.matches(r"$[A-Z]+^")
 String tenCapitalLetters;
 ```
-By default, validations are executed when a  `Query<T>`'s  `insert`  or  `update`  method is invoked. A validator can be restricted to only run on  `insert`  or  `update`  by passing values for its optional constructor arguments  `onUpdate`  and  `onInsert`:
+
+> By default, validations are executed when a  `Query<T>`'s  **`insert`**  or  **`update`**  method is invoked. A validator can be restricted to only run on  `insert`  or  `update`  by passing values for its optional constructor arguments  `onUpdate`  and  `onInsert`:
 ```dart
 @Validate.matches(r"^[A-Z]+$", onInsert: true, onUpdate: false)
 String validateOnInsertOnly;
@@ -233,5 +235,5 @@ class _Person {
 ```
 Both  `willUpdate`  and  `willInsert`  are run before any validation occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxNzE4MzkwNSwxMDMxMzI2MjBdfQ==
+eyJoaXN0b3J5IjpbMTY2MDYyNTkxOSwxMDMxMzI2MjBdfQ==
 -->
