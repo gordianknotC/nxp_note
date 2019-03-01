@@ -98,7 +98,7 @@ await query.insert();
 Because  `email`  was not set on  `Query.values`, validations will not be run on that property.
 
 
-There are two special validators that can require a property to be set, or require that a property  _not_be set.  `Validate.present()`  requires that the associated property must have a value. A property with this validator must be provided each time the object is inserted or updated. For example, the following declaration requires that  `email`  is set on insertion, but doesn't have to be for updates:
+**to require a property to be set: ** 
 ```dart
 @Validate.present(onUpdate: false, onInsert: true)
 String email;
@@ -239,5 +239,6 @@ class _Person {
 ```
 Both  `willUpdate`  and  `willInsert`  are run before any validation occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NzU4NDMzNCwxMDMxMzI2MjBdfQ==
+eyJoaXN0b3J5IjpbLTc0NDUzMjIwLC03ODc1ODQzMzQsMTAzMT
+MyNjIwXX0=
 -->
