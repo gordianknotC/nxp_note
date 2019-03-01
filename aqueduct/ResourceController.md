@@ -24,8 +24,9 @@ class CityController extends ResourceController {
 }
 ```
 
-The above operation method will be invoked when  `CityController`  handles  `GET`  requests without path variables. To handle operation methods with path variables, the name of the path variable is added to the  `@Operation`  annotation:
+The above operation method will be invoked when  `CityController`  **handles  `GET`**  requests **without** path variables. To handle operation methods **with** path variables, the name of the path variable is added to the  `@Operation`  annotation:
 
+```dart
 class CityController extends ResourceController {
   @Operation.get()
   Future<Response> getAllCities() async {
@@ -38,6 +39,7 @@ class CityController extends ResourceController {
     return new Response.ok(fetchCityWithName(name));
   }
 }
+```
 
 Path Variables
 
@@ -463,5 +465,5 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NDAxMTA5Myw0MTMwMzE0MTFdfQ==
+eyJoaXN0b3J5IjpbLTEwODY2NDk5MDgsNDEzMDMxNDExXX0=
 -->
