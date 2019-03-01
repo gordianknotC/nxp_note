@@ -115,6 +115,7 @@ Future<User> login(String username, String password) async {
 ### UserService.register
 - param - **register** username
 - param - **String** password
+- return - **Future\<User>**
 ```mermaid
 graph LR
 subgraph feed request to register/ and get response
@@ -303,11 +304,11 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODkxNDUwMTMsLTEwNjkxMjQ1MTIsLT
-I4MTIxMTkwMCwxNjU0MjE2MjcsOTczMDIxNDY0LC0xNjk1NjY5
-NDA4LC02MjQxOTY2MDQsMjc3NjgwNjAxLC0xODMyMzM1MzUwLC
-01MTA0NDc3MTgsNzEzNzYxMDE1LC0xOTk1NTQxNTQ4LDExODA5
-Mjk5NTUsMTQ3Njc1NDk2MSwyMTQ3MjQyODgxLC0xMTQwMzg1OD
-MzLDc3NjMyNzgwOCw3NTI5MzI0OCwyNDMxMDQ3ODQsNjMyMDcw
-NjkzXX0=
+eyJoaXN0b3J5IjpbLTU5MDgzNjc1OSwtMTA2OTEyNDUxMiwtMj
+gxMjExOTAwLDE2NTQyMTYyNyw5NzMwMjE0NjQsLTE2OTU2Njk0
+MDgsLTYyNDE5NjYwNCwyNzc2ODA2MDEsLTE4MzIzMzUzNTAsLT
+UxMDQ0NzcxOCw3MTM3NjEwMTUsLTE5OTU1NDE1NDgsMTE4MDky
+OTk1NSwxNDc2NzU0OTYxLDIxNDcyNDI4ODEsLTExNDAzODU4Mz
+MsNzc2MzI3ODA4LDc1MjkzMjQ4LDI0MzEwNDc4NCw2MzIwNzA2
+OTNdfQ==
 -->
