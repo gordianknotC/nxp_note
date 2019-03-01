@@ -378,7 +378,9 @@ Many  `ResourceController`  subclasses will execute  [queries](https://aqueduct.
 
 > ⚡ A  `QueryController<T>`  builds a  **`Query<T>`**  based on the **incoming request.** 
 > - If the request has a **body**, this  `Query<T>`'s  **`values`**  property is read from that body. 
+>       --> where((u) => u.id).equalTo(id)
 > - If the request has a **path variable**, the  `Query<T>`  assigns an expression to the **primary key value**. 
+>       --> ..values = user;
 
 For example, in a normal  `ResourceController`  that responds to a PUT request, you might write the following:
 ```dart
@@ -476,7 +478,7 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMzIzNTA1NiwtNjE0NDE5NzE1LC0xMj
-U5NDAwMjc1LDIwMzM3MDM0OCw1MDc3Njg3NzAsLTU2NzQzOTE3
-Niw0MTMwMzE0MTFdfQ==
+eyJoaXN0b3J5IjpbLTU0MTk2ODcwMSwxMzMzMjM1MDU2LC02MT
+Q0MTk3MTUsLTEyNTk0MDAyNzUsMjAzMzcwMzQ4LDUwNzc2ODc3
+MCwtNTY3NDM5MTc2LDQxMzAzMTQxMV19
 -->
