@@ -406,45 +406,13 @@ class UserController extends QueryController<User> {
   }
 }
 ```
-A  `ManagedObjectController<T>`  is significantly more powerful; you don't even need to subclass it. It does all the things a CRUD endpoint does without any code. Here's an example usage:
-```dart
-router
-  .route("/users/[:id]")
-  .link(() => new ManagedObjectController<User>(context));
-```
-This controller has the following behavior:
 
-Request
 
-Action
 
-POST /users
+A  `ManagedObjectController<T>`  can also be subclassed. 
 
-Inserts a user into the database with values from the request body
-
-GET /users
-
-Fetches all users in the database
-
-GET /users/:id
-
-Fetches a single user by id
-
-DELETE /users/:id
-
-Deletes a single user by id
-
-PUT /users/:id
-
-Updated a single user by id, using values from the request body
-
-The objects returned from getting the collection - e.g,  `GET /users`  - can be modified with query parameters. For example, the following request will return the users sorted by their name in ascending order:
-
-GET /users?sortBy=name,asc
-
-The results can be paged (see  [Paging in Advanced Queries](https://aqueduct.io/docs/db/advanced_queries/)) with query parameters  `offset`,  `count`,  `pageBy`,  `pageAfter`  and  `pagePrior`.
-
-A  `ManagedObjectController<T>`  can also be subclassed. A subclass allows for callbacks to be overridden to adjust the query before execution, or the results before sending the respond. Each operation - fetch, update, delete, etc. - has a pair of methods to do this. For example, the following subclass alters the query and results before any update via  `PUT`:
+> A subclass allows for callbacks to be overridden to **adjust** the query **before execution**, or the results **before sending** the respond. 
+> Each operation - fetch, update, delete, etc. - has a pair of methods to do this. For example, the following subclass alters the query and results before any update via  `PUT`:
 
 ```dart
 class UserController extends ManagedObjectController<User> {
@@ -478,7 +446,7 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MTk2ODcwMSwxMzMzMjM1MDU2LC02MT
-Q0MTk3MTUsLTEyNTk0MDAyNzUsMjAzMzcwMzQ4LDUwNzc2ODc3
-MCwtNTY3NDM5MTc2LDQxMzAzMTQxMV19
+eyJoaXN0b3J5IjpbNDIzOTEwMTQ5LC01NDE5Njg3MDEsMTMzMz
+IzNTA1NiwtNjE0NDE5NzE1LC0xMjU5NDAwMjc1LDIwMzM3MDM0
+OCw1MDc3Njg3NzAsLTU2NzQzOTE3Niw0MTMwMzE0MTFdfQ==
 -->
