@@ -67,6 +67,14 @@ graph LR
 - return - **Future(User)**
 ```mermaid
 graph LR
+subgraph return User by getAuthenticatedUser
+	response. -.-> !status200
+	!status200 -.-> error
+	response. -.-> $status200
+	$status200 --> getAuthenticatedUser
+	getAuthenticatedUser -.-> response.body
+end
+
 subgraph feed request to auth/token and get response
 	POST
 	POST -.-> username
@@ -81,12 +89,6 @@ subgraph feed request to auth/token and get response
 	request --> executeClientRequest
 	executeClientRequest -.-> response
 end
-subgraph return User by getAuthenticatedU
-response. -.-> !status200
-!status200 -.-> error
-response. -.-> $status200
-$status200 --> getAuthenticatedUser
-getAuthenticatedUser -.-> response.body
 
 ```
 ```dart
@@ -301,11 +303,11 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMjUzMjI5NywtMTA2OTEyNDUxMiwtMj
-gxMjExOTAwLDE2NTQyMTYyNyw5NzMwMjE0NjQsLTE2OTU2Njk0
-MDgsLTYyNDE5NjYwNCwyNzc2ODA2MDEsLTE4MzIzMzUzNTAsLT
-UxMDQ0NzcxOCw3MTM3NjEwMTUsLTE5OTU1NDE1NDgsMTE4MDky
-OTk1NSwxNDc2NzU0OTYxLDIxNDcyNDI4ODEsLTExNDAzODU4Mz
-MsNzc2MzI3ODA4LDc1MjkzMjQ4LDI0MzEwNDc4NCw2MzIwNzA2
-OTNdfQ==
+eyJoaXN0b3J5IjpbLTIwMzE1MDI0MTIsLTEwNjkxMjQ1MTIsLT
+I4MTIxMTkwMCwxNjU0MjE2MjcsOTczMDIxNDY0LC0xNjk1NjY5
+NDA4LC02MjQxOTY2MDQsMjc3NjgwNjAxLC0xODMyMzM1MzUwLC
+01MTA0NDc3MTgsNzEzNzYxMDE1LC0xOTk1NTQxNTQ4LDExODA5
+Mjk5NTUsMTQ3Njc1NDk2MSwyMTQ3MjQyODgxLC0xMTQwMzg1OD
+MzLDc3NjMyNzgwOCw3NTI5MzI0OCwyNDMxMDQ3ODQsNjMyMDcw
+NjkzXX0=
 -->
