@@ -13,7 +13,7 @@ class _Tweet {
 ```
 ### Built-in Validators
 
-There are a handful of built-in validations for common operations. For example, it is common to apply a regular expression to a value to ensure it formatted correctly or restrict the possible values to a list of available options. Common validators are available as named constructors f the  `Validate`  class. Here is an example:
+There are a handful of built-in validations for common operations. For example, it is common to apply a regular expression to a value to ensure it formatted correctly or restrict the possible values to a list of available options. Common validators are available as named constructors of the  `Validate`  class. Here is an example:
 ```dart
 class _Story {
   @primaryKey
@@ -228,5 +228,5 @@ class _Person {
 ```
 Both  `willUpdate`  and  `willInsert`  are run before any validation occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgwNDk1NzkzLDEwMzEzMjYyMF19
+eyJoaXN0b3J5IjpbLTIwMjMzNjU2MzgsMTAzMTMyNjIwXX0=
 -->
