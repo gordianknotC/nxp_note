@@ -67,15 +67,15 @@ graph LR
 - return - **Future(User)**
 ```mermaid
 graph LR
-subgraph return User by getAuthenticatedUser
+
+subgraph 2-return User by getAuthenticatedUser
 	response. -.-> !status200
 	!status200 -.-> error
 	response. -.-> $status200
 	$status200 --> getAuthenticatedUser
 	getAuthenticatedUser -.-> response.body
 end
-
-subgraph feed request to auth/token and get response
+subgraph 1-feed request to auth/token and get response
 	POST
 	POST -.-> username
 	POST -.-> password
@@ -303,7 +303,7 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzE1MDI0MTIsLTEwNjkxMjQ1MTIsLT
+eyJoaXN0b3J5IjpbLTE3ODkxNDUwMTMsLTEwNjkxMjQ1MTIsLT
 I4MTIxMTkwMCwxNjU0MjE2MjcsOTczMDIxNDY0LC0xNjk1NjY5
 NDA4LC02MjQxOTY2MDQsMjc3NjgwNjAxLC0xODMyMzM1MzUwLC
 01MTA0NDc3MTgsNzEzNzYxMDE1LC0xOTk1NTQxNTQ4LDExODA5
