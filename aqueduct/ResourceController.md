@@ -72,7 +72,7 @@ If no operation method exists for a request, a **405** **Method Not Allowed resp
 ## Routing to a ResourceController
 
 A  `ResourceController`  subclass must be preceded by a  `Router`  in the application channel. The  `Router`  will parse path variables so that the controller can use them to determine which operation method should be invoked. A typical route to a  `ResourceController`  contains an optional identifying path variable:
-```
+```dart
 router
   .route("/cities/[:name]")
   .link(() => new CityController());
@@ -80,7 +80,7 @@ router
 This route would allow  `CityController`  to implement operation methods for all HTTP methods with both no path variables and the 'name' path variable.
 
 It is considered good practice to break sub-resources into their own controller. For example, the following is preferred:
-```
+```dart
 router
   .route("/cities/[:name]")
   .link(() => new CityController());
@@ -94,7 +94,7 @@ By contrast, the route  `/cities/[:name/[attractions/[:id]]]`, while valid, make
 ## Request Bindings
 
 Operation methods may  _bind_  properties of an HTTP request to its parameters. When the operation method is invoked, the value of that property is passed as an argument to the operation method. For example, the following binds the header named 'X-API-Key' to the argument  `apiKey`:
-```
+```dart
 @Operation.get('name')
 Future<Response> getCityByName(@Bind.header('x-api-key') String apiKey) async {
   if (!isValid(apiKey)) {
@@ -112,7 +112,9 @@ The following table shows the possible types of bindings:
 | URL Query Parameter | @Bind.query(queryParameterName) |
 | Header | @Bind.header(headerName) |
 | Request Body | @Bind.body() |
- 
+
+
+ -----------------------------------------
 
  
 
@@ -121,7 +123,7 @@ You may bind any number of HTTP request properties to a single operation method.
 ### Optional Bindings
 
 Bindings can be made optional. If a binding is optional, the operation method will still be called even if the bound property isn't in a request. To make a binding optional, move it to the optional parameters of an operation method:
-
+```dart
 @Operation.get()
 Future<Response> getAllCities({@Bind.header('x-api-key') String apiKey}) async {
   if (apiKey == null) {
@@ -130,34 +132,34 @@ Future<Response> getAllCities({@Bind.header('x-api-key') String apiKey}) async {
   }
   ...
 }
-
+```
 A bound parameter will be null if not in the request. Like any other Dart optional parameter, you can provide a default value:
-
+```dart
 @Operation.get()
 Future<Response> getAllCities({@Bind.header("x-api-key") String apiKey: "public"}) async {
   ...
 }
-
+```
 ### Automatically Parsing Bindings
 
 Query, header and path bindings can automatically be parsed into other types, such as  `int`  or  `DateTime`. Simply declare the bound parameter's type to the desired type:
-
+```dart
 Future<Response> getCityByID(@Bind.query('id') int cityID)
-
+```
 The type of a bound parameter may be  `String`  or any type that implements  `parse`  (e.g.,  `int`,  `DateTime`). Query parameters may also be bound to  `bool`  parameters; a boolean query parameter will be true if the query parameter has no value (e.g.  `/path?boolean`).
 
 If parsing fails for any reason, an error response is sent and the operation method is not called. For example, the above example binds  `int cityID`  - if the path variable 'id' can't be parsed into an  `int`, a 404 Not Found response is sent. If a query parameter or header value cannot be parsed, a 400 Bad Request response is sent.
 
 You may also bind  `List<T>`  parameters to headers and query parameters, where  `T`  must meet the same criteria as above. Query parameters and headers may appear more than once in a request. For example, the value of  `ids`  is  `[1, 2]`  if the request URL ends with  `/path?id=1&id=2`  and the operation method looks like this:
-
+```dart
 Future<Response> getCitiesByIDs(@Bind.query('id') List<int> ids)
-
+```
 Note that if a parameter is  _not_  bound to a list and there are multiple occurrences of that property in the request, a 400 Bad Request response will be sent. If you want to allow multiple values, you must bind to a  `List<T>`.
 
 ### Header Bindings
 
 The following operation method binds the header named  `X-API-Key`  to the  `apiKey`  parameter:
-
+```dart
 class CityController extends ResourceController {
   @Operation.get()
   Future<Response> getAllCities(@Bind.header('x-api-key') String apiKey) async {
@@ -168,7 +170,7 @@ class CityController extends ResourceController {
     return new Response.ok(['Atlanta', 'Madison', 'Mountain View']);
   }
 }
-
+```
 If an  `X-API-Key`  header is present in the request, its value will be available in  `apiKey`. If it is not,  `getAllCities(apiKey)`  would not be called and a 400 Bad Request response will be sent. If  `apiKey`  were optional, the method is called as normal and  `apiKey`  is null or a default value.
 
 Header names are case-insensitive per the HTTP specification. Therefore, the header name may be 'X-API-KEY', 'X-Api-Key' 'x-api-key', etc. and  `apiKey`  will be bound in all cases.
@@ -176,14 +178,14 @@ Header names are case-insensitive per the HTTP specification. Therefore, the hea
 ### Query Parameter Bindings
 
 The following operation methods binds the query parameter named 'name' to the parameter  `cityName`:
-
+```dart
 class CityController extends ResourceController {
   @Operation.get()
   Future<Response> getAllCities(@Bind.query('name') String cityName) async {
     return new Response.ok(cities.where((c) => c.name == cityName).toList());
   }
 }
-
+```
 Query parameters can be required or optional. If required, a 400 Bad Request response is sent and no operation method is called if the query parameter is not present in the request URL. If optional, the bound variable is null or a default value.
 
 Query parameters are case-sensitive; this binding will only match the query parameter 'name', but not 'Name' or 'NAME'.
@@ -454,6 +456,6 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTIzMTYxMDYsLTU2NzQzOTE3Niw0MT
-MwMzE0MTFdfQ==
+eyJoaXN0b3J5IjpbLTk5MjMzOTA0MiwtNTY3NDM5MTc2LDQxMz
+AzMTQxMV19
 -->
