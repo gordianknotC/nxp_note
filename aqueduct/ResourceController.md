@@ -324,7 +324,9 @@ class UserController extends ResourceController {
 ```
 > ⚡ If a request is made with a content type other than the accepted content types, the controller automatically responds with a **415 Unsupported Media Type response.**
 
-The body of an HTTP request is decoded if the content type is accepted and there exists a operation method to handle the request. The body is not decoded if there is not a matching operation method for the request. The body is decoded by  `ResourceController`  prior to your operation method being invoked. Therefore, you can always use the synchronous  `RequestBody.as`  method to access the body from within an operation method:
+The body of an HTTP request is decoded if the content type is accepted and there exists a operation method to handle the request. The body is not decoded if there is not a matching operation method for the request. The body is decoded by  `ResourceController`  prior to your operation method being invoked. Therefore, 
+
+> ⚡ you can always use the synchronous  **`RequestBody.as`**  method to access the body from within an operation method:
 ```dart
 @Operation.post()
 Future<Response> createThing() async {
@@ -337,7 +339,7 @@ Future<Response> createThing() async {
   return ...;
 }
 ```
-An  `ResourceController`  can also have a default content type for its responses. By default, this is  `application/json`. This default can be changed by changing  `responseContentType`  in the constructor:
+An  `ResourceController`  can also have a default content type for its responses. By default, this is  **`application/json`**. This default can be changed by changing  `responseContentType`  in the constructor:
 ```dart
 class UserController extends ResourceController {
   UserController() {
@@ -464,7 +466,7 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExODI0Nzc5MCwtMTI1OTQwMDI3NSwyMD
-MzNzAzNDgsNTA3NzY4NzcwLC01Njc0MzkxNzYsNDEzMDMxNDEx
-XX0=
+eyJoaXN0b3J5IjpbLTExNjAyMDM5OTEsLTEyNTk0MDAyNzUsMj
+AzMzcwMzQ4LDUwNzc2ODc3MCwtNTY3NDM5MTc2LDQxMzAzMTQx
+MV19
 -->
