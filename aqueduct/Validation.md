@@ -23,7 +23,7 @@ class _Story {
   String state;
 }
 ```
-> A built-in validator is useful because it automatically generates an error message that is returned in an HTTP response. For example, the previous code snippet indicates that the  `state`  property must be one of the four listed strings. If a value other than one of those four strings is used, the error message returned to the HTTP client would be:
+> ⚡ A built-in validator is useful because it automatically generates an error message that is returned in an HTTP response. For example, the previous code snippet indicates that the  `state`  property must be one of the four listed strings. If a value other than one of those four strings is used, the error message returned to the HTTP client would be:
 
 "The value `invalidValue` is not valid for `state`. Valid values are: 'started', 'accepted', 'rejected', 'delivered'.".
 
@@ -228,5 +228,5 @@ class _Person {
 ```
 Both  `willUpdate`  and  `willInsert`  are run before any validation occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODkwNjk1MDY0LDEwMzEzMjYyMF19
+eyJoaXN0b3J5IjpbLTk2Njc4MDcxMSwxMDMxMzI2MjBdfQ==
 -->
