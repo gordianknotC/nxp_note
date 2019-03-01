@@ -201,20 +201,22 @@ $status409 -.-> user_already_exists....
 - param - **AuthorizationToken** token
 ```mermaid
 graph LR
-subgraph get response with authToken
-store -.-> executeUserRequest
-executeUserRequest -.-> token
-executeUserRequest -.-> request_url
-token --> response
-request_url --> response
+subgraph process response
+	response. -.-> $status200
+	response. -.-> error
+	$status200 -.-> response.body
+	$status200 -.-> token
+	token --> User
+	response.body --> User
 end
-subgraph p
-response. -.-> $status200
-response. -.-> error
-$status200 -.-> response.body
-$status200 -.-> token
-token --> User
-response.body --> User
+
+subgraph get response with authToken
+	store -.-> executeUserRequest
+	executeUserRequest -.-> token
+	executeUserRequest -.-> request_url
+	token --> response
+	request_url --> response
+end
 ```
 
 
@@ -272,11 +274,11 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjIzOTg4NDMsMjc3NjgwNjAxLC0xOD
-MyMzM1MzUwLC01MTA0NDc3MTgsNzEzNzYxMDE1LC0xOTk1NTQx
-NTQ4LDExODA5Mjk5NTUsMTQ3Njc1NDk2MSwyMTQ3MjQyODgxLC
-0xMTQwMzg1ODMzLDc3NjMyNzgwOCw3NTI5MzI0OCwyNDMxMDQ3
-ODQsNjMyMDcwNjkzLDExMzU4MjExMzIsLTc0ODM1NDQxLC0xMT
-kwMDIwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3NzgsMjA0MDI5
-NzYyMl19
+eyJoaXN0b3J5IjpbOTI1MTE4ODY4LDI3NzY4MDYwMSwtMTgzMj
+MzNTM1MCwtNTEwNDQ3NzE4LDcxMzc2MTAxNSwtMTk5NTU0MTU0
+OCwxMTgwOTI5OTU1LDE0NzY3NTQ5NjEsMjE0NzI0Mjg4MSwtMT
+E0MDM4NTgzMyw3NzYzMjc4MDgsNzUyOTMyNDgsMjQzMTA0Nzg0
+LDYzMjA3MDY5MywxMTM1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MD
+AyMDA2NiwtMTE0ODk5MDIzNywtODQ5MzMxNzc4LDIwNDAyOTc2
+MjJdfQ==
 -->
