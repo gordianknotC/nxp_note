@@ -374,7 +374,13 @@ class UserController extends ResourceController {
 
 Many  `ResourceController`  subclasses will execute  [queries](https://aqueduct.io/docs/db/executing_queries/). There are helpful  `ResourceController`  subclasses for reducing boilerplate code.
 
-A  `QueryController<T>`  builds a  `Query<T>`  based on the incoming request. If the request has a body, this  `Query<T>`'s  `values`  property is read from that body. If the request has a path variable, the  `Query<T>`  assigns an expression to the primary key value. For example, in a normal  `ResourceController`  that responds to a PUT request, you might write the following:
+#### QueryController<T>
+
+A  `QueryController<T>`  builds a  `Query<T>`  based on the incoming request. 
+- If the request has a body, this  `Query<T>`'s  `values`  property is read from that body. 
+- If the request has a path variable, the  `Query<T>`  assigns an expression to the primary key value. 
+
+For example, in a normal  `ResourceController`  that responds to a PUT request, you might write the following:
 ```dart
 @Operation.put('id')
 Future<Response> updateUser(@Bind.path('id') int id, @Bind.body() User user) async {
@@ -470,7 +476,7 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNDQxOTcxNSwtMTI1OTQwMDI3NSwyMD
-MzNzAzNDgsNTA3NzY4NzcwLC01Njc0MzkxNzYsNDEzMDMxNDEx
-XX0=
+eyJoaXN0b3J5IjpbLTIxNDE2NTkyODUsLTYxNDQxOTcxNSwtMT
+I1OTQwMDI3NSwyMDMzNzAzNDgsNTA3NzY4NzcwLC01Njc0Mzkx
+NzYsNDEzMDMxNDExXX0=
 -->
