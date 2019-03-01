@@ -61,6 +61,7 @@ class ValidatePhoneNumber extends Validate {
   }
 }
 ```
+
 If  `value`  is doesn't meet the validation criteria, this method adds an error string to the  `ValidationContext`  it is passed. Error messages should be brief and indicate the successful criteria that failed. Information about the property being validated will automatically be added to the error message, so you do not need to include that information. If the context has no errors at the end of validation, the validation succeeds; otherwise, it fails.
 
 A  `ValidationContext`  also has information about the property being validated, and whether the validation is running for an object being inserted or an object being updated.
@@ -228,5 +229,5 @@ class _Person {
 ```
 Both  `willUpdate`  and  `willInsert`  are run before any validation occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Nzc2NTc2MjMsMTAzMTMyNjIwXX0=
+eyJoaXN0b3J5IjpbMTk3MjgxODA3MSwxMDMxMzI2MjBdfQ==
 -->
