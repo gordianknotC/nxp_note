@@ -129,7 +129,7 @@ String name;
 
 ### Other Validator Behavior
 
-For validators that can't be built by subclassing  `Validate`, you may override  `ManagedObject<T>.validate()`. This method is useful when a validation involves more than one property. Here's an example:
+For validators that can't be built by subclassing  `Validate`, you may override  **`ManagedObject<T>.validate()`**. This method is useful when a validation involves **more than one property**. Here's an example:
 ```dart
 class Person extends ManagedObject<_Person> implements _Person {
   @override
@@ -182,6 +182,6 @@ class _Person {
 ```
 Both  `willUpdate`  and  `willInsert`  are run before any validation occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDc1NjU0MjYsNzk0MjcxODIxLC03OD
-c1ODQzMzQsMTAzMTMyNjIwXX0=
+eyJoaXN0b3J5IjpbMTIyMDM4NDc4MiwtMTEwNzU2NTQyNiw3OT
+QyNzE4MjEsLTc4NzU4NDMzNCwxMDMxMzI2MjBdfQ==
 -->
