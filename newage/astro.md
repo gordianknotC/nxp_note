@@ -118,7 +118,7 @@ Future<User> login(String username, String password) async {
 - return - **Future\<User>**
 ```mermaid
 graph LR
-subgraph feed request to register/ and get response
+subgraph 1 - feed request to register/ and get response
 	POST
 	POST -.-> username
 	POST -.-> password
@@ -130,13 +130,14 @@ subgraph feed request to register/ and get response
 	request --> executeClientRequest
 	executeClientRequest -.-> response
 end
-
-response. -.-> error
-response. -.-> $status200
-$status200 -.-> response.body
-response.body -.-> AuthorizationToken
-response. -.-> $status409
-$status409 -.-> user_already_exists....
+subgraph 2 - return User by getAuthenticatedUser
+	response. -.-> error
+	response. -.-> $status200
+	$status200 -.-> response.body
+	response.body -.-> AuthorizationToken
+	response. -.-> $status409
+	$status409 -.-> user_already_exists....
+end
 ```
 
 
@@ -304,7 +305,7 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MDgzNjc1OSwtMTA2OTEyNDUxMiwtMj
+eyJoaXN0b3J5IjpbLTI1NjYyMDM3OSwtMTA2OTEyNDUxMiwtMj
 gxMjExOTAwLDE2NTQyMTYyNyw5NzMwMjE0NjQsLTE2OTU2Njk0
 MDgsLTYyNDE5NjYwNCwyNzc2ODA2MDEsLTE4MzIzMzUzNTAsLT
 UxMDQ0NzcxOCw3MTM3NjEwMTUsLTE5OTU1NDE1NDgsMTE4MDky
