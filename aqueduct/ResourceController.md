@@ -109,6 +109,7 @@ Future<Response> getCityByName(@Bind.header('x-api-key') String apiKey) async {
 
 > ⚡ The following table shows the possible types of bindings:
 >  
+
 | property            | binding                         |
 |---------------------|---------------------------------|
 | Path Variable       | @Bind.path(pathVariableName)    |
@@ -116,12 +117,10 @@ Future<Response> getCityByName(@Bind.header('x-api-key') String apiKey) async {
 | Header              | @Bind.header(headerName)        |
 | Request Body        | @Bind.body()                    |
 
-
  -----------------------------------------
 
- 
-
 You may bind any number of HTTP request properties to a single operation method.
+
 
 ### Optional Bindings
 
@@ -460,6 +459,6 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MDE4NTEwOSwtNTY3NDM5MTc2LDQxMz
-AzMTQxMV19
+eyJoaXN0b3J5IjpbMTk0OTc0NTI5LC01Njc0MzkxNzYsNDEzMD
+MxNDExXX0=
 -->
