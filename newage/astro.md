@@ -178,7 +178,7 @@ Future<Response> executeClientRequest(Request request) async {
 }
 ```
 
-### noteContoller.executeRequest
+### Store.executeRequest
 param - **Request** request
 ```mermaid
 graph LR
@@ -201,7 +201,7 @@ executeRequest --> GET
 executeRequest --> POST
 ```
 
-### noteContoller.executeUserRequest
+### Store.executeUserRequest
 param - **Request** request
 param - **AuthorizationToken** token
 ```mermaid
@@ -229,7 +229,7 @@ Future<Response> executeUserRequest(Request request, {AuthorizationToken token})
 }
 ```
 
-### noteContoller._loadPersistentUser
+### Store._loadPersistentUser
 ```mermaid
 graph LR
 storageProvider -.- load
@@ -280,11 +280,11 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1NDIxNjI3LDk3MzAyMTQ2NCwtMTY5NT
-Y2OTQwOCwtNjI0MTk2NjA0LDI3NzY4MDYwMSwtMTgzMjMzNTM1
-MCwtNTEwNDQ3NzE4LDcxMzc2MTAxNSwtMTk5NTU0MTU0OCwxMT
-gwOTI5OTU1LDE0NzY3NTQ5NjEsMjE0NzI0Mjg4MSwtMTE0MDM4
-NTgzMyw3NzYzMjc4MDgsNzUyOTMyNDgsMjQzMTA0Nzg0LDYzMj
-A3MDY5MywxMTM1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2
-Nl19
+eyJoaXN0b3J5IjpbLTI4MTIxMTkwMCwxNjU0MjE2MjcsOTczMD
+IxNDY0LC0xNjk1NjY5NDA4LC02MjQxOTY2MDQsMjc3NjgwNjAx
+LC0xODMyMzM1MzUwLC01MTA0NDc3MTgsNzEzNzYxMDE1LC0xOT
+k1NTQxNTQ4LDExODA5Mjk5NTUsMTQ3Njc1NDk2MSwyMTQ3MjQy
+ODgxLC0xMTQwMzg1ODMzLDc3NjMyNzgwOCw3NTI5MzI0OCwyND
+MxMDQ3ODQsNjMyMDcwNjkzLDExMzU4MjExMzIsLTc0ODM1NDQx
+XX0=
 -->
