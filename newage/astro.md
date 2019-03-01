@@ -228,9 +228,11 @@ end
 ## Store
 - vars - NoteService noteController
 - vars - UserService userController
+### Store.authenticatedUser
+- param - **User** u
 ```mermaid
 graph TB
-User 
+
 ```
 
 
@@ -281,7 +283,7 @@ User
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MzQ4MjAyMCwtNjI0MTk2NjA0LDI3Nz
+eyJoaXN0b3J5IjpbMTc4ODIzMDgwNiwtNjI0MTk2NjA0LDI3Nz
 Y4MDYwMSwtMTgzMjMzNTM1MCwtNTEwNDQ3NzE4LDcxMzc2MTAx
 NSwtMTk5NTU0MTU0OCwxMTgwOTI5OTU1LDE0NzY3NTQ5NjEsMj
 E0NzI0Mjg4MSwtMTE0MDM4NTgzMyw3NzYzMjc4MDgsNzUyOTMy
