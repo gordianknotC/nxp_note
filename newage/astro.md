@@ -192,6 +192,8 @@ response.body -.-> AuthorizationToken
 response. -.-> $status409
 $status409 -.-> user_already_exists....
 ```
+
+
 ### UserService.getAuthenticatedUser
 - param - **AuthorizationToken** token
 ```mermaid
@@ -208,7 +210,6 @@ $status200 -.-> response.body
 $status200 -.-> token
 token --> User
 response.body --> User
-
 ```
 
 
@@ -268,7 +269,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDA5NDgyOTgsMjc3NjgwNjAxLC0xOD
+eyJoaXN0b3J5IjpbLTE4NzIyMTQwMDgsMjc3NjgwNjAxLC0xOD
 MyMzM1MzUwLC01MTA0NDc3MTgsNzEzNzYxMDE1LC0xOTk1NTQx
 NTQ4LDExODA5Mjk5NTUsMTQ3Njc1NDk2MSwyMTQ3MjQyODgxLC
 0xMTQwMzg1ODMzLDc3NjMyNzgwOCw3NTI5MzI0OCwyNDMxMDQ3
