@@ -32,7 +32,6 @@ class CityController extends ResourceController {
   Future<Response> getAllCities() async {
     return new Response.ok(["Atlanta", "Madison", "Mountain View"]);
   }
-
   @Operation.get('name')
   Future<Response> getCityByName() async {
     final id = request.path.variables['name'];
@@ -41,7 +40,7 @@ class CityController extends ResourceController {
 }
 ```
 
-Path Variables
+#### Path Variables
 
 This controller would be linked to the route specification  `/cities/[:name]`, so that it can handle both of these operations. Read more about path variables in  [Routing](https://aqueduct.io/docs/http/routing/).
 
@@ -465,5 +464,5 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODY2NDk5MDgsNDEzMDMxNDExXX0=
+eyJoaXN0b3J5IjpbLTU2NzQzOTE3Niw0MTMwMzE0MTFdfQ==
 -->
