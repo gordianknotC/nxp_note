@@ -159,7 +159,8 @@ var query = new Query<Person>(context)
 ```
 ### Update and Insert Callbacks
 
-`ManagedObject<T>`  subclasses may override  **`willUpdate`**  and  **`willInsert`**  to make changes prior to being updated or inserted. For example, a managed object may have updated and created dates that can be guaranteed to be set when inserted or updated:
+> ⚡ `ManagedObject<T>`  subclasses may override  **`willUpdate`**  and  **`willInsert`**  to make changes prior to being updated or inserted. For example, a managed object may have updated and created dates that can be guaranteed to be set when inserted or updated:
+
 ```dart
 class Person extends ManagedObject<_Person> implements _Person {
   @override
@@ -181,8 +182,9 @@ class _Person {
   DateTime updatedAt;
 }
 ```
-Both  `willUpdate`  and  `willInsert`  are run before any validation occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
+
+Both  **`willUpdate`**  and  **`willInsert`**  are run before any validation occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4Mzk4Njg4MiwtMTEwNzU2NTQyNiw3OT
+eyJoaXN0b3J5IjpbMTAwNzc0MDc2OSwtMTEwNzU2NTQyNiw3OT
 QyNzE4MjEsLTc4NzU4NDMzNCwxMDMxMzI2MjBdfQ==
 -->
