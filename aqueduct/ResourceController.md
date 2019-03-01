@@ -339,7 +339,7 @@ Future<Response> createThing() async {
   return ...;
 }
 ```
-An  `ResourceController`  can also have a default content type for its responses. By default, this is  **`application/json`**. This default can be changed by changing  `responseContentType`  in the constructor:
+An  **`ResourceController`**  can also have a default content type for its responses. By default, this is  **`application/json`**. This default can be changed by changing  **`responseContentType`**  in the constructor:
 ```dart
 class UserController extends ResourceController {
   UserController() {
@@ -466,7 +466,7 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjAyMDM5OTEsLTEyNTk0MDAyNzUsMj
-AzMzcwMzQ4LDUwNzc2ODc3MCwtNTY3NDM5MTc2LDQxMzAzMTQx
-MV19
+eyJoaXN0b3J5IjpbMjEzNzAwMzk0NSwtMTI1OTQwMDI3NSwyMD
+MzNzAzNDgsNTA3NzY4NzcwLC01Njc0MzkxNzYsNDEzMDMxNDEx
+XX0=
 -->
