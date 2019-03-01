@@ -201,12 +201,14 @@ $status409 -.-> user_already_exists....
 - param - **AuthorizationToken** token
 ```mermaid
 graph LR
+subgraph get response with authToken
 store -.-> executeUserRequest
 executeUserRequest -.-> token
 executeUserRequest -.-> request_url
 token --> response
 request_url --> response
-
+end
+subgraph p
 response. -.-> $status200
 response. -.-> error
 $status200 -.-> response.body
@@ -270,7 +272,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzE4OTY0NzgsMjc3NjgwNjAxLC0xOD
+eyJoaXN0b3J5IjpbLTE4NjIzOTg4NDMsMjc3NjgwNjAxLC0xOD
 MyMzM1MzUwLC01MTA0NDc3MTgsNzEzNzYxMDE1LC0xOTk1NTQx
 NTQ4LDExODA5Mjk5NTUsMTQ3Njc1NDk2MSwyMTQ3MjQyODgxLC
 0xMTQwMzg1ODMzLDc3NjMyNzgwOCw3NTI5MzI0OCwyNDMxMDQ3
