@@ -50,89 +50,8 @@ List<Note> notes = [];
 AuthorizationToken token;
 bool get isAuthenticated => 
 	token != null && !token.isExpired;
-```
-## noteService
-### noteService.SetAuthenticateUser
-param - **User** user
-```mermaid
-graph LR
-_storedUserKey-.- user.json....
-SetauthenticatedUser --> $User...
-SetauthenticatedUser --> !User...
-$User... --> storageProvider
-storageProvider --> store
-store --> _storedUserKey
-store --> User...
+`
 
-!User... --> storageProvider.
-storageProvider. --> delete
-delete --> storageKey...
-!User... --> noteController
-noteController --> clearCache...
-```
-
-### noteContoller.executeClientRequest
-param - **Request** request
-```mermaid
-graph LR
-	subgraph RequestHeader
-	request -.-|autherizationHeader| authString 
-end
-RequestHeader --> executeRequest
-```
-```dart
-Future<Response> executeClientRequest(Request request) async {  
-  request.headers[HttpHeaders.authorizationHeader] = clientAuthorization;  
-  return executeRequest(request);  
-}
-```
-
-### noteContoller.executeRequest
-param - **Request** request
-```mermaid
-graph LR
-subgraph GET
-	GET. -.- RequestPath
-	GET. -.- Header
-end
-
-subgraph POST
-	POST. --> JSON
-	JSON -.- body.
-	body. -.- json.encodeBody...
-	POST. --> AuthCodeLogin...
-	AuthCodeLogin... -.- body
-	body -.- Key&Value_String
-end
-
-RequestHeader --> executeRequest  
-executeRequest --> GET
-executeRequest --> POST
-```
-
-### noteContoller.executeUserRequest
-param - Request request
-param - AuthorizationToken token
-```mermaid
-graph LR
-	executeUserRequest --> request
-	executeUserRequest --> token
-	token --> $isExpired
-	$isExpired --> Error
-	token --> !isExpired
-	!isExpired -->|set auth into request header| setHeader
-	!isExpired --> executeRequest
-	
-```
-
-### noteContoller._loadPersistentUser
-```mermaid
-graph LR
-storageProvider -.- load
-load --> |_storedUserKey| contents
-contents --> authenticatedUser
-UserService--> add
-authenticatedUser --> add
 ```
 ## ServiceController
 ```mermaid
@@ -253,9 +172,71 @@ end
 RequestHeader --> executeRequest
 ```
 
-### Store.executeUserRequest
+``
+ 
 
+### noteContoller.executeClientRequest
+param - **Request** request
+```mermaid
+graph LR
+	subgraph RequestHeader
+	request -.-|autherizationHeader| authString 
+end
+RequestHeader --> executeRequest
+```
+```dart
+Future<Response> executeClientRequest(Request request) async {  
+  request.headers[HttpHeaders.authorizationHeader] = clientAuthorization;  
+  return executeRequest(request);  
+}
+```
 
+### noteContoller.executeRequest
+param - **Request** request
+```mermaid
+graph LR
+subgraph GET
+	GET. -.- RequestPath
+	GET. -.- Header
+end
+
+subgraph POST
+	POST. --> JSON
+	JSON -.- body.
+	body. -.- json.encodeBody...
+	POST. --> AuthCodeLogin...
+	AuthCodeLogin... -.- body
+	body -.- Key&Value_String
+end
+
+RequestHeader --> executeRequest  
+executeRequest --> GET
+executeRequest --> POST
+```
+
+### noteContoller.executeUserRequest
+param - Request request
+param - AuthorizationToken token
+```mermaid
+graph LR
+	executeUserRequest --> request
+	executeUserRequest --> token
+	token --> $isExpired
+	$isExpired --> Error
+	token --> !isExpired
+	!isExpired -->|set auth into request header| setHeader
+	!isExpired --> executeRequest
+	
+```
+
+### noteContoller._loadPersistentUser
+```mermaid
+graph LR
+storageProvider -.- load
+load --> |_storedUserKey| contents
+contents --> authenticatedUser
+UserService--> add
+authenticatedUser --> add
 
 
 
@@ -299,11 +280,11 @@ RequestHeader --> executeRequest
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAzMTkwNDc5LC0xNjk1NjY5NDA4LC02Mj
-QxOTY2MDQsMjc3NjgwNjAxLC0xODMyMzM1MzUwLC01MTA0NDc3
-MTgsNzEzNzYxMDE1LC0xOTk1NTQxNTQ4LDExODA5Mjk5NTUsMT
-Q3Njc1NDk2MSwyMTQ3MjQyODgxLC0xMTQwMzg1ODMzLDc3NjMy
-NzgwOCw3NTI5MzI0OCwyNDMxMDQ3ODQsNjMyMDcwNjkzLDExMz
-U4MjExMzIsLTc0ODM1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OTkw
-MjM3XX0=
+eyJoaXN0b3J5IjpbMTE3MjU3NTg4NCwtMTY5NTY2OTQwOCwtNj
+I0MTk2NjA0LDI3NzY4MDYwMSwtMTgzMjMzNTM1MCwtNTEwNDQ3
+NzE4LDcxMzc2MTAxNSwtMTk5NTU0MTU0OCwxMTgwOTI5OTU1LD
+E0NzY3NTQ5NjEsMjE0NzI0Mjg4MSwtMTE0MDM4NTgzMyw3NzYz
+Mjc4MDgsNzUyOTMyNDgsMjQzMTA0Nzg0LDYzMjA3MDY5MywxMT
+M1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2NiwtMTE0ODk5
+MDIzN119
 -->
