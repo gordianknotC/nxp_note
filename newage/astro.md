@@ -1,9 +1,13 @@
 # Def
+```mermaid
+graph LR
+
+```
 Service
 	: 提供一個 Event Stream，可發佈與針聽，並提供該Model實作一些方法以供UI層存取
 	
-xxxProvider
-	: 提供 UI 實作介面
+storeProvider
+	: 提供 UI 實作介面 (store, delete, load) 
 
 
 ## AuthorizationToken
@@ -314,7 +318,7 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyMjk4NTE2NSwtMTM5OTMxOTc0MCwtMj
+eyJoaXN0b3J5IjpbLTkyNjkzMDMyNiwtMTM5OTMxOTc0MCwtMj
 cxMjM3MTc1LC0yNTY2MjAzNzksLTEwNjkxMjQ1MTIsLTI4MTIx
 MTkwMCwxNjU0MjE2MjcsOTczMDIxNDY0LC0xNjk1NjY5NDA4LC
 02MjQxOTY2MDQsMjc3NjgwNjAxLC0xODMyMzM1MzUwLC01MTA0
