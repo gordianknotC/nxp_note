@@ -4,6 +4,7 @@ graph LR
 subgraph Store
 	NoteService
 	UserService
+	StorageProvider
 	subgraph methods
 		executeClientRequest -.- Request
 		executeUserRequest -.- Request.
@@ -12,6 +13,7 @@ subgraph Store
 		Request. --> executeRequest
 		token --> executeRequest 
 		setAuthenticateUser -.- User
+		sub graph setA
 	end
 end
 ```
@@ -330,5 +332,5 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYyMDQyNjgyLDY5MTY3NTY3M119
+eyJoaXN0b3J5IjpbLTE1MTcxOTU1Nyw2OTE2NzU2NzNdfQ==
 -->
