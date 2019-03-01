@@ -31,12 +31,11 @@ The body must also contain the key-value pair  **`grant_type=password`**. For ex
 
 #### client request:
 ```dart
-var clientID = "com.app.demo";
+var clientID     = "com.app.demo";
 var clientSecret = "mySecret";
 var body = "username=bob@stablekernel.com&password=foobar&grant_type=password";
 var clientCredentials = Base64Encoder().convert("$clientID:$clientSecret".codeUnits);
-
-var response = await http.post(
+var response          = await http.post(
   "https://stablekernel.com/auth/token",
   headers: {
     "Content-Type": "application/x-www-form-urlencoded",
@@ -82,6 +81,7 @@ Once granted, an access token can be used to pass  `Authorizer.bearer()`s in the
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc0MTY5MjM0LDE3OTU3OTUzMTUsLTE3Mz
-Q4NTkzNDEsMTAyMjM2OTQ3NCwxNzMzNTUwOTkzXX0=
+eyJoaXN0b3J5IjpbMTYzODY4NjY4NiwzNzQxNjkyMzQsMTc5NT
+c5NTMxNSwtMTczNDg1OTM0MSwxMDIyMzY5NDc0LDE3MzM1NTA5
+OTNdfQ==
 -->
