@@ -314,7 +314,7 @@ Besides binding,  `ResourceController`s have some other behavior that is importa
 
 ### Request and Response Bodies
 
-**acceptedContentTypes** 
+#### acceptedContentTypes
 
 > ⚡ An  `ResourceController`  **can limit the content type of HTTP request bodies it accepts.** By default, an  `ResourceController`  will accept only  **`application/json`**  request bodies for its  **`POST`**  and  **`PUT`**  methods. This can be modified by setting the  **`acceptedContentTypes`**  property in the constructor.
 ```dart
@@ -349,9 +349,9 @@ class UserController extends ResourceController {
   }
 }
 ```
-**responseContentType**
+#### responseContentType
 
-> ⚡ The  `responseContentType`  is the  _default_  response content type. An individual  `Response`  may set its own  `contentType`, which takes precedence over the  `responseContentType`. For example, the following controller returns JSON by default, but if the request specifically asks for XML, that's what it will return:
+> ⚡ The  **`responseContentType`**  is the  _default_  response content type. An individual  `Response`  may set its own  `contentType`, which takes precedence over the  `responseContentType`. For example, the following controller returns **JSON** by default, but if the request specifically asks for XML, that's what it will return:
 ```dart
 class UserController extends ResourceController {
   UserController() {
@@ -470,7 +470,7 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjY4OTU5MDcsLTEyNTk0MDAyNzUsMj
-AzMzcwMzQ4LDUwNzc2ODc3MCwtNTY3NDM5MTc2LDQxMzAzMTQx
-MV19
+eyJoaXN0b3J5IjpbLTYxNDQxOTcxNSwtMTI1OTQwMDI3NSwyMD
+MzNzAzNDgsNTA3NzY4NzcwLC01Njc0MzkxNzYsNDEzMDMxNDEx
+XX0=
 -->
