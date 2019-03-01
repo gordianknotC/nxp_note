@@ -12,12 +12,12 @@ subgraph Store
 		Request --> executeRequest
 		Request. --> executeRequest
 		token --> executeRequest 
-		setAuthenticateUser -.- User
-		
+		 
 		subgraph setAuthenticateUser
+			User
 			setAuthenticateUser -.-> NoteService
 			setAuthenticateUser -.-> UserService
-			setAuthenticateUser -.-> StoreProvider
+			setAuthenticateUser -.-> StorageProvider
 		end
 	end
 end
@@ -337,5 +337,5 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNTg0NjYwOCw2OTE2NzU2NzNdfQ==
+eyJoaXN0b3J5IjpbMTY2NTkyOTc2MCw2OTE2NzU2NzNdfQ==
 -->
