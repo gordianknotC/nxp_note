@@ -51,8 +51,8 @@ The named constructor of  `Operation`  tells us which HTTP method the operation 
 -   `Operation.put()`
 -   `Operation.delete()`
 
-The canonical  `Operation()`  constructor takes the HTTP method as its first argument for non-standard operations, e.g.:
-
+> The canonical  `Operation()`  constructor takes the HTTP method as its first argument for non-standard operations, e.g.:
+```dart
 @Operation('PATCH', 'id')
 Future<Response> patchObjectWithID() async => ...;
 
@@ -464,5 +464,6 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2NzQzOTE3Niw0MTMwMzE0MTFdfQ==
+eyJoaXN0b3J5IjpbNjU3MzY5Nzg3LC01Njc0MzkxNzYsNDEzMD
+MxNDExXX0=
 -->
