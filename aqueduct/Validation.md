@@ -125,65 +125,7 @@ Nullability is enforced by  `Column.isNullable`  property. Consider the followin
 @Validate.length(greaterThan: 10)
 String name;
 ```
-Here, the property  `name`  must not be null and must be greater than 10 characters long. The behavior of inserting or updating this property is shown in the following table.
 
-Input Value for Name
-
-Validation Runs?
-
-Outcome
-
-Insert value longer than 10 characters
-
-Yes
-
-Successful database insert
-
-Insert value shorter than 10 characters
-
-Yes
-
-Database insert not executed, exception thrown
-
-Insert value not specified
-
-No
-
-Database insert fails with non-null violation, exception thrown
-
-Insert value is null
-
-No
-
-Database insert fails with non-null violation, exception thrown
-
-Update value longer than 10 characters
-
-Yes
-
-Successful database update
-
-Update value shorter than 10 characters
-
-Yes
-
-Database update not executed, exception thrown
-
-Update value not specified
-
-No
-
-Successful database update
-
-Update value is explicit null
-
-No
-
-Successful database update
-
-This behavior allows  `ManagedObject<T>`  instances to be partially updated, which also allows for partial PUTs. Partial PUTs can be prevented by adding  `Validate.present()`  metadata to all properties.
-
-This also means that any custom validator can assert that a value passed to  `Validate.validate()`  is non-null.
 
 ### Other Validator Behavior
 
@@ -240,6 +182,6 @@ class _Person {
 ```
 Both  `willUpdate`  and  `willInsert`  are run before any validation occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk0MjcxODIxLC03ODc1ODQzMzQsMTAzMT
-MyNjIwXX0=
+eyJoaXN0b3J5IjpbLTExMDc1NjU0MjYsNzk0MjcxODIxLC03OD
+c1ODQzMzQsMTAzMTMyNjIwXX0=
 -->
