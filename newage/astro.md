@@ -202,6 +202,9 @@ $status409 -.-> user_already_exists....
 ```mermaid
 graph LR
 
+subgraph broadcast user to stream
+	User.... --> broadcast_to_Stream
+end
 subgraph process response
 	response. -.-> $status200
 	response. -.-> error
@@ -219,8 +222,6 @@ subgraph get response with authToken
 	request_url --> response
 end
 
-
- 
 
 ```
 
@@ -279,7 +280,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMDcyMzkyMCwyNzc2ODA2MDEsLTE4Mz
+eyJoaXN0b3J5IjpbMTg5MjY5NDE0OSwyNzc2ODA2MDEsLTE4Mz
 IzMzUzNTAsLTUxMDQ0NzcxOCw3MTM3NjEwMTUsLTE5OTU1NDE1
 NDgsMTE4MDkyOTk1NSwxNDc2NzU0OTYxLDIxNDcyNDI4ODEsLT
 ExNDAzODU4MzMsNzc2MzI3ODA4LDc1MjkzMjQ4LDI0MzEwNDc4
