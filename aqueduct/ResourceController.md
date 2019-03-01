@@ -411,8 +411,8 @@ class UserController extends QueryController<User> {
 
 A  `ManagedObjectController<T>`  can also be subclassed. 
 
-> A subclass allows for callbacks to be overridden to **adjust** the query **before execution**, or the results **before sending** the respond. 
-> Each operation - fetch, update, delete, etc. - has a pair of methods to do this. For example, the following subclass alters the query and results before any update via  `PUT`:
+> ⚡ A subclass allows for callbacks to be overridden to **adjust** the query **before execution**, or the results **before sending** the respond. 
+> ⚡ Each operation - fetch, update, delete, etc. - has a pair of methods to do this. For example, the following subclass alters the query and results before any update via  `PUT`:
 
 ```dart
 class UserController extends ManagedObjectController<User> {
@@ -446,7 +446,7 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIzOTEwMTQ5LC01NDE5Njg3MDEsMTMzMz
-IzNTA1NiwtNjE0NDE5NzE1LC0xMjU5NDAwMjc1LDIwMzM3MDM0
-OCw1MDc3Njg3NzAsLTU2NzQzOTE3Niw0MTMwMzE0MTFdfQ==
+eyJoaXN0b3J5IjpbMTIwNTk0MDIyNywtNTQxOTY4NzAxLDEzMz
+MyMzUwNTYsLTYxNDQxOTcxNSwtMTI1OTQwMDI3NSwyMDMzNzAz
+NDgsNTA3NzY4NzcwLC01Njc0MzkxNzYsNDEzMDMxNDExXX0=
 -->
