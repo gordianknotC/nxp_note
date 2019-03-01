@@ -8,7 +8,9 @@ subgraph Store
 		executeClientRequest -.- Request
 		executeUserRequest -.- Request.
 		executeUserRequest -.- token
-		 
+		Request --> executeRequest
+		Request. --> executeRequest
+		token --> executeRequest 
 	end
 end
 ```
@@ -327,5 +329,5 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTk4ODc1NTJdfQ==
+eyJoaXN0b3J5IjpbNjkxNjc1NjczXX0=
 -->
