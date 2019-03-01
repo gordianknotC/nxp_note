@@ -202,8 +202,8 @@ executeRequest --> POST
 ```
 
 ### noteContoller.executeUserRequest
-param - Request request
-param - AuthorizationToken token
+param - **Request** request
+param - **AuthorizationToken** token
 ```mermaid
 graph LR
 	executeUserRequest --> request
@@ -213,7 +213,20 @@ graph LR
 	token --> !isExpired
 	!isExpired -->|set auth into request header| setHeader
 	!isExpired --> executeRequest
-	
+```
+```dart
+Future<Response> executeUserRequest(Request request, {AuthorizationToken token}) async {  
+  AuthorizationToken t = token ?? authenticatedUser?.token;  
+  if (t?.isExpired ?? true) {  
+    throw new UnauthenticatedException();  
+  }  
+  request.headers[HttpHeaders.authorizationHeader] = t.authorizationHeaderValue;  
+  var response = await executeRequest(request);  
+  if (response.statusCode == 401) {  
+    // Refresh the token, try again  
+  }  
+  return response;  
+}
 ```
 
 ### noteContoller._loadPersistentUser
@@ -267,11 +280,11 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTczMDIxNDY0LC0xNjk1NjY5NDA4LC02Mj
-QxOTY2MDQsMjc3NjgwNjAxLC0xODMyMzM1MzUwLC01MTA0NDc3
-MTgsNzEzNzYxMDE1LC0xOTk1NTQxNTQ4LDExODA5Mjk5NTUsMT
-Q3Njc1NDk2MSwyMTQ3MjQyODgxLC0xMTQwMzg1ODMzLDc3NjMy
-NzgwOCw3NTI5MzI0OCwyNDMxMDQ3ODQsNjMyMDcwNjkzLDExMz
-U4MjExMzIsLTc0ODM1NDQxLC0xMTkwMDIwMDY2LC0xMTQ4OTkw
-MjM3XX0=
+eyJoaXN0b3J5IjpbMTY1NDIxNjI3LDk3MzAyMTQ2NCwtMTY5NT
+Y2OTQwOCwtNjI0MTk2NjA0LDI3NzY4MDYwMSwtMTgzMjMzNTM1
+MCwtNTEwNDQ3NzE4LDcxMzc2MTAxNSwtMTk5NTU0MTU0OCwxMT
+gwOTI5OTU1LDE0NzY3NTQ5NjEsMjE0NzI0Mjg4MSwtMTE0MDM4
+NTgzMyw3NzYzMjc4MDgsNzUyOTMyNDgsMjQzMTA0Nzg0LDYzMj
+A3MDY5MywxMTM1ODIxMTMyLC03NDgzNTQ0MSwtMTE5MDAyMDA2
+Nl19
 -->
