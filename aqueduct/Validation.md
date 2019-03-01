@@ -75,6 +75,7 @@ A  `ValidationContext`  also has information about the property being validated,
 
 A property may have more than one  `Validate`  metadata. In this case, all of the validations for a property must pass. The order in which multiple validations are performed is undefined and subject to change. Here's an example of validations that ensure a property's value is 10 characters long and only contains 10 alphabetic capital letters:
 ```dart
+// property validator
 @Validate.length(equalTo: 10)
 @Validate.matches(r"$[A-Z]+^")
 String tenCapitalLetters;
@@ -82,6 +83,7 @@ String tenCapitalLetters;
 
 > ⚡ By default, validations are executed when a  `Query<T>`'s  **`insert`**  or  **`update`**  method is invoked. A validator can be restricted to only run on  **`insert`**  or  **`update`**  by passing values for its optional constructor arguments  **`onUpdate`**  and  **`onInsert`**:
 ```dart
+// property validator
 @Validate.matches(r"^[A-Z]+$", onInsert: true, onUpdate: false)
 String validateOnInsertOnly;
 ```
@@ -94,6 +96,7 @@ var query = new Query<Person>(context)
 await query.insert();
 ```
 Because  `email`  was not set on  `Query.values`, validations will not be run on that property.
+
 
 There are two special validators that can require a property to be set, or require that a property  _not_be set.  `Validate.present()`  requires that the associated property must have a value. A property with this validator must be provided each time the object is inserted or updated. For example, the following declaration requires that  `email`  is set on insertion, but doesn't have to be for updates:
 ```dart
@@ -236,5 +239,5 @@ class _Person {
 ```
 Both  `willUpdate`  and  `willInsert`  are run before any validation occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMjM5MjcyMiwxMDMxMzI2MjBdfQ==
+eyJoaXN0b3J5IjpbLTc4NzU4NDMzNCwxMDMxMzI2MjBdfQ==
 -->
