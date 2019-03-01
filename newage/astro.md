@@ -140,6 +140,7 @@ graph LR
 	add --> eventName
 ```
 
+
 ## UserService
 ### UserService.login
 - param - **register** username
@@ -215,10 +216,6 @@ response.body --> User
 
 
 
-
-
-
-
 ### Store
 ```mermaid
 graph TB
@@ -269,11 +266,11 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzIyMTQwMDgsMjc3NjgwNjAxLC0xOD
-MyMzM1MzUwLC01MTA0NDc3MTgsNzEzNzYxMDE1LC0xOTk1NTQx
-NTQ4LDExODA5Mjk5NTUsMTQ3Njc1NDk2MSwyMTQ3MjQyODgxLC
-0xMTQwMzg1ODMzLDc3NjMyNzgwOCw3NTI5MzI0OCwyNDMxMDQ3
-ODQsNjMyMDcwNjkzLDExMzU4MjExMzIsLTc0ODM1NDQxLC0xMT
-kwMDIwMDY2LC0xMTQ4OTkwMjM3LC04NDkzMzE3NzgsMjA0MDI5
-NzYyMl19
+eyJoaXN0b3J5IjpbMTQyMjIxNTY1MCwyNzc2ODA2MDEsLTE4Mz
+IzMzUzNTAsLTUxMDQ0NzcxOCw3MTM3NjEwMTUsLTE5OTU1NDE1
+NDgsMTE4MDkyOTk1NSwxNDc2NzU0OTYxLDIxNDcyNDI4ODEsLT
+ExNDAzODU4MzMsNzc2MzI3ODA4LDc1MjkzMjQ4LDI0MzEwNDc4
+NCw2MzIwNzA2OTMsMTEzNTgyMTEzMiwtNzQ4MzU0NDEsLTExOT
+AwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMzMTc3OCwyMDQwMjk3
+NjIyXX0=
 -->
