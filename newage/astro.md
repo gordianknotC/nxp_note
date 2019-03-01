@@ -234,7 +234,12 @@ end
 ### Store.authenticatedUser
 - param - **User** user
 ```mermaid
-graph TB
+graph LR
+User
+storageProvider -.-> store
+store -.-> User.asMap
+store -.-> _stored
+
 
 ```
 
@@ -286,7 +291,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNTUzNTc2NiwtMTY5NTY2OTQwOCwtNj
+eyJoaXN0b3J5IjpbMTAyMTk5NTU3MSwtMTY5NTY2OTQwOCwtNj
 I0MTk2NjA0LDI3NzY4MDYwMSwtMTgzMjMzNTM1MCwtNTEwNDQ3
 NzE4LDcxMzc2MTAxNSwtMTk5NTU0MTU0OCwxMTgwOTI5OTU1LD
 E0NzY3NTQ5NjEsMjE0NzI0Mjg4MSwtMTE0MDM4NTgzMyw3NzYz
