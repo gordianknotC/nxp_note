@@ -195,14 +195,14 @@ Query parameters may also bound for query strings in the request body when the c
 ### Path Variable Bindings
 
 The following operation method binds the path variable 'id' to the parameter  `cityID`:
-
+```dart
 class CityController extends ResourceController {
   @Operation.get('id')
   Future<Response> getCityByID(@Bind.query('id') String cityID) async {
     return new Response.ok(cities.where((c) => c.id == cityID).toList());
   }
 }
-
+```
 Path variables are made available when creating  [routes](https://aqueduct.io/docs/http/routing/). A  `Router`  must have a route that includes a path variable and that path variable must be listed in the  `Operation`  annotation. Path variables are case-sensitive and may not be optional.
 
 If you attempt to bind a path variable that is not present in the  `Operation`, you will get a runtime exception at startup. You do not have to bind path variables for an operation method to be invoked.
@@ -210,7 +210,7 @@ If you attempt to bind a path variable that is not present in the  `Operation`, 
 ### HTTP Request Body Bindings
 
 The body of an HTTP request can also be bound to a parameter:
-
+```dart
 class CityController extends ResourceController {
   CityController(this.context);
 
@@ -223,11 +223,11 @@ class CityController extends ResourceController {
     return new Response.ok(insertedCity);
   }
 }
-
+```
 Since there is only one request body,  `Bind.body()`  doesn't take any identifying arguments.
 
 The bound parameter type (`City`  in this example) must implement  `Serializable`. This interface requires two methods to be implemented: one to read data from a request body and another to write data to a response body. Here is an example:
-
+```dart
 class City extends Serializable {
   int id;
   String name;
@@ -246,18 +246,18 @@ class City extends Serializable {
     }
   }
 }
-
+```
 ManagedObject and Serializable
 
 `ManagedObject`s from Aqueduct's ORM implement  `Serializable`  without having to implement these two methods.
 
 Aqueduct will automatically decode the request body from it's content-type, create a new instance of the bound parameter type, and invoke its  `readFromMap`  method. In the above example, a valid request body would be the following JSON:
-
+```json
 {
   "id": 1,
   "name": "Atlanta"
 }
-
+```
 HTTP Body Decoding
 
 Request bodies are decoded according to their content-type prior to being deserialized. For more information on request body decoding, including decoding content-types other than JSON, see  [this guide](https://aqueduct.io/docs/http/request_and_response/).
@@ -265,12 +265,12 @@ Request bodies are decoded according to their content-type prior to being deseri
 If parsing fails or  `readFromMap`  throws an exception, a 400 Bad Request response will be sent and the operation method won't be called.
 
 You may also bind  `List<Serializable>`  parameters to the request body. Consider the following JSON that contains a list of cities:
-
+```json
 [
   {"id": 1, "name": "Atlanta"},
   {"id": 2, "name": "Madison"}
 ]
-
+```
 This body can be bound by declaring the bound parameter to be a  `List`  of the desired type:
 
 Future<Response> addCity(@Bind.body() List<City> cities)
@@ -284,7 +284,7 @@ Note that if the request's  `Content-Type`  is 'x-www-form-urlencoded', its must
 ### Property Binding
 
 The properties of an  `ResourceController`s may also have  `Bind.query`  and  `Bind.header`metadata. This binds values from the request to the  `ResourceController`  instance itself, making them accessible from  _all_  operation methods.
-
+```dart
 class CityController extends ResourceController {
   @requiredBinding
   @Bind.header("x-timestamp")
@@ -298,7 +298,7 @@ class CityController extends ResourceController {
       // can use both limit and timestamp
   }
 }
-
+```
 In the above, both  `timestamp`  and  `limit`  are bound prior to  `getCities`  being invoked. By default, a bound property is optional. Adding an  `requiredBinding`  annotation changes a property to required. If required, any request without the required property fails with a 400 Bad Request status code and none of the operation methods are invoked.
 
 ## Other ResourceController Behavior
@@ -308,17 +308,17 @@ Besides binding,  `ResourceController`s have some other behavior that is importa
 ### Request and Response Bodies
 
 An  `ResourceController`  can limit the content type of HTTP request bodies it accepts. By default, an  `ResourceController`  will accept only  `application/json`  request bodies for its  `POST`  and  `PUT`  methods. This can be modified by setting the  `acceptedContentTypes`  property in the constructor.
-
+```dart
 class UserController extends ResourceController {
   UserController() {
     acceptedContentTypes = [ContentType.JSON, ContentType.XML];
   }
 }
-
+```
 If a request is made with a content type other than the accepted content types, the controller automatically responds with a 415 Unsupported Media Type response.
 
 The body of an HTTP request is decoded if the content type is accepted and there exists a operation method to handle the request. The body is not decoded if there is not a matching operation method for the request. The body is decoded by  `ResourceController`  prior to your operation method being invoked. Therefore, you can always use the synchronous  `RequestBody.as`  method to access the body from within an operation method:
-
+```dart
 @Operation.post()
 Future<Response> createThing() async {
   // do this:
@@ -329,17 +329,17 @@ Future<Response> createThing() async {
 
   return ...;
 }
-
+```
 An  `ResourceController`  can also have a default content type for its responses. By default, this is  `application/json`. This default can be changed by changing  `responseContentType`  in the constructor:
-
+```dart
 class UserController extends ResourceController {
   UserController() {
     responseContentType = ContentType.XML;
   }
 }
-
+```
 The  `responseContentType`  is the  _default_  response content type. An individual  `Response`  may set its own  `contentType`, which takes precedence over the  `responseContentType`. For example, the following controller returns JSON by default, but if the request specifically asks for XML, that's what it will return:
-
+```dart
 class UserController extends ResourceController {
   UserController() {
     responseContentType = ContentType.JSON;
@@ -356,7 +356,7 @@ class UserController extends ResourceController {
     return response;
   }
 }
-
+```
 ### More Specialized ResourceControllers
 
 Many  `ResourceController`  subclasses will execute  [queries](https://aqueduct.io/docs/db/executing_queries/). There are helpful  `ResourceController`  subclasses for reducing boilerplate code.
@@ -456,6 +456,6 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MjMzOTA0MiwtNTY3NDM5MTc2LDQxMz
-AzMTQxMV19
+eyJoaXN0b3J5IjpbNTk5MTY1NDM2LC01Njc0MzkxNzYsNDEzMD
+MxNDExXX0=
 -->
