@@ -314,7 +314,7 @@ Besides binding,  `ResourceController`s have some other behavior that is importa
 
 ### Request and Response Bodies
 
-An  `ResourceController`  can limit the content type of HTTP request bodies it accepts. By default, an  `ResourceController`  will accept only  `application/json`  request bodies for its  `POST`  and  `PUT`  methods. This can be modified by setting the  `acceptedContentTypes`  property in the constructor.
+An  `ResourceController`  **can limit the content type of HTTP request bodies it accepts.** By default, an  `ResourceController`  will accept only  `application/json`  request bodies for its  `POST`  and  `PUT`  methods. This can be modified by setting the  `acceptedContentTypes`  property in the constructor.
 ```dart
 class UserController extends ResourceController {
   UserController() {
@@ -464,6 +464,6 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMzcwMzQ4LDUwNzc2ODc3MCwtNTY3ND
-M5MTc2LDQxMzAzMTQxMV19
+eyJoaXN0b3J5IjpbNjUzNzkyMDQ0LDIwMzM3MDM0OCw1MDc3Nj
+g3NzAsLTU2NzQzOTE3Niw0MTMwMzE0MTFdfQ==
 -->
