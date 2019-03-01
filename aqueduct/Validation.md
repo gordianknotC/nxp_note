@@ -25,15 +25,15 @@ class _Story {
 ```
 > ⚡ A built-in validator is useful because it automatically generates an error message that is returned in an HTTP response. For example, the previous code snippet indicates that the  `state`  property must be one of the four listed strings. If a value other than one of those four strings is used, the error message returned to the HTTP client would be:
 
-"The value `invalidValue` is not valid for `state`. Valid values are: 'started', 'accepted', 'rejected', 'delivered'.".
+**"The value `invalidValue` is not valid for `state`. Valid values are: 'started', 'accepted', 'rejected', 'delivered'.".**
 
 See the API reference for  `Validate`  and its named constructors for possible options.
+ `Validate`  annotations on transient properties have no effect. This annotation is only valid for properties declared in a table definition.
 
-`Validate`  annotations on transient properties have no effect. This annotation is only valid for properties declared in a table definition.
 
 ### Custom Validators
 
-There will be times where the built-in validators are not sufficient for your application's use case. You may create subclasses of  `Validate`  to provide custom validation behavior. For example, if there were a  `ValidatePhoneNumber`  class:
+There will be times where the built-in validators are not sufficient for your application's use case. You may create subclasses of  `Validate`  to provide custom validation behavior. For example, if there were a  **`ValidatePhoneNumber`**  class:
 ```dart
 class _Person {
   @primaryKey
@@ -228,5 +228,5 @@ class _Person {
 ```
 Both  `willUpdate`  and  `willInsert`  are run before any validation occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2Njc4MDcxMSwxMDMxMzI2MjBdfQ==
+eyJoaXN0b3J5IjpbLTE5Nzc2NTc2MjMsMTAzMTMyNjIwXX0=
 -->
