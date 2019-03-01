@@ -183,8 +183,8 @@ class _Person {
 }
 ```
 
-Both  **`willUpdate`**  and  **`willInsert`**  are run before any validation occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
+Both  **`willUpdate`**  and  **`willInsert`**  are run **before any validation** occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwNzc0MDc2OSwtMTEwNzU2NTQyNiw3OT
+eyJoaXN0b3J5IjpbLTI3MjU2NjE3NSwtMTEwNzU2NTQyNiw3OT
 QyNzE4MjEsLTc4NzU4NDMzNCwxMDMxMzI2MjBdfQ==
 -->
