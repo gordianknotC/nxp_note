@@ -16,8 +16,9 @@ subgraph Store
 		subgraph setAuthenticateUser
 			User
 			setAuthenticateUser -.-> NoteService
-			setAuthenticateUser -.-> UserService
+			NoteService --> clear.cache
 			setAuthenticateUser -.-> StorageProvider
+			StorageProvider --> delete.and.store
 		end
 	end
 end
@@ -337,5 +338,5 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NTkyOTc2MCw2OTE2NzU2NzNdfQ==
+eyJoaXN0b3J5IjpbMTQwNDgwNzQxMSw2OTE2NzU2NzNdfQ==
 -->
