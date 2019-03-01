@@ -376,9 +376,9 @@ Many  `ResourceController`  subclasses will execute  [queries](https://aqueduct.
 
 #### QueryController<T>
 
-A  `QueryController<T>`  builds a  `Query<T>`  based on the incoming request. 
-- If the request has a body, this  `Query<T>`'s  `values`  property is read from that body. 
-- If the request has a path variable, the  `Query<T>`  assigns an expression to the primary key value. 
+> ⚡ A  `QueryController<T>`  builds a  **`Query<T>`**  based on the **incoming request.** 
+- If the request has a **body**, this  `Query<T>`'s  **`values`**  property is read from that body. 
+- If the request has a **path variable**, the  `Query<T>`  assigns an expression to the **primary key value**. 
 
 For example, in a normal  `ResourceController`  that responds to a PUT request, you might write the following:
 ```dart
@@ -476,7 +476,7 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDE2NTkyODUsLTYxNDQxOTcxNSwtMT
-I1OTQwMDI3NSwyMDMzNzAzNDgsNTA3NzY4NzcwLC01Njc0Mzkx
-NzYsNDEzMDMxNDExXX0=
+eyJoaXN0b3J5IjpbLTM0MzY3MTQ0NCwtNjE0NDE5NzE1LC0xMj
+U5NDAwMjc1LDIwMzM3MDM0OCw1MDc3Njg3NzAsLTU2NzQzOTE3
+Niw0MTMwMzE0MTFdfQ==
 -->
