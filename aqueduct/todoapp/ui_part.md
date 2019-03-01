@@ -11,6 +11,7 @@ subgraph Store
 		Request --> executeRequest
 		Request. --> executeRequest
 		token --> executeRequest 
+		setAuthenticateUser -.- User
 	end
 end
 ```
@@ -329,5 +330,5 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkxNjc1NjczXX0=
+eyJoaXN0b3J5IjpbNzYyMDQyNjgyLDY5MTY3NTY3M119
 -->
