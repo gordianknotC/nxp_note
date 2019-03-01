@@ -81,40 +81,40 @@ By default, validations are executed when a  `Query<T>`'s  `insert`  or  `update
 String validateOnInsertOnly;
 
 It is important to understand how validations work when a value for a property is  _not_  specified in an insert or update query. For example, consider a  `Person`  with a  `name`  and  `email`  property and then inserted in a query where  `email`  hasn't been set:
-
+```
 var query = new Query<Person>(context)
   ..values.name = "Bob";
 
 await query.insert();
-
+```
 Because  `email`  was not set on  `Query.values`, validations will not be run on that property.
 
 There are two special validators that can require a property to be set, or require that a property  _not_be set.  `Validate.present()`  requires that the associated property must have a value. A property with this validator must be provided each time the object is inserted or updated. For example, the following declaration requires that  `email`  is set on insertion, but doesn't have to be for updates:
-
+```
 @Validate.present(onUpdate: false, onInsert: true)
 String email;
-
+```
 The inverse of  `Validate.present()`  is  `Validate.absent()`. This validation prevents a property from being set. This is useful when a value should be included during insertion, but can't be updated. Here's an example:
-
+```
 @Validate.absent(onUpdate: true, onInsert: false)
 String canOnlyBeSetOnce;
-
+```
 In the above declaration, the validator is only run on update operations and ensures that the property  `canOnlyBeSetOnce`  does not have a value. Because this validator is not run on insert operations, there is no restriction when the object is first inserted.
 
 Validators are not run when a value is null. For example, the following insertion explicitly inserts  `null`  for the property  `email`:
-
+```
 var query = new Query<Person>(context)
   ..values.email = null
   ..values.name = "Bob";
 
 await query.insert();
-
+```
 Nullability is enforced by  `Column.isNullable`  property. Consider the following declaration:
-
+```
 @Column(nullable: false)
 @Validate.length(greaterThan: 10)
 String name;
-
+```
 Here, the property  `name`  must not be null and must be greater than 10 characters long. The behavior of inserting or updating this property is shown in the following table.
 
 Input Value for Name
@@ -230,5 +230,5 @@ class _Person {
 
 Both  `willUpdate`  and  `willInsert`  are run before any validation occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzMwMTE4NTJdfQ==
+eyJoaXN0b3J5IjpbMTg3Njc1ODA1MF19
 -->
