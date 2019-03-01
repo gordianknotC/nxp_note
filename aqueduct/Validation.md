@@ -1,7 +1,5 @@
  # Validating Data
 
-Data is added to a database through  `update`  and  `insert`  queries. As part of these two operations, a  `ManagedObject<T>`  will ensure that its properties have valid values. For example, a  `Person`  object might ensure that its name starts with a capital letter and that its phone number has only numeric values. If one or more validation fails, the update or insert operation will fail and the data is not sent to the database. A validation failure will throw a  `QueryException`  that returns an HTTP response with error messaging to help the client correct their request.
-
 The preferred way of setting a validation is to add  `Validate`  metadata to properties of a table definition. Here's an example of a validation that ensures a tweet is less than 140 characters:
 ```dart
 class Tweet extends ManagedObject<_Tweet> implements _Tweet {}
@@ -230,5 +228,5 @@ class _Person {
 ```
 Both  `willUpdate`  and  `willInsert`  are run before any validation occurs. Like validations,  `willUpdate`  and  `willInsert`  are skipped when using  `Query.valueMap`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMTMyNjIwXX0=
+eyJoaXN0b3J5IjpbOTgwNDk1NzkzLDEwMzEzMjYyMF19
 -->
