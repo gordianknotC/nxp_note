@@ -1,7 +1,7 @@
  
 # ResourceController
 
-A  `ResourceController`  is a  [controller](https://aqueduct.io/docs/http/controller/)  that provide conveniences for implementing endpoint controllers. A  `ResourceController`  must be subclassed, and in that subclass, you write a method for each operation on that type of resource. For example, a  `UserController`  might handle the following operations:
+A  `ResourceController`  is a  [controller](https://aqueduct.io/docs/http/controller/)  that provide conveniences for **implementing endpoint controllers**. A  `ResourceController`  must be subclassed, and in that subclass, you write a method for each operation on that type of resource. For example, a  `UserController`  might handle the following operations:
 
 -   creating a new user (`POST /users`)
 -   getting all users (`GET /users`)
@@ -13,7 +13,7 @@ These methods that are invoked for an operation are called  _operation methods_.
 
 ## Operation Methods
 
-An operation method is an instance method of a  `ResourceController`  subclass that has an  `@Operation`  annotation. It must return an instance of  `Future<Response>`. Here's an example:
+An operation method is an instance method of a  **`ResourceController`**  subclass that has an  **`@Operation`**  annotation. It must return an instance of  `Future<Response>`. Here's an example:
 
 class CityController extends ResourceController {
   @Operation.get()
@@ -461,5 +461,5 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEzMDMxNDExXX0=
+eyJoaXN0b3J5IjpbLTEwMDk3ODk4MzcsNDEzMDMxNDExXX0=
 -->
