@@ -118,6 +118,7 @@ Future<User> login(String username, String password) async {
 - return - **Future\<User>**
 ```mermaid
 graph LR
+
 subgraph 1 - feed request to register/ and get response
 	POST
 	POST -.-> username
@@ -130,6 +131,7 @@ subgraph 1 - feed request to register/ and get response
 	request --> executeClientRequest
 	executeClientRequest -.-> response
 end
+
 subgraph 2 - return User by getAuthenticatedUser
 	response. -.-> error
 	response. -.-> $status200
@@ -305,11 +307,11 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NjYyMDM3OSwtMTA2OTEyNDUxMiwtMj
-gxMjExOTAwLDE2NTQyMTYyNyw5NzMwMjE0NjQsLTE2OTU2Njk0
-MDgsLTYyNDE5NjYwNCwyNzc2ODA2MDEsLTE4MzIzMzUzNTAsLT
-UxMDQ0NzcxOCw3MTM3NjEwMTUsLTE5OTU1NDE1NDgsMTE4MDky
-OTk1NSwxNDc2NzU0OTYxLDIxNDcyNDI4ODEsLTExNDAzODU4Mz
-MsNzc2MzI3ODA4LDc1MjkzMjQ4LDI0MzEwNDc4NCw2MzIwNzA2
-OTNdfQ==
+eyJoaXN0b3J5IjpbLTI3MTIzNzE3NSwtMjU2NjIwMzc5LC0xMD
+Y5MTI0NTEyLC0yODEyMTE5MDAsMTY1NDIxNjI3LDk3MzAyMTQ2
+NCwtMTY5NTY2OTQwOCwtNjI0MTk2NjA0LDI3NzY4MDYwMSwtMT
+gzMjMzNTM1MCwtNTEwNDQ3NzE4LDcxMzc2MTAxNSwtMTk5NTU0
+MTU0OCwxMTgwOTI5OTU1LDE0NzY3NTQ5NjEsMjE0NzI0Mjg4MS
+wtMTE0MDM4NTgzMyw3NzYzMjc4MDgsNzUyOTMyNDgsMjQzMTA0
+Nzg0XX0=
 -->
