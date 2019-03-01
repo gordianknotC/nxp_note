@@ -200,7 +200,7 @@ The following operation method binds the path variable 'id' to the parameter  `c
 ```dart
 class CityController extends ResourceController {
   @Operation.get('id')
-  Future<Response> getCityByID(@Bind.query('id') String cityID) async {
+  Future<Response> getCityByID(@Bind.path('id') String cityID) async {
     return new Response.ok(cities.where((c) => c.id == cityID).toList());
   }
 }
@@ -459,6 +459,6 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA3NzY4NzcwLC01Njc0MzkxNzYsNDEzMD
-MxNDExXX0=
+eyJoaXN0b3J5IjpbLTI1NTY0ODg3MSw1MDc3Njg3NzAsLTU2Nz
+QzOTE3Niw0MTMwMzE0MTFdfQ==
 -->
