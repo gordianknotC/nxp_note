@@ -105,7 +105,7 @@ Future<Response> getCityByName(@Bind.header('x-api-key') String apiKey) async {
 }
 ```
 
-The following table shows the possible types of bindings:
+⚡ The following table shows the possible types of bindings:
 | property | binding |
 |----------|---------|
 | Path Variable | @Bind.path(pathVariableName) |
@@ -362,7 +362,7 @@ class UserController extends ResourceController {
 Many  `ResourceController`  subclasses will execute  [queries](https://aqueduct.io/docs/db/executing_queries/). There are helpful  `ResourceController`  subclasses for reducing boilerplate code.
 
 A  `QueryController<T>`  builds a  `Query<T>`  based on the incoming request. If the request has a body, this  `Query<T>`'s  `values`  property is read from that body. If the request has a path variable, the  `Query<T>`  assigns an expression to the primary key value. For example, in a normal  `ResourceController`  that responds to a PUT request, you might write the following:
-
+```dart
 @Operation.put('id')
 Future<Response> updateUser(@Bind.path('id') int id, @Bind.body() User user) async {
   var query = new Query<User>(context)
@@ -371,9 +371,9 @@ Future<Response> updateUser(@Bind.path('id') int id, @Bind.body() User user) asy
 
   return new Response.ok(await query.updateOne());
 }
-
+```
 A  `QueryController<T>`  builds this query before a operation method is invoked, storing it in the inherited  `query`  property. A  `ManagedObject<T>`  subclass is the type argument to  `QueryController<T>`.
-
+```dart
 class UserController extends QueryController<User> {
   UserController(ManagedContext context) : super(context);
 
@@ -384,13 +384,13 @@ class UserController extends QueryController<User> {
     return new Response.ok(result);
   }
 }
-
+```
 A  `ManagedObjectController<T>`  is significantly more powerful; you don't even need to subclass it. It does all the things a CRUD endpoint does without any code. Here's an example usage:
-
+```dart
 router
   .route("/users/[:id]")
   .link(() => new ManagedObjectController<User>(context));
-
+```
 This controller has the following behavior:
 
 Request
@@ -425,6 +425,7 @@ The results can be paged (see  [Paging in Advanced Queries](https://aqueduct.io/
 
 A  `ManagedObjectController<T>`  can also be subclassed. A subclass allows for callbacks to be overridden to adjust the query before execution, or the results before sending the respond. Each operation - fetch, update, delete, etc. - has a pair of methods to do this. For example, the following subclass alters the query and results before any update via  `PUT`:
 
+```dart
 class UserController extends ManagedObjectController<User> {
   UserController(ManagedContext context) : super(context);
 
@@ -439,7 +440,7 @@ class UserController extends ManagedObjectController<User> {
     return new Response.ok(object);
   }
 }
-
+```
 See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), which are powerful when combined with  `ManagedObjectController<T>`.
 
 
@@ -456,6 +457,6 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk5MTY1NDM2LC01Njc0MzkxNzYsNDEzMD
-MxNDExXX0=
+eyJoaXN0b3J5IjpbLTE1OTQxNTM0OTMsLTU2NzQzOTE3Niw0MT
+MwMzE0MTFdfQ==
 -->
