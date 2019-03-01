@@ -56,9 +56,9 @@ The named constructor of  `Operation`  tells us which HTTP method the operation 
 @Operation('PATCH', 'id')
 Future<Response> patchObjectWithID() async => ...;
 ```
-All  `Operation`  constructors take a variable **list** of **path variables**. There can be multiple path variables for an operation. An operation method will only be invoked if all of its path variables are present in the request path. There can be multiple operation methods for a given HTTP method, as long as each expects a different set of path variables.
+All  `Operation`  constructors take a variable **list** of **path variables**. There can be multiple path variables for an operation. An operation method will **only be invoked** if **all of its path variables** are present in the request path. There can be multiple operation methods for a given HTTP method, as long as each expects a different set of path variables.
 
-Here's an example of an operation that requires two path variables:
+**Here's an example of an operation that requires two path variables:**
 ```dart
 @Operation.get('userID', 'itemID')
 Future<Response> getUserItem() async {
@@ -464,6 +464,6 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTc5MjE2NywtNTY3NDM5MTc2LDQxMz
+eyJoaXN0b3J5IjpbLTc2NjMxMDE4MywtNTY3NDM5MTc2LDQxMz
 AzMTQxMV19
 -->
