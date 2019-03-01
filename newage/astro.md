@@ -194,7 +194,13 @@ $status409 -.-> user_already_exists....
 ```
 ### UserService.getAuthenticatedUser
 - param - **AuthorizationToken** token
+```mermaid
+graph LR
+store -.-> executeUserRequest
 
+
+
+```
 
 
 
@@ -253,10 +259,11 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc3NjgwNjAxLC0xODMyMzM1MzUwLC01MT
-A0NDc3MTgsNzEzNzYxMDE1LC0xOTk1NTQxNTQ4LDExODA5Mjk5
-NTUsMTQ3Njc1NDk2MSwyMTQ3MjQyODgxLC0xMTQwMzg1ODMzLD
-c3NjMyNzgwOCw3NTI5MzI0OCwyNDMxMDQ3ODQsNjMyMDcwNjkz
-LDExMzU4MjExMzIsLTc0ODM1NDQxLC0xMTkwMDIwMDY2LC0xMT
-Q4OTkwMjM3LC04NDkzMzE3NzgsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbLTQ0MjQ3NjUxOCwyNzc2ODA2MDEsLTE4Mz
+IzMzUzNTAsLTUxMDQ0NzcxOCw3MTM3NjEwMTUsLTE5OTU1NDE1
+NDgsMTE4MDkyOTk1NSwxNDc2NzU0OTYxLDIxNDcyNDI4ODEsLT
+ExNDAzODU4MzMsNzc2MzI3ODA4LDc1MjkzMjQ4LDI0MzEwNDc4
+NCw2MzIwNzA2OTMsMTEzNTgyMTEzMiwtNzQ4MzU0NDEsLTExOT
+AwMjAwNjYsLTExNDg5OTAyMzcsLTg0OTMzMTc3OCwyMDQwMjk3
+NjIyXX0=
 -->
