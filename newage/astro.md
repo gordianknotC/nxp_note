@@ -201,7 +201,6 @@ $status409 -.-> user_already_exists....
 - param - **AuthorizationToken** token
 ```mermaid
 graph LR
-User... --> broadCast_to_Stream
 
 subgraph process response
 	response. -.-> $status200
@@ -219,6 +218,9 @@ subgraph get response with authToken
 	token --> response
 	request_url --> response
 end
+
+
+ 
 
 ```
 
@@ -277,7 +279,7 @@ graph TB
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NTE2MzkyMSwyNzc2ODA2MDEsLTE4Mz
+eyJoaXN0b3J5IjpbMTIzMDcyMzkyMCwyNzc2ODA2MDEsLTE4Mz
 IzMzUzNTAsLTUxMDQ0NzcxOCw3MTM3NjEwMTUsLTE5OTU1NDE1
 NDgsMTE4MDkyOTk1NSwxNDc2NzU0OTYxLDIxNDcyNDI4ODEsLT
 ExNDAzODU4MzMsNzc2MzI3ODA4LDc1MjkzMjQ4LDI0MzEwNDc4
