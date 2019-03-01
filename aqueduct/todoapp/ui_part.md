@@ -29,6 +29,9 @@ Service
 storeProvider
 	: 提供 UI 實作介面 (store, delete, load) 
 
+Reqeust Response
+	: 提供UI實作介面
+
 
 ## AuthorizationToken
 ```mermaid
@@ -338,5 +341,6 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNDgwNzQxMSw2OTE2NzU2NzNdfQ==
+eyJoaXN0b3J5IjpbLTgzODcwODI4MywxNDA0ODA3NDExLDY5MT
+Y3NTY3M119
 -->
