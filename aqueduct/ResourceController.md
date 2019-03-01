@@ -254,7 +254,7 @@ class City extends Serializable {
 ```
 
 
-#### ManagedObject and Serializable
+### ManagedObject and Serializable
 
 `ManagedObject`s from Aqueduct's ORM implement  `Serializable`  without having to implement these two methods.
 
@@ -464,6 +464,6 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1MTIzMTc3Miw1MDc3Njg3NzAsLTU2Nz
-QzOTE3Niw0MTMwMzE0MTFdfQ==
+eyJoaXN0b3J5IjpbLTE2NzMzMzA4MTMsNTA3NzY4NzcwLC01Nj
+c0MzkxNzYsNDEzMDMxNDExXX0=
 -->
