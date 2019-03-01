@@ -287,7 +287,7 @@ An endpoint should either take a single object or a list of objects, but not bot
 
 Note that if the request's  `Content-Type`  is 'x-www-form-urlencoded', its must be bound with  `Bind.query`  and not  `Bind.body`.
 
-### Property Binding
+### 🔥 Property Binding
 
 The properties of an  `ResourceController`s may also have  `Bind.query`  and  `Bind.header`metadata. This binds values from the request to the  `ResourceController`  instance itself, making them accessible from  _all_  operation methods.
 ```dart
@@ -306,6 +306,7 @@ class CityController extends ResourceController {
 }
 ```
 In the above, both  `timestamp`  and  `limit`  are bound prior to  `getCities`  being invoked. By default, a bound property is optional. Adding an  `requiredBinding`  annotation changes a property to required. If required, any request without the required property fails with a 400 Bad Request status code and none of the operation methods are invoked.
+
 
 ## Other ResourceController Behavior
 
@@ -463,6 +464,6 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTUyMDEzOCw1MDc3Njg3NzAsLTU2Nz
-QzOTE3Niw0MTMwMzE0MTFdfQ==
+eyJoaXN0b3J5IjpbMjAzMzcwMzQ4LDUwNzc2ODc3MCwtNTY3ND
+M5MTc2LDQxMzAzMTQxMV19
 -->
