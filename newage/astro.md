@@ -81,12 +81,13 @@ subgraph feed request to auth/token and get response
 	request --> executeClientRequest
 	executeClientRequest -.-> response
 end
-
+subgraph return User by getAuthenticatedU
 response. -.-> !status200
 !status200 -.-> error
 response. -.-> $status200
-$status200 -.-> response.body
-response.body -.-> AuthorizationToken
+$status200 --> getAuthenticatedUser
+getAuthenticatedUser -.-> response.body
+
 ```
 ```dart
 Future<User> login(String username, String password) async {  
@@ -300,11 +301,11 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjkxMjQ1MTIsLTI4MTIxMTkwMCwxNj
-U0MjE2MjcsOTczMDIxNDY0LC0xNjk1NjY5NDA4LC02MjQxOTY2
-MDQsMjc3NjgwNjAxLC0xODMyMzM1MzUwLC01MTA0NDc3MTgsNz
-EzNzYxMDE1LC0xOTk1NTQxNTQ4LDExODA5Mjk5NTUsMTQ3Njc1
-NDk2MSwyMTQ3MjQyODgxLC0xMTQwMzg1ODMzLDc3NjMyNzgwOC
-w3NTI5MzI0OCwyNDMxMDQ3ODQsNjMyMDcwNjkzLDExMzU4MjEx
-MzJdfQ==
+eyJoaXN0b3J5IjpbLTUxMjUzMjI5NywtMTA2OTEyNDUxMiwtMj
+gxMjExOTAwLDE2NTQyMTYyNyw5NzMwMjE0NjQsLTE2OTU2Njk0
+MDgsLTYyNDE5NjYwNCwyNzc2ODA2MDEsLTE4MzIzMzUzNTAsLT
+UxMDQ0NzcxOCw3MTM3NjEwMTUsLTE5OTU1NDE1NDgsMTE4MDky
+OTk1NSwxNDc2NzU0OTYxLDIxNDcyNDI4ODEsLTExNDAzODU4Mz
+MsNzc2MzI3ODA4LDc1MjkzMjQ4LDI0MzEwNDc4NCw2MzIwNzA2
+OTNdfQ==
 -->
