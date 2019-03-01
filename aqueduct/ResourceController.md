@@ -322,7 +322,7 @@ class UserController extends ResourceController {
   }
 }
 ```
-If a request is made with a content type other than the accepted content types, the controller automatically responds with a 415 Unsupported Media Type response.
+> ⚡ If a request is made with a content type other than the accepted content types, the controller automatically responds with a **415 Unsupported Media Type response.**
 
 The body of an HTTP request is decoded if the content type is accepted and there exists a operation method to handle the request. The body is not decoded if there is not a matching operation method for the request. The body is decoded by  `ResourceController`  prior to your operation method being invoked. Therefore, you can always use the synchronous  `RequestBody.as`  method to access the body from within an operation method:
 ```dart
@@ -464,6 +464,7 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTk0MDAyNzUsMjAzMzcwMzQ4LDUwNz
-c2ODc3MCwtNTY3NDM5MTc2LDQxMzAzMTQxMV19
+eyJoaXN0b3J5IjpbMjExODI0Nzc5MCwtMTI1OTQwMDI3NSwyMD
+MzNzAzNDgsNTA3NzY4NzcwLC01Njc0MzkxNzYsNDEzMDMxNDEx
+XX0=
 -->
