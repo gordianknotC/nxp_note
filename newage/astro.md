@@ -1,5 +1,6 @@
 # Def
 Service
+	: 提供一個 Event Stream，可發佈與針聽，並提供該Model實作一些方法
 
 
 ## AuthorizationToken
@@ -310,7 +311,7 @@ authenticatedUser --> add
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgyMzQzODc1LC0xMzk5MzE5NzQwLC0yNz
+eyJoaXN0b3J5IjpbODg0MzMwMjQ0LC0xMzk5MzE5NzQwLC0yNz
 EyMzcxNzUsLTI1NjYyMDM3OSwtMTA2OTEyNDUxMiwtMjgxMjEx
 OTAwLDE2NTQyMTYyNyw5NzMwMjE0NjQsLTE2OTU2Njk0MDgsLT
 YyNDE5NjYwNCwyNzc2ODA2MDEsLTE4MzIzMzUzNTAsLTUxMDQ0
