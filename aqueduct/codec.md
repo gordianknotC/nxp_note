@@ -136,7 +136,7 @@ final person = Person();
 final response = Response.ok(person);
 ```
 
-When responding with a  `Serializable`, its  `asMap()`  is called prior to any encoding by the codec registry.  `ManagedObject<T>`, part of the Aqueduct ORM, implements  `Serializable`  so results from  `Query<T>`  may be body objects:
+When responding with a  `Serializable`, its  **`asMap()`**  is called **prior** to any **encoding** by the codec registry.  `ManagedObject<T>`, part of the Aqueduct ORM, implements  `Serializable`  so results from  `Query<T>`  may be body objects:
 ```dart
 final query = Query<Person>(context)..where((p) => p.id).equalTo(1);
 final person = await query.fetchOne();
@@ -200,7 +200,7 @@ class MyController extends ResourceController {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk0MTQ1Nzc3LDY2OTU5NDc2MCwxNzQ0MD
-Y3Njc0LDk1OTE1MDE0OCwtNDIxMjU3NTM0LC0xMzYzMzIxMDI0
-LDIxMDIzMDczNjhdfQ==
+eyJoaXN0b3J5IjpbLTE3NjIxNDMxMTksNjY5NTk0NzYwLDE3ND
+QwNjc2NzQsOTU5MTUwMTQ4LC00MjEyNTc1MzQsLTEzNjMzMjEw
+MjQsMjEwMjMwNzM2OF19
 -->
