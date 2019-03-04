@@ -40,8 +40,8 @@ If the requested path was a directory, the filename  `index.html`  will be appen
 If a file does not exist, an  `FileController`  returns a 404 Not Found response.
 
 ### Content-Type of Files
-
-An  `FileController`  will set the content-type of the HTTP response based on the served files path extension. By default, it recognizes many common extensions like  `.html`,  `.css`,  `.jpg`,  `.js`. You may add content-types for extensions to an instance:
+##### setContent
+An  `FileController`  will set the **content-type of the HTTP response** based on the served **files path** extension. By default, it recognizes many common extensions like  `.html`,  `.css`,  `.jpg`,  `.js`. You may add content-types for extensions to an instance:
 ```dart
 var controller = new FileController("public/")
   ..setContentTypeForExtension("xml", new ContentType("application", "xml"));
@@ -84,5 +84,5 @@ var response = new Response.ok("contents")
   ..cachePolicy = new CachePolicy();
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyOTIwOTI2OCwxOTc5MzA1NDA2XX0=
+eyJoaXN0b3J5IjpbMTA1MjkxNDY5NiwxOTc5MzA1NDA2XX0=
 -->
