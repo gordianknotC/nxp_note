@@ -33,7 +33,9 @@ final imageByteStream = imageFile.openRead();
 final response = new Response.ok(imageByteStream)
   ..contentType = new ContentType("image", "jpeg");
 ```
-> When a body object is a  `Stream<T>`, the response will not be sent until the stream is closed. For finite streams - like those from opened filed - this happens as soon as the entire file is read. For streams that you construct yourself, you must close the stream some time after the response has been returned.
+> ⚡ When a body object is a  `Stream<T>`, the response will not be sent until the stream is closed. 
+
+> For finite streams - like those from opened filed - this happens as soon as the entire file is read. For streams that you construct yourself, you must close the stream some time after the response has been returned.
 
 ## Codecs and Content Types
 
@@ -169,5 +171,5 @@ class MyController extends ResourceController {
   }
 }
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE5MzM4NjUxLDIxMDIzMDczNjhdfQ==
+eyJoaXN0b3J5IjpbLTEzNjMzMjEwMjQsMjEwMjMwNzM2OF19
 -->
