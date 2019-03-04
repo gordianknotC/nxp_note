@@ -137,17 +137,17 @@ final response = Response.ok(person);
 ```
 
 When responding with a  `Serializable`, its  `asMap()`  is called prior to any encoding by the codec registry.  `ManagedObject<T>`, part of the Aqueduct ORM, implements  `Serializable`  so results from  `Query<T>`  may be body objects:
-
+```dart
 final query = Query<Person>(context)..where((p) => p.id).equalTo(1);
 final person = await query.fetchOne();
 final response = Response.ok(person);
-
+```
 A response body object can also be a list of  `Serializable`  objects.
-
+```dart
 final query = Query<Person>(context);
 final people = await query.fetch();
 final response = Response.ok(people);
-
+```
 The entire flow of a body object is shown in the following diagram. Each orange item is an allowed body object type and shows the steps it will go through when being encoded to the HTTP response body. For example, a  `Serializable`  goes through three steps, whereas a  `List<int>`  goes through zero steps and is added as-is to the HTTP response.
 
 ![Response Body Object Flow](https://aqueduct.io/docs/img/response_flow.png)
@@ -157,13 +157,13 @@ A serializable object can be read from a request body:
 final person = Person()..readFromMap(await request.body.decode());
 
 Serializable objects are the only types of objects that can be  [bound to a ResourceController argument](https://aqueduct.io/docs/http/resource_controller/).
-
+```dart
 @Operation.post()
 Future<Response> addPerson(@Bind.body() Person person) async {
   final insertedPerson = await context.insertObject(person);
   return Response.ok(insertedPerson);
 }
-
+```
 ### Serializable and OpenAPI Generation
 
 See the section on how  `Serializable`  types work with OpenAPI documentation generation  [here](https://aqueduct.io/docs/openapi/components/).
@@ -176,7 +176,7 @@ dependencies:
   mime: any # prefer a better constraint than this
 
 And then decode the body with the objects from that package:
-
+```dart
 import 'package:aqueduct/aqueduct.dart';
 import 'package:mime/mime.dart';
 
@@ -198,8 +198,9 @@ class MyController extends ResourceController {
     }    
   }
 }
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODEzMTI5ODUsNjY5NTk0NzYwLDE3ND
-QwNjc2NzQsOTU5MTUwMTQ4LC00MjEyNTc1MzQsLTEzNjMzMjEw
-MjQsMjEwMjMwNzM2OF19
+eyJoaXN0b3J5IjpbNzk0MTQ1Nzc3LDY2OTU5NDc2MCwxNzQ0MD
+Y3Njc0LDk1OTE1MDE0OCwtNDIxMjU3NTM0LC0xMzYzMzIxMDI0
+LDIxMDIzMDczNjhdfQ==
 -->
