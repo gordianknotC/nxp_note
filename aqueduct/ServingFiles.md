@@ -16,10 +16,10 @@ Controller get entryPoint {
   return router;
 }
 ```
-The argument to  `FileController`  is the directory on the filesystem in which request paths will be resolved against. In the above example, an HTTP request with the path  `/files/image.jpg`  would return the contents of the file  `public/image.jpg`.
+The argument to  `FileController`  is the **directory on the filesystem** in which request paths will be resolved against. In the above example, an HTTP request with the path  `/files/image.jpg`  would return the contents of the file  `public/image.jpg`.
 
-Note that  `public/`  does not have a leading slash - therefore, the directory  `public`must be relative to the directory that the Aqueduct application was served from. In practice, this means you might have a directory structure like:
-
+Note that  **`public/`**  **does not** have a **leading slash** - therefore, the directory  `public`must be relative to the directory that the Aqueduct application was served from. In practice, this means you might have a directory structure like:
+```
 project/
   pubspec.yaml  
   lib/
@@ -29,7 +29,7 @@ project/
     ...
   public/
     image.jpg
-
+```
 Adding a leading slash to the directory served by  `FileController`  will resolve it relative to the filesystem root.
 
 If the requested path was a directory, the filename  `index.html`  will be appended to the path when searching for a file to return.
@@ -77,5 +77,5 @@ You may set the  `CachePolicy`  of any  `Response`. Note that  `CachePolicy`  on
 var response = new Response.ok("contents")
   ..cachePolicy = new CachePolicy();
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNzczNDcwNSwxOTc5MzA1NDA2XX0=
+eyJoaXN0b3J5IjpbLTEwMjcyMzkwNzEsMTk3OTMwNTQwNl19
 -->
