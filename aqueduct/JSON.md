@@ -116,7 +116,7 @@ final obj2 = doc[1]["id"]; // == 2
 
 ## Fetching Sub-documents
 
-When fetching a  `Document`  property, the default behavior is to return the entire JSON document as it is stored in the database column. You may fetch parts of the document you need by using  `Query.returningProperties`  and the subscript operator.
+> ⚡ When fetching a  `Document`  property, the default behavior is to return the entire JSON document as it is stored in the database column. **You may fetch parts of the document you need** by using  **`Query.returningProperties`**  and the subscript operator.
 ```dart
 final query = Query<Event>(context)
   ..returningProperties((e) => [e.id, e.contents["tags"]]);
@@ -178,6 +178,6 @@ final eventTagCounts = await context.persistentStore.execute("SELECT jsonb_array
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzUyODcwMDAsLTY1ODcyODcwNCw0OT
-EwNzA3ODFdfQ==
+eyJoaXN0b3J5IjpbMTg0MzIwMTE1OSwtNjU4NzI4NzA0LDQ5MT
+A3MDc4MV19
 -->
