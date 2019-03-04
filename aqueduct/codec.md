@@ -26,14 +26,14 @@ See a later section for more details on content type to codec mappings. Also, se
 
 ### Streaming Response Bodies
 
-A body object **may also be a  `Stream<T>`**.  `Stream<T>`  body objects are most often used when serving files. This allows the contents of the file to be streamed from disk to the HTTP client without having to load the whole file into memory first. (See also  `FileController`.)
+A **body** object **may also be a  `Stream<T>`**.  `Stream<T>`  body objects are most **often used when serving files**. This allows the contents of the file to be **streamed from disk** to the HTTP client **without** having to load the whole file into memory first. (See also  `FileController`.)
 ```dart
 final imageFile = File("image.jpg");
 final imageByteStream = imageFile.openRead();
 final response = new Response.ok(imageByteStream)
   ..contentType = new ContentType("image", "jpeg");
 ```
-When a body object is a  `Stream<T>`, the response will not be sent until the stream is closed. For finite streams - like those from opened filed - this happens as soon as the entire file is read. For streams that you construct yourself, you must close the stream some time after the response has been returned.
+> When a body object is a  `Stream<T>`, the response will not be sent until the stream is closed. For finite streams - like those from opened filed - this happens as soon as the entire file is read. For streams that you construct yourself, you must close the stream some time after the response has been returned.
 
 ## Codecs and Content Types
 
@@ -169,5 +169,5 @@ class MyController extends ResourceController {
   }
 }
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTE1NzQ1MzUsMjEwMjMwNzM2OF19
+eyJoaXN0b3J5IjpbNDE5MzM4NjUxLDIxMDIzMDczNjhdfQ==
 -->
