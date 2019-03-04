@@ -114,8 +114,8 @@ CodecRegistry.setAllowsCompression(new ContentType("application", "x-special"), 
 
 Encoding and decoding primarily takes or yields simple Dart objects like  `Map`,  `List`and  `String`. It is often beneficial to add structure to body objects for use in your code. Classes that implement  `Serializable`  provide this structure. A  `Serializable`  object must implement a  `readFromMap()`  and  `asMap()`  method to convert their structure into or from a Dart  `Map`.
 
-An object that extends  `Serializable`  may be used as a response body object directly:
-
+> ⚡ An object that extends  `Serializable`  may be used as a response body object directly:
+``
 class Person extends Serializable {
   String name;
   String email;
@@ -199,7 +199,7 @@ class MyController extends ResourceController {
   }
 }
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDk5MzQxMjksNjY5NTk0NzYwLDE3ND
-QwNjc2NzQsOTU5MTUwMTQ4LC00MjEyNTc1MzQsLTEzNjMzMjEw
-MjQsMjEwMjMwNzM2OF19
+eyJoaXN0b3J5IjpbMTM5MDIwMjQxNCw2Njk1OTQ3NjAsMTc0ND
+A2NzY3NCw5NTkxNTAxNDgsLTQyMTI1NzUzNCwtMTM2MzMyMTAy
+NCwyMTAyMzA3MzY4XX0=
 -->
