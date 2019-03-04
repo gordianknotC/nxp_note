@@ -33,11 +33,10 @@ final doc = new Document([0]);
 assert(doc.data is List);
 ```
 The data in a document can be accessed through its  `data`  property, or through its subscript operator.  `Document`'s subscript operator forwards the invocation to its  `data`  property.
-
+```dart
 final doc = new Document({"key": "value"});
-
 assert(doc["key"] == doc.data["key"]);
-
+```
 The argument to the subscript operator may be a string (if  `data`  is a map) or an integer (if  `data`  is a list).
 
 ## Basic Operations on Document Properties
@@ -178,5 +177,5 @@ final eventTagCounts = await context.persistentStore.execute("SELECT jsonb_array
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODc0MjY2Miw0OTEwNzA3ODFdfQ==
+eyJoaXN0b3J5IjpbLTQwODgzNjc2Nyw0OTEwNzA3ODFdfQ==
 -->
