@@ -1,4 +1,5 @@
- Not all content types require two conversion steps. For example, when serving an HTML file, the body object is already an HTML  `String`. It will only be converted by a charset encoder:
+
+Not all content types require two conversion steps. For example, when serving an HTML file, the body object is already an HTML  `String`. It will only be converted by a charset encoder:
 ```dart
 var html = "<html></html>";
 var response = Response.ok(html)
@@ -22,5 +23,5 @@ final response = Response.ok(jsonBytes)..encodeBody = false;
 ```
 See a later section for more details on content type to codec mappings. Also, see the documentation for  `CodecRegistry`  for details on built-in codecs and adding codecs.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTY1ODE4OTQsMjEwMjMwNzM2OF19
+eyJoaXN0b3J5IjpbMTE5MTEwODUyMCwyMTAyMzA3MzY4XX0=
 -->
