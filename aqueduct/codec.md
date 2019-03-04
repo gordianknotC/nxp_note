@@ -53,7 +53,8 @@ For example, if the content type is  `application/json; charset=utf-8`, the buil
 
 > ⚡ If there isn't an exact match, but there is an entry for the primary type with the wildcard (`*`) subtype, that codec is used. For example, the built-in codec for  `text/*`will be selected for both  `text/plain`  and  `text/html`. 
 
-reCodeRegistery
+### register codecs into CodeRegistery
+
 If there was something special that had to be done for  `text/html`, a more specific codec may be added for that type:
 ```dart
 class MyChannel extends ApplicationChannel {
@@ -63,7 +64,7 @@ class MyChannel extends ApplicationChannel {
   }
 }
 ```
-Codecs must be added in your  `ApplicationChannel.prepare`  method. The codec must implement  `Codec`  from  `dart:convert`. In the above example, when a response's content type is  `text/html`, the  `HTMLCodec`  will encode the body object. This codec takes precedence over  `text/*`  because it is more specific.
+> ⚡ Codecs must be added in your  `ApplicationChannel.prepare`  method. **The codec must implement  `Codec`  from  `dart:convert`**. In the above example, when a response's content type is  `text/html`, the  `HTMLCodec`  will encode the body object. This codec takes precedence over  `text/*`  because it is more specific.
 
 When selecting a codec for a response body, the  `ContentType.charset`  doesn't impact which codec is selected. If a response's content-type has a charset, then a charset encoder like  `UTF8`  will be applied as a last encoding step. For example, a response with content-type  `application/json; charset=utf-8`  will encode the body object as a JSON string, which is then encoded as a list of UTF8 bytes. It is required that a response body's eventually encoded type is a list of bytes, so it follows that a codec that produces a string must have a charset.
 
@@ -182,6 +183,6 @@ class MyController extends ResourceController {
   }
 }
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk5NzY3Njk3LC00MjEyNTc1MzQsLTEzNj
+eyJoaXN0b3J5IjpbOTU5MTUwMTQ4LC00MjEyNTc1MzQsLTEzNj
 MzMjEwMjQsMjEwMjMwNzM2OF19
 -->
