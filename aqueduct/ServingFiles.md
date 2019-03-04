@@ -53,7 +53,7 @@ var controller = new FileController("public/")
 `application/octet-stream`. An  `FileController`  will **never** invoke any **encoders** from  `CodecRegistry`, but it will **GZIP** data if the repository allows compression for the content-type of the file (see  `CodecRegistry.add`  and  `CodecRegistry.setAllowsCompression`).
 
 ## Caching
-
+ 
 An  `FileController`  always sets the the Last-Modified header of the response to the last modified date according to the filesystem. If a request sends an If-Modified-Since header and the file has not been modified since that date, a 304 Not Modified response is sent with the appropriate headers.
 
 You may provide Cache-Control headers depending on the path of the file being served. Here's an example that adds  `Cache-Control: public, max-age=31536000`
@@ -88,6 +88,6 @@ var response = new Response.ok("contents")
   ..cachePolicy = new CachePolicy();
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NjAyMDUxNiwxNzQ2NjAwNjYzLDE5Nz
-kzMDU0MDZdfQ==
+eyJoaXN0b3J5IjpbMTMyMjAxMDU4NCwxMjc2MDIwNTE2LDE3ND
+Y2MDA2NjMsMTk3OTMwNTQwNl19
 -->
