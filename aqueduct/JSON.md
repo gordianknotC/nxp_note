@@ -163,7 +163,6 @@ final query = Query<Event>(context)
   ..returningProperties((e) => [e.id, e.contents["type"], e.contents["user"]]);
 ```
 For operations not supported by  `Query<T>`, you may use SQL directly:
-
 final eventTagCounts = await context.persistentStore.execute("SELECT jsonb_array_length(contents->'tags') from _Event");
 
 
@@ -179,6 +178,6 @@ final eventTagCounts = await context.persistentStore.execute("SELECT jsonb_array
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Njk0ODU5OTQsLTY1ODcyODcwNCw0OT
+eyJoaXN0b3J5IjpbLTE3MzUyODcwMDAsLTY1ODcyODcwNCw0OT
 EwNzA3ODFdfQ==
 -->
