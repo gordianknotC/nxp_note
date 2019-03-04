@@ -70,7 +70,8 @@ class MyChannel extends ApplicationChannel {
 
 If a response's content-type has a charset, then a charset encoder like  `UTF8`  will be applied as a last encoding step. For example, a response with content-type  `application/json; charset=utf-8`  will encode the body object as a JSON string, which is then encoded as a list of UTF8 bytes. It is required that a response body's eventually encoded type is a list of bytes, so it follows that a codec that produces a string must have a charset.
 
-If there is no codec in the repository for the content type of a  `Response`, the body object must be a  `List<int>`  or  `Stream<List<int>>`. If you find yourself converting data prior to setting it as a body object, it may make sense to add your own codec to  `CodecRegistry`.
+> ⚡ If there is no codec in the repository for the content type of a  `Response`, the body object must be a  `List<int>`  or  `Stream<List<int>>`. 
+>  📘 If you find yourself converting data prior to setting it as a body object, it may make sense to add your own codec to  `CodecRegistry`.
 
 A request's body always starts as a list of bytes and is decoded into Dart objects. To decode a JSON request body, it first must be decoded from the list of UTF8 bytes into a string. It is possible that a client could omit the charset in its content-type header. Codecs added to  `CodecRegistry`  may specify a default charset to interpret a charset-less content-type. When a codec is added to the repository, if content-type's charset is non-null, that is the default. For example, the JSON codec is added like this:
 
@@ -185,6 +186,6 @@ class MyController extends ResourceController {
   }
 }
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDIzMDQ1NDIsOTU5MTUwMTQ4LC00Mj
-EyNTc1MzQsLTEzNjMzMjEwMjQsMjEwMjMwNzM2OF19
+eyJoaXN0b3J5IjpbMTc0NDA2NzY3NCw5NTkxNTAxNDgsLTQyMT
+I1NzUzNCwtMTM2MzMyMTAyNCwyMTAyMzA3MzY4XX0=
 -->
