@@ -41,7 +41,7 @@ final response = new Response.ok(imageByteStream)
 
 In the above sections, we glossed over how a codec gets selected when preparing the response body. The common case of  `ManagedObject<T>`  body objects that are sent as UTF8 encoded JSON 'just works' and is suitable for most applications. When serving assets for a web application or different data formats like XML, it becomes important to understand how Aqueduct's codec registry works.
 
-`CodecRegistry`  contains mappings from content types to  `Codec`s. These codecs encode response bodies and decode request bodies. There are three built-in codecs for  `application/json`,  `application/x-www-form-urlencoded`  and  `text/*`. When a response is being sent, the repository is searched for an entry that exactly matches the primary and subtype of the  `Response.contentType`. If an entry exists, the associated  `Codec`  starts the conversion. For example, if the content type is  `application/json; charset=utf-8`, the built-in  `application/json`  codec encodes the body object.
+`CodecRegistry`  contains mappings from content types to  `Codec`s. These codecs **encode response** bodies and **decode request** bodies. There are three built-in codecs for  `application/json`,  `application/x-www-form-urlencoded`  and  `text/*`. When a response is being sent, the repository is searched for an entry that exactly matches the primary and subtype of the  `Response.contentType`. If an entry exists, the associated  `Codec`  starts the conversion. For example, if the content type is  `application/json; charset=utf-8`, the built-in  `application/json`  codec encodes the body object.
 
 If there isn't an exact match, but there is an entry for the primary type with the wildcard (`*`) subtype, that codec is used. For example, the built-in codec for  `text/*`will be selected for both  `text/plain`  and  `text/html`. If there was something special that had to be done for  `text/html`, a more specific codec may be added for that type:
 
@@ -171,5 +171,6 @@ class MyController extends ResourceController {
   }
 }
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjMzMjEwMjQsMjEwMjMwNzM2OF19
+eyJoaXN0b3J5IjpbMTkyMDkxOTQ4OCwtMTM2MzMyMTAyNCwyMT
+AyMzA3MzY4XX0=
 -->
