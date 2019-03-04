@@ -84,8 +84,7 @@ CodecRegistry.defaultInstance.add(
   const JsonCodec(),
   allowCompression: true);
 ```
-
-If no charset is specified when registering a codec, no charset decoding occurs on a request body if one doesn't exist. Content-types that are decoded from a  `String`should not use a default charset because the repository would always attempt to decode the body as a string first.
+If no charset is specified when registering a codec, no charset decoding occurs on a request body if one  doesn't exist. Content-types that are decoded from a  `String`should not use a default charset because the repository would always attempt to decode the body as a string first.
 
 ### Compression with gzip
 
@@ -191,7 +190,7 @@ class MyController extends ResourceController {
   }
 }
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMjg5Njg0OCwxNzQ0MDY3Njc0LDk1OT
-E1MDE0OCwtNDIxMjU3NTM0LC0xMzYzMzIxMDI0LDIxMDIzMDcz
-NjhdfQ==
+eyJoaXN0b3J5IjpbNjY5NTk0NzYwLDE3NDQwNjc2NzQsOTU5MT
+UwMTQ4LC00MjEyNTc1MzQsLTEzNjMzMjEwMjQsMjEwMjMwNzM2
+OF19
 -->
