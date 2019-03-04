@@ -45,7 +45,7 @@ The argument to the subscript operator may be a string (if  `data`  is a map) or
 
 ### Inserting Rows with Document Properties
 
-A  **`Document`**  property is first set when inserting with a  `Query<T>`. The  `values`property of the query is set to a  `Document`  object initialized with a JSON-encodable value.
+A  **`Document`**  property is first set **when inserting** with a  `Query<T>`. The  `values`property of the query is set to a  `Document`  object initialized with a JSON-encodable value.
 ```dart
 final query = Query<Event>(context)
   ..values.timestamp = DateTime.now()
@@ -61,7 +61,7 @@ In the above, the argument to  `Document`  will be JSON-encoded and stored in th
 ### Fetching Rows with Document Properties
 
 When fetching an object with  `Document`  properties with a  `Query<T>`, you access the column's value through the document's  `data`  property.
-
+```dart
 final query = Query<Event>(context)
   ..where((e) => e.id).equalTo(1);
 final event1 = await query.fetchOne();
@@ -70,7 +70,7 @@ event1.contents.data == {
   "user": "bob",
   "tags": ["v1"]
 };
-
+```
 When fetching  `Document`  properties, the JSON data is decoded into the appropriate type. This is likely a  `Map`  or  `List`, but can be any JSON-encodable object. Because the data stored in a  `Document`  property is unstructured, the type of  `data`  is  `dynamic`. It is good practice to store consistent data structures in a column; i.e., always storing a  `Map`  or always storing a  `List`.
 
 ### Updating Rows with Document Properties
@@ -177,5 +177,5 @@ final eventTagCounts = await context.persistentStore.execute("SELECT jsonb_array
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMjc5NjEyLDQ5MTA3MDc4MV19
+eyJoaXN0b3J5IjpbNDE3Njc2NTA3LDQ5MTA3MDc4MV19
 -->
