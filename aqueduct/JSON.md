@@ -76,7 +76,7 @@ When fetching  `Document`  properties, the JSON data is decoded into the appropr
 ### Updating Rows with Document Properties
 
 Updating a row with  `Document`  properties works the same as inserting rows.
-
+```dart
 final query = Query<Event>(context)
   ..where((e) => e.id).equalTo(1)
   ..values.contents = Document({
@@ -85,7 +85,7 @@ final query = Query<Event>(context)
     "tags": ["v1", "new"]
   });
 final event = await query.updateOne();  
-
+```
 When updating in this way, the document stored in the column is replaced entirely.
 
 ### Accessing Document Values
@@ -177,5 +177,5 @@ final eventTagCounts = await context.persistentStore.execute("SELECT jsonb_array
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxODEwMDM3OSw0OTEwNzA3ODFdfQ==
+eyJoaXN0b3J5IjpbMTg5Njc0ODgwLDQ5MTA3MDc4MV19
 -->
