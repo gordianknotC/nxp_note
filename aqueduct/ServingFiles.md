@@ -7,17 +7,15 @@ Aqueduct can serve files by returning the contents of a file as an HTTP response
 
 ## FileController
 
-Instances of  `FileController`  serve a directory from the filesystem through an HTTP interface. Any route that channels requests to an  `FileController`  _must_contain a  `*`  match-all token.
-
+Instances of  `FileController`  serve a directory from the filesystem through an HTTP interface. **Any route that channels requests to an  `FileController`**  _must_contain a  `*`  match-all token.
+```dart
 @override
 Controller get entryPoint {
   final router = new Router();
-
   router.route("/files/*").link(() => new FileController("public/"));
-
   return router;
 }
-
+```
 The argument to  `FileController`  is the directory on the filesystem in which request paths will be resolved against. In the above example, an HTTP request with the path  `/files/image.jpg`  would return the contents of the file  `public/image.jpg`.
 
 Note that  `public/`  does not have a leading slash - therefore, the directory  `public`must be relative to the directory that the Aqueduct application was served from. In practice, this means you might have a directory structure like:
@@ -79,5 +77,5 @@ You may set the  `CachePolicy`  of any  `Response`. Note that  `CachePolicy`  on
 var response = new Response.ok("contents")
   ..cachePolicy = new CachePolicy();
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3OTMwNTQwNl19
+eyJoaXN0b3J5IjpbMTAyNzczNDcwNSwxOTc5MzA1NDA2XX0=
 -->
