@@ -106,8 +106,9 @@ CodecRegistry.add(
   allowCompression: true);
 ```
 You may also set whether or not a content type uses compression without having to specify a codec if no conversion step needs to occur:
-
+```dart
 CodecRegistry.setAllowsCompression(new ContentType("application", "x-special"), true);
+```
 
 ## Serializable Objects
 
@@ -198,7 +199,7 @@ class MyController extends ResourceController {
   }
 }
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MzY5MjM2OCw2Njk1OTQ3NjAsMTc0ND
-A2NzY3NCw5NTkxNTAxNDgsLTQyMTI1NzUzNCwtMTM2MzMyMTAy
-NCwyMTAyMzA3MzY4XX0=
+eyJoaXN0b3J5IjpbLTE2NDk5MzQxMjksNjY5NTk0NzYwLDE3ND
+QwNjc2NzQsOTU5MTUwMTQ4LC00MjEyNTc1MzQsLTEzNjMzMjEw
+MjQsMjEwMjMwNzM2OF19
 -->
