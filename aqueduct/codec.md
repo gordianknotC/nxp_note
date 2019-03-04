@@ -75,6 +75,7 @@ If a response's content-type has a charset, then a charset encoder like  `UTF8` 
 
 > ⚡ A request's body always starts as a **list of bytes** and is decoded into Dart objects. To decode a JSON request body, it first must be decoded from the **list of UTF8** bytes into a **string**. 
 
+#### default JsonCodec
 It is possible that a client could omit the charset in its content-type header. Codecs added to  `CodecRegistry`  may specify a default charset to interpret a charset-less content-type. When a codec is added to the repository, if content-type's charset is non-null, that is the default. For example, the JSON codec is added like this:
 ```dart
 CodecRegistry.defaultInstance.add(
@@ -188,7 +189,7 @@ class MyController extends ResourceController {
   }
 }
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDE1NTgyMTIsMTc0NDA2NzY3NCw5NT
-kxNTAxNDgsLTQyMTI1NzUzNCwtMTM2MzMyMTAyNCwyMTAyMzA3
-MzY4XX0=
+eyJoaXN0b3J5IjpbLTg4NDQxNzkyMywxNzQ0MDY3Njc0LDk1OT
+E1MDE0OCwtNDIxMjU3NTM0LC0xMzYzMzIxMDI0LDIxMDIzMDcz
+NjhdfQ==
 -->
