@@ -60,7 +60,7 @@ In the above, the argument to  `Document`  will be JSON-encoded and stored in th
 
 ### Fetching Rows with Document Properties
 
-When fetching an object with  `Document`  properties with a  `Query<T>`, you access the column's value through the document's  `data`  property.
+When fetching an object with  `Document`  properties with a  `Query<T>`, you **access the column's value through the document's  `data`**  property.
 ```dart
 final query = Query<Event>(context)
   ..where((e) => e.id).equalTo(1);
@@ -177,5 +177,5 @@ final eventTagCounts = await context.persistentStore.execute("SELECT jsonb_array
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE3Njc2NTA3LDQ5MTA3MDc4MV19
+eyJoaXN0b3J5IjpbMTMxODEwMDM3OSw0OTEwNzA3ODFdfQ==
 -->
