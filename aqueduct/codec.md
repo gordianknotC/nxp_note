@@ -66,7 +66,9 @@ class MyChannel extends ApplicationChannel {
 ```
 > ⚡ Codecs must be added in your  `ApplicationChannel.prepare`  method. **The codec must implement  `Codec`  from  `dart:convert`**. In the above example, when a response's content type is  `text/html`, the  `HTMLCodec`  will encode the body object. This codec takes precedence over  `text/*`  because it is more specific.
 
-When selecting a codec for a response body, the  `ContentType.charset`  doesn't impact which codec is selected. If a response's content-type has a charset, then a charset encoder like  `UTF8`  will be applied as a last encoding step. For example, a response with content-type  `application/json; charset=utf-8`  will encode the body object as a JSON string, which is then encoded as a list of UTF8 bytes. It is required that a response body's eventually encoded type is a list of bytes, so it follows that a codec that produces a string must have a charset.
+> 📓 When selecting a codec for a response body, the  `ContentType.charset`  doesn't impact which codec is selected. 
+
+If a response's content-type has a charset, then a charset encoder like  `UTF8`  will be applied as a last encoding step. For example, a response with content-type  `application/json; charset=utf-8`  will encode the body object as a JSON string, which is then encoded as a list of UTF8 bytes. It is required that a response body's eventually encoded type is a list of bytes, so it follows that a codec that produces a string must have a charset.
 
 If there is no codec in the repository for the content type of a  `Response`, the body object must be a  `List<int>`  or  `Stream<List<int>>`. If you find yourself converting data prior to setting it as a body object, it may make sense to add your own codec to  `CodecRegistry`.
 
@@ -183,6 +185,6 @@ class MyController extends ResourceController {
   }
 }
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU5MTUwMTQ4LC00MjEyNTc1MzQsLTEzNj
-MzMjEwMjQsMjEwMjMwNzM2OF19
+eyJoaXN0b3J5IjpbLTEzNDIzMDQ1NDIsOTU5MTUwMTQ4LC00Mj
+EyNTc1MzQsLTEzNjMzMjEwMjQsMjEwMjMwNzM2OF19
 -->
