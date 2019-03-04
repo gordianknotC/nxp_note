@@ -2,23 +2,20 @@
 ### Multipart header
 #### [What should a Multipart HTTP request with multiple files look like? [duplicate]](https://stackoverflow.com/questions/913626/what-should-a-multipart-http-request-with-multiple-files-look-like)
 
-There are  [three possibilities](https://www.w3.org/TR/html5/sec-forms.html#element-attrdef-form-enctype)  for  `enctype`:
+#### There are  [three possibilities](https://www.w3.org/TR/html5/sec-forms.html#element-attrdef-form-enctype)  for  `enctype`:
 
 -   [`application/x-www-form-urlencoded`](https://www.w3.org/TR/html5/sec-forms.html#urlencoded-form-data)
 -   [`multipart/form-data`](https://www.w3.org/TR/html5/sec-forms.html#multipart-form-data)  (spec points to  [RFC7578](https://tools.ietf.org/html/rfc7578))
 -   [`text/plain`](https://www.w3.org/TR/html5/sec-forms.html#plain-text-form-data). This is "not reliably interpretable by computer", so it should never be used in production, and we will not look further into it.
 
-When you are writing client-side code:
+#### When you are writing client-side code:
 
--   use  `multipart/form-data`  when your form includes any  `<input type="file">`  elements
--   otherwise you can use  `multipart/form-data`  or  `application/x-www-form-urlencoded`  but  `application/x-www-form-urlencoded`  will be more efficient
+-   use  **`multipart/form-data`**  when your form includes any  `<input type="file">`  elements
+-   otherwise you can use  **`multipart/form-data`**  or  **`application/x-www-form-urlencoded`**  but  **`application/x-www-form-urlencoded`**  will be more efficient
 
-When you are writing server-side code:
+	`enctype='multipart/form-data`  is an encoding type that allows files to be sent through a  _POST_. Quite simply, without this encoding the files cannot be sent through  _POST_. If you want to allow a user to upload a file via a form, you must use this  _enctype_.
 
--   Use a prewritten form handling library
-- 
-`enctype='multipart/form-data`  is an encoding type that allows files to be sent through a  _POST_. Quite simply, without this encoding the files cannot be sent through  _POST_. If you want to allow a user to upload a file via a form, you must use this  _enctype_.
-
+_what a multipart header looks like_
 ```http
 POST / HTTP/1.1
 [[ Less interesting headers ... ]]
@@ -54,6 +51,6 @@ aωb
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgxOTQxNTE0LDE2OTA4NzkzNTMsLTg3ND
-kzODI2M119
+eyJoaXN0b3J5IjpbMzkxMTIyOTQsMTY5MDg3OTM1MywtODc0OT
+M4MjYzXX0=
 -->
