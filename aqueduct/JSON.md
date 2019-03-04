@@ -45,8 +45,8 @@ The argument to the subscript operator may be a string (if  `data`  is a map) or
 
 ### Inserting Rows with Document Properties
 
-A  `Document`  property is first set when inserting with a  `Query<T>`. The  `values`property of the query is set to a  `Document`  object initialized with a JSON-encodable value.
-
+A  **`Document`**  property is first set when inserting with a  `Query<T>`. The  `values`property of the query is set to a  `Document`  object initialized with a JSON-encodable value.
+```dart
 final query = Query<Event>(context)
   ..values.timestamp = DateTime.now()
   ..values.contents = Document({
@@ -55,7 +55,7 @@ final query = Query<Event>(context)
     "tags": ["v1"]
   });
 final event = await query.insert();  
-
+```
 In the above, the argument to  `Document`  will be JSON-encoded and stored in the database for column  `contents`. If the object can't be encoded as JSON, an exception will be thrown.
 
 ### Fetching Rows with Document Properties
@@ -177,5 +177,5 @@ final eventTagCounts = await context.persistentStore.execute("SELECT jsonb_array
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwODgzNjc2Nyw0OTEwNzA3ODFdfQ==
+eyJoaXN0b3J5IjpbMTgyMjc5NjEyLDQ5MTA3MDc4MV19
 -->
