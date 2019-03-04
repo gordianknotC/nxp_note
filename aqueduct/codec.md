@@ -96,13 +96,15 @@ Body objects may be compressed with  `gzip`  if the HTTP client allows it  _and_
 > - `text/*`  
 are all configured to allow compression. Compression occurs as the last step of conversion and only if the HTTP client sends the  `Accept-Encoding: gzip`  header.
 
-Content types that are not in the codec repository will not trigger compression, even if the HTTP client allows compression with the  `Accept-Encoding`  header. This is to prevent binary contents like images from being 'compressed', since they are likely already compressed by a content-specific algorithm. In order for Aqueduct to compress a content type other than the built-in types, you may add a codec to the repository with the  `allowCompression`  flag. (The default value is  `true`.)
+Content types that are not in the codec repository will not trigger compression, even if the HTTP client allows compression with the  `Accept-Encoding`  header. This is to prevent binary contents like images from being 'compressed', since they are likely already compressed by a content-specific algorithm. 
 
+> ⚡ In order for Aqueduct to compress a content type other than the built-in types, you may add a codec to the repository with the  `allowCompression`  flag. (The default value is  `true`.)
+```dart
 CodecRegistry.add(
   ContentType("application", "x-special"),
    MyCodec(),
   allowCompression: true);
-
+```
 You may also set whether or not a content type uses compression without having to specify a codec if no conversion step needs to occur:
 
 CodecRegistry.setAllowsCompression(new ContentType("application", "x-special"), true);
@@ -196,7 +198,7 @@ class MyController extends ResourceController {
   }
 }
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjE1MDgzODgsNjY5NTk0NzYwLDE3ND
-QwNjc2NzQsOTU5MTUwMTQ4LC00MjEyNTc1MzQsLTEzNjMzMjEw
-MjQsMjEwMjMwNzM2OF19
+eyJoaXN0b3J5IjpbMTc0MzY5MjM2OCw2Njk1OTQ3NjAsMTc0ND
+A2NzY3NCw5NTkxNTAxNDgsLTQyMTI1NzUzNCwtMTM2MzMyMTAy
+NCwyMTAyMzA3MzY4XX0=
 -->
