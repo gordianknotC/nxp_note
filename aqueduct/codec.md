@@ -12,12 +12,15 @@ final imageBytes = await imageFile.readAsBytes();
 final response = Response.ok(imageBytes)
   ..contentType = ContentType("image", "jpeg");
 ```
-You may disable the automatic encoding of a body as long as the body object is a byte array:
+
+##### disable automatic encoding
+
+You may **disable** the **automatic encoding** of a body as long as the body object is a **byte** array:
 ```dart
 final jsonBytes = utf8.encode(json.encode({"key": "value"}));
 final response = Response.ok(jsonBytes)..encodeBody = false;
 ```
 See a later section for more details on content type to codec mappings. Also, see the documentation for  `CodecRegistry`  for details on built-in codecs and adding codecs.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxNTA3MjQ2MSwyMTAyMzA3MzY4XX0=
+eyJoaXN0b3J5IjpbLTExMTY1ODE4OTQsMjEwMjMwNzM2OF19
 -->
