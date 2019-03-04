@@ -5,11 +5,11 @@ Learn how to store unstructured, binary JSON data in  `ManagedObject<T>`properti
 
 ## JSON Columns in Relational Databases
 
-PostgreSQL supports many column data types like integers, strings, booleans and dates. A column may also be JSON data. This allows for storing unstructured data and simple objects in a table column. The data from JSON columns can be fetched all at once, or in pieces. Elements of JSN data can be used to filter the results of a query.
+PostgreSQL supports many column data types like integers, strings, booleans and dates. A column may also be JSON data. This allows for **storing unstructured data** and **simple objects** in a table column. The data from JSON columns can be fetched all at once, or in pieces. Elements of JSN data can be used to filter the results of a query.
 
 ## The Document Data Type
 
-JSON document columns are added to a database table by declaring a  `Document`property in a  `ManagedObject<T>`'s table definition. In PostgreSQL, a  `Document`column data type is  `jsonb`. A document column can only contain JSON-encodable data. This data is typically a  `Map`  or  `List`  that contains only JSON-encodable data. The following  `ManagedObject<T>`  declaration will have a  `contents`  column of type  `jsonb`.
+JSON document columns are added to a database table by declaring a  **`Document`property** in a  `ManagedObject<T>`'s table definition. In PostgreSQL, a  **`Document`**column data type is  `jsonb`. A document column can only contain JSON-encodable data. This data is typically a  `Map`  or  `List`  that contains only JSON-encodable data. The following  `ManagedObject<T>`  declaration will have a  `contents`  column of type  `jsonb`.
 
 class Event extends ManagedObject<_Event> implements _Event {}
 class _Event {
@@ -179,5 +179,5 @@ final eventTagCounts = await context.persistentStore.execute("SELECT jsonb_array
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNzE1MDU5NV19
+eyJoaXN0b3J5IjpbNDkxMDcwNzgxXX0=
 -->
