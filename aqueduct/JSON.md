@@ -112,7 +112,7 @@ final doc = Document([
 final obj1 = doc[0]["id"]; // == 1
 final obj2 = doc[1]["id"]; // == 2
 ```
-Note that using the subscript operator on a  `Document`  simply invokes it on its  `data`  property. Therefore, any subscript values must be valid for Dart  `List`  and  `Map`  types.
+> Note that **using the subscript operator on a  `Document`  simply invokes it on its  `data`  property**. Therefore, any subscript values must be valid for Dart  `List`  and  `Map`  types.
 
 ## Fetching Sub-documents
 
@@ -179,6 +179,6 @@ final eventTagCounts = await context.persistentStore.execute("SELECT jsonb_array
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODUzMTUxNTksLTY1ODcyODcwNCw0OT
-EwNzA3ODFdfQ==
+eyJoaXN0b3J5IjpbLTg0MTUzMzQzMywtNjU4NzI4NzA0LDQ5MT
+A3MDc4MV19
 -->
