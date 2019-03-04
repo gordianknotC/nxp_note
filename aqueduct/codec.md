@@ -157,7 +157,7 @@ A serializable object can be read from a request body:
 final person = Person()..readFromMap(await request.body.decode());
 ```
 
-> Serializable objects are the only types of objects that can be  [bound to a ResourceController argument](https://aqueduct.io/docs/http/resource_controller/).
+> ⚡ **Serializable** objects are the only types of objects that can be  [bound to a ResourceController argument](https://aqueduct.io/docs/http/resource_controller/).
 
 ```dart
 @Operation.post()
@@ -171,13 +171,14 @@ Future<Response> addPerson(@Bind.body() Person person) async {
 See the section on how  `Serializable`  types work with OpenAPI documentation generation  [here](https://aqueduct.io/docs/openapi/components/).
 
 ### Example: multipart/form-data
+**Add  `package:mime`  to your  `pubspec.yaml`  as a dependency.**
 ```
-Add  `package:mime`  to your  `pubspec.yaml`  as a dependency.
-
 dependencies:
   mime: any # prefer a better constraint than this
 ```
+
 And then decode the body with the objects from that package:
+
 ```dart
 import 'package:aqueduct/aqueduct.dart';
 import 'package:mime/mime.dart';
@@ -202,7 +203,7 @@ class MyController extends ResourceController {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MTY3OTI1MywtMjE0Njg1ODE5MCw2Nj
+eyJoaXN0b3J5IjpbLTUwNTMxNDEwMCwtMjE0Njg1ODE5MCw2Nj
 k1OTQ3NjAsMTc0NDA2NzY3NCw5NTkxNTAxNDgsLTQyMTI1NzUz
 NCwtMTM2MzMyMTAyNCwyMTAyMzA3MzY4XX0=
 -->
