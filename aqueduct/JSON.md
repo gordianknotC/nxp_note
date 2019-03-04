@@ -21,8 +21,8 @@ class _Event {
 }
 ```
 
-A  **`Document`**  object has a  **`data`**  property to hold its JSON-encodable data. When instantiating  `Document`, this property defaults to null unless a value has been provided to the optional, ordered parameter in its constructor.
-
+> ⚡ A  **`Document`**  object has a  **`data`**  property to hold its **JSON-encodable** data. When instantiating  `Document`, this property **defaults to null unless** a value has been provided to the optional, ordered parameter in its constructor.
+```dart
 final doc = new Document();
 assert(doc.data == null);
 
@@ -31,7 +31,7 @@ assert(doc.data is Map);
 
 final doc = new Document([0]);
 assert(doc.data is List);
-
+```
 The data in a document can be accessed through its  `data`  property, or through its subscript operator.  `Document`'s subscript operator forwards the invocation to its  `data`  property.
 
 final doc = new Document({"key": "value"});
@@ -178,5 +178,5 @@ final eventTagCounts = await context.persistentStore.execute("SELECT jsonb_array
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNTgwOTA5Miw0OTEwNzA3ODFdfQ==
+eyJoaXN0b3J5IjpbLTE3ODc0MjY2Miw0OTEwNzA3ODFdfQ==
 -->
