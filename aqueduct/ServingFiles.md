@@ -52,6 +52,7 @@ var controller = new FileController("public/")
 > ✒️ If there is no entry for an extension of a file being served, the content-type defaults to  
 `application/octet-stream`. An  `FileController`  will **never** invoke any **encoders** from  `CodecRegistry`, but it will **GZIP** data if the repository allows compression for the content-type of the file (see  `CodecRegistry.add`  and  `CodecRegistry.setAllowsCompression`).
 
+
 ## Caching
  
 An  `FileController`  always sets the the Last-Modified header of the response to the last modified date according to the filesystem. If a request sends an If-Modified-Since header and the file has not been modified since that date, a 304 Not Modified response is sent with the appropriate headers.
@@ -88,6 +89,6 @@ var response = new Response.ok("contents")
   ..cachePolicy = new CachePolicy();
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMjAxMDU4NCwxMjc2MDIwNTE2LDE3ND
-Y2MDA2NjMsMTk3OTMwNTQwNl19
+eyJoaXN0b3J5IjpbLTE3NTkzNTUwNjYsMTI3NjAyMDUxNiwxNz
+Q2NjAwNjYzLDE5NzkzMDU0MDZdfQ==
 -->
