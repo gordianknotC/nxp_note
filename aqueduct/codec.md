@@ -47,9 +47,13 @@ There are three built-in codecs for
   - `application/x-www-form-urlencoded`  and  
   - `text/*`. 
 
-When a response is being sent, the repository is searched for an entry that exactly matches the primary and subtype of the  `Response.contentType`. If an entry exists, the associated  `Codec`  starts the conversion. For example, if the content type is  `application/json; charset=utf-8`, the built-in  `application/json`  codec encodes the body object.
+> ⚡ When a response is being sent, the repository is searched for an entry that exactly matches the primary and subtype of the  `Response.contentType`. If an entry exists, the associated  `Codec`  starts the conversion. 
 
-If there isn't an exact match, but there is an entry for the primary type with the wildcard (`*`) subtype, that codec is used. For example, the built-in codec for  `text/*`will be selected for both  `text/plain`  and  `text/html`. If there was something special that had to be done for  `text/html`, a more specific codec may be added for that type:
+For example, if the content type is  `application/json; charset=utf-8`, the built-in  `application/json`  codec encodes the body object.
+
+> ⚡ If there isn't an exact match, but there is an entry for the primary type with the wildcard (`*`) subtype, that codec is used. For example, the built-in codec for  `text/*`will be selected for both  `text/plain`  and  `text/html`. 
+
+If there was something special that had to be done for  `text/html`, a more specific codec may be added for that type:
 
 class MyChannel extends ApplicationChannel {
   @override
@@ -177,6 +181,6 @@ class MyController extends ResourceController {
   }
 }
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMTI1NzUzNCwtMTM2MzMyMTAyNCwyMT
-AyMzA3MzY4XX0=
+eyJoaXN0b3J5IjpbNTI3NDgxNDcyLC00MjEyNTc1MzQsLTEzNj
+MzMjEwMjQsMjEwMjMwNzM2OF19
 -->
