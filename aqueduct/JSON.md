@@ -90,7 +90,7 @@ When updating in this way, the document stored in the column is replaced entirel
 
 ### Accessing Document Values
 
-The type of  `Document.data`  is  `dynamic`  - it can be any valid JSON type and may be casted to the expected type when used. This data can also be nested - a  `List`of  `Maps`, for example. When accessing object keys or list indices, you may use the subscript operator directly on  `Document`.
+**The type of  `Document.data`  is  `dynamic**`  - it can be any valid JSON type and may be casted to the expected type when used. This data can also be nested - a  `List`of  `Maps`, for example. When accessing object keys or list indices, you may use the subscript operator directly on  `Document`.
 
 // Object Access by key
 final doc = Document({"key": "value"});
@@ -177,5 +177,5 @@ final eventTagCounts = await context.persistentStore.execute("SELECT jsonb_array
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5Njc0ODgwLDQ5MTA3MDc4MV19
+eyJoaXN0b3J5IjpbLTY1ODcyODcwNCw0OTEwNzA3ODFdfQ==
 -->
