@@ -88,7 +88,13 @@ If no charset is specified when registering a codec, no charset decoding occurs 
 
 ### Compression with gzip
 
-Body objects may be compressed with  `gzip`  if the HTTP client allows it  _and_  the  `CodecRegistry`  has been configured to compress the content type of the response. The three built-in codecs -  `application/json`,  `application/x-www-form-urlencoded`  and  `text/*`  - are all configured to allow compression. Compression occurs as the last step of conversion and only if the HTTP client sends the  `Accept-Encoding: gzip`  header.
+Body objects may be compressed with  `gzip`  if the HTTP client allows it  _and_  the  `CodecRegistry`  has been configured to compress the content type of the response. 
+
+The three built-in codecs 
+-  `application/json`
+-   `application/x-www-form-urlencoded`  and  
+- `text/*`  
+are all configured to allow compression. Compression occurs as the last step of conversion and only if the HTTP client sends the  `Accept-Encoding: gzip`  header.
 
 Content types that are not in the codec repository will not trigger compression, even if the HTTP client allows compression with the  `Accept-Encoding`  header. This is to prevent binary contents like images from being 'compressed', since they are likely already compressed by a content-specific algorithm. In order for Aqueduct to compress a content type other than the built-in types, you may add a codec to the repository with the  `allowCompression`  flag. (The default value is  `true`.)
 
@@ -190,7 +196,7 @@ class MyController extends ResourceController {
   }
 }
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY5NTk0NzYwLDE3NDQwNjc2NzQsOTU5MT
-UwMTQ4LC00MjEyNTc1MzQsLTEzNjMzMjEwMjQsMjEwMjMwNzM2
-OF19
+eyJoaXN0b3J5IjpbNTc5MTk1OTY1LDY2OTU5NDc2MCwxNzQ0MD
+Y3Njc0LDk1OTE1MDE0OCwtNDIxMjU3NTM0LC0xMzYzMzIxMDI0
+LDIxMDIzMDczNjhdfQ==
 -->
