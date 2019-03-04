@@ -40,13 +40,14 @@ If the requested path was a directory, the filename  `index.html`  will be appen
 If a file does not exist, an  `FileController`  returns a 404 Not Found response.
 
 ### Content-Type of Files
-##### setContent
+#### setContentTypeForExtension - add content-types for extensions
 An  `FileController`  will set the **content-type of the HTTP response** based on the served **files path** extension. By default, it recognizes many common extensions like  `.html`,  `.css`,  `.jpg`,  `.js`. You may add content-types for extensions to an instance:
 ```dart
 var controller = new FileController("public/")
   ..setContentTypeForExtension("xml", new ContentType("application", "xml"));
 ```
-If there is no entry for an extension of a file being served, the content-type defaults to  `application/octet-stream`. An  `FileController`  will never invoke any encoders from  `CodecRegistry`, but it will GZIP data if the repository allows compression for the content-type of the file (see  `CodecRegistry.add`  and  `CodecRegistry.setAllowsCompression`).
+If there is no entry for an extension of a file being served, the content-type defaults to  
+`application/octet-stream`. An  `FileController`  will never invoke any encoders from  `CodecRegistry`, but it will GZIP data if the repository allows compression for the content-type of the file (see  `CodecRegistry.add`  and  `CodecRegistry.setAllowsCompression`).
 
 ## Caching
 
@@ -84,5 +85,5 @@ var response = new Response.ok("contents")
   ..cachePolicy = new CachePolicy();
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MjkxNDY5NiwxOTc5MzA1NDA2XX0=
+eyJoaXN0b3J5IjpbMTc0NjYwMDY2MywxOTc5MzA1NDA2XX0=
 -->
