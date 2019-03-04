@@ -8,6 +8,7 @@ Aqueduct can serve files by returning the contents of a file as an HTTP response
 ## FileController
 
 Instances of  `FileController`  serve a directory from the filesystem through an HTTP interface. **Any route that channels requests to an  `FileController`**  _must_contain a  `*`  match-all token.
+
 ```dart
 @override
 Controller get entryPoint {
@@ -30,7 +31,7 @@ project/
   public/
     image.jpg
 ```
-Adding a leading slash to the directory served by  `FileController`  will resolve it relative to the filesystem root.
+Adding a **leading slash** to the directory served by  `FileController`  will resolve it relative to the **filesystem root**.
 
 If the requested path was a directory, the filename  `index.html`  will be appended to the path when searching for a file to return.
 
@@ -39,10 +40,10 @@ If a file does not exist, an  `FileController`  returns a 404 Not Found response
 ### Content-Type of Files
 
 An  `FileController`  will set the content-type of the HTTP response based on the served files path extension. By default, it recognizes many common extensions like  `.html`,  `.css`,  `.jpg`,  `.js`. You may add content-types for extensions to an instance:
-
+```dart
 var controller = new FileController("public/")
   ..setContentTypeForExtension("xml", new ContentType("application", "xml"));
-
+```
 If there is no entry for an extension of a file being served, the content-type defaults to  `application/octet-stream`. An  `FileController`  will never invoke any encoders from  `CodecRegistry`, but it will GZIP data if the repository allows compression for the content-type of the file (see  `CodecRegistry.add`  and  `CodecRegistry.setAllowsCompression`).
 
 ## Caching
@@ -51,9 +52,11 @@ An  `FileController`  always sets the the Last-Modified header of the response t
 
 You may provide Cache-Control headers depending on the path of the file being served. Here's an example that adds  `Cache-Control: public, max-age=31536000`
 
+```dart
 var policy = new CachePolicy(expirationFromNow: new Duration(days: 365));
 var controller = new FileController("public/")
   ..addCachePolicy(policy, (path) => path.endsWith(".css"));
+```
 
 ## File Serving and Caching Outside of FileController
 
@@ -77,5 +80,5 @@ You may set the  `CachePolicy`  of any  `Response`. Note that  `CachePolicy`  on
 var response = new Response.ok("contents")
   ..cachePolicy = new CachePolicy();
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjcyMzkwNzEsMTk3OTMwNTQwNl19
+eyJoaXN0b3J5IjpbLTExNTk0ODAyMywxOTc5MzA1NDA2XX0=
 -->
