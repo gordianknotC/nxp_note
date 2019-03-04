@@ -71,7 +71,9 @@ event1.contents.data == {
   "tags": ["v1"]
 };
 ```
-When fetching  `Document`  properties, the JSON data is decoded into the appropriate type. This is likely a  `Map`  or  `List`, but can be any JSON-encodable object. Because the data stored in a  `Document`  property is unstructured, the type of  `data`  is  `dynamic`. It is good practice to store consistent data structures in a column; i.e., always storing a  `Map`  or always storing a  `List`.
+When fetching  `Document`  properties, the JSON data is decoded into the appropriate type. This is likely a  `Map`  or  `List`, but can be any JSON-encodable object. 
+
+> Because the data stored in a  `Document`  property is unstructured, the type of  `data`  is  `dynamic`. It is good practice to **store consistent data structures** in a column; i.e., always storing a  `Map`  or always storing a  `List`.
 
 ### Updating Rows with Document Properties
 
@@ -177,5 +179,6 @@ final eventTagCounts = await context.persistentStore.execute("SELECT jsonb_array
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1ODcyODcwNCw0OTEwNzA3ODFdfQ==
+eyJoaXN0b3J5IjpbMTMyMzU0MTI1NCwtNjU4NzI4NzA0LDQ5MT
+A3MDc4MV19
 -->
