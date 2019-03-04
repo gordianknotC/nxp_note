@@ -7,7 +7,7 @@ Aqueduct can serve files by returning the contents of a file as an HTTP response
 
 ## FileController
 
-Instances of  `FileController`  serve a directory from the filesystem through an HTTP interface. **Any route that channels requests to an  `FileController`**  _must_contain a  `*`  match-all token.
+> Instances of  `FileController`  **serve a directory** from the filesystem through an HTTP interface. **Any route that channels requests to an  `FileController`**  _must_contain a  `*`  match-all token.
 
 ```dart
 @override
@@ -61,7 +61,7 @@ var controller = new FileController("public/")
 ## File Serving and Caching Outside of FileController
 
 A file can be served by any controller by setting the body object of a  `Response`  with its contents:
-
+```dart
 var file = new File("index.html");
 
 // By loading contents into memory first...
@@ -72,13 +72,15 @@ var response = new Response.ok(file.readAsStringSync())
 var response = new Response.ok(file.openRead())
   ..encodeBody = false
   ..contentType = new ContentType("application", "html");
+```
 
 It is important to understand the how Aqueduct  [uses content-types to manipulate response bodies](https://aqueduct.io/docs/http/request_and_response/)  to serve file contents.
 
 You may set the  `CachePolicy`  of any  `Response`. Note that  `CachePolicy`  only modifies the Cache-Control header of a response - headers like Last-Modified and ETag are not added.
-
+```dart
 var response = new Response.ok("contents")
   ..cachePolicy = new CachePolicy();
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTk0ODAyMywxOTc5MzA1NDA2XX0=
+eyJoaXN0b3J5IjpbMTE0NDUzNTc0OSwxOTc5MzA1NDA2XX0=
 -->
