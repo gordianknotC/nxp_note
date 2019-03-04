@@ -73,7 +73,7 @@ event1.contents.data == {
 ```
 When fetching  `Document`  properties, the JSON data is decoded into the appropriate type. This is likely a  `Map`  or  `List`, but can be any JSON-encodable object. 
 
-> Because the data stored in a  `Document`  property is unstructured, the type of  `data`  is  `dynamic`. It is good practice to **store consistent data structures** in a column; i.e., always storing a  `Map`  or always storing a  `List`.
+> ⚡ Because the data stored in a  `Document`  property is unstructured, the type of  `data`  is  `dynamic`. It is good practice to **store consistent data structures** in a column; i.e., always storing a  `Map`  or always storing a  `List`.
 
 ### Updating Rows with Document Properties
 
@@ -94,24 +94,24 @@ When updating in this way, the document stored in the column is replaced entirel
 
 **The type of  `Document.data`  is  `dynamic**`  - it can be any valid JSON type and may be casted to the expected type when used. This data can also be nested - a  `List`of  `Maps`, for example. When accessing object keys or list indices, you may use the subscript operator directly on  `Document`.
 
+```dart
 // Object Access by key
 final doc = Document({"key": "value"});
 final value = doc["key"] == "value";
-
 // List Access by index
 final doc = Document(["v1", "v2"]);
 final value = doc[0] == "v1";
-
+```
 You can access nested elements with the same syntax:
 
+```dart
 final doc = Document([
   {"id": 1},
   {"id": 2}
 ]);
-
 final obj1 = doc[0]["id"]; // == 1
 final obj2 = doc[1]["id"]; // == 2
-
+```
 Note that using the subscript operator on a  `Document`  simply invokes it on its  `data`  property. Therefore, any subscript values must be valid for Dart  `List`  and  `Map`  types.
 
 ## Fetching Sub-documents
@@ -179,6 +179,6 @@ final eventTagCounts = await context.persistentStore.execute("SELECT jsonb_array
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMzU0MTI1NCwtNjU4NzI4NzA0LDQ5MT
-A3MDc4MV19
+eyJoaXN0b3J5IjpbLTEwODUzMTUxNTksLTY1ODcyODcwNCw0OT
+EwNzA3ODFdfQ==
 -->
