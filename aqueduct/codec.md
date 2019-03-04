@@ -156,7 +156,9 @@ A serializable object can be read from a request body:
 ```dart
 final person = Person()..readFromMap(await request.body.decode());
 ```
-Serializable objects are the only types of objects that can be  [bound to a ResourceController argument](https://aqueduct.io/docs/http/resource_controller/).
+
+> Serializable objects are the only types of objects that can be  [bound to a ResourceController argument](https://aqueduct.io/docs/http/resource_controller/).
+
 ```dart
 @Operation.post()
 Future<Response> addPerson(@Bind.body() Person person) async {
@@ -200,7 +202,7 @@ class MyController extends ResourceController {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0ODkxOTk0NSwtMjE0Njg1ODE5MCw2Nj
+eyJoaXN0b3J5IjpbLTg0MTY3OTI1MywtMjE0Njg1ODE5MCw2Nj
 k1OTQ3NjAsMTc0NDA2NzY3NCw5NTkxNTAxNDgsLTQyMTI1NzUz
 NCwtMTM2MzMyMTAyNCwyMTAyMzA3MzY4XX0=
 -->
