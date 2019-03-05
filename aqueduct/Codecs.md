@@ -204,7 +204,9 @@ class MyController extends ResourceController {
 ```
 ## Processing MIME multipart media types  [#](https://pub.dartlang.org/packages/mime#processing-mime-multipart-media-types)
 
-The class  **`MimeMultipartTransformer`**  is used to process a  **`Stream`**  of bytes encoded using a MIME multipart media types encoding. The transformer provides a new  `Stream`  of  `MimeMultipart`  objects each of which have the headers and the content of each part. The content of a part is provided as a stream of bytes.
+The class  **`MimeMultipartTransformer`**  is used to process a  **`Stream`**  of bytes encoded using a **MIME multipart media types encoding**. The transformer provides a new  `Stream`  of  `MimeMultipart`  objects each of which have the headers and the content of each part. The content of a part is provided as a stream of bytes.
+
+> 上卜
 
 Below is an example showing how to process an HTTP request and print the length of the content of each part.
 ```dart
@@ -229,6 +231,6 @@ request
 		HttpRequest.request('/upload', method: 'POST', sendData: data).then((HttpRequest r) 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NjYwNzM0LC0xMTE0ODcxNjcsMTc1OD
-A0MDA1OCwtNTA1MzE0MTAwXX0=
+eyJoaXN0b3J5IjpbMTQyMjA1NTEyNiwxMjQ2NjA3MzQsLTExMT
+Q4NzE2NywxNzU4MDQwMDU4LC01MDUzMTQxMDBdfQ==
 -->
