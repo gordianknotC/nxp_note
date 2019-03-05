@@ -241,8 +241,11 @@ request
 		data.append(key, value);
 		HttpRequest.request('/upload', method: 'POST', sendData: data).then((HttpRequest r) 
 ```
+
+> Send Streaming Data via FormData by powerful Http client for Dar
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTY3MTI1MDUsNTQwNjYzNDg1LDEyND
-Y2MDczNCwtMTExNDg3MTY3LDE3NTgwNDAwNTgsLTUwNTMxNDEw
-MF19
+eyJoaXN0b3J5IjpbMTEyMjk3ODAyOSwtMTA5NjcxMjUwNSw1ND
+A2NjM0ODUsMTI0NjYwNzM0LC0xMTE0ODcxNjcsMTc1ODA0MDA1
+OCwtNTA1MzE0MTAwXX0=
 -->
