@@ -207,7 +207,9 @@ class MyController extends ResourceController {
 	> Parser for MIME multipart types of data as described in RFC 2046 section 5.1.1. The data is transformed into [MimeMultipart](https://pub.dartlang.org/documentation/mime/latest/mime/MimeMultipart-class.html) objects, each of them streaming the multipart data.
 	
 > > **methods**
-> bind(**Stream<List<int>>** stream) → Stream<**MimeMultipart**>
+> **bind**(**Stream<List<int>>** stream) → **Stream**<**MimeMultipart**>
+> 
+> > Transforms the provided  `stream`. Returns a new stream with events that are computed from events of the provided  `stream`.
 > 1. final transformer = **MimeMultipartTransformer** ....
 >     
 
@@ -241,6 +243,6 @@ request
 		HttpRequest.request('/upload', method: 'POST', sendData: data).then((HttpRequest r) 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4Njg4NTEwNywxMjQ2NjA3MzQsLTExMT
-Q4NzE2NywxNzU4MDQwMDU4LC01MDUzMTQxMDBdfQ==
+eyJoaXN0b3J5IjpbNTQwNjYzNDg1LDEyNDY2MDczNCwtMTExND
+g3MTY3LDE3NTgwNDAwNTgsLTUwNTMxNDEwMF19
 -->
