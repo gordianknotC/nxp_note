@@ -234,7 +234,7 @@ request
 
 
 
-> ### How to Send Form Data in Dart
+> #### How to Send Form Data in Dart
 > 
 ```dart
 		FormData data = new FormData(); // from dart:html
@@ -242,10 +242,19 @@ request
 		HttpRequest.request('/upload', method: 'POST', sendData: data).then((HttpRequest r) 
 ```
 
-> Send Streaming Data via FormData by powerful Http client for Dar
+> #### Send Streaming Data via FormData by powerful Http client, dio
+> 
+```dart
+FormData formData = new FormData.from({
+    "name": "wendux",
+    "age": 25,
+    "file": new UploadFileInfo(new File("./example/upload.txt"), "upload.txt")
+});
+response = await dio.post("/info", data: formData);
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyMjk3ODAyOSwtMTA5NjcxMjUwNSw1ND
-A2NjM0ODUsMTI0NjYwNzM0LC0xMTE0ODcxNjcsMTc1ODA0MDA1
-OCwtNTA1MzE0MTAwXX0=
+eyJoaXN0b3J5IjpbNzczMzI5NDU2LC0xMDk2NzEyNTA1LDU0MD
+Y2MzQ4NSwxMjQ2NjA3MzQsLTExMTQ4NzE2NywxNzU4MDQwMDU4
+LC01MDUzMTQxMDBdfQ==
 -->
