@@ -202,7 +202,14 @@ class MyController extends ResourceController {
   }
 }
 ```
-
+> ### How to Send Form Data in Dart
+> 
+```dart
+		FormData data = new FormData(); // from dart:html
+		data.append(key, value);
+		HttpRequest.request('/upload', method: 'POST', sendData: data).then((HttpRequest r) 
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1ODA0MDA1OCwtNTA1MzE0MTAwXX0=
+eyJoaXN0b3J5IjpbLTExMTQ4NzE2NywxNzU4MDQwMDU4LC01MD
+UzMTQxMDBdfQ==
 -->
