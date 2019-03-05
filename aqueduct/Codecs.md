@@ -208,7 +208,16 @@ The class  **`MimeMultipartTransformer`**  is used to process a  **`Stream`**  o
 
 Below is an example showing how to process an HTTP request and print the length of the content of each part.
 ```dart
-
+// HTTP request with content type multipart/form-data.
+HttpRequest request = ...;
+// Determine the boundary form the content type header
+String boundary = request.headers.contentType.parameters['boundary'];
+// Process the body just calculating the length of each part.
+request
+    .transform(new MimeMultipartTransformer(boundary))
+    .map((part) => part.fold(0, (p, d) => p + d))
+    .listen((length) => print('Part with length $length'));
+```
 
 
 
@@ -220,6 +229,6 @@ Below is an example showing how to process an HTTP request and print the length 
 		HttpRequest.request('/upload', method: 'POST', sendData: data).then((HttpRequest r) 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNzU5NzEwMSwtMTExNDg3MTY3LDE3NT
-gwNDAwNTgsLTUwNTMxNDEwMF19
+eyJoaXN0b3J5IjpbMTI0NjYwNzM0LC0xMTE0ODcxNjcsMTc1OD
+A0MDA1OCwtNTA1MzE0MTAwXX0=
 -->
