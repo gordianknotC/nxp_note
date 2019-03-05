@@ -203,8 +203,8 @@ class MyController extends ResourceController {
 }
 ```
 > 📘 Further explanation
-> 1. final transformer = MimeMultipartTransformer ....
-> 
+> 1. final transformer = **MimeMultipartTransformer** ....
+>     
 
 
 ## Processing MIME multipart media types  [#](https://pub.dartlang.org/packages/mime#processing-mime-multipart-media-types)
@@ -236,6 +236,6 @@ request
 		HttpRequest.request('/upload', method: 'POST', sendData: data).then((HttpRequest r) 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Njk1MTAwODksMTI0NjYwNzM0LC0xMT
-E0ODcxNjcsMTc1ODA0MDA1OCwtNTA1MzE0MTAwXX0=
+eyJoaXN0b3J5IjpbMTUwNzYzOTkyNywxMjQ2NjA3MzQsLTExMT
+Q4NzE2NywxNzU4MDQwMDU4LC01MDUzMTQxMDBdfQ==
 -->
