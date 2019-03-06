@@ -27,10 +27,11 @@ class _Book {
   Author author;
 }
 ```
-> ## @Relate 關連欄位
+
+> #### ⚡ @Relate 關連欄位
 > 需要在table 插入時一併寫入該欄位，否則會出現錯誤
-> ## ManagedSet<ReferencedType>
-> 此為Query指向用,無實際木 
+> #### ⚡ ManagedSet<ReferencedType>
+> 此為Query指向用,無實際欄位, 不得插入 
 
 
 #### To insert an author and a book associated with that author:
@@ -288,10 +289,10 @@ class RegisterController extends QueryController<User> {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2NjYxNTIxLDE1MjQ4ODI1OTEsLTE3Nj
-A2MjQxNDMsLTEyMjYwMDk1NTcsLTE1MzQ3MjAwODUsODQxNzk0
-MzE0LC0xMjg3NDYwOTgwLDkzNTE2NTc2NywxOTU0OTc4ODU3LD
-M0NDA1MTg5OSw2ODMzMjI4NzIsLTE3MDExNDI1OTQsLTEwMzUz
-MTY2OTIsMjA3MDIyNzQwOCwxMzcyNzU4Njk2LDEyNDQwNTU4MS
-wyMDg5NzI2NDM0XX0=
+eyJoaXN0b3J5IjpbLTEyNTkzMjgzNTcsMTUyNDg4MjU5MSwtMT
+c2MDYyNDE0MywtMTIyNjAwOTU1NywtMTUzNDcyMDA4NSw4NDE3
+OTQzMTQsLTEyODc0NjA5ODAsOTM1MTY1NzY3LDE5NTQ5Nzg4NT
+csMzQ0MDUxODk5LDY4MzMyMjg3MiwtMTcwMTE0MjU5NCwtMTAz
+NTMxNjY5MiwyMDcwMjI3NDA4LDEzNzI3NTg2OTYsMTI0NDA1NT
+gxLDIwODk3MjY0MzRdfQ==
 -->
