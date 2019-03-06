@@ -382,6 +382,9 @@ Many  `ResourceController`  subclasses will execute  [queries](https://aqueduct.
 > - If the request has a **path variable**, the  `Query<T>`  assigns an expression to the **primary key value**. 
 >       --> ..values = user;
 
+> ⚡ ## highly recommended not to use queryController
+> 會有一些隱徵的問題出現，如path不是primary key
+
 For example, in a normal  `ResourceController`  that responds to a PUT request, you might write the following:
 ```dart
 @Operation.put('id')
@@ -446,7 +449,8 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwNTk0MDIyNywtNTQxOTY4NzAxLDEzMz
-MyMzUwNTYsLTYxNDQxOTcxNSwtMTI1OTQwMDI3NSwyMDMzNzAz
-NDgsNTA3NzY4NzcwLC01Njc0MzkxNzYsNDEzMDMxNDExXX0=
+eyJoaXN0b3J5IjpbLTg3MzcwNDU1LDEyMDU5NDAyMjcsLTU0MT
+k2ODcwMSwxMzMzMjM1MDU2LC02MTQ0MTk3MTUsLTEyNTk0MDAy
+NzUsMjAzMzcwMzQ4LDUwNzc2ODc3MCwtNTY3NDM5MTc2LDQxMz
+AzMTQxMV19
 -->
