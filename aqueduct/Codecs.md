@@ -170,7 +170,7 @@ Future<Response> addPerson(@Bind.body() Person person) async {
 
 See the section on how  `Serializable`  types work with OpenAPI documentation generation  [here](https://aqueduct.io/docs/openapi/components/).
 
-### Example: multipart/form-data
+## 🔥 Example: multipart/form-data
 **Add  `package:mime`  to your  `pubspec.yaml`  as a dependency.**
 ```
 dependencies:
@@ -254,7 +254,7 @@ response = await dio.post("/info", data: formData);
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzczMzI5NDU2LC0xMDk2NzEyNTA1LDU0MD
-Y2MzQ4NSwxMjQ2NjA3MzQsLTExMTQ4NzE2NywxNzU4MDQwMDU4
-LC01MDUzMTQxMDBdfQ==
+eyJoaXN0b3J5IjpbLTkyMjAwNjQxMSw3NzMzMjk0NTYsLTEwOT
+Y3MTI1MDUsNTQwNjYzNDg1LDEyNDY2MDczNCwtMTExNDg3MTY3
+LDE3NTgwNDAwNTgsLTUwNTMxNDEwMF19
 -->
