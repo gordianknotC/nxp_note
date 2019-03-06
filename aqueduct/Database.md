@@ -27,6 +27,10 @@ class _Book {
   Author author;
 }
 ```
+> ## @Relate 關連欄位
+> 需要在table 插入時一併寫入該欄位
+
+
 #### To insert an author and a book associated with that author:
 ```dart
 final authorQuery = Query<Author>(context)
@@ -282,10 +286,10 @@ class RegisterController extends QueryController<User> {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyNDg4MjU5MSwtMTc2MDYyNDE0MywtMT
-IyNjAwOTU1NywtMTUzNDcyMDA4NSw4NDE3OTQzMTQsLTEyODc0
-NjA5ODAsOTM1MTY1NzY3LDE5NTQ5Nzg4NTcsMzQ0MDUxODk5LD
-Y4MzMyMjg3MiwtMTcwMTE0MjU5NCwtMTAzNTMxNjY5MiwyMDcw
-MjI3NDA4LDEzNzI3NTg2OTYsMTI0NDA1NTgxLDIwODk3MjY0Mz
-RdfQ==
+eyJoaXN0b3J5IjpbMTcyNjgxNzk0OCwxNTI0ODgyNTkxLC0xNz
+YwNjI0MTQzLC0xMjI2MDA5NTU3LC0xNTM0NzIwMDg1LDg0MTc5
+NDMxNCwtMTI4NzQ2MDk4MCw5MzUxNjU3NjcsMTk1NDk3ODg1Ny
+wzNDQwNTE4OTksNjgzMzIyODcyLC0xNzAxMTQyNTk0LC0xMDM1
+MzE2NjkyLDIwNzAyMjc0MDgsMTM3Mjc1ODY5NiwxMjQ0MDU1OD
+EsMjA4OTcyNjQzNF19
 -->
