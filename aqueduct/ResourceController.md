@@ -383,7 +383,7 @@ Many  `ResourceController`  subclasses will execute  [queries](https://aqueduct.
 >       --> ..values = user;
 
 > ⚡ ## highly recommended not to use queryController
-> 會有一些隱徵的問題出現，如path不是primary key 但該column有設indexed: true..
+>queryController 只能用在primaryKey與path一樣的條件下，不建議使用， 會有一些隱徵的問題出現，如path不是primary key 但該column有設indexed: true
 
 For example, in a normal  `ResourceController`  that responds to a PUT request, you might write the following:
 ```dart
@@ -449,8 +449,8 @@ See the chapter on  [validations](https://aqueduct.io/docs/db/validations/), whi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMDIxMzQ4MCwxMjA1OTQwMjI3LC01ND
-E5Njg3MDEsMTMzMzIzNTA1NiwtNjE0NDE5NzE1LC0xMjU5NDAw
-Mjc1LDIwMzM3MDM0OCw1MDc3Njg3NzAsLTU2NzQzOTE3Niw0MT
-MwMzE0MTFdfQ==
+eyJoaXN0b3J5IjpbLTEzNDE3Njg5MTUsMTkwMDIxMzQ4MCwxMj
+A1OTQwMjI3LC01NDE5Njg3MDEsMTMzMzIzNTA1NiwtNjE0NDE5
+NzE1LC0xMjU5NDAwMjc1LDIwMzM3MDM0OCw1MDc3Njg3NzAsLT
+U2NzQzOTE3Niw0MTMwMzE0MTFdfQ==
 -->
