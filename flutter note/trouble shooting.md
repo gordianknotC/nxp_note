@@ -7,8 +7,8 @@ to infer why flutter constantly rebuilds, consider following
 situation for further analysis.  
   
 - #### UniqueKey Wrongly Used:   
-  uniqueley implicates it is unique to itself which means its unique on   
-    every rebuild, hence highly unrelated to statefulWidget. If wrongly  
+  uniqueley implicates that it is unique to itself which means its unique on   
+    every rebuild, hence highly incorrespondent to statefulWidget. If wrongly  
     used uniquekey to statefulWidget, it would force statefulWIdget to  
     recreate  
       
@@ -62,5 +62,5 @@ situation for further analysis.
           
 2) ##### LayoutBuilder Nested in IntrinsicHeight Widget
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzM2Mjg0Ml19
+eyJoaXN0b3J5IjpbLTE0ODI5NTA1NDhdfQ==
 -->
