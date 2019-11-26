@@ -82,10 +82,11 @@ situation for further analysis.
 1) ### Accessing Size Information at Build Time  
 	 __message:__  
 	 
-	 The following assertion was thrown building [WIDGET] Cannot get size during build.  
+	 The following assertion was thrown building [WIDGET]  
+	 <span style="color:blue">__Cannot get size during build.__</span>  
 	         
 	        ___Circumstance:___   
-	> 1) pass newly created constraints from parent into child within build statge   
+	> 1) pass newly created constraints from parent into child within build stage
 	> 2) access context.size from build stage ??  
 	         
 	       ___Solution___  
@@ -96,5 +97,5 @@ situation for further analysis.
 2) ### LayoutBuilder Nested in IntrinsicHeight Widget
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTExNTY4MV19
+eyJoaXN0b3J5IjpbMTQwNDg0NTE5MSwtMTE1MTE1NjgxXX0=
 -->
