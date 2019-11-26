@@ -1,12 +1,11 @@
 
 
-#### ⚠👷📂🗁📰💼 📌⚡⚠🎧📧 📝📓 📘 ⏳
-🛑
-# ☠️⚡🛑
-
-# ✒️🖋️🏴󠁴󠁷󠁰󠁥󠁮󠁿🖆 ✍️ 🔏 🖊️ 
-
-# 🔥📛
+#### 
+⚠👷📂🗁📰💼 
+📌⚡⚠🎧📧 📝
+📓 📘 ⏳🛑☠️⚡🛑
+✒️🖋️🏴󠁴󠁷󠁰󠁥󠁮󠁿🖆 ✍️ 🔏 🖊️ 
+🔥📛
 
 
 # Trouble Shooting  
@@ -16,23 +15,23 @@
 to infer why flutter constantly rebuilds, consider following   
 situation for further analysis.  
   
-- #### UniqueKey Wrongly Used:   
-  uniqueley implicates that it is unique to itself which means its unique on   
+- #### ⚡ UniqueKey Wrongly Used:   
+   uniqueley implicates that it is unique to itself which means its unique on   
     every rebuild, hence highly incorrespondent to StatefulWidget. If wrongly  
     used uniquekey to statefulWidget, it would force statefulWIdget to  
     recreate without saving any state...  
       
-    __example:__      
+    __📝 example:__      
   > none...
   
-  #### Widget Constantly Changed on It's Child Visually  
+  #### ⚡ Widget Constantly Changed on It's Child Visually  
   
   When parent doesn't have any visual constraints to it's  
     child, it's possible that some visually changed on child   
     could entail reconstruction of it's parent.  
   
-    __example:__  
-  A Container, which constantly change it's size, nested inside   
+    __📝 example:__  
+    >A Container, which constantly change it's size, nested inside   
     another Container doesn't assign any width. This implicity  
     means the parent Container will forced to re-render on   
     constantly visually changed by it's child, since it doesn't  
@@ -72,5 +71,5 @@ situation for further analysis.
           
 2) ##### LayoutBuilder Nested in IntrinsicHeight Widget
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY1MzQ0OTA2XX0=
+eyJoaXN0b3J5IjpbODc5MzcxMzExXX0=
 -->
