@@ -32,12 +32,12 @@ situation for further analysis.
   
     __📝 example:__  
     >A Container, which constantly change it's size, nested inside   
-    another Container doesn't assign any width. This implicity  
+    another Container with no width been assigned to. This implicity  
     means the parent Container will forced to re-render on   
     constantly visually changed by it's child, since it doesn't  
     specify any width constraints to flutter.  
-      
-    Since width is unassigned in parent [Container], this would   
+     >
+    > 📝 Since width is unassigned in parent [Container], this would   
     force it's parent widget to re-render, hence rebuild occurs...  
       
       
@@ -71,5 +71,5 @@ situation for further analysis.
           
 2) ##### LayoutBuilder Nested in IntrinsicHeight Widget
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc5MzcxMzExXX0=
+eyJoaXN0b3J5IjpbLTYwMTYxMTIyNl19
 -->
