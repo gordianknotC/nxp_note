@@ -16,7 +16,7 @@ to infer why flutter constantly rebuilds, consider following
 situation for further analysis.  
   
 - #### ⚡ UniqueKey Wrongly Used:   
-   uniqueley implicates that it is unique to itself which means its unique on   
+   uniqueley implicates that ___it is unique to itself___ which means its unique on   
     every rebuild, hence highly incorrespondent to StatefulWidget. If wrongly  
     used uniquekey to statefulWidget, it would force statefulWIdget to  
     recreate without saving any state...  
@@ -87,7 +87,7 @@ situation for further analysis.
 	         
 	        ___Circumstance:___   
 	> 1) pass newly created constraints from parent into child within build stage
-	> 2) access context.size from build stage ??  
+	> 2) access context.size from build stage ?? 
 	         
 	       ___Solution___  
 	 > 1) use layout builder to fetch constrains when you need to get  
@@ -97,5 +97,6 @@ situation for further analysis.
 2) ### LayoutBuilder Nested in IntrinsicHeight Widget
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNDg0NTE5MSwtMTE1MTE1NjgxXX0=
+eyJoaXN0b3J5IjpbOTg2MjQzNzIxLDE0MDQ4NDUxOTEsLTExNT
+ExNTY4MV19
 -->
