@@ -94,6 +94,7 @@ situation for further analysis.
 	> 2) pass a constant constraints from parent into child  
           
 2) ### LayoutBuilder Nested in IntrinsicHeight Widget
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNTIwNzgzXX0=
+eyJoaXN0b3J5IjpbLTExNTExNTY4MV19
 -->
