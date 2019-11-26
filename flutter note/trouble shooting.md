@@ -1,4 +1,14 @@
 
+
+#### ⚠👷📂🗁📰💼 📌⚡⚠🎧📧 📝📓 📘 ⏳
+🛑
+# ☠️⚡🛑
+
+# ✒️🖋️🏴󠁴󠁷󠁰󠁥󠁮󠁿🖆 ✍️ 🔏 🖊️ 
+
+# 🔥📛
+
+
 # Trouble Shooting  
   
 ### Flutter Constaantly Rebuild  
@@ -8,12 +18,12 @@ situation for further analysis.
   
 - #### UniqueKey Wrongly Used:   
   uniqueley implicates that it is unique to itself which means its unique on   
-    every rebuild, hence highly incorrespondent to statefulWidget. If wrongly  
+    every rebuild, hence highly incorrespondent to StatefulWidget. If wrongly  
     used uniquekey to statefulWidget, it would force statefulWIdget to  
-    recreate  
+    recreate without saving any state...  
       
     __example:__      
-   
+  > none...
   
   #### Widget Constantly Changed on It's Child Visually  
   
@@ -62,5 +72,5 @@ situation for further analysis.
           
 2) ##### LayoutBuilder Nested in IntrinsicHeight Widget
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODI5NTA1NDhdfQ==
+eyJoaXN0b3J5IjpbNjY1MzQ0OTA2XX0=
 -->
