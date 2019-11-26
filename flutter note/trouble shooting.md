@@ -42,17 +42,39 @@ situation for further analysis.
       
       
 ```dart  
-	Future.delayed(Duration(milliseconds: 500), (){  
-	property_progress += 0.01; setState((){});     });  
-	return Container( key: ValueKey('empty one...'), height: widget.height, /// width is unassigned here, this would force /// it's parent widget to re-render, hence rebuild /// occurs... // width: widget.width, color: Colors.blueGrey, alignment: AlignmentDirectional.centerStart, child: Container( height: widget.height, width: widget.width * min(property_progress, 1), color: MColors.random ) );     
+Future.delayed(Duration(milliseconds: 500), (){  
+	property_progress += 0.01; setState((){});  });  
+	return Container(  
+	 key: ValueKey('empty one...'), 
+	 height: widget.height, 
+	 /// width is unassigned here, this would force 
+	 /// it's parent widget to re-render, hence rebuild 
+	 /// occurs... 
+	 // width: widget.width, 
+	 color: Colors.blueGrey, 
+	 alignment: AlignmentDirectional.centerStart, 
+	 child: Container( 
+		 height: widget.height, 
+		 width: widget.width * min(property_progress, 1), 
+		 color: MColors.random ));   
 ```  
   __Solution:__  
   Assign width in parent [Container].  
       
-    ```dart  
-  Future.delayed(Duration(milliseconds: 500), (){  
- property_progress += 0.01; setState((){});     });  
- return Container( key: ValueKey('empty one...'), height: widget.height, width: widget.width, color: Colors.blueGrey, alignment: AlignmentDirectional.centerStart, child: Container( height: widget.height, width: widget.width * min(property_progress, 1), color: MColors.random ) );     ```  
+```dart  
+Future.delayed(Duration(milliseconds: 500), (){  
+	property_progress += 0.01; setState((){});  });  
+	return Container(  
+	 key: ValueKey('empty one...'), 
+	 height: widget.height, 
+	 width: widget.width, 
+	 color: Colors.blueGrey, 
+	 alignment: AlignmentDirectional.centerStart, 
+	 child: Container( 
+		 height: widget.height, 
+		 width: widget.width * min(property_progress, 1), 
+		 color: MColors.random ));      
+```  
   ### Rendering Problems  
   
 1) ##### Accessing Size Information at Build Time  
@@ -71,5 +93,5 @@ situation for further analysis.
           
 2) ##### LayoutBuilder Nested in IntrinsicHeight Widget
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1MjE4NjkyNV19
+eyJoaXN0b3J5IjpbLTE3MDIwNDY5ODddfQ==
 -->
