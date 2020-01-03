@@ -139,7 +139,33 @@ ShouldRebuild<Counter>(
 ```
 
 
+#### 節錄flutter 判斷是否updateChild
+```dart
+Element updateChild(Element child, Widget newWidget, dynamic newSlot) {
+...
+      if (child.widget == newWidget) {
+        if (child.slot != newSlot)
+          updateSlotForChild(child, newSlot);
+        return child;
+      }
+      if (Widget.canUpdate(child.widget, newWidget)) {
+        if (child.slot != newSlot)
+          updateSlotForChild(child, newSlot);
+        child.update(newWidget);
+        assert(child.widget == newWidget);
+        assert(() {
+          child.owner._debugElementWasRebuilt(child);
+          return true;
+        }());
+        return child;
+      }
+
+...
+} 
+```
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAzMTY0NzY2LC0xMDA0NTg1NTkyLC0zMT
-k0NDIxNjVdfQ==
+eyJoaXN0b3J5IjpbMTAxNDMzNTI5Miw3MDMxNjQ3NjYsLTEwMD
+Q1ODU1OTIsLTMxOTQ0MjE2NV19
 -->
