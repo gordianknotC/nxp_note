@@ -159,20 +159,20 @@ Element updateChild(Element child, Widget newWidget, dynamic newSlot) {
     if (child.widget == newWidget) {  
       if (child.slot != newSlot)  
         updateSlotForChild(child, newSlot);  
-  return child;  
+    return child;  
   }  
-    if (Widget.canUpdate(child.widget, newWidget)) {  
-      if (child.slot != newSlot)  
+  if (Widget.canUpdate(child.widget, newWidget)) {  
+	if (child.slot != newSlot)  
         updateSlotForChild(child, newSlot);  
-  child.update(newWidget);  
+	child.update(newWidget);  
   assert(child.widget == newWidget);  
   assert(() {  
-        child.owner._debugElementWasRebuilt(child);  
-  return true;  
+	child.owner._debugElementWasRebuilt(child);  
+	return true;  
   }());  
   return child;  
   }  
-    deactivateChild(child);  
+   deactivateChild(child);  
   assert(child._parent == null);  
   }  
   return inflateWidget(newWidget, newSlot);  
@@ -181,6 +181,6 @@ Element updateChild(Element child, Widget newWidget, dynamic newSlot) {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mjk5MDE0MjksNzAzMTY0NzY2LC0xMD
-A0NTg1NTkyLC0zMTk0NDIxNjVdfQ==
+eyJoaXN0b3J5IjpbLTQ5NzIwMjI1Nyw3MDMxNjQ3NjYsLTEwMD
+Q1ODU1OTIsLTMxOTQ0MjE2NV19
 -->
