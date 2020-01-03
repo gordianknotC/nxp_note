@@ -9,35 +9,8 @@
 
 ```mermaid
 graph LR
-	fdk((flutter sdk))
-	adk((android sdk))
+	NS[NestedScrollView] --> SA[SliverAppBar]
 	
-	dfb{buildDir}
-	abuild((android build))
-	fpgn((flutter plugin))
-	style abuild stroke-width:6px   
-	style fpgn stroke-width:6px 
-	style dfb stroke-width:6px 
-	
-	loc(local.properties)
-	style loc stroke-width:4px   
-	
-	set(setting.gradle)
-	b1(android wrapper - build.gradle)
-	b2(android project - build.gradle)
-	style b1 stroke-width:4px, stroke:#7bc
-	style b2 stroke-width:4px, stroke:#7bc
-	style set stroke-width:4px, stroke:#7bc
-
-	dfp(flutterProjectRoot-resolve project path)
-	
-	
-	dandroid(dependencies-androidProject)
-	dflutter(dependencies-buildFlutter)
-	dsub(subproject-relationship)
-	style dandroid stroke-width:4px, stroke-dasharray: 5
-	style dflutter stroke-width:4px, stroke-dasharray: 5
-	style dsub stroke-width:4px, stroke-dasharray: 5
 	
 	
 subgraph one
@@ -118,5 +91,5 @@ Widget build(BuildContext context) {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxOTQ0MjE2NV19
+eyJoaXN0b3J5IjpbMjA5OTcwNjg3MCwtMzE5NDQyMTY1XX0=
 -->
