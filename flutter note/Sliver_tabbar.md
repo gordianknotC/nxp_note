@@ -15,7 +15,35 @@ graph LR
 	SAD[SliverAppBarDelegate] --> TAB[TabBar]
 	TAB[TabBar] --> TBS1[tabs...]
 	TAB[TabBar] --> TBSN[tabs...]
-	
+```
+
+##### _SliverAppBarDelegate
+```dart
+  class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
+    _SliverAppBarDelegate(this._tabBar);
+
+    final TabBar _tabBar;
+
+    @override
+    double get minExtent => _tabBar.preferredSize.height;
+    @override
+    double get maxExtent => _tabBar.preferredSize.height;
+
+    @override
+    Widget build(
+        BuildContext context, double shrinkOffset, bool overlapsContent) {
+      return new Container(
+        child: _tabBar,
+      );
+    }
+
+    @override
+    bool shouldRebuild(_SliverAppBarDelegate oldDelegate) {
+      return false;
+    }
+  }
+```
+
 ```dart
 Widget build(BuildContext context) {
       return Scaffold(
@@ -64,9 +92,9 @@ Widget build(BuildContext context) {
     }
 ```
 
-```
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0MTk1NjU2NiwtMzE5NDQyMTY1XX0=
+eyJoaXN0b3J5IjpbNjQwNjkzMDc0LC0zMTk0NDIxNjVdfQ==
 -->
