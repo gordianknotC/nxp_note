@@ -6,6 +6,41 @@
 
 ### TabBar Nested in SliverAppBar
 #### NestedScrollView / SliverAppBar / SliverPersistentHeader / 
+
+```mermaid
+graph LR
+	fdk((flutter sdk))
+	adk((android sdk))
+	
+	 
+	
+	
+subgraph one
+	subgraph path resolving
+		fdk -.-> loc
+		adk -.-> loc
+	end
+
+	loc -.read path information .-> b2
+	subgraph android project resolving
+		b2 -.- abuild
+	end
+	dfp -.- b2
+	subgraph projectPath&plugin resolving
+		set-.->dfp
+		set -.- fpgn
+	end
+	dandroid -.- b2
+	subgraph resolving flutter build
+		b1 -.- dfb
+		
+		dflutter -.- b1
+		dsub -.- b1
+		dflutter -.- dsub
+		dsub-.- dandroid
+	end
+end
+```
 ```dart
 Widget build(BuildContext context) {
       return Scaffold(
@@ -58,5 +93,5 @@ Widget build(BuildContext context) {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTI5ODAxMzRdfQ==
+eyJoaXN0b3J5IjpbMTY0MTIyOTY4N119
 -->
