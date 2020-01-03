@@ -153,7 +153,7 @@ Element updateChild(Element child, Widget newWidget, dynamic newSlot) {
   if (newWidget == null) {  
     if (child != null)  
       deactivateChild(child);  
-  return null;  
+    return null;  
   }  
   if (child != null) {  
     if (child.widget == newWidget) {  
@@ -181,6 +181,6 @@ Element updateChild(Element child, Widget newWidget, dynamic newSlot) {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDY4ODgxODEsNzAzMTY0NzY2LC0xMD
+eyJoaXN0b3J5IjpbLTE3Mjk5MDE0MjksNzAzMTY0NzY2LC0xMD
 A0NTg1NTkyLC0zMTk0NDIxNjVdfQ==
 -->
