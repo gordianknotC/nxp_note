@@ -141,31 +141,46 @@ ShouldRebuild<Counter>(
 
 #### 節錄flutter 判斷是否updateChild
 ```dart
-Element updateChild(Element child, Widget newWidget, dynamic newSlot) {
-...
-      if (child.widget == newWidget) {
-        if (child.slot != newSlot)
-          updateSlotForChild(child, newSlot);
-        return child;
-      }
-      if (Widget.canUpdate(child.widget, newWidget)) {
-        if (child.slot != newSlot)
-          updateSlotForChild(child, newSlot);
-        child.update(newWidget);
-        assert(child.widget == newWidget);
-        assert(() {
-          child.owner._debugElementWasRebuilt(child);
-          return true;
-        }());
-        return child;
-      }
-
-...
-} 
+@protected  
+Element updateChild(Element child, Widget newWidget, dynamic newSlot) {  
+  assert(() {  
+	if (newWidget != null && newWidget.key is GlobalKey) {  
+		final GlobalKey key = newWidget.key;  
+		key._debugReserveFor(this);  
+	}  
+    return true;  
+  }());  
+  if (newWidget == null) {  
+    if (child != null)  
+      deactivateChild(child);  
+  return null;  
+  }  
+  if (child != null) {  
+    if (child.widget == newWidget) {  
+      if (child.slot != newSlot)  
+        updateSlotForChild(child, newSlot);  
+  return child;  
+  }  
+    if (Widget.canUpdate(child.widget, newWidget)) {  
+      if (child.slot != newSlot)  
+        updateSlotForChild(child, newSlot);  
+  child.update(newWidget);  
+  assert(child.widget == newWidget);  
+  assert(() {  
+        child.owner._debugElementWasRebuilt(child);  
+  return true;  
+  }());  
+  return child;  
+  }  
+    deactivateChild(child);  
+  assert(child._parent == null);  
+  }  
+  return inflateWidget(newWidget, newSlot);  
+}
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNDMzNTI5Miw3MDMxNjQ3NjYsLTEwMD
-Q1ODU1OTIsLTMxOTQ0MjE2NV19
+eyJoaXN0b3J5IjpbLTE3NDY4ODgxODEsNzAzMTY0NzY2LC0xMD
+A0NTg1NTkyLC0zMTk0NDIxNjVdfQ==
 -->
