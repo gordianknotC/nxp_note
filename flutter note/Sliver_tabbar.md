@@ -11,8 +11,10 @@
 graph LR
 	NS[NestedScrollView] --> SA[SliverAppBar]
 	NS[NestedScrollView] --> SPH[SliverPersistentHeader]
-	
-	
+	SPH[SliverPersistentHeader] --> SAD[SliverAppBarDelegate]
+	SAD[SliverAppBarDelegate] --> TAB[TabBar]
+	TAB[TabBar] --> TBS1[tabs...]
+	TAB[TabBar] --> TBSN[tabs...]
 	
 ```dart
 Widget build(BuildContext context) {
@@ -66,5 +68,5 @@ Widget build(BuildContext context) {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMTM0MTE3NiwtMzE5NDQyMTY1XX0=
+eyJoaXN0b3J5IjpbLTk0MTk1NjU2NiwtMzE5NDQyMTY1XX0=
 -->
