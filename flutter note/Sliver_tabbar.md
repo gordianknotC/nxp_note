@@ -131,13 +131,15 @@ class _ShouldRebuildState<T extends Widget> extends State<ShouldRebuild> {
 ```
 
 #### usage
-```dart
-
-
+```dart 
+ShouldRebuild<Counter>(
+	shouldRebuild: (oldWidget, newWidget) => oldWidget.counter != newWidget.counter,
+	child: Counter(counter: counter,onClick: _incrementCounter,title: '我是优化过的Counter',) ,
+),
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzAwMTYxOTMwLC0xMDA0NTg1NTkyLC0zMT
+eyJoaXN0b3J5IjpbNzAzMTY0NzY2LC0xMDA0NTg1NTkyLC0zMT
 k0NDIxNjVdfQ==
 -->
