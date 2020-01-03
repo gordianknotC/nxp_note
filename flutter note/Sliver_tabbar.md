@@ -96,7 +96,7 @@ Widget build(BuildContext context) {
 
 
 
-####  Handy Tool for Preventing Rebuild
+###  Handy Tool for Preventing Rebuild
 
 ```dart 
 class ShouldRebuild<T extends Widget> extends StatefulWidget {
@@ -128,13 +128,16 @@ class _ShouldRebuildState<T extends Widget> extends State<ShouldRebuild> {
     return oldWidget;
   }
 } 
+```
+
+#### usage
+```dart
 
 
 ```
 
 
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNTIzNTU0OSwtMTAwNDU4NTU5MiwtMz
-E5NDQyMTY1XX0=
+eyJoaXN0b3J5IjpbMzAwMTYxOTMwLC0xMDA0NTg1NTkyLC0zMT
+k0NDIxNjVdfQ==
 -->
