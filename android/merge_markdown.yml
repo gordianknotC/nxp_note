@@ -1,0 +1,12 @@
+
+input:
+ index.md:  {noYAML: true, doctoc: true, replace: {<!--#-->: "# Android"}}
+ NFC Basics.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## NFC Basics:" } }
+ NFC Tag.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## NFC Tag:" } }
+ NdefRecord.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## Ndef Record:" } }
+ conflict.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## Android 編譯問題:" } }
+output:
+  name: README.md
+  doctoc:
+    all: true
+

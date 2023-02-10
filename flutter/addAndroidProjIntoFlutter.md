@@ -311,11 +311,4 @@ subgraph one
 end
 ```
  
-**Demo project**
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNjgwODAyNCwtMTgyMzA5NDAxNCwtMT
-g3MjM3MzM3MCwxODE4NDY0NjYwLDE5NDA5NTM2MDIsMTcyNDE5
-NzY0MSwxMDE4MzkxNDYyLDE0NjAzMDgwNTQsMTU2MTAyMjMyOS
-w4MDEyNDMyNDYsLTM2NDY4MDMyMSwtMTkzNjQ3OTI1NSwtMTc3
-NDY5Njg4Ml19
--->
+![img](flutter_android_structure.png)

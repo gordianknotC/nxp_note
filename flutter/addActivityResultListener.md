@@ -104,8 +104,3 @@ Note over Mediator: Jump to Scenario 2
 Note over Mediator: Jump to Scenario 3
 
 ```
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MzI3NTMxNyw4NjAzMjYzNDUsMTU0Nz
-kxNjc5MSwtMjg0MzgyOTEzLC0xMDU4NDg2NjYzLC00MzQ5MzE3
-MDhdfQ==
--->

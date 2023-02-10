@@ -1,8 +1,8 @@
 
 
+<!--#-->
 
-
-# Inserting, Updating, Deleting and Fetching Objects
+## Inserting, Updating, Deleting and Fetching Objects
 
 To send commands to a database - whether to fetch, insert, delete or update objects - you will create, configure and execute instances of  `Query<T>`. The type argument must be a subclass of  `ManagedObject`, which determines the table the query will operate on.
 
@@ -33,7 +33,7 @@ class _User {
   String name;
 }
 
-### Inserting Data with a Query
+#### Inserting Data with a Query
 
 To insert data with a query, you create a new  `Query<T>`  object, configure its  `values`  property and then call its  `insert()`  method.
 
@@ -91,7 +91,7 @@ final jay = User()..name = "Jay";
 final insertedObject = await context.insertObject(bob);
 final insertedObjects = await context.insertObjects([bob, jay]);
 
-### Updating Data with a Query
+#### Updating Data with a Query
 
 Updating rows with a  `Query<T>`  is similar to inserting data: you set the  `Query.values`  for properties you want to change. The type parameter for the  `Query<T>`  indicates which database table will get updated when the query is executed.
 
@@ -132,7 +132,7 @@ The  `updateOne`  method will return  `null`  if no rows were updated. It is imp
 
 Update queries have a safety feature that prevents you from accidentally updating every row. If you try to execute a  `Query<T>`  to do an update without configuring  `where`, an exception is thrown prior to carrying out the request. If you actually want to update every row of a table, you must set the  `Query.canModifyAllInstances`  to  `true`prior to execution. (This property defaults to  `false`.)
 
-### Deleting Data with a Query
+#### Deleting Data with a Query
 
 A  `Query<T>`  will delete rows from a database when using  `delete()`. Like update queries, you should specify a row or rows using  `where`  properties of the  `Query<T>`. The result of a delete operation will be a  `Future<int>`  with the number of rows deleted.
 
@@ -145,7 +145,7 @@ Also like update queries, delete queries have a safety feature that prevents you
 
 Any properties set in the query's  `values`  are ignored when executing a delete.
 
-### Fetching Data with a Query
+#### Fetching Data with a Query
 
 Of the four basic operations of a  `Query<T>`, fetching data is the most configurable. A simple  `Query<T>`  that would fetch every instance of some entity looks like this:
 
@@ -166,7 +166,7 @@ When you are fetching an object by its primary key, you can use a shorthand meth
 
 final object = await context.fetchObjectWithID<User>(1);
 
-### Sorting
+#### Sorting
 
 Results of a fetch can be sorted using the  `sortBy`  method of a  `Query<T>`. Here's an example:
 
@@ -183,7 +183,7 @@ var q = Query<User>(context)
 
 Thus, the following three names would be ordered like so: 'Sally Smith', 'John Wu', 'Sally Wu'.
 
-### Property Selectors
+#### Property Selectors
 
 In the section on sorting, you saw the use of a  _property selector_  to select the property of the user to sort by. This syntax is used for many other query manipulations, like filtering and joining. A property selector is a closure that gives you an object of the type you are querying and must return a property of that object. The selector  `(u) => u.lastName`  in the previous section is a property selector that selects the last name of a user.
 
@@ -193,7 +193,7 @@ Live Templates
 
 To speed up query building, create a Live Template in IntelliJ that generates a property selector when typing 'ps'. The source of the template is  `(o) => o.$END$`. A downloadable settings configuration for IntelliJ exists  [here](https://aqueduct.io/docs/intellij/)  that includes this shortcut.
 
-## Specifying Result Properties
+### Specifying Result Properties
 
 When executing queries that return managed objects (i.e.,  `insert()`,  `update()`  and  `fetch()`), the default properties for each object are fetched. The default properties of a managed object are properties that correspond to a database column - attributes declared in the table definition. A managed object's default properties can be modified when declaring its table definition:
 
@@ -215,7 +215,7 @@ You may include 'belongs-to' relationships in  `returningProperties`, but you ma
 
 Note that if you omit the primary key of a managed object from  `returningProperties`, it will automatically be added. The primary key is necessary to transform the rows into instances of their  `ManagedObject<T>`  subclass.
 
-### Exceptions and Errors
+#### Exceptions and Errors
 
 When executing a query, it may fail for any number of reasons: the query is invalid, a database couldn't be reached, constraints were violated, etc. In many cases, this exception originates from the underlying database driver. When thrown in a controller, these exceptions will trigger a 500 Server Error response.
 
@@ -223,7 +223,7 @@ Exceptions that are thrown in response to user input (e.g., violating a database
 
 For this reason, you don't need to catch database query exceptions in a controller; an appropriate response will be sent on your behalf.
 
-### Statement Reuse
+#### Statement Reuse
 
 Aqueduct will parameterize and reuse queries when possible. This allows for significant speed and security improvements. Note that you do not have to do anything special to take advantage of this feature. However, currently at this time, you may not disable this feature.
 

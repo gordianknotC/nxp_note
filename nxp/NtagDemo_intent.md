@@ -1,6 +1,6 @@
 
 
-## How New Intent be Processed
+## Ntag_I2C_Demo - How New Intent be Processed
   
 - ##### in AuthActivity  
 ```java

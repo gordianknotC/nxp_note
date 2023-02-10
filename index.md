@@ -1,11 +1,8 @@
+2018 android nfc(npx/flutter) 專案學習筆記
 
-
-## Table of Index
-
-[How Ntag_I2C and Tag be Initialized ](howI2C_TAG_beInitialized.md)
-[How New Intent Be Processed ](howNewIntentBeProcessed.md)
-[How Demo be Initialized ](howDemoBeStarted.md)
-
+__Table of Index__
+<!-- START doctoc -->
+<!-- END doctoc -->
 
 
 
@@ -15,7 +12,3 @@
 
 
 
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MDcwNjI1NF19
--->

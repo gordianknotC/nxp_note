@@ -1,8 +1,9 @@
-# Issue Access Tokens with AuthController
+<!--#-->
+## Issue Access Tokens with AuthController
 
 An application using Aqueduct's Auth framework must have endpoints to exchange credentials for access tokens. While a developer could implement these endpoints themselves and talk directly to an  `AuthServer`, the OAuth 2.0 specification is where happiness goes to die. Therefore, there exist two  `Controller`s in Aqueduct that handle granting and refreshing authorization tokens -  `AuthController`  and  `AuthCodeController`.
 
-### Issue, Refresh and Exchange Tokens with AuthController
+#### Issue, Refresh and Exchange Tokens with AuthController
 
 An  `AuthController`  
 - grants access tokens 
@@ -29,7 +30,7 @@ To grant an **access token**, a client application sends a HTTP  **`POST`**  to 
 
 The body must also contain the key-value pair  **`grant_type=password`**. For example, the following Dart code will initiate successful authentication:
 
-#### client request:
+##### client request:
 ```dart
 var clientID     = "com.app.demo";
 var clientSecret = "mySecret";
@@ -51,7 +52,7 @@ var clientCredentials = Base64Encoder().convert("$clientID:".codeUnits);
 ```
 
 The response to a password token request is a JSON body that follows the OAuth 2.0 specification:
-#### server response
+##### server response
 ```dart
 {
   "access_token": "..."

@@ -1,11 +1,11 @@
+<!--#-->
 
 
-
-# Serving Files and Caching
+## Serving Files and Caching
 
 Aqueduct can serve files by returning the contents of a file as an HTTP response body.
 
-## FileController
+### FileController
 
 > ✒️ Instances of  `FileController`  **serve a directory** from the filesystem through an HTTP interface. **Any route that channels requests to an  `FileController`**  _must_contain a  `*`  match-all token.
 
@@ -39,8 +39,8 @@ If the requested path was a directory, the filename  `index.html`  will be appen
 
 If a file does not exist, an  `FileController`  returns a 404 Not Found response.
 
-### Content-Type of Files
-#### setContentTypeForExtension - add content-types for extensions
+#### Content-Type of Files
+##### setContentTypeForExtension - add content-types for extensions
 
 An  `FileController`  will set the **content-type of the HTTP response** based on the served **files path** extension. By default, it recognizes many common extensions like  `.html`,  `.css`,  `.jpg`,  `.js`. You may add content-types for extensions to an instance:
 
@@ -53,7 +53,7 @@ var controller = new FileController("public/")
 `application/octet-stream`. An  `FileController`  will **never** invoke any **encoders** from  `CodecRegistry`, but it will **GZIP** data if the repository allows compression for the content-type of the file (see  `CodecRegistry.add`  and  `CodecRegistry.setAllowsCompression`).
 
 
-## Caching
+### Caching
  
 An  `FileController`  always sets the the Last-Modified header of the response to the last modified date according to the filesystem. If a request sends an If-Modified-Since header and the file has not been modified since that date, a 304 Not Modified response is sent with the appropriate headers.
 
@@ -65,7 +65,7 @@ var controller = new FileController("public/")
   ..addCachePolicy(policy, (path) => path.endsWith(".css"));
 ```
 
-## File Serving and Caching Outside of FileController
+### File Serving and Caching Outside of FileController
 
 A file can be served by any controller by setting the body object of a  `Response`  with its contents:
 ```dart

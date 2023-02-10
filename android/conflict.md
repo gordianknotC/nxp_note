@@ -54,8 +54,3 @@ strings_en.arb - 為 Flutter i18n 插件所產生的
 
 ----------------------------------------
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDY0NTA1MDQsLTE5MDE0OTY5NjAsLT
-E2Nzg1NDE5OTQsMTIzOTQzMjI3NywtMTY3ODU0MTk5NCwtMTY0
-ODc3MDE0NF19
--->

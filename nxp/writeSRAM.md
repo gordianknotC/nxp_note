@@ -1,10 +1,10 @@
 
-#  How Write SRAM Implements
+##  How Write SRAM Implements
 
 
-## in Ntag_I2C_Command
-### writeSRAM
-#### describe writing process in brief
+### in Ntag_I2C_Command
+#### writeSRAM
+##### describe writing process in brief
 - **params**
 	- **byte[]** data
 	- **WriteSRAMListener** listenr
@@ -13,10 +13,10 @@
 - Write each dataBlock by **writeSRAMBlock**
 - Check if Ntag is in **Polling_Mode** to determine whether needs to wait for device or not
 
-	##### About Polling Mode
+	###### About Polling Mode
 	Polling is the process where the computer or controlling device waits for an [external device](https://en.wikipedia.org/wiki/External_device "External device") to check for its readiness or state, often with low-level hardware.
 
-	##### referenced in
+	###### referenced in
 	- Ntag_Demo / Flash
 
 ```java
@@ -46,8 +46,8 @@
 	}   
 ```
 
-### writeSRAMBlock
-#### describe writing process in brief
+#### writeSRAMBlock
+##### describe writing process in brief
 - **params**
 	- **byte[]** data
 	- **WriteSRAMListener** listener
@@ -61,7 +61,7 @@
 	- only non-authenticated state in AuthState can be applied into fast_write 
 - if not, use MifareUltralight 
 
-	##### referenced in
+	###### referenced in
 		- Ntag_I2C_Demo / setBoardVersion
 		- Ntag_I2C_Demo / doInBackground
 		- Ntag_I2C_Command / writeSRAM
@@ -137,10 +137,10 @@
 -----------------
 
 
-## in MinimalNtag_I2C_Command
+### in MinimalNtag_I2C_Command
 
-### writeSRAM
-#### describe writing process in brief
+#### writeSRAM
+##### describe writing process in brief
 - **params**
 	- **byte[]** data
 	- **WriteSRAMListener** listenr
@@ -150,7 +150,7 @@
 - Write each dataBlock by **writeSRAMBlock**
 - Check if Ntag is in **Polling_Mode** to determine whether needs to wait for device or not
 
-	##### referenced in
+	###### referenced in
 	- Ntag_I2C_Demo / setBoardVersion
 	- Ntag_I2C_Demo / doInBackground
 	- Ntag_I2C_Command / writeSRAM
@@ -184,8 +184,8 @@
 
 
 
-### writeSRAMBlock
-#### describe writing process in brief
+#### writeSRAMBlock
+##### describe writing process in brief
 - **params**
 	- **byte[]** data
 	- **WriteSRAMListener** listener
@@ -194,7 +194,7 @@
 - mfu.**writePage**
 
 
-	##### referenced in
+	###### referenced in
 	- Ntag_Demo / Flash
 
 
@@ -227,7 +227,7 @@
 
 -------------
 
-###  writeSRAM listener
+####  writeSRAM listener
 WriteSRAMListener has been referenced in following files
 - Ntag_Demo / onWriteSRAM
 - Ntag_I2C_Command / writeSRAMBlock
@@ -246,7 +246,7 @@ WriteSRAMListener has been referenced in following files
 ```
 ---------------------
 
-### R_W_Methods
+#### R_W_Methods
 there are three R/W modes in Ntag
 - fast_mode
 - polling_mode
@@ -254,7 +254,7 @@ there are three R/W modes in Ntag
 ```java
 	public enum R_W_Methods {  
 	   Fast_Mode, Polling_Mode, Error  
-	} ##### ReadMemoryActivity 
+	} ###### ReadMemoryActivity 
 ``` 
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMzc4NDkyNzg2XX0=

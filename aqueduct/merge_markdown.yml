@@ -1,0 +1,24 @@
+
+input:
+ index.md:  {noYAML: true, doctoc: true, replace: {<!--#-->: "# Aqueduct"}}
+ auth/Auth2.0.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## Auth 2.0:" } }
+ auth/AuthCodeController.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## Auth Code Controller:" } }
+ auth/AuthController.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## Auth Controller:" } }
+ auth/CRUD.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## CRUD:" } }
+ auth/SecurityRoute.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## Security Route:" } }
+ auth/SetupAuth.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## Setup Auth:" } }
+ auth/UnderstandAuthentication.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## Understand Authentication:" } }
+ Codecs.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## Codecs:" } }
+ Core Concept.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## Core Concept:" } }
+ Database.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## DataBase:" } }
+ JSON.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## JSON:" } }
+ multipart.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## Multipart:" } }
+ ResourceController.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## Resource Controller:" } }
+ ServingFiles.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## Serving Files:" } }
+ Validation.md: { noYAML: true, doctoc: true, replace: { <!--#-->: "## Validation:" } }
+
+output:
+  name: README.md
+  doctoc:
+    all: true
+

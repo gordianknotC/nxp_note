@@ -2,11 +2,11 @@
 
 
 
-# Authenticate And Protect
+## Authenticate And Protect
 
-## Authenticate
-### Ntag_I2C_Command
-#### authenticatePlus
+### Authenticate
+#### Ntag_I2C_Command
+##### authenticatePlus
 Authenticate using PWD_AUTH command against NTAG I2C Plus product.
 
 **describe writing process in brief**
@@ -33,16 +33,16 @@ public byte[] authenticatePlus(byte[] pwd) throws IOException, NotPlusTagExcepti
   return reader.pwdAuth(pwd);  
 }
 ```
-### MinimalNtag_I2C_Command
-#### authenticatePlus
+#### MinimalNtag_I2C_Command
+##### authenticatePlus
 Authenticate using PWD_AUTH command against NTAG I2C Plus product.
-- #### describe writing process in brief
+- ##### describe writing process in brief
 	- params
 		- **byte[]** pwd
 			- 4Byte password to authenticate with
 	- check if its an **Ntag_I2C_Plus** product since only **Plus** support auth operation.
 	- perform auth operation by using **mfu.transceive**
-		##### referenced in
+		###### referenced in
 		- Ntag_I2C_Demo
 			- constructor
 			- Auth
@@ -65,11 +65,11 @@ public byte[] authenticatePlus(byte[] pwd) throws IOException, NotPlusTagExcepti
 }
 ```
 
-## Protect
-### Ntag_I2C_Command
-#### protectPlus
+### Protect
+#### Ntag_I2C_Command
+##### protectPlus
 Protect NTAG I2C Plus product memory map.
-- #### describe writing process in brief
+- ##### describe writing process in brief
 	- params
 		- **byte[]** pwd
 			- 4Byte password to authenticate with
@@ -82,7 +82,7 @@ Protect NTAG I2C Plus product memory map.
 	- write pt (pass thru) configuration
 	- write auth0 configuration
 	
-		##### referenced in
+		###### referenced in
 		- Ntag_I2C_Demo
 			- Auth
 ```java
@@ -134,15 +134,15 @@ Protect NTAG I2C Plus product memory map.
 	}
 ```
 
-### MinimalNtag_I2C_Command
+#### MinimalNtag_I2C_Command
 almost the same as Ntag_I2C, except using mfu.writePage
 
 
-## Unprotect
+### Unprotect
 behaviors almost the same as method of protect referred above.
 
-### Ntag_I2C_Command
-### MinimalNtag_I2C_Command
+#### Ntag_I2C_Command
+#### MinimalNtag_I2C_Command
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMjMxNzQ2MDk4XX0=
 -->

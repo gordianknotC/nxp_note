@@ -1,4 +1,6 @@
-# Issue Authorization Codes with AuthCodeController
+<!--#-->
+
+## Issue Authorization Codes with AuthCodeController
 
 An  `AuthCodeController`  manages the OAuth 2.0 authorization code flow. The authorization code flow is used when an Aqueduct application **allows third party** applications access to authorized resources.
 

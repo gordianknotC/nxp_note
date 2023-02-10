@@ -1,6 +1,7 @@
 
 
-## Sample Code
+## addNewIntentListener
+### Sample Code
 [fetched from github](https://github.com/flutter/plugins/blob/master/packages/firebase_messaging/android/src/main/java/io/flutter/plugins/firebasemessaging/FirebaseMessagingPlugin.java)
 ```java
 import  android.content.BroadcastReceiver;

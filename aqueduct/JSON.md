@@ -1,13 +1,13 @@
-
-# JSON Document Storage
+<!--#-->
+## JSON Document Storage
 
 Learn how to store unstructured, binary JSON data in  `ManagedObject<T>`properties.
 
-## JSON Columns in Relational Databases
+### JSON Columns in Relational Databases
 
 PostgreSQL supports many column data types like integers, strings, booleans and dates. A column may also be JSON data. This allows for **storing unstructured data** and **simple objects** in a table column. The data from JSON columns can be fetched all at once, or in pieces. Elements of JSN data can be used to filter the results of a query.
 
-## The Document Data Type
+### The Document Data Type
 
 JSON document columns are added to a database table by declaring a  **`Document`property** in a  `ManagedObject<T>`'s table definition. In PostgreSQL, a  **`Document`**column data type is  **`jsonb`**. A document column can only contain **JSON-encodable** data. This data is typically a  **`Map`**  or  **`List`**  that contains only **JSON-encodable** data. The following  `ManagedObject<T>`  declaration will have a  `contents`  column of type  `jsonb`.
 ```dart
@@ -39,11 +39,11 @@ assert(doc["key"] == doc.data["key"]);
 ```
 The argument to the subscript operator may be a string (if  `data`  is a map) or an integer (if  `data`  is a list).
 
-## Basic Operations on Document Properties
+### Basic Operations on Document Properties
 
 `Document`  columns are like any other type of column, and can therefore be set during an insert or update, and read during a fetch.
 
-### Inserting Rows with Document Properties
+#### Inserting Rows with Document Properties
 
 A  **`Document`**  property is first set **when inserting** with a  `Query<T>`. The  `values`property of the query is set to a  `Document`  object initialized with a JSON-encodable value.
 ```dart
@@ -58,7 +58,7 @@ final event = await query.insert();
 ```
 In the above, the argument to  `Document`  will be JSON-encoded and stored in the database for column  `contents`. If the object can't be encoded as JSON, an exception will be thrown.
 
-### Fetching Rows with Document Properties
+#### Fetching Rows with Document Properties
 
 > ⚡ When fetching an object with  `Document`  properties with a  `Query<T>`, you **access the column's value through the document's  `data`**  property.
 ```dart
@@ -75,7 +75,7 @@ When fetching  `Document`  properties, the JSON data is decoded into the appropr
 
 > ⚡ Because the data stored in a  `Document`  property is unstructured, the type of  `data`  is  `dynamic`. It is good practice to **store consistent data structures** in a column; i.e., always storing a  `Map`  or always storing a  `List`.
 
-### Updating Rows with Document Properties
+#### Updating Rows with Document Properties
 
 Updating a row with  `Document`  properties works the same as inserting rows.
 ```dart
@@ -90,7 +90,7 @@ final event = await query.updateOne();
 ```
 When updating in this way, the document stored in the column is replaced entirely.
 
-### Accessing Document Values
+#### Accessing Document Values
 
 **The type of  `Document.data`  is  `dynamic**`  - it can be any valid JSON type and may be casted to the expected type when used. This data can also be nested - a  `List`of  `Maps`, for example. When accessing object keys or list indices, you may use the subscript operator directly on  `Document`.
 
@@ -114,7 +114,7 @@ final obj2 = doc[1]["id"]; // == 2
 ```
 > ⚡ Note that **using the subscript operator on a  `Document`  simply invokes it on its  `data`  property**. Therefore, any subscript values must be valid for Dart  `List`  and  `Map`  types.
 
-## Fetching Sub-documents
+### Fetching Sub-documents
 
 > ⚡ When fetching a  `Document`  property, the default behavior is to return the entire JSON document as it is stored in the database column. **You may fetch parts of the document you need** by using  **`Query.returningProperties`**  and the subscript operator.
 ```dart

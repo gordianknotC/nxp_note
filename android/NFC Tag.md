@@ -1,6 +1,8 @@
 
 
- # Tag
+<!--#-->
+
+## Tag
 
 public final class Tag  extends  [Object](https://developer.android.com/reference/java/lang/Object.html?hl=CA) implements  [Parcelable](https://developer.android.com/reference/android/os/Parcelable.html?hl=CA) 
 

@@ -1,0 +1,29 @@
+
+input:
+ index.md:  {noYAML: true, doctoc: true, replace: {<!--#-->: "# NXP"}}
+ authenticateAndProtect.md: { noYAML: true, doctoc: true, }
+ initialize_I2C_and_Tag.md: { noYAML: true, doctoc: true, }
+ MainActivity.md: { noYAML: true, doctoc: true, }
+ NdefFragment.md: { noYAML: true, doctoc: true, }
+ NtagDemo_.md: { noYAML: true, doctoc: true, }
+ NtagDemo_intent.md: { noYAML: true, doctoc: true, }
+ NtagDemo_mermaid.md: { noYAML: true, doctoc: true, }
+ NtagDemo_start.md: { noYAML: true, doctoc: true, }
+ NtagDemo_Task_NDEFRead.md: { noYAML: true, doctoc: true, }
+ readEEPROM.md: { noYAML: true, doctoc: true, }
+ readNDEF.md: { noYAML: true, doctoc: true, }
+ readProduct.md: { noYAML: true, doctoc: true, }
+ readRegisters.md: { noYAML: true, doctoc: true, }
+ readSRAM.md: { noYAML: true, doctoc: true, }
+ transceive_command.md: { noYAML: true, doctoc: true, }
+ waitForReadAndWrite.md: { noYAML: true, doctoc: true, }
+ writeEEPROM.md: { noYAML: true, doctoc: true, }
+ writeNDEF.md: { noYAML: true, doctoc: true, }
+ writeRegisters.md: { noYAML: true, doctoc: true, }
+ writeSRAM.md: { noYAML: true, doctoc: true, }
+
+output:
+  name: README.md
+  doctoc:
+    all: true
+

@@ -1,8 +1,9 @@
+<!--#-->
 
 --------------------------------------------
 
-## Create common types of NDEF records
-### createMime
+### Create common types of NDEF records
+#### createMime
 Create a new NDEF Record containing MIME data.
 ```java
 public static NdefRecord createMime (
@@ -26,7 +27,7 @@ val mimeRecord = NdefRecord.createMime(
 .
 
 ----------------------------------
-### createUri
+#### createUri
 ```java
 public static NdefRecord createUri (String uriString)
 public static NdefRecord createUri (Uri uri)
@@ -49,7 +50,7 @@ val rtdUriRecord2  =  Uri.parse("http://example.com").let { uri ->
 .
 
 ----------------------------------
-### createExternal
+#### createExternal
 Create a new NDEF Record containing external (application-specific) data
 
 ```java
@@ -83,7 +84,7 @@ val extRecord = NdefRecord.createExternal(domain, type, payload)
 
 -----------------------------------
 
-### createTextRecord
+#### createTextRecord
 
 added in  [API level 21](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
 ```java
@@ -104,7 +105,7 @@ The caller can either specify the language code for the provided text, or otherw
 .
 
 -------------------------------------------------------
-### createApplicationRecord
+#### createApplicationRecord
 
 added in  [API level 14](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
 ```java
@@ -122,7 +123,7 @@ val records = arrayOf(sp_record, aap_record)
 .
 
 ----------------------------------
-### Android Application Reccords (AAR)
+#### Android Application Reccords (AAR)
 
 Android Application Record (AAR) provides a stronger certainty that your application is started when an **`NFC tag is scanned`**. An AAR has the **`package name`** of an application **`embedded inside`** an NDEF record. You can add an **AAR** to **any** NDEF record of your NDEF message, because Android searches the **`entire NDEF message`** for **AARs**. If it finds an AAR, it starts the application based on the package name inside the AAR. If the application is not present on the device, Google Play is **`launched to download`** the application.
 
@@ -150,7 +151,7 @@ If you want to handle an intent at the Activity level,  [use intent filters](htt
 --------------------------------------------
 
 
-## ⚡Use the foreground dispatch system
+### ⚡Use the foreground dispatch system
 
 The foreground dispatch system **`allows an activity to intercept an intent and claim priority`** over other activities that handle the same intent. Using this system involves constructing a few data structures for the Android system to be able to send the appropriate intents to your application. To enable the foreground dispatch system:
 

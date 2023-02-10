@@ -2,16 +2,15 @@
 
 
 
-#  How ReadEEPROM implements
-
-## in Ntag_I2C_Command
-### readEEPROM
+##  How ReadEEPROM implements
+### in Ntag_I2C_Command
+#### readEEPROM
 Read Data from the EEPROM.
 - params
 	- **int** absStart, Start of the read
 	- **int** absEnd, End of the read(included in the Answer)
 
-	##### referenced in
+	###### referenced in
 	- MinimalNtag_I2C_Command | Ntag_I2C_Command
 		- readNDEF
 	- Ntag_I2C_Demo
@@ -41,14 +40,14 @@ Read Data from the EEPROM.
 
 
 
-## in MinimalNtag_I2C_Command
-### readEEPROM
+### in MinimalNtag_I2C_Command
+#### readEEPROM
 Read Data from the EEPROM.
 - params
 	- **int** absStart, Start of the read
 	- **int** absEnd, End of the read(included in the Answer)
 
-	##### referenced in
+	###### referenced in
 	- MinimalNtag_I2C_Command | Ntag_I2C_Command
 		- readNDEF
 	- Ntag_I2C_Demo

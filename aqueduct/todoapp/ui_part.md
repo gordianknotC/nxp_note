@@ -1,4 +1,6 @@
-# Def
+<!--#-->
+
+## Def
 ```mermaid
 graph LR
 subgraph Store
@@ -33,7 +35,7 @@ Reqeust Response
 	: 提供UI實作介面
 
 
-## AuthorizationToken
+### AuthorizationToken
 ```mermaid
 graph LR
 access_token -.- String
@@ -63,7 +65,7 @@ Map<String, dynamic> asMap() =>
 };
 ```
 
-## StorageProvider
+### StorageProvider
  ```mermaid
 graph LR
 StorageProvider
@@ -76,7 +78,7 @@ StorageProvider -.- delete
 
 ```
 
-## User
+### User
 ```dart
 int id;  
 String email;  
@@ -86,15 +88,15 @@ bool get isAuthenticated =>
 	token != null && !token.isExpired;
 ```
 
-## ServiceController
+### ServiceController
 ```mermaid
 graph LR
 	add --> eventName
 ```
 
 
-## UserService: ServiceController
-### UserService.login
+### UserService: ServiceController
+#### UserService.login
 - param - **register** username
 - param - **String** password
 - return - **Future(User)**
@@ -146,7 +148,7 @@ Future<User> login(String username, String password) async {
 ```
 
 
-### UserService.register
+#### UserService.register
 - param - **register** username
 - param - **String** password
 - return - **Future\<User>**
@@ -177,7 +179,7 @@ end
 ```
 
 
-### UserService.getAuthenticatedUser
+#### UserService.getAuthenticatedUser
 - param - **AuthorizationToken** token
 ```mermaid
 graph LR
@@ -205,13 +207,13 @@ subgraph broadcast user to stream
 end
 ```
 
-## Store
+### Store
 - vars - NoteService noteController
 - vars - UserService userController
 
 
 
-### Store.authenticatedUser
+#### Store.authenticatedUser
 - param - **User** user
 ```mermaid
 graph LR
@@ -223,7 +225,7 @@ graph LR
 	!User --> storageProvider.delete
 	storageProvider.delete -.- _storedUserKey.
 ```
-### Store.executeClientRequest
+#### Store.executeClientRequest
 - param - **Request** request
 ```mermaid
 graph LR
@@ -239,7 +241,7 @@ Future<Response> executeClientRequest(Request request) async {
 }
 ```
 
-### Store.executeRequest
+#### Store.executeRequest
 param - **Request** request
 ```mermaid
 graph LR
@@ -262,7 +264,7 @@ executeRequest --> GET
 executeRequest --> POST
 ```
 
-### Store.executeUserRequest
+#### Store.executeUserRequest
 param - **Request** request
 param - **AuthorizationToken** token
 ```mermaid
@@ -290,7 +292,7 @@ Future<Response> executeUserRequest(Request request, {AuthorizationToken token})
 }
 ```
 
-### Store._loadPersistentUser
+#### Store._loadPersistentUser
 ```mermaid
 graph LR
 storageProvider -.- load

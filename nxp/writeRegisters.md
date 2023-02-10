@@ -1,10 +1,10 @@
 
-# How Write Auth | Config Registers Imlements
+## How Write Auth | Config Registers Imlements
 
-## Write Auth Registers
-### Ntag_I2C_Command
-#### writeAuthRegisters
-#### describe writing process in brief
+### Write Auth Registers
+#### Ntag_I2C_Command
+##### writeAuthRegisters
+##### describe writing process in brief
 - params
 	- **byte** auth0
 	- **byte** access
@@ -15,7 +15,7 @@
 	- write password 
 	- write auth0  
 
-##### referenced in
+###### referenced in
 - Ntag_I2C_Demo
 	- resetTagMemory
 	- writeConfigRegisters
@@ -63,10 +63,10 @@
 	}
 ```
 
-### MinimalNtag_I2C_Command
+#### MinimalNtag_I2C_Command
 
-#### writeAuthRegisters
-#### describe writing process in brief
+##### writeAuthRegisters
+##### describe writing process in brief
 - params
 	- **byte** auth0
 	- **byte** access
@@ -77,7 +77,7 @@
 	- write password 
 	- write auth0  
 
-##### referenced in
+###### referenced in
 - Ntag_I2C_Demo
 	- resetTagMemory
 	- writeConfigRegisters
@@ -123,11 +123,11 @@
 	}
 ```
 
-## Write Config Registers
+### Write Config Registers
 
-### Ntag_I2C_Command
-#### writeConfigRegisters
-##### referenced in
+#### Ntag_I2C_Command
+##### writeConfigRegisters
+###### referenced in
 - Ntag_I2C_Demo
 	- resetTagMemory
 	- writeConfigRegisters
@@ -158,9 +158,9 @@
 	}
 ```
 
-### MinimalNtag_I2C_Command
-#### writeConfigRegisters
-##### referenced in
+#### MinimalNtag_I2C_Command
+##### writeConfigRegisters
+###### referenced in
 - Ntag_I2C_Demo
 	- resetTagMemory
 	- writeConfigRegisters

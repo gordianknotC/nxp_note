@@ -1,4 +1,5 @@
- # Validating Data
+<!--#-->
+ ## Validating Data
 
 The preferred way of setting a validation is to add  `Validate`  metadata to properties of a table definition. Here's an example of a validation that ensures a tweet is less than 140 characters:
 ```dart
@@ -11,7 +12,7 @@ class _Tweet {
   String message;
 }
 ```
-### Built-in Validators
+#### Built-in Validators
 
 There are a handful of built-in validations for common operations. For example, it is common to apply a regular expression to a value to ensure it formatted correctly or restrict the possible values to a list of available options. Common validators are available as named constructors of the  `Validate`  class. Here is an example:
 ```dart
@@ -31,7 +32,7 @@ See the API reference for  `Validate`  and its named constructors for possible o
  `Validate`  annotations on transient properties have no effect. This annotation is only valid for properties declared in a table definition.
 
 
-### ⚡ Custom Validators
+#### ⚡ Custom Validators
 
 There will be times where the built-in validators are not sufficient for your application's use case. You may create subclasses of  `Validate`  to provide custom validation behavior. For example, if there were a  **`ValidatePhoneNumber`**  class:
 ```dart
@@ -71,7 +72,7 @@ A  `ValidationContext`  also has information about the property being validated,
 
 
 
-### Validation Behavior
+#### Validation Behavior
 
 A property may have more than one  `Validate`  metadata. In this case, all of the validations for a property must pass. The order in which multiple validations are performed is undefined and subject to change. Here's an example of validations that ensure a property's value is 10 characters long and only contains 10 alphabetic capital letters:
 ```dart
@@ -127,7 +128,7 @@ String name;
 ```
 
 
-### Other Validator Behavior
+#### Other Validator Behavior
 
 > ⚡ For validators that can't be built by subclassing  `Validate`, you may override  **`ManagedObject<T>.validate()`.** 
 >  ⚡ This method is useful when a validation involves **more than one property**. Here's an example:
@@ -147,7 +148,7 @@ class Person extends ManagedObject<_Person> implements _Person {
 ```
 When overriding this method, the  `super`  implementation must be invoked to run validations managed by annotations. You must return the  `ValidationContext`  created by the superclass' implementation.
 
-### Skipping Validations
+#### Skipping Validations
 
 Validations are only run when values are set via  `Query<T>.values`. Values set via  `Query<T>.valueMap`  are not validated and is useful for inserting data without validation. Here's an example of skipping validation:
 ```dart
@@ -157,7 +158,7 @@ var query = new Query<Person>(context)
     "email" : "whatever"
   };
 ```
-### Update and Insert Callbacks
+#### Update and Insert Callbacks
 
 > ⚡ `ManagedObject<T>`  subclasses may override  **`willUpdate`**  and  **`willInsert`**  to make changes prior to being updated or inserted. For example, a managed object may have updated and created dates that can be guaranteed to be set when inserted or updated:
 

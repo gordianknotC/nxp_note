@@ -1,5 +1,5 @@
- 
-# ResourceController
+ <!--#-->
+## ResourceController
 
 A  `ResourceController`  is a  [controller](https://aqueduct.io/docs/http/controller/)  that provide conveniences for **implementing endpoint controllers**. A  `ResourceController`  must be subclassed, and in that subclass, you write a method for each operation on that type of resource. For example, a  `UserController`  might handle the following operations:
 
@@ -11,7 +11,7 @@ A  `ResourceController`  is a  [controller](https://aqueduct.io/docs/http/contro
 
 These methods that are invoked for an operation are called  _operation methods_.
 
-## Operation Methods
+### Operation Methods
 
 > ⚡ An **operation method** is an instance method of a  **`ResourceController`**  subclass that has an  **`@Operation`**  annotation. It must return an instance of  **`Future<Response>`**. Here's an example:
 
@@ -40,7 +40,7 @@ class CityController extends ResourceController {
 }
 ```
 
-#### Path Variables
+##### Path Variables
 
 This controller would be linked to the route specification  `/cities/[:name]`, so that it can handle both of these operations. Read more about path variables in  [Routing](https://aqueduct.io/docs/http/routing/).
 
@@ -69,7 +69,7 @@ Future<Response> getUserItem() async {
 ```
 If no operation method exists for a request, a **405** **Method Not Allowed response** is automatically sent and no operation method is invoked.
 
-## Routing to a ResourceController
+### Routing to a ResourceController
 
 A  `ResourceController`  subclass must be preceded by a  `Router`  in the application channel. The  `Router`  will parse path variables so that the controller can use them to determine which operation method should be invoked. A typical route to a  `ResourceController`  contains an optional identifying path variable:
 ```dart
@@ -91,7 +91,7 @@ router
 ```
 By contrast, the route  `/cities/[:name/[attractions/[:id]]]`, while valid, makes controller logic much more unwieldy.
 
-## Request Bindings
+### Request Bindings
 
 Operation methods may  _bind_  properties of an HTTP request to its parameters. When the operation method is invoked, the **value of that property** is passed as an **argument to the operation method**. 
 
@@ -122,7 +122,7 @@ Future<Response> getCityByName(@Bind.header('x-api-key') String apiKey) async {
 You may bind any number of HTTP request properties to a single operation method.
 
 
-### Optional Bindings
+#### Optional Bindings
 
 > ⚡ Bindings can be made optional. If a binding is optional, the operation method will still be called even if the bound property isn't in a request. To make a binding optional, move it to the optional parameters of an operation method:
 ```dart
@@ -142,7 +142,7 @@ Future<Response> getAllCities({@Bind.header("x-api-key") String apiKey: "public"
   ...
 }
 ```
-### Automatically Parsing Bindings
+#### Automatically Parsing Bindings
 
 Query, header and path bindings can automatically be parsed into other types, such as  `int`  or  `DateTime`. Simply declare the bound parameter's type to the desired type:
 ```dart
@@ -158,7 +158,7 @@ Future<Response> getCitiesByIDs(@Bind.query('id') List<int> ids)
 ```
 Note that if a parameter is  _not_  bound to a list and there are multiple occurrences of that property in the request, a 400 Bad Request response will be sent. If you want to allow multiple values, you must bind to a  `List<T>`.
 
-### Header Bindings
+#### Header Bindings
 
 The following operation method binds the header named  `X-API-Key`  to the  `apiKey`  parameter:
 ```dart
@@ -177,7 +177,7 @@ If an  `X-API-Key`  header is present in the request, its value will be availabl
 
 Header names are case-insensitive per the HTTP specification. Therefore, the header name may be 'X-API-KEY', 'X-Api-Key' 'x-api-key', etc. and  `apiKey`  will be bound in all cases.
 
-### Query Parameter Bindings
+#### Query Parameter Bindings
 
 The following operation methods binds the query parameter named 'name' to the parameter  `cityName`:
 ```dart
@@ -194,7 +194,7 @@ Query parameters are case-sensitive; this binding will only match the query para
 
 Query parameters may also bound for query strings in the request body when the content-type is 'application/x-www-form-urlencoded'.
 
-### Path Variable Bindings
+#### Path Variable Bindings
 
 The following operation method binds the path variable 'id' to the parameter  `cityID`:
 ```dart
@@ -209,7 +209,7 @@ Path variables are made available when creating  [routes](https://aqueduct.io/do
 
 If you attempt to bind a path variable that is not present in the  `Operation`, you will get a runtime exception at startup. You do not have to bind path variables for an operation method to be invoked.
 
-### HTTP Request Body Bindings
+#### HTTP Request Body Bindings
 
 The body of an HTTP request can also be bound to a parameter:
 ```dart
@@ -287,7 +287,7 @@ An endpoint should either take a single object or a list of objects, but not bot
 
 Note that if the request's  `Content-Type`  is 'x-www-form-urlencoded', its must be bound with  `Bind.query`  and not  `Bind.body`.
 
-### 🔥 Property Binding
+#### 🔥 Property Binding
 
 The properties of an  `ResourceController`s may also have  `Bind.query`  and  `Bind.header`metadata. This binds values from the request to the  `ResourceController`  instance itself, making them accessible from  _all_  operation methods.
 ```dart
@@ -308,13 +308,13 @@ class CityController extends ResourceController {
 In the above, both  `timestamp`  and  `limit`  are bound prior to  `getCities`  being invoked. By default, a bound property is optional. Adding an  `requiredBinding`  annotation changes a property to required. If required, any request without the required property fails with a 400 Bad Request status code and none of the operation methods are invoked.
 
 
-## Other ResourceController Behavior
+### Other ResourceController Behavior
 
 Besides binding,  `ResourceController`s have some other behavior that is important to understand.
 
-### Request and Response Bodies
+#### Request and Response Bodies
 
-#### acceptedContentTypes
+##### acceptedContentTypes
 
 > ⚡ An  `ResourceController`  **can limit the content type of HTTP request bodies it accepts.** By default, an  `ResourceController`  will accept only  **`application/json`**  request bodies for its  **`POST`**  and  **`PUT`**  methods. This can be modified by setting the  **`acceptedContentTypes`**  property in the constructor.
 ```dart
@@ -349,7 +349,7 @@ class UserController extends ResourceController {
   }
 }
 ```
-#### responseContentType
+##### responseContentType
 
 > ⚡ The  **`responseContentType`**  is the  _default_  response content type. An individual  `Response`  may set its own  `contentType`, which takes precedence over the  `responseContentType`. For example, the following controller returns **JSON** by default, but if the request specifically asks for XML, that's what it will return:
 ```dart
@@ -370,11 +370,11 @@ class UserController extends ResourceController {
   }
 }
 ```
-### More Specialized ResourceControllers
+#### More Specialized ResourceControllers
 
 Many  `ResourceController`  subclasses will execute  [queries](https://aqueduct.io/docs/db/executing_queries/). There are helpful  `ResourceController`  subclasses for reducing boilerplate code.
 
-#### QueryController<T>
+##### QueryController<T>
 
 > ⚡ A  `QueryController<T>`  builds a  **`Query<T>`**  based on the **incoming request.** 
 > - If the request has a **body**, this  `Query<T>`'s  **`values`**  property is read from that body. 
@@ -382,7 +382,7 @@ Many  `ResourceController`  subclasses will execute  [queries](https://aqueduct.
 > - If the request has a **path variable**, the  `Query<T>`  assigns an expression to the **primary key value**. 
 >       --> ..values = user;
 
-> ⚡ ## highly recommended not to use queryController
+> ⚡ ### highly recommended not to use queryController
 >queryController 只能用在primaryKey與path一樣的條件下，不建議使用， 會有一些隱徵的問題出現，如path不是primary key 但該column有設indexed: true
 
 For example, in a normal  `ResourceController`  that responds to a PUT request, you might write the following:

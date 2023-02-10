@@ -1,5 +1,5 @@
-
-# Creating AuthServers to Authenticate and Authorize
+<!--#-->
+## Creating AuthServers to Authenticate and Authorize
 
 > ⚡ An  `AuthServer`  is a service that handles 
 > - creating 
@@ -17,7 +17,7 @@ An  `AuthServer`  must persist the data it uses and creates - like client identi
 
 
 
-## Creating Instances of AuthServer and AuthServerDelegate
+### Creating Instances of AuthServer and AuthServerDelegate
 
 `AuthServerDelegate`  is an interface that an  `AuthServer`  uses to handle storage of client identifiers, tokens and other authorization artifacts. An  `AuthServer`  must be created with a concrete implementation of  `AuthServerDelegate`. Aqueduct contains a concrete implementation of  `AuthServerDelegate`  that uses the ORM. It is highly recommended to use this implementation instead of implementing your own storage because it has been thoroughly tested and handles cleaning up expired data correctly.
 
@@ -69,7 +69,7 @@ class MyApplicationChannel extends ApplicationChannel {
   }
 }
 ```
-## Using ManagedAuthDelegate
+### Using ManagedAuthDelegate
 
 `ManagedAuthDelegate<T>`  is a concrete implementation of  `AuthServerDelegate`, providing storage of authorization tokens and clients for an  `AuthServer`. Storage is accomplished by Aqueduct's ORM.  `ManagedAuthDelegate<T>`, by default, is not part of the standard  `aqueduct`  library. To use this class, an application must import  `package:aqueduct/managed_auth.dart`.
 

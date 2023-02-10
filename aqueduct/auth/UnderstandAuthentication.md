@@ -1,6 +1,8 @@
+<!--#-->
+
 following material fetched from [here](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security5.html)
 
- ## Understanding Login Authentication
+ ### Understanding Login Authentication
 
 When you try to access a protected web resource, the web container activates the authentication mechanism that has been configured for that resource. You can specify the following authentication mechanisms:
 
@@ -12,7 +14,7 @@ When you try to access a protected web resource, the web container activates the
 
 If you do not specify one of these mechanisms, the user will not be authenticated.
 
-### Using HTTP Basic Authentication
+#### Using HTTP Basic Authentication
 
 [Figure 32-2](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security5.html#wp483341)  shows what happens if you specify  _HTTP basic authentication_.
 
@@ -31,7 +33,7 @@ HTTP basic authentication is **not** particularly secure. Basic authentication s
 
 [Example: Basic Authentication with JAX-RPC](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security7.html#wp156943)  is an example application that uses HTTP basic authentication in a JAX-RPC service.
 
-### Using Form-Based Authentication
+#### Using Form-Based Authentication
 
 [Figure 32-3](http://lia.deis.unibo.it/Courses/TecnologieWeb0708/materiale/laboratorio/guide/j2ee14tutorial7/Security5.html#wp483393)  shows what happens if you specify  _form-based authentication_, in which you can customize the login screen and error pages that an HTTP browser presents to the end user.
 
@@ -52,7 +54,7 @@ Form-based authentication is **not** particularly secure. In form-based authenti
 
 
 
-### Using Client-Certificate Authentication
+#### Using Client-Certificate Authentication
 
 Client-certificate authentication is a more secure method of authentication than either basic or form-based authentication. It **uses HTTP over SSL**, in which the server and, optionally, the client **authenticate one another** using public key certificates.  Secure Socket Layer  (SSL) provides data encryption, server authentication, message integrity, and optional client authentication for a TCP/IP connection. **You can think of a  public key certificate  as the digital equivalent of a passport**. It is issued by a trusted organization, which is called a  certificate authority  (CA), and provides identification for the **bearer**.
 
@@ -62,7 +64,7 @@ If you specify  client-certificate authentication, the web server will authentic
 
 
 
-### 📝 Using Mutual Authentication
+#### 📝 Using Mutual Authentication
 
 With  _mutual authentication_ , the server and the client authenticate each other. There are two types of mutual authentication:
 

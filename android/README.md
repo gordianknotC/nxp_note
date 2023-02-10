@@ -1,5 +1,42 @@
+# Android
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-<!--#-->
+- [Android](#android)
+  - [NFC Basics:](#nfc-basics)
+    - [Near field communication overview](#near-field-communication-overview)
+    - [NFC basics](#nfc-basics)
+    - [Filter for NFC intents](#filter-for-nfc-intents)
+    - [Filter Each Type of Intent](#filter-each-type-of-intent)
+    - [ACTION_TECH_DISCOVERED](#action_tech_discovered)
+    - [ACTION_TAG_DISCOVERED](#action_tag_discovered)
+    - [⚡Obtain information from intents](#obtain-information-from-intents)
+    - [Create common types of NDEF records](#create-common-types-of-ndef-records)
+    - [Android Application Reccords (AAR)](#android-application-reccords-aar)
+    - [⚡Use the foreground dispatch system](#use-the-foreground-dispatch-system)
+  - [NFC Tag:](#nfc-tag)
+  - [Tag](#tag)
+    - [Tag Dispatch](#tag-dispatch)
+    - [getId](#getid)
+    - [writeToParcel](#writetoparcel)
+    - [getTechList](#gettechlist)
+  - [Ndef Record:](#ndef-record)
+    - [Create common types of NDEF records](#create-common-types-of-ndef-records-1)
+    - [⚡Use the foreground dispatch system](#use-the-foreground-dispatch-system-1)
+  - [Trouble Shoot - A](#trouble-shoot---a)
+    - [Error:Program type already present:](#errorprogram-type-already-present)
+    - [INSTALL_FAILED_VERSION_DOWNGRADE](#install_failed_version_downgrade)
+    - [Failed linking file resources | failed processing manifest error](#failed-linking-file-resources--failed-processing-manifest-error)
+    - [Cannot read packageName from path/to/AndroidManifest.xml](#cannot-read-packagename-from-pathtoandroidmanifestxml)
+    - [AndroidManifest.xml: Error: 'A' is not a valid file-based resource name character](#androidmanifestxml-error-a-is-not-a-valid-file-based-resource-name-character)
+    - [strings_en.arb: Error: The file name must end with .xml](#strings_enarb-error-the-file-name-must-end-with-xml)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
+
+
+## NFC Basics:
 
 ### Near field communication overview
 
@@ -474,3 +511,381 @@ If any IntentFilters are provided to this method they are used to match dispatch
 eyJoaXN0b3J5IjpbLTIwNjQ0MDU2MzksLTEwMjQyNDIwNjZdfQ
 ==
 -->
+
+
+
+## NFC Tag:
+
+## Tag
+
+public final class Tag  extends  [Object](https://developer.android.com/reference/java/lang/Object.html?hl=CA) implements  [Parcelable](https://developer.android.com/reference/android/os/Parcelable.html?hl=CA) 
+
+  
+----------
+
+Represents an NFC tag that has been discovered.
+
+[Tag](https://developer.android.com/reference/android/nfc/Tag.html?hl=CA)  is an immutable object that represents the **state of a NFC tag** at the time of **discovery**. It can be used as a handle to  [TagTechnology](https://developer.android.com/reference/android/nfc/tech/TagTechnology.html?hl=CA)  classes to perform advanced operations, or directly queried for its ID via  [getId()](https://developer.android.com/reference/android/nfc/Tag.html?hl=CA#getId())  and the set of technologies it contains via  [getTechList()](https://developer.android.com/reference/android/nfc/Tag.html?hl=CA#getTechList()). 
+> Arrays passed to and returned by this class are  **_not_  cloned**, so be careful not to modify them.
+
+A **new tag** object is created every time a **tag is discovered** (comes into range), even if it is the same physical tag. If a tag is removed and then returned into range, then only the most recent tag object can be successfully used to create a  [TagTechnology](https://developer.android.com/reference/android/nfc/tech/TagTechnology.html?hl=CA).
+
+### Tag Dispatch
+
+>When a tag is **discovered**, a [Tag](https://developer.android.com/reference/android/nfc/Tag.html?hl=CA) object is created and passed to a single activity via the [NfcAdapter.EXTRA_TAG](https://developer.android.com/reference/android/nfc/NfcAdapter.html?hl=CA#EXTRA_TAG) extra in an [Intent](https://developer.android.com/reference/android/content/Intent.html?hl=CA) via [Context.startActivity(Intent)](https://developer.android.com/reference/android/content/Context.html?hl=CA#startActivity(android.content.Intent)). 
+
+A four stage dispatch is used to select the most appropriate activity to handle the tag. The Android OS executes each stage in order, and completes dispatch as soon as a single matching activity is found. If there are multiple matching activities found at any one stage then the Android activity chooser dialog is shown to allow the user to select the activity to receive the tag.
+
+#### 1. Foreground activity dispatch
+
+A foreground activity that has called [NfcAdapter.enableForegroundDispatch()](https://developer.android.com/reference/android/nfc/NfcAdapter.html?hl=CA#enableForegroundDispatch(android.app.Activity,%20android.app.PendingIntent,%20android.content.IntentFilter[],%20java.lang.String[][])) is given priority. See the documentation on [NfcAdapter.enableForegroundDispatch()](https://developer.android.com/reference/android/nfc/NfcAdapter.html?hl=CA#enableForegroundDispatch(android.app.Activity,%20android.app.PendingIntent,%20android.content.IntentFilter[],%20java.lang.String[][]))for its usage.
+
+#### 2. NDEF data dispatch
+
+If the tag contains NDEF data the system inspects the first [NdefRecord](https://developer.android.com/reference/android/nfc/NdefRecord.html?hl=CA) in the first[NdefMessage](https://developer.android.com/reference/android/nfc/NdefMessage.html?hl=CA). If the record is a URI, SmartPoster, or MIME data[Context.startActivity(Intent)](https://developer.android.com/reference/android/content/Context.html?hl=CA#startActivity(android.content.Intent)) is called with [NfcAdapter.ACTION_NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html?hl=CA#ACTION_NDEF_DISCOVERED). For URI and SmartPoster records the URI is put into the intent's data field. For MIME records the MIME type is put in the intent's type field. This allows activities to register to be launched only when data they know how to handle is present on a tag. This is the preferred method of handling data on a tag since NDEF data can be stored on many types of tags and doesn't depend on a specific tag technology. See [NfcAdapter.ACTION_NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html?hl=CA#ACTION_NDEF_DISCOVERED) for more detail. If the tag does not contain NDEF data, or if no activity is registered for [NfcAdapter.ACTION_NDEF_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html?hl=CA#ACTION_NDEF_DISCOVERED) with a matching data URI or MIME type then dispatch moves to stage 3.
+
+#### 3. Tag Technology dispatch
+
+[Context.startActivity(Intent)](https://developer.android.com/reference/android/content/Context.html?hl=CA#startActivity(android.content.Intent)) is called with [NfcAdapter.ACTION_TECH_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html?hl=CA#ACTION_TECH_DISCOVERED) to dispatch the tag to an activity that can handle the technologies present on the tag. Technologies are defined as sub-classes of [TagTechnology](https://developer.android.com/reference/android/nfc/tech/TagTechnology.html?hl=CA), see the package [android.nfc.tech](https://developer.android.com/reference/android/nfc/tech/package-summary.html?hl=CA). The Android OS looks for an activity that can handle one or more technologies in the tag. See [NfcAdapter.ACTION_TECH_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html?hl=CA#ACTION_TECH_DISCOVERED) for more detail.
+
+#### 4. Fall-back dispatch
+
+If no activity has been matched then [Context.startActivity(Intent)](https://developer.android.com/reference/android/content/Context.html?hl=CA#startActivity(android.content.Intent)) is called with[NfcAdapter.ACTION_TAG_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html?hl=CA#ACTION_TAG_DISCOVERED). This is intended as a fall-back mechanism. See [NfcAdapter.ACTION_TAG_DISCOVERED](https://developer.android.com/reference/android/nfc/NfcAdapter.html?hl=CA#ACTION_TAG_DISCOVERED).
+
+
+
+.
+
+------------------------------------
+### getId
+
+added in  [API level 10](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html?hl=CA#ApiLevels)
+
+public byte[] getId ()
+
+Get the Tag Identifier (if it has one).
+
+The tag identifier is a low level serial number, used for anti-collision and identification.
+
+Most tags have a stable unique identifier (UID), but some tags will generate a random ID every time they are discovered (RID), and there are some tags with no ID at all (the byte array will be zero-sized).
+
+The size and format of an ID is specific to the RF technology used by the tag.
+
+This function retrieves the ID as determined at discovery time, and does not perform any further RF communication or block.
+
+
+.
+
+------------------------------
+
+
+### writeToParcel
+
+added in  [API level 10](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html?hl=CA#ApiLevels)
+
+public void writeToParcel ([Parcel](https://developer.android.com/reference/android/os/Parcel.html?hl=CA) dest,
+                int flags)
+
+Flatten this object in to a Parcel.
+
+.
+
+-------------------------------------------
+
+### getTechList
+
+added in  [API level 10](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html?hl=CA#ApiLevels)
+
+public [String[]](https://developer.android.com/reference/java/lang/String.html?hl=CA) getTechList ()
+
+Get the technologies available in this tag, as fully qualified class names.
+
+A technology is an implementation of the  [TagTechnology](https://developer.android.com/reference/android/nfc/tech/TagTechnology.html?hl=CA)  interface, and can be instantiated by calling the static  `get(Tag)  method on the implementation with this Tag. The  [TagTechnology](https://developer.android.com/reference/android/nfc/tech/TagTechnology.html?hl=CA)  object can then be used to perform advanced, technology-specific operations on a tag.
+
+Android defines a mandatory set of technologies that must be correctly enumerated by all Android NFC devices, and an optional set of proprietary technologies. See  [TagTechnology](https://developer.android.com/reference/android/nfc/tech/TagTechnology.html?hl=CA)  for more details.
+
+The ordering of the returned array is undefined and should not be relied upon.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNTYwMzE2MDZdfQ==
+-->
+
+## Ndef Record:
+
+--------------------------------------------
+
+### Create common types of NDEF records
+#### createMime
+Create a new NDEF Record containing MIME data.
+```java
+public static NdefRecord createMime (
+	String mimeType, 
+	byte[] mimeData
+)
+```
+```kotlin
+val mimeRecord = NdefRecord.createMime(
+  "application/vnd.com.example.android.beam",
+  "Beam me up, Android".toByteArray(Charset.forName("US-ASCII"))
+)
+```
+```xml
+<intent-filter>
+    <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <data android:mimeType="application/vnd.com.example.android.beam"/>
+</intent-filter>
+```
+.
+
+----------------------------------
+#### createUri
+```java
+public static NdefRecord createUri (String uriString)
+public static NdefRecord createUri (Uri uri)
+```
+```kotlin
+val rtdUriRecord1  =  NdefRecord.createUri("http://example.com")
+val rtdUriRecord2  =  Uri.parse("http://example.com").let { uri ->  		
+	NdefRecord.createUri(uri)  
+}
+```
+```xml
+<intent-filter>
+    <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <data android:scheme="http"
+        android:host="example.com"
+        android:pathPrefix="" />
+</intent-filter>
+```
+.
+
+----------------------------------
+#### createExternal
+Create a new NDEF Record containing external (application-specific) data
+
+```java
+public static NdefRecord createExternal (
+	String domain, // domain-name of issuing organization
+	String type,   // domain-specific type of data
+	byte[] data	   // payload as bytes
+)
+```
+> ⚡ NFC Forum requires that the domain and type used in an external record are treated as **`case insensitive`**, however Android intent filtering is always **`case sensitive`**. So this method will **`force the domain and type to` lower-case**  before creating the NDEF Record.
+> 
+```kotlin
+var payload: ByteArray      //assign to your data
+val domain = "com.example"  //usually your app's package name
+val type = "externalType"   //will cast into lowercase (externaltype)
+val extRecord = NdefRecord.createExternal(domain, type, payload)
+```
+```xml
+<intent-filter>
+    <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <data android:scheme="vnd.android.nfc"
+        android:host="ext"
+        android:pathPrefix="/com.example:externaltype"/> 
+</intent-filter>
+```
+> ⚡ pathprefix is in **lower-case**
+
+.
+
+
+-----------------------------------
+
+#### createTextRecord
+
+added in  [API level 21](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
+```java
+public static NdefRecord createTextRecord (
+	String languageCode, // Locale.TAIWAN.language.toString()
+	String text
+)
+```
+Create a new NDEF record containing UTF-8 text data.
+
+The caller can either specify the language code for the provided text, or otherwise the language code corresponding to the current default locale will be used.  
+
+> to specify languageCode
+> ```kotlin
+> Locale.TAIWAN.language.toString()
+> ```
+
+.
+
+-------------------------------------------------------
+#### createApplicationRecord
+
+added in  [API level 14](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
+```java
+public static createApplicationRecord (String packageName)
+```
+Create a new **Android Application Record** (AAR).
+
+The Android Application Record (AAR) is a special type of [NDEF record](https://gototags.com/nfc/ndef/) that is used by Google’s Android operating system to signify to an NFC phone that an explicitly defined Android Application should be used to handle an NFC tag; this is called the [Tag Dispatch System](http://developer.android.com/guide/topics/connectivity/nfc/nfc.html). Often times an Android App record will be added as the **2nd NDEF record in the NDEF message**. This is useful to developers when they want to ensure their application is the application that will handle the NFC tag.
+
+```kotlin
+val sp_record = ...
+val aap_record = NdefRecord.createApplicationRecord(packageName)  
+val records = arrayOf(sp_record, aap_record)
+```
+.
+
+----------------------------------
+#### Android Application Reccords (AAR)
+
+Android Application Record (AAR) provides a stronger certainty that your application is started when an **`NFC tag is scanned`**. An AAR has the **`package name`** of an application **`embedded inside`** an NDEF record. You can add an **AAR** to **any** NDEF record of your NDEF message, because Android searches the **`entire NDEF message`** for **AARs**. If it finds an AAR, it starts the application based on the package name inside the AAR. If the application is not present on the device, Google Play is **`launched to download`** the application.
+
+>AARs are useful if you want to **prevent other applications** from filtering for the same intent and potentially handling specific tags that you have deployed. AARs are _only supported at the **application** level_, because of the package name constraint, and not at the Activity level as with intent filtering. 
+
+> 📘 **note** on _AAR only supported at application level_
+> ```java
+> public static createApplicationRecord (String packageName)
+>```
+
+If you want to handle an intent at the Activity level,  [use intent filters](https://developer.android.com/guide/topics/connectivity/nfc/nfc#filtering-intents).
+
+- If a tag contains an AAR, the tag dispatch system dispatches in the following manner:
+
+	1.  Try to start an Activity using an intent filter as normal. If the Activity that matches the intent also matches the AAR, start the Activity.
+	2.  If the Activity that filters for the intent does not match the AAR, if multiple Activities can handle the intent, or if no Activity handles the intent, start the application specified by the AAR.
+	3.  If no application can start with the AAR, go to Google Play to download the application based on the AAR.
+
+>📘  **Note:** You can override AARs and the intent dispatch system with the [foreground dispatch system](https://developer.android.com/guide/topics/connectivity/nfc/advanced-nfc.html#foreground-dispatch), which allows a foreground activity to have priority when an NFC tag is discovered. With this method, the activity must be in the foreground to override AARs and the intent dispatch system.
+
+
+
+.
+
+--------------------------------------------
+
+
+### ⚡Use the foreground dispatch system
+
+The foreground dispatch system **`allows an activity to intercept an intent and claim priority`** over other activities that handle the same intent. Using this system involves constructing a few data structures for the Android system to be able to send the appropriate intents to your application. To enable the foreground dispatch system:
+
+Add the following code in the `onCreate()` method of your activity:
+
+1.  Create a  [PendingIntent](https://developer.android.com/reference/android/app/PendingIntent.html)` object so the Android system can populate it with the details of the tag when it is scanned.
+	- Create a [PendingIntent](https://developer.android.com/reference/android/app/PendingIntent.html) object so the Android system can populate it with the details of the tag when it is scanned.
+	```kotlin
+		val intent = Intent(this, javaClass).apply {
+		    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+		}
+		var pendingIntent: PendingIntent = 
+			PendingIntent.getActivity(this, 0, intent, 0)
+	```
+
+	>  留意pendingIntent 中的 FLAG_ACTIVITY 要符合Manifect.xml 中的設定；假定Manifest.xml中設定了singleTask, 則pendingIntent的設定如下
+
+	```kotlin 
+	fun genPendingIntent(activity:Activity, cls: Class<*>):PendingIntent{
+	   return PendingIntent.getActivity(activity.applicationContext, 0,
+	     Intent(activity.applicationContext, cls)
+	     .addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT), 0)
+	}
+	```
+
+
+	- Declare intent filters to handle the intents that you want to intercept. The foreground dispatch system checks the specified intent filters with the intent that is received **when the device scans a tag**. 
+		> If it matches, then your application handles the intent. 
+		> If it does not match, the foreground dispatch system falls back to the intent dispatch system. 
+	- Specifying a `null` array of intent filters and technology filters, specifies that you want to filter for all tags that fallback to the `TAG_DISCOVERED` intent. The code snippet below handles all MIME types for `NDEF_DISCOVERED`. You should only handle the ones that you need.
+	```kotlin
+		val ndef = IntentFilter(NfcAdapter.ACTION_NDEF_DISCOVERED).apply {
+		    try {
+		        addDataType("*/*")    /* Handles all MIME based dispatches.
+		                                 You should specify only the ones that you need. */
+		    } catch (e: IntentFilter.MalformedMimeTypeException) {
+		        throw RuntimeException("fail", e)
+		    }
+		}
+		intentFiltersArray = arrayOf(ndef)	
+	```
+	- Set up an array of tag technologies that your application wants to handle. Call the `Object.class.getName()` method to obtain the class of the technology that you want to support.
+	```kotlin
+		techListsArray = arrayOf(arrayOf<String>(NfcF::class.java.name))
+	```
+	
+2.  Override the following activity lifecycle callbacks and add logic to enable and disable the foreground dispatch when the activity loses ([onPause()](https://developer.android.com/reference/android/app/Activity.html#onPause())) and regains ([onResume()](https://developer.android.com/reference/android/app/Activity.html#onResume())) focus.  [enableForegroundDispatch()](https://developer.android.com/reference/android/nfc/NfcAdapter.html#enableForegroundDispatch(android.app.Activity,%20android.app.PendingIntent,%20android.content.IntentFilter[],%20java.lang.String[][]))  must be called from the main thread and only when the activity is in the foreground (calling in  [onResume()](https://developer.android.com/reference/android/app/Activity.html#onResume()) guarantees this). You also need to implement the  [onNewIntent](https://developer.android.com/reference/android/app/Activity.html#onNewIntent(android.content.Intent))  callback to process the data from the scanned NFC tag.
+
+	```kotlin
+	public override fun onPause() {
+	    super.onPause()
+	    adapter.disableForegroundDispatch(this)
+	}
+
+	public override fun onResume() {
+	    super.onResume()
+	    adapter.enableForegroundDispatch(this, pendingIntent, intentFiltersArray, techListsArray)
+	}
+
+	public override fun onNewIntent(intent: Intent) {
+	    val tagFromIntent: Tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG)
+	    //do something with tagFromIntent
+	}
+	```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNDczNzg0MDQzLDE4OTI4OTY0NjEsNjQxOD
+M4OTcsMTExNTU4NzIwNCwxMjAyNDc4NTI4LDM1MDY1MTk4N119
+
+-->
+
+
+## Trouble Shoot - A
+
+### Error:Program type already present:
+It's a dependencies conflict 相依衝突，多半為不同的相依間存在不同版本的相依
+
+---------------------------------------------------------
+### INSTALL_FAILED_VERSION_DOWNGRADE
+安卓新版本的 ADT 在安裝apk的時候，會檢查當前要運行的版本 AndroidManifest.xml 中的 versionCode 和手機中已經安裝過的該程序的 versionCode 做對比，如果手機中的 versionCode 比較高，ADT 就會提示出錯：INSTALL_FAILED_VERSION_DOWNGRADE，可修改versionCode 或者uninstall apk
+
+---------------------------------------------------------
+### Failed linking file resources | failed processing manifest error
+可能是AndroidManifest等XML 文件中所引用的參考不存在，如引用了@mipmap/ic_launch，但是res folder下卻沒有mipmap這個folder，或者當專案有母子project的狀態下，母子project各自指向的res位置出錯或者被子project給覆寫。如下(為子project)
+```groovy
+ndroid {  
+	sourceSets {  
+		main {  
+			res.srcDirs = ['src']  
+```
+
+---------------------------------------------------------
+### Cannot read packageName from path/to/AndroidManifest.xml
+1. AndroidManifest.xml 放錯地方，如在sourceSet 設定了 main.manifest.srcFile 但卻與實體位置不同
+	```groovy
+	android {  
+	sourceSets {  
+		main {  
+			manifest.srcFile "src/main/AndroidManifest.xml"  
+	```
+3. 在AndroidManifest.xml 中沒有設定package
+	- 可在defaultConfig中填上applicationId
+	```groovy
+	defaultConfig {  
+		// applicationId will replace package name specified in AndroidManifest.xml  
+		applicationId "com.gknot"  
+	}
+	```
+
+---------------------------------------------------------
+### AndroidManifest.xml: Error: 'A' is not a valid file-based resource name character
+當我們誤把 AndroidManifest.xml 放到 res 所指定的地方時，程式會把AndroidManifest.xml 視為 resource並套用resource的命名規則，如下設定
+```groovy
+ndroid {  
+	sourceSets {  
+		main {  
+		manifest.srcFile "src/main/AndroidManifest.xml"  
+		res.srcDirs = ['src']  
+```
+
+--------------------------------------
+### strings_en.arb: Error: The file name must end with .xml
+strings_en.arb - 為 Flutter i18n 插件所產生的
+
+
+----------------------------------------
+

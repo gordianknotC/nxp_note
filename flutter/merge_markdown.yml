@@ -1,0 +1,15 @@
+
+input:
+ index.md:  {noYAML: true, doctoc: true, replace: {<!--#-->: "# Flutter"}}
+ addActivityResultListener.md: { noYAML: true, doctoc: true,  }
+ addAndroidProjIntoFlutter.md: { noYAML: true, doctoc: true,  }
+ addNewIntentListener.md: { noYAML: true, doctoc: true,  }
+ android_to_flutter.md: { noYAML: true, doctoc: true,  }
+ Sliver_tabbar.md: { noYAML: true, doctoc: true,  }
+ trouble shooting.md: { noYAML: true, doctoc: true,  }
+
+output:
+  name: README.md
+  doctoc:
+    all: true
+

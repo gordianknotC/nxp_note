@@ -1,12 +1,12 @@
 
 
 
-#  How ReadNDEF Implements
+##  How ReadNDEF Implements
 
-## in Ntag_I2C_Command
-### readNDEF
+### in Ntag_I2C_Command
+#### readNDEF
 > Read a NDEF Message from the tag - not an official NFC Forum NDEF detection routine.
-#### describe reading process in brief
+##### describe reading process in brief
 - params (none) 
 - get size of **TLV** and **NDEF**
 	- get **TLV** by **readEEPROM**( P1, P2 )
@@ -16,18 +16,18 @@
  		- P1: Register.**User_memory_Begin**
 		- P2: Register.**User_memory_Begin** + tlvPlusNdef
 	-  feed byte data into **NdefMessage** as return value 
-	##### about TLV (Type Length-Value)
+	###### about TLV (Type Length-Value)
 	- A kind of data exchange format
 		- T: Type information
 		- L: Length information about playload data
 		- V: playload data
 
-	##### referenced in
+	###### referenced in
 	- Ntag_I2C_Demo
 		- getRegister_Settings
 		- NDEFReadTask / doInBackground
 		- EEPROMSpeedtestTask / doInBackground
-	##### example
+	###### example
 	```java
 		//read records of NdefMessage into String
 		NdefMessage message = reader.readNDEF();  
@@ -82,8 +82,8 @@
 ```
 
 
-## in MinimalNtag_I2C_Command
-### readNDEF
+### in MinimalNtag_I2C_Command
+#### readNDEF
 > Read a NDEF Message from the tag - not an official NFC Forum NDEF detection routine.
 - params (none) 
 - get size of **TLV** and **NDEF**
@@ -94,13 +94,13 @@
  		- P1: Register.**User_memory_Begin**
 		- P2: Register.**User_memory_Begin** + tlvPlusNdef / **4**
 	-  feed byte data into **NdefMessage** as return value 
-	##### about TLV (Type Length-Value)
+	###### about TLV (Type Length-Value)
 	- A kind of data exchange format
 		- T: Type information
 		- L: Length information about playload data
 		- V: playload data
 
-	##### referenced in
+	###### referenced in
 	- Ntag_I2C_Demo
 		- getRegister_Settings
 		- NDEFReadTask / doInBackground

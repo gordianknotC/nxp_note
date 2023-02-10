@@ -1,0 +1,13 @@
+
+input:
+ index.md:  {noYAML: true, doctoc: true}
+ android/README.md: { noYAML: true, doctoc: true, }
+ aqueduct/README.md: { noYAML: true, doctoc: true, }
+ flutter/README.md: { noYAML: true, doctoc: true, }
+ nxp/README.md: { noYAML: true, doctoc: true, }
+
+output:
+  name: README.md
+  doctoc:
+    all: true
+

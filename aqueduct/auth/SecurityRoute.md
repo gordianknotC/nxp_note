@@ -1,9 +1,9 @@
 
 
+<!--#-->
 
 
-
-# Securing Routes with Authorizer
+## Securing Routes with Authorizer
 
 Instances of  `Authorizer`  are added to an application channel to verify HTTP request's authorization information before passing the request onwards. They protect channel access and typically come right after  `route`. Here's an example:
 
@@ -33,7 +33,7 @@ An  `Authorizer`  parses the Authorization header of an HTTP request. The named 
 
 	- Authorization: **Bearer 768iuzjkx82jkasjkd9z9**
 
->  #### 📝 **bear** - a word borrowed from client-certificate authenticcateion
+>  ##### 📝 **bear** - a word borrowed from client-certificate authenticcateion
 >  Client-certificate authentication is a more secure method of authentication than either basic or form-based authentication. It **uses HTTP over SSL**, in which the server and, optionally, the client **authenticate one another** using public key certificates.  Secure Socket Layer  (SSL) provides data encryption, server authentication, message integrity, and optional client authentication for a TCP/IP connection. **You can think of a  public key certificate  as the digital equivalent of a passport**. It is issued by a trusted organization, which is called a  certificate authority  (CA), and provides identification for the **bearer**.
 
 - **`Authorizer.basic`**  
@@ -53,7 +53,7 @@ the value in a request's header must be a valid, **unexpired access token**. The
 - For  `Authorizer.basic`  
 authorizers, credentials are verified by finding an OAuth 2.0 client identifier and ensuring its client secret matches. Routes with this type of authorizer are known as  **_client authenticated_**  routes. These types of authorizers are used when an endpoint requires a **valid client application**, but **not** a logged in user.
 
-### Authorizer and OAuth 2.0 Scope
+#### Authorizer and OAuth 2.0 Scope
 
 An  `Authorizer`  may restrict access to controllers based on the scope of the request's bearer token. By default, an  `Authorizer.bearer`  allows any valid bearer token to pass through it. If desired, an  `Authorizer`  is initialized with a list of required scopes. A request may only pass the  `Authorizer`  if it has access to  _all_  scopes listed in the  `Authorizer`. For example, the following requires at least  `user:posts`  and  `location`  scope:
 
@@ -66,7 +66,7 @@ router
 
 Note that you don't have to use an  `Authorizer`  to restrict access based on scope. A controller has access to scope information after the request has passed through an  `Authorizer`, so it can use the scope to make more granular authorization decisions.
 
-### Authorization Objects
+#### Authorization Objects
 
 For example, a social networking application might have a  `/news_feed`  endpoint protected by an  `Authorizer`. When an authenticated user makes a request for  `/news_feed`, the controller will return that user's news feed. It can determine this by using the  `Authorization`:
 
@@ -109,7 +109,7 @@ class NewsFeedController extends ResourceController {
 }
 ```
 
-### Using Authorizers Without AuthServer
+#### Using Authorizers Without AuthServer
 
 Throughout this guide, the argument to an instance of  `Authorizer`  has been referred to as an  `AuthServer`. This is true - but only because  `AuthServer`  implements  `AuthValidator`.  `AuthValidator`  is an interface for verifying bearer tokens and username/password credentials.
 

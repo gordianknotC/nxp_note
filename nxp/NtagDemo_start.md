@@ -1,6 +1,6 @@
 
 
-## How Demo be Initialized ( Ntag_I2C )
+## Ntag_I2C_Demo - How Demo be Initialized
 
 - ##### in AuthActivity
 ```java
